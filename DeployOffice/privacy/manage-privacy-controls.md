@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 096d6a368965ecedcff3807bbbf3e90649eb8562
-ms.sourcegitcommit: 6145cfe372725bedab7bc6a80adab100561f74fd
+ms.openlocfilehash: 069b21632044354afded61ccc9b1d099cd9cda98
+ms.sourcegitcommit: 8dd9721bd618ae6e4d27f2c45c5dc8e3219858ac
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34106880"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34250375"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
 
@@ -85,6 +85,9 @@ Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti do
 - dopusti korištenje povezanih iskustava u sustavu Office
 
 Ako ne konfigurirate te postavke pravilnika, bit će dostupna sva povezana iskustva. To vašim korisnicima nudi sve značajke i funkcije dostupne putem sustava Office 365 ProPlus. Znamo, međutim, da ćete možda morati isključiti neka ili sva povezana iskustva da biste udovoljili određenim zahtjevima svoje tvrtke ili ustanove.
+
+> [!IMPORTANT]
+> Trenutno postoji problem s ove 4 postavke pravilnika na kojem radimo da ga ispravimo. Da biste za sada onemogućili jednu od tih postavki pravilnika pomoću alata za upravljanje pravilima grupe, morate odabrati **omogućeno** izborni gumb, a zatim odaberite **onemogućeno**sa padajućeg popisa u **odjeljku Mogućnosti** . Odabir **Onemogući** izbornog gumba neće onemogućiti ove postavke pravilnika.
 
 Ako odlučite korisnicima uskratiti određene vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili će korisnici dobiti poruku o pogrešci kada pokušaju koristiti ta povezana iskustva. U tom se slučaju Microsoftu ne šalju nikakvi [obavezni servisni podaci](required-service-data.md) za ta povezana iskustva.
 
