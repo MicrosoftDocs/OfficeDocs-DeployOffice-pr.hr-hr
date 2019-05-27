@@ -11,7 +11,7 @@ ms.collection: Ent_O365
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Administratorima sustava Office pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
+description: Office administratorima sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
 ms.openlocfilehash: 1df576e8f5f1b3ed9fff11651ff4dd2b28d47229
 ms.sourcegitcommit: b3fd057154853fc588d0e83b4d632b6e9a051a3c
@@ -30,7 +30,7 @@ ms.locfileid: "32435835"
 
 Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i rješavanja problema te poboljšavanja proizvoda. Ti podaci ne sadrže korisnikovo ime ili adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
 
-To su dijagnostički podaci o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows, a koji se prikupljaju i šalju Microsoftu. Neki su dijagnostički podaci obavezni, a neki nisu. Omogućujemo vam da odaberete hoćete li nam slati obavezne ili dijagnostičke podatke putem kontrola zaštite privatnosti, kao što su postavke pravilnika za tvrtke i ustanove. Dijagnostičke podatke koji nam se šalju možete pogledati pomoću preglednika dijagnostičkih podataka.
+To su dijagnostički podaci o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows, a koji se prikupljaju i šalju tvrtki Microsoft. Neki su dijagnostički podaci obavezni, a neki nisu. Omogućujemo vam da odaberete hoćete li nam slati obavezne ili dijagnostičke podatke putem kontrola zaštite privatnosti, kao što su postavke pravila za tvrtke ili ustanove. Dijagnostičke podatke koji nam se šalju možete pogledati pomoću preglednika dijagnostičkih podataka.
 
 ***Neobavezni dijagnostički podaci***: dodatni podaci koji nam pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije koje nam pomažu pri otkrivanju, dijagnosticiranju i rješavanju problema.
 
@@ -46,7 +46,7 @@ Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
 
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korištenje postavki pravila za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Kategorije neobaveznih dijagnostičkih podataka
 
@@ -57,7 +57,7 @@ Neobavezni dijagnostički podaci organizirani su u sljedeće kategorije:
 - Performanse proizvoda i usluga
 - Povezivost i konfiguracija uređaja
 
-Te se kategorije prikazuju u pregledniku dijagnostičkih podataka i iste se kategorije koriste za obavezne dijagnostičke podatke.
+Te se kategorije prikazuju u pregledniku dijagnostičkih podataka, a iste se kategorije koriste za obavezne dijagnostičke podatke.
 
 Odjeljci u nastavku sadrže opis svake kategorije i primjere događaja za svaku kategoriju.
 
@@ -73,7 +73,7 @@ U tablici u nastavku navedeni su primjeri događaja u toj kategoriji i opis tih 
 
 | **Naziv događaja**   | **Opis događaja**  |
 | ---- | ---- |
-| Office\_Extensibility\_AppCommands\_GetRibbonUpdatesForUserId | Taj događaj upućuje na to je ažurira li Word uspješno vrpcu u korisničkom sučelju programa Word kada korisnik promijeni identitet. Taj događaj koristimo za otkrivanje pogrešne instalacije i drugih problema koji mogu utjecati na korisničko sučelje sustava Office. |
+| Office\_Extensibility\_AppCommands\_GetRibbonUpdatesForUserId | Taj događaj pokazuje ažurira li Word uspješno vrpcu u korisničkom sučelju programa Word kada korisnik promijeni identitet. Taj događaj koristimo za otkrivanje pogrešne instalacije i drugih problema koji mogu utjecati na korisničko sučelje sustava Office. |
 | Office.Extensibility.AppCommands.AppCmdInstall   | Taj događaj nudi informacije o dodatku za Office koji je korisnik instalirao, uključujući ID aplikacije, međuverziju i verziju operacijskog sustava, uspješnost instalacije i trajanje instalacije.  |
 
 ## <a name="product-and-service-usage-events"></a>Događaji koji se odnose na korištenje proizvoda i usluga
@@ -88,8 +88,8 @@ U tablici u nastavku navedeni su primjeri događaja u toj kategoriji i opis tih 
 
 | **Naziv događaja**   | **Opis događaja**  |
 | ------ | ------- |
-| Office.Word.Commanding.Highlight  | Taj događaj upućuje na to da je Word izvršio naredbu za isticanje teksta. Taj događaj koristimo za otkrivanje pogrešaka u naredbi za označavanje teksta.  |
-| Office.Translator.AddInLoaded   | Impulsni podaci koji upućuju na to da je značajka prevoditelja uspješno učitana i prikazana.  |
+| Office.Word.Commanding.Highlight  | Taj događaj pokazuje da je Word izvršio naredbu za isticanje teksta. Taj događaj koristimo za otkrivanje pogrešaka u naredbi za označavanje teksta.  |
+| Office.Translator.AddInLoaded   | Impulsni podaci koji pokazuju da je značajka prevoditelja uspješno učitana i prikazana.  |
 | Office.Graphics.InsertPictureCommandActivity  | Prati uspješnost ili neuspješnost značajke umetanja slike i prijavljuje pojedinosti o vrstama umetnutih slika i njihovu izvoru.|
 | Office.PowerPoint.PPT.Desktop.SummaryZoomInsertionRule   | Taj događaj utvrđuje ima li u dokumentu sekcija kada korisnik umeće skupni pregled te je li korisnik odabrao brisanje postojećih sekcija. |
 | Office.Security.SecureReaderHost.ProtectedViewValidation | Prati kada je i zašto datoteka otvorena u zaštićenom prikazu. Koristi se za dijagnosticiranje stanja kada se zaštićeni prikaz nije mogao uspješno aktivirati da bi se provjerilo funkcionira li značajka ispravno. |
