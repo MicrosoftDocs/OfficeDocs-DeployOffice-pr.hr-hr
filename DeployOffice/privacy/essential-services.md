@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 81b5ff2e1451f910f2e9695dba488d39d27b7241
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701269"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813330"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -2717,6 +2717,14 @@ Prikupljaju se sljedeća polja:
   - **IdentityChanged** – uvijek ima vrijednost true. Identitet je promijenjen.
 
   - **TimerDetectedChange** – označava je li redovno tempiran ping otkrio promjenu.
+
+### <a name="officesystemprivacyfallbacktosettingsstore"></a>Office.System.PrivacyFallbackToSettingsStore
+
+Koristi se kako bi se tvrdilo ima li neuspjeha u čitanju korisničkih postavki privatnosti iz Roaming trgovine.
+
+Prikupljaju se sljedeća polja:
+
+  - **Tag –** oznaka koda označava koja se postavka vratila u pohranu postavki.
 
 ### <a name="officesystemsessiondatao365"></a>Office.System.SessionDataO365
 
