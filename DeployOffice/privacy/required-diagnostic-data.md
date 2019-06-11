@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: a5ac5dfded3dbb51693b5d15616675b067c59dc3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: d42f2bd20e3e2169e58d6f5c0a563f1b117ea847
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701690"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813294"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -65,6 +65,7 @@ U sljedećoj su tablici navedene kategorije za obavezne dijagnostičke podatke. 
 | **Korištenje proizvoda i usluga**    | [Uspjeh značajki aplikacije](#application-feature-success-subtype)   | Uspješno funkcioniranje aplikacije. Ograničeno na otvaranje i zatvaranje aplikacije i dokumenata, uređivanje datoteka i zajedničko korištenje dokumenata (suradnju). |
 | | [Status i pokretanje aplikacije](#application-status-and-boot-subtype)    | Utvrđivanje je li došlo do određenih događaja povezanih sa značajkama, kao što je pokretanje ili zaustavljanje, te utvrđivanje je li značajka pokrenuta.   |
 | | [Konfiguracija pristupačnosti za Office](#office-accessibility-configuration-subtype)  | Značajke pristupačnosti u sustavu Office       |
+| | [Zaštita privatnosti](#privacy-subtype)| Postavke zaštite privatnosti u sustavu Office|
 | **Performanse proizvoda i usluga**       | [Neočekivano zatvaranje aplikacije (rušenje)](#unexpected-application-exit-crash-subtype)  | Neočekivana zatvaranja aplikacija i stanje aplikacije kada se to dogodi.    |
 |  | [Performanse značajki aplikacije ](#application-feature-performance-subtype)  | Loše vrijeme odziva ili performanse u situacijama kao što su pokretanje aplikacije ili otvaranje datoteke. |
 |  | [Pogreška aktivnosti aplikacije](#application-activity-error-subtype)   | Pogreške u funkcioniranju značajke ili korisničkog okruženja.  |
@@ -971,6 +972,7 @@ Ovo su podvrste podataka u toj kategoriji:
 - [Uspjeh značajki aplikacije](#application-feature-success-subtype)
 - [Status i pokretanje aplikacije](#application-status-and-boot-subtype)
 - [Konfiguracija pristupačnosti za Office](#office-accessibility-configuration-subtype)
+- [Zaštita privatnosti](#privacy-subtype)
 
 
 ### <a name="application-feature-success-subtype"></a>*Podvrsta uspjeha značajke aplikacije*
@@ -4000,8 +4002,12 @@ Prikupljaju se sljedeća polja:
   - **Data\_CheckRequiredPartsLoaded –** trajanje izvršavanja metode CheckRequiredPartsLoaded u milisekundama
 
   - **Data\_CheckWebSharingViolationForIncOpen –** trajanje izvršavanja metode CheckWebSharingViolationForIncOpen u milisekundama
+   
+  - **Data_CloseAndReopenWithoutDiscard –** Je li dokument zatvoren i ponovno otvoren tijekom otvorenog postupka bez odbacivanja.
 
   - **Data\_ContentTransaction –** unaprijed definiran skup vrijednosti kojima se određuje kada je moguće stvoriti transakciju (AllowedOnLoadDocument, AllowedOnOpenComplete itd.)
+
+  - **Data_CorrelationId-** GUID proslijeđen u PowerPoint pomoću rukovatelja protokolom za korelaciju telemetrije. Rukovatelj protokolom zaseban je proces koji upravlja Office vezama za OS.
 
   - **Data\_CppUncaughtExceptionCount:long –** neuhvaćene lokalne iznimke dok se aktivnost izvršavala
 
@@ -4911,6 +4917,50 @@ Taj događaj označava da Office Word prestaje naglas čitati tekst u dokumentu.
 Prikupljaju se sljedeća polja:
 
   - Nijedno
+
+### <a name="privacy-subtype"></a>*Podvrsta zaštite privatnosti*
+
+Postavke zaštite privatnosti u sustavu Office 
+
+#### <a name="officeintelligentserviceprivacyconsentprivacyevent"></a>Office.IntelligentService.PrivacyConsent.PrivacyEvent
+
+Ovaj događaj predstavlja radnju pokrenutu od strane korisnika ili sustava koja je dio korisničkog iskustva zaštite privatnosti za Office. Pokreće se u dijaloškim okvirima zaštite privatnosti Prvog pokretanja, dijaloškom okviru za zaštitu privatnosti računa i obavijestima o zaštiti privatnosti. Događaj se koristi za razumijevanje sljedećeg: korisnici pristaju na postavke zaštite privatnosti sustava Office, korisnici mijenjaju postavke zaštite privatnosti sustava Office i postavke zaštite privatnosti sustava Office ažuriraju se u korisničkim sesijama.
+
+Prikupljaju se sljedeća polja:
+
+  - **Data_ActionId –** korisnička akcija u dijaloškom okviru za zaštitu privatnosti
+
+  - **Data_ControllerConnectedServicesState –** postavka korisničkih pravila za dodatna neobavezna povezana iskustva
+
+  - **Data_DownloadedContentServiceGroupState –** korisnička postavka za preuzeti sadržaj 
+ 
+  - **Data_ForwardLinkId –** veza za dokumentaciju o privatnosti za korisnički scenarij
+
+  - **Data_HRESULT –** zapis o pogreškama tijekom interakcije s dijalogom zaštite privatnosti
+
+  - **Data_IsEnterpriseUser –** kategorija korisničke licence
+
+  - **Data_OfficeServiceConnectionState –** korisnička postavka za povezane usluge
+
+  - **Data_RecordRegistry –** zapis o prikazivanje dijaloškog okvira privatnosti za veliku tvrtku
+
+  - **Data_Scenario –** scenarij prvog pokretanja na temelju korisničke licence i kategorije
+
+  - **Data_SeenInsidersDialog –** zapis o prikazivanje dijaloškog okvira privatnosti za program Insiders
+
+  - **Data_SendTelemetryOption –** korisnička postavka za telemetriju
+
+  - **Data_SendTelemetryOptionPolicy –** korisnička postavka pravilnika za telemetriju
+
+  - **Data_UserCategory –** vrsta korisničkog računa  
+
+  - **Data_UserCCSDisabled –** korisničko nadjačavanje za neobavezna povezana iskustva
+
+   - **Data_UserContentServiceGroupState –** korisnička postavka za analizu sadržaja
+
+  - **Data_WillShowDialogs –** zapis korisnika koji želi vidjeti dijaloške okvire privatnosti Prvog pokretanja
+
+
 
 ## <a name="product-and-service-performance-data-events"></a>Događaji koji se odnose na podatke o performansama proizvoda i usluga
 
