@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Office administratorima sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
-ms.openlocfilehash: 852c53ad208cf02150de2e64e9e55d69015dda14
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: cf3a2488d985dd238456e86466688036c0c61ccb
+ms.sourcegitcommit: e6135e9937ef07785f0ce0eb6282ceece401f96e
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701168"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35430070"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Neobavezni dijagnostički podaci za Office
 
@@ -73,7 +73,7 @@ U tablici u nastavku navedeni su primjeri događaja u toj kategoriji i opis tih 
 
 | **Naziv događaja**   | **Opis događaja**  |
 | ---- | ---- |
-| Office\_Extensibility\_AppCommands\_GetRibbonUpdatesForUserId | Taj događaj pokazuje ažurira li Word uspješno vrpcu u korisničkom sučelju programa Word kada korisnik promijeni identitet. Taj događaj koristimo za otkrivanje pogrešne instalacije i drugih problema koji mogu utjecati na korisničko sučelje sustava Office. |
+| Office.Extensibility.AppCommands.GetRibbonUpdatesForUserId | Taj događaj pokazuje ažurira li Word uspješno vrpcu u korisničkom sučelju programa Word kada korisnik promijeni identitet. Taj događaj koristimo za otkrivanje pogrešne instalacije i drugih problema koji mogu utjecati na korisničko sučelje sustava Office. |
 | Office.Extensibility.AppCommands.AppCmdInstall   | Taj događaj nudi informacije o dodatku za Office koji je korisnik instalirao, uključujući ID aplikacije, međuverziju i verziju operacijskog sustava, uspješnost instalacije i trajanje instalacije.  |
 
 ## <a name="product-and-service-usage-events"></a>Događaji koji se odnose na korištenje proizvoda i usluga
@@ -90,7 +90,7 @@ U tablici u nastavku navedeni su primjeri događaja u toj kategoriji i opis tih 
 | ------ | ------- |
 | Office.Word.Commanding.Highlight  | Taj događaj pokazuje da je Word izvršio naredbu za isticanje teksta. Taj događaj koristimo za otkrivanje pogrešaka u naredbi za označavanje teksta.  |
 | Office.Translator.AddInLoaded   | Impulsni podaci koji pokazuju da je značajka prevoditelja uspješno učitana i prikazana.  |
-| Office.Graphics.InsertPictureCommandActivity  | Prati uspješnost ili neuspješnost značajke umetanja slike i prijavljuje pojedinosti o vrstama umetnutih slika i njihovu izvoru.|
+| Office.Graphics.GVizInsertShape |Prati uspješnost ili neuspješnost značajke umetanja slike i prijavljuje pojedinosti o vrstama umetnutih slika i njihovu izvoru.| 
 | Office.PowerPoint.PPT.Desktop.SummaryZoomInsertionRule   | Taj događaj utvrđuje ima li u dokumentu sekcija kada korisnik umeće skupni pregled te je li korisnik odabrao brisanje postojećih sekcija. |
 | Office.Security.SecureReaderHost.ProtectedViewValidation | Prati kada je i zašto datoteka otvorena u zaštićenom prikazu. Koristi se za dijagnosticiranje stanja kada se zaštićeni prikaz nije mogao uspješno aktivirati da bi se provjerilo funkcionira li značajka ispravno. |
 
@@ -106,7 +106,7 @@ U tablici u nastavku navedeni su primjeri događaja u toj kategoriji i opis tih 
 
 | **Naziv događaja**    | **Opis događaja**   |
 | --------------- | -------------- |
-| Office\_Word\_Word\_CoreSaveTime100ns     | Taj događaj bilježi performanse aktivnosti spremanja dokumenta u programu Word. Taj događaj koristimo za otkrivanje pogrešaka i problema s performansama tijekom aktivnosti spremanja dokumenta u programu Word.|
+| Office.Word.Word.CoreSaveTime100ns     | Taj događaj bilježi performanse aktivnosti spremanja dokumenta u programu Word. Taj događaj koristimo za otkrivanje pogrešaka i problema s performansama tijekom aktivnosti spremanja dokumenta u programu Word.|
 | Office.Identity.SignInForWamAccountAad  | Taj se događaj šalje kada se korisnik prijavi na račun za Azure Active Directory pomoću biblioteke upravitelja web-računa (Web Account Manager, WAM). Taj događaj šalje metapodatke kao što su AppName, AppVersion i ErrorCode ako događaj ne uspije. |
 | Office.PowerPoint.PPT.Desktop.FileOpen.FirstSlideMasterThumbnailRenderTime | Taj događaj prikuplja podatke o vremenu potrebnom za prikaz minijature prve matrice slajda u programu PowerPoint.  |
 | Office.Extensibility.Diagnostics   | Taj događaj nudi općenite dijagnostičke podatke za dodatke sustava Office, kao što su izvješća o rušenju radi otklanjanja pogrešaka.|
@@ -121,6 +121,6 @@ U tablici u nastavku navedeni su primjeri događaja u toj kategoriji i opis tih 
 
 | **Naziv događaja**                    | **Opis događaja**                                                                                                                                                     |
 | ------ | ----- |
-| Office\_Graphics\_ArtViewValidate | Taj događaj bilježi provjeru valjanosti rezultata prikaza grafike koji podržava grafičko korisničko sučelje. Taj događaj koristimo za prikupljanje podataka o korištenju i pogreškama o prikazu grafike. |
+| Office.Graphics.ArtViewValidate | Taj događaj bilježi provjeru valjanosti rezultata prikaza grafike koji podržava grafičko korisničko sučelje. Taj događaj koristimo za prikupljanje podataka o korištenju i pogreškama o prikazu grafike. |
 | Office.Graphics.ARCExceptionScope | Taj događaj prati pogreške u prikazu modula za prikaz. |
 | Office.Extensibility.ODPLatency   | Taj događaj pruža informacije o korisnikovoj mrežnoj vezi i brzini.     |
