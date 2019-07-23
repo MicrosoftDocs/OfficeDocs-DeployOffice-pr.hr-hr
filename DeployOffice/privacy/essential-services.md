@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
-ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
+ms.openlocfilehash: 14b2426d021e5c559cabd3c969f80df9131cc9b9
+ms.sourcegitcommit: 22ae0005d3106ff02949fb613b82e0245abfa49f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "34813330"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "35817953"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -50,7 +50,7 @@ U tablici u nastavku naveden je popis ključnih servisa za Office i opis svakog 
 | ------ | ---- |
 | [Provjera autentičnosti](#authentication-events) | Provjera autentičnosti servis je koji obuhvaća više platformi, a služi za provjeru valjanosti identiteta korisnika sustava Office.  Nužan je da biste se mogli prijaviti u Office, aktivirati licencu za Office, pristupiti datotekama pohranjenima u oblaku, a omogućuje i dosljedno sučelje u svim sesijama sustava Office na svim uređajima.    |
 | [Klikom do cilja](#click-to-run-events) | "Klikom do cilja" tehnologija je za instalaciju koja se koristi za instaliranje i ažuriranje sustava Office u sustavu Windows. Tehnologija provjerava postoji li nova verzija sustava Office i kad postoji, preuzima je i instalira. Tehnologija "klikom do cilja" otkrit će jesu li vam potrebna ažuriranja sustava Office, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.     |
-| [Servis za poboljšanu konfiguraciju (eng. Enhanced Configuration Service, ECS)](#experimentation-and-configuration-service-ecs-events) | ECS Microsoftu omogućuje da iznova konfigurira instalacije sustava Office bez potrebe za ponovnom implementacijom sustava. Služi za kontroliranje postupnog objavljivanja značajki ili ažuriranja, a učinak objavljivanja prati se na temelju prikupljenih dijagnostičkih podataka. Koristi se i za ublažavanje sigurnosnih problema i problema s performansama neke značajke ili ažuriranja. ECS podržava i promjene konfiguracije povezane s dijagnostičkim podacima da bi se prikupljali odgovarajući događaji. |
+| [Servis za poboljšanu konfiguraciju (eng. Enhanced Configuration Service, ECS)](#enhanced-configuration-service-ecs-events) | ECS Microsoftu omogućuje da iznova konfigurira instalacije sustava Office bez potrebe za ponovnom implementacijom sustava. Služi za kontroliranje postupnog objavljivanja značajki ili ažuriranja, a učinak objavljivanja prati se na temelju prikupljenih dijagnostičkih podataka. Koristi se i za ublažavanje sigurnosnih problema i problema s performansama neke značajke ili ažuriranja. ECS podržava i promjene konfiguracije povezane s dijagnostičkim podacima da bi se prikupljali odgovarajući događaji. |
 | [Licenciranje](#licensing-events)     | Licenciranje je servis u oblaku koji podržava aktivaciju novih instalacija sustava Office te održava licencu na uređajima nakon aktivacije sustava. Servis registrira svaki uređaj i aktivira Office, provjerava status pretplate na Office te upravlja ključevima proizvoda.    |
 | [Konfiguracija servisa](#services-configuration-events)  | Konfiguracija servisa omogućuje ažuriranje postavki konfiguracije sustava Office radi omogućivanja odnosno onemogućivanja značajki klijenata. Aktivira se svaki put kad se pokrene neka aplikacija sustava Office te sadrži pojedinosti o drugim konfiguracijama i servisima sustava Office. Konfiguracija servisa ujedno kontrolira koji su servisi određeni kao ključni.  |
 | [Telemetrija](#telemetry-events)  | Servis za telemetriju služi za prikupljanje dijagnostičkih podataka iz aplikacija sustava Office. Omogućuje prikupljanje obaveznih i neobaveznih dijagnostičkih podataka koje je generirao Office. Odgovoran je i za prikupljanje onog dijela obaveznih servisnih podataka za Office koji obuhvaća servisne dijagnostičke podatke.  |
@@ -2395,7 +2395,7 @@ Prikupljaju se sljedeća polja:
   - **Data\_targetBuild -** – verzija sustava Office na koju pokušavamo ažurirati
 
 
-## <a name="experimentation-and-configuration-service-ecs-events"></a>Događaji servisa za eksperimentiranje i konfiguraciju (ECS-a)
+## <a name="enhanced-configuration-service-ecs-events"></a>Događaji servisa za eksperimentiranje i konfiguraciju (ECS-a)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
 
@@ -2480,15 +2480,15 @@ To se prikupljaju u svakoj sesiji koja prijavljuje stanje licenciranja računala
 
 Prikupljaju se sljedeća polja:
 
-  - **Acid** – GUID identifikator koji predstavlja proizvod sustava Office za koji korisnik ima licencu 
+  - **Acid** – GUID identifikator koji predstavlja proizvod sustava Office za koji korisnik ima licencu  
 
   - **IsSessionLicensing** – određuje je li trenutno pokrenut način rada za aktivaciju zajedničkog računala 
 
-  - **LicenseCategory** – kategorija licence za Office koju korisnik koristi 
+  - **LicenseCategory** – kategorija licence za Office koju korisnik koristi  
 
-  - **Licenses** – popis naziva svih licenci za Office koje postoje na računalu 
+  - **Licenses** – popis naziva svih licenci za Office koje postoje na računalu  
 
-  - **LicenseStatuses** – status svih licenci za Office koje postoje na računalu 
+  - **LicenseStatuses** – status svih licenci za Office koje postoje na računalu  
 
 ### <a name="officelicensinggetentitlement"></a>Office.Licensing.GetEntitlement 
 
@@ -2528,7 +2528,7 @@ Prikupljaju se sljedeća polja:
 
   - **Prid** – naziv grupe proizvoda za koju se instalira ključ
 
-  - **SkuId** – GUID identifikator koji predstavlja proizvod sustava Office za koji se ključ instalirana 
+  - **SkuId** – GUID identifikator koji predstavlja proizvod sustava Office za koji se ključ instalirana  
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
@@ -2556,7 +2556,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensinglicexitofficeprocess"></a>Office.Licensing.LicExitOfficeProcess 
 
-Ako zatvorimo/srušimo Office zbog problema s licenciranjem, šaljemo ovaj signal da bismo to naznačili. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+Ako zatvorimo/srušimo Office zbog problema s licenciranjem, šaljemo ovaj signal da bismo to naznačili.  Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
 Prikupljaju se sljedeća polja:
 
@@ -2606,13 +2606,13 @@ Prikupljaju se sljedeća polja:
 
   - **AllAcids** – popis svih GUID-ova proizvoda za koje je korisnik trenutno licenciran 
 
-  - **Category** – kategorija licence za Office koju korisnik koristi 
+  - **Category** – kategorija licence za Office koju korisnik koristi  
 
-  - **DaysRemaining** – broj dana do isteka trenutne licence za Office 
+  - **DaysRemaining** – broj dana do isteka trenutne licence za Office  
 
   - **LicenseId** – alfanumerički identifikator licence koja je izdana korisniku 
 
-  - **LicenseType** – vrsta licence za Office koju korisnik koristi 
+  - **LicenseType** – vrsta licence za Office koju korisnik koristi  
 
 ### <a name="officelicensingofficeclientlicensingdolicensevalidation"></a>Office.Licensing.OfficeClientLicensing.DoLicenseValidation 
 
@@ -2630,13 +2630,13 @@ Prikupljaju se sljedeća polja:
 
   - **IsvNext** – označava koristimo li moderni stog za licenciranje 
 
-  - **LicenseCategory** – kategorija licence za Office koju korisnik koristi 
+  - **LicenseCategory** – kategorija licence za Office koju korisnik koristi  
 
   - **LicenseStatus** – status licence za Office koju korisnik koristi 
 
-  - **LicenseType** – vrsta licence za Office koju korisnik koristi 
+  - **LicenseType** – vrsta licence za Office koju korisnik koristi  
 
-  - **Licensing ACID** – GUID identifikator koji predstavlja proizvod sustava Office za koji korisnik ima licencu 
+  - **LicensingACID** – GUID identifikator koji predstavlja proizvod sustava Office za koji korisnik ima licencu  
 
   - **OlsLicenseId** – alfanumerički identifikator licence koja je izdana korisniku 
 
