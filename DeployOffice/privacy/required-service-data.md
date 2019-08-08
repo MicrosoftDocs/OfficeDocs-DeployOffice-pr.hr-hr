@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office pruža pregled obaveznih servisnih podataka koji se prikupljaju o povezanim iskustvima u sustavu Office.
 hideEdit: true
-ms.openlocfilehash: 9a276e00f5c852ffda00844c5e1aaa9187f581c3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34700991"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238472"
 ---
 # <a name="required-service-data-for-office"></a>Obavezni servisni podaci za Office 
 
@@ -27,8 +27,10 @@ ms.locfileid: "34700991"
 > - Office 365 ProPlus i Office 365 Business
 > - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
+>
+> Informacije u ovom članku odnose se na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
-Office se sastoji od klijentskih softverskih aplikacija i povezanih iskustava osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
+Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
 Obavezni servisni podaci ključni su jer nam omogućuju primjenu povezanih iskustava utemeljenih na oblaku te pospješuju sigurnost i funkcioniranje tih iskustava na očekivan način za naše korisnike. Obavezne servisne podatke čine tri vrste informacija.
 
@@ -64,6 +66,7 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Primjeri događaja za servisne dijagnostičke podatke
 

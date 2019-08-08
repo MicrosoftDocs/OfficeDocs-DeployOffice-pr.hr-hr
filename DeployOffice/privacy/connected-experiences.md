@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 3b0ac61cf01a588e3af85d1eb83d4b2fd7e8b63e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 1ae21c76eb0cc4addcc0a26e7ca1330aef99eee1
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701776"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238213"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -27,8 +27,10 @@ ms.locfileid: "34701776"
 > - Office 365 ProPlus i Office 365 Business
 > - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
+>
+> Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
-Office se sastoji od klijentskih softverskih aplikacija i povezanih iskustava osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
+Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Povezana iskustva koja analiziraju vaš sadržaj
 
@@ -129,7 +131,10 @@ Ako ste se prijavili pomoću Microsoftovog računa, otvorite aplikaciju sustava 
 
 Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi odlučit će hoće li vam ta povezana iskustva biti dostupna. Vi nećete vidjeti nikakve izbore vezane uz povezana iskustva ako odete na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**.
 
-Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne koristite te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u članku [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> [!NOTE]
+> Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
+
+Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne koristite te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u člancima [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md) i [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office for Mac](mac-privacy-preferences.md).
 
 Ako odlučite isključiti neke vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili ćete dobiti poruku o pogrešci kada pokušate koristiti ta povezana iskustva.
 
@@ -141,3 +146,4 @@ Ako odlučite isključiti neke vrste povezanih iskustava, naredbe tih povezanih 
 - [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md)
 - [Obavezni servisni podaci za Office](required-service-data.md)
 - [Ključni servisi za Office](essential-services.md)
+- [Postavke zaštite privatnosti računa](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
