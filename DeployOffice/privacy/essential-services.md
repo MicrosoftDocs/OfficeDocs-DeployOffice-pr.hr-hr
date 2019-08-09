@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 14b2426d021e5c559cabd3c969f80df9131cc9b9
-ms.sourcegitcommit: 22ae0005d3106ff02949fb613b82e0245abfa49f
+ms.openlocfilehash: 3931f44787008e076807fe59746bccf015452ac3
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "35817953"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239163"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -27,7 +27,8 @@ ms.locfileid: "35817953"
 > - Office 365 ProPlus i Office 365 Business
 > - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
-
+>
+> Informacije u ovom članku odnose se na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
 Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Premda kao administrator tvrtke ili ustanove možete upravljati brojnim povezanim sučeljima koja su dostupna vama ili vašim korisnicima, neki su servisi ključni za funkcioniranje sustava Office, pa se ne mogu onemogućiti. To je, primjerice, servis za licenciranje, koji potvrđuje da imate odgovarajuću licencu za korištenje sustava Office. Obavezni servisni podaci o tim servisima prikupljaju se i šalju Microsoftu bez obzira na druge konfigurirane postavke zaštite privatnosti. Te podatke možete pogledati pomoću preglednika dijagnostičkih podataka.
 
@@ -41,6 +42,7 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Popis ključnih servisa za Office 
 
@@ -52,7 +54,9 @@ U tablici u nastavku naveden je popis ključnih servisa za Office i opis svakog 
 | [Klikom do cilja](#click-to-run-events) | "Klikom do cilja" tehnologija je za instalaciju koja se koristi za instaliranje i ažuriranje sustava Office u sustavu Windows. Tehnologija provjerava postoji li nova verzija sustava Office i kad postoji, preuzima je i instalira. Tehnologija "klikom do cilja" otkrit će jesu li vam potrebna ažuriranja sustava Office, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.     |
 | [Servis za poboljšanu konfiguraciju (eng. Enhanced Configuration Service, ECS)](#enhanced-configuration-service-ecs-events) | ECS Microsoftu omogućuje da iznova konfigurira instalacije sustava Office bez potrebe za ponovnom implementacijom sustava. Služi za kontroliranje postupnog objavljivanja značajki ili ažuriranja, a učinak objavljivanja prati se na temelju prikupljenih dijagnostičkih podataka. Koristi se i za ublažavanje sigurnosnih problema i problema s performansama neke značajke ili ažuriranja. ECS podržava i promjene konfiguracije povezane s dijagnostičkim podacima da bi se prikupljali odgovarajući događaji. |
 | [Licenciranje](#licensing-events)     | Licenciranje je servis u oblaku koji podržava aktivaciju novih instalacija sustava Office te održava licencu na uređajima nakon aktivacije sustava. Servis registrira svaki uređaj i aktivira Office, provjerava status pretplate na Office te upravlja ključevima proizvoda.    |
-| [Konfiguracija servisa](#services-configuration-events)  | Konfiguracija servisa omogućuje ažuriranje postavki konfiguracije sustava Office radi omogućivanja odnosno onemogućivanja značajki klijenata. Aktivira se svaki put kad se pokrene neka aplikacija sustava Office te sadrži pojedinosti o drugim konfiguracijama i servisima sustava Office. Konfiguracija servisa ujedno kontrolira koji su servisi određeni kao ključni.  |
+|[Microsoftovo automatsko ažuriranje (MAU)](#microsoft-autoupdate-mau-events)|Microsoftovo automatsko ažuriranje (MAU) je tehnologija koja se koristi za ažuriranje Microsoftovih aplikacija proizvedenih za MacOS, kao što je Office. MAU će otkriti jesu li vam potrebna ažuriranja aplikacije, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.|
+|[Sinkronizacija programa OneNote](#onenote-sync-events)|OneNote za Mac podržava samo bilježnice pohranjene na internetu na servisu OneDrive ili u sustavu SharePoint Online. OneNote za Mac kontinuirano sinkronizira sve bilješke korisnika sa servisom OneDrive ili sustavom SharePoint Online. To korisnicima omogućuje otvaranje, pregled i uređivanje bilježnica na svim svojim uređajima tako da su njihove bilježnice uvijek ažurne.
+ [Konfiguracija servisa](#services-configuration-events)  | Konfiguracija servisa omogućuje ažuriranje postavki konfiguracije sustava Office radi omogućivanja odnosno onemogućivanja značajki klijenata. Aktivira se svaki put kad se pokrene neka aplikacija sustava Office te sadrži pojedinosti o drugim konfiguracijama i servisima sustava Office. Konfiguracija servisa ujedno kontrolira koji su servisi određeni kao ključni.  |
 | [Telemetrija](#telemetry-events)  | Servis za telemetriju služi za prikupljanje dijagnostičkih podataka iz aplikacija sustava Office. Omogućuje prikupljanje obaveznih i neobaveznih dijagnostičkih podataka koje je generirao Office. Odgovoran je i za prikupljanje onog dijela obaveznih servisnih podataka za Office koji obuhvaća servisne dijagnostičke podatke.  |
 
 ## <a name="events-and-data-fields-for-essential-services-for-office"></a>Događaji i podatkovna polja za ključne servise za Office
@@ -2362,6 +2366,51 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Version –** verzija sustava Office 
 
+### <a name="officeclicktoruntransport"></a>Office.ClickToRun.Transport
+
+Prijavljuje o postupcima preuzimanja datoteka da bi se utvrdio uspjeh postupka, vrsta izvršenog preuzimanja i dijagnostičke informacije.
+
+
+- **BytesFromGroupPeers -** Bajtovi kolega iz grupe, samo za preuzimanja pomoću optimizacije isporuke
+
+- **BytesFromHttp -**    Bajtovi sa http rukovatelja, samo za preuzimanja pomoću optimizacije isporuke
+
+- **ByteFromInternetPeers -**   Bajtovi kolega s interneta, samo za preuzimanja pomoću optimizacije isporuke 
+
+- **BytesFromLanPeers -**   Bajtovi Lan kolega, samo za preuzimanja pomoću optimizacije isporuke 
+
+- **CancelledJobs -**    Broj otkazanih zahtjeva u sesiji
+
+- **Connected -**   Jeste li povezani s izvorom
+
+- **ErrorCode -**   Kôd posljednje pogreške
+
+- **ErrorDetails -**     Pojedinosti posljednje pogreške
+
+- **ErrorMessage -**    Poruka posljednje pogreške 
+
+- **ErrorSource -** Izvor posljednje pogreške, npr. Povezivanje, Učitavanje datoteke ili Raspon učitavanja
+
+- **FailedJob -**   Broj neuspjelih zahtjeva u sesiji
+
+- **FileSize -**    Veličina resursa
+
+- **SourcePathNoFilePath -**    Izvještava se samo o izvorišnom putu resursa samo http izvora, put lokalne datoteke ili UNC put je filtriran
+
+- **SucceededJobs -**   Broj uspješnih zahtjeva u sesiji
+
+- **TotalJobs -**    Ukupan broj zahtjeva u sesiji
+
+- **TotalRequestedBytes -** Ukupno traženih bajtova u sesiji
+
+- **TotalTransferTime -**   Ukupno vrijeme prijenosa u sesiji
+
+- **TransferredBytes -**    ukupno prenesenih bajtova u sesiji
+
+- **TransportType -**   Vrsta prijenosa, npr. (u memoriji optimizaciji isporuke, putem HTTP protokola, putem pozadinskog pametnog servisa za transfer)
+
+
+
 ### <a name="officeclicktoruntransportexperimentaltransportpipelinecreatetransport"></a>Office.ClickToRun.Transport.ExperimentalTransport.PipelineCreateTransport
 
 Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnologije "klikom do cilja" otvara kanal za prijenos putem kojeg će preuzimati datoteke sustava Office. Koristi se za utvrđivanje stanja raznih prijenosnih tehnologija prijenosa (npr. HTTP, BITS, DO) koje su ključne za pravilno preuzimanje sustava Office radi instalacije i ažuriranja.
@@ -2393,6 +2442,190 @@ Prikupljaju se sljedeća polja:
   - **Data\_status** – kratak status događaja tijekom ažuriranja, npr. uspješno ili preuzeto
 
   - **Data\_targetBuild -** – verzija sustava Office na koju pokušavamo ažurirati
+
+
+### <a name="officeclicktorununiversalbootstrapperapplication"></a>Office.ClickToRun.UniversalBootstrapper.Application
+
+Prijavljuje rezultat sveobuhvatnih pokušaja instalacije
+
+ - **ErrorCode –**  Vrijednost cijelog broja koja je povezana s neobrađenom iznimkom
+
+ - **ErrorDetails –**   Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+
+ - **ErrorMessage –**   Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+
+ - **ErrorType –**  Niz koji opisuje kategoriju neobrađene iznimke
+
+ - **ExitCode –**   Vrijednost cijelog broja  povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
+
+### <a name="officeclicktorununiversalbootstrappercalculateparameters"></a>Office.ClickToRun.UniversalBootstrapper.CalculateParameters
+
+Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameters
+
+- **BitField –**    Vrijednost cijelog broja BitField argumenta koja nam govori je li potreban eksplicitni instalacijski /ažurirani kanal (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani)
+
+- **ChannelID –**   Cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
+
+- **CMDMode –** Neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe.
+
+- **C2RClientUICulture –**  Kultura klijenta C2R koju treba instalirati
+
+- **ErrorCode –**   Vrijednost cijelog broja povezana je s neobrađenom iznimkom
+
+- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+
+- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+
+- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+
+- **ExcludedApps –**    Niz koji navodi pojedinačna imena aplikacija za Office koje su zatražene da se izuzmu iz instaliranih Office paketa
+
+- **InstalledCabVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R klijenta već je instalirana
+
+- **InstalledProductVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R proizvoda već je instalirana
+
+- **IsC2RServiceRunning –** Booleova zastavica koja označava je li moderna usluga lokalnog računala C2R klijenta pokrenuta i radi na uređaju
+
+- **IsElevatedFlagSet –**   Booleova zastavica koja označava je li automatsko pokretanje već pokušalo steći povećanje ovlasti administratora
+
+- **IsFireFlyInstalled –**  Booleova zastavica koja pokazuje je li Office 2013 RTM C2R klijent trenutno instaliran
+
+- **IsFireflyServiceRunning –** Booleova zastavica koja označava je li servis lokalnog računala RTM C2R klijenta iz 2013. godine pokrenut i radi na uređaju
+
+- **IsOfficeInstalled –**   Booleova zastavica koja označava je li moderni Office klijent već instaliran
+
+- **OfficeCultures –**  Serijalizirani popis Office kultura koje treba instalirati
+
+- **OfficeSourceType –**    Neslužbeni niz povezan s identifikatorom vrijednosti instalacijskog izvora (CDN, HTTP, UNC, CMBITS, DVD, LOCAL)
+
+- **Origin –**  Vrijednost niza koja govori koji od podržanih izvora (Portoriko [PR], Singapur [SG], Dublin [DB]) treba upotrijebiti za početno instalacijsko strujanje
+
+- **PlatformFromLink –**    Niz koji pokazuje traženi x86 | x64 | zadani bit sustava Office zatražen od C2R servisa postavljanja
+
+- **PlatformOfExistingInstallation –**  Niz koji pokazuje je li x86 ili X64 Office već instaliran na uređaju
+
+- **PlatformToInstall –**   Niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
+
+- **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (na primjer, "O365ProPlusRetail")
+
+- **ProductsToAdd –**   Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
+
+- **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
+
+- **SharedComputerLicensing –** Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka "SharedComputerLicensing"
+
+- **ShouldActivate –**  Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
+
+- **VersionToInstall –**    Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
+ 
+
+### <a name="officeclicktorununiversalbootstrappercollectembeddedsignature"></a>Office.ClickToRun.UniversalBootstrapper.CollectEmbeddedSignature
+
+Izvještava o radnji koja čita označeni unos iz ugrađenog potpisa exe datoteke.  Ovo je nedokazani koncept koji prethodna iteracija izvršne datoteke setup.exe nije implementirala i na što se oslanjamo u prenošenju korisnikovih izbora proizvoda/jezika/broja bitova s web-stranice na proces unutar izvršne datoteke setup.exe.
+ 
+- **ErrorCode –**   Cijeli broj povezan je s neobrađenom iznimkom
+
+- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+
+- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+
+- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+
+### <a name="officeclicktorununiversalbootstrappercollectparameters"></a>Office.ClickToRun.UniversalBootstrapper.CollectParameters
+
+Izvješćuje o parametrima koji se koriste za instalaciju sustava Office
+
+- **BitField –**    Vrijednost cijelog broja BitField argumenta koja nam govori je li potreban eksplicitni instalacijski /ažurirani kanal (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani)
+
+- **ChannelID –**   Cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
+
+- **CMDMode –** Neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
+
+- **C2RClientUICulture –**  Kultura klijenta C2R koju treba instalirati
+
+- **ErrorCode –**   Vrijednost cijelog broja povezana je s neobrađenom iznimkom
+
+- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+
+- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+
+- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+
+- **ExcludedApps –**    Niz koji navodi pojedinačna imena aplikacija za Office koje su zatražene da se izuzmu iz instaliranih Office paketa
+
+- **InstalledCabVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R klijenta već je instalirana
+
+- **InstalledProductVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R proizvoda već je instalirana
+
+- **IsC2RServiceRunning –** Booleova zastavica koja označava je li moderna usluga lokalnog računala C2R klijenta pokrenuta i radi na uređaju
+
+- **IsElevatedFlagSet –**   Booleova zastavica koja označava je li automatsko pokretanje već pokušalo steći povećanje ovlasti administratora
+
+- **IsFireFlyInstalled –**  Booleova zastavica koja pokazuje je li Office 2013 RTM C2R klijent trenutno instaliran
+
+- **IsFireflyServiceRunning –** Booleova zastavica koja označava je li servis lokalnog računala RTM C2R klijenta iz 2013. godine pokrenut i radi na uređaju
+
+- **IsOfficeInstalled –**   Booleova zastavica koja označava je li moderni Office klijent već instaliran
+
+- **OfficeCultures –**  Serijalizirani popis Office kultura koje treba instalirati
+
+- **OfficeSourceType –**    Neslužbeni niz povezan s identifikatorom vrijednosti instalacijskog izvora (CDN, HTTP, UNC, CMBITS, DVD, LOCAL)
+
+- **Origin –**  Vrijednost niza koja govori koji od podržanih izvora (Portoriko [PR], Singapur [SG], Dublin [DB]) treba upotrijebiti za početno instalacijsko strujanje
+
+- **PlatformFromLink –**    Niz koji pokazuje traženi x86 | x64 | zadani bit sustava Office zatražen od C2R servisa postavljanja
+
+- **PlatformOfExistingInstallation –**  Niz koji pokazuje je li x86 ili X64 Office već instaliran na uređaju
+
+- **PlatformToInstall –**   Niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office.
+
+- **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
+
+- **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (na primjer, "O365ProPlusRetail")
+
+- **ProductsToAdd –**   Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
+
+- **SharedComputerLicensing –** Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka "SharedComputerLicensing"
+
+- **ShouldActivate –**  Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
+
+- **VersionToInstall –** Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
+
+### <a name="officeclicktorununiversalbootstrapperexecute"></a>Office.ClickToRun.UniversalBootstrapper.Execute
+
+Izvješćuje o poduzetim radnjama koje su utjecale na stroj, što je utvrđeno obrazloženim podacima iz opcije "CalculateParameters"
+
+- **AvailableClientVersionText –**  Vrijednost niza C2R klijenta verzije "16.0.xxxxx.yyyyy" pronađena u verziji Deskriptor XML, koji se koristi kako bi se utvrdilo treba li ažurirati trenutno instalirani C2R klijent
+
+- **CleanFireflyAction –**  "true" ako se planira pokretanje zadatka  CleanFireFlyAction tijekom ove instalacije
+
+- **CleanO15Action –**  "true"  ako se planira pokretanje zadatka CleanO15Action tijekom ove instalacije
+
+- **CMDMode –** Neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
+
+- **DeliveryMechanism –**   "FFNRoot" guid izdvojen iz verzije Deskriptora XML (koju je izdao RDX), koji nam govori iz koje publike/kanala potječe izvor za izgradnju
+
+- **DownloadC2RClientAction –** "true" ako se planira pokretanje zadatka DownloadC2RClientAction tijekom ove instalacije
+
+- **ErrorCode –**   Vrijednost cijelog broja povezana je s neobrađenom iznimkom
+
+- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+
+- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+
+- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+
+- **ExitCode –**   Vrijednost cijelog broja  povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
+
+- **LaunchAction –**    "true" ako se planira pokretanje zadatka LaunchAction tijekom instalacije
+
+- **LaunchUpdateAction –**  "true" ako se planira pokretanje zadatka LaunchUpdateAction tijekom instalacije
+
+- **PreReqResult –**    Vrijednost cijelog broja identifikatora rezultata kada su izvedene provjere bez preduvjeta (prolaz/pad/ponovno pokretanje)
+
+- **UnexpectedAction –**    "true" ako se planira pokretanje zadatka (slučaja pogreške) UnexpectedAction tijekom instalacije
+
+- **VersionToInstall –**   Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
 
 
 ## <a name="enhanced-configuration-service-ecs-events"></a>Događaji servisa za eksperimentiranje i konfiguraciju (ECS-a)
@@ -2582,7 +2815,9 @@ Prikupljaju se sljedeća polja:
 
   - **OptInShown** – označava je li dijaloški okvir za uključivanje koji se prikazuje prilikom prvog pokretanja aplikacije već prikazan
 
-  - **Office.Licensing.NextUserLicensingEligible –** taj signal označava je li korisnik kvalificiran za premještanje na novi stog za licenciranje. Ključno je za kvantifikaciju učinka na postojeće korisnike tijekom uvođenja novog stoga za licenciranje te da korisnici ne bi izgubili funkcionalnost
+### <a name="officelicensingnextuserlicensingeligible"></a>Office.Licensing.NextUserLicensingEligible 
+
+Taj signal označava je li korisnik kvalificiran za premještanje na novi stog za licenciranje. To je ključno za kvantifikaciju učinka na postojeće korisnike tijekom uvođenja novog stoga za licenciranje i da korisnici ne bi izgubili funkcionalnost.
 
 Događaj ne prikuplja nijedno polje.
 
@@ -2701,6 +2936,7093 @@ Prikupljaju se sljedeća polja:
   - **OpportunisticTokenRenewalAttempted** – označava jesmo li pokušali oportunistički obnoviti korisnika u načinu rada za licenciranje zajedničkog računala
 
   - **ReArmResult** – označava rezultat ponovne aktivacije instalacijskog ključa koji može produljiti vrijeme do isteka trenutne licence
+
+## <a name="microsoft-autoupdate-mau-events"></a>Događaji Microsoftova automatskog ažuriranja (MAU)
+
+### <a name="appdelegate_launch"></a>appdelegate_launch
+
+Taj događaj označava da je došlo do pokušaja pokretanja aplikacije. Evidentiramo rezultat (neuspjeh ili uspjeh). Koristimo ovaj događaj da identificiramo slučajeve u kojima se MAU ne uspije pokrenuti
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+    
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+ - **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Skup statičnog teksta koji pokazuje stanje pokretanja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="appdelegate_terminate"></a>appdelegate_terminate
+
+Ovaj događaj znači da se dogodio skladni izlaz iz aplikacije. Koristimo ovaj događaj za razlikovanje skladnog izlaza iz aplikacije od neskladnog.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+    
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+    
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst koji ukazuje na to da je Microsoftovo automatsko ažuriranje prekinuto.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="appinstall_connecttoxpc"></a>appinstall_connecttoxpc
+
+Ovaj događaj označava da je došlo do pogreške prilikom povezivanja s MAU pomagačem (komponentom koja izvodi instalaciju aplikacije).  Ovaj događaj označava potencijalnu korupciju aplikacije MAU. Uređaj neće moći instalirati ažuriranja.
+
+Prikupljaju se sljedeća polja: 
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke o pogrešci problema s povezivanjem.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="appregistry_info"></a>appregistry_info
+
+Ovaj događaj označava pokretanje aplikacije. Ovaj događaj koristimo za popis aplikacija za koje MAU može kontrolirati ažuriranja, broj dostupnih primjeraka kao i njihovu verziju te lokaciju instaliranja (zadanu ili drugu).
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – sadrži podatke o popisu identifikatora koje aplikacija koristi za registraciju na uslugu Microsoftova automatskog ažuriranja i broj instalacija registriranih za aplikaciju.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="appregistry_remove"></a>appregistry_remove
+
+Ovaj događaj označava da je došlo do pokušaja uklanjanja aplikacije s popisa aplikacija kojima upravlja MAU. Ovim događajem potvrđujemo da se putem MAU-a upravlja samo aplikacijama koje su izdane u MAU-u (ovdje se ne smiju pojavljivati AppStore aplikacije).
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Naziv i identifikator uklonjene aplikacije, bilo da se aplikacija i dalje nalazi na registriranom mjestu i je li aplikacija instalirana iz servisa AppStore.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="catalog_errorsignature"></a>catalog_errorsignature
+
+Ovaj događaj znači da je došlo do neuspjeha tijekom izvođenja provjere autentičnosti koda na datoteci za ažuriranje elemenata osiguranja.  Svaka provjera autentičnosti neispravnih elemenata osiguranja treba se smatrati nevažećom.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv datoteke kataloga s nevažećim potpisom. Različiti statični tekst opisuje različite uvjete pogreške.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="cloningtask_helpertoolconnection"></a>cloningtask_helpertoolconnection
+
+Ovaj događaj bilježi probleme s instalacijom na klon (tj. ili se nećemo uspjeti povezati s pomagačem da primijenimo ažuriranje ili ćemo se povezati, ali pomagač ne može primijeniti ažuriranje) Ako ikada dobijemo zapis prijave, to znači da instalacija na klon nije uspjela i da će se morati izvršiti povratno ažuriranje na mjestu.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID za identificiranje pojedinačne aktivnosti ažuriranja i pogrešku proxy poslužitelja prijavljenu tijekom postupka kloniranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="configuration_channel"></a>configuration_channel
+
+Ovaj događaj bilježi pokušaje prebacivanja kanala (grupa publike) u alatu MAU.  To koristimo za bilježenje pokušaja i njihovih rezultata (uspjeha ili neuspjeha).
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži odabran naziv kanala.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="configuration_metadata"></a>configuration_metadata
+
+Ovaj se događaj bilježi svaki put kada se MAU inicijalizira. To je MAU impulsna vrsta događaja
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst koji označava da se pojedinačni metapodaci inicijaliziraju ili se inicijalizira konfiguracija.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije.
+
+
+### <a name="controller_alertmanager_reinstallresponse"></a>controller_alertmanager_reinstallresponse
+
+Ovaj događaj znači da je MAU pao u neupotrebljivo/nepopravljivo stanje i da ga treba ponovno instalirati. Ovaj događaj označava nepopravljivu pogrešku i potrebna je intervencija korisnika.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka provjere ažuriranja
+
+- **Payload** – Sadrži popis nabrojanih korisnika.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_alertmanager_tmpdiskfull"></a>controller_alertmanager_tmpdiskfull
+
+Ovaj događaj označava da je otkriveno nedovoljno prostora na disku. Nećemo moći instalirati ažuriranja zbog nedovoljno prostora na disku.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_alertmanager_tmpdiskfullretry"></a>controller_alertmanager_tmpdiskfullretry
+
+Ovaj događaj znači da je pokrenut ponovni pokušaj instaliranja ažuriranja nakon što je otkriveno nedovoljno prostora na disku. Ponovno pokrećemo instalaciju nakon što ne možemo instalirati ažuriranja zbog nedovoljnog prostora na disku.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+    
+
+### <a name="controller_alertmanager_tmpdiskfullretrycancel"></a>controller_alertmanager_tmpdiskfullretrycancel
+
+Ovaj događaj znači da je pokrenuto otkazivanje pokušaja instaliranja nakon što je otkriveno nedovoljno prostora na disku. Koristimo ovaj događaj da bismo utvrdili je li naš rezervni mehanizam dovoljan da vodi korisnika kroz postupak ažuriranja kada je otkriveno nedovoljno prostora na disku.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+    
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+    
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
+
+Ovaj događaj označava da je provjera ažuriranja rezultirala time da nije pronađeno nijedno ažuriranje. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+
+### <a name="controller_checkwindow_updatecheck"></a>controller_checkwindow_updatecheck
+
+Ovaj događaj označava da je izvršena provjera ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+    
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
+
+Ovaj događaj znači da je postupak provjere ažuriranja otkazan (ili od korisnika ili od sustava). Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_checkwindow_updatecheckcanceluser"></a>controller_checkwindow_updatecheckcanceluser
+
+Ovaj događaj označava da je postupak provjere ažuriranja otkazao korisnik.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+    
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_checkwindow_updatesfound"></a>controller_checkwindow_updatesfound
+
+Ovaj događaj označava da je postupak provjere ažuriranja rezultirao pronalaskom ažuriranja.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_checkwindow_uptodate"></a>controller_checkwindow_uptodate
+
+Ovaj događaj označava da postupak provjere ažuriranja nije doveo do ažuriranja jer su aplikacije na uređaju ažurne.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_applaunchwithpendingupdate"></a>controller_downloadwindow_applaunchwithpendingupdate
+
+Ovaj događaj znači da je pokrenuta aplikacija koja je u tijeku ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja. Trebali bismo spriječiti da otvorene aplikacije preuzimaju ažuriranja. Aplikacije moraju biti zatvorene prije ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+    
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_closeapplicationdialog"></a>controller_downloadwindow_closeapplicationdialog
+
+Ovaj događaj znači da je pokrenuta aplikacija koja je u tijeku ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja. Trebali bismo spriječiti da otvorene aplikacije preuzimaju ažuriranja. Aplikacije moraju biti zatvorene prije ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_curtasknull"></a>controller_downloadwindow_curtasknull
+
+Ovaj događaj označava da je došlo do neočekivane pogreške tijekom pokušaja primjene ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_downloadcancel"></a>controller_downloadwindow_downloadcancel
+
+Ovaj događaj označava da je postupak preuzimanja otkazao korisnik.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Statični tekst. 
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_downloadfailed"></a>controller_downloadwindow_downloadfailed
+
+Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_downloadfailedok"></a>controller_downloadwindow_downloadfailedok
+
+Ovaj događaj znači da je došlo do pogreške prilikom preuzimanja ažuriranja, a korisnik je obaviješten. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja, te da se u slučaju neuspjeha korisniku pošalje obavijest.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_downloadpathmissing"></a>controller_downloadwindow_downloadpathmissing
+
+Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. Ovaj događaj ukazuje da nedostaje URL za preuzimanje.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_downloadtasknull"></a>controller_downloadwindow_downloadtasknull
+
+Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. Ovaj događaj označava da je od Microsoftova automatskog ažuriranja zatraženo da zaustavi/nastavi preuzimanje, ali nije mogao pronaći odgovarajućeg upravitelja preuzimanja.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_filesignaturenotverified"></a>controller_downloadwindow_filesignaturenotverified
+
+Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Ovaj događaj označava da alat Microsoftovo automatsko ažuriranje nije mogao provjeriti je li ovo ažuriranje objavio Microsoft. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. 
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji sadrži URL za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_installcomplete"></a>controller_downloadwindow_installcomplete
+
+Ovaj događaj označava da je instalacija svih ažuriranja koje nudi Microsoftovo automatsko ažuriranje dovršena. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. 
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+    
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_networkunavailablealert"></a>controller_downloadwindow_networkunavailablealert
+
+Ovaj događaj označava da je prilikom preuzimanja ažuriranja izgubljena mrežna povezivost.  Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_networkunavailablealertok"></a>controller_downloadwindow_networkunavailablealertok
+
+Ovaj događaj označava da je prilikom preuzimanja ažuriranja izgubljena mrežna povezivost. Također označava da je korisnik obaviješten o ovoj pogrešci. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_downloadwindow_noconnectionok"></a>controller_downloadwindow_noconnectionok
+
+Ovaj događaj označava da je prilikom preuzimanja ažuriranja izgubljena mrežna povezivost. Također označava da je korisnik obaviješten o ovoj pogrešci. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_repairrequired"></a>controller_downloadwindow_repairrequired
+
+Ovaj događaj označava da postupak ažuriranja nije uspio. Također označava da je ažuriranje dovršeno, ali je Microsoftovo automatsko ažuriranje pronašlo problem s ažuriranom aplikacijom i potreban je popravak. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+    
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+    
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+### <a name="controller_downloadwindow_updateaborted"></a>controller_downloadwindow_updateaborted
+
+Ovaj događaj označava da je postupak ažuriranja prekinut. Također označava da je ažuriranje već bilo u tijeku u program Daemon, a korisnik je kliknuo U redu da prekine preuzimanje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_updatefailed"></a>controller_downloadwindow_updatefailed
+
+Ovaj događaj označava da jedno ili više ažuriranja iz trenutne serije nije uspjelo. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_updatesuccessful"></a>controller_downloadwindow_updatesuccessful
+
+Ovaj događaj označava da su sva ažuriranja iz trenutne serije bila uspješna. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_userpaused"></a>controller_downloadwindow_userpaused
+
+Ovaj događaj označava da su sva ažuriranja iz trenutne serije bila uspješna. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_downloadwindow_userresumed"></a>controller_downloadwindow_userresumed
+
+Ovaj događaj označava da je postupak ažuriranja za preuzimanje uspješno nastavljen nakon pauze. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+    
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_mainwindow_setautomaticdownloadinstall"></a>controller_mainwindow_setautomaticdownloadinstall
+
+Ovaj događaj označava da je uređaj registriran u način automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_mainwindow_setmanualchecking"></a>controller_mainwindow_setmanualchecking
+
+Ovaj događaj označava da je uređaj registriran u način ručnog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_templateawindow_cancel"></a>controller_templateawindow_cancel
+
+Ovaj događaj označava da je korisnik odlučio odustati ili zanemariti pruženu poruku upozorenja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_templateawindow_enroll"></a>controller_templateawindow_enroll
+
+Ovaj događaj označava da je korisnik odlučio slijediti pružene preporuke upozorenja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+    
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+
+### <a name="controller_templateawindow_install"></a>controller_templateawindow_install
+
+Ovaj događaj označava da je korisnik odlučio slijediti pruženu preporuku upozorenja koja se odnosi na pokretanje postupka instalacije softvera. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_updatewindow_begindownloadingapps"></a>controller_updatewindow_begindownloadingapps
+
+Ovaj događaj označava da je preuzimanje ažuriranja započet putem prozora za ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži rječnik dostupnih paketa za ažuriranje i naznaku je li korisnik odabrao da instalira taj unos.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_updatewindow_networkretry"></a>controller_updatewindow_networkretry
+
+Ovaj događaj označava da je pokušaj ponovnog pokretanja aktiviran na listu za ažuriranje zbog kvara na mreži. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_updatewindow_networkretrycancel"></a>controller_updatewindow_networkretrycancel
+
+Ovaj događaj označava da pokušaj ponovnog pokretanja ne može biti aktiviran na listu za ažuriranje zbog kvara na mreži. Ovaj događaj označava korisnika izabranog da otkaže ažuriranja nakon što je upozoren da mreža postaje nedostupna. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_updatewindow_networkunavailable"></a>controller_updatewindow_networkunavailable
+
+Ovaj događaj označava da je mrežna povezivost odjednom izgubljena. Ovaj događaj ukazuje na to da poslužitelj nije dostupan pri pokušaju preuzimanja paketa za ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_updatewindow_noupdateavailable"></a>controller_updatewindow_noupdateavailable
+
+Ovaj događaj označava da je bilo traženja ažuriranja koje je rezultiralo time da nema dostupnih ažuriranja. Ovaj događaj označava da Microsoftovo automatsko ažuriranje nije pronašlo nikakva dostupna ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_updatewindow_noupdatestoselect"></a>controller_updatewindow_noupdatestoselect
+
+Ovaj događaj označava da je došlo do pogreške koja je rezultirala praznim popisom ažuriranja. Ovaj događaj označava da Microsoftovo automatsko ažuriranje prikazuje prazan list za ažuriranje. To se ne bi smjelo dogoditi. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="controller_updatewindow_updateavailable"></a>Controller_UpdateWindow_UpdateAvailable
+
+Ovaj događaj označava da je bilo traženja ažuriranja koje je rezultiralo time da su ponuđena ažuriranja. To koristimo čak i da utvrdimo nude li se ažuriranja za pregled korisnika, prikazuju li se ispravna ažuriranja ili funkcionira li blokiranje ažuriranja kako se očekuje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži rječnik dostupnih paketa za ažuriranje i status odabira korisnika za svaki.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="controller_updatewindow_updateavailablecancel"></a>controller_updatewindow_updateavailablecancel
+
+Ovaj događaj označava da je korisnik otkazao nakon što smo prikazali listu ažuriranja s popisom ažuriranja. Ovaj događaj koristimo da objasnimo razloge za neažuriranje (tj. korisnik ih svojevoljno otkaže). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadactor_pause"></a>downloadactor_pause
+
+Ovaj događaj označava da je korisnik izdao zahtjev za pauziranje preuzimanja. Ovaj događaj koristimo i da objasnimo razloge za ažuriranja koja očito nisu dovršena. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadactor_redirect"></a>downloadactor_redirect
+
+Ovaj događaj označava da je agent za preuzimanje usmjeren na krajnju točku koja izdaje URL preusmjeravanje za zahtjev za preuzimanje. To koristimo čak i da objasnimo razloge za neuspjeh u preuzimanju i dijagnosticiranje problema proxy poslužitelja. Također može pomoći u dijagnosticiranju razloga zbog kojih je primijećeno da korisnici instaliraju starije verzije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži preusmjereni URL. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="downloadactor_resume"></a>downloadactor_resume
+
+Ovaj događaj označava da korisnik postavlja zahtjev za nastavak zaustavljenog preuzimanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadactor_resumeerror"></a>downloadactor_resumeerror
+
+Ovaj događaj označava da korisnik postavlja zahtjev za nastavak zaustavljenog preuzimanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži put URL-a za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="downloadactor_status"></a>downloadactor_status
+
+Ovaj događaj bilježi da postoje pokušaji dohvaćanja datoteka elemenata osiguranja i njihovih rezultata (uspjeh ili neuspjeh). Želimo znati elemente osiguranja i pakete koji se preuzimaju. Dobivena pogrešna datoteka može ukazivati na problem međuverzije/elementa osiguranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži URL za preuzimanje te kôd pogreške u slučaju neuspjeha. URL za preuzimanje je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_downloadcatalogfail"></a>downloadmanifest_downloadcatalogfail
+
+Ovaj događaj označava da je došlo do pogreške pri preuzimanju. Datoteka koja nije uspjela preuzeti je zabilježena. Želimo znati elemente osiguranja i pakete koji se preuzimaju. Neuspjeh u preuzimanju manifesta može značiti ili neuspjeh generiranja verzije elementa osiguranja, pogrešku u konfiguraciji CDN-a, pogrešku u konfiguraciji klijenta i mrežnu pogrešku. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="downloadmanifest_downloadcatalogsuccess"></a>downloadmanifest_downloadcatalogsuccess
+
+Ovaj događaj označava da je datoteka uspješno preuzeta. Neuspjeh u preuzimanju manifesta može značiti ili neuspjeh generiranja verzije elementa osiguranja, pogrešku u konfiguraciji CDN-a, pogrešku u konfiguraciji klijenta i mrežnu pogrešku. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+    
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_downloadfail"></a>downloadmanifest_downloadfail
+
+Ovaj događaj znači da je došlo do pogreške pri preuzimanju. Evidentira se datoteka manifesta ili paketa koja nije uspjela biti preuzeta, kao i detalji pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_downloadfromurl"></a>downloadmanifest_downloadfromurl
+
+Ovaj događaj označava da je počelo preuzimanje datoteke kataloga. Evidentiramo URL s kojeg se datoteka kataloga preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_downloading"></a>downloadmanifest_downloading
+
+Ovaj događaj označava da je počelo preuzimanje datoteke kataloga. Evidentiramo URL s kojeg se datoteka kataloga preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_downloadsuccess"></a>downloadmanifest_downloadsuccess
+
+Ovaj događaj označava da je preuzimanje XML datoteke i datoteke paketa uspjelo. Evidentiramo URL s kojeg se datoteka preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="downloadmanifest_downloadurl"></a>downloadmanifest_downloadurl
+
+Ovaj događaj označava da je došlo do zahtjeva za preuzimanje datoteke. Evidentiramo URL s kojeg se datoteka preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+    
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži kôd pogreške i URL datoteke za preuzimanje. Ovo je mjesto za preuzimanje Microsofta, osim ako je kanal postavljen na Prilagođeno. Za prilagođeni kanal ova je vrijednost postavljena na "Prilagođena lokacija".
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_filenameerror"></a>downloadmanifest_filenameerror
+
+Ovaj događaj označava da je došlo do neočekivane pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_invalidhash"></a>downloadmanifest_invalidhash
+
+Ovaj događaj označava sigurnosnu provjeru datoteka koje nisu uspjele. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv preuzete datoteke s nevažećom vrijednošću raspršivanja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_missingdaemon"></a>downloadmanifest_missingdaemon
+
+Ovaj događaj označava da je korisnik pokušao provjeriti ima li ažuriranja, a otkrili smo da alatu MAU nedostaje osnovna komponenta (daemon). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_signatureerror"></a>downloadmanifest_signatureerror
+
+Ovaj događaj označava da provjera autentičnosti kôda nije uspjela za paket. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv preuzete datoteke s nevažećom vrijednošću raspršivanja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmanifest_status"></a>downloadmanifest_status
+
+Ovaj događaj evidentira sažeto skupljanje pokušaja/neuspjeha na koje se naišlo tijekom postupka preuzimanja datoteka manifesta i paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke uključujući URL (Microsoftova adresa), prefiks datoteke koja se preuzima, uočene pogreške itd.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmgr_downloadend"></a>downloadmgr_downloadend
+
+Ovaj događaj evidentira oznaku koja pokazuje da je postupak preuzimanja dovršen sam. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke uključujući URL (Microsoftova adresa), prefiks datoteke koja se preuzima, uočene pogreške itd.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadmgr_downloadstart"></a>downloadmgr_downloadstart
+
+Ovaj događaj evidentira ažuriranje koje će se uskoro preuzeti. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv ažuriranja koje se preuzima.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadtask_downloadfailure"></a>downloadtask_downloadfailure
+
+Ovaj događaj evidentira da je došlo do pogreške prilikom preuzimanja datoteke paketa. Evidentiramo put ažuriranja te pogrešku. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv ažuriranja koje se preuzima i uočenu pogrešku.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
+
+Uspješno preuzimanje datoteke paketa. Evidentiramo korišten put ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži put ažuriranja za uspješno preuzimanje.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_checkforupdate"></a>fba_checkforupdate
+
+Ovaj događaj označava da pozadinski postupak provjerava postoje li ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_checkforupdateskip"></a>fba_checkforupdateskip
+
+Ovaj događaj označava da je pozadinski proces preskočio ažuriranje zbog otvaranja grafičkog korisničkog sučelja MAU. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_launchstatus"></a>fba_launchstatus
+
+Ovaj događaj evidentira neuspjehe MAU daemona prilikom pokušaja pokretanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži OSStatus (Apple statusni kôd) koji odražava status pokretanja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
+
+Ovaj događaj označava da se korisnik odlučio za tiha ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_skipforcedupdate"></a>fba_skipforcedupdate
+
+Ovaj događaj ukazuje na to da se prisilna provjera ažuriranja preskače zbog otvorenih aplikacija. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_startforcedupdate"></a>fba_startforcedupdate
+
+Ovaj događaj označava da je došlo do pokušaja primjene prinudnog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_terminate"></a>fba_terminate
+
+Ovaj događaj označava da se MAU daemon normalno prekinuo. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fba_updatefound"></a>fba_updatefound
+
+Ovaj događaj ukazuje da je MAU daemon pronašao dostupna ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži broj dostupnih ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="fba_updatetimer"></a>fba_updatetimer
+
+Ovaj događaj ukazuje na to da je proces Microsoftovo automatsko ažuriranje Daemon postao aktivan za provjeru ažuriranja nakon spavanja određeno vrijeme. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke o trenutnom datumu i vremenu.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
+
+Ovaj događaj evidentira ako su sve aplikacije bile zatvorene prije instalacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+    
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_applaunchafterupdate"></a>fbasilentupdate_applaunchafterupdate
+
+Ovaj događaj bilježi pokušaj ponovnog pokretanja aplikacije nakon tihog ažuriranja i načina ažuriranja (klon ili ne). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva aplikacije koja se pokreće.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+    
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_applaunchwileinstalling"></a>fbasilentupdate_applaunchwileinstalling
+
+Evidentiramo kada je došlo do pokretanja aplikacije tijekom instalacije ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_appneedtoclose"></a>fbasilentupdate_appneedtoclose
+
+Evidentiramo kada je započeo postupak ažuriranja i utvrđujemo da je aplikacija za ažuriranje otvorena. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i ID paketa aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_appterminationeventreceived"></a>fbasilentupdate_appterminationeventreceived
+
+Ovaj događaj označava da Microsoftovo automatsko ažuriranje primilo Apple događaj kojim se obavještava da je aplikacija prekinuta. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i ID paketa aplikacije. Može također sadržavati niz pogrešaka ako Microsoftovo automatsko ažuriranje utvrdi da aplikacija i dalje radi iako je zaprimljen događaj prekida.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
+
+Ovaj događaj bilježi rezultat provjere autentičnosti kôda nakon primjene ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži rezultat operacije provjere autentičnosti kôda.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_download"></a>fbasilentupdate_download
+
+Ovaj događaj označava da se preuzima ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_downloadfailed"></a>fbasilentupdate_downloadfailed
+
+Ovaj događaj označava da je došlo do pogreške tijekom preuzimanja ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
+
+Ovaj događaj označava da započinjemo s preuzimanjem skupa ažuriranja u pozadini (bilježimo broj istodobnih preuzimanja). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži broj ažuriranja u redu čekanja.
+
+    - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_downloadingrepairupdate"></a>fbasilentupdate_downloadingrepairupdate
+
+Ovaj događaj označava da smo pokrenuli pokušaj preuzimanja popravka zbog neuspjelog ažuriranja. Evidentiramo verziju i ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_duplicatedownloadattempted"></a>fbasilentupdate_duplicatedownloadattempted
+
+Ovaj događaj označava da je došlo do pogreške. Istovremeno trebamo preuzeti samo jedno ažuriranje za određenu aplikaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_installattemptfailed"></a>fbasilentupdate_installattemptfailed
+
+Ovaj događaj znači da pokušaja instalacije ažuriranja (verzije) nije uspio. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_installcomplete"></a>fbasilentupdate_installcomplete
+
+Ovaj događaj označava da su sva ažuriranja u grupi završena instalacijom. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_installed"></a>fbasilentupdate_installed
+
+Ovaj događaj označava da je pojedinačno ažuriranje uspješno instalirano. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja. Sadrži identifikator ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="fbasilentupdate_installing"></a>fbasilentupdate_installing
+
+Ovaj događaj označava da je pokrenuto pojedinačno ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i naziva paketa ažuriranja.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_notificationremoved"></a>fbasilentupdate_notificationremoved
+
+Ovaj događaj označava da ažuriranje koje je bilo blokirano više nije blokirano. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije (identifikator se aplikacija koristi za registraciju na uslugu Microsoftova automatskog ažuriranja) za prethodno blokiranu aplikaciju
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_queueinstall"></a>fbasilentupdate_queueinstall
+
+Ovaj događaj znači da će ažuriranje biti u redu čekanja za tihu instalaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_requiredappsclosed"></a>fbasilentupdate_requiredappsclosed
+
+Evidentiramo kada je aplikacija koja ima ažuriranje na čekanju zatvorena. To označava vrijeme tijekom kojeg je moguće nastaviti s instalacijom. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i ID paketa aplikacije.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_updateavailablenotification"></a>fbasilentupdate_updateavailablenotification
+
+Ovaj događaj označava da se aktivira obavijest o dostupnosti ažuriranja. Moramo osigurati da se tijek upita za ažuriranja aktivira kada se otkrije ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_userclicknotification"></a>fbasilentupdate_userclicknotification
+
+Ovaj događaj ukazuje da je korisnik kliknuo na odjeljak sa sadržajem obavijesti o dostupnom ažuriranju i pokrenuto je grafičko korisničko sučelje Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_userselectinstalllater"></a>fbasilentupdate_userselectinstalllater
+
+Ovaj događaj ukazuje na to da se korisnik odlučio instalirati kasnije nakon prikazane obavijesti o dostupnom ažuriranju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="fbasilentupdate_userselectinstallnow"></a>fbasilentupdate_userselectinstallnow
+
+Ovaj događaj ukazuje na to da se korisnik odlučio instalirati odmah nakon prikazane obavijesti o dostupnom ažuriranju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installdata_checkrunning"></a>installdata_checkrunning
+
+Ovaj događaj evidentira rezultat provjere između aplikacija za instaliranje i hoće li se postupak instalacije nastaviti na temelju otvaranja aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installdata_cleanup"></a>installdata_cleanup
+
+Datoteke paketa treba ukloniti nakon instalacije. Ovaj događaj bilježi slučajeve u kojima ih ne uspijemo ukloniti. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv preuzete datoteke i podatke o pogrešci.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installedapp_invalidbundle"></a>installedapp_invalidbundle
+
+Ovaj događaj upućuje da Microsoftovo automatsko ažuriranje ne može dohvatiti podatke o paketu za registriranu aplikaciju na zadanom putu. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installedapp_invalidpreference"></a>installedapp_invalidpreference
+
+Ovaj događaj evidentira slučajeve u kojima osobni odabir korisnika sadrži nevažeći unos aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka provjere ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installedapp_nilbundleid"></a>installedapp_nilbundleid
+
+Ovaj događaj evidentira slučajeve u kojima nedostaje ID paketa za aplikaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installedapp_nilbundlename"></a>installedapp_nilbundlename
+
+Ovaj događaj evidentira slučajeve u kojima nedostaje naziv paketa za aplikaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installstatus_codesign"></a>installstatus_codesign
+
+Ovaj događaj evidentira status OS binarnog alata za potpisivanje kôda. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+    
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installstatus_daemon"></a>installstatus_daemon
+
+Ovaj događaj evidentira stanje statusa daemona Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naznaku postoji li komponenta Daemon na očekivanom mjestu i je li potpisan kôd.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installstatus_helper"></a>installstatus_helper
+
+Ovaj događaj evidentira stanje statusa pomoćnog alata Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naznaku postoji li komponenta PrivilegedHelperTool na očekivanom mjestu i je li potpisan kôd.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installupdatestask_applaunched"></a>installupdatestask_applaunched
+
+Ovaj događaj znači da je alat Microsoftovo automatsko ažuriranje otkrio pokretanje aplikacije za blokirano ažuriranje, ali nije mogao pronaći odgovarajući instalacijski program. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv pokrenute aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installupdatestask_applaunchwithpendingupdate"></a>installupdatestask_applaunchwithpendingupdate
+
+Ovaj događaj ukazuje da je alat Microsoftovo automatsko ažuriranje otkrio pokretanje aplikacije za aplikaciju koja čeka na ažuriranje. Pokrenuta će se aplikacija prekinuti. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installupdatestask_codesignverificationfail"></a>installupdatestask_codesignverificationfail
+
+Ovaj događaj označava da provjera autentičnosti potpisa koda nije uspjela za ažuriranje aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i kôda pogreške.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_codesignverificationstart"></a>installupdatestask_codesignverificationstart
+
+Ovaj događaj označava da je započela provjera autentičnosti potpisa koda za ažuriranje aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažurirane aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_codesignverificationsuccess"></a>installupdatestask_codesignverificationsuccess
+
+Ovaj događaj označava uspjeh provjere autentičnosti potpisa koda za ažuriranje aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažurirane aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_failsilentinstall"></a>installupdatestask_failsilentinstall
+
+Ovaj događaj evidentira neuspjehe tijekom primjene tihih ažuriranja bez obzira je li u pitanju klonirana ili uobičajena instalacija. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+    
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i vrste ažuriranja.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installupdatestask_multiplerelocatablepackage"></a>installupdatestask_multiplerelocatablepackage
+
+Ovaj događaj znači da je alat Microsoftovo automatsko ažuriranje pronašao više primjera unosa aplikacije za određeni paket ažuriranja u preuzetom manifestu. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installupdatestask_removeclone"></a>installupdatestask_removeclone
+
+Ovaj događaj označava da je klon uklonjen. Klon uklanjamo kada je proces instaliranja na klon završen ili kada se pokrene novi postupak i u njemu se nađe starija inačica klonirane verzije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja, naziva paketa ažuriranja, detalja o statusu uklanjanja klona / pogreške.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_retryfail"></a>installupdatestask_retryfail
+
+Ovaj događaj označava da su se pojavile pogreške tijekom postupka ponovnog pokušaja instalacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i treba li se instalirati putem instalacije na klon
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+
+Ovaj događaj evidentira komunikacijske pogreške unutar procesa (komunikacija s pomoćnim alatom MAU). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i detalja o prijavljenoj pogrešci proxy poslužitelja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+
+Ovaj događaj evidentira komunikacijske pogreške unutar procesa (komunikacija s pomoćnim alatom MAU). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i detalja o prijavljenoj pogrešci proxy poslužitelja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+
+### <a name="installupdatestask_retryresponse"></a>installupdatestask_retryresponse
+
+Ovaj događaj evidentira da pokušaj nije uspio. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja, verzije aplikacije, naziva paketa ažuriranja i indikacija je li instalacija na klon bila uključena, je li instalacija uspjela i jesu li prijavljene pogreške kod neuspjeha.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_retrysuccess"></a>installupdatestask_retrysuccess
+
+Ovaj događaj evidentira uspješnu instalaciju ažuriranja nakon ponovnog pokušaja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja, verzije aplikacije, naziva paketa ažuriranja i indikacija je li instalacija na klon bila uključena.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="installupdatestask_setreopengui"></a>installupdatestask_setreopengui
+
+Ovaj događaj pokazuje je li postavljanje postavke za ponovno otvaranje grafičkog korisničkog sučelja nakon instalacije bilo uspješno. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava uspješnost operacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="msupdate_cli_eventhandler_applyupdates_appids"></a>msupdate_cli_eventhandler_applyupdates_appids
+
+Ovaj događaj označava da je za primjenu ažuriranja izdana naredba CLI (sučelje retka klijenta). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži popis ID-ova aplikacija koje treba ažurirati.
+    
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
+
+Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio apple događaj koji treba konfigurirati. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
+
+Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio apple događaj za popis ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="msupdate_monitor_progress_downloaded"></a>msupdate_monitor_progress_downloaded
+
+Ovaj događaj ukazuje da su ažuriranja preuzeta. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži popis preuzetih ažuriranja
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="msupdate_monitor_progress_failure"></a>msupdate_monitor_progress_failure
+
+Ovaj događaj evidentira popis ažuriranja u redu čekanja koje nisu uspješno primijenjena. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži popis ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="msupdate_monitor_progress_finished"></a>msupdate_monitor_progress_finished
+
+Ovaj događaj evidentira popis ažuriranja u redu čekanja koja su uspješno instalirana. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži popis ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="msupdate_monitor_progress_queued"></a>msupdate_monitor_progress_queued
+
+Ovaj događaj evidentira popis ažuriranja u redu čekanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži popis ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="optinnotificationaction"></a>Optinnotificationaction
+
+Ovaj događaj evidentira odgovor korisnika na uključivanje dijaloškog okvira za ulazak u tiha ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži statični tekst koji predstavlja odabir korisnika za uključivanje u automatsko preuzimanje i instalaciju.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="sauupdateinfoprovider"></a>sauupdateinfoprovider
+
+Ovaj događaj evidentira kad god nedostaje ključ manifesta elementa osiguranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži niz koji se koristi za traženje lokacije ili veličine ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatecore_appregistration"></a>updatecore_appregistration
+
+Ovaj događaj evidentira pokušaje registracije aplikacije i rezultat/razlog. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naznaka je li prednost dostupna, je li riječ o ponovnoj registraciji i je li registracija potrebna.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatecore_loadinglaunchagent"></a>updatecore_loadinglaunchagent
+
+Ovaj događaj označava da se agent za pokretanje učitava. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatecore_server_connectionfail"></a>updatecore_server_connectionfail
+
+Ovaj događaj evidentira pogreške na koje se naišlo na putu do poslužitelja CDN. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke o nazivu poslužitelja i je li poslužitelj valjan i dostupan.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefilterhelper_cannotretrievebuilddate"></a>updatefilterhelper_cannotretrievebuilddate
+
+Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo kako nismo mogli dohvatiti datum iz metapodataka aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefilterhelper_invalidresponsefromupdatefiltering"></a>updatefilterhelper_invalidresponsefromupdatefiltering
+
+Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+    
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefilterhelper_missingbuilddate"></a>updatefilterhelper_missingbuilddate
+
+Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefilterhelper_updatebypassedoldage"></a>updatefilterhelper_updatebypassedoldage
+
+Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da je usluga zaobiđena zbog starog datuma ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_check_start"></a>updatefinder_check_start
+
+Ovaj događaj evidentira svaki put kada pokrenemo operaciju provjere ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+    
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke o ponuđenim ažuriranjima, registriranim aplikacijama i privremenom mjestu gdje će preuzete datoteke biti spremljene.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_check_status"></a>updatefinder_check_status
+
+Ovaj događaj objedinjuje status provjere za operacije ažuriranja (kanal od pretraživanja do preuzimanja). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži podatke o ponuđenim ažuriranjima, registriranim aplikacijama i privremenom mjestu gdje će preuzete datoteke biti spremljene.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_check_updatefound"></a>updatefinder_check_updatefound
+
+Evidentiramo kad god provjera ažuriranja rezultira pronađenim ažuriranjima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_check_updatenotfound"></a>updatefinder_check_updatenotfound
+
+Evidentiramo kad god provjera ažuriranja rezultira time da nema ažuriranja jer nije pronađeno nijedno ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_check_uptodate"></a>updatefinder_check_uptodate
+
+Evidentiramo kad god provjera ažuriranja rezultira time da nema ponuđenih ažuriranja jer su sve aplikacije već ažurne. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_offerupdates_minoscheckfail"></a>updatefinder_offerupdates_minoscheckfail
+
+Evidentiramo kad god smo blokirali ažuriranje zbog neispunjavanja preduvjeta OS-a. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži minimalne preduvjete verzije OS-a kako je navedeno u preuzetoj datoteci manifesta.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_offerupdates_nullbundleforappid"></a>updatefinder_offerupdates_nullbundleforappid
+
+Ovaj događaj znači da alat Microsoftovo automatsko ažuriranje nije uspio učitati informacije o paketu za ID aplikacije navedene u preuzetoj datoteci manifesta. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_offerupdates_updaterulematched"></a>updatefinder_offerupdates_updaterulematched
+
+Ovaj događaj označava da je pronađeno ažuriranje za aplikaciju i osnovnu verziju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije i podatke o verziji paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="updatefinder_registeredapps"></a>updatefinder_registeredapps
+
+Evidentiramo aplikacije koje instalira/registrira/kontrolira MAU. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID aplikacije i podatke o verziji paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="updatefinder_suite_missingcollateral"></a>updatefinder_suite_missingcollateral
+
+Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije primjenjivo zbog nedostatka elementa osiguranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_suite_staleversion"></a>updatefinder_suite_staleversion
+
+Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije primjenjivo jer je osnovna verzija prestara. Evidentiramo osnovnu verziju i ID aplikacije paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_suite_updateapplicable"></a>updatefinder_suite_updateapplicable
+
+Ažuriranje paketa – evidentiramo svaki put kada je ažuriranje paketa primjenjivo. Evidentiramo osnovnu verziju i ID aplikacije paketa. Evidentiramo osnovnu verziju i ID aplikacije paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv, osnovnu verziju i ažuriranu verziju paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_suite_updatenotapplicabledefaultpath"></a>updatefinder_suite_updatenotapplicabledefaultpath
+
+Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije ponuđeno jer nisu sve aplikacije paketa instalirane na temelju zadanog puta. Evidentiramo osnovnu verziju i ID aplikacije paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv, osnovnu verziju i ažuriranu verziju paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="updatefinder_suite_updatenotapplicableversion"></a>updatefinder_suite_updatenotapplicableversion
+
+Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije ponuđeno jer nisu sve aplikacije paketa u istoj osnovnoj verziji. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv, osnovnu verziju i ažuriranu verziju paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_suite_updatenotoffered"></a>updatefinder_suite_updatenotoffered
+
+Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije ponuđeno jer je veličina paketa veća od pojedinačnih ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatefinder_suite_updateoffered"></a>updatefinder_suite_updateoffered
+
+Ažuriranje paketa – evidentiramo svaki put kada je ažuriranje paketa ponuđeno. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži naziv, osnovnu verziju i ažuriranu verziju paketa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
+
+Ovaj događaj evidentira broj ažuriranja koje je pronašao alat Microsoftovo automatsko ažuriranje tijekom provjere dostupnih ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži broj pronađenih dostupnih ažuriranja.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="updatemanager_updatespending"></a>updatemanager_updatespending
+
+Ovaj događaj označava da su pronađena ažuriranja i da čekaju instalaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži indikaciju je li se zadatak izvodi na glavnoj niti i broju ažuriranja na čekanju.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="webservices_checkforsilentupdates"></a>webservices_checkforsilentupdates
+
+Ovaj događaj označava da su pronađeni kandidati za tiho ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži broj pronađenih ažuriranja i ID aplikacije.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="webservices_deltaupdater"></a>webservices_deltaupdater
+
+Ovaj događaj evidentira interakciju između klijentskog kôda i značajki koja kontrolira hoće li klijent omogućiti Delta ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži odgovor web-servisa i vrste ažuriranja koje se primjenjuje.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="webservices_serviceaction"></a>webservices_serviceaction
+
+Evidentiramo bilo kakve pogreške koje nastaju uslijed neočekivanog odgovora web-servisa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži detalje o prosljeđivanju akcije s web-servisa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="webservices_serviceaction"></a>webservices_serviceaction
+
+Evidentiramo bilo kakve pogreške koje nastaju uslijed neočekivanog odgovora web-servisa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži detalje o prosljeđivanju akcije s web-servisa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+### <a name="webservices_serviceresponse"></a>webservices_serviceresponse
+
+Ovaj događaj evidentira zahtjeve za uslugu MAU službu, vrijeme odgovora i pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID zahtjeva, naziv aplikacije, vrijeme odgovora i/ili kod statusa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+    
+### <a name="webservices_silentupdate"></a>webservices_silentupdate
+
+Evidentiramo zahtjeve kako bismo provjerili postoje li pravila primjenjivosti za "prisilno ažuriranje", npr. moramo prebaciti korisnika iz verzije N na verziju N+1 zbog nekog velikog problema. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID zahtjeva, naziv aplikacije, vrijeme odgovora i/ili kod statusa.
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
+
+### <a name="webservices_webcontent"></a>webservices_webcontent
+
+Evidentiramo zahtjeve i odgovore primljene u web-servis. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+ 
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – Sadrži ID pozivatelja web-servisa
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+## <a name="onenote-sync-events"></a>Sinkronizacija događaja u programu OneNote
+
+### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
+ 
+Ovaj događaj zapisuje rezultat sinkronizacije bilježnice. Koristi se za otkrivanje broja jedinstvenih ciljeva sinkronizacije tijekom izračuna rezultata sinkronizacije aplikacije OneNote.
+ 
+Prikupljaju se sljedeća polja
+
+- **CachedError_Code** – numerirani ili alfanumerički kod koji se koristi za određivanje prirode predmemorirane pogreške i/ili razloga pojave
+
+- **CachedError_Description** – opis predmemorirane pogreške
+
+- **CachedError_Tag** – označava mjesto na kojem se predmemorirana pogreška prikazuje u kodu
+
+- **CachedError_Type** – vrsta predmemorirane pogreške, npr. Win32Error itd.
+
+- **ExecutionTime** – vrijeme u milisekundama potrebno za repliciranje bilježnice
+
+- **Gosid** – globalni ID prostora objekta
+
+- **IdentityType** – vrsta identiteta, npr. Windows Live, Org ID itd.
+
+- **InitialReplicationInSession** – označava je li ova replikacija prva replikacija bilježnice nakon otvaranja ili nije
+
+- **IsBackgroundSync** – označava je li ovo sinkronizacija u pozadini ili nije
+
+- **IsCachedErrorSuppressed** – označava je li predmemorirana pogreška potisnuta ili nije
+
+- **IsCachedErrorUnexpected** – označava je li predmemoriana pogreška neočekivana ili nije
+
+- **IsNotebookErrorSuppressed** – označava je li pogreška sinkronizacije na razini bilježnice potisnuta ili nije
+
+- **IsNotebookErrorUnexpected** – označava je li pogreška sinkronizacije na razini bilježnice neočekivana ili nije
+
+- **IsSectionErrorSuppressed** – označava je li pogreška sinkronizacije odjeljka potisnuta ili nije
+
+- **IsSectionErrorUnexpected** – označava je li pogreška sinkronizacije odjeljka neočekivana ili nije
+
+- **IsUsingRealtimeSync** – označava koristi li sinkronizacija bilježnice suvremenu sinkronizaciju sadržaja stranice ili ne
+
+- **LastAttemptedSync** – vremenska oznaka za trenutak kada se proveo posljednji pokušaj sinkronizacije bilježnice
+
+- **LastBackgroundSync** – vremenska oznaka za trenutak kada se proveo posljednji pokušaj sinkronizacije u pozadini
+
+- **LastNotebookViewedDate** – datum kada je bilježnica posljednji put prikazana
+
+- **LastSuccessfulSync** – vremenska oznaka za trenutak kada se bilježnica uspješno prethodno sinkronizirala
+
+- **NeedToRestartBecauseOfInconsistencies** – treba li se sinkronizacija ponovno pokrenuti zbog nedosljednosti ili ne
+
+- **NotebookErrorCode** – kod pogreške sinkronizacije na razini bilježnice spremljen je na prostoru grafikona bilježnice
+
+- **NotebookId** – ID bilježnice
+
+- **NotebookType** – vrsta bilježnice
+
+- **ReplicatingAgainBecauseOfInconsistencies** – pokreće li se sinkronizacija ponovno zbog nedosljednosti ili ne
+
+- **SectionError_Code** – numerirani ili alfanumerički kod koji se koristi za određivanje prirode pogreške sinkronizacije odjeljka i/ili razloga pojave
+
+- **SectionError_Description** – opis pogreške sinkronizacije odjeljka
+
+- **SectionError_Tag** – označava mjesto na kojem se pogreška sinkronizacije odjeljka prikazuje u kodu
+
+- **SectionError_Type** – vrsta pogreške sinkronizacije odjeljka, npr. Win32Error itd.
+
+- **Success** – je li bilježnica uspješno sinkronizirana ili nije
+
+- **SyncDestinationType** – vrsta odredišta sinkronizacije, npr. OneDrive ili SharePoint Online
+
+- **SyncId** – broj jedinstven svakoj sinkronizaciji bilježnice
+
+- **SyncWasFirstInSession** – označava je li ova sinkronizacija prva sinkronizacija u trenutnoj sesiji
+
+- **SyncWasUserInitiated** – označava je li korisnik sinkronizacije pokrenut ili nije
+
+- **TenantId** – ID klijenta sustava SharePoint
+
+- **TimeSinceLastAttemptedSync** – vrijeme proteklo od posljednjeg pokušaja sinkronizacije bilježnice
+
+- **TimeSinceLastSuccessfulSync** – vrijeme proteklo od posljednje uspješne sinkronizacije bilježnice
+
+### <a name="officeonenotestoragerealtimewebsocketsessioninfo"></a>Office.OneNote.Storage.RealTime.WebSocketSessionInfo
+ 
+Ovaj događaj evidentira rezultat sinkronizacije web-utičnice za obje sinkronizacije aplikacije OneNote: suvremenu sinkronizaciju sadržaja stranice i suvremenu sinkronizaciju hijerarhije. Koristi se za otkrivanje broja jedinstvenih ciljeva sinkronizacije tijekom izračuna rezultata sinkronizacije aplikacije OneNote. Također se koristi za suvremenu sinkronizaciju performansi nadzorne ploče u aplikaciji OneNote.
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **CloseReason** – Razlog zatvaranja web-utičnice, npr. neuobičajeno zatvaranje, itd.
+
+- **DataIsFreshCount** – broj uspješnih zahtjeva za reviziju koda u sesiji web-utičnice
+
+- **DeviceSessionId** – ID sesije uređaja
+
+- **DownloadCount** – broj preuzimanja u sesiji web-utičnice
+
+- **Error** – u osnovi je Exception_Type + Exception_Description + Exception_Code + Exception_Tag
+
+- **Exception_Code** – numerirani ili alfanumerički kod koji se koristi za određivanje prirode pogreške i/ili razloga pojave
+
+- **Exception_Description** – opis pogreške
+
+- **Exception_Tag** – označava mjesto na kojem se pogreška prikazuje u kodu
+
+- **Exception_Type** – vrsta pogreške, npr. Win32Error itd.
+
+- **FirstUpdateSize** – prva duljina ažuriranja poruke
+
+- **HasError** – postoji li pogreška tijekom sesije web-utičnice 
+
+- **IsEducationNotebook** – označava je li trenutna bilježnica obrazovna bilježnica ili nije
+
+- **IsHierarchyResource** – označava je li trenutni resurs stranica ili odjeljak
+
+- **Notebookid** – ID bilježnice programa OneNote
+
+- **OperationWithError** – u kojoj se operaciji dogodila pogreška, npr. WebSocket.Close, WebSocket.Open, itd.
+
+- **ResourceId** – ID resursa stranice ili odjeljka aplikacije OneNote
+
+- **SectionId** – ID odjeljka aplikacije OneNote
+
+- **ServerSessionId** – ID sesije koji se koristi za povezivanje zahtjeva web-utičnice s web-mjestom onenote.com
+
+- **SessionDurationInMs** – trajanje sesije web-utičnice u milisekundama
+
+- **TenantId** – ID klijenta sustava SharePoint
+
+- **TimeToFirstUpdateInMs** – vrijeme u milisekundama potrebno za primanje prvog ažuriranja sa strane poslužitelja nakon uspostavljanja sesije web-utičnice
+
+- **UploadAckCount** – broj potvrda za prijenos u sesiji web-utičnice
+
+- **WebUrl** – PII čišćenje web URL-a 
+
+### <a name="officeonenotestoragesectionsyncresult"></a>Office.OneNote.Storage.SectionSyncResult
+ 
+Ovaj događaj zapisuje rezultat sinkronizacije odjeljka. Koristi se za otkrivanje broja jedinstvenih ciljeva sinkronizacije tijekom izračuna rezultata sinkronizacije aplikacije OneNote. Također se koristi za suvremenu sinkronizaciju performansi nadzorne ploče u aplikaciji OneNote.
+ 
+Prikupljaju se sljedeća polja
+
+- **Error_Code** – numerirani ili alfanumerički kod koji se koristi za određivanje prirode pogreške i/ili razloga pojave
+
+- **Error_Description** – opis pogreške
+
+- **Error_Tag** – označava mjesto na kojem se pogreška prikazuje u kodu
+
+- **Error_Type** – vrsta pogreške, npr. Win32Error itd.
+
+- **ErrorLast** – kôd pogreške posljednje viđene pogreške 
+
+- **ExecutionTime** – vrijeme u milisekundama potrebno za repliciranje odjeljka
+
+- **InitialReplicationInSession** – označava je li ova replikacija prva replikacija bilježnice nakon otvaranja ili nije
+
+- **IsAttachedViaShortcut** – je odjeljak priložen putem prečaca ili ne
+
+- **IsBackgroundSync** – označava je li ovo sinkronizacija u pozadini ili nije
+
+- **IsEncrypted** – označava je li odjeljak šifriran ili nije
+
+- **IsErrorSuppressed** – označava je li pogreška potisnuta ili nije 
+
+- **IsErrorTransient** – označava je li ta pogreška prolazna ili nije
+
+- **IsErrorUnexpected** – označava je li pogreška neočekivana ili nije
+
+- **IsUsingRealtimeSync** – označava koristi li sinkronizacija odjeljka suvremenu sinkronizaciju sadržaja stranice ili ne
+
+- **NotebookId** – ID bilježnice
+
+- **NotebookPath** – PII čišćenje URL-a bilježnice
+
+- **SectionPath** – PII čišćenje URL-a odjeljka
+
+- **SectionReplicatingIsOutbound** – označava je li ova replikacija izlazna replikacija ili nije
+
+- **SectionReplicatingIsSameIdentity** – označava je li se ova replikacija temelji na istom identitetu datoteke ili ne
+
+- **SectionResourceId** – ID resursa odjeljka aplikacije OneNote
+
+- **Success** – je li odjeljak uspješno sinkroniziran ili nije
+
+- **SyncDestinationType** – vrsta odredišta sinkronizacije, npr. OneDrive ili SharePoint Online
+
+- **SyncId** – broj jedinstven svakoj sinkronizaciji odjeljka
+
+- **SyncWasFirstInSession** – označava je li ova sinkronizacija prva sinkronizacija u trenutnoj sesiji
+
+- **SyncWasUserInitiated** – označava je li korisnik sinkronizacije pokrenut ili nije
+
+- **TenantId** – ID klijenta sustava SharePoint
+
+- **UnmappedGosid** – ID odjeljka prije primjene GUID mapiranja
+
+
+### <a name="officeonenotestoragesyncscore"></a>Office.OneNote.Storage.SyncScore
+ 
+Ovaj događaj evidentira sve negativne čimbenike u iskustvu sinkronizacije koji su vidljivi korisnicima. Koristi se za izračunavanje rezultata sinkronizacije programa OneNote, što je kritična metrika za procjenu iskustva sinkronizacije korisnika programa OneNote.
+ 
+Prikupljaju se sljedeća polja
+
+- **AutoShowSyncStatus** – označava je li status sinkronizacije automatski prikazan ili nije
+
+- **Cause** – što je uzrokovalo da se stranice/odjeljci programa OneNote premjeste u pogrešno smještene odjeljke
+
+- **Context** – identifikator kategorizira što korisnik pokušava učiniti, npr. preimenovati odjeljak, ponovno otvoriti bilježnicu itd.
+
+- **Error_Code** – numerirani ili alfanumerički kod koji se koristi za određivanje prirode pogreške i/ili razloga pojave
+
+- **Error_Description** – opis pogreške
+
+- **Error_Tag** – označava mjesto na kojem se pogreška prikazuje u kodu
+
+- **Error_Type** – vrsta pogreške, npr. Win32Error itd.
+
+- **ErrorText** – tekst pogreške prikazan u korisničkom sučelju
+
+- **Explanation** – objašnjava koje izlazne promjene na čekanju je potrebno premjestiti u pogrešno smještene odjeljke
+
+- **fishbowlType** – vrsta akvarija, npr. stranica akvarija, odjeljak akvarija, itd.
+
+- **IDS** – identifikator cijelog broja za tekst prikazan u korisničkom sučelju
+
+- **idsFishbowl** – identifikator cijelog broja za pogrešku u akvariju prikazanu u korisničkom sučelju
+
+- **IsUsingRealtimeHierarchySync** – označava koristi li suvremenu sinkronizaciju hijerarhije ili ne
+
+- **NotebookId** – ID bilježnice
+
+- **PageSyncUIState** – niz statusa sinkronizacije stranice, npr. ažurna, sinkronizira se, spremljena izvan mreže, pogreška prilikom sinkronizacije itd. 
+
+- **ServerGosid** – ID resursa za novostvorenu stranicu sa sukobima
+
+- **Source** – identifikator označava koji je događaj pokrenuo korisničko sučelje, tj. stvorio novu Redx sliku, pogrešku sinkronizacije u sučelju za sinkronizaciju, prikazan dijalog pogreške itd.
+
 
 ## <a name="services-configuration-events"></a>Događaji konfiguracije servisa
 
