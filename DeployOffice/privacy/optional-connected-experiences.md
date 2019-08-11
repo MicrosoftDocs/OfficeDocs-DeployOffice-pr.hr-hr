@@ -13,19 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o neobaveznim povezanim iskustvima, uključujući uvjete korištenja koji se na njih primjenjuju.
 hideEdit: true
-ms.openlocfilehash: f1d8c16b7e267d49735814ee9d393c578dbf3c28
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: e20a2cd70b8c5fbc47abac7288627cd2783855e7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701316"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239127"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled neobaveznih povezanih iskustava za Office
 
 Ako imate račun tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi možda vam je dao mogućnost korištenja barem jednog servisa koji se oslanja na oblak (i koji se naziva i "neobaveznim povezanim iskustvom") prilikom korištenja aplikacija sustava Office 365 ProPlus. Ti su servisi koji se oslanjaju na oblak neobavezni. Na vama je hoćete li ih koristiti. Oni vam se stavljaju na raspolaganje pod uvjetima [Microsoftovog ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/). U nekim se slučajevima mogu primjenjivati i drugi uvjeti. U ovom su članku popisani servisi koji se oslanjaju na oblak te se dodatno objašnjavaju uvjeti njihovog korištenja i opisuje kako ih u bilo kojem trenutku možete uključiti ili isključiti.
 
 > [!NOTE]
-> Ako ste administrator, pročitajte članak [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md) da biste saznali kako korisnicima dodijeliti ili ograničiti mogućnost korištenja neobaveznih povezanih iskustava.
+> Ako ste administrator pogledajte sljedeće članke da biste saznali kako korisnicima dodijeliti ili ograničiti mogućnost korištenja neobaveznih povezanih iskustava:
+> - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+> - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te servise, na koje uvjete korištenja morate pristati?
 
@@ -50,6 +52,10 @@ Kada koristite trgovinu sustava Office, vaše korištenje web-mjesta te trgovine
 ### <a name="insert-online-video"></a>Umetanje internetskog videozapisa
 
 [Umetanje internetskog videozapisa](https://support.office.com/article/8340EC69-4CEE-4FE1-AB96-4849154BC6DB) omogućuje umetanje videodatoteka u dokument. Iskustvo umetanja internetskog videozapisa podliježe [Microsoftovom ugovoru o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjavi o zaštiti privatnosti](https://privacy.microsoft.com/). Mogu se primjenjivati i dodatni uvjeti korištenja ako pristupate sadržajima iz drugih izvora. Na primjer, kada se povežete sa servisom YouTube, primjenjuju se njegovi [uvjeti korištenja](https://www.youtube.com/t/terms) i [izjava o zaštiti privatnosti](https://policies.google.com/privacy). Microsoft će možda u budućnosti dodati druge dobavljače videomaterijala.
+
+### <a name="microsoft-error-reporting-program-merp"></a>Microsoftov program za izvješćivanje o pogreškama (MERP) 
+
+MERP se povezuje sa servisom Watson.microsoft.com da bi poslao dijagnostičke podatke kada se sruše klijentske aplikacije sustava Office koje se pokreću na uređajima sustava Mac. MERP je u vlasništvu Microsofta te se primjenjuju odredbe [Microsoftovog ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [Microsoftove izjave o zaštiti privatnosti](https://privacy.microsoft.com/). MERP se ne odnosi na klijentske aplikacije sustava Office koje se pokreću u sustavu Windows.
 
 ### <a name="research"></a>Istraživanje
 
@@ -80,9 +86,13 @@ Predlaganje značajke iskustvo je koje omogućuje slanje ideja vezanih uz vaše 
 
 Da biste utvrdili je li vam administrator dao mogućnost korištenja neobaveznih povezanih iskustava u aplikaciji sustava Office 365 ProPlus na uređaju sa sustavom Windows, idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** i odaberite **Upravljanje postavkama**. Ako vam administrator nije dao kontrolu, vidjet ćete poruku koja kaže "administrator u tvrtki ili ustanovi upravlja vašim postavkama privatnosti te je odlučio onemogućiti neobavezna povezana iskustva."
 
+Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
+
 ## <a name="your-privacy-settings"></a>Vaše postavke zaštite privatnosti
 
 Ako vam je administrator dao mogućnost korištenja neobaveznih povezanih iskustava u aplikaciji sustava Office 365 ProPlus na uređaju sa sustavom Windows, možete u bilo kojem trenutku otići na **Datoteka** > **Račun** > **Zaštita privatnosti računa** i odabrati **Upravljanje postavkama** da biste upravljali svojim postavkama. Kada su omogućeni, imat ćete mogućnost korištenja servisa opisanih u ovom članku kada ih poželite koristiti. Kada su onemogućeni, oni neće biti dostupni.
+
+Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
 
 ## <a name="diagnostic-data"></a>Dijagnostički podaci
 
@@ -93,3 +103,4 @@ Kada koristite bilo koji od neobaveznih servisa koji se oslanjaju na oblak i koj
 
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Obavezni servisni podaci za Office](required-service-data.md)
+- [Postavke zaštite privatnosti računa](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

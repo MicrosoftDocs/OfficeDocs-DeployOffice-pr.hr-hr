@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 5d38a944c7fe0c2c17cb6cd50339908b1cb7ae6e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701232"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238962"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
 
@@ -41,6 +41,9 @@ Ovo je pet novih postavki pravilnika:
 - dopusti korištenje povezanih iskustava u sustavu Office
 
 Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa pravilnika u oblaku za Office](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Ako koristite pravilnik grupe, morat ćete preuzeti najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) iz [Microsoftovog centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
+
+> [!NOTE]
+> Informacije o načinu upravljanja kontrolama zaštite privatnosti za Office za Mac potražite u članku [Korištenje preferenci za upravljanje kontrolama zaštite privatnosti za Office za Mac](mac-privacy-preferences.md).
 
 Ako koristite alat za upravljanje pravilnikom grupe, sve postavke pravilnika nalaze se u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Zaštita privatnosti\\Centar za pouzdanost.
 
@@ -117,7 +120,7 @@ Ta se povezana iskustva razlikuju po tome što nisu obuhvaćena komercijalnim ug
 
 Možete koristiti postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će neobavezna povezana iskustva biti dostupna vašim korisnicima.
 
-Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem naredbe **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**. Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
+Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki zaštita privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
 
 Uz to, neka od tih neobaveznih povezanih iskustava također se smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju internetski sadržaj. Na primjer, umetanje internetskih slika neobavezno je povezano iskustvo koje omogućuje Microsoft Bing, ali se ujedno smatra i povezanim iskustvom koje preuzima internetski sadržaj. Stoga ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office*, umetanje internetskih slika neće biti dostupno vašim korisnicima. Ono im neće biti dostupno čak ni ako ste omogućili postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office*. Dodatne informacije o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju internetski sadržaj potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
 
@@ -174,7 +177,7 @@ Postoje promjene u korisničkom sučelju (UI) sustava Office 365 ProPlus vezane 
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Dijaloški okvir za neobavezna povezana iskustva
 
-Ako ste odabrali korisnicima ponuditi [neobavezna povezana iskustva](optional-connected-experiences.md), kada vaši korisnici prvi put otvore aplikaciju sustava Office nakon ažuriranja na verziju 1904, pojavit će se informativni dijaloški okvir. Taj dijaloški okvir obavještava korisnike da ste im omogućili izbor žele li koristiti ta neobavezna povezana iskustva te im daje do znanja da mogu otići u odjeljak **Datoteka** > **Račun** > **Zaštita privatnosti računa** da bi promijenili tu postavku.
+Ako ste odabrali korisnicima ponuditi [neobavezna povezana iskustva](optional-connected-experiences.md), kada vaši korisnici prvi put otvore aplikaciju sustava Office nakon ažuriranja na verziju 1904 ili noviju, pojavit će se informativni dijaloški okvir. Taj dijaloški okvir obavještava korisnike da ste im omogućili izbor žele li koristiti ta neobavezna povezana iskustva te im daje do znanja da mogu otići u odjeljak **Datoteka** > **Račun** > **Zaštita privatnosti računa** da bi promijenili tu postavku.
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Postavke zaštite privatnosti uklonjene iz korisničkog sučelja sustava Office
 

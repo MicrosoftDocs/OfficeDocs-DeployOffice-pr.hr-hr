@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Office administratorima sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
-ms.openlocfilehash: cf3a2488d985dd238456e86466688036c0c61ccb
-ms.sourcegitcommit: e6135e9937ef07785f0ce0eb6282ceece401f96e
+ms.openlocfilehash: e4b42e97d7d954a968ad2a1366c6f64235c1d7f0
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35430070"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238998"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Neobavezni dijagnostički podaci za Office
 
@@ -27,6 +27,8 @@ ms.locfileid: "35430070"
 > - Office 365 ProPlus i Office 365 Business
 > - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
+>
+> Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
 Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i rješavanja problema te poboljšavanja proizvoda. Ti podaci ne sadrže korisnikovo ime ili adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
 
@@ -46,7 +48,8 @@ Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
 
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Korištenje postavki pravila za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Kategorije neobaveznih dijagnostičkih podataka
 
