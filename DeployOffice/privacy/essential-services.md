@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 3931f44787008e076807fe59746bccf015452ac3
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
+ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239163"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "36656182"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -28,7 +28,7 @@ ms.locfileid: "36239163"
 > - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
 >
-> Informacije u ovom članku odnose se na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
+> Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
 Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Premda kao administrator tvrtke ili ustanove možete upravljati brojnim povezanim sučeljima koja su dostupna vama ili vašim korisnicima, neki su servisi ključni za funkcioniranje sustava Office, pa se ne mogu onemogućiti. To je, primjerice, servis za licenciranje, koji potvrđuje da imate odgovarajuću licencu za korištenje sustava Office. Obavezni servisni podaci o tim servisima prikupljaju se i šalju Microsoftu bez obzira na druge konfigurirane postavke zaštite privatnosti. Te podatke možete pogledati pomoću preglednika dijagnostičkih podataka.
 
@@ -10504,8 +10504,6 @@ Prikupljaju se sljedeća polja:
 
   - **sysVolSizeMB –** količina prostora na sistemskom disku u megabajtima.
 
-<!-- end list -->
-
   - **WindowsErrorReportingMachineId –** identifikator računala koji je uređaju na kojem se pokreće Office dodijelilo izvješćivanje o pogreškama u sustavu Windows.
 
   - **WindowsSqmMachineId –** identifikator računala koji je uređaju na kojem se pokreće Office dodijelio Windows.
@@ -11163,6 +11161,12 @@ Prikupljaju se sljedeća polja:
   - **ErrorMessage** – poruka o pogrešci s raščlanjivanjem
 
   - **NodeName** – čvor koji se nije uspio raščlaniti
+
+### <a name="officetelemetrydynamicconfigpopulatedrequestignored"></a>Office.Telemetry.DynamicConfig.PopulatedRequestIgnored
+
+Taj se događaj generira kada ne postavimo kanal telemetrijske konfiguracije.
+
+Događaj ne prikuplja nijedno polje.
 
 ### <a name="officetelemetrydynamicconfigpopulatetreecalledagain"></a>Office.Telemetry.DynamicConfig.PopulateTreeCalledAgain
 
