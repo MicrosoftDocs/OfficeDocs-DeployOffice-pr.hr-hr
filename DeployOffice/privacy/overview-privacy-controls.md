@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Office 365 ProPlus, uključujući dijagnostičke podatke i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: ab024c4ce2eb4d81809880b607e084932658be3c
-ms.sourcegitcommit: 3f2319ff2f8fcde87ae5ffefa3b956a8239c4aed
+ms.openlocfilehash: 329d3de3fd4ff20518a8a49f01d7c5bfcd75342b
+ms.sourcegitcommit: de39739d7ab82666ff1389be360d74c518ae97f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "36441584"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "36980313"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus
 
@@ -37,7 +37,8 @@ U sklopu tih promjena pojavili su se novi i ažurirani elementi korisničkog su�
 > - Te se promjene odnose i na sljedeće:
 >   - Verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 >   - Verziju 1904 ili noviju verziju programa Project i Visio za računala koje se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
-> - Očekuje se da će kontrole za zaštitu privatnosti objavljene u verziji 1904 postati dostupne u polugodišnjem (ciljanom) kanalu u rujnu 2019., a u polugodišnjem kanalu u siječnju 2020.
+> - Ove kontrole za zaštitu privatnosti uključene su u verziju 1908. polugodišnjeg kanala (ciljano), koja je objavljena 10. rujna 2019. godine. Očekuje se da će biti dostupne u polugodišnjem kanalu u siječnju 2020. godine.
+> - Prodaja ovih kontrola za zaštitu privatnosti planirana je za drugu polovicu listopada 2019. za iOS verzije programa Excel, OneNote, PowerPoint, Visio i Word. Više informacija pružit ćemo početkom listopada.
 > - Te nove i poboljšane kontrole za zaštitu privatnosti proširit ćemo na dodatne klijente sustava Office, uključujući Teams i vlastite mobilne aplikacije. Dodatne informacije o tim promjenama objavit ćemo tijekom sljedećih mjeseci. Nastavit ćemo pažljivo slušati vaše povratne informacije i poboljšavati sve klijente i servise sustava Office 365.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Dijagnostički podaci koje Office 365 ProPlus šalje Microsoftu
