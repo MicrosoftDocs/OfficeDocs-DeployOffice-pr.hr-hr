@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 041e7c5df5bb046843b07bedc4a8ee9b3848903d
+ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238962"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "37417296"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
 
@@ -120,7 +120,17 @@ Ta se povezana iskustva razlikuju po tome što nisu obuhvaćena komercijalnim ug
 
 Možete koristiti postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će neobavezna povezana iskustva biti dostupna vašim korisnicima.
 
-Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki zaštita privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
+> [!NOTE]
+> Postavka pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* se može konfigurirati i tako da primjenjuje sljedeće aplikacije za Office for web:
+> - Excel za web
+> - OneNote za web
+> - PowerPoint za web
+> - Visio za web
+> - Word za web
+>
+> Te aplikacije Office za web moraju početi koristiti novu kontrolu zaštite privatnosti za neobvezna povezana iskustva u sredinom listopada 2019, ali sada možete konfigurirati postavku pravilnika. Da biste konfigurirali tu postavku pravilnika za te aplikacije za Office za web, morate koristiti uslugu [Office pravilnik o oblaku](../overview-office-cloud-policy-service.md).
+
+Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki postavke privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
 
 Uz to, neka od tih neobaveznih povezanih iskustava također se smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju internetski sadržaj. Na primjer, umetanje internetskih slika neobavezno je povezano iskustvo koje omogućuje Microsoft Bing, ali se ujedno smatra i povezanim iskustvom koje preuzima internetski sadržaj. Stoga ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office*, umetanje internetskih slika neće biti dostupno vašim korisnicima. Ono im neće biti dostupno čak ni ako ste omogućili postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office*. Dodatne informacije o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju internetski sadržaj potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
 
