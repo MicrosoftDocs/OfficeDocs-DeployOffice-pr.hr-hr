@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sustava Office nudi informacije o načinu upotrebe preferenci za upravljanje kontrolama za zaštitu privatnosti za Office za Mac.
 hideEdit: true
-ms.openlocfilehash: 01bb31f3b6c307ec1dc4762b54fea17185dcf27d
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: a1fdd9f7d0fe2095b3a32f61f885f724f2259188
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36246258"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510205"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Upotreba postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac
 
@@ -31,10 +31,11 @@ Počevši od verzije 16.28 sustava Office za Mac, postoje nove postavke preferen
 
 Osim toga, tu je i nova postavka preferenci koja se odnosi na dijalog **Potrebne podatkovne obavijesti** za Microsoft AutoUpdate (MAU).
 
-Dodatne informacije o dijagnostičkim podacima i povezanim iskustvima potražite u članku Pregled kontrola zaštite privatnosti](overview-privacy-controls.md).
+Dodatne informacije o dijagnostičkim podacima i povezanim iskustvima potražite u članku [Pregled kontrola zaštite privatnosti](overview-privacy-controls.md).
 
 > [!NOTE]
-> Dodatne informacije o sličnim postavkama za Office na računalima sa sustavom Windows potražite u članku [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> - Informacije o sličnim postavkama za Office na računalima sa sustavom Windows potražite u članku [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> - Informacije o sličnim postavkama za Office na iOS uređajima potražite u [Upotreba postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
 
 ## <a name="setting-preferences"></a>Postavke preferenci
 
@@ -52,14 +53,13 @@ Dijagnostički se podaci upotrebljavaju da bi Office uvijek bio siguran i ažura
 |**Moguće vrijednosti**  | `BasicDiagnosticData` *(time se razina postavlja na Obvezno)* <br/> `FullDiagnosticData` *(time se razina postavlja na Neobvezno)* <br/> `ZeroDiagnosticData` *(time se razina postavlja na Nijedno)* |
 |**Dostupnost** |16.28 i novija |
 
+Počevši s novim instalacijama verzije 16.30, ako ne postavite tu preferencu, Microsoftu se šalju samo obvezni dijagnostički podaci ako su korisnici s pretplatom na Office 365 prijavljeni s pomoću računa poduzeća ili obrazovne ustanove ili ako korisnici imaju licencirane verzije sustava Office 2019 za Mac. Osim toga, ti korisnici ne mogu promijeniti razinu dijagnostičkih podataka bez obzira na to kako postavite tu preferencu.
+
 > [!NOTE]
-> Ako postavite tu preferencu, primjenjivat će se i na sljedeće proizvode:
-> - Verzija 1.00.217856 i novija programa Teams za Mac
-> - Verzija 16.28 i novija programa Skype za tvrtke za Mac
+> - Ako instalirate verziju 16,28 ili 16,29 te ne postavljate tu preferencu, Microsoftu se šalju neobavezni i obavezni dijagnostički podaci. Ako ste zatim nadogradili na verziju 16.30 ili noviju, Microsoftu će se i dalje slati neobavezni i obavezni dijagnostički podaci, osim ako ne koristite tu preferencu da biste postavili neku drugu vrijednost.
+> - Ako postavite tu preferencu, primjenjivat će se i na verzije 1.00.217856 i novije Teams za Mac,i na verziju 16.28 i novije verzije Skype za tvrtke za Mac.
 
-Ako ne postavite tu preferencu, Microsoftu se šalju neobavzni i obvezni dijagnostički podaci ako su korisnici s pretplatom na Office 365 prijavljeni s pomoću računa poduzeća ili obrazovne ustanove ili ako korisnici imaju licencirane verzije sustava Office 2019 za Mac. Osim toga, ti korisnici ne mogu promijeniti razinu dijagnostičkih podataka bez obzira na to kako postavite tu preferencu.
-
-Drugim korisnicima, kao što su privatni korisnici s pretplatom na Office 365, šalju se samo obvezni dijagnostički podaci, osim ako korisnik odabere da šalje i neobvezne dijagnostičke podatke odlaskom na **Preference** > **Privatnost**.
+Drugim korisnicima, kao što su privatni korisnici s pretplatom na Office 365, šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da šalje i neobavezne dijagnostičke podatke odlaskom na **Preference** > **Privatnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka preferenci za povezana iskustva kojima se analizira vaš sadržaj
 

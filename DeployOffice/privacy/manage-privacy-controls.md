@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 041e7c5df5bb046843b07bedc4a8ee9b3848903d
-ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
+ms.openlocfilehash: 5f3b63c65d43827befe58ba600c7957410f2d3c0
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "37417296"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510252"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
 
@@ -43,7 +43,9 @@ Ovo je pet novih postavki pravilnika:
 Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa pravilnika u oblaku za Office](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Ako koristite pravilnik grupe, morat ćete preuzeti najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) iz [Microsoftovog centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
-> Informacije o načinu upravljanja kontrolama zaštite privatnosti za Office za Mac potražite u članku [Korištenje preferenci za upravljanje kontrolama zaštite privatnosti za Office za Mac](mac-privacy-preferences.md).
+> - Informacije o načinu upravljanja kontrolama zaštite privatnosti za Office za Mac potražite u članku [Korištenje preferenci za upravljanje kontrolama zaštite privatnosti za Office za Mac](mac-privacy-preferences.md).
+> - Informacije o sličnim postavkama za Office na iOS uređajima potražite [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
+
 
 Ako koristite alat za upravljanje pravilnikom grupe, sve postavke pravilnika nalaze se u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Zaštita privatnosti\\Centar za pouzdanost.
 

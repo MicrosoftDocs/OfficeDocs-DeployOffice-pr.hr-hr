@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o neobaveznim povezanim iskustvima, uključujući uvjete korištenja koji se na njih primjenjuju.
 hideEdit: true
-ms.openlocfilehash: e20a2cd70b8c5fbc47abac7288627cd2783855e7
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: c3d6489603ff5cdc5f7a0ea4f187fb24438aeb35
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239127"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510036"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled neobaveznih povezanih iskustava za Office
 
@@ -28,6 +28,7 @@ Ako imate račun tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki il
 > Ako ste administrator pogledajte sljedeće članke da biste saznali kako korisnicima dodijeliti ili ograničiti mogućnost korištenja neobaveznih povezanih iskustava:
 > - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 > - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
+> - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti na iOS uređajima](ios-privacy-preferences.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te servise, na koje uvjete korištenja morate pristati?
 

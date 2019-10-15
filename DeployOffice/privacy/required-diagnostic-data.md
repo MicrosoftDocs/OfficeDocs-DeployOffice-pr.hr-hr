@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: a5770d3ed30f86dfbf1cb1dfc4a45bbb15179da8
-ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
+ms.openlocfilehash: 71b05ab46c7aa6aee2c7dbc2aa88201f50fc8b99
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37386957"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37509989"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -48,6 +48,7 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti na iOS uređajima](ios-privacy-preferences.md)
 
 ## <a name="categories-data-subtypes-events-and-data-fields-for-required-diagnostic-data"></a>Kategorije, podvrste podataka, događaji i podatkovna polja za obavezne dijagnostičke podatke
 
