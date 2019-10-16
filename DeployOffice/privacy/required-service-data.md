@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office pruža pregled obaveznih servisnih podataka koji se prikupljaju o povezanim iskustvima u sustavu Office.
 hideEdit: true
-ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: eaa659e375d3d5c29d5410ab53db7ae583df6e9d
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238472"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510584"
 ---
 # <a name="required-service-data-for-office"></a>Obavezni servisni podaci za Office 
 
@@ -28,7 +28,7 @@ ms.locfileid: "36238472"
 > - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
 >
-> Informacije u ovom članku odnose se na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
+> Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
 Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
@@ -67,6 +67,7 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Primjeri događaja za servisne dijagnostičke podatke
 

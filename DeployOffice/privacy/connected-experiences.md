@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 04d71fcd601f76d2613dda9bd00dccd24ab8e950
-ms.sourcegitcommit: 27db488cae3bd23342bc0d902c53b5bf89ae30a7
+ms.openlocfilehash: 8b9038bdff83c786616ae87565e6ae66ac85516a
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37379726"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510378"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -135,7 +135,11 @@ Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrato
 > [!NOTE]
 > Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
 
-Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne koristite te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u člancima [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md) i [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office for Mac](mac-privacy-preferences.md).
+Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne koristite te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u sljedećim člancima: 
+
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md).
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 
 Ako odlučite isključiti neke vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili ćete dobiti poruku o pogrešci kada pokušate koristiti ta povezana iskustva.
 
