@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 8b9038bdff83c786616ae87565e6ae66ac85516a
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 5bf39e1fbe7e56b77496cfc0756484a9a1c051a0
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510378"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067508"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -140,6 +140,7 @@ Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke p
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md).
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
 Ako odlučite isključiti neke vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili ćete dobiti poruku o pogrešci kada pokušate koristiti ta povezana iskustva.
 

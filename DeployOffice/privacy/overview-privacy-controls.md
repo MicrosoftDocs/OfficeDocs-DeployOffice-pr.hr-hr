@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Office 365 ProPlus, uključujući dijagnostičke podatke i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: 24a3d30d05fb2a1456e10d8a8036f31c25c14db7
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 784bbf08626e6dc8571c416a74511c9f5feeceec
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510674"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067328"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus
 
@@ -39,7 +39,8 @@ U sklopu tih promjena pojavili su se novi i ažurirani elementi korisničkog su�
 >   - Verziju 1904 ili noviju verziju programa Project i Visio za računala koje se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
 > - Ove kontrole za zaštitu privatnosti uključene su u verziju 1908. polugodišnjeg kanala (ciljano), koja je objavljena 10. rujna 2019. godine. Očekuje se da će biti dostupne u polugodišnjem kanalu u siječnju 2020. godine.
 > - Te kontrole zaštite privatnosti dostupne su za verziju 2.30 i novije verzije programa Excel, OneNote, PowerPoint i Word te za verziju 1.17 i noviju verziju Preglednika za Visio za iOS.
-> - Većina tih aplikacija Office za web mora početi koristiti novu kontrolu zaštite privatnosti za [neobvezna povezana iskustva](optional-connected-experiences.md) sredinom listopada 2019. To su sljedeće aplikacije: Excel za web, OneNote za web, PowerPoint za web, Visio za web i Word za web. Prije no što se to pokrene, možete koristiti uslugu [Office pravilnik o oblaku](../overview-office-cloud-policy-service.md) kako biste konfigurirali odgovarajuće [postavke pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
+> - Te kontrole zaštite privatnosti dostupne su za verziju 16.0.12226.10000 i novije verzije programa Excel, OneNote, PowerPoint i Word za Android, te za verziju 16.0.12228.20004 i novije verzije programa OneNote za Android.
+> - Većina tih aplikacija Office za web mora početi koristiti novu kontrolu zaštite privatnosti za [neobvezna povezana iskustva](optional-connected-experiences.md).. To su sljedeće aplikacije: Excel za web, OneNote za web, PowerPoint za web, Visio za web i Word za web. Možete koristiti [Uslugu Office pravilnik o oblaku](../overview-office-cloud-policy-service.md) kako biste konfigurirali odgovarajuće [postavke pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
 > - Te nove i poboljšane kontrole za zaštitu privatnosti proširit ćemo na dodatne klijente sustava Office, uključujući Teams i vlastite mobilne aplikacije. Dodatne informacije o tim promjenama objavit ćemo tijekom sljedećih mjeseci. Nastavit ćemo pažljivo slušati vaše povratne informacije i poboljšavati sve klijente i servise sustava Office 365.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Dijagnostički podaci koje Office 365 ProPlus šalje Microsoftu
@@ -75,6 +76,7 @@ Dodatne informacije potražite u sljedećim člancima:
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
 - [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-office-365-proplus"></a>Povezana iskustva za Office 365 ProPlus
@@ -101,6 +103,7 @@ Dodatne informacije potražite u sljedećim člancima:
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
 
 ## <a name="optional-connected-experiences-for-office-365-proplus"></a>Neobavezna povezana iskustva za Office 365 ProPlus
 
@@ -118,6 +121,7 @@ Dodatne informacije potražite u sljedećim člancima:
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Obavezni servisni podaci za povezana iskustva
 

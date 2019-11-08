@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Office administratorima sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
-ms.openlocfilehash: d772a649a78a88112a270e839834cbe48141217f
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: ab40e68df1ed91b1aff7510383d47967e8f13ccb
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510126"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067058"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Neobavezni dijagnostički podaci za Office
 
@@ -50,7 +50,8 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
-- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Kategorije neobaveznih dijagnostičkih podataka
 

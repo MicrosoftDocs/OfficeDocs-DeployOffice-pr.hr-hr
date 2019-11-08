@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 5f3b63c65d43827befe58ba600c7957410f2d3c0
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 31db528fe639b8685acf56d88d4a4bf8dd406bd3
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510252"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067418"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
 
@@ -44,7 +44,8 @@ Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa p
 
 > [!NOTE]
 > - Informacije o načinu upravljanja kontrolama zaštite privatnosti za Office za Mac potražite u članku [Korištenje preferenci za upravljanje kontrolama zaštite privatnosti za Office za Mac](mac-privacy-preferences.md).
-> - Informacije o sličnim postavkama za Office na iOS uređajima potražite [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
+> - Informacije o sličnim postavkama za Office na iOS uređajima potražite u [Upotreba postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
+> - Informacije o sličnim postavkama za Office na Android uređajima potražite u članku [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md).
 
 
 Ako koristite alat za upravljanje pravilnikom grupe, sve postavke pravilnika nalaze se u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Zaštita privatnosti\\Centar za pouzdanost.
