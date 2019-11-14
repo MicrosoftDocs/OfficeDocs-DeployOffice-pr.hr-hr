@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: a482854210e5f609a41e6a810c3c3338a19586e7
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 25f594865089d35cb46ebfcc9b97d6b048f6298d
+ms.sourcegitcommit: ad2bb6e42b2432a2cb9370594cd50f3a14f2fbe3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510457"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "38310672"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -44,6 +44,7 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Popis ključnih servisa za Office 
 
@@ -8179,7 +8180,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
 
-Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio apple događaj koji treba konfigurirati. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio Apple događaj koji treba konfigurirati. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -8220,7 +8221,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
 
-Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio apple događaj za popis ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio Apple događaj za popis ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -10058,6 +10059,15 @@ Prikupljaju se sljedeća polja
 Konfiguracija servisa ne prikuplja događaje vezane uz obavezne servisne dijagnostičke podatke.
 
 ## <a name="telemetry-events"></a>Telemetrijski događaji
+
+### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
+
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja telemetrijske funkcije uključivanja u iskustvo prvog pokretanja. Prikupljamo kôd koji označava vrstu mogućnosti za prikupljanje dijagnostičkih podataka koju je korisnik odabrao.
+
+Prikupljaju se sljedeća polja:
+
+ - **Data_EventId** – Kôd koji pokazuje preferenciju prikupljanja podataka koju je odabrao korisnik.
+
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
