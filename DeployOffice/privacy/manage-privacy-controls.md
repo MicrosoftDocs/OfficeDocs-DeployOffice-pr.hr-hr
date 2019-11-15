@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 31db528fe639b8685acf56d88d4a4bf8dd406bd3
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
+ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067418"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "38639293"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
 
@@ -92,9 +92,6 @@ Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti do
 
 Ako ne konfigurirate te postavke pravilnika, bit će dostupna sva povezana iskustva. To vašim korisnicima nudi sve značajke i funkcije dostupne putem sustava Office 365 ProPlus. Znamo, međutim, da ćete možda morati isključiti neka ili sva povezana iskustva da biste udovoljili određenim zahtjevima svoje tvrtke ili ustanove.
 
-> [!IMPORTANT]
-> Problem povezan s onemogućivanjem te četiri postavke pravilnika nedavno je riješen objavljivanjem novih datoteka administrativnog predloška (ADMX/ADML) u utorak 28. svibnja 2019. Obavezno preuzmite i instalirajte ažurirane datoteke grupnog pravilnika putem [Microsoftova centra za preuzimanje](https://www.microsoft.com/en-us/download/details.aspx?id=49030).
-
 Ako odlučite korisnicima uskratiti određene vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili će korisnici dobiti poruku o pogrešci kada pokušaju koristiti ta povezana iskustva. U tom se slučaju Microsoftu ne šalju nikakvi [obavezni servisni podaci](required-service-data.md) za ta povezana iskustva.
 
 Vaši korisnici neće moći odabrati žele li uključiti ili isključiti ta povezana iskustva obuhvaćena sustavom Office 365 ProPlus ako su se prijavili u Office pomoću vjerodajnica svoje tvrtke ili ustanove, koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove.
@@ -131,7 +128,7 @@ Možete koristiti postavku pravilnika *Dopusti korištenje dodatnih neobaveznih 
 > - Visio za web
 > - Word za web
 >
-> Te aplikacije Office za web moraju početi koristiti novu kontrolu zaštite privatnosti za neobvezna povezana iskustva u sredinom listopada 2019, ali sada možete konfigurirati postavku pravilnika. Da biste konfigurirali tu postavku pravilnika za te aplikacije za Office za web, morate koristiti uslugu [Office pravilnik o oblaku](../overview-office-cloud-policy-service.md).
+> Da biste konfigurirali tu postavku pravilnika za te aplikacije za Office za web, morate koristiti uslugu [Office pravilnik o oblaku](../overview-office-cloud-policy-service.md).
 
 Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki postavke privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
 
