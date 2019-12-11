@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: b345c9c8f3138f9c38900dd36dc9983f83623341
-ms.sourcegitcommit: e542473cc4fe07a98874c275846f6982a6863e35
+ms.openlocfilehash: a6003b44bc31f8165e9e102104c4b25336efd4cc
+ms.sourcegitcommit: 17f7bf4bfa65042ad44dfff23489c6a538a004e8
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "39837670"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "39906604"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -680,6 +680,16 @@ Ključni signal korišten za osiguravanje da novi korisnici iz velike tvrtke (AA
 
 - **ProvisioningStartedTime** – označava vrijeme početka kada OneNote započinje dodjelu resursa bilježnici tijekom iskustva prvog pokretanja.
 
+#### <a name="officeonenotefirstrunmrureadernotebookentries"></a>Office.OneNote.FirstRun.MruReaderNoteBookEntries 
+
+Signal koji se koristi za bilježenje problema koji su se pojavili pri učitavanju bilježnica tijekom prvog pokretanja.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema pri prvom pokretanju.
+
+Prikupljaju se sljedeća polja: 
+
+- **OnPremNBCount** – Broj bilježnica na lokalnom poslužitelju
+
+- **TotalNBCount** – Ukupan broj bilježnica povezanih s korisničkim računom
+
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
 Prati je li preuzet paket za dinamičko radno područje. Smatra se softverskom konfiguracijom jer se paket mora uspješno preuzeti da bi klijent mogao omogućiti pravo iskustvo. Osobito je važno u korisničkim pretplatama u kojima obavještavamo korisnika putem radnog područja da je licenca istekla. Koristi se za praćenje metapodataka paketa dinamičnog sadržaja kojeg je preuzeo i predmemorirao proizvod, kao i rezultate radnji izvršenih na paketu: neuspjela preuzimanja, neuspjela raspakiranja, pogreške provjere dosljednosti, pronalaženje objekata u predmemoriji, načini korištenja paketa, izvori preuzimanja.
@@ -737,6 +747,63 @@ Bilježi standardni ili profesionalni SKU programa Visio. Bitno za kategoriziran
 Prikupljaju se sljedeća polja:
 
   - **Data\_VisioSKU**:**integer** – 0 za standardni SKU i 1 za profesionalni SKU
+
+#### <a name="onenoteapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated
+
+Bilježi podatke o stanju aktivacije aplikacije.  Podaci se prate da bi se osiguralo identificiranje porasta u problemima sa aktivacijom. Također analiziramo podatke kako bismo pronašli područja poboljšanja.
+
+Prikupljaju se sljedeća polja: 
+
+- **INSTALL_LOCATION** – upućuje na to je li aplikacija unaprijed instalirana ili je preuzeta iz trgovine
+
+#### <a name="onenoteresetstatus"></a>OneNote.ResetStatus 
+
+Signal koji se koristi za bilježenje problema koji se pojave kada korisnik pokušava ponovno postaviti aplikaciju.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema uzrokovanih tijekom ponovnog postavljanja. 
+
+Prikupljaju se sljedeća polja: 
+
+- **Poslovni subjekti** – označava vrste ako se računi koriste za prijavu u aplikaciju
+
+- **Generic String Type** – vraća se ako su kompletno ponovno postavljene notes_light_data
+
+- **LaunchPoint** – točka u kojoj se pokreće ponovno postavljanje. Moguće vrijednosti: gumb za odjavljivanje, pogreška prilikom odjave, pokretanje servisa Intune
+
+- **Pass** – označava je li ponovno pokretanje bilo uspješno
+
+#### <a name="onenotesigninsignincompleted"></a>OneNote.SignIn.SignInCompleted 
+
+Ključni signal kojim se osigurava uspješna prijava ili ne. Telemetrija se prikuplja za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.
+
+Prikupljaju se sljedeća polja: 
+
+- **CompletionState** – završno stanje prijave – uspješno ili neuspješno. I slučajevi neuspjeha
+
+- **EntryPoint** – označava odakle je pokrenuta prijava
+
+- **Hresult** – kôd pogreške
+
+- **Provider Package ID** – u slučaju automatske prijave
+
+- **Result** – uspjela, nije uspjela, nepoznato, otkazana
+
+- **ServerType** – vraća vrstu poslužitelja koji nudi uslugu 
+
+- **SignInMode** – prijava ili registracija ili ubrzana automatska prijava ili registracija
+
+#### <a name="onenotesigninsigninstarted"></a>OneNote.SignIn.SignInStarted 
+
+Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
+
+Prikupljaju se sljedeća polja: 
+
+- **EntryPoint** – označava odakle je pokrenuta prijava
+
+- **Result** – rezultat tijeka prijave
+
+- **ServerType** – vraća vrstu poslužitelja koji nudi uslugu 
+
+- **SignInMode** – prijava ili registracija ili ubrzana automatska prijava ili registracija
+
 
 ### <a name="office-add-in-configuration-subtype"></a>*Podvrsta konfiguracije dodatka za Office*
 
@@ -1721,6 +1788,75 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.StatusCode** – identifikacijski broj scenarija definiran API-jem
 
+#### <a name="officeandroidodwxpssotelemetry"></a>Office.Android.ODWXPSSO.Telemetry
+
+Ovaj događaj pomaže u razumijevanju s kojom drugom Microsoftovom aplikacijom na uređaju, naša aplikacija se tiho jedinstveno prijavila, s koje ulazne točke i tako dalje. Također pomaže u razumijevanju razloga neuspjeha zbog kojeg nije došlo do tihe jedinstvene prijave.  Dobivamo bolje uvide, primjerice, iz koje Microsoftove aplikacije na uređaju, dobivamo iskustvo jedinstvene prijave. Djelujte prema neuspjesima, gdje jedinstvena prijava ne funkcionira prema očekivanjima.
+
+Prikupljaju se sljedeća polja:
+
+- **AccountType** – označava vrstu računa koji se odnosi na jedinstvenu prijavu, poput osobnog Microsoftovog računa ili poslovnog računa.
+
+- **EntryPoint** – označava ulaznu točku u aplikaciji, odakle je pokrenuta jedinstvena prijava.
+
+- **ErrorCode** – označava kôd pogreške pri pokušaju jedinstvene prijave.
+
+- **ErrorDescription** – označava poruku o pogrešci pri pokušaju jedinstvene prijave.
+
+- **HResult** – označava kôd statusa rezultata pri pokušaju jedinstvene prijave.
+
+- **ProviderPackageId** – druga Microsoftova aplikacija na uređaju na kojoj se odvija jedinstvena prijava.
+
+#### <a name="officeandroidphonenumbersignins"></a>Office.Android.PhoneNumberSignIns
+
+Ovaj događaj pomaže u razumijevanju ako je korisnik prijavljen ili se registrirao s računom koji se temelji na telefonskom broju ili na temelju osobnog Microsoftova računa e-pošte.  Ovaj događaj pomaže u saznanju broja korisnika koji se prijavljuju ili registriraju pomoću osobnog Microsoftovog računa temeljenog na telefonskom broju.
+
+Prikupljaju se sljedeća polja:
+
+- **EntryPoint** – označava ulaznu točku u aplikaciji, odakle je pokrenut pokušaj prijave.
+
+- **IsEmailMissing** – nedostaje li e-pošta u podacima profila računa?
+
+- **IsPhoneNumberMissing** – nedostaje li telefonski broj u podacima profila računa?
+
+- **UserDecision** – označava izbor koji je odabrao korisnik, poput prijave ili registracije ili kasnije prijave.
+
+#### <a name="officeandroidusersignindecision"></a>Office.Android.UserSignInDecision
+
+Ovaj događaj pomaže u razumijevanju u kojoj se fazi korisnik odbacuje u tijeku prijave, zašto prijava ne uspijeva, koliko se korisnika uspješno prijavilo, s koje ulazne točke u aplikaciji i tako dalje.  Ovaj događaj pomaže s podacima o kanalima za prijavu, što pomaže u razumijevanju u kojoj se fazi korisnici više odbacuju i slično.
+
+Prikupljaju se sljedeća polja:
+
+- **AccountType** – označava vrstu računa s kojim je pokušana prijava, poput osobnog ili radnog računa.
+
+- **AfterLicensingState** – upućuje na stanje licenciranja aplikacije nakon dovršene prijave.
+
+- **AllowedEditsWithoutSignIn** – označava koliko je besplatnih izmjena isteklo prije pokušaja prijave.
+
+- **BeforeLicensingState** – upućuje na stanje licenciranja aplikacije prije pokušaja prijave.
+
+- **CompletionState** – označava fazu završetka prijave.
+
+- **EntryPoint** – označava ulaznu točku u aplikaciji, odakle je pokrenut pokušaj prijave.
+
+- **HRDAutoAcceleratedSignUpAttemptCount** – upućuje na broj pokušaja ubrzane registracije.
+
+- **HRDAutoAcceleratedSignUpQuitCount** – upućuje na broj otkazanih ubrzanih registracija.
+
+- **HResult** – označava kôd statusa rezultata operacije prijave.
+
+- **IsPhoneOnlyAuthFeatureEnabled** – je li dopuštena prijava na temelju telefonskog broja ili nije?
+
+- **LicenseActivationHResult** – označava kôd statusa pokušaja aktivacije licence.
+
+- **LicenseActivationMessageCode** – označava kôd poruke iz usluge licenciranja.
+
+- **NoFreeEditsTreatmentValue** – je li dopušteno besplatno uređivanje ili ne?
+
+- **SignUpAttemptCount** – upućuje na broj pokušaja prijave.
+
+- **StartMode** – označava način u kojem je pokrenut pokušaj prijave.
+
+- **UserDecision** – označava izbor koji je odabrao korisnik, poput prijave ili registracije ili kasnije prijave.
 
 #### <a name="officeappcompatappcompatagentupload"></a>Office.AppCompat.AppCompat.AgentUpload
 
@@ -1951,6 +2087,102 @@ Prikupljaju se sljedeća polja:
 - **Data_Ext** – Datotečni nastavak ograničen na prva četiri znaka proširenja ili manje.
 
 - **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd.
+
+#### <a name="office_docsui_fileoperations_opendocumentmeasurements"></a>Office_DocsUI_FileOperations_OpenDocumentMeasurements
+
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na iOS platformi. Događaj bilježi kada se operacija otvaranja datoteke odvija i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke.
+
+Prikupljaju se sljedeća polja:
+
+- **Data_AppDuration** – trajanje provedeno u obradi aplikacije tijekom operacije otvaranja datoteke.
+
+- **Data_BootDuration** – trajanje postupka pokretanja otvorene datoteke.
+
+- **Data_ClickOrigin** – niz koji označava iz kojeg je dijela veza nastala kada je korisnik kliknuo vezu u aplikaciji iOS Outlook kako bi otvorio datoteku u aplikaciji Office.
+
+- **Data_ClickTime** – vrijeme Unix epohe kada je korisnik kliknuo vezu u aplikaciji iOS Outlook kako bi otvorio datoteku u aplikaciji Office.
+
+- **Data_DetachedDuration** – trajanje procesa odvajanja događaja. 
+
+- **Data_Doc_AccessMode** – enumeracija koja upućuje na način pristupa datoteke, npr. samo za čitanje, za čitanje i pisanje.
+
+- **Data_Doc_AsyncOpenKind** – enumeracija koja upućuje na vrstu asinkronog toka koji se koristi za otvaranje datoteke.
+
+- **Data_Doc_ChunkingType** – enumeracija koja upućuje na vrstu algoritma dijeljenja datoteke.
+
+- **Data_Doc_EdpState** – enumeracija koja upućuje na stanje korporacijske zaštite podataka datoteke.
+
+- **Data_Doc_Ext** – Datotečni nastavak datoteke.
+
+- **Data_Doc_Fqdn** – naziv glavnog računala poslužitelja datoteke.
+
+- **Data_Doc_FqdnHash** – GUID koji jedinstveno identificira naziv glavnog računala poslužitelja.
+
+- **Data_Doc_IdentityTelemetryId** – GUID koji jedinstveno identificira identitet koji se koristi za otvaranje datoteke.
+
+- **Data_Doc_InitializationScenario** – enumeracija koja upućuje na detaljnu vrstu scenarija otvaranja datoteke.
+
+- **Data_Doc_IOFlags** – enumeracija koja označava zastavice UI operacije otvaranja datoteke, npr. ako je datoteka predmemorirana ili ne.
+
+- **Data_Doc_IsCloudCollabEnabled**– bez obzira na to je li za datoteku omogućena suradnja u oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – bez obzira na to je li datoteka otvorena inkrementalno ili ne.
+
+- **Data_Doc_IsOcsSupported** – bez obzira na to podržava li datoteka uslugu suradnje u sustavu Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – bez obzira na to je li datoteka otvorena iz izvanmrežne predmemorirane kopije.
+
+- **Data_Doc_IsPrefetched** – bez obzira na to je li datoteka unaprijed dohvaćena prije operacije otvaranja.
+
+- **Data_Doc_IsSyncBacked** – bez obzira na to postoji li datoteka oblaka lokalno i je li sinkronizirana s poslužiteljem.
+
+- **Data_Doc_Location** – enumeracija koja upućuje gdje se datoteka nalazi, npr. lokalno ili u oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – enumeracija koja označava razlog zbog kog je datoteka samo za čitanje.
+
+- **Data_Doc_ResourceIdHash** – GUID koji jedinstveno identificira ID resursa poslužitelja datoteke.
+
+- **Data_Doc_RtcType** – enumeracija koja označava vrstu kanala u stvarnom vremenu (RTC) koji se koristi u datoteci.
+
+- **Data_Doc_ServerDocId** – GUID koji jedinstveno identificira ID dokumenta poslužitelja.
+
+- **Data_Doc_ServerProtocol** – enumeracija koja označava poslužiteljski protokol datoteke u oblaku.
+
+- **Data_Doc_ServerType** – enumeracija koja označava vrstu poslužitelja datoteke u oblaku.
+
+- **Data_Doc_ServerVersion** – enumeracija koja označava verziju poslužitelja datoteke u oblaku.
+
+- **Data_Doc_SessionId** – cijeli broj koji se povećava za 1 za svaku operaciju otvaranja datoteke u sesiji.
+
+- **Data_Doc_SharePointServiceContext** – niz koji se koristi za povezivanje klijentskih i poslužiteljskih zapisnika, obično je vrsta ID-a.
+
+- **Data_Doc_SizeInBytes** – veličina datoteke u bajtovima.
+
+- **Data_Doc_SpecialChars** – enumeracija koja označava kakav poseban znak ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID koji jedinstveno identificira URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – bez obzira na to je li datoteka otvorena inkrementalno pomoću predmemoriranih WRS podataka.
+
+- **Data_Doc_WopiServiceId** – niz koji pokazuje iz koje usluge je datoteka WOPI (sučelje web-aplikacije s otvorenom platformom).
+
+- **Data_InclusiveMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje uključuje trajanje poziva podfunkcije.
+
+- **Data_InitializationReason** – enumeracija koja označava kako se datoteka otvara, npr. iz kog elementa korisničkog sučelja ili je pokreće druga aplikacija.
+
+- **Data_Measurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje isključuje trajanje poziva podfunkcije.
+
+- **Data_OpenInPlace** – bez obzira na to treba li se datoteka kopirati u spremnik za testiranje u sustavu Office prije no što ga korisnik otvori.
+
+- **Data_OpenStartTime** – vrijeme Unix epohe kada je počelo otvaranje datoteke.
+
+- **Data_SilhouetteDuration** – trajanje prikazivanja otvaranja datoteke.
+
+- **Data_SourceApplication** – niz koji pokazuje ID kompleta izvorišne aplikacije kada je druga aplikacija pokrenula otvaranje datoteke.
+
+- **Data_StopwatchDuration** – trajanje od početka događaja do kraja događaja.
+
+- **Data_TimeSplitMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije, početnom vremenskom oznakom i trajanjem.
 
 #### <a name="office_docsui_fileoperations_openfilewithreason"></a>Office_DocsUI_FileOperations_OpenFileWithReason 
 
@@ -3000,6 +3232,32 @@ Prikupljaju se sljedeća polja:
 
   - **Data.Log** –prilagođena poruka zapisnika koja označava uspješnost ili neuspješnost prethodne provjere
 
+
+#### <a name="officeonenotecanvasinkinkstrokelogger"></a>Office.OneNote.Canvas.Ink.InkStrokeLogger 
+
+Ovaj se događaj koristi za otkrivanje i dijagnosticiranje pogreške visoke frekvencije s kojom se korisnik susreće dok koristi značajku Rukopis.  To će se koristiti za određivanje najprikladnijeg načina otklanjanja ovog problema. 
+
+Prikupljaju se sljedeća polja:
+
+- **CurrentCanvasZoomFactor** – trenutni faktor zumiranja područja crtanja.
+
+- **CurrentNotebook** – identifikator trenutne aktivne bilježnice.
+
+- **CurrentPage** – identifikator trenutne aktivne stranice
+
+- **CurrentSection** – identifikator trenutno aktivnog odjeljka.
+
+- **DefaultCanvasZoomFactor** – zadani faktor zumiranja područja crtanja.
+
+- **InkStrokeCount** – ukupan broj rukopisnih poteza od posljednje evidencije.
+
+- **InkStrokeWithLayerInkEffect** – broj rukopisnih poteza s efektom sloja rukopisa od posljednje evidencije.
+
+- **InkStrokeWithoutPressureCount** – broj rukopisnih poteza bez pritiska od posljednje evidencije.
+
+- **InkStrokeWithPencilInkEffect** – broj rukopisnih poteza s efektom rukopisa olovkom od posljednje evidencije.
+
+- **InkStrokeWithTilt** – broj rukopisnih poteza s naginjanjem od posljednje evidencije.
 
 #### <a name="officeonenotenavigationcreatepage"></a>Office.OneNote.Navigation.CreatePage
 
@@ -5274,6 +5532,25 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_ViewKind–** vrsta prikaza u programu Word
 
+#### <a name="onenotecanvaspageopened"></a>OneNote.Canvas.PageOpened 
+
+Signal koji se koristi za snimanje prilikom otvaranja stranice.  Telemetrija se koristi za nadziranje, otkrivanje i ispravljanje problema tijekom otvaranja stranice u programu OneNote
+
+Prikupljaju se sljedeća polja: 
+
+- **JOT_ID** – objekt otvorene stranice
+
+- **TIME_TAKEN_IN_MS** – vrijeme potrebno za otvaranje stranice
+
+#### <a name="onenotemessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked 
+
+Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
+
+Prikupljaju se sljedeća polja: 
+
+- **Message_Bar_Type** – vraća ako korisnik koristi staru ili novu traku s porukama
+
+- **Message_Type** – vraća ID poruke o pogrešci
 
 #### <a name="parselicenseop"></a>ParseLicenseOp
 
@@ -5522,6 +5799,26 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.StatusCode** – kod statusa vraćenog rezultata
 
+#### <a name="officeandroidandroidoffice16bootlatency"></a>Office.Android.AndroidOffice16BootLatency
+
+Ključno je za snimanje metrike performansi aplikacije s obzirom na vrijeme odaziva aplikacije prilikom pokretanja.  Microsoft to koristi za prikupljanje vremena potrebnog za reagiranje aplikacije i otkrivanje scenarija koji mogu utjecati na vrijeme pokretanja u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **AppLaunchResponsiveTimeInMilliSec** – vrijeme pokretanja aplikacije
+
+- **AppSuspendedDuringBoot** – Booleova vrijednost koja označava je li aplikacija obustavljena tijekom pokretanja
+
+- **CollectionTime** – vrijeme događaja
+
+- **FileActivationAttempted** – Booleova vrijednost koja označava je li pokušana aktivacije datoteke
+
+- **FirstIdleOnAppThreadTimeInMilliSec** – vrijeme neaktivnosti niti aplikacije
+
+- **IsThisFirstLaunch** – Booleova vrijednost koja označava je li ovo prvo pokretanje aplikacije
+
+- **UserDialogInterruptionDuringBoot** – Booleova vrijednost koja označava je li blokiralo korisničko sučelje tijekom pokretanja
+
 #### <a name="officeextensibilityofficejsappactivated"></a>Office.Extensibility.OfficeJS.Appactivated
 
 Bilježi informacije o neočekivanim isključivanjima sustava Office. To nam omogućuje prepoznavanje rušenja ili blokiranja proizvoda kako bismo na njih mogli reagirati.
@@ -5710,9 +6007,9 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_MsoEndBootTime:integer –** trajanje zatvaranja MSO DLL-a
 
-  - **Data\_MsoInitCoreTime:integer –** trajanje inicijalizacije MSO komponente sustava office
+  - **Data\_MsoInitCoreTime:integer –** trajanje inicijalizacije MSO komponente sustava Office
 
-  - **Data\_MsoInitUITime:integer –** trajanje inicijalizacije korisničkog sučelja MSO komponente sustava office
+  - **Data\_MsoInitUITime:integer –** trajanje inicijalizacije korisničkog sučelja MSO komponente sustava Office
 
   - **Data\_MsoMigrateTime:integer –** trajanje migriranja korisničkih postavki prilikom prvog pokretanja ako je korisnik proveo nadogradnju s prethodne verzije
 
@@ -5832,6 +6129,125 @@ Prikupljaju se sljedeća polja:
 
 - **TotalTime** – ukupno utrošeno vrijeme
 
+#### <a name="onenoteappappbootcomplete"></a>OneNote.App.AppBootComplete 
+
+Ključni signal korišten za osiguravanje da novi privatni korisnici (Microsoftov račun) uspješno mogu prvi put koristiti aplikaciju OneNote.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.  Ako korisnici ne mogu prvi put pokrenuti aplikaciju, time bi se izazvao incident visoke ozbiljnosti.
+
+Prikupljaju se sljedeća polja: 
+
+- **ACTIVITY_BOOT_TIME_IN_MS** – vrijeme potrebno za dovršetak stvaranja aktivnosti
+
+- **ACTIVITY_NAME** – naziv otvorene aktivnosti prilikom pokretanja 
+
+- **ANY_DIALOG_SHOWN** – označava pokazuje li se tijekom pokretanja neki dijaloški okvir
+
+- **APP_SUSPEND_DURING_EVENT** – označava je li pokretanje spriječeno
+
+- **APP_THREAD_CREATION_WAIT_TIME_TIME_FOR_APP_THREAD_CREATION** – vrijeme potrebno za stvaranje niti aplikacije
+
+- **AVAILABLE_MEMORY_IN_MB** – ukupna memorija dostupna na uređaju 
+
+- **AVG_SNAPSHOT_POPULATION_TIME** – prosječno vrijeme potrebno za dohvaćanje struktura bilježnica tijekom korištenja aplikacije
+
+- **BOOT_END_AT_VIEW** – potkategorija naziva aktivnosti (naziv prikaza)
+
+- **BOOT_SNAPSHOTS** – pojedinosti dohvaćanja strukture bilježnica za račun(e) korištene u aplikaciji
+
+- **COREAPP_STARTUP_ACCOUNT_SETUP_STARTUP_ACCOUNT_SETUP** – vrijeme potrebno za provjeru i pokretanje SSO iskustva
+
+- **CRASH_INTERACTION_DURING_BOOT> 0** – upućuje je li se aplikacija srušila tijekom posljednje sesije
+
+- **DALVIK_HEAP_LIMIT_IN_MB** – zastarjelo
+
+- **DELAY_LOAD_STICKY_NOTES** – označava učitavaju li se ljepljive bilješke sa zakašnjenjem ili ne
+
+- **FISHBOWL_SHOWN_DURING_EVENT** – označava slučajeve kada sadržaj nije sinkroniziran
+
+- **HAS_LOGCAT_LOGGING_IMPACT_ON_BOOT** – označava utječu li zapisnici na vrijeme pokretanja
+
+- **INIT_SNAPSHOT_DURATION** – vrijeme potrebno za dobivanje strukture bilježnice za korisničke račune
+
+- **IS_COLD_BOOT** – upućuje na to je li aplikacija pokrenuta kada se aplikacija nije izvodila u pozadini.
+
+- **IS_FIRST_LAUNCH** – upućuje na to je li ovo prvi put da je aplikacija pokrenuta na uređaju 
+
+- **IS_PHONE** – označava je li uređaj telefon ili tablet
+
+- **IS_RECENT_PAGES_AVAILABLE_ON_FRAGMENT_CREATION** – upućuje na to je li sučelje spremno i čeka da sadržaj postane dostupan 
+
+- **IS_REHYDRATE_LAUNCH** – upućuje na to je li sustav zaustavio aplikaciju
+
+- **IS_UPGRADE** – označava pokreće li se aplikacija nakon nadogradnje
+
+- **JOT_MAIN_APP_CREATE_TIME_MAIN_APP_CREATE_TIME** – vrijeme potrebno za stvaranje JOT komponente (komponenta zajedničkog koda) 
+
+- **JOT_MAIN_APP_INIT_TIME_MAIN_APP_INIT_TIME** – vrijeme potrebno za inicijalizaciju JOT komponente
+
+- **LAUNCH_POINT** – označava je li aplikacija pokrenuta iz widgeta, ikone aplikacije ili hiperveze ili opcije „Zajednički koristi na“, itd.
+
+- **MSO_ACTIVATION_TIME_ACTIVATION_TIME** – vrijeme potrebno za inicijalizaciju MSO-a
+
+- **NATIVE_LIBRARIES_LOAD_TIME** – vrijeme potrebno za učitavanje biblioteka
+
+- **NAVIGATION_CREATE_TO_NAVIGATION_RESUME_CREATE_TO_NAVIGATION_RESUME** – vrijeme potrebno za dovršavanje navigacije
+
+- **NAVIGATION_RESUME_TO_BOOT_END_RESUME_TO_BOOT_END** – vrijeme potrebno za mjerenje kašnjenja u učitavanju stranice nakon pokretanja
+
+- **NAVIGATION_SET_CONTENT_VIEW_TIME_SET_CONTENT_VIEW_TIME** – vrijeme potrebno za unošenje sadržaja
+
+- **NUMBER_Of_RUNNING_PROCESSES** – označava broj aktivnih procesa koji se izvode
+
+- **NUMBER_OF_SNAPSHOTS** – broj dohvaćanja struktura bilježnice tijekom pokretanja
+
+- **OFFICEASSETMANAGER_INITIALIZATION_TIME** – vrijeme potrebno za raspakiranje i pokretanje upravitelja sadržaja
+
+- **PROCESS_BOOT_TIME_IN_MS** – vrijeme potrebno za dovršetak stvaranja procesa
+
+- **ROOT_ACTIVITY_CREATE_ACTIVITY_CREATE** – vrijeme potrebno za prijelaz s korijenskog sloja 
+
+- **ROOT_ACTIVITY_DISK_CHECK_ACTIVITY_DISK_CHECK** – zastarjelo
+
+- **ROOT_ACTIVITY_LAUNCH_NEXTACTIVITY_ACTIVITY_LAUNCH_NEXTACTIVITY** – zastarjelo
+
+- **ROOT_ACTIVITY_PROCESS_INTENT_ACTIVITY_PROCESS_INTENT** – zastarjelo 
+
+- **ROOT_ACTIVITY_SESSION_ACTIVITY_SESSION** – vrijeme potrebno za prijelaz s korijenskog sloja 
+
+- **ROOT_TO_NAVIGATION_TRANSITION_TO_NAVIGATION_TRANSITION** – vrijeme potrebno za upravljanje navigacijom iz korijena
+
+- **SNAPSHOT_PUBLISH_TO_RENDERING_END_PUBLISH_TO_RENDERING_END** – vrijeme za dovršetak prikazivanja sadržaja
+
+- **SPLASH_ACTIVITY_SESSION_ACTIVITY_SESSION** – vrijeme potrebno za prikazivanje pozdravnog zaslona
+
+- **SPLASH_TO_ROOT_TRANSITION_TO_ROOT_TRANSITION** – vrijeme potrebno za prijelaz s korijenskog sloja 
+
+- **TIME_BETWEEN_PROCESS_BOOT_AND_ACTIVITY_BEGIN_IN_MS** – vrijeme između stvaranja procesa i aktivnosti 
+
+- **TIME_TAKEN_IN_MS** – vrijeme potrebno za dovršavanje pokretanja
+ 
+- **TOTAL_MEMORY_IN_MB** – ukupna memorija uređaja
+ 
+- **USER_INTERACTED_DURING_EVENT** – označava je li korisnik komunicirao tijekom pokretanja
+
+#### <a name="onenoteapponenoteappforeground"></a>OneNote.App.OneNoteAppForeground 
+
+Signal koji upućuje da je OneNote aplikacija u prvom planu.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
+
+Prikupljaju se sljedeća polja: Nijedno
+
+#### <a name="onenoteapplaunch"></a>OneNote.AppLaunch
+
+Ključni signal koji se koristi za osiguravanje da korisnici aplikacije OneNote mogu uspješno pokrenuti aplikaciju.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
+
+Prikupljaju se sljedeća polja: 
+
+- **FirstLaunchTime** – bilježi vrijeme prvog pokretanja aplikacije
+
+- **InstallLocation** – upućuje na to je li aplikacija unaprijed instalirana ili je preuzeta iz trgovine
+
+- **is_boot_completed_ever** – upućuje na to je li aplikacija nekada bila uspješno pokrenuta na uređaju
+
+- **NewOneNoteUser** – identificira je li korisnik novi korisnik
 
 #### <a name="officeoutlookdesktopexchangepuidandtenantcorrelation"></a>Office.Outlook.Desktop.ExchangePuidAndTenantCorrelation
 
@@ -6339,7 +6755,7 @@ Prikupljaju se sljedeća polja.
 
 #### <a name="officetelemetryengineisprelaunch"></a>Office.TelemetryEngine.IsPreLaunch
 
-Primjenjuje se na aplikacije sustava Office za UWP.  Taj se događaj pokreće kada se aplikacija sustava office prvi put pokrene nakon nadogradnje/instalacije iz trgovine. Dio je osnovnih dijagnostičkih podataka, a koristi se za praćenje je li riječ o sesiji prvog pokretanja.
+Primjenjuje se na aplikacije sustava Office za UWP.  Taj se događaj pokreće kada se aplikacija sustava Office prvi put pokrene nakon nadogradnje/instalacije iz trgovine. Dio je osnovnih dijagnostičkih podataka, a koristi se za praćenje je li riječ o sesiji prvog pokretanja.
 
 Prikupljaju se sljedeća polja:
 
@@ -7662,6 +8078,67 @@ Prikupljaju se sljedeća polja:
 
 - **Error** – sastoji se od poruke o pogrešci koju objekt pogreške vraća.
 
+#### <a name="officeandroidandroidofficelaunchtolandingpagelatency"></a>Office.Android.AndroidOfficeLaunchToLandingPageLatency
+
+Ključno je za snimanje metrike performansi aplikacije s obzirom na vrijeme odaziva aplikacije prilikom pokretanja.  Microsoft to koristi za prikupljanje vremena potrebnog za reagiranje aplikacije i otkrivanje scenarija koji mogu utjecati na vrijeme pokretanja u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+ 
+- **AnyCrashInteractionDuringBoot** – Booleova vrijednost za svaki pad koji se dogodio tijekom pokretanja
+
+- **AppActivationTimeInMs** – vrijeme faze aplikacije
+
+- **AppSuspendedDuringBoot** – Booleova vrijednost za obustavljanje aplikacije tijekom pokretanja
+
+- **AvailableMemoryInMB** – dostupna memorija
+
+- **CollectionTime** – vrijeme događaja
+
+- **DalvikHeapLimitInMB** – informacije o snopu
+
+- **DocumentRecoveryInvoked** – Booleova vrijednost da naznači je li neki dokument oporavljen
+
+- **ExtractionDone** – vrijeme izdvajanja izvorne biblioteke
+
+- **FastBootGainTimeInMs** – vrijeme za brzo dovršavanje pokretanja
+
+- **FileActivationAttempted** – Booleova vrijednost koja označava je li aplikacija pokrenuta zbog aktivacije datoteke
+
+- **HasLogcatLoggingImpactOnBoot** – Booleova vrijednost koja označava je li logcat utjecao na vrijeme pokretanja
+
+- **IsThisFirstLaunch** – Booleova vrijednost koja označava je li ovo prvo pokretanje aplikacije
+
+- **LatencyTimeInMilliSec** – kašnjenje u milisekundama
+
+- **LibrarySharingTimeInMs** – vrijeme za zajedničko korištenje biblioteka
+
+- **LoadMinLibsTimeInMs** – vrijeme učitavanja za minimalni skup biblioteka
+
+- **MruListingTimeInMs** – vrijeme za učitavanje servisa MRU
+
+- **NativeLibrariesLoadTime** – vrijeme učitavanja CPP biblioteke
+
+- **NumberOfRunningProcesses** – broj pokrenutih procesa
+
+- **NumberOfRunningProcesses** – broj pokrenutih procesa
+
+- **NumberOfRunningServices** – broj pokrenutih usluga
+
+- **OfficeActivityTimeInMs** – vrijeme za pokretanje aktivnosti u sustavu Office
+
+- **PostAppInitTimeInMs** – vrijeme faze aplikacije
+
+- **PreAppInitializationTime** – vrijeme pokretanja faze aplikacije
+
+- **PreAppInitTimeInMs** – vrijeme faze aplikacije
+
+- **TotalMemoryInMB** – ukupna memorija
+
+- **UIRaaSDownloadLanguagePackageBoot** – informacije koje se odnose na preuzimanje jezičnog paketa
+
+- **UserDialogInterruptionDuringBoot** – Booleova vrijednost za bilo koji dijaloški okvir za blokiranje prikazan tijekom pokretanja
+
+
 #### <a name="office_apple_apple_appboot_mac"></a>Office_Apple_Apple_AppBoot_Mac
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje vremena potrebnog za pokretanje aplikacije, kao i nekih detalja o vrsti izvedenog pokretanja. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
@@ -8121,6 +8598,655 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Timeout** – trajanje blokade
 
+  #### <a name="officeandroidadalsigninuiprompts"></a>Office.Android.ADALSignInUIPrompts
+
+Tim se događajem označava da je upit za prijavu stigao korisniku, za školski ili poslovni račun.  Ovaj događaj pomaže u razumijevanju stanja prijava u našim aplikacijama i poduzima odgovarajuće radnje kada uočimo neočekivane ponovne upite za prijavu. 
+
+Prikupljaju se sljedeća polja:
+
+- **LastLoginDelta** – delta vremena od posljednje uspješne prijave.
+
+- **PreviousIdentityCredProviderState** – označava stanje računa.
+
+- **PreviousIdentityState** – označava stanje računa, poput isteka sesije. 
+
+- **SignInResultCode** – označava kôd rezultata za kraj upita za prijavu.
+
+- **UseCache** – označava smo li prisilno zatražili korisniku da ponovno unese lozinku.
+
+- **UserType** – upućuje na to je li riječ o postojećem računu ili novom računu
+
+#### <a name="officeandroidandroidappdocsfileoperationends"></a>Office.Android.AndroidAppDocsFileOperationEnds
+
+Ključna dokumenta samo za Android (AppDocs) podaci telemetrije za kraj operacija Datoteka/Novo/Spremi kao. Ovo bilježi kodove pogrešaka za neuspjehe tih AppDocs operacija.  Microsoft to koristi za prepoznavanje pogrešaka u različitim operacijama datoteke i točnog sloja na kojem je došlo do pogreške u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **AccessMode** – vrijednost enumeracije za način pristupa datoteci. Vrijednost – nema, samo za čitanje, samo za čitanje koja se može nadograditi, za čitanje i pisanje
+
+- **BlockingUIShown** – Booleova vrijednost koja označava je li blokiranje korisničkog sučelja bilo prikazano bilo gdje u protoku.
+
+- **ContentUriAuthority** – autoritet URL-a za sadržaj iz SAF-a
+
+- **Correlation** – GUID za ID korelacije koji se odnosi na operaciju
+
+- **DocId** – ID dokumenta koji je generirao AppDocs
+
+- **DocInstanceId** – DocInstanceId ID instance dokumenta koji generira AppDocs koji je obuhvaćen instancom operacije u dokumentu
+
+- **DocIsEnterpriseProtected** – Booleova vrijednost koja označava je li dokument zaštićen.
+
+- **DocUserId** – korisnički ID iz MS sloja za autorizaciju
+
+- **DocUserIdProvider** – enumeracija koja predstavlja davatelja korisničkog ID-a, 0 = Nepoznato, 1 = LiveId, 2 = OrgId, 3 = SSPI, 4 = ADAL
+
+- **DurationInMs** – vrijeme u milisekundama do završetka operacije datoteke
+
+- **EndReason** – vrijednost enumeracije za krajnji razlog.  Vrijednosti – nema, uspjeh, neuspjeh, odustani
+
+- **ErrorCode** – kôd pogreške za operaciju datoteke
+
+- **Extension** – proširenje datoteke koja se otvara.
+
+- **FileSourceLocation** – vrijednost enumeracije lokacije datoteke. Moguće vrijednosti: Nema, Lokalno, UncOrMappedNetworkDrive, SkyDrive, App, SharePoint, Nepoznati poslužitelj
+
+- **FILETIME** – vrijeme događaja
+
+- **FirstBCSClientError_Info** – informacije o kodu pogreške povezane s pretvorbama datoteka
+
+- **HttpStatusCode** – http kôd odgovora za zahtjev web usluge
+
+- **InitalizationReason** – ulazna točka za otvaranje datoteke
+
+- **K2FileIOHresult** – Hresult kôd za kraj operacije otvaranja datoteke
+
+- **LastBCSClientError_TagId** – posljednja pogreška BSC (usluga binarne pretvorbe) klijenta
+
+- **OfficeWebServiceApiStatusFlag** – zastavica statusa za zahtjev web usluge
+
+- **OpEndEventId** – oznaka koja predstavlja mjesto gdje je operacija zapravo završila
+
+- **OpFlags** – zastavice parametra operacije dokumenta koje koristi sloj AppDocs.
+
+- **OpSeqNum** – broj koji predstavlja redoslijed poziva datoteka povezanih sa operacijom datoteke u sloju AppDocs
+
+- **OpType**– enumeracija vrste operacija. Vrijednosti: "None", "CreateDocument", "OpenDocument", "CopyDocument", "CloseDocument", "SaveDocument", "OpenVersion", "CloseVersion"
+
+- **PreFetchState**– enumeracija stanja pretpreuzimanja predložaka za operacije stvaranja nove datoteke.
+
+- **ProviderApp** – naziv paketa aplikacije iz koje se datoteka otvara
+
+- **ScopeInstanceId**– ID opsega instance koji se koristi za pridruživanje podatkovnog konteksta aktivnostima
+
+- **Size** – veličina datoteke
+
+- **State** – vrijednosti enumeracije za stanje datoteke. Vrijednosti: None, Creating, Created, CreateFailed, Opening, Opened, OpenFailed, Copying, Copied, CopyFailed, Closing, Closed, CloseFail
+
+- **TemplateName** – naziv binarnog predloška predloška dokumenta iz usluge predloška, npr. TF10002009.dotx
+
+- **UriScheme** – shema URL-a
+
+#### <a name="officeandroidandroidautherror"></a>Office.Android.AndroidAuthError
+
+Ovaj događaj označava osnovne pogreške u provjeri autentičnosti za vrijeme tihog osvježavanja tokena, učitavanje stranice za prijavu iz usluge i tako dalje.  Ovaj događaj pomaže u razumijevanju stanja prijava u našim aplikacijama, pokušajima prijave i poduzima odgovarajuće radnje kada uočimo neočekivane ponovne upite za prijavu. 
+
+Prikupljaju se sljedeća polja:
+
+- **ADALErrorCode** – označava kôd pogreške prilikom prikazivanja upita za prijavu ili pokušaja dohvaćanja tihog tokena za poslovni račun.
+
+- **ADALRawErrorCode** – označava kôd neobrađene pogreške prilikom prikazivanja upita za prijavu ili pokušaja dohvaćanja tihog tokena za poslovni račun.
+
+- **ErrorGroup** – označava vrstu računa kao što je osobni račun ili poslovni račun ili lokalni poslovni račun.
+
+- **IDCRLErrorCode** – označava kôd pogreške prilikom prikazivanja upita za prijavu za osobni račun.
+
+- **IDCRLRawErrorCode** – označava kôd neobrađene pogreške prilikom prikazivanja upita za prijavu za osobni račun.
+
+- **LiveOAuthErrorCode** – označava kôd pogreške prilikom pokušaja osvježavanja tihog tokena za osobni račun.
+
+- **LiveOAuthRawErrorCode** – označava kôd neobrađene pogreške prilikom pokušaja osvježavanja tihog tokena za osobni račun.
+
+- **NTLMErrorCode** – označava kôd pogreške prilikom prikazivanja upita za prijavu za lokalni poslovni račun.
+
+#### <a name="officeandroidandroidfileasyncsavestatus"></a>Office.Android.AndroidFileAsyncSaveStatus
+
+Snima asinkronu datoteku, sprema podatke o statusu i razne kodove pogrešaka iz različitih komponenti.  Microsoft koristi ove podatke kako bi analizirao postoji li gubitak korisničkih podataka u aplikaciji tijekom spremanja datoteka u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **FileExtension** – datotečni nastavak
+
+- **FileIOSaveHResult** – HResult za operaciju spremanja datoteke
+
+- **FileIOSaveIsCopy** – Booleova vrijednost da naznači sprema li operacija kopiju.
+
+- **FileSize** – veličina datoteke
+
+- **FileSourceLocation** – enumeracija lokacije izvora datoteke. Vrijednosti: Nema, Lokalno, UncOrMappedNetworkDrive, SkyDrive, App, SharePoint, Nepoznati poslužitelj
+
+#### <a name="officeandroidandroidfileopenreliability"></a>Office.Android.AndroidFileOpenReliability
+
+To bilježi podatke o statusu otvaranja datoteke i različite kodove pogrešaka kako bi se utvrdilo koje se pogreške prilikom otvaranja datoteke očekuju, a koje ne i koji ih dio koda prijavljuje.  Microsoft koristi ove podatke kako bi analizirao razloge neuspjeha otvaranja datoteka i izračunao ključnu metriku poput stope uspjeha otvaranja datoteke u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **AccessMode** – enumeracija načina pristupa
+
+- **AppDocsFileOpenErrorCode** – AppDocs kôd pogreške za neuspjeh otvaranja datoteke
+
+- **ContentUriAuthority** – autoritet URL-a za sadržaj iz SAF-a
+
+- **DownloadCsiError** – preuzimanje poruke o pogrešci sa CSI-ja
+
+- **FileExtension** – datotečni nastavak
+
+- **FileOpenEndErrorCode** – kôd pogreške za neuspjeh otvaranja datoteke
+
+- **FileOpenStatus** – enumeracija statusa otvaranja datoteke
+
+- **FileSize** – veličina datoteke
+
+- **FileSourceLocation** – enumeracija lokacije datoteke
+
+- **FirstBCSClientError_Info** – posljednja pogreška BSC (usluga binarne pretvorbe) klijenta
+
+- **IfWordFileOpenCancelled** – ako je otvaranje datoteke otkazao korisnik u programu Word
+
+- **InitializationReason** – enumeracija za ulaznu točku za otvaranje datoteke
+
+- **IsAutoSaveDisabled** – je li automatsko spremanje onemogućeno tijekom otvaranja datoteke
+
+- **IsFileEmpty** – Booleova vrijednost koja označava je li datoteka prazna
+
+- **K2FileIOHresult** – Hresult za završetak operacije datoteke
+
+- **OpenCsiError** – poruka o pogrešci otvaranja datoteke u CSI sloju
+
+- **OpEndEventId** – oznaka gdje je operacija zapravo završila
+
+- **PPTHresult** – Hresult u PPT-u
+
+- **PPTIsExpectedError** – PPT klasifikacija pogrešaka za očekivani/neočekivani neuspjeh pri otvaranju datoteke 
+
+- **PPTTag** – oznaka pogreške u PPT-u
+
+- **ProviderApp** – naziv paketa aplikacije iz koje se datoteka otvara
+
+- **ProviderFileSize** – veličina datoteke snimljena tijekom otvaranja datoteke putem aktivacije datoteke
+
+- **Stae** – enumeracija statusa otvaranja datoteke
+
+- **UriScheme** – shema URL-a
+
+- **WordErrortag** – oznaka pogreške u programu Word
+
+- **WordFileCorruptionReason** – razlog za oštećenje zbog kojeg se datoteka programa Word ne može otvoriti
+
+- **WordFileOpenErrorCode** – kôd pogreške specifičan za otvaranje datoteke u programu Word.
+
+- **WordFileTypeFromDod** – vrsta datoteke koja se određuje pomoću programa Word na temelju stvarnog oblika datoteke
+
+- **WordFileTypeFromExtension** – vrsta datoteke koja se određuje pomoću programa Word na temelju datotečnog nastavka
+
+#### <a name="officeandroidandroidfilesavestatus"></a>Office.Android.AndroidFileSaveStatus
+
+Ključno za snimanje podataka o statusu spremanja datoteke i razne kodove pogrešaka iz različitih komponenti.  Microsoft koristi ove podatke kako bi analizirao postoji li gubitak korisničkih podataka u aplikaciji tijekom spremanja datoteka u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **AccessMode** – Vrijednosti** – nema, samo za čitanje, samo za čitanje koja se može nadograditi, za čitanje i pisanje.
+
+- **AppDocsEndReason** – enumeracija za spremanje datoteke Appdoc EndReason.  Vrijednosti – nema, uspjeh, neuspjeh, odustani.
+
+- **AppDocsErrorCode** – krajnji kôd pogreške za neuspjeh pri spremanju datoteke
+
+- **AppDocsTriggeringSaveDetails** – polje koje označava pokreće li AppDocs spremanje
+
+- **DocInstanceId** – DocInstanceId ID instance dokumenta koji generira AppDocs koji je obuhvaćen instancom operacije u dokumentu
+
+- **ExcelFileSaveResult** – HResult specifičan za program Excel
+
+- **FileExtension** – proširenje datoteke.
+
+- **FileIOSaveErrorCode** – kôd pogreške Ulaza/Izlaza datoteke
+
+- **FileIOSaveHResult** – Hresult Ulaza/Izlaza datoteke
+
+- **FileIOSaveIsCopy** – Booleova vrijednost koja označava je li ovo operacija kopiranja
+
+- **FileSize** – veličina datoteke
+
+- **FileSourceLocation** – enumeracija lokacije datoteke.  Vrijednosti: Nema, Lokalno, UncOrMappedNetworkDrive, SkyDrive, App, SharePoint, Nepoznati poslužitelj
+
+- **OpFlags** – zastavice operacije za spremanje
+
+- **PPTFileSaveFailHresult** – PPT hresult za neuspjeh spremanja
+
+- **PPTFileSaveFailTag** – PPT oznaka za neuspjeh spremanja
+
+- **State** – enumeracija statusa otvaranja datoteke. 
+
+- **Values** – None, Creating, Created, CreateFailed, Opening, Opened, OpenFailed, Copying, Copied, CopyFailed, Closing, Closed, CloseFail
+
+- **WordFileCopyErrorTrackbackTag** – oznaka evidentirane povratne veze za neuspjeh u fazi „CopyDocument“ u programu Word
+
+- **WordFileSaveCancelReason** – oznaka evidentirane povratne veze za otkazivanje u programu Word
+
+- **WordFileSaveEid** – kôd pogreške specifičan za program Word
+
+- **WordFileSaveErrorTrackbackTag** – oznaka evidentirane povratne veze za spremanje neuspjeha
+
+- **WordFileSaveOpResult** – enumeracija stanja rezultata 0 ako je uspjelo, 1 ako nije uspjelo, 2 ako je otkazano
+
+- **WordFileSaveSuccess** – enumeracija detalja specifičnih za program Word za uspjeh operacije spremanja datoteke.
+
+#### <a name="officeandroidandroidofficeactivationlatency"></a>Office.Android.AndroidOfficeActivationLatency
+
+Ključni podaci za prikupljanje sveobuhvatnog vremena otvaranja datoteka za sva otvaranja datoteka u aplikacijama sustava Windows, Excel i PowerPoint.  To koristi Microsoft da bi saznao metriku performansi otvaranja datoteke naših aplikacija
+
+Prikupljaju se sljedeća polja:
+
+- **Appbootingocod** – Booleova vrijednost da biste provjerili je li dovršeno pokretanje aplikacije
+
+- **ApplicationBootTime** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **AppSuspendedDuringBoot** – Booleova vrijednost koja provjerava je li aplikacija obustavljena tijekom pokretanja
+
+- **BlockingUIShownDuringFileOpen** – Booleova vrijednost koja označava je li postojao bilo koji dijaloški okvir blokiranja tijekom operacije otvaranja datoteke
+
+- **CachedInfoAvailable** – Booleova vrijednost za traženje predmemoriranih informacija koje su specifične za otvaranje datoteke
+
+- **DocumentRecoveryInvoked** – Booleova vrijednost koja označava je li dokument na čekanju za oporavak
+
+- **EndToEndActivationTime** – vrijeme potrebno za prikazivanje datoteke za datoteke otvorene izvan aplikacije
+
+- **EndToEndFileOpenTime** – vrijeme potrebno za prikazivanje datoteke za datoteke otvorene unutar aplikacije
+
+- **FileOpenPhaseDurationInMs** – vrijeme operacije otvaranja datoteke koje koriste specifične faze
+
+- **FileSourceLocation** – vrijednost enumeracije za lokaciju datoteke kao što su Nema, Lokalno, UncOrMappedNetworkDrive, SkyDrive, App, SharePoint, UnknownServer
+
+- **InitalizationReason** – ulazna točka za otvaranje datoteke
+
+- **InitialBootPhaseTime** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **IsThisFirstLaunch** – Booleova vrijednost koja označava je li ovo prvo pokretanje aplikacije
+
+- **MinimumLibraryLoadPhaseTime** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **MinimumLibraryLoadPhaseTime** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **MinimumLibraryLoadPhaseTime** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **PostAppInitTimeInMs** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **PPTRenderPhase** – vrijeme povezano s određenom fazom u PPT renderiranju
+
+- **PreAppInitTimeInMs** – vrijeme potrebno tijekom određene faze pokretanja aplikacije
+
+- **ProviderApp** – naziv paketa aplikacije iz koje se datoteka otvara
+
+- **TelemetryReason** – slično je vrijednosti InitialisationReason, no to je vrijednost enumeracije s više detalja koje se odnose na ulaznu točku za otvaranje datoteke.
+
+- **UserDialogInterruptionDuringBoot** – Booleova vrijednost koja označava je li postojao bilo koji dijaloški okvir za blokiranje tijekom pokretanja
+
+- **XLRenderPhase** – vrijeme koje se odnosi na specifičnu fazu prikazivanja u programu Excel.
+
+#### <a name="officeandroidappdocsfileoperationends"></a>Office.Android.AppDocsFileOperationEnds
+
+Ključna dokumenta samo za Android (AppDocs) podaci telemetrije za kraj operacija Datoteka/Novo/Spremi kao. Ovo bilježi kodove pogrešaka za neuspjehe tih AppDocs operacija.  Microsoft to koristi za prepoznavanje pogrešaka u različitim operacijama datoteke i točnog sloja na kojem je došlo do pogreške u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **AccessMode** – vrijednost enumeracije za način pristupa datoteci.  Vrijednost: nema, samo za čitanje, samo za čitanje koja se može nadograditi, za čitanje i pisanje
+
+- **BlockingUIShown** – Booleova vrijednost koja označava je li blokiranje korisničkog sučelja bilo prikazano bilo gdje u protoku.
+
+- **ContentUriAuthority** – autoritet URL-a za sadržaj iz SAF-a
+
+- **Correlation** – GUID za ID korelacije koji se odnosi na operaciju
+
+- **DocId** – ID dokumenta koji je generirao AppDocs
+
+- **DocInstanceId** – DocInstanceId ID instance dokumenta koji generira AppDocs koji je obuhvaćen instancom operacije u dokumentu
+
+- **DocIsEnterpriseProtected** – Booleova vrijednost koja označava je li dokument zaštićen.
+
+- **DocUserId** – korisnički ID iz MS sloja za autorizaciju
+
+- **DocUserIdProvider** – enumeracija koja predstavlja davatelja korisničkog ID-a, 0 = Nepoznato, 1 = LiveId, 2 = OrgId, 3 = SSPI, 4 = ADAL
+
+- **DurationInMs** – vrijeme u milisekundama do završetka operacije datoteke
+
+- **EndReason** – vrijednost enumeracije za krajnji razlog.  Vrijednosti: nema, uspjeh, neuspjeh, odustani.
+
+- **ErrorCode** – kôd pogreške za operaciju datoteke
+
+- **Extension** – prva četiri znaka proširenja datoteke koja se otvara.
+
+- **FileSourceLocation** – vrijednost enumeracije lokacije datoteke. Moguće vrijednosti: Nema, Lokalno, UncOrMappedNetworkDrive, SkyDrive, App, SharePoint, Nepoznati poslužitelj
+
+- **FILETIME** – vrijeme događaja
+
+- **FirstBCSClientError_Info** – informacije o kodu pogreške povezane s pretvorbama datoteka
+
+- **HttpStatusCode** – HTTP kôd odgovora za zahtjev web usluge
+
+- **InitalizationReason** – ulazna točka za otvaranje datoteke
+
+- **K2FileIOHresult** – Hresult kôd za kraj operacije otvaranja datoteke
+
+- **LastBCSClientError_TagId** – posljednja pogreška BSC (usluga binarne pretvorbe) klijenta
+
+- **OfficeWebServiceApiStatusFlag** – zastavica statusa za zahtjev web usluge
+
+- **OpEndEventId** – oznaka koja predstavlja mjesto gdje je operacija zapravo završila
+
+- **OpFlags** – zastavice parametra operacije dokumenta koje koristi sloj AppDocs.
+
+- **OpSeqNum** – broj koji predstavlja redoslijed poziva datoteka povezanih sa operacijom datoteke u sloju AppDocs
+
+- **OpType** – enumeracija vrste operacija. Vrijednosti: "None", "CreateDocument", "OpenDocument", "CopyDocument", "CloseDocument", "SaveDocument", "OpenVersion", "CloseVersion"
+
+- **PreFetchState**– enumeracija stanja pretpreuzimanja predložaka za operacije stvaranja nove datoteke.
+
+- **ProviderApp** – naziv paketa aplikacije iz koje se datoteka otvara
+
+- **ScopeInstanceId**– ID opsega instance koji se koristi za pridruživanje podatkovnog konteksta aktivnostima
+
+- **Size** – veličina datoteke
+
+- **State** – vrijednosti enumeracije za stanje datoteke. Vrijednosti: None, Creating, Created, CreateFailed, Opening, Opened, OpenFailed, Copying, Copied, CopyFailed, Closing, Closed, CloseFail
+
+- **TemplateName** – naziv binarnog predloška predloška dokumenta iz usluge predloška, npr. TF10002009.dotx
+
+- **UriScheme** – shema URL-a
+
+#### <a name="officeandroidbcserrors"></a>Office.Android.BCS.Errors
+
+Telemetrija binarnih pogrešaka pretvorbe za ispis i zajedničko korištenje u obliku PDF-a.  Microsoft to koristi za prepoznavanje točaka neuspjeha tijekom BCS pretvorbe u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **DocumentFileSize** – veličina datoteke.
+
+- **FileExtension** – prva četiri znaka proširenja datoteke.
+
+- **IsFileDirty** – Booleova vrijednost koja označava je li u datoteci bilo nespremljenih promjena.
+
+- **Location** – enumeracija lokacije datoteke.  Vrijednosti: OneDrive, SharePoint, Dropbox, itd.
+
+- **PDFConversionError** – Oznaka pri kojoj dolazi do pogreške za pretvorbu PDF-a
+
+- **PdfConversionErrorCode** – kôd pogreške za pretvorbu PDF dokumenata
+
+- **PdfConversionHRStatus** – kôd statusa pretvorbe PDF-a
+
+- **PdfConversionResult** – enumeracija rezultata PDF pretvorbe.  Vrijednosti: "Success"; "Nije uspjelo" i "Otkazano"
+
+- **PdfFileSize** – veličina PDF-a
+
+#### <a name="officeandroidclientsideiap"></a>Office.Android.ClientSideIAP
+
+Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanja datoteka i dodavanje mjesta.  Microsoft to koristi za prepoznavanje problema s oštećenjem DB-a u aplikacijama koje mogu ometati korisnika da dodaje mjesta ili ih pregledava unutar aplikacije u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **ClientTransactionId**– GUID proslijeđen DSC-u za specifičan zahtjev aktivacije.
+
+- **CollectionTime** – vrijeme dovršetka kupnje pretplate
+
+- **CountryCode** – kôd države klijenta koji se šalje DSC-u za zahtjev klijenta za aktivaciju
+
+- **GoPremiumEntryPoint** – ulazna točka za pokretanje kupnje 
+
+- **IsActivateExistingSubscription** – Booleova vrijednost upućuje na to je li postojala pretplata koja je aktivirana
+
+- **IsErrorRetriable** – Booleova vrijednost upućuje na to može li se ponoviti aktivacija
+
+- **IsPreviousPurchase** – Booleova vrijednost da naznači je li se aktiviranje dogodilo s prethodnom kupnjom pretplate
+
+- **IsProvisioningTriggeredByRetry** – Booleova vrijednost upućuje na to je li uključen ponovni pokušaj
+
+- **LanguageCode** – kôd jezika klijenta koji se šalje DSC-u za zahtjev klijenta za aktivaciju
+
+- **ProductIdentifier** – naziv SKU-a koji klijent pokušava kupiti
+
+- **ProvisioningHttpStatusCode** – dodjeljivanje http statusnog koda
+
+- **ProvisioningStatusCode** – dodjeljivanje statusnog koda
+
+- **PurchaseOrderId** – identifikator narudžbenice iz Google/Samsung trgovine
+
+- **RedemptionTaskHR** – HResult za zadatak aktivacije pretplate
+
+- **SubscriptionProvisioningSucceeded** – Booleova vrijednost za uspješan rezultat dodjele pretplate
+
+- **SubscriptionPurchaseHR** – Hresult za zadatak kupnje pretplate
+
+- **SubscriptionType** – enumeracija za vrstu pretplate ili SKU-e.
+
+- **TCID** – klik na ikonu aktivira tijek pretplate
+
+#### <a name="officeandroiddbfailurecause"></a>Office.Android.DBFailureCause
+
+Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanja datoteka i dodavanje mjesta.  Microsoft to koristi za prepoznavanje problema s oštećenjem DB-a u aplikacijama koje mogu ometati korisnika da dodaje mjesta ili ih pregledava unutar aplikacije u WXP aplikacijama.
+
+Prikupljaju se sljedeća polja:
+
+- **ErrorAt** – Vrijednost oznake: informacije o mjestu na kojem je došlo do pogreške
+
+- **ExceptionErrorMessage** – opširna poruka o pogrešci
+
+#### <a name="officeandroidearlytelemetrysharedlibraryloadersearchandloadlibraryerror"></a>Office.Android.EarlyTelemetry.SharedLibraryLoadersearchAndloadLibraryError 
+
+Taj događaj bilježimo u slučaju da postoje pogreške tijekom učitavanja zajedničkih biblioteka. Moguće su pogreške u učitavanju biblioteke iz dva razloga 1) Instalirani Apk nije kompatibilan s uređajem. 2) biblioteka koju pokušavamo učitati može biti oštećena, zbog pogrešaka pri izdvajanju zbog malog prostora na disku ili male memorije.
+
+Prikupljaju se sljedeća polja:
+
+- **Data_ExceptionMessage** – poruka o iznimci koju je izbacio Android API System.loadlibrary
+
+- **Data_FreeSpaceInMB** – slobodan prostor dostupan na uređaju
+
+- **Data_nickName** – naziv biblioteke koja se nije mogla učitati.
+
+#### <a name="officeandroidintuneintunejavacopyfailedattempts"></a>Office.Android.Intune.IntuneJavaCopyFailedAttempts
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka za spremanje lokalne kopije Intune zaštićenih dokumenata u oblaku.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- **Data_FileCreationFailedErrorCode** – kôd pogreške povezan s protokom
+
+#### <a name="officeandroidintuneintunejavaexceptionadaltokenformam"></a>Office.Android.Intune.IntuneJavaExceptionADALTokenForMAM
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka za dobivanje ADAL tokena za Intune resurse.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- **Data_ErrorCode** – kôd pogreške povezan s protokom
+
+#### <a name="officeandroidintuneintunejavaexceptionapppolicy"></a>Office.Android.Intune.IntuneJavaExceptionAppPolicy
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na pravila dohvaćanja identiteta za trenutni proces.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+ 
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionapppolicyforcontext"></a>Office.Android.Intune.IntuneJavaExceptionAppPolicyForContext
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na pravila dohvaćanja identiteta za trenutnu aktivnost.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+ 
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionauthenticationcallback"></a>Office.Android.Intune.IntuneJavaExceptionAuthenticationCallback
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na registraciju za povratne pozive za provjeru autentičnosti za upravljane račune.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptiongetaccountstatesync"></a>Office.Android.Intune.IntuneJavaExceptionGetAccountStateSync
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na upravljani račun.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+ 
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptiongetissavetolocationallowed"></a>Office.Android.Intune.IntuneJavaExceptionGetIsSaveToLocationAllowed
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka za dohvaćanje pravila vezanih uz spremanje na lokalno.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptiongetpolicyforidentity"></a>Office.Android.Intune.IntuneJavaExceptionGetPolicyForIdentity
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na pravila dohvaćanja identiteta.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptiongetprotectioninfofromdescriptor"></a>Office.Android.Intune.IntuneJavaExceptionGetProtectionInfoFromDescriptor
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na podatke o zaštiti.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+  
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptiongetprotectioninfofrompath"></a>Office.Android.Intune.IntuneJavaExceptionGetProtectionInfoFromPath
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na podatke o zaštiti.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptiongetuipolicyidentity"></a>Office.Android.Intune.IntuneJavaExceptionGetUIPolicyIdentity
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na dohvaćanje pravila korisničkog sučelja za upravljani račun.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionisidentitymanaged"></a>Office.Android.Intune.IntuneJavaExceptionIsIdentityManaged
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na identificiranje upravlja li se računom.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom.
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionnullenrollmentmanager"></a>Office.Android.Intune.IntuneJavaExceptionNullEnrollmentManager
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na registraciju komponenti za povratni poziv.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionprotect"></a>Office.Android.Intune.IntuneJavaExceptionProtect
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na zaštitu upravljanog dokumenta.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom.
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionprotectfromdescriptorifrequired"></a>Office.Android.Intune.IntuneJavaExceptionProtectFromDescriptorIfRequired
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na zaštitu upravljanog dokumenta.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionregisteraccountsync"></a>Office.Android.Intune.IntuneJavaExceptionRegisterAccountSync
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na registraciju računa Intune Management.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionsetuipolicyidentitysync"></a>Office.Android.Intune.IntuneJavaExceptionSetUIPolicyIdentitySync
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na postavljanje pravila za upravljani račun.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionunregisteraccountsync"></a>Office.Android.Intune.IntuneJavaExceptionUnregisterAccountSync
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na scenarije daljinskog brisanja za Intune Management.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidintuneintunejavaexceptionupdatetoken"></a>Office.Android.Intune.IntuneJavaExceptionUpdateToken
+
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka pri pozivanju Intune API-ja koje se odnose na ažuriranje tokena autorizacije za upravljani račun.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
+#### <a name="officeandroidlicenseactivationfailure"></a>Office.Android.LicenseActivationFailure
+
+Telemetrija kritične pogreške za praćenje neuspjeha u aktiviranju licenci za O365 račune u W/X/P aplikacijama.  Microsoft to koristi za analiziranje neuspjeha pri aktiviranju kupljene licence o365.
+
+Prikupljaju se sljedeća polja:
+
+- **EntryPoint** – enumeracija ulazne točke za pokretanje tijeka aktivacije licence
+
+- **HResult** – kôd pogreške za neuspjeh
+
+- **IsGallatin** – Booleova vrijednost da provjerite je li to Gallatin račun
+
+- **MessageCode** – enumeracija za označavanje mjesta neuspjeha za aktiviranje
+
+- **PreviousEntryPoint** – enumeracija ulazne točke za pokretanje tijeka aktivacije licence
+
+- **StateAfterActivation** – enumeracija koja upućuje na stanje licenciranja aplikacije prije nego što je započeo tijek aktivacije
+
+- **StateBeforeActivation** – enumeracija koja upućuje na stanje licenciranja aplikacije prije nego što je započeo tijek aktivacije
+
+- **UserAccountType** – enumeracija koja upućuje na to je li u pitanju osobni račun ili račun velike tvrtke.
+
+#### <a name="officeandroidmsasigninuiprompts"></a>Office.Android.MSASignInUIPrompts
+
+Tim se događajem označava da je upit za prijavu stigao korisniku, za osobni račun.  Ovaj događaj pomaže u razumijevanju stanja prijava u našim aplikacijama i poduzima odgovarajuće radnje kada uočimo neočekivane ponovne upite za prijavu. 
+
+Prikupljaju se sljedeća polja:
+
+- **ExternalCacheRefreshError** – kôd pogreške pokušaja osvježavanja tokena prije prikazivanja upita za prijavu.
+
+- **LastLoginDelta** – delta vremena od posljednje uspješne prijave.
+
+- **MSAserverUAID** – ID korelacije s telemetrijskim podacima usluge.
+
+- **PreviousIdentityState** – označava stanje računa, poput isteka sesije. 
+
+- **SignInResultCode** – označava kôd rezultata za kraj upita za prijavu.
+
+- **UseCache** – označava smo li prisilno zatražili korisniku da ponovno unese lozinku.
+
+- **UserType** – upućuje na to je li riječ o postojećem računu ili novom računu
+
+- **WasIdentitySignedOut** – upućuje na to je li račun bio u odjavljenom stanju.
+
+
 #### <a name="office_apple_licensing_mac_dractivationfailures"></a>Office_Apple_Licensing_Mac_DRActivationFailures
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za snimanje neuspjeha aktivacije tvrtke Digital River (događaj bilježi ključ i proizvod koji su korišteni za aktiviranje, kao i primljeni kôd pogreške).  Ovaj se događaj koristi za prepoznavanje i pomoć pri otklanjanju poteškoća pri neuspjelim aktivacijama (problemi tvrtke Digital River)
@@ -8578,3 +9704,13 @@ Prikuplja se kad god PowerPoint otkrije da nema internetske veze. Microsoft kori
 Prikupljaju se sljedeća polja:
 
 - **Data\_IsNexusDetected:bool** – pokazuje jesmo li stanje internetske veze dobili prilikom pozivanja servisa Nexus (vrijednost „istinito”) ili API poziva generičkom web-servisu (vrijednost „neistinito”)
+
+#### <a name="officeserviceabilitymanagerofficesvcmgrprofile"></a>Office.ServiceabilityManager.OfficeSvcMgrProfile
+
+Taj se događaj aktivira kada se pokrene upravitelj uslužnosti sustava Office i presudan je za pružanje točnih uvida u vezi sa statusom implementacije i rušenjem aplikacija i dodataka unutar sustava kupca omogućujući nam generiranje uvida u to da IT administrator može pouzdano uvoditi ažuriranja za njihove poslovne strojeve.  
+
+Prikupljaju se sljedeća polja:
+
+- **DeviceIdJoinToken** – koristi se za spajanje podataka telemetrije iz stanja sustava i stanja implementacije s drugim funkcionalnim podacima koji se prikupljaju putem cjevovoda za usluge.
+
+- **TenantAssociationKeyStamped** – Booleova zastavica koja se koristi za određivanje broja upravljanih uređaja u sustavu Office.
