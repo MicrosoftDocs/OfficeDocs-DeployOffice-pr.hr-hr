@@ -34,7 +34,7 @@ Dodatne informacije o dijagnostičkim podacima i povezanim iskustvima potražite
 Te preference postavki odnose se na sljedeće aplikacije:
 - Verzija 2.30 i novije aplikacije Word za iOS, Excel za iOS i PowerPoint za iOS.
 - Verzija 16.30 i novije aplikacije OneNote za iOS.
-- Verzija 1.17 i novije programa Visio Viewer za iOS.
+- Verzija 1.17 i novije programa Preglednik za Visio za iOS.
 
 > [!NOTE]
 > Informacije o sličnim postavkama za Office na računalima sa sustavom macOS potražite u odjeljku [Upotreba postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
