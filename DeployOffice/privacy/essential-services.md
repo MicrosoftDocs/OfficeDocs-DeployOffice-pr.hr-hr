@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 25f594865089d35cb46ebfcc9b97d6b048f6298d
-ms.sourcegitcommit: ad2bb6e42b2432a2cb9370594cd50f3a14f2fbe3
+ms.openlocfilehash: 4410d94ea0179200fce0cd4dd16aebd62a21a2f6
+ms.sourcegitcommit: 4ec332a6f7457f08aa17fdbb7ee7f308a449887f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38310672"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39962837"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -423,6 +423,37 @@ Prikupljaju se sljedeća polja:
   - **Wamapi** – određuje koji se WAM API poziva
 
   - **Wamtelemetrybatch** – trenutno se ne koristi. Ubuduće će komponenti WAM omogućiti slanje dodatnih informacija o događaju provjere autentičnosti.
+
+### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
+ 
+Ovaj se događaj bilježi kada se na popisu računa koje nudi TokenSharingManager pronađe račun s valjanim tokenom osvježavanja.  Taj je scenarij specifičan za jedinstvenu prijavu (SSO).
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **AccountType** - Bilježi vrstu računa
+
+- **ProviderPackageID**-zapisuje ID paketa aplikacije koja je dala taj račun
+
+### <a name="onenotesigninssoexternalappsinvalidaccount"></a>OneNote.SignIn.SSOExternalAppsInvalidAccount
+
+Taj se događaj bilježi kada se prilikom pokušaja dohvaćanja tokena osvježavanja za račun na popisu računa koje nudi TokenSharingManager dogodi pogreška. Taj je scenarij specifičan za jedinstvenu prijavu (SSO)
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **RawError** - zapisuje pogrešku RAW dobivenu prilikom pokušaja dohvaćati tokena osvježavanja pomoću danog računa
+
+### <a name="onenotestickynotesfetchtokencompleted"></a>OneNote.StickyNotes.FetchTokenCompleted
+ 
+Ovaj je događaj zapisan nakon provjere autentičnosti, po dovršetku dohvaćanja tokena osvježavanja.
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **ErrorMessage** - ako dohvaćanje tokena nije uspjelo, to bi zabilježilo poruku o pogrešci 
+
+- **Result** - zapisuje rezultat pokušaja dohvaćanja tokena
+
+- **StickyNoteAccountType** - bilježi vrstu računa za koji je aplikacija pokušavala dohvatiti token osvježavanja
+
 
 ## <a name="click-to-run-events"></a>Događaji tehnologije "klikom do cilja"
 
@@ -2531,13 +2562,19 @@ Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameter
 
 - **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (na primjer, "O365ProPlusRetail")
 
+- **PridsToMigrateFromCentennial-** Niz proizvoda sustava Office za migraciju iz instalacija trgovine u značajku "klikom do cilja"
+
 - **ProductsToAdd –**   Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
+
+- **ProductsToMigrateFromO15C2R-** Niz proizvoda i kultura sustava Office za migraciju iz instalacije sustava Office 2013 značajkom "klikom do cilja"
 
 - **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
 
 - **SharedComputerLicensing –** Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka "SharedComputerLicensing"
 
 - **ShouldActivate –**  Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
+
+- **ShouldUninstallCentennial -** Booleova zastavica koja upućuje na to je li proizvode iz trgovine potrebno deinstalirati
 
 - **VersionToInstall –**    Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
  
@@ -2602,15 +2639,21 @@ Izvješćuje o parametrima koji se koriste za instalaciju sustava Office
 
 - **PlatformToInstall –**   Niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office.
 
-- **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
+- **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (primjerice, "O365ProPlusRetail")
 
-- **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (na primjer, "O365ProPlusRetail")
+- **PridsToMigrateFromCentennial-** Niz proizvoda sustava Office za migraciju iz instalacija trgovine u značajku "klikom do cilja"
 
 - **ProductsToAdd –**   Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
+
+- **ProductsToMigrateFromO15C2R-** Niz proizvoda i kultura sustava Office za migraciju iz instalacije sustava Office 2013 značajkom "klikom do cilja"
+
+- **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
 
 - **SharedComputerLicensing –** Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka "SharedComputerLicensing"
 
 - **ShouldActivate –**  Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
+
+- **ShouldUninstallCentennial -** Booleova zastavica koja upućuje na to je li proizvode iz trgovine potrebno deinstalirati
 
 - **VersionToInstall –** Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
 
@@ -2651,6 +2694,37 @@ Izvješćuje o poduzetim radnjama koje su utjecale na stroj, što je utvrđeno o
 - **VersionToInstall –**   Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
 
 
+### <a name="officeserviceabilitymanagerinventoryaddonresults"></a>Office.ServiceabilityManager.InventoryAddon.Results
+
+Taj se događaj bilježi kada se poziv na web-servis u sklopu dodatka "klikom do cilja" za inventar upravitelja za servis dovrši, neovisno o tome uspijeva li ili ne uspijeva. To je u suštini posljednja operacija unutar dodatka za praćenje ukupnog stanja rada.
+
+Prikupljaju se sljedeća polja:
+
+-  **WebCallSource** – vrijednost za numeriranje (koja se određuje kao cijeli broj) koja označava dodatak upravitelja servisa koji je bio izvor poziva:
+   - Zalihe: 0
+   - Konfiguriranje zaliha: 1
+   - Pravilnik o zalihama: 2
+   - Stanje mreže zaliha: 3
+
+- **Rezultat** - brojčana oznaka pogreške koju vraćaju API-jevi poziva web-servisa sustava Office.
+
+### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
+
+Taj se događaj bilježi kad god se pokrene poziv na web-servis koji je stvoren unutar dodatka upravitelja servisa "klikom do cilja".
+
+Prikupljaju se sljedeća polja:
+
+- **Add-on** - Programski dodatak upravitelja servisa "klikom do cilja" iz kojeg je pokrenut poziv na web-servis. To može imati vrijednosti kao što su zalihe, upravljanje itd., kodirane kao numerička vrijednost.
+
+- **Correlation ID** – nasumično generirani GUID specifičan za trenutnu instancu koji je poslan web-servisu kako bi povezao pozive između klijenta i poslužitelja.
+
+- **ErrorInfo** - brojčana oznaka pogreške koju vraćaju API-jevi poziva web-servisa sustava Office.
+
+- **Function** – funkcija u kodu iz koje je došlo do trenutnog poziva.
+
+- **Status** – kôd HTTP-a kojeg vraća poziv web-servisu, npr. 404, 500, itd.
+
+
 ## <a name="enhanced-configuration-service-ecs-events"></a>Događaji servisa za eksperimentiranje i konfiguraciju (ECS-a)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
@@ -2688,6 +2762,14 @@ Ovaj događaj pomaže analizi opsega upotrebe proizvoda i parametara performansi
 Prikupljaju se sljedeća polja:
 
   - **FeatureGate –** Identificira skup značajki za koje je primjenjiva analiza okidača.
+
+### <a name="onenoteflightdefault"></a>OneNote.FlightDefault
+ 
+Taj se događaj bilježi kada OneNote zatraži od poslužitelja ECS vrijednosti letenja.  To se koristi da bi se omogućile eksperimentalne značajke korisnicima koji su se uključili u primanje ovakvih letova.
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **ConfigParam** – konfiguracija za koju se pristupa vrijednostima za
 
 ## <a name="licensing-events"></a>Događaji licenciranja
 
@@ -2757,7 +2839,10 @@ Prikupljaju se sljedeća polja:
 
 To prikupljamo kad korisnik postavlja uređaj te pozivamo servis za licenciranje da otkrije ima li prijavljeni korisnik prava na Office. Prijavljuje rezultat poziva Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
-Događaj ne prikuplja nijedno polje.
+Prikupljaju se sljedeća polja:
+
+- **EntitlementCount** – Broj prava koja korisnik ima
+
 
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
@@ -2765,7 +2850,27 @@ Za svaku sesiju provjeravamo je li prošlo 72 sata od zadnje obnove licence te p
 
 Prikupljaju se sljedeća polja:
 
-  - **Mode** – prikaz stoga licenciranja sustava Office koji se koristi na računalu kao identifikatora
+  - **Mode** – prikaz stoga licenciranja sustava Office koji se koristi na ovom računalu
+
+### <a name="officelicensinginclientpinredemptioncallpinredemptionapi"></a>Office.Licensing.InClientPinRedemption.CallPinRedemptionAPI
+
+Ta telemetrija prati rezultate otkupnog poziva servisa PIN sustava Office.
+
+Prikupljaju se sljedeća polja:
+
+- **ClientTransactionId**- jedinstveni identifikator za poziv servisa.
+
+- **ErrorCategory** – svaka vrsta pogreške može se nalaziti u više općenitim kategorijama, npr. "Retryable".
+
+- **ErrorType**- razlog neuspjeha, kao što je "AlreadyRedeemedByOther”.
+
+- **InAFOFlow**- Booleova oznaka koja upućuje na to da je u tijeku AFO iskupljenje.
+
+- **StatusCode** - rezultat servisnog poziva od jedne riječi, poput „Created“.
+
+- **StatusMessage** – pojedinosti o kodu statusa, kao što je "Uspješno dodijeljeno".
+
+- **UsingNulApi**- Booleova vrijednost koja upućuje na to da li koristimo novi stog licenci za licenciranje.
 
 ### <a name="officelicensinginrfm"></a>Office.Licensing.InRFM 
 
@@ -2915,6 +3020,26 @@ Ako zbog nekog razloga ne možemo aktivirati korisnika i moramo mu prikazati dij
 
 Događaj ne prikuplja nijedno polje.
 
+### <a name="officelicensingoobetrybuychoice"></a>Office.Licensing.OOBE.TryBuyChoice
+
+Korisnici sa unaprijed instaliranim sustavom Office na novim strojevima koji nemaju pravo na sustav Office prikazani su u dijaloškom okviru pomoću kojeg mogu isprobati, kupiti ili unijeti ključ proizvoda da bi se licencirali. Tim se događajem bilježi akcija korisnika u dijaloškom okviru. Taj se događaj koristi da bi se pratila korisnička akcija poduzeta u dijaloškom okviru koji se prikazuje korisnicima koji nemaju pravo na sustav Office u kojem je Office unaprijed instaliran na računalu i pomaže pri određivanju je li korisnik licenciran ili nelicenciran po dizajnu.
+
+Prikupljaju se sljedeća polja:
+
+- **Buy** – govori je li korisnik kliknuo na gumb Buy ili nije
+
+- **ForceAutoActivate** – kaže bi li se trebala pokrenuti aktivacija u aplikaciji ili ne
+
+- **GoBackToSignIn** - kaže je li se korisnik htio ponovno prijaviti (možda s drugim računom)
+
+- **IsPin** – upućuje na to je li korisnik unio PIN
+
+- **ProductKey** - govori je li korisnik pokušao unijeti ključ proizvoda
+
+- **Try** – govori je li korisnik kliknuo na gumb Try ili nije
+
+- **UserDismissed** – to upućuje na to je li korisnik odbacio dijaloški okvir, a time i način rada u načinu mirovanja ili načinu smanjene funkcionalnosti jer nije odabrao kupovinu sustava Office niti probnu verziju
+
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
 Imamo eksperiment u kojem se korisniku nudi mogućnost da isproba i postavi automatsko plaćanje sustava Office izravno iz aplikacije, a da ni u jednom trenutku ne mora izaći iz aplikacije. Ovo prijavljuje uspjeh ili pogrešku tog eksperimenta te eventualnu šifru pogreške. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
@@ -2957,6 +3082,149 @@ Prikupljaju se sljedeća polja:
 
   - **UninstallProduct** – označava hoće li se stari proizvod deinstalirati prilikom pretvorbe
 
+### <a name="officelicensingtelemetryflowolsresults"></a>Office.Licensing.TelemetryFlow.OLSResults
+
+Kada korisnik nema licencirani program, obavit ćemo nekoliko poziva servisa da bismo korisnika doveli u licencirano stanje i aktivirali proizvod sustava Office.  Taj se događaj aktivira na poziv servisa za licenciranje sustava Office da bismo provjerili ima li korisnik pravo na njih.  Taj će se događaj koristiti za praćenje zdravlja licence korisnika nakon pozivanja servisa za licenciranje sustava Office i zdravlja klijenta sustava Office nakon pokušaja aktivacije sustava Office.
+
+Prikupljaju se sljedeća polja:
+
+- **EntitlementPickerShown**- upućuje na to je li korisnik imao više prava, te je li korisnik morao ručno odabrati da bi se licencirao
+
+- **GetAuthResult** – navodi različita stanja u kojima klijent može biti ako ima prazan ključ proizvoda iz servisa za licenciranje sustava Office ili ako ima pravo na neki drugi proizvod, a Office mora biti pretvoren u novi proizvod
+
+- **GetEntitlementsCount** – Broj prava koja korisnik ima
+
+- **GetEntitlementsSucceeded** – upućuje na to je li poziv API-ja za licenciranje sustava Office za dohvaćanje prava korisnika uspio ili nije
+
+- **GetKeySucceeded** – upućuje na to je li poziv API-ja za licenciranje sustava Office za dohvaćanje ključa uspio ili nije
+
+- **GetNextUserLicenseResult** – kaže može li moderni stog za licenciranje funkcionirati i je li korisnik dobio licencu ili nije
+
+- **InstallKeyResult** – objašnjava različite razloge zašto je korisnik možda u lošem stanju, primjerice da aktivacija nije uspjela ili nije uspjelo instaliranje ključa
+
+- **NotInitializedBeforeWhileAdding** – to je samo informativno i govori da je događaj dodan u mapu telemetrijskog upravitelja bez eksplicitnog registriranja za nju.
+
+- **NotInitializedBeforeWhileSending** – to je samo informativno i govori da se događaj pokušao dodati u mapu telemetrijskog upravitelja bez eksplicitnog registriranja unaprijed za nju
+
+- **SentOnDestruction** – to je samo informativno i govori da je događaj dodan u mapu telemetrijskog upravitelja bez eksplicitnog slanja
+
+- **Tag** – koristi se za određivanje mjesta u kodu s kojeg je poslan događaj
+
+- **VerifyEntitlementsResult** – navodi različita stanja u kojima bi korisnik mogao biti nakon provjere prava dohvaćenih iz servisa za licenciranje sustava Office
+
+### <a name="officelicensingtelemetryflowsearchforbindingresult"></a>Office.Licensing.TelemetryFlow.SearchForBindingResult
+
+OEM-ovi prodaju strojeve koji isporučuju sa sustavom Office (jednogodišnja ili neprekidna pretplata).  Ti se proizvodi sustava Office plaćaju kada kupac kupi uređaj. Strojevi koje se podešava pomoću određenog regkey-a (OOBEMode: OBIS) možda imaju povezane obveze sustava Office.  Prilikom dizanja sustava Office na takvim strojevima obavljamo servisne provjere da bismo saznali je li pronađena obveza sustava Office koja odgovara stroju.
+
+Ta telemetrijska aktivnost prati točke uspjeha i neuspjeha u traženju povezivanja da bismo mogli osigurati da ih strojevi koji imaju obveze mogu uspješno dohvatiti i da su naši servisi zdravi.  Ta aktivnost ne prati strojeve bez obveza koji nisu povezani s njima kada provjerimo naše servise.
+
+Prikupljaju se sljedeća polja:
+
+- **GenuineTicketFailure** - govori HRESULT neuspjeha kad pokušavamo dobiti originalnu Windows karticu/ključ proizvoda (WPK).
+
+- **PinValidationFailure** – govori zašto proces provjere valjanosti PIN-a nije uspio. Moguće pogreške:
+    - GeoBlocked
+    - InvalidFormat
+    - InvalidPin
+    - InvalidState
+    - InvalidVersion
+    - Nepoznato
+    - Iskorišteno
+
+- **PinValidationResult** – govori nam rezultat provjere valjanosti PIN-a kojeg nismo uspjeli provaliti.
+
+- **Pkpn** - pkpn raspon kojem PIN pripada.
+
+- **Success** - ukazuje na to da smo uspješno dohvatili valjanu Office obvezu (PIN) za stroj.
+
+- **Tag** – govori nam da smo prestali tražiti obveze. Moguće oznake:
+  - 0x03113809  Nema Interneta/usluge greška prilikom provjere valjanosti PIN-a
+   - 0x0311380a Neuspjela provjera valjanosti PIN-a, poslano s poljem PinValidationFailure
+  - 0x0310410f  Uspjeh, poslano s poljem Uspjeh
+  - 0x0311380d  Greške koje je moguće ponovno pokrenuti (problemi s Internetom, nepoznate greške)
+  - 0x0311380e  Greške koje nije moguće ponovno pokrenuti (istekla obvezujuća ponuda)
+  - 0x0311380f  Ostale greške (licenciranje nije moguće)
+  - 0x03104111  Nije uspjelo provaljivanje PIN-a za Office, poslano s poljem PinValidationResult
+
+- **WpkBindingFailure** – upućuje nas na kôd pogreške prilikom dobivanja PIN-a za Office vezanog uz WPK za računalo.
+
+### <a name="officelicensingtelemetryflowshowafodialogs"></a>Office.Licensing.TelemetryFlow.ShowAFODialogs
+
+Nakon uspješnog dobivanja valjanog PIN-a za Office vezanog uz uređaj koji je unaprijed u paketu sa sustavom Office, korisniku smo prikazali dijaloški okvir za prijavu ili okvir otkupa.  Kada se PIN otkupi, prikazat će se dijaloški okvir EULA.  U sklopu naše modernizacijske značajke AFO osvježili smo dva dijaloška okvira da bismo prenijeli dodatne informacije o proizvodu sustava Office koji se isporučuje uz uređaj.  Ta telemetrija prati smanjuje li naša značajka uspješno korisnikovo trenje u otkupljenju proizvoda praćenjem tokova i izlaznih točaka procesa otkupa (za što je dijaloški okvir odbijen).
+
+Prikupljaju se sljedeća polja:
+
+- **ActionCreateAccount**- korisnik je odabrao da stvori račun.
+
+- **ActionSignIn**- korisnik je odabrao prijavu.
+
+- **DialogRedemption**-prikazuje dijaloški okvir za AFO otkup.
+
+- **DialogSignIn**- prikazuje dijaloški okvir za prijavu u AFO.
+
+- **OExDetails** – pojedinosti pogreške koju ćemo vratiti kada je odbijen dijaloški okvir za prijavu identiteta.
+
+- **OExType** – vrsta pogreške koju ćemo vratiti kada je odbijen dijaloški okvir za prijavu identiteta.
+
+- **Tag** – govori nam u kojem trenutku korisnik izlazi iz procesa AFO otkupa. Moguće oznake:
+    - 0x0311380b    Korisnik je odbacio dijaloški okvir za prijavu iz dijaloškog okvira za otkup
+    - 0x0311380c  Nije uspjelo automatsko učitavanje prijave za prijavu identiteta korisnika iz dijaloškog okvira za otkup
+    - 0x03113810 Nije uspjelo učitavanje demografskih informacija o računu (pozivni broj za državu, jezične, valutne i i marketinških preferencije, te probna ponuda)
+    - 0x03113805    Korisnik je odbacio dijaloški okvir za prijavu identiteta iz dijaloškog okvira za prijavu
+    - 0x03113806    Nije uspjelo automatsko učitavanje prijave identiteta korisnika iz dijaloškog okvira za prijavu
+    - 0x03113807 Nije uspjelo automatsko učitavanje identiteta
+    - 0x03113811 Korisnik je završio dijaloški okvir za prijavu/otkup
+    - 0x03113812 Korisnik je završio dijaloški okvir Prihvati EULA
+    - 0x03113808 Korisnik je prihvatio EULA
+
+- **UseInAppRedemption** nam govori držimo li korisnike u aplikaciji za otkup ili ih šaljemo na web da bi iskoristili svoj dohvaćeni PIN (unaprijed popunjeni).
+
+- **UseModernAFO** – nam govori koristimo li novo ili staro iskustvo za AFO.
+
+### <a name="officelicensingtelemetryflowshowtrybuydialogforoobe"></a>Office.Licensing.TelemetryFlow.ShowTryBuyDialogForOOBE
+
+Kada novi aparati imaju unaprijed instaliranu verziju sustava Office, a korisnik nema pravo, prikazat će se dijaloški okvir koji korisniku omogućuje da proba, kupi ili unese ključ proizvoda kako bi se licencirao i taj događaj prati je li prikazan dijaloški okvir. Taj će vam događaj pomoći da saznate je li korisniku prikazao dijaloški okvir za isprobavanje, kupnju ili unos ključa za proizvoda, a time ćete nam pomoći da utvrdimo je li korisnik imao mogućnost kupnje licenciranog sustava.
+
+Prikupljaju se sljedeća polja: 
+
+- **ActiveView** – govori ID dijaloškog okvira koji se prikazuje korisniku
+
+- **CurrentOOBEMode**- govori koji je način rada za pred-instaliranje (način rada OOBE, npr. AFO, OEM itd.)
+
+- **NotInitializedBeforeWhileAdding** – to je samo informativno i govori da je događaj dodan u mapu telemetrijskog upravitelja bez eksplicitnog registriranja za nju.
+
+- **SentOnDestruction** – to je samo informativno i govori da je događaj dodan u mapu telemetrijskog upravitelja bez eksplicitnog slanja
+
+- **ShowTryButton** – govori je li gumb Try prikazan korisniku u dijaloškom okviru ili nije
+
+- **Tag** – koristi se za određivanje mjesta u kodu s kojeg je poslan događaj
+
+### <a name="officelicensingtelemetryflowtrialflow"></a>Office.Licensing.TelemetryFlow.TrialFlow
+
+Kada nelicencirani korisnik sustava Office koji je unaprijed instaliran na stroju proba doći do probne verzije, taj će se događaj aktivirati.  Koristi se da bi se prikazala putanja koju korisnik slijediti da bi dobio probnu verziju i ako je došlo do grešaka prilikom dobivanja probne verzije putem kupnje u aplikaciji.  Ovisno o korisnikovoj akciji i rezultatu kupnje u aplikaciji, korisnik može završiti kao da nije licenciran.
+
+Prikupljaju se sljedeća polja:
+
+- **HasConnectivity** – govori ima li korisnik internetsku vezu, a u slučaju da ona ne postoji, korisnik možda koristi licencu za poček za pet dana ili je možda u načinu rada s smanjenom funkcionalnošću
+
+- **InAppTrialPurchase** – upućuje na to je li za pokretanje SDK za kupnju u trgovini omogućeno snimanje PI-a i kupnja iz probne aplikacije
+
+- **IsRS1OrGreater** – upućuje na to je li verzija sustava veća od RS1 ili ne, jer se SDK za kupnju u trgovini može koristiti samo ako je verzija OS-a veća od RS1
+
+- **NotInitializedBeforeWhileAdding** – to je samo informativno i govori da je događaj dodan u mapu telemetrijskog upravitelja bez eksplicitnog registriranja za nju
+
+- **OEMSendToWebForTrial** – upućuje na to je li omogućen let za slanje korisnika na web radi iskorištavanja probne verzije
+
+- **StoreErrorConditions** – upućuje na različite uvjete u kojima je SDK za kupnju u trgovini možda neuspio
+
+- **StoreErrorHResult**- upućuje na kôd pogreške vraćen iz SDK za kupnju u trgovini
+
+- **StorePurchaseStatusResult** – daje rezultat poziva SDK za kupnju u trgovini i je li korisnik obavio kupnju ili nije, što će pomoći odrediti hoće li korisnik imati licencu za korištenje sustava Office
+
+- **Tag** – koristi se za određivanje mjesta u kodu s kojeg je poslan događaj
+
+- **UserSignedInExplicitly** – govori je li se korisnik potpisao eksplicitno, jer ćemo u tom slučaj, ponovno usmjeriti korisnike na web za probnu verziju
+
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
 Ako zbog nekog razloga ne možemo licencirati korisnika, instaliramo privremeni ključ i šaljemo signal koji to označava. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
@@ -2966,6 +3234,14 @@ Prikupljaju se sljedeća polja:
   - **OpportunisticTokenRenewalAttempted** – označava jesmo li pokušali oportunistički obnoviti korisnika u načinu rada za licenciranje zajedničkog računala
 
   - **ReArmResult** – označava rezultat ponovne aktivacije instalacijskog ključa koji može produljiti vrijeme do isteka trenutne licence
+
+### <a name="onenoteenrollmentresult"></a>OneNote.EnrollmentResult
+ 
+Tim se događajem zapisuje status prilikom uključivanja u Intune.  Taj je scenarij specifičan za korištenje računa omogućenih za Intune.
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **EnrollmentResult**- rezultat upisa u Intune
 
 ## <a name="microsoft-autoupdate-mau-events"></a>Događaji Microsoftova automatskog ažuriranja (MAU)
 
@@ -10053,6 +10329,33 @@ Prikupljaju se sljedeća polja
 
 - **Source** – identifikator označava koji je događaj pokrenuo korisničko sučelje, tj. stvorio novu Redx sliku, pogrešku sinkronizacije u sučelju za sinkronizaciju, prikazan dijalog pogreške itd.
 
+### <a name="onenoteappprovisioningmovelocalnotebooktoonlinenotebookfailed"></a>OneNote.App.Provisioning.MoveLocalNotebookToOnlineNotebookFailed
+ 
+Taj se događaj bilježi kada premještanje lokalne bilježnice na pogon ne uspijeva.  Taj je scenarij specifičan za korisnika s odgođenom prijavom. Kada se korisnik prijavi, lokalna bilježnica će se prenijeti na spremište servisa OneDrive. 
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **ErrorMsg** – poruka o pogrešci koja odgovara kvaru.
+
+### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
+ 
+Taj se događaj bilježi kad stvaranje bilježnice ne uspije.  
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **NetworkConnection**- Zapisuje vrstu veze na kojoj se uređaj trenutno nalazi, npr. Wi-Fi, izvanmrežni rad, 3G 
+
+- **ServerType**- Zapisuje vrstu poslužitelja gdje će se stvoriti bilježnica.
+
+### <a name="onenotesyncfirstrunerror"></a>OneNote.Sync.FirstRunError
+ 
+Taj se događaj bilježi kada sinkronizacija za Brze napomene ne uspije za korisnika tijekom prvog pokretanja sustava na uređaju.  To je specifično za scenarij prvog izvođenja.
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **NetworkConnection**- Zapisuje vrstu veze na kojoj se uređaj trenutno nalazi, npr. Wi-Fi, izvanmrežni rad, 3G
+
+- **ServerType**- Zapisuje vrstu poslužitelja gdje će se stvoriti bilježnica za brze bilješke.
 
 ## <a name="services-configuration-events"></a>Događaji konfiguracije servisa
 
