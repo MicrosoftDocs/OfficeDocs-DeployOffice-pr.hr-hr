@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 5bf39e1fbe7e56b77496cfc0756484a9a1c051a0
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: a2f2a951db371336be1b425b0db45e5e72ea9d75
+ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067508"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "41024323"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -29,6 +29,8 @@ ms.locfileid: "38067508"
 > - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
+>
+> Informacije se odnose na verziju programa Outlook za iOS i Android čiji se izlazak očekuje krajem siječnja 2020.
 
 Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
@@ -49,13 +51,16 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | Pretvorba rukopisa u tekst, oblik ili matematički izraz | [Promjena rukom pisanog teksta u oblike, tekst ili matematički izraz u programu PowerPoint za Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Opisi i titlovi uživo |  [Izlaganje s automatskim opisima ili titlovima u stvarnom vremenu u programu PowerPoint](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
+| Prijedlozi za mjesto | Kada dodate javni prostor sa adresom ulice u stavku kalendara, Outlook za iOS i Android će uključiti i punu adresu u polje Mjesto. |
 | Karte u programu Power View   | [Karte u programu Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Servis za prezentacije sustava Office  | [Emitiranje prezentacije programa PowerPoint udaljenoj publici putem interneta](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
 | PowerPoint Designer   | [Stvaranje profesionalnih izgleda slajdova pomoću alata PowerPoint Designer](https://support.office.com/article/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 | Objavljivanje na servisu Power BI   | [Objavljivanje na servisu Power BI iz programa Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Objavljivanje na servisu Microsoft Stream    | [Pretvaranje prezentacije u videozapis](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | Istraživanje   | [Dodavanje ili promjena servisa za istraživanje](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
+| Skeniranje posjetnice|  [Skeniranje ili dodirnite za dodavanje kontakata u programu Outlook za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
 | Pametno traženje   | [Uvidi u ono na čemu radite pomoću pametnog traženja](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
+| Predloženi odgovori | [Što su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Dodirivanje za Word (dodavanje iz datoteka)   | [Traženje i korištenje sadržaja koji trebate upravo onda kada ga trebate i bez napuštanja programa Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Pretvaranje u web-stranicu   | [Pretvaranje dokumenta programa Word u web-stranicu programa Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevoditelj   | [Prevođenje teksta na drugi jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
@@ -68,14 +73,19 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 
 | **Naziv**      | **Dodatne informacije**  |
 | ------------- | ------------- |
+| Aplikacije kalendara| [Što su aplikacije kalendara?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Fontovi u oblaku                 | [Fontovi u oblaku u sustavu Office](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
 | Vrste podataka                  | [Vrste podataka u programu Excel: dionice i zemljopis](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
+| Najčešća pitanja |Kad odaberete **Postavke** > **Pomoć i povratne informacije** > **Najčešća pitanja** u programu Outlook za iOS i Android, bit ćete preusmjereni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Rukopisni efekti                 | [Crtanje i pisanje pomoću značajke rukopisa u sustavu Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Umetanje ikona                | [Umetanje ikona u sustavu Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Umetanje Microsoftovih obrazaca      | [Umetanje obrasca ili testa u PowerPoint](https://support.office.com/article/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
 | Umetanje internetskih 3D modela     | [Budite kreativni uz 3D modele](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
 | Umetanje internetskih slika      | [Umetanje slika](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
 | Umetanje internetskog videozapisa     | [Umetanje videozapisa sa servisa YouTube ili drugog web-mjesta](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
+| Zanimljivi kalendari| [Pretplatite se na kalendar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) o omiljenim sportskim timovima ili TV serijama u programu Outlook za iOS i Android. |
+| Prijedlozi za mjesto | Kada dodate javni prostor sa adresom ulice u stavku kalendara, Outlook za iOS i Android će uključiti i punu adresu u polje Mjesto. |
+| Karte u detaljima o događaju | Znaj gdje trebaš ići s [kartama](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) u detaljima o događaju u programu Outlook za iOS i Android. |
 | Pomoć za Office                 | Kada u aplikaciji sustava Office odaberete **Pomoć** > **Pomoć** na vrpci ili pritisnete F1   |
 | Internetsko pretraživanje oblika (Visio) | [Traženje dodatnih oblika i šablona](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | Alat za brz početak rada s programom PowerPoint     | [Istraživanje teme pomoću alata za brz početak rada s programom PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
