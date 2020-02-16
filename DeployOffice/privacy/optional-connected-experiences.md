@@ -31,7 +31,7 @@ Ako imate račun tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki il
 > - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 > - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
 >
-> Većinom se neobaveznih povezanih iskustava može upravljati kontrolama za zaštitu privatnosti. Na primjer, opcijom Umetanje internetskih slika može se upravljati i postavkom pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office*.
+> Većinom se neobaveznih povezanih iskustava može upravljati i kontrolama za zaštitu privatnosti za povezana iskustva. Na primjer, opcijom Umetanje internetskih slika može se upravljati i postavkom pravilnika *Dopusti upotrebu povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office*.
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te servise, na koje uvjete korištenja morate pristati?
 
