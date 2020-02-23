@@ -65,7 +65,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | Prevoditelj   | [Prevođenje teksta na drugi jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 
 > [!NOTE]
-> \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, to je povezano iskustvo neobavezno i omogućeno je prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovo se povezano iskustvo može upravljati kontrolama za zaštitu privatnosti za povezana iskustva ili postavkom pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
+> \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, to je povezano iskustvo neobavezno i omogućeno je prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvom može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezana iskustva koja preuzimaju internetski sadržaj
 
@@ -90,14 +90,14 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 | Karte u detaljima o događaju | Znaj gdje trebaš ići s [kartama](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) u detaljima o događaju u programu Outlook za iOS i Android. |
 | Pomoć za Office                 | Kada u aplikaciji sustava Office odaberete **Pomoć** > **Pomoć** na vrpci ili pritisnete F1   |
 | Internetsko pretraživanje oblika (Visio) | [Traženje dodatnih oblika i šablona](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
-| Alat za brz početak rada s programom PowerPoint\*     | [Istraživanje teme pomoću alata za brz početak rada s programom PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
+| Alat za brz početak rada s programom PowerPoint\*     | [Istraživanje teme s pomoću alata za brz početak rada s programom PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
 | Istraživač\*    | [Jednostavno istraživanje za seminarske radove u programu Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f). |
 | Reci mi    | [Brzo obavljanje zadataka pomoću značajke Reci mi](https://support.office.com/article/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predlošci  | [Preuzimanje besplatnih gotovih predložaka](https://support.office.com/article/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
 | Traka vremenske prognoze\* (Outlook)| [Promjena grada za traku vremenske prognoze u kalendaru](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, to je povezano iskustvo neobavezno i omogućeno je prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovo se povezano iskustvo može upravljati kontrolama za zaštitu privatnosti za povezana iskustva ili postavkom pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
+>\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, to je povezano iskustvo neobavezno i omogućeno je prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvom može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
 
 ## <a name="other-connected-experiences"></a>Ostala povezana iskustva
 
@@ -139,7 +139,7 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | Dok vas nije bilo |[Primanje obavijesti kada članovi vašeg tima ažuriraju vašu zajednički korištenu datoteku](https://support.office.com/article/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, to je povezano iskustvo neobavezno i omogućeno je prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovo se povezano iskustvo može upravljati kontrolama za zaštitu privatnosti za povezana iskustva ili postavkom pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
+>\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, to je povezano iskustvo neobavezno i omogućeno je prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvom može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Odabir dostupnosti povezanih iskustava za korištenje
 

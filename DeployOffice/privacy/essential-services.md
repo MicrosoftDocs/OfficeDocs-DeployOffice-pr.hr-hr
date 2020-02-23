@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 4410d94ea0179200fce0cd4dd16aebd62a21a2f6
-ms.sourcegitcommit: 4ec332a6f7457f08aa17fdbb7ee7f308a449887f
+ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
+ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39962837"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42224984"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -56,7 +56,7 @@ U tablici u nastavku naveden je popis ključnih servisa za Office i opis svakog 
 | [Klikom do cilja](#click-to-run-events) | "Klikom do cilja" tehnologija je za instalaciju koja se koristi za instaliranje i ažuriranje sustava Office u sustavu Windows. Tehnologija provjerava postoji li nova verzija sustava Office i kad postoji, preuzima je i instalira. Tehnologija "klikom do cilja" otkrit će jesu li vam potrebna ažuriranja sustava Office, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.     |
 | [Servis za poboljšanu konfiguraciju (eng. Enhanced Configuration Service, ECS)](#enhanced-configuration-service-ecs-events) | ECS Microsoftu omogućuje da iznova konfigurira instalacije sustava Office bez potrebe za ponovnom implementacijom sustava. Služi za kontroliranje postupnog objavljivanja značajki ili ažuriranja, a učinak objavljivanja prati se na temelju prikupljenih dijagnostičkih podataka. Koristi se i za ublažavanje sigurnosnih problema i problema s performansama neke značajke ili ažuriranja. ECS podržava i promjene konfiguracije povezane s dijagnostičkim podacima da bi se prikupljali odgovarajući događaji. |
 | [Licenciranje](#licensing-events)     | Licenciranje je servis u oblaku koji podržava aktivaciju novih instalacija sustava Office te održava licencu na uređajima nakon aktivacije sustava. Servis registrira svaki uređaj i aktivira Office, provjerava status pretplate na Office te upravlja ključevima proizvoda.    |
-|[Microsoftovo automatsko ažuriranje (MAU)](#microsoft-autoupdate-mau-events)|Microsoftovo automatsko ažuriranje (MAU) je tehnologija koja se koristi za ažuriranje Microsoftovih aplikacija proizvedenih za MacOS, kao što je Office. MAU će otkriti jesu li vam potrebna ažuriranja aplikacije, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.|
+|[Microsoftovo automatsko ažuriranje (MAU)](#microsoft-autoupdate-mau-events)|Microsoftovo automatsko ažuriranje (MAU) je tehnologija koja se koristi za ažuriranje Microsoftovih aplikacija proizvedenih za macOS, kao što je Office. MAU će otkriti jesu li vam potrebna ažuriranja aplikacije, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.|
 |[Sinkronizacija programa OneNote](#onenote-sync-events)|OneNote za Mac podržava samo bilježnice pohranjene na internetu na servisu OneDrive ili u sustavu SharePoint Online. OneNote za Mac kontinuirano sinkronizira sve bilješke korisnika sa servisom OneDrive ili sustavom SharePoint Online. To korisnicima omogućuje otvaranje, pregled i uređivanje bilježnica na svim svojim uređajima tako da su njihove bilježnice uvijek ažurne.
  [Konfiguracija servisa](#services-configuration-events)  | Konfiguracija servisa omogućuje ažuriranje postavki konfiguracije sustava Office radi omogućivanja odnosno onemogućivanja značajki klijenata. Aktivira se svaki put kad se pokrene neka aplikacija sustava Office te sadrži pojedinosti o drugim konfiguracijama i servisima sustava Office. Konfiguracija servisa ujedno kontrolira koji su servisi određeni kao ključni.  |
 | [Telemetrija](#telemetry-events)  | Servis za telemetriju služi za prikupljanje dijagnostičkih podataka iz aplikacija sustava Office. Omogućuje prikupljanje obaveznih i neobaveznih dijagnostičkih podataka koje je generirao Office. Odgovoran je i za prikupljanje onog dijela obaveznih servisnih podataka za Office koji obuhvaća servisne dijagnostičke podatke.  |
@@ -78,6 +78,17 @@ Događaje možete pogledati pomoću preglednika dijagnostičkih podataka.
 
 Ti se događaji dijagnostičkih podataka prikupljaju kada Office pokuša dohvatiti token za provjeru autentičnosti, bilo u pozadini ili putem upita korisniku.
 
+### <a name="officeandroidmsaguesttoaad"></a>Office.Android.MSAGuestToAAD
+
+Ovaj događaj pomaže razumjeti od koliko je korisnika zatraženo davanje lozinke za osobni račun tijekom pristupanja poslovnim resursima, jer bi njihov osobni račun mogao biti valjan gost klijentu poslovnog računa.
+
+Ovi podaci nam pomažu razumjeti koliko korisnika prolazi kroz muke prijave u ponovnim upitima radi davanja prioriteta tihom pribavljanju AAD tokena na temelju SAML (Jezik za označavanje sigurnosnih izraza) izraza Microsoftovog računa.
+
+Prikupljaju se sljedeća polja:
+
+- **Tag** - Označava da je korisnik dobio upit za prijavu za osobni račun tijekom pristupanja resursima poslovnog računa.
+
+
 ### <a name="officeidentityfbapromptwin32"></a>Office.Identity.FbaPromptWin32
 
 Prikuplja se kada Office korisniku prikaže upit za prijavu pomoću provjere autentičnosti na temelju obrazaca.
@@ -86,7 +97,7 @@ Upiti za provjeru autentičnosti zajedno s pozadinskim pribavljanjem tokena kori
 
 Upiti za prijavu pomoću provjere autentičnosti na temelju obrazaca (FBA) koriste se u nekim scenarijima lokalne provjere autentičnosti i najčešće ne želimo da se to događa jer bi svi trebali koristiti modernu provjeru autentičnosti zbog sigurnosnih slabih točaka povezanih s provjerom autentičnosti na temelju obrazaca.
 
-**Prikupljaju se sljedeća polja:**
+Prikupljaju se sljedeća polja:
 
   - **AuthScheme** – korištena shema provjere autentičnosti
 
@@ -477,7 +488,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Platform** – 64-bitna ili 32-bitna instalacija
 
-  - **Data\_PrereqFailure\_Type** – neispunjeni preduvjet, npr. operacijski sustav nije podržan
+  - **Data\_PrereqFailure\_Type** – neispunjeni preduvjet, tj. operacijski sustav nije podržan
 
   - **Data\_ProductReleaseId** – proizvod koji instaliramo, npr. Office 365 ProPlus
 
@@ -706,7 +717,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -782,7 +793,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -858,7 +869,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -934,7 +945,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1010,7 +1021,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1086,7 +1097,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1162,7 +1173,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1238,7 +1249,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1314,7 +1325,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1390,7 +1401,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1466,7 +1477,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1542,7 +1553,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1618,7 +1629,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1694,7 +1705,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1770,7 +1781,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1846,7 +1857,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1922,7 +1933,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -1998,7 +2009,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -2084,7 +2095,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -2162,7 +2173,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -2246,7 +2257,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -2334,7 +2345,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -2410,7 +2421,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, npr. pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
 
   - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
@@ -2693,6 +2704,11 @@ Izvješćuje o poduzetim radnjama koje su utjecale na stroj, što je utvrđeno o
 
 - **VersionToInstall –**   Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
 
+### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
+
+Taj se događaj koristi za pribavljanje standardnih meta-podataka pri svakom pokretanju dodatka Inventar, koji je dio Upravitelja za Office servisiranje i koristi se za informacije o Office inventaru na onim strojevima koje je IT administrator uključio. Meta-podatak od posebnog zanimanja u ovom slučaju je ID sesije, a koristi se za povezivanje s drugim podacima pohranjenima unutar usluge na oblaku po klijentu.
+
+Ovaj događaj nema dodatnih polja jer su relevantni samo meta-podaci.
 
 ### <a name="officeserviceabilitymanagerinventoryaddonresults"></a>Office.ServiceabilityManager.InventoryAddon.Results
 
@@ -3042,7 +3058,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
-Imamo eksperiment u kojem se korisniku nudi mogućnost da isproba i postavi automatsko plaćanje sustava Office izravno iz aplikacije, a da ni u jednom trenutku ne mora izaći iz aplikacije. Ovo prijavljuje uspjeh ili pogrešku tog eksperimenta te eventualnu šifru pogreške. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+Imamo eksperiment u kojem se korisniku nudi mogućnost da isproba i postavi automatsko plaćanje sustava Office izravno iz aplikacije, a da ni u jednom trenutku ne mora izaći iz aplikacije. Ovo prijavljuje uspjeh ili pogrešku tog eksperimenta, te šifru pogreške. Ključno je u otkrivanju je li korisnik u dobrom stanju, te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom.
 
 Prikupljaju se sljedeća polja:
 
@@ -3050,7 +3066,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingsearchforsessiontoken"></a>Office.Licensing.SearchForSessionToken
 
-Ako je korisnik u načinu rada za aktivaciju na zajedničkom računalu, pokušavamo potražiti token sesije na računalu koji korisniku omogućuje upotrebu aplikacije. Ovaj događaj prijavljuje uspjeh ili pogrešku tog scenarija te eventualnu šifru pogreške. Ključan je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+Ako je korisnik u načinu rada za aktivaciju na zajedničkom računalu, pokušavamo potražiti token sesije na računalu koji korisniku omogućuje upotrebu aplikacije. Ovaj događaj prijavljuje uspjeh ili pogrešku tog scenarija, te šifru pogreške. Ključan je za otkrivanje je li korisnik u dobrom stanju, te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom.
 
 Prikupljaju se sljedeća polja:
 
@@ -3076,7 +3092,7 @@ Prikupljaju se sljedeća polja:
 
   - **DestinationSku** – naziv SKU-a u koji je potrebno pretvoriti trenutno instaliran proizvod
 
-  - **PendingAcid** – ID proizvoda za koji je na čekanju pretvorba SKU-a
+  - **PendingAcid** – ID proizvoda za koji je na čekanju pretvorbe SKU-a
 
   - **SourceSku** – naziv izvornog SKU-a instaliranog na računalu
 
@@ -3187,7 +3203,7 @@ Kada novi aparati imaju unaprijed instaliranu verziju sustava Office, a korisnik
 
 Prikupljaju se sljedeća polja: 
 
-- **ActiveView** – govori ID dijaloškog okvira koji se prikazuje korisniku
+- **ActiveView** – daje ID dijaloškog okvira koji se prikazuje korisniku
 
 - **CurrentOOBEMode**- govori koji je način rada za pred-instaliranje (način rada OOBE, npr. AFO, OEM itd.)
 
@@ -3863,7 +3879,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
 
-Ovaj događaj znači da je postupak provjere ažuriranja otkazan (ili od korisnika ili od sustava). Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
+Ovaj događaj označava da je postupak provjere ažuriranja otkazan (ili od korisnika ili od sustava). Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
 
 Prikupljaju se sljedeća polja:
 
@@ -10122,7 +10138,7 @@ Prikupljaju se sljedeća polja
 
 - **IsCachedErrorSuppressed** – označava je li predmemorirana pogreška potisnuta ili nije
 
-- **IsCachedErrorUnexpected** – označava je li predmemoriana pogreška neočekivana ili nije
+- **IsCachedErrorUnexpected** – označava je li predmemorirana pogreška neočekivana ili nije
 
 - **IsNotebookErrorSuppressed** – označava je li pogreška sinkronizacije na razini bilježnice potisnuta ili nije
 
@@ -10323,7 +10339,7 @@ Prikupljaju se sljedeća polja
 
 - **NotebookId** – ID bilježnice
 
-- **PageSyncUIState** – niz statusa sinkronizacije stranice, npr. ažurna, sinkronizira se, spremljena izvan mreže, pogreška prilikom sinkronizacije itd. 
+- **PageSyncUIState** – niz statusa sinkronizacije stranice, npr. ažurna, sinkronizira se, spremanje izvan mreže, pogreška prilikom sinkronizacije itd. 
 
 - **ServerGosid** – ID resursa za novostvorenu stranicu sa sukobima
 
