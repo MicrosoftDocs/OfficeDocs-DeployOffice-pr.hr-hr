@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: 74f80a494eff6f82310a89cbcc52e10d0a324e15
-ms.sourcegitcommit: 752267dddf9c011bb91136f6223f641053450599
+ms.openlocfilehash: bd9a5754a8741ee3cc96bf843c59f8f509bc1738
+ms.sourcegitcommit: de34e0fff15c3bd099df452d8f4771398f9dfaf6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41109491"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "42265455"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -1305,6 +1305,321 @@ Ovo su podvrste podataka u toj kategoriji:
 
 Uspješno funkcioniranje aplikacije. Ograničeno na otvaranje i zatvaranje aplikacije i dokumenata, uređivanje datoteka i zajedničko korištenje dokumenata (suradnju).
 
+#### <a name="account_action"></a>account_action
+
+Potrebno za osiguranje da konfiguracija računa uspješno radi i koristi za nadzor stanja kreiranja računa, mogućnost dodavanja novih računa e-pošte i nadzor softverskog vraćanja izvornih postavki računa 
+
+Prikupljaju se sljedeća polja: 
+
+- **account_calendar_count** – broj kalendara koji račun ima
+ 
+- **action** – vrsta provedene radnje, npr. create_account, delete_account.
+ 
+- **duration_seconds** – trajanje radnje
+ 
+- **entry_point** – ulazna točka radnje, kako je korisnik pokrenuo radnju
+ 
+- **has_hx** – ima li uređaj račun koji koristi našu novu uslugu sinkronizacije e-pošte, ne nužno račun na kojem je radnja provedena
+ 
+- **is_hx** – koristi li račun našu novu uslugu sinkronizacije e-pošte
+ 
+- **is_shared_mailbox** – odnosi li se radnja na zajednički poštanski sandučić
+ 
+- **number_of_accounts** – ukupan broj računa na kojima se radnja provodi
+ 
+- **result** – rezultat radnje, npr. uspjeh, neuspjeh.
+   
+- **server_type** – vrsta poslužitelja za račun, slično kao account_type
+ 
+- **shared_type** – vrsta zajedničkog računa (ako se račun zajednički koristi)
+ 
+- **scope** – opseg radnje; za brisanje računa, this_device ili all_devices
+ 
+- **total_calendar_accounts** – broj računa za kalendar u aplikaciji u trenutku radnje
+ 
+- **total_email_accounts** – broj računa e-pošte u aplikaciji u trenutku radnje
+ 
+- **total_file_accounts** – broj računa datoteka u aplikaciji u trenutku radnje
+
+#### <a name="app_error"></a>app_error
+
+Prati kritične pogreške korištene aplikacije da bismo mogli spriječiti probleme koji mogu prouzročiti rušenje aplikacije ili vam onemogućiti čitanje e-pošte.
+
+Prikupljaju se sljedeća polja: 
+
+- **clientName** – naziv klijenta za datoteku u oblaku u kojoj je pogreška nastupila, ako je primjenjivo.
+
+- **cloudfile_error_type** – vrsta pogreške koja je nastupila za datoteku u oblaku, ako je primjenjivo.
+
+- **cloudfile_response_name** – naziv odgovora za pogrešku koja je nastupila za datoteku u oblaku, ako je primjenjivo.
+
+- **component_name** – naziv komponente aplikacije u kojoj je pogreška nastupila, primjerice pošta ili kalendar.
+
+- **debug_info** – informacije o pogrešci koja je nastupila za datoteku u oblaku kako bi se moglo utvrditi zašto je pogreška nastupila.
+
+- **error_origin_identifier** – porijeklo pogreške koja je nastupila na skici na kojoj je pogreška nastupila, ako je primjenjivo.
+
+- **error_type** – vrsta pogreške koja je nastupila. Neki primjeri obuhvaćaju spremanje skice, slanje skice i pogrešku datoteke u oblaku.
+
+- **exrule** – vrijednost proširenog pravila (odnosi se samo na pogreške ponavljanja obveze)
+
+- **exdate** – datum proširenog pravila (odnosi se samo na pogreške ponavljanja obveze)
+
+- **has_attachments** – označava ima li skica na kojoj je pogreška nastupila privitke, ako je primjenjivo.
+
+- **is_IRM_protected** – označava je li skica na kojoj je pogreška nastupila zaštićena upravljanjem pravima na informacije, ako je primjenjivo.
+
+- **is_legitimate** – označava potječe li pogreška iz pogreške u programiranju ili ne. Pogreške u programiranju ne smatraju se valjanima.
+
+- **is_local** – označava je li se skica na kojoj je pogreška nastupila sinkronizirala s poslužiteljem, ako je primjenjivo.
+
+- **is_recoverable** – označava je li kod pogreške riječ o pogrešci koja se može otkloniti ili o fatalnoj pogrešci.
+
+- **rdate** – datum pravila ponavljanja (odnosi se samo na pogreške ponavljanja obveze) 
+
+- **rrule** – samo pravilo ponavljanja (odnosi se samo na pogreške ponavljanja obveze) 
+
+- **rrule_error_message** – poruka o pogrešci s raščlanjivanjem pravila ponavljanja (odnosi se samo na pogreške ponavljanja obveze)
+
+- **rrule_error_type** – vrsta pogreške s raščlanjivanjem pravila ponavljanja (odnosi se samo na pogreške ponavljanja obveze)
+
+- **status_code** – kod stanja pogreške koja je nastupila. To nam pomaže razumjeti uzrok pogreške.
+
+Svi su znakovi također moguća svojstva. To nam pomaže razumjeti znakove u tijelu skice poruke kada je pogreška nastupila. Primjerice, „a”, „b”, „c” i „d” su moguća svojstva.
+
+#### <a name="app_launch_report"></a>app_launch_report
+
+Ovaj nam događaj omogućava prepoznavanje i popravljanje problema kada se Outlook pokreće sporo ili nepotpuno, zbog čega korisnici imaju probleme s korištenjem naše aplikacije. To uključuje informacije o konkretnim značajkama koje su bile omogućene i koliko su dugo dijelovi pokretanja trajali.
+
+Prikupljaju se sljedeća polja: 
+
+- **is_agenda_widget_active** – govori nam je li widget za dnevni red aktivan.
+
+- **is_alert_available** – govori nam je li aplikacija bila konfigurirana za dopuštanje upozorenja u obavijestima.
+
+- **is_background_refresh_available** – govori nam je li aplikacija bila konfigurirana za osvježavanje u pozadini.
+
+- **is_badge_available** – govori nam je li aplikacija bila konfigurirana za dopuštanje znački u obavijestima.
+
+- **is_intune_managed** – govori nam upravlja li Intune aplikacijom.
+
+- **is_registered_for_remote_notifications** – govori nam je li aplikacija bila registrirana za udaljene obavijesti.
+
+- **is_sound_available** – govori nam je li aplikacija bila konfigurirana za dopuštanje zvukova u obavijestima.
+
+- **is_watch_app_installed** – govori nam je li aplikacija sata za Outlook bila instalirana.
+
+- **is_watch_paired** – govori nam je li aplikacija sata za Outlook uparena s glavnom aplikacijom Outlook.
+
+- **launch_to_db_ready_ms** – govori nam o količini vremena koje je aplikaciji Outlook bilo potrebno od pokretanja do spremnosti baze podataka.
+
+- **num_calendar_accounts** – govori nam broj računa za kalendar u aplikaciji.
+
+- **num_cloud_file_accounts** – govori nam broj računa za pohranu u aplikaciji.
+
+- **num_hx_calendar_accounts** – govori nam broj računa za kalendar u aplikaciji koji se povezuju s našom novom uslugom sinkronizacije pošte.
+
+- **num_hx_mail_accounts** – govori nam broj računa pošte u aplikaciji koji se povezuju s našom novom uslugom sinkronizacije pošte.
+
+- **num_mail_accounts** – govori nam broj računa pošte u aplikaciji.
+
+#### <a name="calendar_action"></a>calendar_action
+
+Koristi se za nadzor svih mogućih negativnih utjecaja na vašu mogućnost provedbe osnovnih radnji kalendara kao što su kreiranje ili uređivanje događaja.  Događaj također može uključivati niz naziva svojstava te jesu li se ona promijenila ili nisu. Primjerice, „title_changed”, „online_meeting_changed” i „description_changed” nazivi su svojstava koja su uključena kako bi nam pomogla razumjeti postoje li problemi s uređivanjem određenih svojstava.
+
+Prikupljaju se sljedeća polja: 
+
+- **account_sfb_enabled** – pomaže nam osigurati da je Skype za tvrtke ispravno konfiguriran. 
+
+- **action** – vrsta radnje koja je provedena na kalendaru. Ovo uključuje stavke kao što su otvaranje, uređivanje, dodavanje prečaca, odgađanje itd. Pomaže nam osigurati da naš kalendar funkcionira u skladu s očekivanjima i da ne postoje oštećenja 
+
+- **action_result** – rezultat radnje provedene na komponentama kalendara. To može uključivati vrijednosti kao što su uspjeh, neuspjeh, nepoznato i vremensko ograničenje. Koristi se za praćenje stope uspješnosti radnji i utvrđivanje postoji li rasprostranjen problem s radnjama kalendara. 
+
+- **attendee_busy_status** – status slobodno/zauzeto sudionika s kojim je radnja povezana. Ova vrijednost može biti slobodno, zauzeto ili uvjetno. Pomaže nam razumjeti postoji li problem s radnjama povezanim s određenim statusom zauzetosti. 
+
+- **availability** – vrijednost dostupnosti ako se vrijednost slobodno/zauzeto promijenila tijekom sastanka. Pomaže nam razumjeti postoje li problemi s postavljanjem određene vrijednosti dostupnosti. 
+
+- **calendar_onlinemeeting_default_provider** – sadrži zadanog davatelja usluge za mrežni sastanak za upotrebu sa stvaranjem mrežnih sastanaka s podrškom poslužitelja. To uključuje vrste programa Skype, Skype za tvrtke, Hangout i Teams za tvrtke. Pomaže nam dijagnosticirati potencijalne probleme s kreiranjem mrežnih sastanaka na određenim davateljima usluga. 
+
+- **calendar_onlinemeeting_enabled** – vrijednost true ako kalendar podržava stvaranje mrežnih sastanaka s podrškom poslužitelja na temelju zadanog davatelja usluga mrežnih sastanaka. Pomaže nam razumjeti postoje li problemi s kalendarima s omogućenim mrežnim sastancima. 
+
+- **calendar_type** – vrsta kalendara na kojem se događaj nalazi nakon što je korisnik uredio sastanak. Moguće vrijednosti uključuju primarno, sekundarno, dijeljeno i grupno. Pomaže nam razumjeti postoje li problemi s određenom vrstom kalendara. 
+
+- **delete_action_origin** – porijeklo provedene radnje brisanja. Ovo uključuje vrijednosti kao što su alatna traka navigacijske trake i alatna traka kapsule.  Pomaže nam razumjeti postoje li problemi s brisanjem sastanka iz određene lokacije. 
+
+- **distribution_list_count** – broj sudionika koji se nalaze na popisima za raspodjelu. Pomaže nam pratiti postoje li problemi sa sudionicima koji se nalaze na popisima za raspodjelu. 
+
+- **guest_count** – broj gostiju u sastanku.  Pomaže nam osigurati da se gosti ispravno dodaju. 
+
+- **is_all_day** – koristi se zajedno s „meeting_duration” za određivanje je li riječ o cjelodnevnom sastanku. Pomaže nam razumjeti postoje li problemi s radnjama provedenim u okviru cjelodnevnih sastanaka. 
+
+- **is_organizer** – pomaže nam razumjeti može li organizator pravilno uređivati i kreirati sastanke. 
+
+- **is_recurring** – pomaže nam razumjeti postoji li problem koji specifično utječe na ponavljajuće sastanke. 
+
+- **launch_point** – točka pokretanja radnje. Može biti vrijednosti kao što su zaglavlje widgeta, podnožje widgeta, cjelodnevni widget i prečac kalendara. Pomaže nam razumjeti kontekst iz koje je radnja pokrenuta. 
+
+- **location_count** – broj lokacija koje se postavljaju tijekom kreiranja i uređivanja događaja. Pomaže nam razumjeti postoje li problemi s kreiranjem ili uređivanjem događaja s određenim brojem lokacija. 
+
+- **location_selection_source_type** – vrsta izvora za odabir lokacije. Ovo može uključivati vrijednosti kao što su prijedlog lokacije, prilagođeno i postojeće. Pomaže nam dijagnosticirati sve probleme s odabirom lokacije iz određenog izvora. 
+
+- **location_session_id** – ID sesije za odabir lokacije sastanka. Pomaže nam dijagnosticirati sve probleme s odabirom lokacije koja se treba dodati sastanku. 
+
+- **location_type** – vrsta odabrane lokacije.  Sadrži vrste kao što su prilagođena lokacija, konferencijska prostorija i Bing. Pomaže nam razumjeti probleme s dodavanjem određenih vrsta lokacija u sastanak. 
+
+- **meeting_duration** – trajanje sastanka.  Pomaže nam osigurati da se sastanci konfiguriraju s točnim vremenima. 
+
+- **meeting_insights_type** – vrsta uvida u sastanak u pojedinostima o događaju.  Ovo uključuje datoteku i poruku. Pomaže nam razumjeti broj uvida u sastanak koji se prikazuju. 
+
+- **meeting_type** – vrsta mrežnog sastanka povezanog s radnjom.  To uključuje vrste programa Skype, Skype za tvrtke, Hangout i Teams za tvrtke. Pomaže nam razumjeti jesu li mrežni sastanci pravilno konfigurirani. 
+
+- **origin** – porijeklo radnje kalendara. Ovo uključuje vrste kao što su dnevni red, kalendar, dnevni red widgeta itd. Pomaže nam u boljem osiguravanju da interakcija s komponentama kalendara pravilno funkcionira 
+
+- **recurrence_scope** – vrsta ponavljanja sastanka, bilo pojava ili niz.  Pomaže nam razumjeti postoje li problemi s uređivanjem različitih vrsta ponavljanja sastanka. 
+
+- **reminder_time** – vrijeme podsjetnika sastanka ako se ono promijenilo.  Koristi se za osiguravanje da je vrijeme sastanka pravilno spremljeno. 
+
+- **reminders_count** – broj podsjetnika za događaj ako su se podsjetnici promijenili. Pomaže nam dijagnosticirati sve probleme s višestrukim podsjetnicima za događaj. 
+
+- **sensitivity** – osjetljivost sastanka. To uključuje vrste normalno, osobno, privatno i povjerljivo. Pomaže nam razumjeti je li osjetljivost sastanka pravilno konfigurirana. 
+
+- **session_duration** – trajanje sesije u milisekundama. Pomaže nam razumjeti postoje li problemi koji povećavaju količinu vremena potrebnog za provedbu radnje kalendara. 
+
+- **shared_calendar_result** – rezultat radnje provedene na dijeljenom kalendaru. Moguće vrijednosti obuhvaćaju u redu, nema dozvole, nepoznato, lokalni vlasnik i vlasnik je grupa. Pomaže nam razumjeti pouzdanost radnji provedenih na dijeljenim kalendarima. 
+
+- **time_picker_origin** – podrijetlo birača vremena za radnju spremanja. Uključuje vrijednosti kao što su više mogućnosti i manje mogućnosti. Pomaže nam razumjeti kako je korisnik usmjeravao tijek za spremanje sastanka i osigurati da ispravno funkcionira 
+
+- **title** – automatski predloženi naslov iz vrijednosti koje je definirala aplikacija. To uključuje vrijednosti kao što su „Poziv”, „Ručak” i „Skype”. Pomaže nam razumjeti je li automatsko predlaganje naslova pravilno konfigurirano. 
+
+- **txp** – vrsta rezervacije na događaju, ako postoji. Ovo uključuje vrste kao što su rezervacija događaja, rezervacija leta, rezervacija najma automobila itd. Pomaže nam razumjeti funkcioniraju li kartice za rezervaciju pravilno. 
+
+- **upcoming_event_count** – broj predstojećih događaja prikazan u prikazu predstojećih događaja. Pomaže nam razumjeti postoje li problemi s prikazom predstojećih događaja. 
+
+- **upcoming_event_seconds_until_event** – broj sekundi do početka sljedećeg predstojećeg događaja. Pomaže nam razumjeti tipične događaje koji se prikazuju u prikazu predstojećih događaja. 
+
+- **value** – pojedinost specifična za radnju kao što je trajanje odgađanja upozorenja ili kategorija ponavljanja do. Pomaže nam razumjeti kontekst u kojem je radnja provedena. 
+
+#### <a name="combined_search_use"></a>combined_search_use
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu sposobnost provedbe ključnih funkcija pretraživanja kao što su traženje pošte, kontakata ili događaja.
+
+Prikupljaju se sljedeća polja:  
+
+- **account_switcher_action_type** – ova vrsta radnje prati je li korisnik koristio preglednik računa bilo u jednostavnom otkrivanju ili se odlučio za promjenu računa
+
+- **action** – vrsta radnje koja je provedena za pretraživanje. Ovo prepoznaje je li pretraživanje pokrenuto, provodi li se ili je dovršeno te koje su se radnje provodile tijekom pretraživanja, tj. je li korišten mikrofon. Ovo je ključno za osiguravanje točnih i korisnih pretraživanja.
+
+- **action_type** – vrsta radnje koja je provedena za pretraživanje. Ovo prepoznaje je li pretraživanje pokrenuto, provodi li se ili je dovršeno te koje su se radnje provodile tijekom pretraživanja, tj. je li korišten mikrofon. Ovo je ključno za osiguravanje točnih i korisnih pretraživanja. 
+
+- **answer_result_selected_count** – prati koliko je puta pretraživanje bilo „uspješno”, tj. je li korisnik pronašao ono što je želio? Je li sastavljena e-pošta? Je li poruka označena knjižnom oznakom? 
+
+- **contact_result_in_full_list_selected_count** – prati koliko je puta korisnik odabrao da se „prikažu svi kontakti” u punom popisu tijekom kombinirane sesije pretraživanja
+
+- **contact_result_selected_count** – prati koliko je rezultata kontakata odabrano tijekom kombinirane sesije pretraživanja
+
+- **conversation_result_selected_count** – prati koliko je razgovora označeno tijekom kombinirane sesije pretraživanja
+
+- **entrance_type** – ovo određuje kako je korisnik pokrenuo upit za pretraživanje, iz kartice Pretraživanje, nulto pretraživanje, zaglavlje pretraživanja ili rezultat pretraživanja. 
+
+- **has_contact_results** – jednostavna informacija o tome prikazuju li se rezultati kontakata u upitu za pretraživanje ili ne
+
+- **include_deleted** – prikazuje li pretraživanje izbrisane mogućnosti među rezultatima pretraživanja 
+
+- **re_enter_search_tab** – Booleova vrijednost za označavanje je li korisnik promijenio kartice prije odabira rezultata pretraživanja
+
+- **result_selected_type** – s kojom vrstom podataka koji su bili prikazani korisnik komunicira, tj. prikaži sve kontakte, razgovore, događaje itd. 
+
+- **search_conversation_result_data** – ovo sadrži podatke o označenom razgovoru iz rezultata pretraživanja uključujući vrstu računa (hx, ac itd.), drži li poruku servis u oblaku te je li prikazani pomak stranice jednaka stranica kao u prvoj poruci. 
+
+- **search_origin** – podrijetlo pretraživanja, npr. glasovni pomoćnik, Cortana, unos tipkovnicom itd. 
+
+- **search_request_reason** – označava razlog zašto je zahtjev za pretraživanje poslan iz aplikacije, čime označava komponentu ili radnju korisnika koja je pokrenula pretraživanje.
+
+- **search_result_filter_type** – označava koja je vrsta fltra primijenjena na pretraživanje, prikaži sve ili samo privitke
+
+- **search_scope** – niz koji označava u kojoj je vrsti računa korisnik provodio pretraživanje (npr. Exchange, Gmail itd.) ili je bila riječ o stavci Svi računi. 
+
+- **search_session_ended_type** – označava gdje je upit za pretraživanje završio jer je bio otkazan ili je upit bio ažuriran
+
+- **search_suggestion_type** – označava što se nalazi iza prijedloga za pretraživanje, npr. je li riječ o ispravku pravopisa? Temelji li se na povijesti? Je li došlo do samodovršetka?
+
+- **see_all_contacts_selected_count** – prati koliko je puta „prikaži sve kontakte” bilo odabrano tijekom kombinirane sesije pretraživanja
+
+- **top_mail_result_selected_count** – prati koliko puta korisnik odabire glavne rezultate koji mu se pruže. 
+
+#### <a name="compose_mail_accessory"></a>compose_mail_accessory
+
+Ovaj događaj omogućava nam prepoznavanje i popravljanje problema s ključnim radnjama sastavljanja poruka kako ne biste imali problema s prilaganjem datoteke, snimanjem fotografije kao privitka ili slanjem svoje raspoloživosti.
+
+Prikupljaju se sljedeća polja: 
+
+- **action** – govori nam radnju koja se pokušala provesti tijekom evidencije radnje. Neki primjeri uključuju prilaganje datoteke i prikaz većeg broja mogućnosti.
+
+- **icon_name** – govori nam naziv ikone koja se prikazuje tijekom evidencije radnje.
+
+#### <a name="conversation_view_action"></a>conversation_view_action
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost prikaza i odgovaranja na poruke e-pošte
+
+Prikupljaju se sljedeća polja:
+
+- **contains_mention** – govori nam je li razgovor imao primijenjeno spominjanje @ kako bi nam pomogao prepoznati probleme sa spominjanjem u e-pošti
+
+- **conversation_type** – govori nam koja je vrsta prikaza poruke e-pošte renderirana, primjerice prikaz jedne poruke ili prikazi većeg broja poruka. Pomaže nam prepoznati probleme povezane s određenim tipom poruke u našem prikazu razgovora e-pošte.
+
+- **suggested_reply_char_count** – govori nam koliko znakova predloženi odgovori koje nudimo (ako postoje) imaju kako bi nam pomogao prepoznati neobičnosti i probleme u vezi s našim prijedlozima
+
+- **suggested_reply_click_pos** – govori nam na koji je položaj predloženi odgovor (ako postoji) prikazan kako bismo mogli prepoznati probleme s određenim prijedlogom
+
+- **use_default_quick_reply_mode** – govori nam koji je zadani način za brzi odgovor korišten kako bi nam pomogao prepoznati probleme u vezi s doživljajem brzih odgovora za e-poštu
+
+#### <a name="draft_action"></a>draft_action
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost kreiranja i spremanja skica pošte.
+
+Prikupljaju se sljedeća polja: 
+
+- **action** – vrsta radnje, npr. spremi, odbaci.
+ 
+- **draft_message_id** – ID poruke za skicu
+
+- **is_groups** – šalje li se skica u/iz grupne mape
+ 
+- **origin** – gdje je skica pokrenuta, npr. pojedinosti o poruci, sastavi.
+ 
+- **thread_id** – ID niti razgovora s kojim je skica povezana
+
+#### <a name="drawer_event"></a>drawer_event
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost pristupanja mapama u vašoj ulaznoj pošti
+
+Prikupljaju se sljedeća polja:
+
+- **add_calendar_option** – označava vrstu kalendara koji se dodaje iz ladice, npr. zanimljivi kalendar, kalendar pošte, dijeljeni kalendar, kako bi nam pomogao prepoznati probleme u vezi s određenim vrstama kalendara
+
+- **calendar_accounts_count** – označava broj računa kalendara kako bi nam pomogao prepoznati probleme u vezi s brojem računa koji imate
+
+- **calendar_apps_count** – označava broj aplikacija kalendara predstavljenih na uređaju korisnika kako bi nam pomogao prepoznati probleme u vezi s aplikacijama kalendara
+
+- **drawer_type** – označava vrstu ladice: kalendar, pošta ili nulto pretraživanje kako bi nam pomogao prepoznati probleme u vezi s vrstom ladice
+
+- **from_favorites** – označava je li radnja preuzeta iz favorita kako bi nam pomogao prepoznati probleme u vezi s favoritima
+
+- **group_calendar_count** – označava broj kalendara za račun kako bi nam pomogao prepoznati probleme u vezi s grupnim kalendarima
+
+- **inbox_unread_count** – označava broj nepročitanih poruka u ulaznoj pošti kako bi nam pomogao prepoznati probleme s prikazivanjem količine nepročitanih poruka u ulaznoj pošti.
+
+- **interesting_calendar_accounts_count** – označava broj računa koji ispunjavaju uvjete za zanimljive kalendare na uređaju kao bi nam pomogao prepoznati probleme u vezi sa zanimljivim kalendarima
+
+- **is_group_calendar** – označava je li kalendar grupni kalendar kako bi nam pomogao prepoznati probleme u vezi s grupnim kalendarima
+
+- **mail_folder_type** – označava vrstu mape pošte, npr. ulazna pošta, skice itd., kako bi nam pomogao prepoznati probleme u vezi s vrstama mapa.
+
+- **mail_accounts_count** – označava broj računa pošte kako bi nam pomogao prepoznati probleme u vezi s računima pošte.
+
+- **selected_group_calendar_count** – označava broj grupnih kalendara koji su odabrani i aktivni u korisničkom sučelju
+
+- **visibility_toggle** – označava uključuje li korisnik ili isključuje određeni kalendar kako bi nam pomogao prepoznati probleme u vezi s prikazivanjem ili skrivanjem kalendara
 
 #### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
 
@@ -1787,6 +2102,259 @@ Prikupljaju se sljedeća polja:
 - **RMS.SDKVersion** – verzija klijenta usluge upravljanja pravima
 
 - **RMS.StatusCode** – identifikacijski broj scenarija definiran API-jem
+
+
+#### <a name="mail_action"></a>mail_action
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost provedbe ključnih radnji za poštu (poput pokretanja načina poruka u obliku niti, osiguravanja funkcije razvrstavanja pošte) kako bi se osiguralo da naša propisno funkcionira za poštu.
+
+Prikupljaju se sljedeća polja:
+
+- **account** – račun koji je proveo radnju
+
+- **action** – prati vrstu radnje koja se provela, tj. arhiviranje, brisanje, označavanje kao pročitano itd. 
+
+- **attachment_content_type** – vrsta sadržaja preuzetog privitka 
+
+- **attachment_content_type_with_count** – prati broj privitaka u poruci e-pošte
+
+- **attachment_download_result** – rezultat (tj. uspjeh/neuspjeh) za radnju preuzimanja privitka
+
+- **attachment_download_time** – trajanje radnje preuzimanja privitka
+
+- **attachment_extn** – datotečni nastavak preuzetog privitka
+
+- **attachment_id** – identifikator sustava za preuzeti privitak 
+
+- **attachment_size** – veličina preuzetog privitka
+
+- **domain** – domena dokumenta koji se otvara
+
+- **duration** – prati koliko je radnja trajala kao čovjeku razumljivi niz na engleskom jeziku (npr. 1 s, 4 h)
+
+- **error** – poruka o pogrešci povezanoj s radnjom 
+
+- **event_mode** – u kojem je načinu događaja radnja bila, grupama ili ostalo. 
+
+- **Extension** – datotečni nastavak veze ili privitka povezanog s ovom radnjom 
+
+- **internet_message_id** – ID poruke o praćenju
+
+- **is_group_escalation** – označava je li poruka ili radnja provedena u ili je poslana na korisnikov poštanski sandučić zbog eskalacije (pretplata na grupu)
+
+- **is_rule** – označava vraća li provedena radnja za poštu fokusiranu/drugu klasifikaciju na izvorne postavke
+
+- **is_threaded_mode** – označava je li poruka bila u obliku niti ili nije, tj. kako su poruke grupirane
+
+- **is_unread** – označava je li poruka o tome da je radnja provedena nepročitana
+
+- **left_swipe_setting** – označava koja je radnja postavljena kao radnja pokrenuta prelaskom prstom ulijevo
+
+- **message_id** – ID poruke poslužitelja s ciljem za radnju ili popis odvojen zarezom ako je radnja provedena s više stavki od jedne.
+
+- **message_type** – označava na kojoj je vrsti poruke radnja provedena** – grupne ili druge
+
+- **origin** – izvor radnje, tj. prelazak prstom na mobilnom telefonu, nulti upit, dubinska veza, prikaz e-pošte, popis e-pošte itd.
+
+- **reported_to_msft** – nakon slanja e-pošte u bezvrijednu poštu (neželjenu poštu) ili smeće (krađa identiteta) može se odabrati prijavljivanje radnje Microsoftu.
+
+- **retry** – je li se radnja pokušala ponovno provesti
+
+- **right_swipe_setting** – označava koja je radnja postavljena kao radnja pokrenuta prelaskom prstom udesno 
+
+- **shortcut** – označava je li korišten prečac te koji je prečac korišten za zakazivanje poruke, tj. kasnije, sutra, odabir vremena itd.
+
+- **size** – veličina veze ili privitka povezanog s ovom radnjom
+
+- **source_folder** – prati vrstu izvorišne mape kada radnja upućuje na premještanje iz jedne mape u drugu, tj. u ulaznu poštu, smeće itd. 
+
+- **source_inbox** – označava u kojoj se ulaznoj pošti radnja za poštu provodi (tj. fokusirana, drugo itd.) state – stanje radnje, tj. točka uspjeha ili neuspjeha
+
+- **target_folder** – označava vrstu odredišne mape tijekom premještanja poruka e-pošte iz jedne mape u drugu
+
+- **thread_id** – ID niza razgovora s ciljem za radnju ili popis odvojen zarezom ako je radnja provedena s više stavki od jedne
+
+- **time_taken_to_fetch_access_token** – vrijeme potrebno za dohvaćanje tokena za pristup sustavu koji se koristi za otvaranje veze
+
+- **time_taken_to_fetch_drive_item** – vrijeme potrebno za dohvaćanje resursa servisa OneDrive kada se klikne
+
+- **time_taken_to_fetch_embed_viewer_resource** – vrijeme potrebno za pokretanje ugrađenog preglednika tijekom otvaranja veza
+
+- **time_taken_to_load_embed_viewer** – vrijeme potrebno za pokretanje ugrađenog preglednika tijekom otvaranja veza
+
+- **time_taken_to_load_link** – vrijeme potrebno za dovršavanje radnje učitavanja veze
+
+- **time_taken_to_tap_attachment** – vrijeme između otvaranja poruke i klika na privitak
+
+- **time_taken_to_tap_link** – vrijeme koje je korisniku bilo potrebno između pregleda poruke i klika na vezu
+
+- **txp** – označava postoji li stavka vrste txp povezana s poštom na kojoj je ta radnja provedena, tj. rezervacija događaja, rezervacija leta itd. 
+
+- **type** – vrsta dokumenta koji se otvara putem veze
+
+#### <a name="mail_compose"></a>mail_compose
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost sastavljanja i odgovaranja na poruke e-pošte, na primjer nailaženje na probleme s odgovaranjem svima, formatiranjem vaših poruka e-pošte ili slanjem vaših poruka e-pošte.
+
+Prikupljaju se sljedeća polja: 
+
+- **draft_message_id** – ID skice razgovora koji se stvara kao skica kako bi nam pomogao prepoznati probleme u vezi sa skicama poruka e-pošte
+
+- **message_id** – ID poruke razgovora na koji se odgovara ili iz kojeg se prosljeđuje kako bi nam pomogao prepoznati probleme u vezi s određenom porukom
+
+- **origin** – govori nam o podrijetlu poruke, primjerice kao odgovaranje svima, kreiranje nove poruke ili brzi odgovor. Pomaže nam prepoznati probleme u vezi s određenom vrstom podrijetla odgovora.
+
+- **is_group_escalation** – govori nam je li poruka eskalirana grupna poruka kako bismo mogli prepoznati probleme sa sastavljanjem povezane s grupama.
+
+- **is_link** – govori nam je li se stvaranje nove skice provelo iz veze. Pomaže nam prepoznati probleme u vezi sa skicama stvorenim iz veza.
+
+- **is_force_touch** – govori nam je li se stvaranje nove skice provelo iz radnje prisilnog dodira. Pomaže nam prepoznati probleme u vezi sa skicama stvorenim iz ove specifične radnje.
+
+- **is_groups** – je li događaj pokrenut iz prostora grupe kako bismo mogli prepoznati probleme sa sastavljanjem u vezi s grupama.
+
+- **source_inbox** – govori nam koja je izvorna ulazna pošta, primjerice je li to bila fokusirana ili druga ulazna pošta
+
+- **thread_id** – ID niti razgovora na koji se odgovara ili iz kojeg se prosljeđuje kako bi nam pomogao prepoznati probleme u vezi s određenim nizom
+
+#### <a name="meeting_call_to_action"></a>meeting_call_to_action
+
+Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost provedbe ključnih radnji sastanka kao što su kreiranje, uređivanje i odgovaranje na sastanke.
+
+Prikupljaju se sljedeća polja:
+
+- **event_mode** – označava potječe li ovaj događaj iz grupe ili ne kako bi nam pomogao prepoznati probleme u vezi s grupnim događajima
+
+- **meeting_id** – ID sastanka koji nam pomaže pratiti probleme tijekom cijelog trajanja sastanka kako bi nam pomogao prepoznati probleme u vezi s određenim sastancima
+
+- **meeting_provider** – označava davatelja usluga za mrežni sastanak, npr. Teams, Skype za tvrtke, kako bi nam pomogao prepoznati probleme u vezi s određenim davateljima usluga mrežnih sastanaka
+
+- **notify_type** – označava vrstu odgovora za druge vrste računa kako bi nam pomogao prepoznati probleme u vezi s različitim vrstama računa
+
+- **recurrence** – označava koliko se često ovaj sastanak održava, tj. jedanput ili niz, kako bi nam pomogao prepoznati probleme u vezi s nizovima ponavljajućih sastanaka
+
+- **response** – označava vrstu odgovora kao što je prihvaćanje ili odbijanje na određenim vrstama računa kako bi nam pomogao prepoznati probleme u vezi s odgovaranjem na događaje
+
+- **response_message_length** – označava duljinu poruke kako bi nam pomogao prepoznati probleme u vezi s odgovorima na sastanak
+
+- **review_time_proposal_action_type** – označava odgovor korisnika za predlaganje novog vremena kako bi nam pomogao prepoznati probleme u vezi s predlaganjem novog vremena
+
+- **send_response** – označava je li odgovor poslan kako bi nam pomogao prepoznati probleme u vezi sa slanjem odgovora na pozivnice na sastanak
+
+- **txp** – označava iz koje je vrste sastanka stvoren, npr. rezervacije letova i isporuke, kako bi nam mogao prepoznati probleme u vezi s ovom vrstom sastanka
+
+- **with_message_enabled** – označava može li korisnik odgovoriti porukom kako bi nam pomogao prepoznati probleme u vezi s odgovaranjem na pozivnice na sastanak
+
+#### <a name="office_android_docsui_fileoperations_opendocumentmeasurements"></a>Office_Android_DocsUI_FileOperations_OpenDocumentMeasurements
+
+Ovaj se događaj prikuplja za aplikacije sustava Office koje se pokreću na platformi Android i evidentira kada se provodi radnja otvaranja datoteke. Događaj pomaže jamčiti da je radnja otvaranja datoteke sigurna, ažurna i da se pravilno provodi. Cilj prikupljanja ovih podataka jest kontinuirano poboljšanje funkcije otvaranja datoteke. 
+
+Prikupljaju se sljedeća polja:
+
+- **Data_AppDocsOperationDuration** – trajanje podsloja tijekom radnje otvaranja datoteke.
+
+- **Data_AppDuration** – trajanje obrade aplikacije tijekom radnje otvaranja datoteke. 
+
+- **Data_BootDuration** – trajanje pokretanja aplikacije tijekom radnje otvaranja datoteke.
+
+- **Data_Doc_AccessMode** – enumeracija koja upućuje na način pristupa datoteke, npr. samo za čitanje, za čitanje i pisanje.
+
+- **Data_Doc_AsyncOpenKind** – enumeracija koja upućuje na vrstu asinkronog toka koji se koristi za otvaranje datoteke.
+
+- **Data_Doc_ChunkingType** – enumeracija koja upućuje na vrstu algoritma dijeljenja datoteke.
+
+- **Data_Doc_EdpState** – enumeracija koja upućuje na stanje korporacijske zaštite podataka datoteke.
+
+- **Data_Doc_Ext** – Datotečni nastavak datoteke.
+
+- **Data_Doc_Fqdn** – naziv glavnog računala poslužitelja datoteke.
+
+- **Data_Doc_FqdnHash** – globalno jedinstveni identifikator (GUID) koji jedinstveno identificira naziv glavnog računala poslužitelja.
+
+- **Data_Doc_IdentityTelemetryId** – GUID koji jedinstveno identificira identitet koji se koristi za otvaranje datoteke. 
+
+- **Data_Doc_InitializationScenario** – enumeracija koja upućuje na detaljnu vrstu scenarija otvaranja datoteke.
+
+- **Data_Doc_IOFlags** – enumeracija koja označava zastavice UI operacije otvaranja datoteke, npr. ako je datoteka predmemorirana ili ne.
+
+- **Data_Doc_IsCloudCollabEnabled**– bez obzira na to je li za datoteku omogućena suradnja u oblaku.
+
+- **Data_Doc_IsIncrementalOpen** – bez obzira na to je li datoteka otvorena inkrementalno ili ne.
+
+- **Data_Doc_IsOcsSupported** – bez obzira na to podržava li datoteka uslugu suradnje u sustavu Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – bez obzira na to je li datoteka otvorena iz izvanmrežne predmemorirane kopije.
+
+- **Data_Doc_IsPrefetched** – bez obzira na to je li datoteka unaprijed dohvaćena prije operacije otvaranja.
+
+- **Data_Doc_IsSyncBacked** – bez obzira na to postoji li datoteka oblaka lokalno i je li sinkronizirana s poslužiteljem.
+
+- **Data_Doc_Location** – enumeracija koja upućuje gdje se datoteka nalazi, npr. lokalno ili u oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – enumeracija koja označava razlog zbog kog je datoteka samo za čitanje.
+
+- **Data_Doc_ResourceIdHash** – GUID koji jedinstveno identificira ID resursa poslužitelja datoteke.
+
+- **Data_Doc_RtcType** – enumeracija koja označava vrstu kanala u stvarnom vremenu (RTC) koji se koristi u datoteci.
+
+- **Data_Doc_ServerDocId** – GUID koji jedinstveno identificira ID dokumenta poslužitelja.
+
+- **Data_Doc_ServerProtocol** – enumeracija koja označava poslužiteljski protokol datoteke u oblaku.
+
+- **Data_Doc_ServerType** – enumeracija koja označava vrstu poslužitelja datoteke u oblaku.
+
+- **Data_Doc_ServerVersion** – enumeracija koja označava verziju poslužitelja datoteke u oblaku.
+
+- **Data_Doc_SessionId** – cijeli broj koji se povećava za 1 za svaku operaciju otvaranja datoteke u sesiji.
+
+- **Data_Doc_SharePointServiceContext** – niz koji se koristi za povezivanje klijentskih i poslužiteljskih zapisnika, obično je vrsta ID-a.
+
+- **Data_Doc_SizeInBytes** – veličina datoteke u bajtovima.
+
+- **Data_Doc_SpecialChars** – enumeracija koja označava kakav poseban znak ima URL datoteke.
+
+- **Data_Doc_UrlHash** – GUID koji jedinstveno identificira URL datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – bez obzira na to je li datoteka otvorena inkrementalno pomoću predmemoriranih WRS podataka.
+
+- **Data_Doc_WopiServiceId** – niz koji pokazuje iz koje usluge je datoteka sučelja web-aplikacije s otvorenom platformom (WOPI).
+
+- **Data_ErrorId_Code** – kod pogreške koji označava neuspjeh tijekom radnje prikupljanja podataka
+
+- **Data_ErrorId_Tag** – oznaka u kodu kao pomoć za pronalazak točke neuspjeha
+
+- **Data_InclusiveMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje uključuje trajanje poziva podfunkcije. 
+
+- **Data_InitializationReason** – enumeracija koja označava kako se datoteka otvara, npr. elementa korisničkog sučelja ili je pokreće druga aplikacija itd.
+
+- **Data_Measurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje isključuje trajanje poziva podfunkcije.
+
+- **Data_OfficeMobileInitReason** – enumeracija koja označava ulaznu točku otvaranja datoteke. 
+
+- **Data_SilhouetteDuration** – trajanje prikazivanja otvaranja datoteke.
+
+- **Data_TimeSplitMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije, početnom vremenskom oznakom i trajanjem. 
+
+#### <a name="office_android_intune_intunecompliancerequest"></a>Office_Android_Intune_IntuneComplianceRequest
+
+Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Koristi se za razumijevanje broja krajnjih korisnika koji pokušavaju koristiti aplikacije u okviru ove konfiguracije pravilnika i kombinira s drugim događajem, Office_Android_Intune_IntuneComplianceStatus, radi osiguravanja provedbe konfiguriranog pravilnika. 
+
+Ne prikupljaju se nikakva polja podataka.
+
+#### <a name="office_android_intune_intunecompliancestatus"></a>Office_Android_Intune_IntuneComplianceStatus
+
+Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Ovaj događaj označava status usklađivanja aplikacije u koju se korisnik prijavio i koristi se za istraživanje kvarova. On se kombinira s drugim događajem, Office_Android_Intune_IntuneComplianceRequest, radi osiguravanja provedbe konfiguriranog pravilnika.
+  
+Prikupljaju se sljedeća polja:
+
+- **Data_ComplianceStatus** – označava status usklađenosti aplikacije tijekom prijave s kodom pogreške za uspjeh ili neuspjeh.
+  - -1 – Nepoznata pogreška
+  - 0 – Aplikacija je u skladu s pravilnicima ustanove ili tvrtke
+  - 1 – Aplikacija nije u skladu s pravilnicima ustanove ili tvrtke
+  - 2 – Kvarovi u vezi sa servisom
+  - 3 – Kvarovi u vezi s mrežom
+  - 4 – Aplikacija nije uspjela dohvatiti token za provjeru autentičnosti 
+  - 5 – Odgovor usluge još nije primljen
+  - 6 – Potrebno je instalirati aplikaciju portala tvrtke
 
 #### <a name="officeandroidodwxpssotelemetry"></a>Office.Android.ODWXPSSO.Telemetry
 
@@ -3266,6 +3834,67 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FirstRunPanelName** – naziv ploče na kojoj je započelo iskustvo
 
+#### <a name="officelivepersonacarduseractionsclosedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedPersonaCard
+
+Evidentiramo kada korisnik zatvori karticu Osobnost.  Podaci se koriste da bi se utvrdilo je li kartica ispravno zatvorena. 
+
+Prikupljaju se sljedeća polja: 
+
+- **BatchId** – globalno jedinstveni identifikator ako je kreiran skup zahtjeva
+
+- **Data.appContextId** – nasumično generirani identifikacijski broj koji se koristi za identifikaciju različitih računa u istoj aplikaciji
+
+- **Data.AppInfo.Name** – naziv usluge koja se upotrebljava (kartica Profil)
+
+- **Data.AppInfo_Id** – naziv glavne aplikacije
+
+- **Data.AppInfo_Version** – verzija glavne aplikacije
+
+- **Data.cardCorrelationId** – globalno jedinstveni identifikator za karticu osobnosti
+
+- **Data.cardPersonaCorrelationId** – globalno jedinstveni identifikator za određenu osobnost prikazanu na kartici
+
+- **Data.clientCorrelationId** – globalno jedinstveni identifikator za sesiju aplikacije
+
+- **Data.clientType** – vrsta uređaja na kojem je aplikacija pokrenuta
+
+- **Data.eventId** – identifikator naziva događaja, npr. „LivePersonaCardRenderedAction”
+
+- **Data.feature** – koristi se za grupiranje raznih događaja iste značajke (kartica Profil)
+
+- **Data.OTelJS.Version** – verzija zapisnika OTel
+
+- **Data.properties** – dodatni metapodaci prikupljeni za svaki događaj na sljedeći način:
+  - **ClientTimeStamp** – vrijeme na aplikaciji tijekom zapisivanja događaja
+  - **cardCorrelationId** – duplikat za gornji Data.appContextId
+  - **cardPersonaCorrelationId** – duplikat za gornji Data.cardCorrelationId
+  - **consumerCorrelationId** – duplikat za gornji Data.clientCorrelationId
+  - **externalAppSessionCorrelationId** – globalno jedinstven identifikator za aplikaciju za identifikaciju svih kartica osobnosti otvorenih u istoj podsesiji
+  - **immersiveProfileCorrelationId** – globalno jedinstven identifikator za sesiju proširenog prikaza profila
+  - **personaCorrelationId** – globalno jedinstven identifikator za jedinstvene osobnosti u sesiji
+
+- **Data.region** – zemljopisna regija usluge pozadinskog sustava kartice profila s kojom je korisnik povezan
+
+- **Data.tenantAadObjectId** – klijent s kojim je korisnikova pretplata povezana. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta
+
+- **Data.type** – vrsta zapisanog događaja, npr. Praćenje, Pogreška, Događaj
+
+- **Data.userAadObjectId** – globalno jedinstveni identifikator korisnika za Microsoftov račun za velike tvrtke (duplikat za Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – globalno jedinstveni identifikator korisnika za Microsoftov račun za velike tvrtke
+
+- **Data.UserInfo.MsaId** – globalno jedinstveni identifikator korisnika za Microsoftov potrošački račun
+
+- **Data.UserInfo.OMSTenantId** – klijent s kojim je korisnikova pretplata povezana. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta
+
+- **Data.userPuid** – globalno jedinstveni identifikatora za Microsoftov potrošački račun (duplikat za Data.UserInfo.MsaId)
+
+- **Data.version** – verzija usluge (kartica Profil)
+
+- **Data_hostAppRing** – implementacijski prsten kartice Osobnost
+
+- **Event_ReceivedTime** – vrijeme tijekom kojeg je događaj bio prijavljen u uslugu
+
 #### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
 
 Bilježimo kada se korisnik nalazi u aplikaciji koja učitava Osobnu karticu u iščekivanju da korisnik otvori karticu Osobnost za Live.  Podaci se upotrebljavaju da bi se odredile je li kartica ispravno učitana. 
@@ -4229,7 +4858,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string –** jedinstveni GUID korisnika
 
-  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korištenog za akciju zajedničkih dokumenata
+  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korišten za akciju zajedničkih dokumenata
 
   - **Data\_Doc\_IOFlags:long –** bit-maska za razne zastavice vezane uz ulaz i izlaz za određeni dokument
 
@@ -5862,6 +6491,12 @@ Prikupljaju se sljedeća polja:
 
 - **TIME_TAKEN_IN_MS** – vrijeme potrebno za otvaranje stranice
 
+#### <a name="onenotecapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken
+
+Ovaj se signal koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote na platformi Android, bilježnice pravilno dodijele te da je korisnik uspješno kreirao novu bilješku.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.
+
+Ne prikupljaju se nikakva dodatna polja.
+
 #### <a name="onenotemessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked 
 
 Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
@@ -5912,6 +6547,198 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.VerifySignatureDuration** – vrijeme trajanja za provjeru potpisa
 
+#### <a name="read_conversation"></a>read_conversation
+
+Koristi se za nadzor mogućeg negativnog utjecaja na stanje i funkciju prikazivanja poruke e-pošte
+
+Prikupljaju se sljedeća polja: 
+
+- **above_40fps** – broj prikazanih okvira iznad 40 fps
+ 
+- **above_50fps** – broj prikazanih okvira iznad 50 fps
+ 
+- **above_55fps** – broj prikazanih okvira iznad 55 fps
+
+- **adal_id** – ID provjere autentičnosti aktivnog direktorija računa, jedinstveni identifikator u sustavu za provjere autentičnosti tvrtke Microsoft 
+
+- **component_name** – naziv komponente/prikaza koji je aktivan tijekom filtriranja
+
+- **event_mode** – mjesto u aplikaciji na kojem je korisnik ušao u razgovor (grupni ili drugi)
+
+- **internet_message_id** – ID praćenja za najnoviju poruku u razgovoru
+      
+- **orientation** – orijentacija ekrana u trenutku događaja (okomito ili vodoravno)
+
+- **recent_message_id** – ID najnovije poruke u razgovoru
+
+- **suggested_reply_state** – stanje predloženih odgovora za ovaj razgovor (nedostupno, dostupno, prikazano, korišteno ili odbačeno)
+  
+- **total_count** – ukupan broj okvira koji komponenta prikazuje
+ 
+- **view_duration** – koliko je dugo korisnik pregledavao komponentu
+
+#### <a name="save_attempt"></a>save_attempt
+
+Omogućuje utvrđivanje utjecaja problema uzrokovanih korisnicima koji pokušavaju spremiti datoteku procjenom broja zahvaćenih sesija te postoje li zajedničke značajke tih sesija.
+
+Prikupljaju se sljedeća polja: 
+
+- **file_type** – vrsta datoteke koju je korisnik pokušao spremiti (primjerice .doc)
+
+- **origin** – odakle pokušaj spremanja potječe (primjerice iz poruke e-pošte) kako bismo mogli prepoznati probleme u vezi sa spremanjem datoteke s određenog mjesta u aplikaciji
+
+- **token_type** – vrsta tokena korištenog za provjeru autentičnosti radi spremanja datoteka koji nam pomaže prepoznati probleme s provjerom autentičnosti u vezi sa spremanjem datoteke
+
+#### <a name="send_message"></a>send_message
+
+Koristi se za nadzor mogućeg negativnog utjecaja na funkciju i stanje slanja poruka e-pošte.
+
+Prikupljaju se sljedeća polja:
+  
+- **account** – prati račun koji je proveo radnju
+
+- **compose_duration** – prati ukupno vrijeme koje je korisniku bilo potrebno za sastavljanje poruke uključujući sesiju s više skica
+
+- **draft_message_id** – prati ID sastavljanja poruke koja se šalje
+
+- **event_mode** – prati način događaja ako se odnosi na poruku, („grupni” ili „ostalo”)
+
+- **has_attachment** – označava ima li poruka privitke
+
+- **has_mip_label** – označava je li poruka označena oznakom MIP ili nije
+
+- **is_group_escalation** – označava je li ovo eskalirana grupna poruka, „eskalirana poruka” jest poruka koja je poslana u ulaznu poštu korisnika zbog eskalacije (pretplata na grupu)
+
+- **is_groups** – prati je li poslana poruka grupna poruka ili nije
+
+- **key_stroke_count** – prati broj pritisaka tipki za poruku koja se šalje
+
+- **message_id** – prati ID poruke koja se odgovorila/proslijedila
+
+- **origin** – označava gdje je sastavljanje pokrenuto, npr. novo, odgovor, brzi odgovor itd.
+
+- **send_draft_origin** – označava gdje je slanje pokrenuto, tj. sastavljanje ili brzi odgovor
+
+- **source_inbox** – označava vrstu izvorne ulazne pošte za referentnu poruku, 
+
+- **suggested_reply_state** – utvrđuje predloženo stanje odgovora, tj. nedostupno, dostupno, prikazano, korišteno ili odbačeno za ovu poslanu poštu
+
+- **thread_id** – označava ID niti razgovora na koji se odgovara/prosljeđuje
+
+#### <a name="session"></a>session
+
+Omogućuje nam prepoznavanje i rješavanje situacija u kojima se vaša baterija previše troši te nam pomaže utvrditi što bi mogao biti uzrok.
+
+Prikupljaju se sljedeća polja: 
+
+- **battery_level** – govori nam razinu napunjenosti baterije uređaja kako bi nam pomogao prepoznati kada naša aplikacija ima negativan utjecaj na razinu napunjenosti baterije vašeg uređaja
+
+- **has_hx** – govori nam da račun koristi naš novi servis sinkronizacije kako bi nam pomogao prepoznati probleme uzrokovane našim servisom sinkronizacije
+
+#### <a name="settings_action"></a>settings_action
+
+Omogućuje nam prepoznavanje situacija u kojima može doći do negativnog utjecaja na vašu mogućnost konfiguriranja postavki aplikacije, primjerice vaših postavki obavijesti, vašeg primarnog računa pošte i konfiguriranja vašeg potpisa e-pošte.
+
+Prikupljaju se sljedeća polja: 
+
+- **account_order_changed** – da biste provjerili jeste li promijenili redoslijed računa kako biste osigurali da ova konfiguracija pravilno funkcionira 
+
+- **action** – moguće radnje provedene u postavkama, primjerice brisanje računa kako bi nam pomogao dijagnosticirati probleme i osigurati da nema negativnog utjecaja
+
+- **auth_type** – vrsta provjere autentičnosti koju račun koristi kako bismo mogli razumjeti koji sloj sinkronizacije u pozadini koristimo kako bismo mogli dijagnosticirati probleme 
+
+- **auth_type** – označava vrstu provjere autentičnosti u pozadini koja nam omogućava da saznamo postoji li problem s određenom vrstom računa
+
+- **badge_count_state** – označava koju je vrstu značke korisnik zatražio, tj. nema značke, samo za fokusiranu ulaznu poštu itd. 
+
+- **changed_folder** – utvrđuje je li mapa promijenjena kako bi nam pomogao pri dijagnostičkim problemima. 
+
+- **changed_folder** – utvrđuje je li ova radnja bila arhivirana, zakazana ili je postojala druga radnja.
+
+- **delete_scope** – tijekom brisanja računa, jeste li izbrisali račun s ovog uređaja ili sa svih uređaja s programom Outlook.  
+
+- **delete_scope** – prati je li ova radnja bila povezana s brisanjem nekoga samo na ovom uređaju ili na svim uređajima, ako je primjenjivo. 
+
+- **enabled_state** – utvrđuje jesu li vaše postavke za automatski odgovor, spremanje kontakata i blokiranje vanjskih slika ispravno konfigurirane  
+
+- **enabled_state** – utvrđuje je li stanje povezano s radnjom omogućeno
+
+- **notification_state** – označava koju je vrstu značke korisnik zatražio, tj. nema značke, samo za fokusiranu ulaznu poštu itd.,
+
+- **server_type** – slično događaju auth_type, govori nam koju vrstu računa imate kako bi nam pomogao u boljem dijagnosticiranju problema. Primjeri** – Office365, Gmail, Outlook
+
+- **server_type** – označava vrstu poslužitelja u pozadini koja nam omogućava da saznamo postoji li problem s određenom vrstom poslužitelja
+
+- **setting_properties** – prati odnos svojstava prema radnji postavljanja 
+
+- **signature_setting** – označava je li postavka bila primijenjena na sve račune ili na pojedini račun
+
+- **source** – označava koji je izvor obavijesti, ako je primjenjivo, iz postavki ili postavke ne ometaj
+
+- **state_changed_to** – služi provjeri je li vaša postavka uključivanja/isključivanja fokusirane ulazne pošte pravilno konfigurirana 
+
+- **swipe_action** – služi provjeri jeste li konfigurirali ikakve radnje prelaska prstom za razvrstavanje poruka e-pošte kako bismo mogli provjeriti funkcionira li ova postavka ispravno 
+
+- **swipe_action** – označava što je korisnik pokušavao učiniti, tj. označiti zastavicom, izbrisati, arhivirati, omogućuje nam utvrditi koju je radnju korisnik želio provesti te je li radnja bila neuspješna ili nije. 
+
+- **swipe_direction** – služi provjeri jesu li vaši smjerovi prelaska prstom (ulijevo ili udesno) ispravno konfigurirani
+
+- **swipe_direction** – označava za koji je smjer korisnik postavio prelazak prstom, tj. slijeva udesno ili zdesna ulijevo. To nam omogućuje utvrditi postoji li problem s određenim smjerom prelaska prstom.
+
+- **swipe_setting** – označava pojedinosti o, ako je primjenjivo, postavkama prelaska prstom povezanim s ovom radnjom
+
+- **ui_mode_setting** – odabrani način korisničkog sučelja (tamno, svijetlo, zadane postavke sustava, niska razina baterije itd.)
+
+#### <a name="sidebar_action"></a>sidebar_action
+
+Omogućuje nam prepoznavanje situacija u kojima može doći do negativnog utjecaja na vašu mogućnost konfiguriranja postavki aplikacije, primjerice vaših postavki obavijesti, vašeg primarnog računa pošte i konfiguriranja vašeg potpisa e-pošte.
+
+Polja podataka koja su uobičajena za Outlook Mobile za ovaj događaj na operacijskim sustavima iOS i Android:
+
+- **Account** – prati račun i njegove podatke povezane s događajem, vrijednosti praćene u okviru ovih podataka nalaze se u polju zajedničke dokumentacije 
+
+- **action** – prati vrstu provedene radnje bočne trake, tj. odbačeno, odabir gumba za pomoć, bočna traka pošte itd., 
+
+- **from_favorites** – prati potječe li radnja iz stavke ili iz favorita 
+
+- **mail_folder_type** – vrsta mape koja je odabrana tijekom radnje bočne trake, ako postoji.
+
+- **sidebar_type** – prati vrstu bočne trake povezane s ovim događajem, tj. pošta ili kalendar, kako bi nam pomogao osigurati da navigacija iz postavke favorita pravilno funkcionira
+
+Prikupljaju se sljedeća polja: 
+
+- **account_type** – označava koju vrstu provjere autentičnosti račun ima, tj. Gmail, Outlook itd. 
+
+- **account_has_groups** – pomaže nam provjeriti ima li račun grupe te jesu li one ispravno konfigurirane
+
+- **calendar_accounts_count** – broj računa kalendara koje imate kako bismo mogli osigurati da su računi kalendara ispravno konfigurirani 
+
+- **calendar_apps_count** – broj aplikacija kalendara koje imate kako bismo mogli osigurati da su vaše aplikacije zanimljivih kalendara ispravno konfigurirani 
+
+- **calendar_type** – vrsta kalendara koji imate (primarni kalendar, grupni kalendar itd.) 
+
+- **cid_type** – označava koja je vrsta računa, npr. poslovni račun ili račun za Outlook.com.
+
+- **has_favorite_folders** – pomaže nam osigurati pravilan način konfiguriranja omiljenih mapa 
+
+- **has_favorite_people** – pomaže nam osigurati pravilan način konfiguriranja omiljenih osoba/kontakata 
+
+- **has_group_calendar** – pomaže nam osigurati pravilan način konfiguriranja grupnih kalendara ako ih imate 
+
+- **has_group_calendar_account** – pomaže nam osigurati pravilan način konfiguriranja grupnih kalendara ako ih imate 
+
+- **has_group_toggled** – pomaže nam osigurati pravilan način konfiguriranja postavki uključenih/isključenih grupnih kalendara 
+
+- **interesting_calendars_accounts_count** – broj računa zanimljivih kalendara koje imate kako bismo mogli osigurati da su računi zanimljivih kalendara ispravno konfigurirani 
+
+- **mail_accounts_count** – ukupan broj računa pošte na bočnoj traci kako bismo osigurali da je to ispravno konfigurirano 
+
+- **mail_folder_type** – vrsta mape koju je korisnik dodirnuo kako bismo osigurali da je ispravno konfigurirana. To može uključivati Izbrisanu mapu, Neželjenu poštu ili vašu mapu Poslana pošta. 
+
+- **mail_inbox_unread_count** – pomaže nam osigurati da je količina nepročitanih poruka prikazana i ispravno konfigurirana 
+
+- **mail_subfolder_depth** – pomaže nam osigurati da možemo uspješno prikazivati konfiguracije korisnikove podmape pošte
+
 #### <a name="storeop"></a>StoreOp
 
 Prikuplja se kada korisnik pokuša otvoriti dokument zaštićen IRM-om ili primijeniti zaštite IRM-a.  Sadrži informacije potrebne za pravilno istraživanje i dijagnosticiranje problema do kojih dolazi kada se provodi operacija pohranjivanja licence usluge upravljanja pravima. 
@@ -5954,10 +6781,72 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.Url** – URL poslužitelja usluge upravljanja pravima
 
+#### <a name="watchappv2"></a>watchAppV2
+
+Ovaj nam događa omogućuje otkrivanje i rješavanje mogućih problema s mogućnostima na uređaju Apple Watch kao što su primanje obavijesti i odgovaranje na poruke e-pošte.
+
+Prikupljaju se sljedeća polja: 
+
+- **app_action** – govori nam vrste radnji koje je korisnik proveo na uređaju Apple Watch, primjerice „archive_message”, kako bi nam pomogao prepoznati probleme u vezi s određenom radnjom, primjerice nemogućnost uspješnog arhiviranja poruka na uređaju Apple Watch
+
+- **is_watch_app_installed** – govori nam je li korisnik instalirao našu aplikaciju Apple Watch na svom uređaju
+
+- **is_complication_enabled** – govori nam je li korisnik dodao program Outlook na ekran uređaja Apple Watch kako bismo mogli prepoznati probleme u vezi s ekranima uređaja Apple Watch
+
+- **watch_os** – govori nam verziju operacijskog sustava uređaja Apple Watch koja je instalirana kako bismo mogli prepoznati probleme u vezi s određenim verzijama operacijskog sustava uređaja Apple Watch
+
 
 ### <a name="application-status-and-boot-subtype"></a>*Podvrsta stanja i pokretanja aplikacije*
 
 Utvrđivanje je li došlo do određenih događaja povezanih sa značajkama, poput pokretanja ili zaustavljanja, te je li značajka pokrenuta.
+
+#### <a name="app_startup"></a>app_startup
+
+Ovaj nam događaj omogućava prepoznavanje i popravljanje problema kada se Outlook pokreće sporo ili nepotpuno, zbog čega korisnici imaju probleme s korištenjem naše aplikacije.  To uključuje informacije o konkretnim značajkama koje su bile omogućene i koliko su dugo dijelovi pokretanja trajali.
+
+Prikupljaju se sljedeća polja: 
+
+- **attach_base_context_millis** – vrijeme između početka osnovnog konteksta i stavke onCreate()
+
+- **device_ram_in_mb** – količina RAM-a dostupna na uređaju
+
+- **has_company_portal** – je li instalirana aplikacija portala tvrtke
+
+- **hx_okhttp_mode** – koristi li nova komponenta servisa sinkronizacije poruka e-pošte OKHttp za slanje i primanje mrežnih zahtjeva koji se temelje na HTTP-u
+
+- **initial_activity_name** – aktivnost sustava Android koja je pokrenula aplikaciju
+
+- **manufacturer** – proizvođač uređaja
+
+- **model** – model uređaja
+
+- **on_create_millis** – vrijeme koje je proteklo za metodu onCreate()
+
+- **on_resume_millis** – vrijeme koje je proteklo za metodu onResume()
+
+- **time_until_attach** – vrijeme koje je proteklo između učitavanja razreda i pokretanja osnovnog konteksta
+
+- **total_millis** – ukupno vrijeme od početka učitavanja razreda do dovršavanja nastavka aktivnosti sustava Android
+
+#### <a name="boot_time"></a>boot_time 
+
+Ovaj nam događaj omogućuje otkrivanje kada su nastupile kritične pogreške aplikacije koje bi uzrokovale rušenje vaše aplikacije ili iskustvo ozbiljnih problema, primjerice prikaz praznih redaka u vašoj ulaznoj pošti. Ovaj događaj prikuplja informacije koje nam omogućuju kategorizaciju i razvrstavanje problema kako bismo mogli odrediti prioritet utjecaja problema na korisnike.
+
+Prikupljaju se sljedeća polja:
+
+- **black_list_reason** – govori nam postoji li razlog zašto bismo trebali zanemariti ove podatke. Pojedini primjeri uključuju pokretanje zbog udaljene obavijesti i pokretanje zbog pozadinskog dohvaćanja.
+
+- **step0_main** – govori nam koliko je vremena bilo potrebno da Outlook dospije do koraka „main”, što je korak koji je odredila tvrtka Apple.
+
+- **step1_appWillFinishLaunching** – govori nam koliko je vremena bilo potrebno da Outlook dospije od koraka „main” do koraka „appWillFinishLaunching”, što je korak koji je odredila tvrtka Apple.
+
+- **step2_appDidFinishLaunching** – govori nam koliko je vremena bilo potrebno da Outlook dospije od koraka „appWillFinishLaunching” do koraka „appDidFinishLaunching”, što je korak koji je odredila tvrtka Apple.
+
+- **step3_engineStarted** – govori nam koliko je vremena potrebno da Outlook dospije od koraka „appDidFinishLaunching” do pokretanja modula aplikacije, koji upravlja spremanjem i sinkronizacijom podataka.
+
+- **step4_runLoopFirstIdle** – govori nam koliko je vremena bilo potrebno da Outlook dospije od koraka „engineStarted” do faze bez potrebe za dovršavanjem dodatnih zadataka.
+
+- **total_time** – govori nam koliko je vremena bilo potrebno da Outlook dovrši proces pokretanja.
 
 #### <a name="dnslookupop"></a>DnsLookupOp
 
@@ -6088,6 +6977,14 @@ Prikupljaju se sljedeća polja:
 - **RMS.Url** – URL poslužitelja usluge upravljanja pravima
 
 - **RMS.WinhttpCallbackStatus** – status rezultata povratnog poziva WinHTTP-a
+
+#### <a name="initialized"></a>Initialized
+
+Omogućuje nam analizu stanja sučelja koje omogućuje da mobilne aplikacije dohvaćaju postavke sigurnosti i zaštite privatnosti iz usluga programa Office te dijagnozu problema sa servisom postavki povezivanja i zaštite privatnosti.
+
+Prikupljaju se sljedeća polja:
+
+- **roamingSettingType** – označava mjesto s kojeg smo pokušali čitati postavke
 
 #### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
 
@@ -7796,23 +8693,11 @@ Taj događaj označava da Office Word naglas čita tekst u dokumentu. Taj je dog
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_CharacterCount –** broj znakova u dokumentu
-
-  - **Data\_CharactersWithSpaceCount –** broj znakova i razmaka u dokumentu
-
-  - **Data\_IsPageCountInProgress –** je li brojanje stranica u tijeku
-
-  - **Data\_LineCount –** broj redaka u dokumentu
-
-  - **Data\_PageCount –** broj stranica u dokumentu
-
   - **Data\_ParagraphCount –** broj odlomaka u dokumentu
 
   - **Data\_Play –** je li to prvi put da Word čita naglas
 
   - **Data\_ViewKind –** prikaz vrste dokumenta
-
-  - **Data\_WordCount –** broj riječi u dokumentu
 
 #### <a name="officewordaccessibilitylearningtoolsreadaloudstopreadaloud"></a>Office.Word.Accessibility.LearningTools.ReadAloud.StopReadAloud
 
@@ -7876,6 +8761,109 @@ Ovo su podvrste podataka u toj kategoriji:
 ### <a name="unexpected-application-exit-crash-subtype"></a>*Podvrsta neočekivanog zatvaranja (rušenja) aplikacije*
 
 Neočekivana zatvaranja aplikacija i stanje aplikacije kada se to dogodi.
+
+#### <a name="app_startup_reason"></a>app_startup_reason
+
+Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema zbog kojih se program Outlook srušio tijekom pokretanja aplikacije.  Ovaj događaj uključuje informacije o tome zašto je došlo do rušenja kako bismo brzo mogli riješiti ovaj problem.
+
+Prikupljaju se sljedeća polja: 
+
+- **app_background_time** – vrijeme tijekom kojeg je aplikacija u posljednjoj sesiji bila u pozadini
+
+- **startup_reason_type** – označava razlog zašto se aplikacija pokreće, a to će označiti je li je bilo potrebno prisilno zaustaviti ili je bio posrijedi drugi razlog. 
+
+- **watch_status_info** – prati sljedeće informacije, ako je primjenjivo. 
+
+  - **is_watch_app_installed** – utvrđuje je li korisnik instalirao aplikaciju Watch
+
+  - **is_watch_paired** – utvrđuje je li uređaj iOS uparen sa satom
+
+  - **is_watch_supported_and_active** – označava ima li sat mogućnost podrške te je li aktivan tijekom sesije
+
+Sljedeća se polja prikupljaju samo za Outlook Mobile za iOS:
+
+- **clean_exit_reason** – niz riječi koji označava je li postojao razlog za zaustavljanje aplikacije
+
+- **is_agenda_user** – označava je li korisnik nedavno otvorio raspored, što upućuje na to zapisuje li se na disk tijekom pokretanja
+
+- **is_watch_supported_and_active** – označava ima li sat mogućnost podrške te je li aktivan tijekom sesije
+
+
+#### <a name="application_crash"></a>application_crash
+
+Koristi se za nadzor kritičnih rušenja aplikacije i pomaže nam prikupiti informacije o razlogu zašto se aplikacija srušila te kako to možemo spriječiti.
+
+Prikupljaju se sljedeća polja: 
+
+- **android.hardware.** – (npr. android.hardware.bluetooth) Vrijednosti konfiguracije hardvera koje pruža platforma Android
+
+- **android.software.** – (npr. android.software.device_admin) Vrijednosti konfiguracije softvera koje pruža platforma Android
+
+- **android_version** – naziv verzije sustava Android kao što označava android.os.Build.VERSION#RELEASE
+
+- **application_package_name** – naziv paketa aplikacija kao što označava android.content.Context#getPackageName()
+
+- **application_stack_trace** – snop praćenja rušenja
+
+- **application_version_code** – kod verzije aplikacije koji je definirala aplikacija Outlook
+
+- **application_version_name** – naziv verzije aplikacije koji je definirala aplikacija Outlook 
+
+- **com.** (npr. com.google.android.feature.FASTPASS_BUILD, com.amazon.feature.PRELOAD, com.samsung.android.bio.face) Vrijednosti konfiguracije specifične za proizvođača koje je pružila platforma Android
+
+- **device_brand** – marka uređaja (proizvođač ili nosač) kao što označava android.os.Build#BRAND
+
+- **device_ID** – jedinstveni ID uređaja (IMEI)
+
+- **device_manufacturer** – proizvođač uređaja kao što označava android.os.Build#MANUFACTURER
+
+- **device_model** – model uređaja kao što označava android.os.Build#MODEL
+
+- **device_name** – naziv uređaja kao što označava android.os.Build#DEVICE
+
+- **device_total_memory** – procjena ukupne veličine memorije uređaja na temelju statistika datotečnog sustava.
+
+- **glEsVersion** – ključ verzije ugrađenih sustava OpenGL Embedded
+
+
+#### <a name="crash_event"></a>crash_event
+
+Omogućuje nam prepoznavanje i ispravak situacija tijekom kojih je došlo do kritičnih rušenja aplikacije i pomaže nam prikupiti informacije o razlogu zašto se aplikacija srušila te kako to možemo spriječiti.
+
+Prikupljaju se sljedeća polja: 
+
+- **crashTime** – datum i vrijeme u koje se rušenje dogodilo kao pomoć tijekom istrage
+
+- **exceptionName** – naziv iznimke koja je izazvala rušenje kao pomoć tijekom istrage
+
+- **hasHx** – govori nam da račun koristi naš novi servis sinkronizacije kako bi nam pomogao prepoznati probleme uzrokovane našim servisom sinkronizacije
+
+- **incidentIdentifier** – jedinstveni ID za izvješće o rušenju kako bismo mogli pronaći odgovarajući problem
+
+- **isAppKill** – pomaže nam razumjeti je li ta aplikacija bila zaustavljena ili zatvorena na uređaju
+
+- **reportKey** – jedinstveni ID za instalaciju aplikacije na uređaju za buduću istragu
+
+- **signal** – signal koji je uzrokovao rušenje kako bi nam mogao pružiti više pojedinosti za istraživanje rušenja
+
+
+#### <a name="error"></a>Error
+
+Omogućuje nam razumijevanje problema s kojima se mobilne aplikacije suočavaju tijekom pokušavanja dohvaćanja postavki zaštite privatnosti s poslužitelja.
+
+Prikupljaju se sljedeća polja:
+
+- **correlationId** – jedinstveni identifikator za servisnu vezu koja je rezultirala pogreškom, što nam omogućuje što nije bilo u redu
+
+- **errorCode** – prepoznaje relevantni kod pogreške primljen iz usluge koji se može koristiti za dijagnosticiranje problema
+
+- **exceptionType** – vrsta pogreške koju je biblioteka prepoznala tijekom dohvaćanja postavke
+
+- **message** – prepoznaje poruku o pogrešci primljenu od servisa
+
+- **roamingSettingType** – označava mjesto s kojeg smo pokušali čitati postavke
+
+- **settingId** – postavka koju se pokušalo dohvatiti
 
 #### <a name="officeappdomainunhandledexceptionhandlerfailed"></a>Office.AppDomain.UnhandledExceptionHandlerFailed
 
@@ -8303,10 +9291,165 @@ Prikupljaju se sljedeća polja:
 
 - **Naziv događaja** – naziv događaja je kategorija i oznaka događaja.
 
+#### <a name="telemetry_error"></a>telemetry_error
+
+Ovaj nam događaj omogućuje dijagnosticiranje i rješavanje problema koji sprječavaju generiranje ili slanje potrebnih dijagnostičkih podataka. Ovi nam događaji pomažu shvatiti jesu li nam promaknuli ključni podaci potrebno za identifikaciju sigurnosnih problema ili velikih problema u vezi s načinom rada vaše aplikacije.
+
+Prikupljaju se sljedeća polja: 
+
+- **timer_name** – govori nam gdje se problem s telemetrijom događa, primjerice u komponenti poštanskog sandučića ili kalendara. Ovo nam pomaže prepoznati i riješiti probleme s telemetrijom koji se događaju u određenom dijelu aplikacije
+
+- **type** – govori nam vrstu pogreške timera kako bi nam pomogao prepoznati kada naša aplikacija ima bilo kakve probleme sa slanjem dijagnostičkih telemetrijskih podataka
+
+
+#### <a name="watchdog_anr"></a>watchdog_anr
+
+Potrebno za nadzor pogrešaka u funkciji aplikacije za sprječavanje slučajeva kada aplikacija prestane reagirati, a vaš se ekran zamrzne u aplikaciji (naziva se ANR – aplikacija ne reagira).
+
+Prikupljaju se sljedeća polja: 
+
+- **callstack** – poziv stoga koda gdje je ANR nastupio
+ 
+- **caused_restart** – je li aplikacija bila prisiljena ponovno se pokrenuti zbog ANR-a
+ 
+- **duration** – vrijeme tijekom kojeg je uređaj bio zamrznut
+ 
+- **id** – jedinstveni identifikator za ANR
+ 
+- **interval** – konfigurirani prag za aktivaciju ANR-a
+ 
+- **is_application_object_initialized** – je li se ANR dogodio nakon što je aplikacija bila potpuno pokrenuta ili prije
+ 
+- **last_known_is_in_foreground** – je li aplikacija nedavno bila u prvom planu ili pozadini
+
 
 ### <a name="application-feature-performance-subtype"></a>*Podvrsta performansi značajki aplikacije*
 
 Loše vrijeme odziva ili performanse u situacijama kao što su pokretanje aplikacije ili otvaranje datoteke.
+
+#### <a name="android_frame_metrics"></a>android_frame_metrics
+
+Omogućuje nam prepoznavanje i rješavanje situacija u kojima naše komponente aplikacije Android uzrokuju probleme s funkcijom, primjerice ako ne možete bez poteškoća listati ulaznom poštom.
+
+Prikupljaju se sljedeća polja: 
+
+- **animation_duration** – trajanje prikaza animacije u milisekundama
+
+- **command_issue_duration** – trajanje problema s naredbama na platformi u milisekundama 
+
+- **draw_duration** – trajanje crtanja korisničkog sučelja u milisekundama 
+
+- **input_handling_duration** – trajanje upravljanja unosom u milisekundama 
+
+- **layout_measure_duration** – trajanje mjerenja rasporeda u milisekundama
+
+- **origin** – komponenta aplikacije koja se mjeri, primjerice kalendar ili pošta
+
+- **sync_duration** – trajanje sinkronizacije okvira u milisekundama
+
+- **swap_buffers_duration** – trajanje zamjene međuspremnika u milisekundama
+
+- **total_duration** – ukupno trajanje prikaza okvira u milisekundama
+
+- **unknown_delay** – kašnjenje uzrokovano nepoznatim izvorima koji nisu izričito praćena trajanja
+
+#### <a name="cal_component"></a>cal_component
+
+Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema u okviru kojih postoji primjetan utjecaj na funkciju naših komponenti korisničkog sučelja kalendara zbog kojih biste imali probleme s pomicanjem kalendara.
+
+Prikupljaju se sljedeća polja: 
+
+- **account_counter** – prati broj računa povezanih za svaku vrstu kalendara, npr. 2 za kalendar sustava Gmail te koristi li taj račun naš novi servis sinkronizacije
+
+- **component_name** – govori nam naziv komponente kalendara kao što je Prikaz rasporeda ili Prikaz dana kako bi nam pomogao prepoznati probleme s funkcijom koji utječu na određenu komponentu u kalendaru
+
+- **display_frame_data** – prati vrijeme utrošeno na prikaz svakih 60 okvira za utvrđivanje postoje li problemi s funkcijom. 
+
+- **orientation** – govori nam je li uređaj bio u okomitom ili vodoravnom načinu kako bi nam pomogao prepoznati probleme s funkcijom koji utječu na određenu orijentaciju uređaja
+
+- **view_duration** – govori nam koliko je trajao prikaz raznih komponenti korisničkog sučelja kalendara kako bi nam pomogao prepoznati probleme s funkcijom koji utječu na vaše iskustvo kalendara
+
+#### <a name="conversation_load_time"></a>conversation_load_time
+
+Ovaj nam događaj omogućuje otkrivanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju učitavanja vaših razgovora e-pošte kako bismo osigurali da se vaše poruke e-pošte učitavaju na očekivan način.
+
+Prikupljaju se sljedeća polja: 
+
+- **cid_type** – označava kojoj vrsti računa CID pripada
+
+- **time** – govori nam količinu vremena koja je bila potrebna za dovršavanje učitavanja razgovora e-pošte.
+
+#### <a name="core_data_migration"></a>core_data_migration
+
+Omogućuje nam otkrivanje i rješavanje situacija u okviru kojih je došlo do pogreške pri ažuriranja podataka e-pošte na vašem uređaju na noviju verziju.
+
+Prikupljaju se sljedeća polja:
+
+- **db_size_megabytes** – prati veličinu baze podataka osnovnih podataka zaokruženu na najbližih 25 megabajta i s najvećom veličinom od 500 megabajta
+
+- **db_wal_size_megabytes** – prati veličinu baze podataka osnovnih podataka kada je netaknuta glavna datoteka za spremanje zaokružena na najbliži 1 megabajt i s najvećom veličinom od 10 megabajta
+
+- **free_space_megabytes** – prati slobodan prostor dostupan u grupama od 10, 100, 1000, 10 000 i zatim 100 000. 
+
+- **migration_duration_seconds** – prati trajanje migracije zaokruženo na jedan od ovih termina – 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180 (180 i više trebalo bi biti samo 180)
+
+#### <a name="core_data_performance"></a>core_data_performance
+
+Omogućuje nam otkrivanje i rješavanje situacija kada podaci e-pošte koje spremamo na vaš uređaj uzrokuju probleme s funkcijom.
+
+Prikupljaju se sljedeća polja:
+
+- **Caller** – prati naziv entiteta koji poziva radnju spremanja
+
+- **db_size_megabytes** – prati veličinu baze podataka osnovnih podataka zaokruženu na najbližih 25 megabajta i s najvećom veličinom od 500 megabajta
+
+- **duration** – prati veličinu vremena koja je potrebna za dovršavanje postupka
+
+- **entity** – prati naziv entiteta koji je pozvao radnju dohvaćanja
+
+- **operation** – neobrađena vrijednost radnje, bilo spremanje, dohvaćanje ili „read write queue blocked”
+
+#### <a name="inbox_component"></a>inbox_component
+
+Ovaj nam događaj omogućuje otkrivanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju komponenti korisničkog sučelja vaše ulazne pošte koji bi doveli do neispravnog učitavanja ili prikaza poruka e-pošte, avatara ili stanja pročitano/nepročitano.
+
+Prikupljaju se sljedeća polja: 
+
+- **above_40fps** – broj prikazanih okvira iznad 40 fps
+
+- **above_50fps** – broj prikazanih okvira iznad 50 fps
+
+- **above_55fps** – broj prikazanih okvira iznad 55 fps
+
+- **account_counter** – količina svake vrste računa koji postoji na uređaju, primjerice račun sustava Office 365 = 1 račun, račun Outlook.com = 1 račun.
+
+- **ad_not_shown_reason** – razlog zašto se oglasi ne prikazuju
+
+- **ad_shown** – je li se određeni oglas prikazao (ako su oglasi omogućeni)
+
+- **age** – dob osobe (koristi se za potvrdu usklađenosti s dobnim ograničenjima za oglase)
+
+- **component_name** – naziv komponente/prikaza koji je aktivan tijekom filtriranja
+
+- **has_hx** – ima li uređaj najmanje jedan račun Hx (naš novi servis za sinkronizaciju poruka e-pošte)
+
+- **has_subscription** – ima li uređaj pretplatu na oglase
+
+- **is_all_accounts_inbox** – nalazi li se trenutna ulazna pošta u mapi „svi računi”
+
+- **is_current_account** – je li trenutno aktivni račun ujedno račun za oglase
+
+- **load_error_code** – kod pogreške tijekom učitavanja oglasa
+
+- **network_error_code** – kod mrežne pogreške tijekom zahtijevanja oglasa
+
+- **orientation** – orijentacija ekrana u trenutku događaja (okomito ili vodoravno)
+
+- **sub_error_type** – detaljna vrsta pogreške
+
+- **total_count** – ukupan broj okvira koji komponenta prikazuje
+
+- **view_duration** – koliko je dugo korisnik pregledavao komponentu
 
 #### <a name="initial_page_landing"></a>Initial_page_landing 
  
@@ -8399,6 +9542,50 @@ Ovaj događaj označava da pogrešku javlja raščlanitelj JSON-a.  Morat ćemo 
 Prikupljaju se sljedeća polja: 
 
 - **Error** – sastoji se od poruke o pogrešci koju objekt pogreške vraća.
+
+#### <a name="mail_filter_component"></a>mail_filter_component
+
+Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju vašeg doživljaja filtriranja poruka e-pošte koji bi doveli do neispravnog učitavanja ili prikaza vaših filtara.
+
+Prikupljaju se sljedeća polja: 
+
+- **above_40fps** – broj prikazanih okvira iznad 40 fps
+ 
+- **above_50fps** – broj prikazanih okvira iznad 50 fps
+ 
+- **above_55fps** – broj prikazanih okvira iznad 55 fps
+ 
+- **account_counter** – količina svake vrste računa koji postoji na uređaju, primjerice račun sustava Office 365 = 1 račun, račun Outlook.com = 1 račun.
+ 
+- **ad_not_shown_reason** – razlog zašto se oglasi ne prikazuju
+ 
+- **ad_shown** – prikazuje li se određeni oglas (ako su oglasi omogućeni)
+ 
+- **age** – dob osobe (koristi se za potvrdu usklađenosti s dobnim ograničenjima za oglase)
+ 
+- **component_name** – naziv komponente/prikaza koji je aktivan tijekom filtriranja
+ 
+- **folder_type** – vrsta mape koja se filtrira (npr. Ulazna pošta, Smeće, Nije dio sustava)
+ 
+- **has_hx** – ima li uređaj najmanje jedan račun Hx (novi servis za sinkronizaciju poruka e-pošte)
+ 
+- **has_subscription** – ima li uređaj pretplatu na oglase
+ 
+- **is_all_accounts_inbox** – nalazi li se trenutna ulazna pošta u mapi „svi računi”
+ 
+- **is_current_account** – je li trenutno aktivni račun ujedno račun za oglase
+ 
+- **load_error_code** – kod pogreške tijekom učitavanja oglasa
+ 
+- **network_error_code** – kod mrežne pogreške tijekom zahtijevanja oglasa
+ 
+- **orientation** – orijentacija ekrana u trenutku događaja (okomito ili vodoravno)
+ 
+- **sub_error_type** – detaljna vrsta pogreške
+ 
+- **total_count** – ukupan broj okvira koji komponenta prikazuje
+ 
+- **view_duration** – koliko je dugo korisnik pregledavao komponentu
 
 #### <a name="officeandroidandroidofficelaunchtolandingpagelatency"></a>Office.Android.AndroidOfficeLaunchToLandingPageLatency
 
@@ -8906,9 +10093,127 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_WasSuccessful: bool –** istinito ako je otvaranje bilo uspješno
 
+#### <a name="onenotesyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted
+
+Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote za platformu Android, bilježnice pravilno dodijele kako bi im se moglo jednostavno pristupiti. To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge
+
+Prikupljaju se sljedeća polja: 
+
+- **AppSuspendedDuringEvent** – vraća Booleovu vrijednost koja označava je li aplikacija obustavljena tijekom dodjele resursa
+
+- **NetworkConnection** – vrsta mrežne povezivosti uređaja koji se koristi
+
+- **NetworkDataExchange** – bilježi broj bajtova razmijenjenih tijekom dodjele resursa.
+
+- **ServerType** – vraća vrstu poslužitelja koji nudi uslugu
+
+- **TimeTakenInMilliSeconds** – vraća vrijeme koje je potrebno za dovršavanje dodjele resursa u milisekundama
+
+#### <a name="onenotesyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted
+
+Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote za platformu Android, bilježnice pravilno dodijele kako bi im se moglo jednostavno pristupiti.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge
+
+Prikupljaju se sljedeća polja: 
+
+- **NetworkConnection** – vrsta mrežne povezivosti uređaja koji se koristi
+
+- **ServerType** – vraća vrstu poslužitelja koji nudi uslugu
+
+#### <a name="perf_event"></a>perf_event
+
+Koristi se za praćenje mogućih negativnih utjecaja na funkciju učitavanja različitih dijelova aplikacije, primjerice za osiguravanje da se vaša ulazna pošta što brže učitava tijekom prvog otvaranja aplikacije.
+
+Prikupljaju se sljedeća polja: 
+
+- **app_start_show_message_list** – to znači da je došlo do problema s funkcijom u okviru pokretanja aplikacije, što je dovelo do dugačkog učitavanja popisa poruka vaše ulazne pošte
+
+- **event_type** – govori nam vrstu događaja funkcije koji je doveo do problema s funkcijom kako bi nam pomogao prepoznati probleme u vezi s određenom vrstom.   
+
+- **extra_params** – razvojni inženjer ovdje može dodati dodatne parametre kako bi nam pomogao pružiti više pojedinosti o tome što bi moglo uzrokovati ovaj problem s funkcijom, tj. kada je ova radnja započela i završila itd. 
+
+- **total_time_elapsed** – govori nam koliko je događaj funkcije trajao kako bi nam pomogao razumjeti ozbiljnost problema s funkcijom
+
+#### <a name="performance_record"></a>performance_record
+
+Omogućuje nam otkrivanje i rješavanje situacija kada iskorištenost memorije aplikacije i CPU postanu kritični visoki, što može dovesti do usporavanja vašeg uređaja
+
+Prikupljaju se sljedeća polja: 
+
+- **category** – govori nam je li aplikacija u određenom trenutku u prvom planu ili pozadini. Moguće vrijednosti uključuju prvi plan ili pozadinu.
+
+- **cpu_usage** – govori nam koliko je CPU-a aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju
+
+- **is_watch_app_installed** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on instaliran kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
+
+- **is_watch_paired** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on uparen s uređajem kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
+
+- **is_watch_supported_and_active** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on aktivan kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
+
+- **memoAry_used_percentage** – govori nam koji je postotak memorije aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju
+
+- **memory_used** – govori nam koliko je memorije aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju
+
+
 ### <a name="application-activity-error-subtype"></a>*Podvrsta pogreške aktivnosti aplikacije*
 
 Pogreške u funkcioniranju značajke ili korisničkog okruženja.
+
+#### <a name="assertion"></a>assertion
+
+Ovaj nam događaj omogućuje otkrivanje kada su nastupile kritične pogreške aplikacije koje bi uzrokovale rušenje vaše aplikacije ili iskustvo ozbiljnih problema, primjerice prikaz praznih redaka u vašoj ulaznoj pošti.
+
+Prikupljaju se sljedeća polja:
+
+- **count** – ukupan broj stavki povezanih s pogreškom; primjerice, broj kalendara koji imaju pogreške
+
+- **has_hx** – govori nam da račun koristi naš novi servis sinkronizacije kako bi nam pomogao prepoznati probleme uzrokovane našim servisom sinkronizacije
+
+- **host_name** – naziv glavnog računala servisa koji je bio uključen u grešku kako bi nam pomogao prepoznati probleme u vezi s određenim glavnim računalom
+
+- **host_type** – vrsta glavnog računala koje je bilo uključeno u pogrešku kako bi nam pomogao prepoznati probleme u vezi s vrstom određenog glavnog računala
+
+- **message** – prilagođena poruka za označavanje da se koristi za dijagnozu problema 
+
+- **origin** – podrijetlo pogreške u kodu koji nam pomaže prepoznavanje problema u vezi s određenim dijelom koda
+
+- **stacktrace** – snop praćenja u kojem je označavanje nastupilo kako bi nam pomogao prepoznati probleme u vezi s određenim dijelom koda
+
+- **type** – vrsta pogreške označavanja koja je nastupila, npr. null_folder_name, compose_selected_null_account, kako bi nam pomogao prepoznati probleme u vezi s određenim dijelom koda
+
+#### <a name="edit_contact_error"></a>edit_contact_error
+
+Omogućuje nam otkrivanje i rješavanje situacija u okviru kojih su pogreške uzrokovane kada pokušavate vidjeti ili uređivati kontakte putem aplikacije.
+
+Prikupljaju se sljedeća polja: 
+
+- **errorType** – vrsta pogreške koja je nastupila kako bi nam pomogao dijagnosticirati problem
+
+- **field** – polje kontakta koje je korisnik pokušao uređivati kako bi nam pomogao dijagnosticirati problem
+
+- **version** – verzija servisa kartice kontakta koji koristimo kako bi nam pomogao dijagnosticirati problem
+
+#### <a name="error_report"></a>error_report
+
+Ovaj nam događaj omogućuje prepoznati kada su nastupile kritične pogreške korištene aplikacije da bismo mogli spriječiti probleme koji mogu prouzročiti rušenje aplikacije ili vam onemogućiti čitanje e-pošte. 
+
+Prikupljaju se sljedeća polja: 
+
+- **client-request-id** – identifikator zahtjeva klijenta za zahtjev koji je uzrokovao pogrešku
+ 
+- **date** – datumska oznaka zahtjeva koji je uzrokovao pogrešku
+
+- **error** – vrsta pogreške, npr. get_mailbox_location_failed
+ 
+- **error_body** – tijelo poruke o pogrešci
+ 
+- **is_x_mailbox_anchor_set** – je li na zahtjevu bilo postavljeno svojstvo X-AnchorMailbox
+ 
+- **reason** – razlog za pogrešku, npr. poruka o pogrešci
+ 
+- **request-id** – identifikator zahtjeva poslužitelja za zahtjev koji je uzrokovao pogrešku
+ 
+- **source** – izvor pogreške unutar infrastrukture modela objekta, u pravilu „BE” ili „FE”
+
 
 #### <a name="officeairspacebackendwin32graphicsdriversofthang"></a>Office.AirSpace.Backend.Win32.GraphicsDriverSoftHang 
 
@@ -9907,6 +11212,20 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.SDKVersion** – verzija klijenta usluge upravljanja pravima
 
+#### <a name="save_error"></a>save_error
+
+Omogućuje nam otkrivanje i rješavanje situacija u kojima je došlo do pogreške kada ste pokušali spremiti datoteku.  On prati pogreške uzrokovane neuspješnim spremanjem datoteke, uključujući opisnu poruku o pogrešci kako bi nam pomogao riješiti problem.
+
+Prikupljaju se sljedeća polja: 
+
+- **error** – vrsta pogreške koja je nastupila kako bi nam pomogao otkriti i riješiti probleme u vezi s određenom vrstom pogreške
+
+- **file_type** – vrsta datoteke koju je korisnik pokušao spremiti (primjerice .doc)
+
+- **origin** – odakle pokušaj spremanja potječe (primjerice iz poruke e-pošte) kako bismo mogli prepoznati probleme u vezi sa spremanjem datoteke s određenog mjesta u aplikaciji
+
+- **token_type** – vrsta tokena korištenog za provjeru autentičnosti radi spremanja datoteka koji nam pomaže prepoznati probleme s provjerom autentičnosti u vezi sa spremanjem datoteke
+
 
 ## <a name="device-connectivity-and-configuration-data-events"></a>Događaji koji se odnose na povezivost i konfiguracijske podatke
 
@@ -9918,6 +11237,124 @@ Ovo su podvrste podataka u toj kategoriji:
 ### <a name="device-connectivity-and-configuration-subtype"></a>*Podvrsta događaja koji se odnose na povezivost i konfiguraciju uređaja*
 
 Stanje mrežne veze i postavke uređaja, kao što je memorija.
+
+#### <a name="application_did_receive_memory_warning"></a>application_did_receive_memory_warning
+
+Ovaj se događaj šalje kada nam Apple kaže da aplikaciji ponestaje memorije. On nam govori da smo uveli problem s upravljanjem memorijom na vašem uređaju.
+
+Prikupljaju se sljedeća polja: 
+
+- **current_memory_used** – govori nam količinu memorije koju je aplikacija koristila u trenutku kad je aplikaciji ponestalo memorije.
+
+- **current_memory_used_percentage** – govori nam postotak memorije koju je aplikacija koristila među ukupnom dostupnom memorijom u trenutku kad je aplikaciji ponestalo memorije.
+
+- **currentVC** – govori nam prikaz koji se trenutno prikazuje kad aplikaciji ponestane memorije.
+
+- **has_hx** – govori nam da račun koristi naš novi servis sinkronizacije kako bi nam pomogao prepoznati probleme uzrokovane našim servisom sinkronizacije
+
+- **is_watch_app_installed** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on instaliran kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
+
+- **is_watch_paired** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on uparen s uređajem kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
+
+- **is_watch_supported_and_active** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on aktivan kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
+
+- **rn_initialized** – govori nam je li stavka React Native bila pokrenuta u trenutku kad je aplikaciji ponestalo memorije.
+
+- **running_time** – govori nam količinu vremena koju je aplikacija provela na pokretanje u trenutku kad je aplikaciji ponestalo memorije.
+
+#### <a name="conversation_memory_leak"></a>conversation_memory_leak
+
+Omogućuje nam otkrivanje situacija u kojima naš razgovor poruka e-pošte uzrokuje korištenje više memorije na vašem uređaju od očekivanog.
+
+Prikupljaju se sljedeća polja:
+
+- Ne prikupljaju se nikakva polja ni dodatni podaci. Prikupljaju se samo zapisnici ako postoji curenje memorije u vezi s niti razgovora.
+
+#### <a name="core_data_corruption"></a>core_data_corruption
+
+Omogućuje nam otkrivanje situacija u kojima vam ne možemo prikazati vaše poruke e-pošte ili kalendar jer je mjesto na kojem spremamo e-poštu na vašem uređaju postalo oštećeno.
+
+Prikupljaju se sljedeća polja:
+
+- **errorSource** – označava je li došlo iz radnje spremanja ili kreiranja
+
+- **sqlError** – numerički kod pogreške naveden u https://www.sqlite.org/c3ref/c_abort.html
+
+#### <a name="core_data_corruption_user_reset"></a>core_data_corruption_user_reset
+
+Omogućuje nam prepoznavanje situacija u kojima ste izbrisali ili vratili izvorne postavke svog računa u našoj aplikaciji i kada je to bilo uzrokovano oštećenjem podataka e-pošte koje smo pohranili na vašem uređaju.
+
+Prikupljaju se sljedeća polja:
+
+- **errorSource** – navodi gdje se oštećenje dogodilo, bilo tijekom spremanja ili brisanja
+
+#### <a name="core_data_diagnostics"></a>core_data_diagnostics 
+
+Omogućuje nam otkrivanje i rješavanje situacija u kojima naš prostor za pohranu poruka e-pošte koristi previše prostora za pohranu vašeg uređaja
+
+Prikupljaju se sljedeća polja:
+
+- **db_size_megabytes** – prati veličinu baze podataka osnovnih podataka zaokruženu na najbližih 25 megabajta i s najvećom veličinom od 500 megabajta
+
+#### <a name="general_properties_log"></a>general_properties_log
+
+Ovaj događaj prikuplja informacije koje nam omogućuju kategoriziranje i razvrstavanje problema unutar aplikacije Outlook koji su povezani s postavkama pristupačnosti i uređaja.  Ova je kategorizacija potrebna za određivanje prioriteta utjecaja problema na klijente.
+
+Sljedeća se polja prikupljaju samo za iOS:
+
+- **bold_text** – govori nam je li na uređaju uključen podebljan tekst kako bi nam pomogao prepoznati probleme u vezi s podebljanim tekstom
+
+- **closed_captioning** – govori nam je li korisnik uključio titlanje na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s titlanjem
+
+- **darker_system_colors** – govori nam je li korisnik uključio zatamnjenje boja sustava na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **gray_scale** – govori nam je li korisnik uključio sive tonove na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **guided_access** – govori nam je li korisnik uključio vođeni pristup na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **invert_colors** – govori nam je li korisnik uključio postavku za obrtanje boja na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **mono_audio** – govori nam je li korisnik uključio postavku za monozvuk na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **reduce_motion** – govori nam je li korisnik uključio postavku za smanjenje kretnji na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **reduce_transparency** – govori nam je li korisnik uključio postavku za smanjenje prozirnosti na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **speak_screen** – govori nam je li korisnik uključio postavku za monozvuk na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **speak_selection** – govori nam je li korisnik uključio postavku za izgovaranje odabira na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **switch_control** – govori nam je li korisnik uključio postavku za promjenu kontrola na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **voice_over** – govori nam je li korisnik uključio postavku za značajku VoiceOver na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+Sljedeća se polja prikupljaju samo za Android:
+
+- **braille** – govori nam je li korisnik uključio postavku za obrtanje boja na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **caption** – govori nam je li korisnik uključio titlanje na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s titlanjem
+
+- **color_inversion** – govori nam je li korisnik uključio postavku za obrtanje boja na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **high_contrast** – govori nam je li korisnik uključio postavku za visoki kontrast na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **large_text** – govori nam je li na uređaju uključen veliki tekstni znak kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **oem_preinstall** – govori nam je li naša aplikacija bila unaprijed instalirana na uređaju (to se odnosi samo na uređaje Samsung)
+
+- **supported_abis** – govori nam koju vrsta binarnih sučelja aplikacije (ABI-ova) platforma uređaja podržava kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **switch_access** – govori nam je li korisnik uključio postavku za promjenu pristupa na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+- **talkback** – govori nam je li korisnik uključio postavku za značajku TalkBack na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
+
+#### <a name="low_storage_warning"></a>low_storage_warning
+
+Ovo je potrebno za nadzor toga zauzima li naša aplikacija iznenada većinu prostora za pohranu na vašem uređaju zbog visoke upotrebe memorije, što upućuje na to da uređaju ponestaje prostor za pohranu
+
+Prikupljaju se sljedeća polja: 
+
+- **free_bytes** – količina slobodnog prostora za pohranu dostupnog na uređaju
 
 #### <a name="officeairspaceairspacelocalblocklistdriverupdated"></a>Office.AirSpace.AirSpaceLocalBlocklistDriverUpdated
 
