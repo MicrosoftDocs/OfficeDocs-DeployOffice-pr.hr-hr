@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
-ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
+ms.openlocfilehash: 2d285e2e0494b08e6d17a0a72bd8465e6c8edce7
+ms.sourcegitcommit: 2b494bb428a3a1b837376c0ab9ef9c2357e3165f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42224984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42939754"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -95,7 +95,7 @@ Prikuplja se kada Office korisniku prikaže upit za prijavu pomoću provjere aut
 
 Upiti za provjeru autentičnosti zajedno s pozadinskim pribavljanjem tokena koriste se za utvrđivanje je li korisnik u neispravnom stanju provjere autentičnosti, koje se za korisnika očituje praktički izvanmrežnim stanjem klijenta. Neispravna provjera autentičnosti može i onemogućiti dohvaćanje licence, što uzrokuje potpunu nemogućnost korištenja klijenta.
 
-Upiti za prijavu pomoću provjere autentičnosti na temelju obrazaca (FBA) koriste se u nekim scenarijima lokalne provjere autentičnosti i najčešće ne želimo da se to događa jer bi svi trebali koristiti modernu provjeru autentičnosti zbog sigurnosnih slabih točaka povezanih s provjerom autentičnosti na temelju obrazaca.
+Upiti za prijavu pomoću provjere autentičnosti na temelju obrazaca (FBA) upotrebljavaju se u nekim scenarijima lokalne provjere autentičnosti i najčešće ne želimo da se to događa jer bi svi trebali koristiti modernu provjeru autentičnosti zbog sigurnosnih slabih točaka povezanih s provjerom autentičnosti na temelju obrazaca.
 
 Prikupljaju se sljedeća polja:
 
@@ -498,7 +498,7 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_Active –** trenutni manifest strujanja koji provjeravamo na disku
+  - **Data\_Active –** trenutačni manifest strujanja koji provjeravamo na disku
 
   - **Data\_ActivePackages –** označava pakete koje manifest sadrži
 
@@ -506,7 +506,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_AddFileCount –** broj datoteka koje dodajemo
 
-  - **Podataka\_AddFileFiles -** uzorak datoteka koje dodajemo
+  - **Podataka\_AddFileFiles –** uzorak datoteka koje dodajemo
 
   - **Data\_CompressionLevel –** način kompresije datoteka
 
@@ -594,7 +594,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officeclicktorunodt"></a>Office.ClickToRun.ODT
 
-Podaci o instalaciji i inventaru sustava Office prikupljeni kada IT administrator pokrene setup.exe s tehnologijom "klikom do cilja" alata za implementaciju sustava Office radi izmjene proizvoda sustava Office koje su instalirali korisnici. Koristi se za mjerenje uspjeha/pogrešaka instalacija sustava Office koje je u potpunosti pokrenuo administrator, uključujući provjere preduvjeta.
+Podaci o instalaciji i inventaru sustava Office prikupljeni kada IT administrator pokrene setup.exe s tehnologijom „klikom do cilja” alata za implementaciju sustava Office radi izmjene proizvoda sustava Office koje su instalirali korisnici. Koristi se za mjerenje uspjeha/pogrešaka instalacija sustava Office koje je u potpunosti pokrenuo administrator, uključujući provjere preduvjeta.
 
 Prikupljaju se sljedeća polja:
 
@@ -628,11 +628,11 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_PrereqFailure\_Type –** neispunjen preduvjet na koji smo naišli
 
-  - **Data\_ProductReleaseId** – proizvod koji instaliramo, npr. Office 365 ProPlus
+  - **Data\_ProductReleaseId –** proizvod koji instaliramo, npr. Office 365 ProPlus
 
 ### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
 
-Izvješća o statusu za novi kanal ažuriranje „klikom do cilja“ („Repoman“) i ako uspješno preuzima i primjenjuje ažuriranja za Office.
+Izvještava o statusu za novi kanal ažuriranja „klikom do cilja“ („Repoman“) i ako uspješno preuzima i primjenjuje ažuriranja za Office.
 
 Prikupljaju se sljedeća polja:
 
@@ -2299,7 +2299,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_CorruptionChecksOnly –-** označava radi li se samo o traženju oštećenja bez ažuriranja
+  - **Data\_CorruptionChecksOnly –** označava radi li se samo o traženju oštećenja bez ažuriranja
 
   - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
@@ -2436,43 +2436,43 @@ Prikupljaju se sljedeća polja:
 Prijavljuje o postupcima preuzimanja datoteka da bi se utvrdio uspjeh postupka, vrsta izvršenog preuzimanja i dijagnostičke informacije.
 
 
-- **BytesFromGroupPeers -** Bajtovi kolega iz grupe, samo za preuzimanja pomoću optimizacije isporuke
+- **BytesFromGroupPeers –**    bajtovi kolega iz grupe, samo za preuzimanja pomoću optimizacije isporuke
 
-- **BytesFromHttp -**    Bajtovi sa http rukovatelja, samo za preuzimanja pomoću optimizacije isporuke
+- **BytesFromHttp –**     bajtovi s http rukovatelja, samo za preuzimanja pomoću optimizacije isporuke
 
-- **ByteFromInternetPeers -**   Bajtovi kolega s interneta, samo za preuzimanja pomoću optimizacije isporuke 
+- **ByteFromInternetPeers –**     bajtovi kolega s interneta, samo za preuzimanja pomoću optimizacije isporuke 
 
-- **BytesFromLanPeers -**   Bajtovi Lan kolega, samo za preuzimanja pomoću optimizacije isporuke 
+- **BytesFromLanPeers –**    bajtovi Lan kolega, samo za preuzimanja pomoću optimizacije isporuke 
 
 - **CancelledJobs -**    Broj otkazanih zahtjeva u sesiji
 
-- **Connected -**   Jeste li povezani s izvorom
+- **Connected –**    jeste li povezani s izvorom
 
-- **ErrorCode -**   Kôd posljednje pogreške
+- **ErrorCode –**    kôd posljednje pogreške
 
 - **ErrorDetails -**     Pojedinosti posljednje pogreške
 
 - **ErrorMessage -**    Poruka posljednje pogreške 
 
-- **ErrorSource -** Izvor posljednje pogreške, npr. Povezivanje, Učitavanje datoteke ili Raspon učitavanja
+- **ErrorSource –**    izvor posljednje pogreške, npr. Povezivanje, Učitavanje datoteke ili Raspon učitavanja
 
-- **FailedJob -**   Broj neuspjelih zahtjeva u sesiji
+- **FailedJob –**    broj neuspjelih zahtjeva u sesiji
 
 - **FileSize -**    Veličina resursa
 
 - **SourcePathNoFilePath -**    Izvještava se samo o izvorišnom putu resursa samo http izvora, put lokalne datoteke ili UNC put je filtriran
 
-- **SucceededJobs -**   Broj uspješnih zahtjeva u sesiji
+- **SucceededJobs –**    broj uspješnih zahtjeva u sesiji
 
-- **TotalJobs -**    Ukupan broj zahtjeva u sesiji
+- **TotalJobs -**     ukupan broj zahtjeva u sesiji
 
-- **TotalRequestedBytes -** Ukupno traženih bajtova u sesiji
+- **TotalRequestedBytes –**     ukupno traženih bajtova u sesiji
 
-- **TotalTransferTime -**   Ukupno vrijeme prijenosa u sesiji
+- **TotalTransferTime –**    ukupno vrijeme prijenosa u sesiji
 
-- **TransferredBytes -**    ukupno prenesenih bajtova u sesiji
+- **TransferredBytes –**     ukupno prenesenih bajtova u sesiji
 
-- **TransportType -**   Vrsta prijenosa, npr. (u memoriji optimizaciji isporuke, putem HTTP protokola, putem pozadinskog pametnog servisa za transfer)
+- **TransportType –**    vrsta prijenosa, npr. (u memoriji optimizaciji isporuke, putem HTTP protokola, putem pozadinskog pametnog servisa za transfer)
 
 
 
@@ -2486,7 +2486,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_IsInstallMode** – ako instaliramo i preuzimamo datoteke, vrijednost je 1, a ako ne, vrijednost je 0
 
-  - **Data\_SourceProtocol –** označava preuzimamo li iz mreže podataka sadržaja (CDN-a), s računala na koje instaliramo, iz lokalne mreže ili iz resursa u lokalnoj područnoj mjreži.
+  - **Data\_SourceProtocol –** označava preuzimamo li iz mreže podataka sadržaja (CDN-a), s računala na koje instaliramo, iz lokalne mreže ili iz resursa u lokalnoj područnoj mreži.
 
   - **Data\_Status**  – označava uspjeh ili neuspjeh 
 
@@ -2513,15 +2513,15 @@ Prikupljaju se sljedeća polja:
 
 Prijavljuje rezultat sveobuhvatnih pokušaja instalacije
 
- - **ErrorCode –**  Vrijednost cijelog broja koja je povezana s neobrađenom iznimkom
+ - **ErrorCode –**    vrijednost cijelog broja povezana je s neobrađenom iznimkom
 
- - **ErrorDetails –**   Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+ - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
- - **ErrorMessage –**   Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+ - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
- - **ErrorType –**  Niz koji opisuje kategoriju neobrađene iznimke
+ - **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
- - **ExitCode –**   Vrijednost cijelog broja  povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
+ - **ExitCode –**    vrijednost cijelog broja povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
 
 ### <a name="officeclicktorununiversalbootstrappercalculateparameters"></a>Office.ClickToRun.UniversalBootstrapper.CalculateParameters
 
@@ -2529,61 +2529,61 @@ Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameter
 
 - **BitField –**    Vrijednost cijelog broja BitField argumenta koja nam govori je li potreban eksplicitni instalacijski /ažurirani kanal (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani)
 
-- **ChannelID –**   Cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
+- **ChannelID –**    cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
 
-- **CMDMode –** Neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe.
+- **CMDMode –**    neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe.
 
-- **C2RClientUICulture –**  Kultura klijenta C2R koju treba instalirati
+- **C2RClientUICulture –**    kultura klijenta C2R koju treba instalirati
 
-- **ErrorCode –**   Vrijednost cijelog broja povezana je s neobrađenom iznimkom
+- **ErrorCode –**    vrijednost cijelog broja povezana je s neobrađenom iznimkom
 
 - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
 - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
-- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+- **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
 - **ExcludedApps –**    Niz koji navodi pojedinačna imena aplikacija za Office koje su zatražene da se izuzmu iz instaliranih Office paketa
 
-- **InstalledCabVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R klijenta već je instalirana
+- **InstalledCabVersion –**    verzija „16.0.xxxxx.yyyyy” Office C2R klijenta već je instalirana
 
-- **InstalledProductVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R proizvoda već je instalirana
+- **InstalledProductVersion –**    verzija „16.0.xxxxx.yyyyy” Office C2R proizvoda već je instalirana
 
-- **IsC2RServiceRunning –** Booleova zastavica koja označava je li moderna usluga lokalnog računala C2R klijenta pokrenuta i radi na uređaju
+- **IsC2RServiceRunning –**    Booleova zastavica koja označava je li moderna usluga lokalnog računala C2R klijenta pokrenuta i radi na uređaju
 
-- **IsElevatedFlagSet –**   Booleova zastavica koja označava je li automatsko pokretanje već pokušalo steći povećanje ovlasti administratora
+- **IsElevatedFlagSet –**    Booleova zastavica koja označava je li automatsko pokretanje već pokušalo steći povećanje ovlasti administratora
 
-- **IsFireFlyInstalled –**  Booleova zastavica koja pokazuje je li Office 2013 RTM C2R klijent trenutno instaliran
+- **IsFireFlyInstalled –**    Booleova zastavica koja pokazuje je li Office 2013 RTM C2R klijent trenutačno instaliran
 
-- **IsFireflyServiceRunning –** Booleova zastavica koja označava je li servis lokalnog računala RTM C2R klijenta iz 2013. godine pokrenut i radi na uređaju
+- **IsFireflyServiceRunning –**    Booleova zastavica koja označava je li servis lokalnog računala RTM C2R klijenta iz 2013. godine pokrenut i radi na uređaju
 
-- **IsOfficeInstalled –**   Booleova zastavica koja označava je li moderni Office klijent već instaliran
+- **IsOfficeInstalled –**    Booleova zastavica koja označava je li moderni Office klijent već instaliran
 
-- **OfficeCultures –**  Serijalizirani popis Office kultura koje treba instalirati
+- **OfficeCultures –**    serijalizirani popis Office kultura koje treba instalirati
 
 - **OfficeSourceType –**    Neslužbeni niz povezan s identifikatorom vrijednosti instalacijskog izvora (CDN, HTTP, UNC, CMBITS, DVD, LOCAL)
 
-- **Origin –**  Vrijednost niza koja govori koji od podržanih izvora (Portoriko [PR], Singapur [SG], Dublin [DB]) treba upotrijebiti za početno instalacijsko strujanje
+- **Origin –**    vrijednost niza koja govori koji od podržanih izvora (Portoriko [PR], Singapur [SG], Dublin [DB]) treba upotrijebiti za početno instalacijsko strujanje
 
 - **PlatformFromLink –**    Niz koji pokazuje traženi x86 | x64 | zadani bit sustava Office zatražen od C2R servisa postavljanja
 
-- **PlatformOfExistingInstallation –**  Niz koji pokazuje je li x86 ili X64 Office već instaliran na uređaju
+- **PlatformOfExistingInstallation –**    niz koji pokazuje je li x86 ili X64 Office već instaliran na uređaju
 
-- **PlatformToInstall –**   Niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
+- **PlatformToInstall –**    niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
 
-- **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (na primjer, "O365ProPlusRetail")
+- **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (primjerice, "O365ProPlusRetail")
 
-- **PridsToMigrateFromCentennial-** Niz proizvoda sustava Office za migraciju iz instalacija trgovine u značajku "klikom do cilja"
+- **PridsToMigrateFromCentennial –**    niz proizvoda sustava Office za migraciju iz instalacija trgovine u značajku „klikom do cilja”
 
-- **ProductsToAdd –**   Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
+- **ProductsToAdd –**    serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
 
 - **ProductsToMigrateFromO15C2R-** Niz proizvoda i kultura sustava Office za migraciju iz instalacije sustava Office 2013 značajkom "klikom do cilja"
 
 - **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
 
-- **SharedComputerLicensing –** Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka "SharedComputerLicensing"
+- **SharedComputerLicensing –**    Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka „SharedComputerLicensing”
 
-- **ShouldActivate –**  Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
+- **ShouldActivate –**    Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
 
 - **ShouldUninstallCentennial -** Booleova zastavica koja upućuje na to je li proizvode iz trgovine potrebno deinstalirati
 
@@ -2594,13 +2594,13 @@ Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameter
 
 Izvještava o radnji koja čita označeni unos iz ugrađenog potpisa exe datoteke.  Ovo je nedokazani koncept koji prethodna iteracija izvršne datoteke setup.exe nije implementirala i na što se oslanjamo u prenošenju korisnikovih izbora proizvoda/jezika/broja bitova s web-stranice na proces unutar izvršne datoteke setup.exe.
  
-- **ErrorCode –**   Cijeli broj povezan je s neobrađenom iznimkom
+- **ErrorCode –**    cijeli broj povezan je s neobrađenom iznimkom
 
 - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
 - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
-- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+- **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
 ### <a name="officeclicktorununiversalbootstrappercollectparameters"></a>Office.ClickToRun.UniversalBootstrapper.CollectParameters
 
@@ -2608,95 +2608,95 @@ Izvješćuje o parametrima koji se koriste za instalaciju sustava Office
 
 - **BitField –**    Vrijednost cijelog broja BitField argumenta koja nam govori je li potreban eksplicitni instalacijski /ažurirani kanal (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani)
 
-- **ChannelID –**   Cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
+- **ChannelID –**    cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
 
-- **CMDMode –** Neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
+- **CMDMode –**    neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
 
-- **C2RClientUICulture –**  Kultura klijenta C2R koju treba instalirati
+- **C2RClientUICulture –**    kultura klijenta C2R koju treba instalirati
 
-- **ErrorCode –**   Vrijednost cijelog broja povezana je s neobrađenom iznimkom
+- **ErrorCode –**    vrijednost cijelog broja povezana je s neobrađenom iznimkom
 
 - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
 - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
-- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+- **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
 - **ExcludedApps –**    Niz koji navodi pojedinačna imena aplikacija za Office koje su zatražene da se izuzmu iz instaliranih Office paketa
 
-- **InstalledCabVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R klijenta već je instalirana
+- **InstalledCabVersion –**    verzija „16.0.xxxxx.yyyyy” Office C2R klijenta već je instalirana
 
-- **InstalledProductVersion –** Verzija "16.0.xxxxx.yyyyy" Office C2R proizvoda već je instalirana
+- **InstalledProductVersion –**    verzija „16.0.xxxxx.yyyyy” Office C2R proizvoda već je instalirana
 
-- **IsC2RServiceRunning –** Booleova zastavica koja označava je li moderna usluga lokalnog računala C2R klijenta pokrenuta i radi na uređaju
+- **IsC2RServiceRunning –**    Booleova zastavica koja označava je li moderna usluga lokalnog računala C2R klijenta pokrenuta i radi na uređaju
 
-- **IsElevatedFlagSet –**   Booleova zastavica koja označava je li automatsko pokretanje već pokušalo steći povećanje ovlasti administratora
+- **IsElevatedFlagSet –**    Booleova zastavica koja označava je li automatsko pokretanje već pokušalo steći povećanje ovlasti administratora
 
-- **IsFireFlyInstalled –**  Booleova zastavica koja pokazuje je li Office 2013 RTM C2R klijent trenutno instaliran
+- **IsFireFlyInstalled –**    Booleova zastavica koja pokazuje je li Office 2013 RTM C2R klijent trenutačno instaliran
 
-- **IsFireflyServiceRunning –** Booleova zastavica koja označava je li servis lokalnog računala RTM C2R klijenta iz 2013. godine pokrenut i radi na uređaju
+- **IsFireflyServiceRunning –**    Booleova zastavica koja označava je li servis lokalnog računala RTM C2R klijenta iz 2013. godine pokrenut i radi na uređaju
 
-- **IsOfficeInstalled –**   Booleova zastavica koja označava je li moderni Office klijent već instaliran
+- **IsOfficeInstalled –**    Booleova zastavica koja označava je li moderni Office klijent već instaliran
 
-- **OfficeCultures –**  Serijalizirani popis Office kultura koje treba instalirati
+- **OfficeCultures –**    serijalizirani popis Office kultura koje treba instalirati
 
 - **OfficeSourceType –**    Neslužbeni niz povezan s identifikatorom vrijednosti instalacijskog izvora (CDN, HTTP, UNC, CMBITS, DVD, LOCAL)
 
-- **Origin –**  Vrijednost niza koja govori koji od podržanih izvora (Portoriko [PR], Singapur [SG], Dublin [DB]) treba upotrijebiti za početno instalacijsko strujanje
+- **Origin –**    vrijednost niza koja govori koji od podržanih izvora (Portoriko [PR], Singapur [SG], Dublin [DB]) treba upotrijebiti za početno instalacijsko strujanje
 
 - **PlatformFromLink –**    Niz koji pokazuje traženi x86 | x64 | zadani bit sustava Office zatražen od C2R servisa postavljanja
 
-- **PlatformOfExistingInstallation –**  Niz koji pokazuje je li x86 ili X64 Office već instaliran na uređaju
+- **PlatformOfExistingInstallation –**    niz koji pokazuje je li x86 ili X64 Office već instaliran na uređaju
 
-- **PlatformToInstall –**   Niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office.
+- **PlatformToInstall –**    niz koji pokazuje konačnu odluku o tome treba li instalirati x86 ili X64 Office
 
 - **PRID –**    Vrijednost niza koja predstavlja traženi ID izdanja proizvoda u scenariju za instalaciju kod korisnika (primjerice, "O365ProPlusRetail")
 
 - **PridsToMigrateFromCentennial-** Niz proizvoda sustava Office za migraciju iz instalacija trgovine u značajku "klikom do cilja"
 
-- **ProductsToAdd –**   Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
+- **ProductsToAdd –**    serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao instalirati
 
 - **ProductsToMigrateFromO15C2R-** Niz proizvoda i kultura sustava Office za migraciju iz instalacije sustava Office 2013 značajkom "klikom do cilja"
 
 - **ProductsToRemove –**    Serijalizirani niz koji upućuje C2R klijenta na kombinacije proizvoda/kulture koje bi trebao deinstalirati
 
-- **SharedComputerLicensing –** Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka "SharedComputerLicensing"
+- **SharedComputerLicensing –**    Booleov izraz koji ukazuje na to je li IT administrator zatražio postavljanje da bi se omogućila značajka „SharedComputerLicensing”
 
-- **ShouldActivate –**  Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
+- **ShouldActivate –**    Booleov izraz koji ukazuje na to je li IT administrator zatražio automatski pokušaj aktiviranja licenciranja u datoteci configuration.xml
 
 - **ShouldUninstallCentennial -** Booleova zastavica koja upućuje na to je li proizvode iz trgovine potrebno deinstalirati
 
-- **VersionToInstall –** Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
+- **VersionToInstall –**    vrijednost niza verzije sustava Office „16.0.xxxxx.yyyyy” koja se instalira
 
 ### <a name="officeclicktorununiversalbootstrapperexecute"></a>Office.ClickToRun.UniversalBootstrapper.Execute
 
 Izvješćuje o poduzetim radnjama koje su utjecale na stroj, što je utvrđeno obrazloženim podacima iz opcije "CalculateParameters"
 
-- **AvailableClientVersionText –**  Vrijednost niza C2R klijenta verzije "16.0.xxxxx.yyyyy" pronađena u verziji Deskriptor XML, koji se koristi kako bi se utvrdilo treba li ažurirati trenutno instalirani C2R klijent
+- **AvailableClientVersionText –**    vrijednost niza C2R klijenta verzije „16.0.xxxxx.yyyyy” pronađena u verziji Deskriptor XML, koji se koristi kako bi se utvrdilo treba li ažurirati trenutno instalirani C2R klijent
 
-- **CleanFireflyAction –**  "true" ako se planira pokretanje zadatka  CleanFireFlyAction tijekom ove instalacije
+- **CleanFireflyAction –**    „true” ako se planira pokretanje zadatka CleanFireFlyAction tijekom ove instalacije
 
-- **CleanO15Action –**  "true"  ako se planira pokretanje zadatka CleanO15Action tijekom ove instalacije
+- **CleanO15Action –**    „true” ako se planira pokretanje zadatka CleanO15Action tijekom ove instalacije
 
-- **CMDMode –** Neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
+- **CMDMode –**    neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
 
-- **DeliveryMechanism –**   "FFNRoot" guid izdvojen iz verzije Deskriptora XML (koju je izdao RDX), koji nam govori iz koje publike/kanala potječe izvor za izgradnju
+- **DeliveryMechanism –**   „FFNRoot” guid izdvojen iz verzije Deskriptora XML (koju je izdao RDX), koji nam govori iz koje publike/kanala potječe izvor za izgradnju
 
-- **DownloadC2RClientAction –** "true" ako se planira pokretanje zadatka DownloadC2RClientAction tijekom ove instalacije
+- **DownloadC2RClientAction –**    „true” ako se planira pokretanje zadatka DownloadC2RClientAction tijekom ove instalacije
 
-- **ErrorCode –**   Vrijednost cijelog broja povezana je s neobrađenom iznimkom
+- **ErrorCode –**    vrijednost cijelog broja povezana je s neobrađenom iznimkom
 
 - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
 - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
-- **ErrorType –**   Niz koji opisuje kategoriju neobrađene iznimke
+- **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
 - **ExitCode –**   Vrijednost cijelog broja  povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
 
 - **LaunchAction –**    "true" ako se planira pokretanje zadatka LaunchAction tijekom instalacije
 
-- **LaunchUpdateAction –**  "true" ako se planira pokretanje zadatka LaunchUpdateAction tijekom instalacije
+- **LaunchUpdateAction –**    „true” ako se planira pokretanje zadatka LaunchUpdateAction tijekom instalacije
 
 - **PreReqResult –**    Vrijednost cijelog broja identifikatora rezultata kada su izvedene provjere bez preduvjeta (prolaz/pad/ponovno pokretanje)
 
@@ -2705,6 +2705,8 @@ Izvješćuje o poduzetim radnjama koje su utjecale na stroj, što je utvrđeno o
 - **VersionToInstall –**   Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
 
 ### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
+
+*[Ovaj je događaj uklonjen iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 Taj se događaj koristi za pribavljanje standardnih meta-podataka pri svakom pokretanju dodatka Inventar, koji je dio Upravitelja za Office servisiranje i koristi se za informacije o Office inventaru na onim strojevima koje je IT administrator uključio. Meta-podatak od posebnog zanimanja u ovom slučaju je ID sesije, a koristi se za povezivanje s drugim podacima pohranjenima unutar usluge na oblaku po klijentu.
 
@@ -2726,7 +2728,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
-Taj se događaj bilježi kad god se pokrene poziv na web-servis koji je stvoren unutar dodatka upravitelja servisa "klikom do cilja".
+Ova se naredba bilježi svaki put kad ne uspije poziv na web-servis unutar jednog od dodataka upravitelja servisa sustava Office. Pogreške mogu nastati zbog unutarnjih pogrešaka ili nemogućnosti povezivanja s web-servisom.
 
 Prikupljaju se sljedeća polja:
 
@@ -2735,6 +2737,8 @@ Prikupljaju se sljedeća polja:
 - **Correlation ID** – nasumično generirani GUID specifičan za trenutnu instancu koji je poslan web-servisu kako bi povezao pozive između klijenta i poslužitelja.
 
 - **ErrorInfo** - brojčana oznaka pogreške koju vraćaju API-jevi poziva web-servisa sustava Office.
+
+- **ErrorMessage** – poruka koja omogućuje daljnji uvid u pogrešku. Svaka se vrsta greške mapira na niz ugrađen u kôd, a neke se vrste grešaka mapiraju na potencijalno više nizova ovisno o posebnoj vrsti greške.
 
 - **Function** – funkcija u kodu iz koje je došlo do trenutnog poziva.
 
@@ -2876,15 +2880,15 @@ Prikupljaju se sljedeća polja:
 
 - **ClientTransactionId**- jedinstveni identifikator za poziv servisa.
 
-- **ErrorCategory** – svaka vrsta pogreške može se nalaziti u više općenitim kategorijama, npr. "Retryable".
+- **ErrorCategory** – svaka vrsta pogreške može se nalaziti u više općenitim kategorijama, npr. „Retryable”.
 
-- **ErrorType**- razlog neuspjeha, kao što je "AlreadyRedeemedByOther”.
+- **ErrorType** – razlog neuspjeha, kao što je „AlreadyRedeemedByOther”.
 
-- **InAFOFlow**- Booleova oznaka koja upućuje na to da je u tijeku AFO iskupljenje.
+- **InAFOFlow** – Booleova oznaka koja upućuje na to da je u tijeku AFO iskupljenje.
 
-- **StatusCode** - rezultat servisnog poziva od jedne riječi, poput „Created“.
+- **StatusCode** – rezultat servisnog poziva od jedne riječi, poput „Created”.
 
-- **StatusMessage** – pojedinosti o kodu statusa, kao što je "Uspješno dodijeljeno".
+- **StatusMessage** – pojedinosti o kôdu statusa, kao što je „Uspješno dodijeljeno”.
 
 - **UsingNulApi**- Booleova vrijednost koja upućuje na to da li koristimo novi stog licenci za licenciranje.
 
@@ -3136,7 +3140,7 @@ Ta telemetrijska aktivnost prati točke uspjeha i neuspjeha u traženju poveziva
 
 Prikupljaju se sljedeća polja:
 
-- **GenuineTicketFailure** - govori HRESULT neuspjeha kad pokušavamo dobiti originalnu Windows karticu/ključ proizvoda (WPK).
+- **GenuineTicketFailure** – govori HRESULT neuspjeha kad pokušavamo dobiti originalnu Windows karticu/ključ proizvoda (WPK).
 
 - **PinValidationFailure** – govori zašto proces provjere valjanosti PIN-a nije uspio. Moguće pogreške:
     - GeoBlocked
@@ -3154,13 +3158,13 @@ Prikupljaju se sljedeća polja:
 - **Success** - ukazuje na to da smo uspješno dohvatili valjanu Office obvezu (PIN) za stroj.
 
 - **Tag** – govori nam da smo prestali tražiti obveze. Moguće oznake:
-  - 0x03113809  Nema Interneta/usluge greška prilikom provjere valjanosti PIN-a
-   - 0x0311380a Neuspjela provjera valjanosti PIN-a, poslano s poljem PinValidationFailure
-  - 0x0310410f  Uspjeh, poslano s poljem Uspjeh
-  - 0x0311380d  Greške koje je moguće ponovno pokrenuti (problemi s Internetom, nepoznate greške)
-  - 0x0311380e  Greške koje nije moguće ponovno pokrenuti (istekla obvezujuća ponuda)
-  - 0x0311380f  Ostale greške (licenciranje nije moguće)
-  - 0x03104111  Nije uspjelo provaljivanje PIN-a za Office, poslano s poljem PinValidationResult
+  - 0x03113809    Nema Interneta/usluge greška prilikom provjere valjanosti PIN-a
+   - 0x0311380a    Neuspjela provjera valjanosti PIN-a, poslano s poljem PinValidationFailure
+  - 0x0310410f    Uspjeh, poslano s poljem Uspjeh
+  - 0x0311380d    Greške koje je moguće ponovno pokrenuti (problemi s Internetom, nepoznate greške)
+  - 0x0311380e    Greške koje nije moguće ponovno pokrenuti (istekla obvezujuća ponuda)
+  - 0x0311380f    Ostale greške (licenciranje nije moguće)
+  - 0x03104111    Nije uspjelo provaljivanje PIN-a za Office, poslano s poljem PinValidationResult
 
 - **WpkBindingFailure** – upućuje nas na kôd pogreške prilikom dobivanja PIN-a za Office vezanog uz WPK za računalo.
 
@@ -3184,8 +3188,8 @@ Prikupljaju se sljedeća polja:
 
 - **Tag** – govori nam u kojem trenutku korisnik izlazi iz procesa AFO otkupa. Moguće oznake:
     - 0x0311380b    Korisnik je odbacio dijaloški okvir za prijavu iz dijaloškog okvira za otkup
-    - 0x0311380c  Nije uspjelo automatsko učitavanje prijave za prijavu identiteta korisnika iz dijaloškog okvira za otkup
-    - 0x03113810 Nije uspjelo učitavanje demografskih informacija o računu (pozivni broj za državu, jezične, valutne i i marketinških preferencije, te probna ponuda)
+    - 0x0311380c    Nije uspjelo automatsko učitavanje prijave za prijavu identiteta korisnika iz dijaloškog okvira za otkup
+    - 0x03113810    Nije uspjelo učitavanje demografskih informacija o računu (pozivni broj za državu, jezične, valutne i marketinške preferencije te probna ponuda)
     - 0x03113805    Korisnik je odbacio dijaloški okvir za prijavu identiteta iz dijaloškog okvira za prijavu
     - 0x03113806    Nije uspjelo automatsko učitavanje prijave identiteta korisnika iz dijaloškog okvira za prijavu
     - 0x03113807 Nije uspjelo automatsko učitavanje identiteta
@@ -3193,9 +3197,9 @@ Prikupljaju se sljedeća polja:
     - 0x03113812 Korisnik je završio dijaloški okvir Prihvati EULA
     - 0x03113808 Korisnik je prihvatio EULA
 
-- **UseInAppRedemption** nam govori držimo li korisnike u aplikaciji za otkup ili ih šaljemo na web da bi iskoristili svoj dohvaćeni PIN (unaprijed popunjeni).
+- **UseInAppRedemption** – govori nam držimo li korisnike u aplikaciji za otkup ili ih šaljemo na web da bi iskoristili svoj dohvaćeni PIN (unaprijed popunjeni).
 
-- **UseModernAFO** – nam govori koristimo li novo ili staro iskustvo za AFO.
+- **UseModernAFO** – govori nam koristimo li novo ili staro iskustvo za AFO.
 
 ### <a name="officelicensingtelemetryflowshowtrybuydialogforoobe"></a>Office.Licensing.TelemetryFlow.ShowTryBuyDialogForOOBE
 
@@ -3347,7 +3351,7 @@ Prikupljaju se sljedeća polja:
 
 Ovaj događaj označava da je došlo do pogreške prilikom povezivanja s MAU pomagačem (komponentom koja izvodi instalaciju aplikacije).  Ovaj događaj označava potencijalnu korupciju aplikacije MAU. Uređaj neće moći instalirati ažuriranja.
 
-Prikupljaju se sljedeća polja: 
+Prikupljaju se sljedeća polja:    
 
 - **App** – Proces aplikacije za slanje događaja
 
@@ -11282,6 +11286,8 @@ Događaj aktivira nenormalno ukidanje aplikacije (npr. zaustavljanje u upravitel
 
 Prikupljaju se sljedeća polja:
 
+  - **BootCompleted –** je li dovršeno pokretanje sustava Office u trenutku rušenja.
+
   - **CrashedAppBuild –** identifikator međuverzije zahvaćenog procesa.
 
   - **CrashedAppMajor –** identifikator glavne verzije zahvaćenog procesa.
@@ -11298,6 +11304,8 @@ Prikupljaju se sljedeća polja:
 
   - **CrashedSessionInitTime –** vrijeme pokretanja zahvaćenog procesa.
 
+  - **CrashTime –** vrijeme koje ukazuje da je klijent neočekivano prekinut.
+
   - **CrashType –** identifikator grupiranja za vrstu rušenja.
 
   - **DetectionTime –** vrijeme otkrivanja neočekivanog zatvaranja.
@@ -11305,6 +11313,12 @@ Prikupljaju se sljedeća polja:
   - **ExceptionAddress –** adresa u programu na kojoj je došlo do pogreške.
 
   - **ExceptionCode –** identifikator grupiranja za iznimku.
+
+  - **HandOff –** je li korisnik stvorio i predao Officeov postupak novoj sesiji.
+
+  - **HasEdit –** je li korisnik uređivao dokument u srušenom klijentu.
+
+  - **HasOpen –** je li dokument bio otvoren u srušenom klijentu.
 
   - **HexCrashTag –**  Jedinstveni identifikator kôda rušenja.
 
@@ -11330,13 +11344,17 @@ Prikupljaju se sljedeća polja:
 
   - **ModuleSize –** veličina neispravnog modula u bajtovima.
 
+  - **OfficeUILang –** jezik korisničkog sučelja u međuverziji sustava Office.
+
   - **PreviousBuild** – prethodno instalirana međuverzija
+
+  - **SafeMode –** je li sesija bila pokrenuta u sigurnom načinu rada.
 
   - **UAEOSEnvironment –** identifikator okruženja operacijskog sustava.
 
   - **UninitLibletId –** Jedinstveni identifikator za neispravnu komponentu rušenja.
 
-  - **VerifyElseCrashTag –** jedinstveni identifikator mjesta na kojem se aplikacija srušila.
+  - **VerifyElseCrashTag –** jedinstveni identifikator mjesta na kojem se aplikacija srušila. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 ### <a name="officesystemungracefulapplicationexitdesktopappexit"></a>Office.System.UngracefulApplicationExit.DesktopAppExit
 

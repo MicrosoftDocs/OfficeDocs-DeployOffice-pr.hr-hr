@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: bd9a5754a8741ee3cc96bf843c59f8f509bc1738
-ms.sourcegitcommit: de34e0fff15c3bd099df452d8f4771398f9dfaf6
+ms.openlocfilehash: 065fb887fe0af4bb68576310c3ceb4842b163bf1
+ms.sourcegitcommit: 95aa5a2587e7333dfbb2ab0d4d898789645a4275
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "42265455"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "42946176"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -30,7 +30,7 @@ ms.locfileid: "42265455"
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
-Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i rješavanja problema te poboljšavanja proizvoda. Ti podaci ne sadrže korisnikovo ime ili adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
+Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i rješavanja problema te poboljšavanja proizvoda. Ti podaci ne obuhvaćaju korisnikovo ime i prezime ni adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
 
 To su dijagnostički podaci o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows, a koji se prikupljaju i šalju tvrtki Microsoft. Neki su dijagnostički podaci obavezni, a neki nisu. Omogućujemo vam da odaberete hoćete li nam slati obavezne ili dijagnostičke podatke putem kontrola zaštite privatnosti, kao što su postavke pravila za tvrtke ili ustanove. Dijagnostičke podatke koji nam se šalju možete pogledati pomoću preglednika dijagnostičkih podataka.
 
@@ -43,7 +43,7 @@ Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 - [Neobavezni dijagnostički podaci za Office](optional-diagnostic-data.md)
 - [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
-Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
+Ako ste administrator svoje tvrtke ili ustanove, možda će vas zanimati i sljedeći članci:
 
 - [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
@@ -55,7 +55,7 @@ Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeć
 
 Obavezni dijagnostički podaci organizirani su u kategorije i podvrste podataka. U svakoj su podvrsti podataka događaji koji sadrže podatkovna polja specifična tom događaju.
 
-U sljedećoj su tablici navedene kategorije za obavezne dijagnostičke podatke. Navedene su podvrste podataka u svakoj kategoriji i opis fokusa za tu podvrstu podataka. Prikazat će se veze na odgovarajući odjeljak podvrste podataka u kojem ćete naći sljedeće informacije:
+U sljedećoj su tablici navedene kategorije za obavezne dijagnostičke podatke. Navedene su podvrste podataka u svakoj kategoriji i opis fokusa za tu podvrstu podataka. Postoje veze na odgovarajući odjeljak podvrsta podataka u kojem ćete pronaći sljedeće informacije:
 
 - popis događaja u toj podvrsti podataka
 - opis svakog događaja
@@ -218,7 +218,7 @@ Ova kategorija sadrži sljedeća polja:
 
   - **TenantGroup** – vrsta klijenta kojem pripada pretplata. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika.
 
-  - **TenantId** – klijent s kojim je povezana pretplata. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta.
+  - **TenantId** – klijent s kojim je povezana pretplata korisnika. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta.
 
 ### <a name="information-that-specifically-supports-diagnostic-data-collection"></a>*Informacije koje izričito podržavaju prikupljanje dijagnostičkih podataka*
 
@@ -230,7 +230,7 @@ Informacije za shvaćanje uspješnosti samog događaja prikupljanja.
 
 Ova kategorija sadrži sljedeća polja:
 
-  - **AggMode** – govori sustavu kako prikupiti rezultate aktivnosti. Omogućuje da smanjimo količinu podataka prenesenih s korisnikovog računala prikupljanjem rezultata aktivnosti u jedan događaj koji se šalje povremeno.
+  - **AggMode** – govori sustavu kako prikupiti rezultate aktivnosti. Omogućuje nam smanjenje količine podataka prenesenih s korisnikova računala prikupljanjem rezultata aktivnosti u jedan događaj koji se šalje povremeno.
 
   - **Count** – broj izvršavanja aktivnosti ako je broj iz skupnog događaja. Omogućuje da odredimo koliko je često aktivnost uspjela na temelju načina prikupljanja aktivnosti.
 
@@ -384,7 +384,7 @@ Ova kategorija sadrži sljedeća polja:
 
   - **SessionId** – globalno jedinstveni identifikator za sesiju glavnog računala.
 
-  - **Verzija** – identifikator verzije primarne izvršne datoteke glavnog računala.
+  - **Version** – identifikator verzije primarne izvršne datoteke glavnog računala.
 
 #### <a name="legacy"></a>Starije verzije
 
@@ -441,7 +441,7 @@ Sljedeća polja podataka uobičajena su za sve događaje za aplikaciju OneNote n
 
 - **Activity_ActivityType** – označava vrstu događaja u ovoj aktivnosti. Aktivnost može biti normalna aktivnost ili aktivnost visoke vrijednosti.
 
-- **Activity_AggMode** – govori sustavu kako prikupiti rezultate aktivnosti. Omogućuje da smanjimo količinu podataka prenesenih s korisnikovog računala prikupljanjem rezultata aktivnosti u jedan događaj koji se šalje povremeno.
+- **Activity_AggMode** – govori sustavu kako prikupiti rezultate aktivnosti. Omogućuje nam smanjenje količine podataka prenesenih s korisnikova računala prikupljanjem rezultata aktivnosti u jedan događaj koji se šalje povremeno.
 
 - **Activity_Count** – broj izvršavanja aktivnosti ako je broj iz skupnog događaja. Omogućuje da odredimo koliko je često aktivnost uspjela na temelju načina prikupljanja aktivnosti.
 
@@ -519,7 +519,7 @@ Sljedeća polja podataka uobičajena su za sve događaje za aplikaciju OneNote n
 
 - **UserInfo_IdType** – niz označava vrstu korisnikova računa
 
-- **UserInfo_OMSTenantId** – klijent s kojim je povezana pretplata. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta.
+- **UserInfo_OMSTenantId** – klijent s kojim je povezana pretplata korisnika. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta.
 
 - **UserInfo_OtherId** – popis identifikatora u obliku pseudonima koji nisu primarni predstavlja korisnikove račune.
 
@@ -748,7 +748,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_VisioSKU**:**integer** – 0 za standardni SKU i 1 za profesionalni SKU
 
-#### <a name="onenoteapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated
+#### <a name="onenoteapponenotelaunchednonactivated-previous-name-officeonenoteandroidapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated *(stari naziv)*, Office.OneNote.Android.App.OneNoteLaunchedNonActivated
 
 Bilježi podatke o stanju aktivacije aplikacije.  Podaci se prate da bi se osiguralo identificiranje porasta u problemima sa aktivacijom. Također analiziramo podatke kako bismo pronašli područja poboljšanja.
 
@@ -756,7 +756,7 @@ Prikupljaju se sljedeća polja:
 
 - **INSTALL_LOCATION** – upućuje na to je li aplikacija unaprijed instalirana ili je preuzeta iz trgovine
 
-#### <a name="onenoteresetstatus"></a>OneNote.ResetStatus 
+#### <a name="onenoteresetstatus-previous-name-officeonenoteandroidresetstatus"></a>OneNote.ResetStatus *(stari naziv)*, Office.OneNote.Android.ResetStatus
 
 Signal koji se koristi za bilježenje problema koji se pojave kada korisnik pokušava ponovno postaviti aplikaciju.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema uzrokovanih tijekom ponovnog postavljanja. 
 
@@ -770,7 +770,7 @@ Prikupljaju se sljedeća polja:
 
 - **Pass** – označava je li ponovno pokretanje bilo uspješno
 
-#### <a name="onenotesigninsignincompleted"></a>OneNote.SignIn.SignInCompleted 
+#### <a name="onenotesigninsignincompleted-previous-name-officeonenoteandroidsigninsignincompleted"></a>OneNote.SignIn.SignInCompleted *(stari naziv)*, Office.OneNote.Android.SignIn.SignInCompleted
 
 Ključni signal kojim se osigurava uspješna prijava ili ne. Telemetrija se prikuplja za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.
 
@@ -790,7 +790,7 @@ Prikupljaju se sljedeća polja:
 
 - **SignInMode** – prijava ili registracija ili ubrzana automatska prijava ili registracija
 
-#### <a name="onenotesigninsigninstarted"></a>OneNote.SignIn.SignInStarted 
+#### <a name="onenotesigninsigninstarted-previous-name-officeonenoteandroidsigninsigninstarted"></a>OneNote.SignIn.SignInStarted *(stari naziv)*, Office.OneNote.Android.SignIn.SignInStarted
 
 Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
 
@@ -1341,6 +1341,22 @@ Prikupljaju se sljedeća polja:
  
 - **total_file_accounts** – broj računa datoteka u aplikaciji u trenutku radnje
 
+#### <a name="account_lifecycle"></a>account_lifecycle
+
+Ovaj se događaj prikuplja za osiguranje da konfiguracija računa uspješno radi i koristi za nadzor stanja kreiranja računa, mogućnost dodavanja novih računa e-pošte i nadzor softverskog vraćanja izvornih postavki računa.
+
+Prikupljaju se sljedeća polja: 
+
+- **action** – vrsta radnje provedene na računu, npr. dodavanje, brisanje ili ponovno postavljanje.
+
+#### <a name="add_new_account_step"></a>add_new_account_step
+
+Ovaj nam događaj omogućuje prepoznati koji je napredak korisnika u stvaranju obrasca za novi račun.  To označava kada je korisnik prešao na drugi korisnik ili je odustao od rada.  Te su nam informacije potrebne da bismo prepoznali postoje li neispravni koraci te da bismo osigurali da je stvaranje korisničkog računa bilo uspješno. 
+
+Prikuplja se sljedeće polje: 
+
+- **OTAddAccountCurrentStep** – to može imati sljedeće vrijednosti: profile_form, redirect_mobile_check, mobile_check_success
+
 #### <a name="app_error"></a>app_error
 
 Prati kritične pogreške korištene aplikacije da bismo mogli spriječiti probleme koji mogu prouzročiti rušenje aplikacije ili vam onemogućiti čitanje e-pošte.
@@ -1385,7 +1401,7 @@ Prikupljaju se sljedeća polja:
 
 - **status_code** – kod stanja pogreške koja je nastupila. To nam pomaže razumjeti uzrok pogreške.
 
-Svi su znakovi također moguća svojstva. To nam pomaže razumjeti znakove u tijelu skice poruke kada je pogreška nastupila. Primjerice, „a”, „b”, „c” i „d” su moguća svojstva.
+Svi su znakovi također moguća svojstva. To nam pomaže razumjeti znakove u tijelu skice poruke kada je pogreška nastupila. Primjerice, „a”, „b” i „c” su moguća svojstva.
 
 #### <a name="app_launch_report"></a>app_launch_report
 
@@ -1545,6 +1561,8 @@ Prikupljaju se sljedeća polja:
 
 - **see_all_contacts_selected_count** – prati koliko je puta „prikaži sve kontakte” bilo odabrano tijekom kombinirane sesije pretraživanja
 
+- **subtab_type** – prati gdje je korisnik odabrao rezultat i iz koje kartice rezultata
+
 - **top_mail_result_selected_count** – prati koliko puta korisnik odabire glavne rezultate koji mu se pruže. 
 
 #### <a name="compose_mail_accessory"></a>compose_mail_accessory
@@ -1588,6 +1606,16 @@ Prikupljaju se sljedeća polja:
 - **origin** – gdje je skica pokrenuta, npr. pojedinosti o poruci, sastavi.
  
 - **thread_id** – ID niti razgovora s kojim je skica povezana
+
+#### <a name="drag_and_drop"></a>drag_and_drop
+
+Ovaj nam događaj omogućuje prepoznavanje je li radnja povlačenja i ispuštanja bila uspješna ili nije.  To se koristi za osiguravanje da iskustva povlačenja i ispuštanja pravilno funkcioniraju u svim aplikacijama, kako kao događaj povlačenja u Outlook tako i kao događaj povlačenja koji izlazi izvan okvira programa Outlook.  Tim podacima možemo osigurati da sveobuhvatno iskustvo s drugim aplikacijama funkcionira na očekivani način.
+
+Prikupljaju se sljedeća polja: 
+
+- **action** – radnja će biti povlačenje ili ispuštanje
+
+- **location** – u slučaju radnje povlačenja, to će nam javiti s koje je lokacije korisnik započeo povlačenje.  U slučaju radnje ispuštanja, to će nam javiti gdje je korisnik ispustio datoteku koja se povlačila. 
 
 #### <a name="drawer_event"></a>drawer_event
 
@@ -2053,6 +2081,8 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.LicenseFormat** – format licence: Xrml ili Json
 
+- **RMS.PL.KeyType** – vrijednosti „jedno” ili „dvostruko”. Označava je li PL bio zaštićen zaštitom s jednim ključem ili zaštitom s dvostrukim ključevima.
+
 - **RMS.RACType** – vrsta certifikata za račun prava
 
 - **RMS.Result** – uspjeh ili neuspjeh poziva API-ja
@@ -2102,7 +2132,6 @@ Prikupljaju se sljedeća polja:
 - **RMS.SDKVersion** – verzija klijenta usluge upravljanja pravima
 
 - **RMS.StatusCode** – identifikacijski broj scenarija definiran API-jem
-
 
 #### <a name="mail_action"></a>mail_action
 
@@ -2254,6 +2283,8 @@ Prikupljaju se sljedeća polja:
 
 - **Data_AppDuration** – trajanje obrade aplikacije tijekom radnje otvaranja datoteke. 
 
+- **Data_AppWarmUpGain** – dobitak ostvaren u trajanju pokretanja aplikacije zbog prethodnog pokretanja dijela aplikacije.
+
 - **Data_BootDuration** – trajanje pokretanja aplikacije tijekom radnje otvaranja datoteke.
 
 - **Data_Doc_AccessMode** – enumeracija koja upućuje na način pristupa datoteke, npr. samo za čitanje, za čitanje i pisanje.
@@ -2334,6 +2365,23 @@ Prikupljaju se sljedeća polja:
 
 - **Data_TimeSplitMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije, početnom vremenskom oznakom i trajanjem. 
 
+#### <a name="office_android_earlytelemetry_expansionfilesavailability"></a>Office_Android_EarlyTelemetry_ExpansionFilesAvailability
+
+Omogućujemo ekspanzijske datoteke za komplet paketa za Android (APK) za mobilnu aplikaciju Office. Ekspanzijske datoteke APK-a jesu dopunske datoteke resursa koje razvojni programeri aplikacija na sustavu Android mogu objaviti zajedno sa svojom aplikacijom. Da bi se razumjela pouzdanost ekspanzijskih datoteka, bilježimo zastavicu koja pri svakom pokretanju označava jesu li dostupne ekspanzijske datoteke ili nisu.
+
+Prikupljaju se sljedeća polja:
+
+- **Data_ExpansionFilesAvailable** – Booleova zastavica koja označava jesu li ekspanzijske datoteke APK-a dostupne na uređaju tijekom pokretanja aplikacije.
+
+#### <a name="office_android_earlytelemetry_expansionfilesdownloader"></a>Office_Android_EarlyTelemetry_ExpansionFilesDownloader
+
+Omogućujemo ekspanzijske datoteke za komplet paketa za Android (APK) za mobilnu aplikaciju Office. Ekspanzijske datoteke APK-a jesu dopunske datoteke resursa koje razvojni programeri aplikacija na sustavu Android mogu objaviti zajedno sa svojom aplikacijom.  Da bi se razumjela pouzdanost našeg mehanizma preuzimanja ekspanzijskih datoteka, zapisujemo zastavicu koja označava možemo li uspješno preuzeti ekspanzijske datoteke.
+
+Prikupljaju se sljedeća polja: 
+
+- **Data_DownloadSuccess** – Booleova zastavica koja označava je li preuzimanje ekspanzijskih datoteka APK-a bilo uspješno kad god pokušamo preuzimanje tijekom pokretanja aplikacije.
+
+
 #### <a name="office_android_intune_intunecompliancerequest"></a>Office_Android_Intune_IntuneComplianceRequest
 
 Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Koristi se za razumijevanje broja krajnjih korisnika koji pokušavaju koristiti aplikacije u okviru ove konfiguracije pravilnika i kombinira s drugim događajem, Office_Android_Intune_IntuneComplianceStatus, radi osiguravanja provedbe konfiguriranog pravilnika. 
@@ -2348,7 +2396,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ComplianceStatus** – označava status usklađenosti aplikacije tijekom prijave s kodom pogreške za uspjeh ili neuspjeh.
   - -1 – Nepoznata pogreška
-  - 0 – Aplikacija je u skladu s pravilnicima ustanove ili tvrtke
+  -    0 – Aplikacija je u skladu s pravilnicima ustanove ili tvrtke
   - 1 – Aplikacija nije u skladu s pravilnicima ustanove ili tvrtke
   - 2 – Kvarovi u vezi sa servisom
   - 3 – Kvarovi u vezi s mrežom
@@ -2542,7 +2590,7 @@ Prikupljaju se sljedeća polja:
 
 - **DataSource_Name** – naziv povezanog izvora podataka
 
-- **Activity_Name** = naziv aktivnosti „ConnectDevice“
+- **Activity_Name** = naziv aktivnosti „ConnectDevice”
 
 - **Activity_CV** = ID za povezivanje događaja u sesiji povezivanja
 
@@ -2560,7 +2608,7 @@ Prikupljaju se sljedeća polja:
 
 - **DataSource_Name** – naziv povezanog izvora podataka
 
-- **Activity_Name** – naziv aktivnosti „ConnectDevice“
+- **Activity_Name** – naziv aktivnosti „ConnectDevice”
 
 - **Activity_CV** – ID za povezivanje događaja u sesiji povezivanja
 
@@ -2570,21 +2618,21 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="office_docs_apple_docsuxiossaveasthroughfilemenu"></a>Office_Docs_Apple_DocsUXiOSSaveAsThroughFileMenu 
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kada se odvija operacija „Spremi kao“ i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke, poput kategorija lokacije.  Operacija "Spremi kao" događa se kad god korisnik stvori novu datoteku i spremi je prvi put ili spremi kopiju postojeće datoteke na novu lokaciju.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kada se odvija operacija „Spremi kao” i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke, poput kategorija lokacije.  Operacija „Spremi kao” događa se kada god korisnik stvori novu datoteku i spremi je prvi put ili spremi kopiju postojeće datoteke na novu lokaciju.
 
 Prikupljaju se sljedeća polja:
 
-- **Data_OriginServiceType** – apstraktna kategorizacija izvorne lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_OriginServiceType** – apstraktna kategorizacija izvorne lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-- **Data_ServiceType** – apstraktna kategorizacija nove lokacije datoteke nakon dovršetka spremanja kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_ServiceType** – apstraktna kategorizacija nove lokacije datoteke nakon dovršetka spremanja kao što su „SharePoint”, „OneDrive” „Lokalno”, „WOPI”, itd., a izričito ne stvarna lokacija datoteke.
 
 #### <a name="office_docs_apple_docsuxmacatmentioninsertedatmention"></a>Office_Docs_Apple_DocsUXMacAtMentionInsertedAtMention 
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Taj događaj bilježi kada korisnik „@“ spominje drugog korisnika i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju načina na koji korisnici surađuju s drugim korisnicima.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Taj događaj bilježi kada korisnik „@” spominje drugog korisnika i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju načina na koji korisnici surađuju s drugim korisnicima.
 
 Prikupljaju se sljedeća polja:
 
-- **Data_CharactersTyped** – numerička vrijednost koja označava ukupni broj znakova unesenih u spomenuti tekst „@“.
+- **Data_CharactersTyped** – numerička vrijednost koja označava ukupni broj znakova unesenih u spomenuti tekst „@”.
 
 #### <a name="office_docs_apple_docsuxmacodspsharingwebviewsharingcompleted"></a>Office_Docs_Apple_DocsUXMacODSPSharingWebViewSharingCompleted 
 
@@ -2592,9 +2640,9 @@ Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platf
 
 Prikupljaju se sljedeća polja:
 
-- **Data_ShareType** – niz ugrađen u kod koji označava koja vrsta operacije zajedničkog korištenja je dovršena, uključujući, ali ne ograničavajući se na „Kopiraj vezu“, „Više aplikacija“, „Teams“.
+- **Data_ShareType** – niz ugrađen u kod koji označava koja vrsta operacije zajedničkog korištenja je dovršena, uključujući, ali ne ograničavajući se na „Kopiraj vezu”, „Više aplikacija”, „Teams”.
 
-- **Data_ShareWebViewMode** – niz ugrađen u kod koji označava koji način rada za zajedničko korištenje je bio aktivan kada je zajedničko korištenje dovršeno uključujući, ali ne ograničavajući se na „Upravljanje pristupom“, „Spominjanja“, „Zajedničko korištenje“.
+- **Data_ShareWebViewMode** – niz ugrađen u kod koji označava koji način rada za zajedničko korištenje je bio aktivan kada je zajedničko korištenje dovršeno uključujući, ali ne ograničavajući se na „Upravljanje pristupom”, „Spominjanja”, „Zajedničko korištenje”.
 
 #### <a name="office_docsui_collaboration_coauthorgalleryrowtapped"></a>Office_DocsUI_Collaboration_CoauthorGalleryRowTapped 
 
@@ -2618,11 +2666,11 @@ Prikupljaju se sljedeća polja:
 
 - **Data_OldCoauthorCount** – prethodni broj aktivnih suautora prije ažuriranja.
 
-- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
 #### <a name="office_docsui_docstage_docstagecreatenewfromtemplate"></a>Office_DocsUI_DocStage_DocStageCreateNewFromTemplate 
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi kada se stvara nova datoteka iz sučelja „Novo iz predloška“ i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o stvaranju dokumenta.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi kada se stvara nova datoteka iz sučelja „Novo iz predloška” i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o stvaranju dokumenta.
 
 Prikupljaju se sljedeća polja:
 
@@ -2632,11 +2680,11 @@ Prikupljaju se sljedeća polja:
 
 - **Data_IsHomeTabEnabled** – Booleova vrijednost koja označava je li kartica Polazno trenutno dostupna korisniku.
 
-- **Data_IsRecommendedEnabled** – Booleova vrijednost koja označava je li korisniku trenutno dostupno sučelje „Preporučeno“.
+- **Data_IsRecommendedEnabled** – Booleova vrijednost koja označava je li korisniku trenutno dostupno sučelje „Preporučeno”.
 
 - **Data_TemplateIndex** – numerički indeks datoteke predloška dok se vizualno prikazuje korisniku.
 
-- **Data_TemplateType** – klasifikacija koja će vam pomoći u razlikovanju vrste predložaka poput, ali ne ograničavajući se na: „Mrežne predloške“, predloške „Mrežnog pretraživanja“, „Lokalne“ predloške.
+- **Data_TemplateType** – klasifikacija koja će vam pomoći u razlikovanju vrste predložaka poput, ali ne ograničavajući se na „Mrežne predloške”, predloške „Mrežnog pretraživanja”, „Lokalne” predloške.
 
 #### <a name="office_docsui_docstage_recommendedopen"></a>Office_DocsUI_DocStage_RecommendedOpen
 
@@ -2648,13 +2696,13 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="office_docsui_fileoperations_docsuifileopenmacrequired"></a>Office_DocsUI_FileOperations_DocsUIFileOpenMacRequired
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi operaciju otvaranja datoteke i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke kao što su kategorije lokacije „ServiceType“ i prva četiri znaka proširenja.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi operaciju otvaranja datoteke i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke kao što su kategorije lokacije „ServiceType” i prva četiri znaka proširenja.
 
 Prikupljaju se sljedeća polja:
 
 - **Data_Ext** – Datotečni nastavak ograničen na prva četiri znaka proširenja ili manje.
 
-- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd.
+- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd.
 
 #### <a name="office_docsui_fileoperations_opendocumentmeasurements"></a>Office_DocsUI_FileOperations_OpenDocumentMeasurements
 
@@ -2669,6 +2717,8 @@ Prikupljaju se sljedeća polja:
 - **Data_ClickOrigin** – niz koji označava iz kojeg je dijela veza nastala kada je korisnik kliknuo vezu u aplikaciji iOS Outlook kako bi otvorio datoteku u aplikaciji Office.
 
 - **Data_ClickTime** – vrijeme Unix epohe kada je korisnik kliknuo vezu u aplikaciji iOS Outlook kako bi otvorio datoteku u aplikaciji Office.
+
+- **Data_ClosePreviouslyOpenedMarkers** – vrijednost niza koja evidentira trajanje vremena između nekih poziva funkcije, u obliku s ID-om i trajanjem funkcije.
 
 - **Data_DetachedDuration** – trajanje procesa odvajanja događaja. 
 
@@ -2754,7 +2804,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="office_docsui_fileoperations_openfilewithreason"></a>Office_DocsUI_FileOperations_OpenFileWithReason 
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi operaciju otvaranja datoteke i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke kao što su kategorije lokacije „ServiceType“, a odakle je u aplikaciji korisnik zatražio otvaranje datoteke.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi operaciju otvaranja datoteke i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke kao što su kategorije lokacije „ServiceType”, a odakle je u aplikaciji korisnik zatražio otvaranje datoteke.
 
 Prikupljaju se sljedeća polja:
 
@@ -2764,11 +2814,11 @@ Prikupljaju se sljedeća polja:
 
 - **Data_OpenReason** – otvoreni razlog numerička je vrijednost koja označava odakle je unutar aplikacije korisnik otvorio datoteku.
 
-- **Data_ServiceType** – apstraktna numerička kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_ServiceType** – apstraktna numerička kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
 #### <a name="office_docsui_fileoperations_savetourl"></a>Office_DocsUI_FileOperations_SaveToURL
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kada se odvija operacija „Spremi kao“ i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke, poput kategorija lokacije i prva četiri znaka proširenja.  Operacija "Spremi kao" događa se kad god korisnik stvori novu datoteku i spremi je prvi put ili spremi kopiju postojeće datoteke na novu lokaciju.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kada se odvija operacija „Spremi kao” i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke, poput kategorija lokacije i prva četiri znaka proširenja.  Operacija „Spremi kao” događa se kada god korisnik stvori novu datoteku i spremi je prvi put ili spremi kopiju postojeće datoteke na novu lokaciju.
 
 Prikupljaju se sljedeća polja:
 
@@ -2780,9 +2830,9 @@ Prikupljaju se sljedeća polja:
 
 - **Data_SaveErrorCode** – numerička vrijednost koja se postavlja ako postoji pogreška koja omogućuje prepoznavanje vrste pogreške.
 
-- **Data_SaveErrorDomain** – određuje domenu koda SaveErrorCode kako je definirano u SaveErrorDomains tvrtke Apple „to su proizvoljni nizovi koji se koriste za razlikovanje grupe kodova“.
+- **Data_SaveErrorDomain** – određuje domenu koda SaveErrorCode kako je definirano u SaveErrorDomains tvrtke Apple „to su proizvoljni nizovi koji se koriste za razlikovanje grupe kodova”.
 
-- **Data_SaveLocation** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_SaveLocation** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
 - **Data_SaveOperationType** – numerička vrijednost definirana u grupi vrijednosti tvrtke Apple NSSaveOperationType.
 
@@ -2794,7 +2844,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FileStyle** – numerička vrijednost koja pokazuje iz kojeg scenarija je prikazano iskustvo nadogradnje, primjerice, pomoću prekidača za automatsko spremanje ili gumba za zajedničko korištenje.
 
-- **Data_FileType** – Prva četiri znaka proširenja trenutne datoteke.
+- **Data_FileType** – prva četiri znaka proširenja trenutne datoteke.
 
 - **Data_InDocStage** – Booleova vrijednost koja označava je li iskustvo nadogradnje prikazano iz galerije dokumenta ili iz prozora dokumenta.
 
@@ -2812,7 +2862,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FileStyle** – numerička vrijednost koja pokazuje iz kojeg scenarija je prikazano iskustvo nadogradnje poput prekidača za automatsko spremanje ili gumba za zajedničko korištenje.
 
-- **Data_FileType** – Prva četiri znaka proširenja trenutne datoteke.
+- **Data_FileType** – prva četiri znaka proširenja trenutne datoteke.
 
 - **Data_InDocStage** – Booleova vrijednost koja označava je li iskustvo nadogradnje prikazano iz galerije dokumenta ili iz prozora dokumenta.
 
@@ -2824,11 +2874,11 @@ Prikupljaju se sljedeća polja:
 
 - **Data_IsSheetModal** – Booleova vrijednost koja označava je li iskustvo nadogradnje predstavljeno modalno ili ne.
 
-- **Data_LocationServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_LocationServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
 - **Data_UploadAction** – niz ugrađen u kod koji označava je li prijenos bila operacija premještanja ili kopiranja.
 
-- **Data_UploadResult** – niz ugrađen u kod koji označava rezultat pokušaja prijenosa, uključujući ali ne ograničavajući se na: „Uspjeh“, „Korisnik je otkazao prijenos“ i „Predautorizacija nije uspjela“.
+- **Data_UploadResult** – niz ugrađen u kod koji označava rezultat pokušaja prijenosa, uključujući ali ne ograničavajući se na: „Uspjeh”, „Korisnik je otkazao prijenos” i „Predautorizacija nije uspjela”.
 
 #### <a name="office_docsui_sharingui_copylinkoperation"></a>Office_DocsUI_SharingUI_CopyLinkOperation
 
@@ -2836,11 +2886,11 @@ Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platf
 
 Prikupljaju se sljedeća polja:
 
-- **Data_ ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-- **Data_LinkType** – niz ugrađen u kod koji opisuje izvedenu vrstu poziva poput „ViewOnly“ i „ViewAndEdit“.
+- **Data_LinkType** – niz ugrađen u kod koji opisuje izvedenu vrstu poziva poput „ViewOnly” i „ViewAndEdit”.
 
-- **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na: „FileMenu“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
+- **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na „FileMenu”, „OpenTabShareActionMenu”, „RecentTabShareActionMenu”.
 
 #### <a name="office_docsui_sharingui_docsuionedriveshare"></a>Office_DocsUI_SharingUI_DocsUIOneDriveShare 
 
@@ -2864,15 +2914,15 @@ Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platf
 
 Prikupljaju se sljedeća polja:
 
-- **Data_ ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-- **Data_InviteeCount** – Ukupni broj kontakata pozvanih u dokument u jednoj akciji poziva.
+- **Data_InviteeCount** – ukupni broj kontakata pozvanih u dokument u jednoj akciji poziva.
 
-- **Data_LinkType** – niz ugrađen u kod koji opisuje izvedenu vrstu poziva poput „ViewOnly“ i „ViewAndEdit“.
+- **Data_LinkType** – niz ugrađen u kod koji opisuje izvedenu vrstu poziva poput „ViewOnly” i „ViewAndEdit”.
 
 - **Data_MessageLength** – numerički broj ukupnog broja znakova poslanih u pozivnoj poruci.
 
-- **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na: „FileMenu“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
+- **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na „FileMenu”, „OpenTabShareActionMenu”, „RecentTabShareActionMenu”.
 
 #### <a name="office_docsui_sharingui_sendacopyoperation"></a>Office_DocsUI_SharingUI_SendACopyOperation
 
@@ -2882,15 +2932,15 @@ Prikupljaju se sljedeća polja:
 
 - **Data_IsHomeTabEnabled** – Booleova vrijednost koja označava je li kartica Polazno trenutno dostupna korisniku.
 
-- **Data_IsRecommendedEnabled** – Booleova vrijednost koja označava je li korisniku trenutno dostupno sučelje „Preporučeno“.
+- **Data_IsRecommendedEnabled** – Booleova vrijednost koja označava je li korisniku trenutno dostupno sučelje „Preporučeno”.
 
 - **Data_OperationType** – numerička vrijednost koja označava koja je vrsta slanja postupka kopiranja koja se odvija kao što je slanje kopije u poruci e-pošte ili slanje kopije pomoću kontrole za zajedničko korištenje tvrtke Apple.
 
-- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-- **Data_ShareFileType** – Niz ugrađen u kod opisa vrste objekta koji se zajednički koristi uključujući ali ne ograničavajući se na: „Dokument“, „PDF“, „Slika“.
+- **Data_ShareFileType** – Niz ugrađen u kod opisa vrste objekta koji se zajednički koristi uključujući ali ne ograničavajući se na „Dokument”, „PDF”, „Slika”.
 
-- **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na: „FileMenu“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
+- **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na „FileMenu”, „OpenTabShareActionMenu”, „RecentTabShareActionMenu”.
 
 - **Data_SharingService** – Booleova vrijednost koja označava je li datoteka stvorena kada je korisnik tražio predložak.
 
@@ -2906,9 +2956,9 @@ Prikupljaju se sljedeća polja:
 
 - **Data_isLocalCopyOn** – Booleova vrijednost koja označava je li korisnik odlučio zadržati lokalnu kopiju dokumenta koji se prenosi na oblak ili premjestiti postojeći dokument u oblak.
 
-- **Data_NewFileType** – apstraktna kategorizacija lokacije nove lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_NewFileType** – apstraktna kategorizacija lokacije nove lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-- **Data_OriginalFileType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a izričito ne stvarna lokacija datoteke.
+- **Data_OriginalFileType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
 - **Data_UploadButtonPressed** – Booleova vrijednost koja označava je li korisnik odlučio prenijeti trenutni dokument u oblak.
 
@@ -3034,7 +3084,11 @@ Taj se događaj prikuplja kada se sažetak sadržaja prikazuje korisniku. Taj se
 
 - **AppInfo.Version** – verzija aplikacije.
 
+- **bridgeWaitingTime** – metrika za dijagnosticiranje performansi u prikazivanju sažetka sadržaja.
+
 - **clientCorrelationId** – globalno jedinstveni identifikator za sesiju aplikacije.
+
+- **ClientTimeStamp** – timestamp kada je događaj prijavljeni u klijentu.
 
 - **clientType** – aplikacija na kojoj se komponenta izvodi.
 
@@ -3058,17 +3112,14 @@ Taj se događaj prikuplja kada se sažetak sadržaja prikazuje korisniku. Taj se
 
 - **hostAppRing** – populacija korisnika kojima je aplikacija raspoređena.
 
-- **properties** – sadržava dodatna svojstva metapodataka prikupljenih za svaki događaj.
-        
-  - **bridgeWaitingTime** – metrika za dijagnosticiranje performansi u prikazivanju sažetka sadržaja.
-    
+- **properties** – sadržava dodatna svojstva metapodataka prikupljenih za svaki događaj. *[Ovo je polje uklonjeno iz trenutnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
   - **ClientTimeStamp** – timestamp kada je događaj prijavljeni u klijentu.
-        
-  - **renderTime** – metrika za dijagnosticiranje performansi u prikazivanju sažetka sadržaja.
 
 - **publicEventName** – naziv događaja u javnom sučelju.  
 
 - **region** – zemljopisno područje usluge sažetka sadržaja s kojim je korisnik povezan. 
+
+- **renderTime** – metrika za dijagnosticiranje performansi u prikazivanju sažetka sadržaja.
 
 - **tenantAadObjectId** – globalno jedinstveni identifikator za korisnikovu klijentelu velikih tvrtki.
 
@@ -4179,6 +4230,67 @@ Prikupljaju se sljedeća polja:
 
   - **Data.Log** –prilagođena poruka zapisnika koja označava uspješnost ili neuspješnost prethodne provjere
 
+#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+
+Događaj se prikuplja za aplikaciju Office za sustav Android. On se bilježi kada se provede operacija otvaranja, zatvaranja ili spremanja PDF-a i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke PDF. Događaj nam omogućuje da osiguramo da operacije otvaranja, zatvaranja i spremanja PDF-a funkcioniraju na očekivani način te da poboljšamo učinkovitost operacija datoteke PDF.
+
+Prikupljaju se sljedeća polja:
+
+- **Data_Doc_FileOpSessionID** – jedinstveni ID za sesiju dokumenta
+
+- **Data_Doc_URLHash** – GUID za URL datoteke
+
+- **Data_ErrorCode** – pogreška u slučaju neuspjelih otvaranja datoteka / neuspjelih preuzimanja / otkazanih preuzimanja
+
+- **Data_ErrorMessage** – odgovarajući kôd na poruku o pogrešci
+
+- **Data_FailureReason** – u slučaju neuspjelog otvaranja, ovi identifikatori definiraju razlog neuspjeha.
+
+- **Data_FileLocation** – lokacija na kojoj se datoteka nalazi, npr.: Lokalno, ODSP, iCloud itd.
+
+- **Data_FileOpenEntryPoint** – ulazno mjesto za otvaranje datoteke
+
+- **Data_FileSize** – veličina datoteke na kojoj se operacija provodi
+
+- **Data_OpenMode** – u kojem se načinu rada PDF otvorio, npr.: 0: način rada Prikaz, 2: način rada Potpis
+
+- **Data_PageCount** – broj stranica u PDF datoteci.
+
+- **Data_PasswordProtected** – oznaka koja označava je li datoteka zaštićena lozinkom ili nije.
+
+- **Data_ProviderApp** – aplikacija pružatelja usluga koji trenutno pruža usluge u slučaju isključive aktivacije datoteke 
+
+- **Data_ReadOnly** – oznaka koja označava je li datoteka samo za čitanje ili nije.
+
+- **Data_Result** – status operacije koja se izvršava, npr.: istinito:uspjeh, neistinito:neuspjeh
+
+- **Data_Type** – vrsta operacije datoteke (otvaranje, zatvaranje ili spremanje) 
+
+#### <a name="officeonenoteandroidappnavigationnavigationuistatechanged-onenoteappnavigationnavigationuistatechanged-previous-name"></a>Office.OneNote.Android.App.Navigation.NavigationUIStateChanged, OneNote.App.Navigation.NavigationUIStateChanged *(stari naziv)*
+
+Ovaj događaj prikuplja ključni signal koji se koristi za osiguravanje da se korisnici aplikacije OneNote mogu uspješno kretati aplikacijom.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
+
+Prikupljaju se sljedeća polja: 
+
+- **IS_SPANNED** – označava je li aplikacija u rastegnutom načinu rada. To se posebno bilježi za sklopive uređaje.
+
+- **NEW_STATE** – označava stanje aplikacije neposredno nakon navigacije
+
+- **OLD_STATE** – označava stanje aplikacije neposredno prije navigacije
+
+#### <a name="officeonenoteandroidlenssdkofficelenslaunched-onenotelenssdkofficelenslaunched-previous-name"></a>Office.OneNote.Android.LensSDK.OfficeLensLaunched, OneNote.LensSDK.OfficeLensLaunched *(stari naziv)*
+
+Ovaj događaj prikuplja ključne signale koji se koriste za osiguravanje pravilnog pokretanja aplikacije OfficeLens.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
+
+Prikupljaju se sljedeća polja: 
+
+- **CAPTURE_MODE** – označava način rada u kojem je aplikacija OfficeLens pokrenuta.  To može biti zadani način, način za uređivanje, brzo umetanje ili uvoz videozapisa.
+
+- **ERROR_CODE** – kôd pogreške pri pokretanju u slučaju da je došlo do pogreške tijekom pokretanja.
+
+- **IMAGE_COUNT** – označava broj snimljenih slika
+
+- **LAUNCH_REASON** – označava protok pod kojim je aplikacija OfficeLens bila pokrenuta. To može biti putem zaključanog zaslona ili mogućnosti Kamera ili Galerija u aplikaciji StickyNotes ili putem aplikacije OneNote Canvas itd.
 
 #### <a name="officeonenotecanvasinkinkstrokelogger"></a>Office.OneNote.Canvas.Ink.InkStrokeLogger 
 
@@ -4682,7 +4794,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_StopwatchDuration:long –** ukupno vrijeme za aktivnost
 
-  - **Data\_UserContinuedZRTClose:bool –** nakon prikazivanja dijaloškog okvira prilikom zatvaranja, je li korisnik odabrao „Nastavi“ za zatvaranje?
+  - **Data\_UserContinuedZRTClose:bool –** nakon prikazivanja dijaloškog okvira prilikom zatvaranja, je li korisnik odabrao „Nastavi” za zatvaranje?
 
 #### <a name="officepowerpointdocoperationnewdocument"></a>Office.PowerPoint.DocOperation.NewDocument
 
@@ -4920,7 +5032,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_FailureComponent:long–** unaprijed definirani skup vrijednosti koji označava koja je komponenta uzrokovala neuspjeh ovog protokola? (Conflict, CSI, Internal itd.)
 
-  - **Data\_FailureReason:long –** unaprijed definirani skup vrijednosti koji označava razlog pogreške (FileIsCorrupt, BlockedByAntivirus itd.)
+  - **Data\_FailureReason:long –** unaprijed definiran skup vrijednosti razloga neuspjeha (FileIsCorrupt, BlockedByAntivirus itd.)
 
   - **Data\_fLifeguarded:bool –** je li dokument ikad popravljen pomoću značajke lifeguard (značajka za popravljanje pogrešaka dokumenta bez slanja upita korisniku)?
 
@@ -5472,7 +5584,7 @@ Omogućuje nam da znamo kada je pokrenuta sesija dodatka Data streamer.  Koristi
 
 Prikupljaju se sljedeća polja:
 
-- **Activity_Name** – naziv aktivnosti „Sesija“
+- **Activity_Name** – naziv aktivnosti „Sesija”
 
 - **Activity_CV** – ID za povezivanje događaja u sesiji povezivanja
 
@@ -5486,7 +5598,7 @@ Omogućuje nam da znamo kada je sesija dodatka Data streamer zaustavljena. Koris
 
 Prikupljaju se sljedeća polja:
 
-- **Activity_Name** – naziv aktivnosti „Sesija“
+- **Activity_Name** – naziv aktivnosti „Sesija”
 
 - **Activity_CV** – ID za povezivanje događaja u sesiji povezivanja
 
@@ -5504,7 +5616,7 @@ Prikupljaju se sljedeća polja:
 
 - **DataSource_Name** – naziv povezanog izvora podataka
 
-- **Activity_Name** – naziv aktivnosti „StreamDeviceData“ ili „StreamFileData“
+- **Activity_Name** – naziv aktivnosti „StreamDeviceData” ili „StreamFileData”
 
 - **Activity_CV** – ID za povezivanje događaja u sesiji povezivanja
 
@@ -5522,7 +5634,7 @@ Prikupljaju se sljedeća polja:
 
 - **DataSource_Name** – naziv povezanog izvora podataka
 
-- **Activity_Name** – naziv aktivnosti „StreamDeviceData“ ili „StreamFileData“
+- **Activity_Name** – naziv aktivnosti „StreamDeviceData” ili „StreamFileData”
 
 - **Activity_CV** – ID za povezivanje događaja u sesiji povezivanja
 
@@ -6481,7 +6593,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_ViewKind–** vrsta prikaza u programu Word
 
-#### <a name="onenotecanvaspageopened"></a>OneNote.Canvas.PageOpened 
+#### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(stari naziv)*, Office.OneNote.Android.Canvas.PageOpened
 
 Signal koji se koristi za snimanje prilikom otvaranja stranice.  Telemetrija se koristi za nadziranje, otkrivanje i ispravljanje problema tijekom otvaranja stranice u programu OneNote
 
@@ -6491,13 +6603,13 @@ Prikupljaju se sljedeća polja:
 
 - **TIME_TAKEN_IN_MS** – vrijeme potrebno za otvaranje stranice
 
-#### <a name="onenotecapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken
+#### <a name="onenotecapturenewnotenewnotetaken-previous-name-officeonenoteandroidcapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken *(stari naziv)*, Office.OneNote.Android.Capture.NewNote.NewNoteTaken
 
 Ovaj se signal koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote na platformi Android, bilježnice pravilno dodijele te da je korisnik uspješno kreirao novu bilješku.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.
 
 Ne prikupljaju se nikakva dodatna polja.
 
-#### <a name="onenotemessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked 
+#### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(stari naziv)*, Office.OneNote.Android.MessageBar.MessageBarClicked
 
 Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
 
@@ -6588,6 +6700,18 @@ Prikupljaju se sljedeća polja:
 - **origin** – odakle pokušaj spremanja potječe (primjerice iz poruke e-pošte) kako bismo mogli prepoznati probleme u vezi sa spremanjem datoteke s određenog mjesta u aplikaciji
 
 - **token_type** – vrsta tokena korištenog za provjeru autentičnosti radi spremanja datoteka koji nam pomaže prepoznati probleme s provjerom autentičnosti u vezi sa spremanjem datoteke
+
+#### <a name="search_subtab_selected"></a>search_subtab_selected
+
+Ovaj nam događaj omogućuje praćenje pilula vrste entiteta (sve, pošta, kontakti i kalendar) koje korisnici koriste kada provode pretraživanja kako bismo mogli osigurati da mehanizmi filtara pretraživanja propisno funkcioniraju.
+
+Prikupljaju se sljedeća polja:
+
+- **properties_general** – opća svojstva koja prikupljaju svi događaji Aria
+
+- **selected_reason** – uzrok vrste pilule koja se odabire, a koja može biti jedna od ove tri vrijednosti: tap_on_header, tap_on_see_all, enter_search_mode
+
+- **subtab_type** – vrsta pilule koja je odabrana, a koja može biti jedna od ove četiri vrijednosti: sve, pošta, kontakt, događaj.
 
 #### <a name="send_message"></a>send_message
 
@@ -6874,7 +6998,7 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.LicenseFormat** – format licence: Xrml ili Json
 
-- **RMS.NoOfDomainsSearched** – broj pretraženih domena  
+- **RMS.NoOfDomainsSearched** – broj pretraženih domena    
 
 - **RMS.NoOfDomainsSkipped** – broj preskočenih domena 
 
@@ -6887,6 +7011,22 @@ Prikupljaju se sljedeća polja:
 - **RMS.ServerType** – vrsta poslužitelja usluge upravljanja pravima 
 
 - **RMS.StatusCode** – kod statusa rezultata operacije
+
+#### <a name="first_visible"></a>first_visible
+
+Ovaj nam događaj omogućuje prepoznavanje prvog puta kada korisnik namjerno pokrene aplikaciju. Ovaj je događaj obavezan za osiguravanje da aplikacija uspješno radi u međuverzijama originalnog proizvođača opreme (OEM).
+
+Prikupljaju se sljedeća polja:
+
+- **is_oem** – praćenje polja koje označava je li aplikacija pokrenuta na varijanti OEM-a
+
+- **is_system_install** – polje koje prati prisutnost prethodno instalirane datoteke svojstava koja treba označavati da je ta instalacija OEM 
+
+- **manufacturer** – proizvođač uređaja
+
+- **model** – model uređaja
+
+- **systemFlagSet** – vrijednost zastavice sustava Android (ApplicationInfo.FLAG_SYSTEM) koja označava je li aplikacija bila instalirana kao dio slike sustava uređaja
 
 #### <a name="getuserop"></a>GetUserOp
 
@@ -7048,9 +7188,9 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_APIInitTime:integer –** trajanje inicijalizacije API modula za Visio
 
-  - **Data\_AppSizeHeight –** visina prozora dodatka
+  - **Data\_AppSizeHeight –** visina prozora dodatka**-**
 
-  - **Data\_AppSizeWidth –** širina prozora dodatka
+  - **Data\_AppSizeWidth –** širina prozora dodatka**-**
 
   - **Data\_AppURL –** URL dodatka; bilježi puni URL za dodatke iz trgovine i domenu URL-a za dodatke koji nisu iz trgovine
 
@@ -7346,7 +7486,7 @@ Prikupljaju se sljedeća polja:
 
 - **TotalTime** – ukupno utrošeno vrijeme
 
-#### <a name="onenoteappappbootcomplete"></a>OneNote.App.AppBootComplete 
+#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete"></a>OneNote.App.AppBootComplete *(stari naziv)*, Office.OneNote.Android.App.AppBootComplete 
 
 Ključni signal korišten za osiguravanje da novi privatni korisnici (Microsoftov račun) uspješno mogu prvi put koristiti aplikaciju OneNote.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.  Ako korisnici ne mogu prvi put pokrenuti aplikaciju, time bi se izazvao incident visoke ozbiljnosti.
 
@@ -7386,7 +7526,9 @@ Prikupljaju se sljedeća polja:
 
 - **IS_COLD_BOOT** – upućuje na to je li aplikacija pokrenuta kada se aplikacija nije izvodila u pozadini.
 
-- **IS_FIRST_LAUNCH** – upućuje na to je li ovo prvi put da je aplikacija pokrenuta na uređaju 
+- **IS_FIRST_LAUNCH** – upućuje na to je li ovo prvi put da je aplikacija pokrenuta na uređaju
+
+- **IS_FOLDABLE_TYPE** – označava je li uređaj sklopivi uređaj
 
 - **IS_PHONE** – označava je li uređaj telefon ili tablet
 
@@ -7446,23 +7588,27 @@ Prikupljaju se sljedeća polja:
  
 - **USER_INTERACTED_DURING_EVENT** – označava je li korisnik komunicirao tijekom pokretanja
 
-#### <a name="onenoteapponenoteappforeground"></a>OneNote.App.OneNoteAppForeground 
+#### <a name="onenoteapponenoteappforeground-previous-name-officeonenoteandroidapponenoteappforeground"></a>OneNote.App.OneNoteAppForeground *(stari naziv)*, Office.OneNote.Android.App.OneNoteAppForeground
 
 Signal koji upućuje da je OneNote aplikacija u prvom planu.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
 
 Prikupljaju se sljedeća polja: Nijedno
 
-#### <a name="onenoteapplaunch"></a>OneNote.AppLaunch
+#### <a name="onenoteapplaunch-previous-name-officeandroidearlytelemetryapplaunch"></a>OneNote.AppLaunch *(stari naziv)*, Office.Android.EarlyTelemetry.AppLaunch
 
 Ključni signal koji se koristi za osiguravanje da korisnici aplikacije OneNote mogu uspješno pokrenuti aplikaciju.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
 
 Prikupljaju se sljedeća polja: 
+
+- **ANDROID_SDK_VERSION** – bilježi verziju SDK-a sustava Android
 
 - **FirstLaunchTime** – bilježi vrijeme prvog pokretanja aplikacije
 
 - **InstallLocation** – upućuje na to je li aplikacija unaprijed instalirana ili je preuzeta iz trgovine
 
 - **is_boot_completed_ever** – upućuje na to je li aplikacija nekada bila uspješno pokrenuta na uređaju
+
+- **IS_DARK_MODE_ENABLED** – Booleova vrijednost koja označava je li aplikacija u tamnom načinu rada ili nije
 
 - **NewOneNoteUser** – identificira je li korisnik novi korisnik
 
@@ -7533,7 +7679,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data_CorrelationId-** GUID proslijeđen u PowerPoint pomoću rukovatelja protokolom za korelaciju telemetrije. Rukovatelj protokolom zaseban je proces koji upravlja Office vezama za OS.
 
-  - **Data\_CppUncaughtExceptionCount:long –** neuhvaćene lokalne iznimke dok se aktivnost izvršavala
+  - **Data\_CppUncaughtExceptionCount:long –** neuhvaćene lokalne iznimke dok je aktivnost pokrenuta
 
   - **Data\_CreateDocumentTimeMS –** trajanje izvršavanja metode CreateDocumentTimeMS u milisekundama
 
@@ -7549,7 +7695,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_DetermineFileType –** trajanje izvršavanja metode DetermineFileType u milisekundama
 
-  - **Data\_Doc\_AccessMode:long –** kako je dokument otvoren (samo za čitanje / za čitanje i pisanje)
+  - **Data\_Doc\_AccessMode:long –** kako je dokument otvoren (samo za čitanje / samo za pisanje)
 
   - **Data\_Doc\_AssistedReadingReasons:long –** unaprijed definiran skup vrijednosti razloga zbog kojih se dokument otvorio u načinu za pomoć pri čitanju
 
@@ -7563,13 +7709,13 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_Extension:string –** nastavak dokumenta
 
-  - **Data\_Doc\_FileFormat:long –** unaprijed definiran skup vrijednosti oblika datoteke (precizniji od nastavka)
+  - **Data\_Doc\_FileFormat:long –** unaprijed definirani skup vrijednosti oblika datoteke (precizniji od nastavka)
 
-  - **Data\_Doc\_Fqdn:string –** mjesto pohrane dokumenta (SharePoint.com, live.net), dostupno samo za domene sustava Office 365
+  - **Data\_Doc\_Fqdn:string – -** mjesto pohrane dokumenta (SharePoint.com, live.net), dostupno samo za domene sustava Office 365
 
-  - **Data\_Doc\_FqdnHash:string –** raspršivanje mjesta pohrane dokumenta
+  - **Data\_Doc\_FqdnHash:string – -** raspršivanje mjesta pohrane dokumenta
 
-  - **Data\_Doc\_IdentityTelemetryId:string –** jedinstveni GUID korisnika
+  - **Data\_Doc\_IdentityTelemetryId:string – -** jedinstveni GUID korisnika
 
   - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korištenog za akciju zajedničkih dokumenata
 
@@ -7579,23 +7725,23 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_IsCloudCollabEnabled:bool –** istinito ako je HTTP zaglavlje „IsCloudCollabEnabled“ već prihvaćeno iz zahtjeva MOGUĆNOSTI.
 
-  - **Data\_Doc\_IsIncrementalOpen:bool –** je li dokument otvoren inkrementalno (nova značajka koja otvara dokument bez potrebe za preuzimanjem cijelog dokumenta)
+  - **Data\_Doc\_IsIncrementalOpen:bool – -** je li dokument otvoren inkrementalno (nova značajka koja otvara dokument bez potrebe za preuzimanjem cijelog dokumenta)
 
   - **Data\_Doc\_IsOcsSupported:bool –** podržava li dokument suautorstvo pomoću novog servisa OCS
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool –** otvara li se dokument iz lokalne predmemorije?
 
-  - **Data\_Doc\_IsSyncBacked:bool –** otvara li se dokument iz mape koja koristi aplikaciju za povratnu sinkronizaciju sa servisom OneDrive
+  - **Data\_Doc\_IsSyncBacked:bool –** otvara li se dokument iz mape koja koristi aplikaciju OneDrive za povratnu sinkronizaciju
 
   - **Data\_Doc\_Location:long –** unaprijed definiran skup vrijednosti mjesta na kojima se dokument pohranjuje (lokalno, SharePoint, WOPI, mreža itd.)
 
   - **Data\_Doc\_LocationDetails:long –** unaprijed definiran skup vrijednosti detaljnijih lokacija (mapa Temp, mapa preuzimanja, dokumenti servisa One Drive, slike servisa One Drive itd.)
 
-  - **Data\_Doc\_NumberCoAuthors:long –** broj suautora u trenutku otvaranja dokumenta
+  - **Data\_Doc\_NumberCoAuthors:long –** broj suautora prilikom otvaranja dokumenta
 
-  - **Data\_Doc\_PasswordFlags:long –** unaprijed definiran skup vrijednosti načina na koji je dokument šifriran pomoću lozinke (nema, lozinka za čitanje, lozinka za uređivanje)
+  - **Data\_Doc\_PasswordFlags:long –** unaprijed definirani skup vrijednosti načina na koji je dokument šifriran pomoću lozinke (nema, lozinka za čitanje, lozinka za uređivanje)
 
-  - **Data\_Doc\_ReadOnlyReasons:long –** unaprijed definiran skup vrijednosti koji naznačuje zašto je dokument označen samo za čitanje (zaključan na poslužitelju, konačni dokument, zaštićen lozinkom za uređivanje itd.)
+  - **Data\_Doc\_ReadOnlyReasons:long –** unaprijed definirani skup vrijednosti koji naznačuje zašto je dokument označen samo za čitanje (zaključan na poslužitelju, konačni dokument, zaštićen lozinkom za uređivanje itd.)
 
   - **Data\_Doc\_ResourceIdHash:string –** raspršivanje identifikatora resursa za dokumente pohranjene u oblaku
 
@@ -7603,8 +7749,8 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_ServerDocId:string –** nepromjenjivi identifikator za dokumente pohranjene u oblaku
 
-  - **Data\_Doc\_ServerProtocol:long –** unaprijed definiran skup vrijednosti za protokol koji se koristi za komuniciranje s poslužiteljem (Http, Cobalt, WOPI itd.)
-
+  - **Data\_Doc\_ServerProtocol:long –** unaprijed definirani skup vrijednosti o protokolu koji se koristi za komuniciranje s poslužiteljem (Http, Cobalt, WOPI itd.)
+ 
   - **Data\_Doc\_ServerType:long –** unaprijed definiran skup vrijednosti za vrstu poslužitelja (SharePoint, DropBox, WOPI)
 
   - **Data\_Doc\_ServerVersion:long –** temelji li se poslužitelj na sustavu Office14, Office15 ili Office 16?
@@ -7617,7 +7763,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_SpecialChars:long –** bit-maska koja pokazuje posebne znakove u URL-u ili putu dokumenta
 
-  - **Data\_Doc\_StorageProviderId:string –** niz koji identificira davatelja pohrane dokumenta, primjerice „DropBox“
+  - **Data\_Doc\_StorageProviderId:string –** niz koji određuje davatelja pohrane dokumenta, primjerice „DropBox“
 
   - **Data\_Doc\_StreamAvailability:long –** unaprijed definiran skup vrijednosti statusa toka dokumenta (dostupno, trajno onemogućeno, nije dostupno)
 
@@ -7645,7 +7791,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_ExecutionCount –** koliko je puta izvršen protokol IncOpen
 
-  - **Data\_FailureComponent:long –** unaprijed definiran skup vrijednosti koje označavaju koja je komponenta uzrokovala neuspjeh ovog protokola? (Conflict, CSI, Internal itd.)
+  - **Data\_FailureComponent:long –** unaprijed definirani skup vrijednosti koji označava koja je komponenta uzrokovala neuspjeh ovog protokola? (Conflict, CSI, Internal itd.)
 
   - **Data\_FailureReason:long –** unaprijed definiran skup vrijednosti razloga neuspjeha (FileIsCorrupt, BlockedByAntivirus itd.)
 
@@ -7732,6 +7878,10 @@ Prikupljaju se sljedeća polja:
   - **Data\_NotRequiredExcludedParts –** ukupan broj zip dijelova koji nisu nužni za prvi prikaz te su izuzeti
 
   - **Data\_NotRequiredExcludedPartsSize –** ukupan broj zip dijelova koji nisu nužni za prvi prikaz te su izuzeti
+
+  - **Data_OngoingBlockingOpenCount –** broj koliko se blokirajućih otvorenih protokola trenutno izvodi.
+  
+  - **Data_OngoingOpenCount –** broj koliko se otvorenih protokola trenutno izvodi.
 
   - **Data\_OpenCompleteFailureHR –** rezultat koji govori zašto protokol OpenComplete nije uspio
 
@@ -9457,13 +9607,13 @@ Ovaj događaj pomaže u praćenju vrste iskustva koje korisnici vide kada otvore
  
 Prikupljaju se sljedeća polja: 
 
-- **Page** – koristi se za praćenje iskustva koje korisnik prvi put vidi kada otvori našu stranicu. Moguće su vrijednosti „Probna verzija“, „Preskoči“, „Prepakirano“, „Pretplata“, itd.
+- **Page** – koristi se za praćenje iskustva koje korisnik prvi put vidi kada otvori našu stranicu. Moguće su vrijednosti „Probna verzija”, „Preskoči”, „Prepakirano”, „Pretplata” itd.
 
 - **storeExperience** – koristi se za utvrđivanje je li korisnik ispunjavao uvjete da vidi sučelje SDK trgovine.
 
-- **stringVariant** – koristi se za određivanje vrste nizova koje korisnik vidi kada otvori našu stranicu. Imajte na umu da na bilo kojoj stranici, kao što je primjerice „Probna verzija“ korisnik može ispunjavati uvjete za prikaz različitih nizova ovisno o tome ima li instaliranu stariju verziju sustava Office ili ako je prethodno aktivirao Office. Moguće enumeracije tog svojstva su: „LegacyUpsell“, „OfficeOpened“, „Default“, „YesIntent“, „NoIntent“, itd.
+- **stringVariant** – koristi se za određivanje vrste nizova koje korisnik vidi kada otvori našu stranicu. Imajte na umu da na bilo kojoj stranici, kao što je primjerice „Probna verzija” korisnik može ispunjavati uvjete za prikaz različitih nizova ovisno o tome ima li instaliranu stariju verziju sustava Office ili ako je prethodno aktivirao Office. Moguće enumeracije tog svojstva su: „LegacyUpsell”, „OfficeOpened”, „Default”, „YesIntent”, „NoIntent” itd.
 
-- **windowsBuildType** – koristi se za praćenje vrste međuverzije sustava Windows (WindowsBuildType) na kojem je korisnik. Tj. „RS4“, „RS5“, „RS19H1“, „Vibranium“, itd. Kako naša iskustva obično ciljaju na različite WindowsBuildTypes, ovo svojstvo je od vitalne važnosti za razlikovanje implementacija. 
+- **windowsBuildType** – koristi se za praćenje vrste međuverzije sustava Windows (WindowsBuildType) na kojem je korisnik. Tj. „RS4”, „RS5”, „RS19H1”, „Vibranium” itd. Kako naša iskustva obično ciljaju na različite WindowsBuildTypes, ovo svojstvo je od vitalne važnosti za razlikovanje implementacija. 
 
 #### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
 
@@ -9524,6 +9674,86 @@ Prikupljaju se sljedeća polja:
 - **RMS.SDKVersion** – verzija klijenta usluge upravljanja pravima
 
 - **RMS.ServerType** – vrsta poslužitelja usluge upravljanja pravima 
+
+- **RMS.StatusCode** – kod statusa vraćenog rezultata
+
+- **RMS.TemplatesCount** – broj predložaka
+
+- **RMS.TokenProvided** – označava je li token pružen kao unos poziva API-ja ili ne 
+
+- **RMS.UserProvided** – označava je li korisnik pružen kao unos poziva API-ja ili ne 
+
+- **UserInfo.UserObjectId** – identifikacijski broj objekta korisnika
+
+#### <a name="ipcpgetkey"></a>IpcpGetKey
+
+Prikuplja se kada korisnik pokuša otvoriti dokument zaštićen značajkom upravljanja pravima na informacije (IRM) ili primijeniti zaštite IRM-a. Sadrži informacije potrebne za pravilno istraživanje i dijagnosticiranje problema do kojih dolazi kada se stvori IpcpGetKey poziv API-ja.
+
+Prikupljaju se sljedeća polja:
+
+- **AppInfo.ClientHierarchy** – hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili okruženju za razvojne inženjere
+
+- **AppInfo.Name** – naziv aplikacije.
+
+- **AppInfo.Version** – verzija aplikacije
+
+- **iKey** – identifikacijski broj poslužitelja pružatelja usluge zapisivanja
+
+- **RMS.ApplicationScenarioId** – identifikacijski broj scenarija koji pruža aplikacija
+
+- **RMS.AuthCallbackProvided** – označava pruža li se povratni poziv za provjeru autentičnosti kao unos poziva API-ja ili ne
+
+- **RMS.ConnectionMode** – način povezivanja između klijenta usluge upravljanja pravima i poslužitelja: na mreži ili izvan mreže
+
+- **RMS.ContentId** – identifikacijski broj sadržaja dokumenta
+
+- **RMS.Duration** – ukupno vrijeme potrebno za dovršavanje poziva API-ja
+
+- **RMS.DurationWithoutExternalOps** – ukupno vrijeme umanjeno za potrošene vanjske operacije poput latencije mreže.
+
+- **RMS.ErrorCode** – kod pogreške koji, ako postoji, vraća poziv API-ja
+
+- **RMS.EulId** – ID licence krajnjeg korisnika
+
+- **RMS.EulProvided** – označava je li licenca krajnjeg korisnika pružena kao unos poziva API-ja ili ne
+
+- **RMS.GuestTenant** – identifikacijski broj klijenta gosta za korisnika 
+
+- **RMS.HomeTenant** – identifikacijski broj početnog klijenta za korisnika
+
+- **RMS.HttpCall** – označava postoji li operacija HTTP-a
+
+- **RMS.Identity.ExtranetUrl** – URL ekstraneta poslužitelja usluge upravljanja pravima za korisnika koji se prikuplja tijekom dobivanja novog certifikata za račun prava s poslužitelja
+
+- **RMS.Identity.IntranetUrl** – URL intraneta poslužitelja usluge upravljanja pravima za korisnika koji se prikuplja tijekom dobivanja novog certifikata za račun prava s poslužitelja
+
+- **RMS.Identity.Status** – prvi put dobivanja certifikata za račun prava s poslužitelja ili obnavljanja certifikata za račun prava 
+
+- **RMS.Identity.Type** – vrsta korisničkog računa kao što je račun za Windows ili račun za Live
+
+- **RMS.Identity.UserProvided** – označava je li adresa e-pošte korisnika pružena ili nije tijekom dobivanja novog certifikata za račun prava s poslužitelja
+
+- **RMS.IssuerId** – identifikacijski broj poslužitelja usluge upravljanja pravima koji izdaje certifikat za račun prava 
+
+- **RMS.KeyHandle** – adresa memorije ručice ključa
+
+- **RMS.LicenseFormat** – format licence: Xrml ili Json
+
+- **RMS.PL.ExtranetUrl** – URL ekstraneta u licenci za izdavanje
+
+- **RMS.PL.IntranetUrl** – URL intraneta u licenci za izdavanje
+
+- **RMS.PL.KeyType** – vrijednosti „jedno” ili „dvostruko” označavaju je li PL bio zaštićen zaštitom s jednim ključem ili zaštitom s dvostrukim ključevima
+
+- **RMS.RACType** – vrsta certifikata za račun prava
+
+- **RMS.Result** – uspjeh ili neuspjeh poziva API-ja
+
+- **RMS.ScenarioId** – identifikacijski broj scenarija definiran API-jem
+
+- **RMS.SDKVersion** – verzija klijenta usluge upravljanja pravima
+
+- **RMS.ServerType** – vrsta poslužitelja usluge upravljanja pravima
 
 - **RMS.StatusCode** – kod statusa vraćenog rezultata
 
@@ -10093,7 +10323,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_WasSuccessful: bool –** istinito ako je otvaranje bilo uspješno
 
-#### <a name="onenotesyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted
+#### <a name="onenotesyncprovisioningcompleted-previous-name-officeonenoteandroidsyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted *(stari naziv)*, Office.OneNote.Android.Sync.ProvisioningCompleted
 
 Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote za platformu Android, bilježnice pravilno dodijele kako bi im se moglo jednostavno pristupiti. To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge
 
@@ -10109,7 +10339,7 @@ Prikupljaju se sljedeća polja:
 
 - **TimeTakenInMilliSeconds** – vraća vrijeme koje je potrebno za dovršavanje dodjele resursa u milisekundama
 
-#### <a name="onenotesyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted
+#### <a name="onenotesyncprovisioningstarted-previous-name-officeonenoteandroidsyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted *(stari naziv)*, Office.OneNote.Android.Sync.ProvisioningStarted
 
 Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote za platformu Android, bilježnice pravilno dodijele kako bi im se moglo jednostavno pristupiti.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge
 
@@ -10664,6 +10894,22 @@ Prikupljaju se sljedeća polja:
 - **ErrorAt** – Vrijednost oznake: informacije o mjestu na kojem je došlo do pogreške
 
 - **ExceptionErrorMessage** – opširna poruka o pogrešci
+
+#### <a name="office_android_earlytelemetry_expansionfileserrors"></a>Office_Android_EarlyTelemetry_ExpansionFilesErrors
+
+Ekspanzijske datoteke za komplet datoteka sustava Android (APK) za mobilnu aplikaciju Office jesu dopunske datoteke resursa koje razvojni programeri aplikacija na sustavu Android mogu objaviti zajedno sa svojom aplikacijom. Da bismo svoj mehanizam preuzimanja ekspanzijskih datoteka učinili pouzdanijim, bilježimo razlog pogrešaka koje nastupe bilo tijekom preuzimanja ekspanzijskih datoteka ili čitanja preuzetih ekspanzijskih datoteka.
+
+Prikupljaju se sljedeća polja:
+
+- **Data_ClassName** – tekst koji predstavlja naziv datoteke izvornog koda u kojem je došlo do pogreške.
+
+- **Data_ErrorMessage** – tekst koji predstavlja operaciju koja nije uspjela.
+
+- **Data_ExceptionMessage** – neobavezno tekstno polje koje predstavlja razlog iznimke.
+
+- **Data_ExceptionType** – neobavezno tekstno polje koje predstavlja naziv iznimke izbačene iz izvornog koda.
+
+- **Data_MethodName** – tekst koji predstavlja naziv metode u izvornom kodu u kojem je došlo do pogreške.
 
 #### <a name="officeandroidearlytelemetrysharedlibraryloadersearchandloadlibraryerror"></a>Office.Android.EarlyTelemetry.SharedLibraryLoadersearchAndloadLibraryError 
 
