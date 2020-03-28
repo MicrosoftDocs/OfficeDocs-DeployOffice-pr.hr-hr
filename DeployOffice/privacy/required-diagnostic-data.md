@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: 065fb887fe0af4bb68576310c3ceb4842b163bf1
-ms.sourcegitcommit: 95aa5a2587e7333dfbb2ab0d4d898789645a4275
+ms.openlocfilehash: fbb0e7b095becb664ff05fef67cd47f3360130b2
+ms.sourcegitcommit: 269825241b1fa1831655ff599c97d5afa85b3895
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "42946176"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "42983726"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -525,6 +525,122 @@ Sljedeća polja podataka uobičajena su za sve događaje za aplikaciju OneNote n
 
 - **UserInfo_OtherIdType** – popis vrsta računa koji nisu primarni.
 
+## <a name="data-fields-that-are-common-for-outlook-mobile-events"></a>Polja podataka koja su uobičajena za događaje aplikacije Outlook
+
+Outlook Mobile prikuplja uobičajena polja za svaki naš događaj da bismo mogli osigurati da je aplikacija ažurna, sigurna i funkcionalna kao što se očekuje. 
+
+Sljedeća polja podataka uobičajena su za sve događaje za aplikaciju Outlook na sustavima iOS i Android.
+
+- **aad_tenant_id** – ID klijenta korisnika ako je dostupan
+
+- **account_cid** – identifikator u obliku pseudonima koji predstavlja trenutačnog korisnika
+
+- **account_domain** – naziv domene računa
+
+- **account_puid** – globalno jedinstveni identifikator korisnika za Microsoftov potrošački račun
+
+- **account_type** – prati vrstu računa kao što je Office 365, Google Cloud Cache, Outlook.com itd.
+
+- **action** – naziv radnje događaja (kao što je arhiva, brisanje itd.) tako da možemo otkriti poteškoće sa specifičnim radnjama koje su poduzete
+
+- **ad_id** – jedinstveni identifikator oglašavanja
+
+- **app_version** – trenutačna instalirana verzija aplikacije koja nam pomaže otkriti probleme koji utječu na određenu verziju aplikacije
+
+- **AppInfo.ETag** – jedinstven identifikator za upravljanje izdanjima naših značajki kako bismo lakše prepoznali probleme koji utječu na određene značajke koje se objavljuju
+
+- **AppInfo.Language** – trenutačna jezična postavka uređaja koja nam omogućuje otkrivanje problema koji utječu na određene jezike
+
+- **AppInfo.Version** – trenutačna verzija instalirane verzije s pomoću koje otkrivamo probleme koji utječu na određene verzije aplikacija
+
+- **customer_type** – označava vrstu korisnika (potrošač, komercijalni korisnik, treća strane itd.) kako bismo lakše prepoznali probleme koji utječu na određene vrste korisnika
+
+- **device_category** – označava vrstu uređaja (telefon, tablet itd.) kako bismo lakše prepoznali specifične probleme kategorije uređaja
+
+- **DeviceInfo.Id** – jedinstven identifikator uređaja s pomoću kojeg lakše otkrivamo specifične probleme uređaja
+
+- **DeviceInfo.Make** – marka uređaja (tj. Apple, Samsung itd.) kako bismo lakše prepoznali probleme specifične za marku
+
+- **DeviceInfo.Model** – model uređaja (npr. iPhone 6s) kako bismo lakše prepoznali probleme specifične za model
+
+- **DeviceInfo.NetworkType** – trenutačna mreža uređaja koja se upotrebljava (Wi-Fi, mobilna itd.) kako bismo lakše prepoznali probleme specifične za mrežu
+
+- **DeviceInfo.OsBuild** – trenutačna međuverzija OS-a uređaja kako bismo lakše prepoznali probleme koji utječu na određene međuverzije OS-a
+
+- **DeviceInfo.OsName** – naziv OS-a (npr. iOS) kako bismo lakše prepoznali probleme koji utječu na određene platforme
+
+- **DeviceInfo.OsVersion** – trenutačna verzija OS-a uređaja kako bismo lakše prepoznali probleme koji utječu na određene verzije OS-a
+
+- **DeviceInfo.SDKUid** – jedinstveni identifikator uređaja (sličan identifikatoru DeviceInfo.Id)
+
+- **EventInfo.InitId** – Id koji se upotrebljava u okviru postavljanja rasporeda događaja preko našeg kanala za telemetriju kako bismo lakše prepoznali uzrok problema u kanalu
+
+- **EventInfo.SdkVersion** – SDK verzija koju upotrebljavamo za slanje naše telemetrije kako bismo lakše prepoznali uzrok problema u kanalu
+
+- **EventInfo.Sequence** – slijed je za raspored događaja kroz naš kanal za telemetriju kako bismo lakše prepoznali uzrok problema u kanalu
+
+- **EventInfo.Source** – govori nam koji je dio kôda poslao događaj kako bi nam pomogao prepoznati uzrok problema
+
+- **EventInfo.Time** – vrijeme i datum emitiranja događaja s uređaja tako da naši sustavi mogu uspješno upravljati događajima koji stižu
+
+- **eventpriority** – prioritet telemetrijskog događaja koji se odnosi na druge događaje tako da naši sustavi mogu uspješno upravljati događajima koji stižu
+
+- **first_launch_date** – prvi put kada je aplikacija pokrenuta da bismo lakše shvatili kada je problem nastao
+
+- **hashed_email** – identifikator u obliku pseudonima koji predstavlja poruku e-pošte trenutačnog korisnika
+
+- **is_first_session** – prati ako je ovo prva sesija aplikacija radi rješavanja pogrešaka
+
+- **origin** – izvor radnje. Na primjer, označavanje poruke pročitanom može doći s popisa poruka ili iz obavijesti o novoj pošti, a to nam pomaže otkriti probleme na temelju izvora radnje
+
+- **PipelineInfo.AccountId** – identifikator u obliku pseudonima koji predstavlja trenutačnog korisnika
+
+- **PipelineInfo.ClientCountry** – trenutačna zemlja uređaja kako bi se prepoznali specifični problemi i nedostupnost u vezi zemlje ili regije
+
+- **PipelineInfo.ClientIp** – IP adresa na kojoj je uređaj spojen radi rješavanja problema s povezivanjem
+
+- **PipelineInfo.IngestionTime** – vremenska oznaka telemetrijskog prihvaćanja za ovaj događaj
+
+- **Session.Id** – jedinstven identifikator za sesiju aplikacije za lakše otkrivanje problema u vezi sa sesijom
+
+- **Session.ImpressionId** – jedinstven identifikator za upravljanje izdanjima naših značajki da bi se značajke uspješno objavile svim korisnicima i u svim uređajima
+
+- **ui_mode** – je korisnik u svijetlom ili tamnom načinu rada, pomaže nam razvrstati pogreške u korisničkom sučelju
+
+- **UserInfo.Language** – korisnikov jezik koji pomaže rješavati pogreške u vezi s tekstom prijevoda
+
+- **UserInfo.TimeZone** – vremenska zona korisnika koja pomaže rješavati pogreške u vezi s kalendarom
+
+
+Osim toga, sljedeća su polja podataka uobičajena za sve događaje za aplikaciju Outlook za iOS.
+
+- **cloud** – mjesto gdje se poštanski sandučić nalazi za račun na ovom uređaju kako bi se lakše prepoznali problemi specifični za oblak specifičnog poštanskog sandučića, poput sustava Office 365 ili GCC.
+
+- **DeviceInfo.NetworkProvider** – davatelj mreže uređaja (npr. Verizon)
+
+- **gcc_restrictions_enabled** – upućuje na to jesu li na aplikaciju primijenjena ograničenja GCC-a tako da možemo osigurati da korisnici GCC-a sigurno upotrebljavaju našu aplikaciju
+
+- **office_session_id** – jedinstveni identifikator koji prati sesiju za spojene usluge sustava Office kako bi se lakše prepoznali problemi specifični za integraciju usluge sustava Office u aplikaciju Outlook, poput aplikacije Word
+
+- **state** – je li aplikacija bila aktivna kada je ovaj događaj poslan kako bi se lakše prepoznali problemi specifični za aktivna i neaktivna stanja aplikacija
+
+
+Osim toga, sljedeća su polja podataka uobičajena za sve događaje za aplikaciju Outlook za Android.
+
+- **DeviceInfo.NetworkCost** – pokazatelj trenutačnog mrežnog troška uređaja koji odražava status mreže Wi-Fi / mobilne mreže / roaminga kako bi se lakše prepoznali problemi specifični za mrežu uređaja
+
+- **is_app_in_duo_split_view_mode** – javit će nam da je aplikacija bila u načinu dijeljenja zaslona na uređaju Duo.  To je svojstvo podešeno samo za uređaje Duo (samo Android).
+
+- **is_dex_mode_enabled** – je li omogućen Samsungov način rada DeX kako bi se lakše prepoznali problemi specifični za način rada DeX kod Samsungovih uređaja
+
+- **is_sliding_drawer_enabled** – je li sučelje klizne ladice omogućeno kako bi se lakše prepoznali problemi koje uzroku naše sučelje klizne ladice
+
+- **orientation** – fizičko usmjerenje zaslona (okomito/vodoravno) kako bi se lakše prepoznali specifični problemi u vezi s usmjerenjem zaslona
+
+- **os_arch** – arhitektura operacijskog sustava za uređaj kako bi se lakše prepoznali problemi specifični za operacijske sustave uređaja
+
+- **process_bitness** – broj bitova postupka (32 ili 64 bitova) za aplikaciju kako bi se lakše prepoznali problemi specifični za broj bitova uređaja
+
 ## <a name="software-setup-and-inventory-data-events"></a>Događaji koji se odnose na instalaciju softvera i podatke o instaliranom softveru
 
 Ovo su podvrste podataka u toj kategoriji:
@@ -613,7 +729,7 @@ Prikupljaju se sljedeća polja:
 
 - **osArchitecture** – arhitektura operacijskog sustava
 
-- **osEnvironment** – cijeli broj koji označava operacijski sustav (Windows, Android, iOS, Mac, itd).
+- **osEnvironment** – cijeli broj koji označava operacijski sustav (Windows, Android, iOS, Mac itd).
 
 - **osVersionString** – verzija operacijskog sustava
 
@@ -2355,7 +2471,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_InclusiveMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje uključuje trajanje poziva podfunkcije. 
 
-- **Data_InitializationReason** – enumeracija koja označava kako se datoteka otvara, npr. elementa korisničkog sučelja ili je pokreće druga aplikacija itd.
+- **Data_InitializationReason** – enumeracija koja označava kako se datoteka otvara, npr. element korisničkog sučelja koji je pokrenula druga aplikacija itd.
 
 - **Data_Measurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje isključuje trajanje poziva podfunkcije.
 
@@ -2786,7 +2902,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_InclusiveMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje uključuje trajanje poziva podfunkcije.
 
-- **Data_InitializationReason** – enumeracija koja označava kako se datoteka otvara, npr. iz kog elementa korisničkog sučelja ili je pokreće druga aplikacija.
+- **Data_InitializationReason** – enumeracija koja označava kako se datoteka otvara, npr. iz kojeg elementa korisničkog sučelja ili je pokreće druga aplikacija.
 
 - **Data_Measurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije i trajanju koje isključuje trajanje poziva podfunkcije.
 
@@ -2982,7 +3098,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeextensibilitycatalogexchangeprocessmanifest"></a>Office.Extensibility.Catalog.ExchangeProcessManifest
 
-Podaci vezani uz obradu pojedinačnog manifesta za dodatak koji je dodijelio administrator klijenta sustava O365. Koristi se za analizu problema korisnika i izradu grafikona uspjeha korisnika.
+Podaci vezani uz obradu pojedinačnog manifesta za dodatak koji je dodijelio administrator klijenta sustava Office 365. Koristi se za analizu problema korisnika i izradu grafikona uspjeha korisnika.
  
 Prikupljaju se sljedeća polja:
 
@@ -3695,7 +3811,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="office_firstrun_apple_activationresult"></a>Office_FirstRun_Apple_ActivationResult
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktiviranja pretplate na O365 zajedno s protokom koji se koristi za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja, itd.).
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktiviranja pretplate na Office 365 zajedno s protokom koji se upotrebljava za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja itd.).
 
 Prikupljaju se sljedeća polja:
 
@@ -3707,7 +3823,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="office_firstrun_apple_activationstatus"></a>Office_FirstRun_Apple_ActivationStatus
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za utvrđivanje rezultata aktiviranja pretplate na O365 zajedno s protokom koji se koristi za aktiviranje (FRE, unutar aplikacije, kupnja, itd.). Prikupljamo podatke koji sadrže vrstu aktivacije, vrstu protoka (FRE/DocStage /Kupnja) i ID servisa za licenciranje sustava Office.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Appleovim platformama. Događaj se upotrebljava za utvrđivanje rezultata aktiviranja pretplate na Office 365 zajedno s protokom koji se upotrebljava za aktiviranje (FRE, unutar aplikacije, kupnja itd.). Prikupljamo podatke koji sadrže vrstu aktivacije, vrstu protoka (FRE/DocStage /Kupnja) i ID servisa za licenciranje sustava Office.
 
 Prikupljaju se sljedeća polja:
 
@@ -7158,7 +7274,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidandroidoffice16bootlatency"></a>Office.Android.AndroidOffice16BootLatency
 
-Ključno je za snimanje metrike performansi aplikacije s obzirom na vrijeme odaziva aplikacije prilikom pokretanja.  Microsoft to koristi za prikupljanje vremena potrebnog za reagiranje aplikacije i otkrivanje scenarija koji mogu utjecati na vrijeme pokretanja u WXP aplikacijama.
+Ključno je za snimanje metrike performansi aplikacije s obzirom na vrijeme odaziva aplikacije prilikom pokretanja.  Microsoft to upotrebljava za prikupljanje vremena potrebnog za reagiranje aplikacije i otkrivanje scenarija koji mogu utjecati na vrijeme pokretanja u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -9819,7 +9935,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidandroidofficelaunchtolandingpagelatency"></a>Office.Android.AndroidOfficeLaunchToLandingPageLatency
 
-Ključno je za snimanje metrike performansi aplikacije s obzirom na vrijeme odaziva aplikacije prilikom pokretanja.  Microsoft to koristi za prikupljanje vremena potrebnog za reagiranje aplikacije i otkrivanje scenarija koji mogu utjecati na vrijeme pokretanja u WXP aplikacijama.
+Ključno je za snimanje metrike performansi aplikacije s obzirom na vrijeme odaziva aplikacije prilikom pokretanja.  Microsoft to upotrebljava za prikupljanje vremena potrebnog za reagiranje aplikacije i otkrivanje scenarija koji mogu utjecati na vrijeme pokretanja u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
  
@@ -10475,7 +10591,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidandroidappdocsfileoperationends"></a>Office.Android.AndroidAppDocsFileOperationEnds
 
-Ključna dokumenta samo za Android (AppDocs) podaci telemetrije za kraj operacija Datoteka/Novo/Spremi kao. Ovo bilježi kodove pogrešaka za neuspjehe tih AppDocs operacija.  Microsoft to koristi za prepoznavanje pogrešaka u različitim operacijama datoteke i točnog sloja na kojem je došlo do pogreške u WXP aplikacijama.
+Ključna dokumenta samo za Android (AppDocs) podaci telemetrije za kraj operacija Datoteka/Novo/Spremi kao. Ovo bilježi kodove pogrešaka za neuspjehe tih AppDocs operacija.  Microsoft to upotrebljava za prepoznavanje pogrešaka u različitim operacijama datoteke i točnog sloja na kojem je došlo do pogreške u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10567,7 +10683,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidandroidfileasyncsavestatus"></a>Office.Android.AndroidFileAsyncSaveStatus
 
-Snima asinkronu datoteku, sprema podatke o statusu i razne kodove pogrešaka iz različitih komponenti.  Microsoft koristi ove podatke kako bi analizirao postoji li gubitak korisničkih podataka u aplikaciji tijekom spremanja datoteka u WXP aplikacijama.
+Snima asinkronu datoteku, sprema podatke o statusu i razne kodove pogrešaka iz različitih komponenti.  Microsoft koristi ove podatke kako bi analizirao postoji li gubitak korisničkih podataka u aplikaciji tijekom spremanja datoteka u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10583,7 +10699,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidandroidfileopenreliability"></a>Office.Android.AndroidFileOpenReliability
 
-To bilježi podatke o statusu otvaranja datoteke i različite kodove pogrešaka kako bi se utvrdilo koje se pogreške prilikom otvaranja datoteke očekuju, a koje ne i koji ih dio koda prijavljuje.  Microsoft koristi ove podatke kako bi analizirao razloge neuspjeha otvaranja datoteka i izračunao ključnu metriku poput stope uspjeha otvaranja datoteke u WXP aplikacijama.
+To bilježi podatke o statusu otvaranja datoteke i različite kodove pogrešaka kako bi se utvrdilo koje se pogreške prilikom otvaranja datoteke očekuju, a koje ne i koji ih dio koda prijavljuje.  Microsoft upotrebljava ove podatke kako bi analizirao razloge neuspjeha otvaranja datoteka i izračunao ključnu metriku poput stope uspjeha otvaranja datoteke u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10631,7 +10747,7 @@ Prikupljaju se sljedeća polja:
 
 - **ProviderFileSize** – veličina datoteke snimljena tijekom otvaranja datoteke putem aktivacije datoteke
 
-- **Stae** – enumeracija statusa otvaranja datoteke
+- **State** – enumeracija statusa otvaranja datoteke
 
 - **UriScheme** – shema URL-a
 
@@ -10647,7 +10763,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidandroidfilesavestatus"></a>Office.Android.AndroidFileSaveStatus
 
-Ključno za snimanje podataka o statusu spremanja datoteke i razne kodove pogrešaka iz različitih komponenti.  Microsoft koristi ove podatke kako bi analizirao postoji li gubitak korisničkih podataka u aplikaciji tijekom spremanja datoteka u WXP aplikacijama.
+Ključno za snimanje podataka o statusu spremanja datoteke i razne kodove pogrešaka iz različitih komponenti.  Microsoft koristi ove podatke kako bi analizirao postoji li gubitak korisničkih podataka u aplikaciji tijekom spremanja datoteka u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10751,7 +10867,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidappdocsfileoperationends"></a>Office.Android.AppDocsFileOperationEnds
 
-Ključna dokumenta samo za Android (AppDocs) podaci telemetrije za kraj operacija Datoteka/Novo/Spremi kao. Ovo bilježi kodove pogrešaka za neuspjehe tih AppDocs operacija.  Microsoft to koristi za prepoznavanje pogrešaka u različitim operacijama datoteke i točnog sloja na kojem je došlo do pogreške u WXP aplikacijama.
+Ključna dokumenta samo za Android (AppDocs) podaci telemetrije za kraj operacija Datoteka/Novo/Spremi kao. Ovo bilježi kodove pogrešaka za neuspjehe tih AppDocs operacija.  Microsoft to upotrebljava za prepoznavanje pogrešaka u različitim operacijama datoteke i točnog sloja na kojem je došlo do pogreške u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10821,7 +10937,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidbcserrors"></a>Office.Android.BCS.Errors
 
-Telemetrija binarnih pogrešaka pretvorbe za ispis i zajedničko korištenje u obliku PDF-a.  Microsoft to koristi za prepoznavanje točaka neuspjeha tijekom BCS pretvorbe u WXP aplikacijama.
+Telemetrija binarnih pogrešaka pretvorbe za ispis i zajedničko korištenje u obliku PDF-a.  Microsoft to upotrebljava za prepoznavanje točaka neuspjeha tijekom BCS pretvorbe u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10845,7 +10961,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidclientsideiap"></a>Office.Android.ClientSideIAP
 
-Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanja datoteka i dodavanje mjesta.  Microsoft to koristi za prepoznavanje problema s oštećenjem DB-a u aplikacijama koje mogu ometati korisnika da dodaje mjesta ili ih pregledava unutar aplikacije u WXP aplikacijama.
+Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanja datoteka i dodavanje mjesta.  Microsoft to upotrebljava za prepoznavanje problema s oštećenjem DB-a u aplikacijama koje mogu ometati korisnika da dodaje mjesta ili ih pregledava unutar aplikacije u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10887,7 +11003,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroiddbfailurecause"></a>Office.Android.DBFailureCause
 
-Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanja datoteka i dodavanje mjesta.  Microsoft to koristi za prepoznavanje problema s oštećenjem DB-a u aplikacijama koje mogu ometati korisnika da dodaje mjesta ili ih pregledava unutar aplikacije u WXP aplikacijama.
+Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanja datoteka i dodavanje mjesta.  Microsoft to upotrebljava za prepoznavanje problema s oštećenjem DB-a u aplikacijama koje mogu ometati korisnika da dodaje mjesta ili ih pregledava unutar aplikacije u aplikacijama Word, Excel ili PowerPoint.
 
 Prikupljaju se sljedeća polja:
 
@@ -10933,7 +11049,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidintuneintunejavaexceptionadaltokenformam"></a>Office.Android.Intune.IntuneJavaExceptionADALTokenForMAM
 
-Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka za dobivanje ADAL tokena za Intune resurse.  Microsoft koristi ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
+Telemetrija ključne pogreške za praćenje pogrešaka za pojedine Intune API-je; Ova telemetrija evidentira se u slučaju pogrešaka za dobivanje ADAL tokena za Intune resurse.  Microsoft upotrebljava ove podatke za prepoznavanje pogrešaka tijekom i nakon Intune upisa u aplikaciju, nakon što se prijavi u aplikaciju s poslovnim računom
 
 Prikupljaju se sljedeća polja:
 
@@ -11077,7 +11193,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="officeandroidlicenseactivationfailure"></a>Office.Android.LicenseActivationFailure
 
-Telemetrija kritične pogreške za praćenje neuspjeha u aktiviranju licenci za O365 račune u W/X/P aplikacijama.  Microsoft to koristi za analiziranje neuspjeha pri aktiviranju kupljene licence o365.
+Telemetrija kritične pogreške za praćenje neuspjeha u aktiviranju licenci za račune sustava Office 365 u aplikacijama Word, Excel ili PowerPoint.  Microsoft to upotrebljava za analiziranje neuspjeha pri aktiviranju kupljene licence Office 365.
 
 Prikupljaju se sljedeća polja:
 
