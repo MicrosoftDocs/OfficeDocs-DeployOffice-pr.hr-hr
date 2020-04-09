@@ -13,19 +13,19 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o neobaveznim povezanim iskustvima, uključujući uvjete korištenja koji se na njih primjenjuju.
 hideEdit: true
-ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
-ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
+ms.openlocfilehash: 9cfbae596b686e2be484756b848514d4c36108df
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "42340929"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166244"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled neobaveznih povezanih iskustava za Office
 
-Ako imate račun tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi možda vam je dao mogućnost korištenja barem jednog servisa koji se oslanja na oblak (i koji se naziva i "neobaveznim povezanim iskustvom") prilikom korištenja aplikacija sustava Office 365 ProPlus. Ti su servisi koji se oslanjaju na oblak neobavezni. Na vama je hoćete li ih koristiti. Oni vam se stavljaju na raspolaganje pod uvjetima [Microsoftovog ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/). U nekim se slučajevima mogu primjenjivati i drugi uvjeti. U ovom su članku popisani servisi koji se oslanjaju na oblak te se dodatno objašnjavaju uvjeti njihovog korištenja i opisuje kako ih u bilo kojem trenutku možete uključiti ili isključiti.
+Ako imate račun tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi možda vam je dao mogućnost upotrebe barem jednog servisa koji se oslanja na oblak (i koji se naziva i „neobaveznim povezanim iskustvom”) prilikom upotrebe aplikacija sustava Office 365 ProPlus. Ti su servisi koji se oslanjaju na oblak neobavezni. Na vama je hoćete li ih koristiti. Oni vam se stavljaju na raspolaganje pod uvjetima [Microsoftovog ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/). U nekim se slučajevima mogu primjenjivati i drugi uvjeti. U ovom su članku popisani servisi koji se oslanjaju na oblak te se dodatno objašnjavaju uvjeti njihovog korištenja i opisuje kako ih u bilo kojem trenutku možete uključiti ili isključiti.
 
 > [!NOTE]
-> Ako ste administrator pogledajte sljedeće članke da biste saznali kako korisnicima dodijeliti ili ograničiti mogućnost korištenja neobaveznih povezanih iskustava:
+> Ako ste administrator, pogledajte sljedeće članke da biste saznali kako korisnicima dodijeliti ili ograničiti mogućnost upotrebe neobaveznih povezanih iskustava:
 > - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 > - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 > - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
@@ -63,7 +63,7 @@ Da biste u programu Outlook za iOS i Android prijavili probleme i povezali se s 
 
 ### <a name="help--suggest-a-feature"></a>Pomoć > Predložite značajku
 
-Predlaganje značajke iskustvo je koje omogućuje slanje ideja vezanih uz vaše korištenje programa Outlook. Prijedlozi se šalju izravno servisu treće strane pod nazivom UserVoice. Ako ideje šaljete pomoću značajke Predložite značajku, primjenjuju se [uvjeti pružanja usluga](https://outlook.uservoice.com/tos) i [pravilnik o zaštiti privatnosti](https://outlook.uservoice.com/tos#privacy-policy) koje propisuje UserVoice.
+Predlaganje značajke iskustvo je koje omogućuje slanje ideja vezanih uz vašu upotrebu programa Outlook ili Excel. Prijedlozi se šalju izravno servisu treće strane pod nazivom UserVoice. Ako ideje šaljete pomoću značajke Predložite značajku, primjenjuju se [uvjeti pružanja usluga](https://outlook.uservoice.com/tos) i [pravilnik o zaštiti privatnosti](https://outlook.uservoice.com/tos#privacy-policy) koje propisuje UserVoice.
 
 ### <a name="insert-online-video"></a>Umetanje internetskog videozapisa
 
@@ -91,7 +91,7 @@ Na [traci vremenske prognoze](https://support.office.com/article/d11b7532-7c58-4
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Utvrđivanje je li vam administrator dao mogućnost korištenja neobaveznih povezanih iskustava
 
-Da biste utvrdili je li vam administrator dao mogućnost korištenja neobaveznih povezanih iskustava u aplikaciji sustava Office 365 ProPlus na uređaju sa sustavom Windows, idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** i odaberite **Upravljanje postavkama**. Ako vam administrator nije dao kontrolu, vidjet ćete poruku koja kaže "administrator u tvrtki ili ustanovi upravlja vašim postavkama privatnosti te je odlučio onemogućiti neobavezna povezana iskustva."
+Da biste utvrdili je li vam administrator dao mogućnost korištenja neobaveznih povezanih iskustava u aplikaciji sustava Office 365 ProPlus na uređaju sa sustavom Windows, idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** i odaberite **Upravljanje postavkama**. Ako vam administrator nije dao kontrolu, vidjet ćete poruku koja kaže „administrator u tvrtki ili ustanovi upravlja vašim postavkama privatnosti te je odlučio onemogućiti neobavezna povezana iskustva”.
 
 Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
 

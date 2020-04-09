@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 6dc32a1456402624ab28e0acbe9c3ef85b6add9d
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917574"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166334"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -44,6 +44,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | ----------- | ------------------ |
 | 3D karte\*    | [Početak rada s 3D kartama](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Automatski alternativni tekst   | [Sve što trebate znati za pisanje učinkovitog alternativnog teksta](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
+| Vrste podataka                  | [Vrste podataka u programu Excel: dionice i zemljopis](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Diktiranje  | [Glasovno diktiranje u sustavu Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Redaktor    | [Redaktor je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Ideje     | [Ideje u programu Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
@@ -77,7 +78,6 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 | ------------- | ------------- |
 | Aplikacije kalendara| [Što su aplikacije kalendara?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Fontovi u oblaku                 | [Fontovi u oblaku u sustavu Office](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Vrste podataka                  | [Vrste podataka u programu Excel: dionice i zemljopis](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Najčešća pitanja |Kad odaberete **Postavke** > **Pomoć i povratne informacije** > **Najčešća pitanja** u programu Outlook za iOS i Android, bit ćete preusmjereni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Rukopisni efekti                 | [Crtanje i pisanje pomoću značajke rukopisa u sustavu Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Umetanje ikona                | [Umetanje ikona u sustavu Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
@@ -109,7 +109,6 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | ------------- | ------------- |
 | @spominjanje | [Korištenje @spominjanja u komentarima radi označavanja osoba](https://support.office.com/article/644bf689-31a0-4977-a4fb-afe01820c1fd). |
 |Dijagram za kreativno razmišljanje (Visio)|[Stvaranje dijagrama za kreativno razmišljanje](https://support.office.com/article/642706c0-7e63-463b-8aa8-a9aa67367989)|
-| Čavrljanje | [Poboljšavanje suradnje uz čavrljanje u sustavu Microsoft Office](https://support.office.com/article/1ecc6c7f-0b02-4baa-b9d9-c9d67023bedd)  |
 | Uskoro dostupno (Outlook)  |[Uskoro dostupno](https://support.office.com/article/d4b7db49-b4e0-4f98-a0dc-156952e551e2)  |
 | Obraćanje podršci (Outlook) | Kada na vrpci odaberete **Pomoć** > **Obratite se podršci**|
 | Prilagođeni uvoz (Visio)  | [Uvoz podataka u oblike na crtežu](https://support.office.com/article/d174b3fd-3079-42fd-81e8-2dbf8d38bb03) |
@@ -152,7 +151,7 @@ Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrato
 > [!NOTE]
 > Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
 
-Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne koristite te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u sljedećim člancima: 
+Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne upotrebljavate te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u sljedećim člancima: 
 
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md).
@@ -161,7 +160,7 @@ Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke p
 
 Ako odlučite isključiti neke vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili ćete dobiti poruku o pogrešci kada pokušate koristiti ta povezana iskustva.
 
-Čak i ako odlučite isključiti povezana iskustva, ostat će dostupne određene funkcije sustava Office, pa će tako sinkronizacija poštanskog sandučića u programu Outlook te Teams i Skype za tvrtke i dalje funkcionirati. Uz to, postoji i skup servisa koji su ključni za funkcioniranje sustava Office te ih se ne može isključiti, kao npr. servis za licenciranje, koji potvrđuje da imate ispravnu licencu za korištenje sustava Office.
+Čak i ako odlučite isključiti povezana iskustva, ostat će dostupne određene funkcije sustava Office, pa će tako sinkronizacija poštanskog sandučića u programu Outlook te Teams i Skype za tvrtke i dalje funkcionirati. Uz to, postoji i skup servisa koji su ključni za funkcioniranje sustava Office te ih se ne može isključiti, kao npr. servis za licenciranje, koji potvrđuje da imate ispravnu licencu za upotrebu sustava Office.
 
 ## <a name="related-topics"></a>Povezane teme
 
