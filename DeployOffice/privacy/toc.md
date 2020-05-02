@@ -1,4 +1,4 @@
-# Zaštita privatnosti za Office 365 ProPlus
+# Pravilnik za Microsoft 365 Apps za velike tvrtke
 
 ## [Pregled kontrola za zaštitu privatnosti](overview-privacy-controls.md)
 
