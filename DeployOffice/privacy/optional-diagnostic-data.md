@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Office administratorima sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
-ms.openlocfilehash: ab40e68df1ed91b1aff7510383d47967e8f13ccb
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 0190c29a017b35d945e6a1d540e1560dfab47a4c
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067058"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993065"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Neobavezni dijagnostički podaci za Office
 
 > [!IMPORTANT]
 > Informacije u ovom članku odnose se na verziju 1904 ili noviju verziju sljedećeg klijentskog softvera sustava Office instaliranog na računalu sa sustavom Windows:
-> - Office 365 ProPlus i Office 365 Business
-> - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
-> - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
+> - Microsoft 365 Apps za velike tvrtke (prethodni naziv: Office 365 ProPlus)
+> - Microsoft 365 Apps za male tvrtke (prethodni naziv: Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family i druge verzije sustava Office koje su obuhvaćene pretplatom na Microsoft 365.
+> - Računalne aplikacije za Project i Visio koje su obuhvaćene nekim planovima pretplate, kao što su Project tarifa 5 ili Visio tarifa 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
@@ -47,8 +48,8 @@ Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 
 Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
 
-- [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)

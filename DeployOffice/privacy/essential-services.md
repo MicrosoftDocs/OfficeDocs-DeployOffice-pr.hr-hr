@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 2d285e2e0494b08e6d17a0a72bd8465e6c8edce7
-ms.sourcegitcommit: 2b494bb428a3a1b837376c0ab9ef9c2357e3165f
+ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42939754"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992829"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
 > [!IMPORTANT]
 > Informacije u ovom članku odnose se na verziju 1904 ili noviju verziju sljedećeg klijentskog softvera sustava Office instaliranog na računalu sa sustavom Windows:
-> - Office 365 ProPlus i Office 365 Business
-> - Office 365 Personal, Office 365 Home ili druge verzije sustava Office koje su dio pretplate na Office 365.
-> - Project i Visio koji se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
+> - Microsoft 365 Apps za velike tvrtke (prethodni naziv: Office 365 ProPlus)
+> - Microsoft 365 Apps za male tvrtke (prethodni naziv: Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family i druge verzije sustava Office koje su obuhvaćene pretplatom na Microsoft 365.
+> - Računalne aplikacije za Project i Visio koje su obuhvaćene nekim planovima pretplate, kao što su Project tarifa 5 ili Visio tarifa 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
@@ -40,8 +41,8 @@ Dodatne informacije potražite u sljedećim člancima:
 
 Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
 
-- [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
@@ -490,7 +491,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_PrereqFailure\_Type** – neispunjeni preduvjet, tj. operacijski sustav nije podržan
 
-  - **Data\_ProductReleaseId** – proizvod koji instaliramo, npr. Office 365 ProPlus
+  - **Data\_ProductReleaseId** – proizvod koji instaliramo, npr. Microsoft 365 Apps za velike tvrtke
 
 ### <a name="officeclicktoruncorruptioncheck"></a>Office.ClickToRun.CorruptionCheck
 
@@ -588,7 +589,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_OfficeVersion** – verzija instaliranog sustava Office
 
-  - **Data\_Sku** – instalirani SKU, npr. Office 365 ProPlus.hr-hr
+  - **Data\_Sku** – inventarni broj instaliranog proizvoda, npr. Microsoft 365 Apps za velike tvrtke
 
   - **Data\_SqmMachineID** – jedinstveni ID računala koji koristi identifikator ažuriranja sustava Office Windows SQM Data\_SusClientID- Machine
 
@@ -628,7 +629,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_PrereqFailure\_Type –** neispunjen preduvjet na koji smo naišli
 
-  - **Data\_ProductReleaseId –** proizvod koji instaliramo, npr. Office 365 ProPlus
+  - **Data\_ProductReleaseId –** proizvod koji instaliramo, npr. Microsoft 365 Apps za velike tvrtke
 
 ### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
 
@@ -3061,6 +3062,8 @@ Prikupljaju se sljedeća polja:
 - **UserDismissed** – to upućuje na to je li korisnik odbacio dijaloški okvir, a time i način rada u načinu mirovanja ili načinu smanjene funkcionalnosti jer nije odabrao kupovinu sustava Office niti probnu verziju
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
+
+*[Ovaj je događaj uklonjen iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 Imamo eksperiment u kojem se korisniku nudi mogućnost da isproba i postavi automatsko plaćanje sustava Office izravno iz aplikacije, a da ni u jednom trenutku ne mora izaći iz aplikacije. Ovo prijavljuje uspjeh ili pogrešku tog eksperimenta, te šifru pogreške. Ključno je u otkrivanju je li korisnik u dobrom stanju, te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom.
 
@@ -6144,6 +6147,8 @@ Prikupljaju se sljedeća polja:
 
 - **App** – Proces aplikacije za slanje događaja
 
+- **AppID** – Identifikator aplikacije čije preuzimanje nije uspjelo.
+
 - **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
 
 - **AppVersionLong** – Verzija aplikacije
@@ -6160,6 +6165,8 @@ Prikupljaju se sljedeća polja:
 
 - **DeviceInfo_OsBuild** – Verzija operacijskog sustava
 
+- **Error** – Pogreška koja je uočena tijekom preuzimanja.
+
 - **Event_ReceivedTime** – Vrijeme primanja telemetrije
 
 - **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
@@ -6168,13 +6175,15 @@ Prikupljaju se sljedeća polja:
 
 - **HowTocheck** – Postavka za provjeru ažuriranja
 
-- **Payload** – Sadrži naziv ažuriranja koje se preuzima i uočenu pogrešku.
+- **Payload** – Sadrži naziv ažuriranja koje se preuzima i uočenu pogrešku. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
 
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
 
 - **SessionId** – Identifikator sesije
+
+- **UpdateID** – Identifikator ažuriranja koje se preuzima.
 
 
 ### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
@@ -6184,6 +6193,8 @@ Uspješno preuzimanje datoteke paketa. Evidentiramo korišten put ažuriranja. O
 Prikupljaju se sljedeća polja:
 
 - **App** – Proces aplikacije za slanje događaja
+
+- **AppID** – Identifikator aplikacije.
 
 - **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
 
@@ -6216,6 +6227,8 @@ Prikupljaju se sljedeća polja:
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
 
 - **SessionId** – Identifikator sesije
+
+- **UpdateID** – Identifikator preuzetog ažuriranja.
 
 
 ### <a name="fba_checkforupdate"></a>fba_checkforupdate
@@ -6324,6 +6337,8 @@ Prikupljaju se sljedeća polja:
 
 - **DeviceInfo_OsBuild** – Verzija operacijskog sustava
 
+- **Error** – Sadrži OSStatus (Apple statusni kôd) koji odražava status pokretanja.
+
 - **Event_ReceivedTime** – Vrijeme primanja telemetrije
 
 - **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
@@ -6332,7 +6347,7 @@ Prikupljaju se sljedeća polja:
 
 - **HowTocheck** – Postavka za provjeru ažuriranja
 
-- **Payload** – Sadrži OSStatus (Apple statusni kôd) koji odražava status pokretanja.
+- **Payload** – Sadrži OSStatus (Apple statusni kôd) koji odražava status pokretanja. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
 
@@ -6340,6 +6355,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
+- **Success** – Booleov niz koji označava je li postupak MAU daemon uspješno pokrenut.
 
 ### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
 
@@ -6636,6 +6652,8 @@ Prikupljaju se sljedeća polja:
 
 - **App** – Proces aplikacije za slanje događaja
 
+- **AppID** – Identifikator aplikacije.
+
 - **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
 
 - **AppVersionLong** – Verzija aplikacije
@@ -6652,6 +6670,8 @@ Prikupljaju se sljedeća polja:
 
 - **DeviceInfo_OsBuild** – Verzija operacijskog sustava
 
+- **Error** – Pojedinosti o pogrešci do koje je došlo prilikom pokretanje aplikacije nakon ažuriranja.
+
 - **Event_ReceivedTime** – Vrijeme primanja telemetrije
 
 - **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
@@ -6660,7 +6680,7 @@ Prikupljaju se sljedeća polja:
 
 - **HowTocheck** – Postavka za provjeru ažuriranja
 
-- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva aplikacije koja se pokreće.
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva aplikacije koja se pokreće. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
     
 - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
     
@@ -6759,6 +6779,8 @@ Prikupljaju se sljedeća polja:
 
 - **App** – Proces aplikacije za slanje događaja
 
+- **AppID** – Identifikator aplikacije.
+
 - **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
 
 - **AppVersionLong** – Verzija aplikacije
@@ -6775,6 +6797,8 @@ Prikupljaju se sljedeća polja:
 
 - **DeviceInfo_OsBuild** – Verzija operacijskog sustava
 
+- **Error** – Pojedinosti o pogrešci do koje je došlo prilikom ukidanja aplikacije.
+
 - **Event_ReceivedTime** – Vrijeme primanja telemetrije
 
 - **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
@@ -6783,13 +6807,15 @@ Prikupljaju se sljedeća polja:
 
 - **HowTocheck** – Postavka za provjeru ažuriranja
 
-- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i ID paketa aplikacije. Može također sadržavati niz pogrešaka ako Microsoftovo automatsko ažuriranje utvrdi da aplikacija i dalje radi iako je zaprimljen događaj prekida.
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i ID paketa aplikacije. Može također sadržavati niz pogrešaka ako Microsoftovo automatsko ažuriranje utvrdi da aplikacija i dalje radi iako je zaprimljen događaj prekida. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
 
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
 
 - **SessionId** – Identifikator sesije
+
+- **UpdateID** – Identifikator ažuriranja aplikacije.
 
 
 ### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
@@ -6882,6 +6908,8 @@ Prikupljaju se sljedeća polja:
 
 - **App** – Proces aplikacije za slanje događaja
 
+- **AppID** – Identifikator aplikacije.
+
 - **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
 
 - **AppVersionLong** – Verzija aplikacije
@@ -6898,6 +6926,8 @@ Prikupljaju se sljedeća polja:
 
 - **DeviceInfo_OsBuild** – Verzija operacijskog sustava
 
+- **Error** – Pojedinosti o pogrešci do koje je došlo prilikom preuzimanja ažuriranja aplikacije.
+
 - **Event_ReceivedTime** – Vrijeme primanja telemetrije
 
 - **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
@@ -6906,13 +6936,17 @@ Prikupljaju se sljedeća polja:
 
 - **HowTocheck** – Postavka za provjeru ažuriranja
 
-- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja.
+- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja i naziva ažuriranja. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
 
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
 
 - **SessionId** – Identifikator sesije
+
+- **UpdateID** – Identifikator ažuriranja aplikacije.
+
+- **UpdateName** – Naziv ažuriranja aplikacije.
 
 
 ### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
@@ -10550,6 +10584,8 @@ Prikupljaju se sljedeća polja:
 
   - **InstallMethod** – određuje je li sustav nadograđen na trenutnu međuverziju sustava Office, vraćen na nju ili je u pitanju nova instalacija.
 
+  - **OfficeArchitectureText** – Arhitektura proizvoda sustava Office predstavljena kao niz (npr. x86, arm).
+
   - **PreviousBuild** – verzija sustava Office na koju je međuverzija nadograđena ili s koje je vraćene.
 
   - **State** – stanje u koje je sesija promijenjena.
@@ -11286,6 +11322,8 @@ Događaj aktivira nenormalno ukidanje aplikacije (npr. zaustavljanje u upravitel
 
 Prikupljaju se sljedeća polja:
 
+  - **AddinExecution –** Zastavica koja obavještava je li izvršavanje dodatka prekinuto prilikom neočekivanog izlaska iz aplikacije.
+
   - **BootCompleted –** je li dovršeno pokretanje sustava Office u trenutku rušenja.
 
   - **CrashedAppBuild –** identifikator međuverzije zahvaćenog procesa.
@@ -11343,6 +11381,8 @@ Prikupljaju se sljedeća polja:
   - **ModuleOffset –** pomak u bajtovima od osnovne adrese na kojoj je došlo do pogreške.
 
   - **ModuleSize –** veličina neispravnog modula u bajtovima.
+
+  - **OfficeArchitectureText –** Arhitektura proizvoda sustava Office predstavljena kao niz (npr. x86, arm).
 
   - **OfficeUILang –** jezik korisničkog sučelja u međuverziji sustava Office.
 

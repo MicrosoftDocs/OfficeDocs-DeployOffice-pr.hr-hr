@@ -1,5 +1,5 @@
 ---
-title: Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus
+title: Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
@@ -13,20 +13,20 @@ ms.collection:
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Office 365 ProPlus, uključujući dijagnostičke podatke i povezana iskustva.
+description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus), uključujući dijagnostičke podatke i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: 784bbf08626e6dc8571c416a74511c9f5feeceec
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: e22388cb73a539e13f67163bf0b0e949b10be349
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067328"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993030"
 ---
-# <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus
+# <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 
-Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Office 365 ProPlus.
+Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus).
 
-Počevši od verzije 1904 sustava Office 365 ProPlus (objavljene u mjesečnom kanalu krajem 29. travnja 2019.), nudimo vam nove, ažurirane i poboljšane kontrole za zaštitu privatnosti u ovim područjima:
+Počevši od verzije 1904 sustava Microsoft 365 Apps za velike tvrtke, nudimo vam nove, ažurirane i poboljšane kontrole za zaštitu privatnosti u ovim područjima:
 - ***Dijagnostički podaci*** o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows u vašoj tvrtki ili ustanovi, a koji se prikupljaju i šalju Microsoftu.
 - ***Povezana iskustva*** koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
 
@@ -36,20 +36,20 @@ U sklopu tih promjena pojavili su se novi i ažurirani elementi korisničkog su�
 > - Te se promjene odnose na Access, Excel, OneNote, Outlook, PowerPoint, Publisher i Word.
 > - Te se promjene odnose i na sljedeće:
 >   - Verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
->   - Verziju 1904 ili noviju verziju programa Project i Visio za računala koje se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2.
-> - Ove kontrole za zaštitu privatnosti uključene su u verziju 1908. polugodišnjeg kanala (ciljano), koja je objavljena 10. rujna 2019. godine. Očekuje se da će biti dostupne u polugodišnjem kanalu u siječnju 2020. godine.
+>   - Verziju 1904 ili noviju verziju programa Project i Visio za računala, koje se isporučuju s nekim pretplatničkim tarifama kao što su Project tarifa 5 ili Visio tarifa 2.
+> - Te kontrole za zaštitu privatnosti uključene su u verziju 1908. ili noviju verziju iz polugodišnjeg kanala (ciljanog) i polugodišnjeg kanala.
 > - Te kontrole zaštite privatnosti dostupne su za verziju 2.30 i novije verzije programa Excel, OneNote, PowerPoint i Word te za verziju 1.17 i noviju verziju Preglednika za Visio za iOS.
 > - Te kontrole zaštite privatnosti dostupne su za verziju 16.0.12226.10000 i novije verzije programa Excel, OneNote, PowerPoint i Word za Android, te za verziju 16.0.12228.20004 i novije verzije programa OneNote za Android.
 > - Većina tih aplikacija Office za web mora početi koristiti novu kontrolu zaštite privatnosti za [neobvezna povezana iskustva](optional-connected-experiences.md).. To su sljedeće aplikacije: Excel za web, OneNote za web, PowerPoint za web, Visio za web i Word za web. Možete koristiti [Uslugu Office pravilnik o oblaku](../overview-office-cloud-policy-service.md) kako biste konfigurirali odgovarajuće [postavke pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
-> - Te nove i poboljšane kontrole za zaštitu privatnosti proširit ćemo na dodatne klijente sustava Office, uključujući Teams i vlastite mobilne aplikacije. Dodatne informacije o tim promjenama objavit ćemo tijekom sljedećih mjeseci. Nastavit ćemo pažljivo slušati vaše povratne informacije i poboljšavati sve klijente i servise sustava Office 365.
+> - Te nove i poboljšane kontrole za zaštitu privatnosti proširit ćemo na dodatne klijente sustava Office, uključujući Teams i vlastite mobilne aplikacije. Dodatne informacije o tim promjenama objavit ćemo tijekom sljedećih mjeseci. Nastavit ćemo pažljivo slušati vaše povratne informacije i poboljšavati sve klijente i servise sustava Office 365 (i Microsoft 365).
 
-## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Dijagnostički podaci koje Office 365 ProPlus šalje Microsoftu
+## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Dijagnostički podaci koje Microsoft 365 Apps za velike tvrtke šalje Microsoftu
 
 Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i otklanjanja problema te poboljšavanja proizvoda. Ti podaci ne sadrže korisnikovo ime ili adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
 
 To su dijagnostički podaci o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows u vašoj tvrtki ili ustanovi, a koji se prikupljaju i šalju Microsoftu.
 
-Možete birati između tri razine dijagnostičkih podataka za klijentski softver sustava Office 365 ProPlus:
+Možete birati između tri razine dijagnostičkih podataka za klijentski softver sustava Microsoft 365 Apps za velike tvrtke:
 
 - **Obavezno**: minimalni podaci potrebni da bi Office bio siguran i ažuran te da bi na uređaju na kojem je instaliran funkcionirao na očekivan način.
 
@@ -73,15 +73,15 @@ Dodatne informacije potražite u sljedećim člancima:
 
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Neobavezni dijagnostički podaci za Office](optional-diagnostic-data.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
 - [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
-## <a name="connected-experiences-for-office-365-proplus"></a>Povezana iskustva za Office 365 ProPlus
+## <a name="connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Povezana iskustva za Microsoft 365 Apps za velike tvrtke
 
-Office 365 ProPlus sastoji se od klijentskih softverskih aplikacija i povezanih iskustava osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
+Microsoft 365 Apps za velike tvrtke sastoji se od klijentskih softverskih aplikacija i povezanih iskustava osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
 Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti dostupne vašim korisnicima prilikom rada u aplikacijama sustava Office. Kao administrator svoje tvrtke ili ustanove na raspolaganju će vam biti postavka pravilnika koja omogućuje da odaberete želite li korisnicima ponuditi ove vrste povezanih iskustava:
 
@@ -99,15 +99,15 @@ Vaši korisnici neće moći odabrati žele li uključiti ili isključiti ta pove
 
 Dodatne informacije potražite u sljedećim člancima:
 
-- [Povezana iskustva u sustavu Office](connected-experiences.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Povezana okruženja u sustavu Office](connected-experiences.md)
+- [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
-## <a name="optional-connected-experiences-for-office-365-proplus"></a>Neobavezna povezana iskustva za Office 365 ProPlus
+## <a name="optional-connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Neobavezna povezana iskustva za Microsoft 365 Apps za velike tvrtke
 
-Osim gore spomenutih povezanih iskustava obuhvaćenih sustavom Office 365 ProPlus, postoje i neobavezna povezana iskustva za koja korisnicima možete omogućiti da im pristupaju korištenjem računa tvrtke ili ustanove. Na primjer, značajke vezane uz LinkedIn u pomoćniku za životopis u programu Word ili značajka 3D karte u programu Excel, koja koristi Bing.
+Osim gore spomenutih povezanih iskustava obuhvaćenih sustavom Microsoft 365 Apps za velike tvrtke, postoje i neobavezna povezana iskustva za koja korisnicima možete omogućiti da im pristupaju korištenjem računa tvrtke ili ustanove. Na primjer, značajke vezane uz LinkedIn u pomoćniku za životopis u programu Word ili značajka 3D karte u programu Excel, koja koristi Bing.
 
 To su neobavezna povezana iskustva koja nisu obuhvaćena komercijalnim ugovorom vaše tvrtke ili ustanove s Microsoftom, već se reguliraju zasebnim uvjetima i odredbama. Neobavezna povezana iskustva koja Microsoft izravno nudi vašim korisnicima regulirana su [Microsoftovim ugovorom o pružanju usluga](https://www.microsoft.com/servicesagreement), a ne [Uvjetima korištenja internetskih servisa](https://www.microsoft.com/licensing/product-licensing/products).
 
@@ -118,7 +118,7 @@ Budući da su ta neobavezna povezana iskustva regulirana zasebnim uvjetima i odr
 Dodatne informacije potražite u sljedećim člancima:
 
 - [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
@@ -143,9 +143,9 @@ Ako odlučite korisnicima uskratiti kategoriju povezanih iskustava koja obuhvać
 
 Dodatne informacije potražite u članku [Obavezni servisni podaci za Office](required-service-data.md).
 
-## <a name="essential-services-for-office-365-proplus"></a>Ključni servisi za Office 365 ProPlus
+## <a name="essential-services-for-microsoft-365-apps-for-enterprise"></a>Ključni servisi za Microsoft 365 Apps za velike tvrtke
 
-Postoji i skup servisa koji su ključni za funkcioniranje sustava Office 365 ProPlus te ih se ne može onemogućiti. Na primjer, servis za licenciranje, koji potvrđuje da imate ispravnu licencu za korištenje sustava Office 365 ProPlus. Obavezni servisni podaci o tim servisima prikupljaju se i šalju Microsoftu bez obzira na druge konfigurirane postavke pravilnika.
+Postoji i skup servisa koji su ključni za funkcioniranje sustava Microsoft 365 Apps za velike tvrtke te ih se ne može onemogućiti. Na primjer, servis za licenciranje, koji potvrđuje da imate odgovarajuću licencu za korištenje sustava Microsoft 365 Apps za velike tvrtke. Obavezni servisni podaci o tim servisima prikupljaju se i šalju Microsoftu bez obzira na druge konfigurirane postavke pravilnika.
 
 Dodatne informacije potražite u članku [Ključni servisi za Office](essential-services.md).
 
