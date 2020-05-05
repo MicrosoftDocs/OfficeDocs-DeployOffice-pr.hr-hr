@@ -1,5 +1,5 @@
 ---
-title: Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
+title: Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
@@ -13,20 +13,20 @@ ms.collection:
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Office 365 ProPlus pomoću postavki pravilnika.
+description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus) pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
-ms.sourcegitcommit: 6a091ca7e72cd7ce97793ebd0fdcfa2a6fa1a098
+ms.openlocfilehash: 284b9b8a2b0231f5079e34ec2b09e35dfd0d07ca
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42687188"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992904"
 ---
-# <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office 365 ProPlus
+# <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 
-Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Office 365 ProPlus.
+Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus).
 
-Počevši od verzije 1904 sustava Office 365 ProPlus, postoje nove postavke pravilnika koje omogućuju kontrolu nad postavkama vezanima uz sljedeće:
+Počevši od verzije 1904 sustava Microsoft 365 Apps za velike tvrtke, postoje nove postavke pravilnika koje omogućuju kontrolu nad postavkama vezanima uz sljedeće:
 
 - ***Dijagnostičke podatke*** o klijentskom softveru sustava Office, koji se prikupljaju i šalju Microsoftu.
 
@@ -50,9 +50,9 @@ Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa p
 
 Ako koristite alat za upravljanje pravilnikom grupe, sve postavke pravilnika nalaze se u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Zaštita privatnosti\\Centar za pouzdanost.
 
-Nove postavke pravilnika primjenjuju se i na verzije programa Project i Visio za računala koje se isporučuju s nekim pretplatničkim tarifama, kao što su Project Online Professional ili Visio Online Plan 2. Primjenjuju se i na Office 365 Business.
+Te nove postavke pravilnika primjenjuju se i na verzije programa Project i Visio za računala, koje se isporučuju s nekim pretplatničkim tarifama kao što su Project tarifa 5 ili Visio tarifa 2. Primjenjuju se i na Microsoft 365 Apps za male tvrtke (nekadašnji Office 365 Business)
 
-Ima i postojećih postavki pravilnika koje se više neće primjenjivati na Office 365 ProPlus, kao i nekih promjena korisničkog sučelja (UI) nastalih zbog postavki zaštite privatnosti, kojih biste trebali biti svjesni jer će ih korisnici možda opaziti te postavljati pitanja u vezi s njima.
+Ima i postojećih postavki pravilnika koje se više neće primjenjivati na Microsoft 365 Apps za velike tvrtke, kao i nekih promjena korisničkog sučelja (UI) nastalih zbog postavki zaštite privatnosti, a kojih biste trebali biti svjesni jer će ih korisnici možda opaziti te postavljati pitanja u vezi s njima.
 
 Kao što je slučaj sa svim novim postavkama pravilnika, prije nego što šire implementirate postavke pravilnika u svojoj tvrtki ili ustanovi, morate ih pažljivo testirati u ograničenom i kontroliranom okruženju da biste osigurali da postavke koje ste konfigurirali imaju željeni učinak.
 
@@ -74,14 +74,14 @@ Ako onemogućite ili ne konfigurirate tu postavku pravilnika, Microsoftu se šal
 
 Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 
-- [Pregled kontrola za zaštitu privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
+- [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Neobavezni dijagnostički podaci za Office](optional-diagnostic-data.md)
 - [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Postavke pravilnika za povezana iskustva
 
-Office 365 ProPlus sastoji se od klijentskih softverskih aplikacija i povezanih iskustava osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
+Microsoft 365 Apps za velike tvrtke sastoji se od klijentskih softverskih aplikacija i povezanih iskustava osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive za tvrtke ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
 Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti dostupne vašim korisnicima prilikom rada u aplikacijama sustava Office. Stoga smo za vas pripremili četiri nove postavke pravilnika:
 
@@ -90,11 +90,11 @@ Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti do
 - dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office
 - dopusti korištenje povezanih iskustava u sustavu Office
 
-Ako ne konfigurirate te postavke pravilnika, bit će dostupna sva povezana iskustva. To vašim korisnicima nudi sve značajke i funkcije dostupne putem sustava Office 365 ProPlus. Znamo, međutim, da ćete možda morati isključiti neka ili sva povezana iskustva da biste udovoljili određenim zahtjevima svoje tvrtke ili ustanove.
+Ako ne konfigurirate te postavke pravilnika, bit će dostupna sva povezana iskustva. To vašim korisnicima nudi sve značajke i funkcije dostupne putem sustava Microsoft 365 Apps za velike tvrtke. Znamo, međutim, da ćete možda morati isključiti neka ili sva povezana iskustva da biste udovoljili određenim zahtjevima svoje tvrtke ili ustanove.
 
 Ako odlučite korisnicima uskratiti određene vrste povezanih iskustava, naredbe tih povezanih iskustava na vrpci ili izborniku bit će zasivljene ili će korisnici dobiti poruku o pogrešci kada pokušaju koristiti ta povezana iskustva. U tom se slučaju Microsoftu ne šalju nikakvi [obavezni servisni podaci](required-service-data.md) za ta povezana iskustva.
 
-Vaši korisnici neće moći odabrati žele li uključiti ili isključiti ta povezana iskustva obuhvaćena sustavom Office 365 ProPlus ako su se prijavili u Office pomoću vjerodajnica svoje tvrtke ili ustanove, koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove.
+Vaši korisnici neće moći odabrati žele li uključiti ili isključiti ta povezana iskustva obuhvaćena sustavom Microsoft 365 Apps za velike tvrtke ako su se prijavili u Office pomoću vjerodajnica svoje tvrtke ili ustanove, koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove.
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka pravilnika za povezana iskustva koja analiziraju vaš sadržaj
 
@@ -114,7 +114,7 @@ Imajte na umu da ako onemogućite postavku pravilnika *Dopusti korištenje povez
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Postavka pravilnika za neobavezna povezana iskustva
 
-Osim gore spomenutih povezanih iskustava obuhvaćenih sustavom Office 365 ProPlus, postoje i neka neobavezna povezana iskustva za koja korisnicima možete omogućiti da im pristupaju korištenjem računa tvrtke ili ustanove. Na primjer, značajke vezane uz LinkedIn u pomoćniku za životopis u programu Word ili značajka 3D karte u programu Excel, koja koristi Bing. Dodatne primjere potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md).
+Osim gore spomenutih povezanih iskustava obuhvaćenih sustavom Microsoft 365 Apps za velike tvrtke, postoje i neka neobavezna povezana iskustva za koja korisnicima možete omogućiti da im pristupaju korištenjem računa tvrtke ili ustanove. Na primjer, značajke vezane uz LinkedIn u pomoćniku za životopis u programu Word ili značajka 3D karte u programu Excel, koja koristi Bing. Dodatne primjere potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md).
 
 Ta se povezana iskustva razlikuju po tome što nisu obuhvaćena komercijalnim ugovorom vaše tvrtke ili ustanove s Microsoftom. Neobavezna povezana iskustva Microsoft izravno nudi vašim korisnicima te su ona regulirana [Microsoftovim ugovorom o pružanju usluga](https://www.microsoft.com/servicesagreement), a ne [Uvjetima korištenja internetskih servisa](https://www.microsoft.com/licensing/product-licensing/products). U nekim se slučajevima putem tih neobaveznih povezanih iskustava nudi sadržaj ili funkcije trećih strana te se mogu primjenjivati i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md).
 
@@ -138,7 +138,7 @@ Postoji i jedna iznimka na koju treba obratiti pozornost. Postavka pravilnika *D
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Postavka pravilnika za većinu povezanih iskustava
 
-Možete koristiti postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office* da biste kontrolirali je li većina povezanih iskustava kojima se pristupa putem sustava Office 365 ProPlus dostupna vašim korisnicima. Ako onemogućite tu postavku pravilnika, ove vrste povezanih iskustava neće biti dostupne vašim korisnicima:
+Možete koristiti postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office* da biste kontrolirali je li većina povezanih iskustava kojima se pristupa putem sustava Microsoft 365 Apps za velike tvrtke dostupna vašim korisnicima. Ako onemogućite tu postavku pravilnika, ove vrste povezanih iskustava neće biti dostupne vašim korisnicima:
 
 - iskustva koja analiziraju sadržaj
 - iskustva koja preuzimaju internetski sadržaj
@@ -150,13 +150,13 @@ No čak i ako odlučite onemogućiti tu postavku pravilnika, ostat će dostupna 
 
 ## <a name="existing-policy-settings-that-are-replaced-by-new-policy-settings"></a>Postojeće postavke pravilnika koje se mijenjaju novim postavkama pravilnika
 
-Dvije se postojeće postavke pravilnika od verzije 1904 više ne primjenjuju na Office 365 ProPlus. Te su postavke pravilnika sljedeće:
+Dvije se postojeće postavke pravilnika od verzije 1904 više ne primjenjuju na Microsoft 365 Apps za velike tvrtke. Te su postavke pravilnika sljedeće:
 
 - **Slanje osobnih podataka** u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Zaštita privatnosti\\Centar za pouzdanost.
 
 - **Mogućnosti internetskog sadržaja** u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Alati | Mogućnosti | Općenito | Mogućnosti servisa...\\Internetski sadržaj.
 
-Počevši od verzije 1904, konfiguriranje tih dviju postojećih postavki pravilnika neće utjecati na Office 365 ProPlus. One više nisu primjenjive jer je njihova funkcionalnost zamijenjena ovim novim postavkama pravilnika:
+Počevši od verzije 1904, konfiguriranje tih dviju postojećih postavki pravilnika neće utjecati na Microsoft 365 Apps za velike tvrtke. One više nisu primjenjive jer je njihova funkcionalnost zamijenjena ovim novim postavkama pravilnika:
 
 - dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office 
 - dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office 
@@ -183,7 +183,7 @@ Općenito govoreći, ako je jedna postavka pravilnika konfigurirana tako da uklj
 
 ## <a name="privacy-related-changes-to-the-office-ui"></a>Promjene u korisničkom sučelju sustava Office vezane uz zaštitu privatnosti
 
-Postoje promjene u korisničkom sučelju (UI) sustava Office 365 ProPlus vezane uz zaštitu privatnosti koje će vaši korisnici možda opaziti te postavljati pitanja u vezi s njima. Te su promjene izravan rezultat novih kontrola za zaštitu privatnosti i postavki pravilnika dostupnih počevši od verzije 1904.
+Postoje promjene u korisničkom sučelju (UI) sustava Microsoft 365 Apps za velike tvrtke vezane uz zaštitu privatnosti koje će vaši korisnici možda opaziti te postavljati pitanja u vezi s njima. Te su promjene izravan rezultat novih kontrola za zaštitu privatnosti i postavki pravilnika dostupnih počevši od verzije 1904.
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Dijaloški okvir za neobavezna povezana iskustva
 
