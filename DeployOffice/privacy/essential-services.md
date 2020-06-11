@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
+ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992829"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "44663165"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -42,7 +42,7 @@ Dodatne informacije potražite u sljedećim člancima:
 Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
 
 - [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
+- [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
@@ -2528,9 +2528,9 @@ Prijavljuje rezultat sveobuhvatnih pokušaja instalacije
 
 Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameters
 
-- **BitField –**    Vrijednost cijelog broja BitField argumenta koja nam govori je li potreban eksplicitni instalacijski /ažurirani kanal (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani)
+- **BitField –**    Vrijednost cijelog broja argumenta BitField koji nam  govori je li zatražena eksplicitna instalacija/nadogradnja kanala. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled) ili polugodišnji kanal za velike tvrtke.
 
-- **ChannelID –**    cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
+- **ID kanala –** cijeli broj koji predstavlja vrijednost rednog broja odabranog kanala za ažuriranje/instaliranje. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled), polugodišnji kanal za velike tvrtke, ili nevažeći.
 
 - **CMDMode –**    neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe.
 
@@ -2607,9 +2607,9 @@ Izvještava o radnji koja čita označeni unos iz ugrađenog potpisa exe datotek
 
 Izvješćuje o parametrima koji se koriste za instalaciju sustava Office
 
-- **BitField –**    Vrijednost cijelog broja BitField argumenta koja nam govori je li potreban eksplicitni instalacijski /ažurirani kanal (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani)
+- **BitField –**    Vrijednost cijelog broja argumenta BitField koji nam  govori je li zatražena eksplicitna instalacija/nadogradnja kanala. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled) ili polugodišnji kanal za velike tvrtke.
 
-- **ChannelID –**    cijeli broj koji predstavlja vrijednost identifikatora odabranog kanala za ažuriranje/instaliranje (Mjesečni, Sudionici u programu kasniji Insider, Sudionici u programu rani Insider, Polugodišnji, Polugodišnji ciljani, Nevažeći)
+- **ID kanala –** cijeli broj koji predstavlja vrijednost rednog broja odabranog kanala za ažuriranje/instaliranje. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled), polugodišnji kanal za velike tvrtke, ili nevažeći.
 
 - **CMDMode –**    neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
 
