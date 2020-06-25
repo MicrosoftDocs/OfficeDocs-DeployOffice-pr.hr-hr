@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: f08061e77e5757d61108e2eb4539986b90902bef
-ms.sourcegitcommit: 06da4eff4b399367017fc68fadb13df29e577e64
+ms.openlocfilehash: d3acec4d3e2b1758ca991dd9bec0a551e9ebfab7
+ms.sourcegitcommit: 5c82507780e8f46c01c951135419546b7b9dad52
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43998818"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "44811462"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -27,7 +27,7 @@ ms.locfileid: "43998818"
 > - Microsoft 365 Apps za velike tvrtke (prethodni naziv: Office 365 ProPlus)
 > - Microsoft 365 Apps za male tvrtke (prethodni naziv: Office 365 Business)
 > - Microsoft 365 Personal, Microsoft 365 Family i druge verzije sustava Office koje su obuhvaćene pretplatom na Microsoft 365.
-> - Aplikacije za računala za Project i Visio koje su obuhvaćene nekim planovima pretplate, kao što su Project tarifa 5 ili Visio tarifa 2.
+> - Računalne aplikacije za Project i Visio koje su obuhvaćene nekim planovima pretplate, kao što su Project tarifa 5 ili Visio tarifa 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
@@ -624,6 +624,8 @@ Osim toga, sljedeća su polja podataka uobičajena za sve događaje za aplikacij
 - **DeviceInfo.NetworkProvider** – davatelj mreže uređaja (npr. Verizon)
 
 - **gcc_restrictions_enabled** – upućuje na to jesu li na aplikaciju primijenjena ograničenja GCC-a tako da možemo osigurati da korisnici GCC-a sigurno upotrebljavaju našu aplikaciju
+ 
+- **multi_window_mode** – govori nam upotrebljava li korisnik na iPadu više prozora da bi nam pomogao otkriti probleme u vezi s upotrebom više prozora.
 
 - **office_session_id** – jedinstveni identifikator koji prati sesiju za spojene usluge sustava Office kako bi se lakše prepoznali problemi specifični za integraciju usluge sustava Office u aplikaciju Outlook, poput aplikacije Word
 
@@ -659,6 +661,20 @@ Ovo su podvrste podataka u toj kategoriji:
 
 Instalirani proizvod, njegova verzija i njegov status instalacije.
 
+#### <a name="add_sso_account"></a>add_sso_account
+
+Time će se Microsoft izvijestiti o uspjehu ili neuspjehu korisnika s dodavanjem računa putem jedinstvene prijave (SSO).
+
+Prikupljaju se sljedeća polja: 
+
+- **account_type** – vrsta računa dodanog upotrebom SSO-a.
+
+- **action_origin** – odakle je taj događaj generiran. (npr. vrijednosti: sso_drawer, sso_add_account, sso_add_account_prompt, sso_settings, sso_oobe).
+
+- **provider** – identifikator pružatelja softverskog paketa za SSO.
+
+- **state** – trenutačno stanje računa (npr. vrijednost: NIJE USPJELO, NA ČEKANJU, Dodano itd.)
+ 
 #### <a name="officeclicktorunupdatestatus"></a>Office.ClickToRun.UpdateStatus
 
 Odnosi se na sve aplikacije win32. Omogućuje nam da utvrdimo status postupka ažuriranja paketa sustava Office (uspjeh ili neuspjeh s detaljima o pogrešci)
@@ -1249,6 +1265,34 @@ Prikupljaju se sljedeća polja:
 
 Uvjeti za pogreške u dokumentima, značajkama i dodacima koji mogu ugroziti sigurnost, uključujući spremnost proizvoda za ažuriranje.
 
+#### <a name="office_appguard_createcontainer"></a>Office_AppGuard_CreateContainer
+
+Prikupljamo kodove pogrešaka te informacije o tome je li spremnik već postojao ili nije. Prikupljamo i kodove pogrešaka za ponovno postavljanje u slučaju da ne uspijemo stvoriti spremnik pri prvom pokušaju. Podaci će se upotrebljavati za identifikaciju postotka sesija za koje uspješno stvorimo spremnik za pokretanje aplikacija Office Application Guard. Također, podaci će Microsoftu omogućiti identifikaciju i rješavanje kodova pogrešaka u vezi sa stvaranjem spremnika.
+
+Prikupljaju se sljedeća polja:
+
+- **ErrorCode1** – vrsta koda pogreške za postavljanje spremnika.  
+
+- **ErrorCode2** – kôd pogreške iz provedbe stvaranja. 
+
+- **ErrorCode3** – dodatni kôd pogreške. 
+
+- **Id** – jedinstveni identifikator (GUID) za stvaranje spremnika.
+
+- **ResetError** – kôd pogreške iz pokušaja ponovnog postavljanja spremnika nakon neuspješna pokušaja.
+
+- **ResetErrorCode1** – vrsta koda pogreške postavljanja spremnika nakon naredbe za ponovno postavljanje. 
+
+- **ResetErrorCode2** – kôd pogreške iz provedbe stvaranja nakon naredbe za ponovno postavljanje.
+
+- **ResetErrorCode3** – dodatni kôd pogreške nakon naredbe za ponovno postavljanje.
+
+- **ResetErrorType** – vrsta pogreške tijekom ponovnog postavljanja: Stvaranje, Priprema datoteke ili Pokretanje.
+
+- **WarmBoot** – prepoznaje je li spremnik već bio stvoren ili nije.
+
+
+
 #### <a name="officesecurityactivationfilterclsidactivated"></a>Office.Security.ActivationFilter.CLSIDActivated
 
 Prati kada je u sustavu Office aktiviran identifikator određene klase (Flash, Silverlight itd). Koristi se za praćenje učinka blokiranja kontrola za Flash, Silverlight i Shockwave na krajnje korisnike.
@@ -1684,7 +1728,15 @@ Prikupljaju se sljedeća polja:
 
 - **subtab_type** – prati gdje je korisnik odabrao rezultat i iz koje kartice rezultata
 
-- **top_mail_result_selected_count** – prati koliko puta korisnik odabire glavne rezultate koji mu se pruže. 
+- **top_mail_result_selected_count** – prati koliko puta korisnik odabire glavne rezultate koji mu se pruže.
+
+- **ui_reload_result_count** – bilježi vremena ponovnog učitavanja korisničkog sučelja zbog ažuriranja skupa rezultata (tijekom određenog upita)
+
+- **ui_reload_result_time** – bilježi ukupno vrijeme utrošeno na ponovno učitavanje korisničkog sučelja zbog ažuriranja skupa rezultata (tijekom određenog upita)
+
+- **ui_reload_status_count** – bilježi vremena ponovnog učitavanja korisničkog sučelja zbog ažuriranja statusa (tijekom određenog upita)
+
+- **ui_reload_status_time** – bilježi ukupno vrijeme utrošeno na ponovno učitavanje korisničkog sučelja zbog ažuriranja statusa (tijekom određenog upita)
 
 #### <a name="compose_mail_accessory"></a>compose_mail_accessory
 
@@ -3321,6 +3373,118 @@ Taj se događaj prikuplja kada se sažetak sadržaja prikazuje korisniku. Taj se
 - **version** ― verzija klijenta sažetka sadržaja.
 
 
+#### <a name="officefeedbacksurveyfloodgateclientsurveytracked"></a>Office.Feedback.Survey.FloodgateClient.SurveyTracked
+
+Prati kada uređaj koji ispunjava uvjete za upitnik pokrene aplikaciju. Upotrebljava se za procjenu stanja procesa odabira korisnika upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyfloodgateclienttriggermet"></a>Office.Feedback.Survey.FloodgateClient.TriggerMet
+
+Prati kada je uređaj ispunio uvjete za prikaz ankete. Upotrebljava se za procjenu stanja procesa aktivacije upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyfloodgateclientuserselected"></a>Office.Feedback.Survey.FloodgateClient.UserSelected
+
+Prati kada je uređaj odabran za upitnik. Upotrebljava se za procjenu stanja procesa odabira korisnika upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyuiandroid"></a>Office.Feedback.Survey.UI.Android
+
+Na uređaju sa sustavom Android prati kada korisnik na uređaju komunicira s upitom upitnika i korisničkim sučeljem upitnika. Upotrebljava se za procjenu stanja cijelog iskustva upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyuiios"></a>Office.Feedback.Survey.UI.IOS
+
+Na uređaju sa sustavom iOS prati kada korisnik na uređaju komunicira s upitom upitnika i korisničkim sučeljem upitnika. Upotrebljava se za procjenu stanja cijelog iskustva upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyuimac"></a>Office.Feedback.Survey.UI.Mac
+
+Na uređaju Mac prati kada korisnik na uređaju komunicira s upitom upitnika i korisničkim sučeljem upitnika. Upotrebljava se za procjenu stanja cijelog iskustva upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyuiwin32"></a>Office.Feedback.Survey.UI.Win32
+
+Na uređaju Win32 prati kada korisnik na uređaju komunicira s upitom upitnika i korisničkim sučeljem upitnika. Upotrebljava se za procjenu stanja cijelog iskustva upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
+#### <a name="officefeedbacksurveyuiwin32toast"></a>Office.Feedback.Survey.UI.Win32.Toast
+
+Prati kada se prikaže upit za upitnik. Upotrebljava se za procjenu stanja procesa upita upitnika te osiguravanje signala koji se upotrebljava za utvrđivanje radi li funkcija analize korisničkih problema i stanja pravilno.
+
+Prikupljaju se sljedeća polja:
+
+- **ExpirationTimeUTC** – datum/vrijeme isteka upitnika
+
+- **SurveyName** – naziv prikazanog upitnika
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **UniqueId** – ID za identifikaciju individualnog elementa telemetrije
+
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
 Omogućuje da utvrdimo je li datoteka uspješno otvorena u FIO sloju. Koristi se za stanje i nadzor značajke.
@@ -4012,7 +4176,7 @@ Prikupljaju se sljedeća polja:
 
 #### <a name="office_firstrun_apple_inapppurchasesattempted"></a>Office_FirstRun_Apple_InAppPurchasesAttempted
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja protoka kupnje unutar aplikacije. Prikupljamo podatke za praćenje pokušaja kupnje unutar aplikacije i njihove vrste SKU-a koji se kupuje (mjesečno/godišnje/kućna upotreba/osobno).
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Appleovim platformama. Događaj se koristi za nadziranje stanja protoka kupnje unutar aplikacije. Prikupljamo podatke za praćenje pokušaja kupnje unutar aplikacije i njihove vrste SKU-a koji se kupuje (mjesečno/godišnje/kućna upotreba/osobno).
 
 Prikupljaju se sljedeća polja:
 
@@ -4061,6 +4225,81 @@ Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platf
 Prikupljaju se sljedeća polja:
 
 - **Data_FirstRunPanelName** – naziv ploče na kojoj je započelo iskustvo
+
+#### <a name="officelivepersonacarduseractionsclosedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedExpandedPersonaCard
+
+Zapisuje se kada korisnik zatvori proširenu karticu Osobnost. Upotrebljava se za promatranje ključnih anomalija u stopama neuspjeha pri zatvaranju kartice Osobnost za Live.
+
+Prikupljaju se sljedeća polja:
+
+- **AppInfo_Id** – ime glavne aplikacije
+
+- **AppInfo_Version** – verzija glavne aplikacije
+
+- **Data.appContextId** – nasumično generirani identifikacijski broj koji se koristi za identifikaciju različitih računa u istoj aplikaciji
+
+- **Data.AppInfo.Name** – naziv usluge koja se koristi (kartica Profil)
+
+- **Data.cardCorrelationId** – globalno jedinstveni identifikator za karticu osobnosti
+
+- **Data.cardPersonaCorrelationId** – globalno jedinstveni identifikator za određenu osobnost prikazanu na kartici
+
+- **Data.clientCorrelationId** – globalno jedinstveni identifikator za sesiju aplikacije
+
+- **Data.clientType** – vrsta uređaja na kojem je aplikacija pokrenuta, npr. „Outlook_Win32”
+
+- **Data.eventId** – identifikator naziva događaja, npr. „LivePersonaCardRenderedAction”
+
+- **Data.exportName** – naziv čitljiv ljudima za događaj radnje korisnika, npr. „ClosedExpandedPersonaCard”
+
+- **Data.exportType** – kategorija događaja za zahtjev izvoza GDPR-a
+
+- **Data.feature** – koristi se za grupiranje raznih događaja iste značajke (kartica Profil)
+
+- **Data.OTelJS.Version** – verzija zapisnika OTel
+
+- **Data.properties** – dodatni metapodaci prikupljeni za svaki događaj na sljedeći način:
+
+   - **cardCorrelationId** – duplikat za gornji Data.appContextId 
+   - **cardPersonaCorrelationId** – duplikat za gornji Data.cardCorrelationId
+   - **ClientTimeStamp** – vrijeme kada je događaj nastupio u vremenu Unix epohe
+   - **consumerCorrelationId** – duplikat za gornji Data.clientCorrelationId 
+   - **externalAppSessionCorrelationId** – globalno jedinstven identifikator za aplikaciju za identifikaciju svih kartica osobnosti otvorenih u istoj podsesiji
+   - **immersiveProfileCorrelationId** – globalno jedinstven identifikator za sesiju proširenog prikaza profila
+   - **personaCorrelationId** – globalno jedinstven identifikator za jedinstvene osobnosti u sesiji
+
+- **Data.region** – zemljopisna regija usluge pozadinskog sustava kartice profila s kojom je korisnik povezan
+
+- **Data.tenantAadObjectId** – klijent s kojim je korisnikova pretplata povezana. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta
+
+- **Data.type** – vrsta zapisanog događaja, npr. Praćenje, Pogreška, Događaj
+
+- **Data.userAadObjectId** – globalno jedinstveni identifikator korisnika za Microsoftov račun za velike tvrtke (duplikat za Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – globalno jedinstveni identifikator korisnika za Microsoftov račun za velike tvrtke 
+
+- **Data.UserInfo.MsaId** – globalno jedinstveni identifikator korisnika za Microsoftov potrošački račun
+
+- **Data.UserInfo.OMSTenantId** – klijent s kojim je korisnikova pretplata povezana. Omogućuje klasifikaciju problema i utvrđivanje je li problem rasprostranjen ili ograničen na skup korisnika ili određenog klijenta.
+
+- **Data.userPuid** – globalno jedinstveni identifikatora za Microsoftov potrošački račun (duplikat za Data.UserInfo.MsaId)
+
+- **Data.version** – verzija usluge (kartica Profil)
+
+- **DeviceInfo_Id** – globalno jedinstven identifikator za uređaj
+
+- **DeviceInfo_Make** – marka operacijskog sustava
+
+- **DeviceInfo_Model** – model uređaja
+
+- **DeviceInfo.NetworkCost** – označava trošak/vrstu mreže (s ograničenim prometom, s ograničenim prometom s gornjom granicom itd.)
+
+- **DeviceInfo_OsName** – naziv operacijskog sustava uređaja
+
+- **DeviceInfo_OsVersion** – verzija operacijskog sustava
+
+- **PipelineInfo.ClientCountry** – pozivni broj države pošiljatelja na temelju nepročišćene IP adrese klijenta
+
 
 #### <a name="officelivepersonacarduseractionsclosedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedPersonaCard
 
@@ -6797,6 +7036,14 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_ViewKind–** vrsta prikaza u programu Word
 
+#### <a name="onenoteappnavigationratingreminderdialogshown"></a>OneNote.App.Navigation.RatingReminderDialogShown
+
+Ključni signal koji se upotrebljava za mjerenje djelotvornosti logike okidača za podsjetnik za ocjenjivanje. Ovaj se dijaloški okvir prikazuje kada korisnik ispuni sve uvjete za prikaz podsjetnika za ocjenjivanje (br. aktivnih dana, prethodno je ocjenjivao ili nije itd.). To se upotrebljava za osiguravanje funkcije logike okidača za podsjetnika za ocjenjivanje. Ako korisnici vide ovaj dijaloški okvir, to će nam pružiti načine za primanje povratnih informacija od korisnika u pravo vrijeme te poboljšanje stanja aplikacije.
+
+Prikupljaju se sljedeća polja:
+
+- Nijedno
+
 #### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(stari naziv)*, Office.OneNote.Android.Canvas.PageOpened
 
 Signal koji se koristi za snimanje prilikom otvaranja stranice.  Telemetrija se koristi za nadziranje, otkrivanje i ispravljanje problema tijekom otvaranja stranice u programu OneNote
@@ -7000,6 +7247,8 @@ Prikupljaju se sljedeća polja:
 - **enabled_state** – utvrđuje jesu li vaše postavke za automatski odgovor, spremanje kontakata i blokiranje vanjskih slika ispravno konfigurirane  
 
 - **enabled_state** – utvrđuje je li stanje povezano s radnjom omogućeno
+
+- **in_app_language** – odabrani jezik u aplikaciji, vrsta niza (zadano, en-US, fa, ru itd.)  
 
 - **notification_state** – označava koju je vrstu značke korisnik zatražio, tj. nema značke, samo za fokusiranu ulaznu poštu itd.,
 
@@ -7718,7 +7967,7 @@ Prikupljaju se sljedeća polja:
 
 - **UsesSharedRuntime** – upućuje na to da koristi li aplikacija sharedRuntime ili ne.
 
-#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete"></a>OneNote.App.AppBootComplete *(stari naziv)*, Office.OneNote.Android.App.AppBootComplete 
+#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(previous name)*, Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
 
 Ključni signal korišten za osiguravanje da novi privatni korisnici (Microsoftov račun) uspješno mogu prvi put koristiti aplikaciju OneNote.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.  Ako korisnici ne mogu prvi put pokrenuti aplikaciju, time bi se izazvao incident visoke ozbiljnosti.
 

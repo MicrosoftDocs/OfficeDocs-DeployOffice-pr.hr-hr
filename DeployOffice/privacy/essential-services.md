@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
+ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "44800380"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -2719,13 +2719,22 @@ Taj se događaj bilježi kada se poziv na web-servis u sklopu dodatka "klikom do
 
 Prikupljaju se sljedeća polja:
 
+- **ActionDetail** – dodatne pojedinosti u slučaju nastupanja kvara.
+   - Ako zahtjev HTTP-a uspije, ActionDetail bit će 0.
+   - Ako Polje rezultata nije U redu (tj. nije 0), što znači da zahtjev nije poslan, u ovom će se polju zabilježiti kod interne pogreške koji je jednak Polju rezultata.
+   - Ako je Polje rezultata U redu (tj. 0), što znači da je kôd odgovora HTTP-a >= 300, u njemu će se zabilježiti kôd odgovora HTTP-a (npr. 404).
+
+- **Rezultat** – brojčana oznaka pogreške koju vraćaju API-jevi poziva web-servisa sustava Office. – npr. 3 znači da postoji problem s inicijalizacijom zaglavlja HTTP-a.
+
+- **Type** – dodatne informacije o vrsti. U slučaju Zaliha, ove informacije određuju vrstu tereta koji se šalje – npr. pune ili samo delta promjene. 
+
 -  **WebCallSource** – vrijednost za numeriranje (koja se određuje kao cijeli broj) koja označava dodatak upravitelja servisa koji je bio izvor poziva:
    - Zalihe: 0
    - Konfiguriranje zaliha: 1
    - Pravilnik o zalihama: 2
    - Stanje mreže zaliha: 3
-
-- **Rezultat** - brojčana oznaka pogreške koju vraćaju API-jevi poziva web-servisa sustava Office.
+   - Upravitelj servisa: 4
+   - Mogućnost upravljanja: 5
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
@@ -3143,6 +3152,8 @@ Ta telemetrijska aktivnost prati točke uspjeha i neuspjeha u traženju poveziva
 
 Prikupljaju se sljedeća polja:
 
+- **DexShouldRetry** – signal da smo naišli na problem koji se može ponovo pokušati (nema internetskih ni poslužiteljskih kvarova)
+
 - **GenuineTicketFailure** – govori HRESULT neuspjeha kad pokušavamo dobiti originalnu Windows karticu/ključ proizvoda (WPK).
 
 - **PinValidationFailure** – govori zašto proces provjere valjanosti PIN-a nije uspio. Moguće pogreške:
@@ -3177,13 +3188,27 @@ Nakon uspješnog dobivanja valjanog PIN-a za Office vezanog uz uređaj koji je u
 
 Prikupljaju se sljedeća polja:
 
-- **ActionCreateAccount**- korisnik je odabrao da stvori račun.
+- **ActionActivate** – signal da je korisnik kliknuo gumb „Aktiviraj”.
 
-- **ActionSignIn**- korisnik je odabrao prijavu.
+- **ActionChangeAccount** – signal da je korisnik kliknuo hipervezu „Upotrijebi drugi račun”.
 
-- **DialogRedemption**-prikazuje dijaloški okvir za AFO otkup.
+- **ActionCreateAccount** – signal da je korisnik kliknuo gumb „Stvori račun”.
 
-- **DialogSignIn**- prikazuje dijaloški okvir za prijavu u AFO.
+- **ActionSignIn** – signal da je korisnik kliknuo gumb „Prijava”.
+
+- **CurrentView** – vrsta dijaloškog okvira koji je korisnik zatvorio.
+
+- **DialogEULA** – signal da smo prikazali dijaloški okvir „Prihvati EULA-u”. 
+
+- **DialogRedemption** – signal da smo prikazali dijaloški okvir za iskorištavanje AFO-a.
+
+- **DialogSignIn** – signal da smo prikazali dijaloški okvir za prijavu u AFO-a.
+
+- **EmptyRedemptionDefaults** – signal da nismo uspjeli dohvatiti zadane informacije o iskorištavanju.
+ 
+- **GetRedemptionInfo** – signal da dohvaćamo demografske podatke ili podatke o iskorištavanju PIN-a.
+
+- **MalformedCountryCode** – signal da je kôd države koji je potreban za iskorištavanje PIN-a pogrešno oblikovan.
 
 - **OExDetails** – pojedinosti pogreške koju ćemo vratiti kada je odbijen dijaloški okvir za prijavu identiteta.
 
@@ -3199,6 +3224,14 @@ Prikupljaju se sljedeća polja:
     - 0x03113811 Korisnik je završio dijaloški okvir za prijavu/otkup
     - 0x03113812 Korisnik je završio dijaloški okvir Prihvati EULA
     - 0x03113808 Korisnik je prihvatio EULA
+    - 0x03113811 Korisnik je zatvorio dijaloški okvir
+    - 0x2370e3a0 Korisnik je zatvorio dijaloški okvir
+    - 0x2370e3c1 Idite na web-mjesto za iskorištavanje PIN-a
+    - 0x2370e3a1 Idite na web-mjesto za iskorištavanje PIN-a
+    - 0x2370e3c0 Petlja dijaloških sekvenci koja je uzrokovana korisnikovim pomicanjem unatrag i unaprijed u dijaloškom toku
+    - 0x2370e3a3 Korisnik je kliknuo vezu „Ne sada” kojom se preskače ponuda AFO-a za tu sesiju
+    - 0x2370e3a2 Korisnik je kliknuo hipervezu „Nikad mi to ne prikazuj” kojom se onemogućuje ponuda AFO-a
+
 
 - **UseInAppRedemption** – govori nam držimo li korisnike u aplikaciji za otkup ili ih šaljemo na web da bi iskoristili svoj dohvaćeni PIN (unaprijed popunjeni).
 
@@ -3230,7 +3263,7 @@ Prikupljaju se sljedeća polja:
 
 - **HasConnectivity** – govori ima li korisnik internetsku vezu, a u slučaju da ona ne postoji, korisnik možda koristi licencu za poček za pet dana ili je možda u načinu rada s smanjenom funkcionalnošću
 
-- **InAppTrialPurchase** – upućuje na to je li za pokretanje SDK za kupnju u trgovini omogućeno snimanje PI-a i kupnja iz probne aplikacije
+- **InAppTrialPurchase** – upućuje na to je li za pokretanje SDK za kupnju u trgovini omogućeno snimanje PI-a i kupnja iz probne aplikacije *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 - **IsRS1OrGreater** – upućuje na to je li verzija sustava veća od RS1 ili ne, jer se SDK za kupnju u trgovini može koristiti samo ako je verzija OS-a veća od RS1
 
@@ -3238,15 +3271,15 @@ Prikupljaju se sljedeća polja:
 
 - **OEMSendToWebForTrial** – upućuje na to je li omogućen let za slanje korisnika na web radi iskorištavanja probne verzije
 
-- **StoreErrorConditions** – upućuje na različite uvjete u kojima je SDK za kupnju u trgovini možda neuspio
+- **StoreErrorConditions** – upućuje na različite uvjete u kojima je SDK za kupnju u trgovini možda neuspio *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
-- **StoreErrorHResult**- upućuje na kôd pogreške vraćen iz SDK za kupnju u trgovini
+- **StoreErrorHResult** – upućuje na kôd pogreške vraćen iz SDK za kupnju u trgovini *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
-- **StorePurchaseStatusResult** – daje rezultat poziva SDK za kupnju u trgovini i je li korisnik obavio kupnju ili nije, što će pomoći odrediti hoće li korisnik imati licencu za korištenje sustava Office
+- **StorePurchaseStatusResult** – daje rezultat poziva SDK za kupnju u trgovini i je li korisnik obavio kupnju ili nije, što će pomoći odrediti hoće li korisnik imati licencu za korištenje sustava Office *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
-- **Tag** – koristi se za određivanje mjesta u kodu s kojeg je poslan događaj
+- **Tag** – upotrebljava se za određivanje mjesta u kodu s kojeg je poslan događaj
 
-- **UserSignedInExplicitly** – govori je li se korisnik potpisao eksplicitno, jer ćemo u tom slučaj, ponovno usmjeriti korisnike na web za probnu verziju
+- **UserSignedInExplicitly** – govori je li se korisnik potpisao eksplicitno jer ćemo u tomu slučaju ponovno usmjeriti korisnike na web-mjesto za probnu verziju *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
