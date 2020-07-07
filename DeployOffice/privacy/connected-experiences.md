@@ -13,12 +13,11 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 4ec1ffef4b8bc0e82a7a1ce96061a9c715636bea
-ms.sourcegitcommit: 7adeab733277e6ed3eafddcc1d4df20e2743a752
-ms.translationtype: HT
+ms.openlocfilehash: ed42864d90c0ec8f50e28248720ffc8c2f569713
+ms.sourcegitcommit: 85c6ac9351a9305b774fb2a63cb895f952b433d6
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "44930374"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45048512"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -37,7 +36,7 @@ Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja o
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Povezana iskustva koja analiziraju vaš sadržaj
 
-Povezana iskustva koja analiziraju vaš sadržaj iskustva su koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvide u podatke i slične značajke. Na primjer, PowerPoint Designer ili Redaktor u programu Word.
+Povezana iskustva koja analiziraju vaš sadržaj iskustva su koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvide u podatke i slične značajke. Na primjer, PowerPoint Designer ili Prevoditelj.
 
 U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš sadržaj, kao i veze na dodatne informacije o njima.
 
@@ -47,7 +46,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | Automatski alternativni tekst   | [Sve što trebate znati za pisanje učinkovitog alternativnog teksta](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Vrste podataka                  | [Vrste podataka u programu Excel: dionice i zemljopis](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Diktiranje  | [Glasovno diktiranje u sustavu Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
-| Redaktor    | [Redaktor je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
+|Redaktor|[Redaktor je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Ideje     | [Ideje u programu Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Pretvorba rukopisa u tekst, oblik ili matematički izraz | [Promjena rukom pisanog teksta u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
@@ -60,6 +59,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | Objavljivanje na servisu Microsoft Stream    | [Pretvaranje prezentacije u videozapis](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | *Istraživanje*\*   | [Dodavanje ili promjena servisa za istraživanje](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Skeniranje posjetnice|  [Skeniranje ili dodirnite za dodavanje kontakata u programu Outlook za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
+|*Provjera sličnosti*\* (značajka Redaktora)|[Provjeite sličnosti s mrežnim izvorima u dokumentu](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Pametno traženje*\*   | [Uvidi u ono na čemu radite pomoću pametnog traženja](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predloženi odgovori | [Što su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Dodirivanje za Word (dodavanje iz datoteka)   | [Traženje i korištenje sadržaja koji trebate upravo onda kada ga trebate i bez napuštanja programa Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
