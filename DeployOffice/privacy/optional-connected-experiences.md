@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o neobaveznim povezanim iskustvima, uključujući uvjete korištenja koji se na njih primjenjuju.
 hideEdit: true
-ms.openlocfilehash: ecfe38bc6dbedd57ff1eb2ab4851c8e4dddab730
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
+ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993180"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45068674"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled neobaveznih povezanih iskustava za Office
 
@@ -39,7 +39,7 @@ Važno je znati da ti neobavezni servisi koji se oslanjaju na oblak nisu obuhva�
 
 ## <a name="experiences-that-rely-on-bing"></a>Iskustva koja se oslanjaju na Bing
 
-Neke servise koji se oslanjaju na oblak omogućuje Microsoft Bing. Microsoft Bing zaseban je poslovni projekt u odnosu na Microsoft 365 Apps za velike tvrtke, a Microsoft njime upravlja neovisno o sustavu Microsoft 365 Apps za velike tvrtke. Ovo su iskustva koja on omogućuje u sustavu aplikacijama sustava Office obuhvaćenih sustavom Microsoft 365 Apps za velike tvrtke: [3D karte](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni s kartom](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Umetanje internetskih slika](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Umetanje internetskih 3D modela](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Alat za brz početak rada s programom PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Istraživač](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) i [Pametno traženje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+Neke servise koji se oslanjaju na oblak omogućuje Microsoft Bing. Microsoft Bing zaseban je poslovni projekt u odnosu na Microsoft 365 Apps za velike tvrtke, a Microsoft njime upravlja neovisno o sustavu Microsoft 365 Apps za velike tvrtke. Ovo su iskustva koja on omogućuje u aplikacijama sustava Office obuhvaćenim sustavom Microsoft 365 Apps za velike tvrtke: [3D karte](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni s kartom](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Umetanje internetskih slika](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Umetanje internetskih 3D modela](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Alat za brz početak rada s programom PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Istraživač](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f), [Pametno traženje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) i [alat za provjeru sličnosti](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) (značajka redaktora).
 
 Iskustva koja pokreće Bing unutar programa Outlook za iOS i Android su sljedeća:
 
