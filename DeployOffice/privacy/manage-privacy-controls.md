@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus) pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: ca076099be15a5a4cd19ac7c99660bfe26de8eed
-ms.sourcegitcommit: edd1190877db7996206147ad1d691fd8e84f23b1
+ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "44589011"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087192"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 
@@ -40,7 +40,7 @@ Ovo je pet novih postavki pravilnika:
 - dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office
 - dopusti korištenje povezanih iskustava u sustavu Office
 
-Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa pravilnika u oblaku za Office](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Ako koristite pravilnik grupe, morat ćete preuzeti najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) iz [Microsoftovog centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
+Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa pravilnika u oblaku za Office](../overview-office-client-policy-service.md). Ako koristite pravilnik grupe, morat ćete preuzeti najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) iz [Microsoftovog centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
 > - Informacije o načinu upravljanja kontrolama zaštite privatnosti za Office za Mac potražite u članku [Korištenje preferenci za upravljanje kontrolama zaštite privatnosti za Office za Mac](mac-privacy-preferences.md).
@@ -98,7 +98,7 @@ Vaši korisnici neće moći odabrati žele li uključiti ili isključiti ta pove
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka pravilnika za povezana iskustva koja analiziraju vaš sadržaj
 
-To su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvid u podatke i slične značajke. Na primjer, PowerPoint Designer ili Redaktor u programu Word. Popis tih povezanih iskustava potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
+To su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvid u podatke i slične značajke. Na primjer, PowerPoint Designer ili Prevoditelj. Popis tih povezanih iskustava potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
 
 Možete koristiti postavku pravilnika *Dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će povezana iskustva biti dostupna vašim korisnicima.
 

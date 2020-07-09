@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus), uključujući dijagnostičke podatke i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: 134f7470354796679c9a8c69fac8dd2559302b72
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663512"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087660"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 
@@ -85,7 +85,7 @@ Microsoft 365 Apps za velike tvrtke sastoji se od klijentskih softverskih aplika
 
 Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti dostupne vašim korisnicima prilikom rada u aplikacijama sustava Office. Kao administrator svoje tvrtke ili ustanove na raspolaganju će vam biti postavka pravilnika koja omogućuje da odaberete želite li korisnicima ponuditi ove vrste povezanih iskustava:
 
-- **Iskustva koja analiziraju vaš sadržaj**: to su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvide u podatke i slične značajke. Na primjer, PowerPoint Designer ili Redaktor u programu Word.
+- **Iskustva koja analiziraju vaš sadržaj**: to su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvide u podatke i slične značajke. Na primjer, PowerPoint Designer ili Prevoditelj.
 
 - **Iskustva koja preuzimaju internetski sadržaj**: to su iskustva koja omogućuju pretraživanje i preuzimanje internetskih sadržaja – uključujući predloške, slike, 3D modele, videozapise i referentne materijale – radi poboljšavanja vaših dokumenata. Na primjer, predlošci sustava Office ili alat za brz početak rada s programom PowerPoint.
 
