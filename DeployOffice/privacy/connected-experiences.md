@@ -13,11 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: ed42864d90c0ec8f50e28248720ffc8c2f569713
-ms.sourcegitcommit: 85c6ac9351a9305b774fb2a63cb895f952b433d6
+ms.openlocfilehash: 8910b00d5201e70131eb1eb0e696d9ce048eabad
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45048512"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087100"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -46,7 +47,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | Automatski alternativni tekst   | [Sve što trebate znati za pisanje učinkovitog alternativnog teksta](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Vrste podataka                  | [Vrste podataka u programu Excel: dionice i zemljopis](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Diktiranje  | [Glasovno diktiranje u sustavu Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
-|Redaktor|[Redaktor je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
+|Redaktor<sup>1</sup> |[Redaktor je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Ideje     | [Ideje u programu Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Pretvorba rukopisa u tekst, oblik ili matematički izraz | [Promjena rukom pisanog teksta u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
@@ -65,6 +66,8 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | Dodirivanje za Word (dodavanje iz datoteka)   | [Traženje i korištenje sadržaja koji trebate upravo onda kada ga trebate i bez napuštanja programa Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Pretvaranje u web-stranicu   | [Pretvaranje dokumenta programa Word u web-stranicu programa Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevoditelj   | [Prevođenje teksta na drugi jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
+
+<sup>1</sup> Osnovna funkcionalnost Redaktora ostaje dostupna čak i ako niste povezani s internetom. Ta ista osnovna funkcionalnost i dalje ostaje dostupna ako odaberete onemogućivanje korištenja povezanih iskustava koja analiziraju vaš sadržaj. U oba se slučaja Microsoftu ne šalju nikakvi podaci o korištenju Redaktora.
 
 > [!NOTE]
 > \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
@@ -95,6 +98,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 | *Istraživač*\*    | [Jednostavno istraživanje za seminarske radove u programu Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f). |
 | Reci mi    | [Brzo obavljanje zadataka pomoću značajke Reci mi](https://support.office.com/article/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predlošci  | [Preuzimanje besplatnih gotovih predložaka](https://support.office.com/article/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
+|*Vrijeme putovanja procjenjuje se u nastavku*\*|Kada odaberete dopustiti aplikaciji Outlook za iOS i Android pristup vašoj lokaciji, procjena vremena putovanja za vaš sljedeći događaj bit će uključena u [sljedeću](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work) karticu na vrhu mape ulazne pošte.|
 | *Traka vremenske prognoze*\* (Outlook)| [Promjena grada za traku vremenske prognoze u kalendaru](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]

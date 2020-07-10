@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sustava Office nudi informacije o upravljanju postavkama zaštite privatnosti na uređajima sa sustavom iOS.
 hideEdit: true
-ms.openlocfilehash: 40fc1ec1f5b2abc587e1b5224dc7fe0a5a656f33
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 6465a5b5e2103070170bdec8cd64b8bc044d46a3
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992098"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087839"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima
 
@@ -33,7 +33,9 @@ Dodatne informacije o dijagnostičkim podacima i povezanim iskustvima potražite
 
 Te preference postavki odnose se na sljedeće aplikacije:
 - Verzija 2.30 i novije aplikacije Word za iOS, Excel za iOS i PowerPoint za iOS.
+- Verzija 4.30.0 i novije aplikacije Outlook za iOS
 - Verzija 16.30 i novije aplikacije OneNote za iOS.
+- Verzija 11.19.11 i novije aplikacije OneDrive za iOS.
 - Verzija 1.17 i novije programa Preglednik za Visio za iOS.
 
 > [!NOTE]
@@ -60,6 +62,8 @@ Nakon slanja na uređaj, konfiguracijski rječnik nalazit će se pod `com.apple.
 > - dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office 
 > - dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office 
 > - Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office
+>
+> Postavke zaštite privatnosti za Outlook za iOS i OneDrive za iOS mogu se konfigurirati samo pomoću servisa za pravilnike u oblaku sustava Office.
 >
 > Dodatne informacije o upotrebi servisa za pravilnike u oblaku sustava Office potražite u članku [Pregled servisa pravilnika u oblaku sustava Office](../overview-office-cloud-policy-service.md).
 
