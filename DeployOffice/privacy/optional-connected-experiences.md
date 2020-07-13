@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o neobaveznim povezanim iskustvima, uključujući uvjete korištenja koji se na njih primjenjuju.
 hideEdit: true
-ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
-ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
+ms.openlocfilehash: 729329eeaa301cbb7bda61c0ec8d08ec9124729f
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45068674"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087760"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled neobaveznih povezanih iskustava za Office
 
@@ -45,7 +45,7 @@ Iskustva koja pokreće Bing unutar programa Outlook za iOS i Android su sljedeć
 
 - **Prijedlozi za mjesta:**  Kada dodate javni prostor sa adresom ulice u stavku kalendara, i puna adresa će se uključiti u polje Mjesto.
 - **Zanimljivi kalendari:** Možete se [pretplatiti](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) na kalendare za omiljene sportske timove ili TV emisije.
-
+- **Vrijeme putovanja na kartici Slijedi**Vaš sljedeći nadolazeći događaj bit će sažet na vrhu mape ulazna pošta u kartici pod nazivom[Slijedi](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). U aplikaciji Outlook za Android, ovo iskustvo zahtijeva Bing karte kako bi se osiguralo procijenjeno vrijeme putovanja.
 
  Ta iskustva koja se oslanjaju na Bing vam se licenciraju pod uvjetima [Microsoftovog ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) te su obuhvaćena [izjavom o zaštiti privatnosti](https://privacy.microsoft.com/). Svi upiti za pretraživanje koje uputite tvrtki ili ustanovi sustava Microsoft 365 Apps za velike tvrtke prilikom korištenja tih servisa šalju se u Microsoft Bing. Tvrtka Bing ne povezuje ih s vama.
 
@@ -83,6 +83,10 @@ Kada koristite trgovinu sustava Office, vaše korištenje web-mjesta te trgovine
 
 > [!NOTE]
 > Istraživanje nije isto što i Istraživač. U novijim je verzijama sustava Office uz Istraživanje dostupno i novo iskustvo pod nazivom Istraživač. Istraživač je noviji servis, koji omogućuje Bing, a o njemu smo već govorili u odjeljku o [iskustvima koja se oslanjaju na Bing](#experiences-that-rely-on-bing).
+
+### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Vrijeme putovanja na kartici Slijedi u aplikaciji Outlook za iOS
+
+U aplikaciji Outlook za iOS vaš sljedeći nadolazeći događaj bit će sažet na vrhu mape ulazna pošta u kartici pod nazivom[Slijedi](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). Ovo sučelje zahtijeva servis tvrtke Apple pod nazivom Apple karte kako bi se osiguralo procijenjeno vrijeme putovanja. Primjenjuju se [Uvjeti korištenja servisa Apple karte](https://www.apple.com/legal/internet-services/maps/) i Apple [pravila o zaštiti privatnosti](https://www.apple.com/legal/privacy).
 
 ### <a name="weather-bar-in-outlook"></a>Traka vremenske prognoze (Outlook)
 
