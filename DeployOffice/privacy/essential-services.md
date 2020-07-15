@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
-ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
+ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
+ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "44800380"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "45117192"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -2851,11 +2851,13 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingfullvalidation"></a>Office.Licensing.FullValidation 
 
-To se prikupljaju u svakoj sesiji koja prijavljuje stanje licenciranja računala te prijavljuje pogreške koje se korisniku prikazuju i zbog kojih ne može koristiti aplikaciju. Događaj označava je li korisnikovo računalo u dobrom stanju. Za taj smo događaj postavili otkrivanje anomalija da bismo prepoznali uzrokuje li regresija negativno ponašanje korisnika. Ključno je i za dijagnosticiranje korisničkih problema te za praćenje stanja sustava
+To se prikupljaju u svakoj sesiji koja prijavljuje stanje licenciranja računala te prijavljuje pogreške koje se korisniku prikazuju i zbog kojih ne može koristiti aplikaciju. Događaj označava je li korisnikovo računalo u dobrom stanju. Za taj smo događaj postavili otkrivanje anomalija da bismo prepoznali uzrokuje li regresija ili mehanizam aktivacije negativno ponašanje korisnika. Ključno je i za dijagnosticiranje korisničkih problema te za praćenje stanja sustava.
 
 Prikupljaju se sljedeća polja:
 
   - **Acid** – GUID identifikator koji predstavlja proizvod sustava Office za koji korisnik ima licencu  
+  
+  - **Atributi Activationatribute**-vrsta mehanizma aktivacije koji korisnik upotrebljava.
 
   - **IsSessionLicensing** – određuje je li trenutno pokrenut način rada za aktivaciju zajedničkog računala 
 
@@ -10458,6 +10460,27 @@ Prikupljaju se sljedeća polja:
 
  - **Data_EventId** – Kôd koji pokazuje preferenciju prikupljanja podataka koju je odabrao korisnik.
 
+### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
+
+Događaj je aktiviralo skladno ukidanje aplikacije za klijentske aplikacije sustava Office, kao što su, no ne ograničavajući se na Word, Excel, PowerPoint i Outlook. Parametre skladnog zatvaranja upotrebljavamo za mjerenje stanja proizvoda klijenata sustava Office. To je zamišljeno da bude signal ključan za poslovanje koji inženjeri sustava Office koriste za postizanje stabilnosti proizvoda.
+
+Prikupljaju se sljedeća polja:
+
+- **AppBuild** – identifikator međuverzije zahvaćenog procesa.
+- **AppMajor** – identifikator glavne verzije zahvaćenog procesa.
+- **AppMinor** – identifikator sporedne verzije zahvaćenog procesa.
+- **AppRevision** – identifikator međuverzije zahvaćenog procesa.
+- **Boot Completed** – dovršio je postupak pokretanja sustava Office.
+- **DetectionTime** – vrijeme otkrivanja neočekivanog zatvaranja.
+- **EcsETag** – identifikator eksperimenta za postupak.
+- **HasEdit** – uređivanje dokumenta koje se pojavljuje tijekom postupka sustava Office.
+- **HasOpen** – dokument je bio otvoren tijekom postupka sustava Office.
+- **InstallMethod** – određuje je li sustav nadograđen na trenutačnu međuverziju sustava Office, vraćen na nju ili je u pitanju nova instalacija.
+- **OfficeUILang** – jezik postupka sustava Office.
+- **PreviousBuild** – prethodno instalirana međuverzija.
+- **SafeMode** – jest postupak sustava Office u sigurnom načinu rada.
+- **SessionId** – jedinstveni identifikator procesa.
+- **SessionInitTime** – Vrijeme pokretanja zahvaćenog procesa.
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
