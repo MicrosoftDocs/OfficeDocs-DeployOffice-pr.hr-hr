@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 8910b00d5201e70131eb1eb0e696d9ce048eabad
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: dec86a00fb6037976f29668534d59b4f99fb9093
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087100"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46682891"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -64,6 +64,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | *Pametno traženje*\*   | [Uvidi u ono na čemu radite pomoću pametnog traženja](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predloženi odgovori | [Što su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Dodirivanje za Word (dodavanje iz datoteka)   | [Traženje i korištenje sadržaja koji trebate upravo onda kada ga trebate i bez napuštanja programa Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
+|Transkripcija |[Transkribiraj snimke](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
 | Pretvaranje u web-stranicu   | [Pretvaranje dokumenta programa Word u web-stranicu programa Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevoditelj   | [Prevođenje teksta na drugi jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 
