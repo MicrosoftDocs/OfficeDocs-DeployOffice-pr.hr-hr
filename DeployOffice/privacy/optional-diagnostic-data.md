@@ -11,14 +11,14 @@ ms.collection: Ent_O365
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Office administratorima sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
+description: Administratorima Office sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
-ms.openlocfilehash: 0190c29a017b35d945e6a1d540e1560dfab47a4c
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 6769c7a0bf254b5a33f92c5410ec517b7d568d8e
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993065"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683143"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Neobavezni dijagnostički podaci za Office
 
@@ -37,7 +37,7 @@ To su dijagnostički podaci o klijentskom softveru sustava Office koji se korist
 
 ***Neobavezni dijagnostički podaci***: dodatni podaci koji nam pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije koje nam pomažu pri otkrivanju, dijagnosticiranju i rješavanju problema.
 
-Ako odaberete slanje neobaveznih dijagnostičkih podataka, uz njih se prikupljaju i obavezni dijagnostički podaci.
+Ako odaberete slanje neobaveznih dijagnostičkih podataka, uz njih se prikupljaju i obavezni dijagnostički podaci. Osim toga, možda će biti poslana dijagnostičke datoteke evidencije za sustav Office, koje sadrže informacije koje su vrlo slične neobaveznim dijagnostičkim podacima. Dodatne informacije o tim datotekama evidencije potražite u članku [pregled datoteka dijagnostičkih zapisnika za sustav Office](https://support.microsoft.com/office/fba86aac-70dc-4858-ae1f-ec2034346cdf).
 
 Primjeri neobaveznih dijagnostičkih podataka obuhvaćaju podatke koje prikupljamo o slikama koje korisnici umeću u dokumente programa Word da bismo mogli ponuditi bolje mogućnosti za slike te podatke koje prikupljamo o vremenu potrebnom da se slajd programa PowerPoint prikaže na zaslonu da bismo mogli poboljšati okruženje ako je presporo.
 
@@ -49,7 +49,7 @@ Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 Ako ste administrator za tvrtku ili ustanovu, možda će vas zanimati i sljedeći članci:
 
 - [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
+- [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
