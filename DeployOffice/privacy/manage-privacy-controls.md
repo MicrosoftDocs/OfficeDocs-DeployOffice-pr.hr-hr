@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus) pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f02714428dd580d79a3fc8f160b00d6df95c4237
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087192"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440229"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
+
+> [!NOTE]
+> Popis proizvoda sustava Office obuhvaćenih ovim informacijama o zaštiti privatnosti potražite u članku [Kontrole za zaštitu privatnosti dostupne za proizvode Office](products-versions-privacy-controls.md).
 
 Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus).
 
@@ -46,6 +49,7 @@ Postavke pravilnika mogu se implementirati putem pravilnika grupe ili [servisa p
 > - Informacije o načinu upravljanja kontrolama zaštite privatnosti za Office za Mac potražite u članku [Korištenje preferenci za upravljanje kontrolama zaštite privatnosti za Office za Mac](mac-privacy-preferences.md).
 > - Informacije o sličnim postavkama za Office na iOS uređajima potražite u [Upotreba postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
 > - Informacije o sličnim postavkama za Office na Android uređajima potražite u članku [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md).
+> - Informacije o kontrolama za zaštitu privatnosti za aplikacije Office za web potražite u članku [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za aplikacije Office za web](office-web-privacy-controls.md).
 
 
 Ako koristite alat za upravljanje pravilnikom grupe, sve postavke pravilnika nalaze se u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Office 2016\\Zaštita privatnosti\\Centar za pouzdanost.
@@ -77,7 +81,7 @@ Dodatne informacije o dijagnostičkim podacima potražite u ovim člancima:
 - [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Neobavezni dijagnostički podaci za Office](optional-diagnostic-data.md)
-- [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Postavke pravilnika za povezana iskustva
 
@@ -120,21 +124,11 @@ Ta se povezana iskustva razlikuju po tome što nisu obuhvaćena komercijalnim ug
 
 Možete koristiti postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će neobavezna povezana iskustva biti dostupna vašim korisnicima.
 
-> [!NOTE]
-> Postavka pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* se može konfigurirati i tako da primjenjuje sljedeće aplikacije za Office for web:
-> - Excel za web
-> - OneNote za web
-> - PowerPoint za web
-> - Visio za web
-> - Word za web
->
-> Da biste konfigurirali tu postavku pravilnika za te aplikacije za Office za web, morate koristiti uslugu [Office pravilnik o oblaku](../overview-office-cloud-policy-service.md).
-
-Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki postavke privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
+Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki zaštita privatnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
 
 Uz to, neka od tih neobaveznih povezanih iskustava također se smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju internetski sadržaj. Na primjer, umetanje internetskih slika neobavezno je povezano iskustvo koje omogućuje Microsoft Bing, ali se ujedno smatra i povezanim iskustvom koje preuzima internetski sadržaj. Stoga ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office*, umetanje internetskih slika neće biti dostupno vašim korisnicima. Ono im neće biti dostupno čak ni ako ste omogućili postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office*. Dodatne informacije o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju internetski sadržaj potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
 
-Postoji i jedna iznimka na koju treba obratiti pozornost. Postavka pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* ne kontrolira iskustva koja od vas traže povezivanje računa za LinkedIn s Microsoftovim računom tvrtke ili obrazovne ustanove. Informacije o kontroli iskustava te vrste, kao što su informacije sa servisa LinkedIn na [kartici profila](https://support.office.com/article/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u programu Outlook, potražite u člancima [Povezivanje računa za LinkedIn i Microsoftovog računa](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Pristanak na veze iz računa za LinkedIn u tvrtki ili ustanovi koja koristi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
+Postoji i jedna iznimka na koju treba obratiti pozornost. Postavka pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* ne kontrolira iskustva koja od vas traže povezivanje računa za LinkedIn s Microsoftovim računom tvrtke ili obrazovne ustanove. Da biste upravljali takvim iskustvima kao što su informacije o servisu LinkedIn na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u programu Outlook, pročitajte članak [LinkedIn u Microsoftovim aplikacijama i servisima](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Integracija kontakata iz računa servisa LinkedIn u servisu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Postavka pravilnika za većinu povezanih iskustava
 
@@ -207,7 +201,7 @@ Ovo su novi elementi dodani u korisničko sučelje sustava Office:
 
 - U odjeljku **Datoteka** > **Račun** korisnici će vidjeti novu mogućnost u odjeljku **Zaštita privatnosti računa** > **Upravljanje postavkama**. U odjeljku **Upravljanje postavkama** korisnici mogu isključiti neobavezna povezana iskustva ako ste im dali tu mogućnost.
 
-- U odjeljku **Datoteka** > **Mogućnosti** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Mogućnosti zaštite praivatnosti** nalazi se mogućnost kojom se omogućuje korištenje [Preglednika dijagnostičkih podataka](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855) na tom uređaju.
+- U odjeljku **Datoteka** > **Mogućnosti** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Mogućnosti zaštite praivatnosti** nalazi se mogućnost kojom se omogućuje korištenje [Preglednika dijagnostičkih podataka](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855) na tom uređaju.
 
  
 ## <a name="control-privacy-settings-by-editing-the-registry"></a>Kontrolirajte postavke zaštite privatnosti uređivanjem registra

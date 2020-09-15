@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus), uključujući dijagnostičke podatke i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087660"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440528"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
+
+> [!NOTE]
+> Popis proizvoda sustava Office obuhvaćenih ovim informacijama o zaštiti privatnosti potražite u članku [Kontrole za zaštitu privatnosti dostupne za proizvode Office](products-versions-privacy-controls.md).
 
 Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus).
 
@@ -31,17 +34,6 @@ Počevši od verzije 1904 sustava Microsoft 365 Apps za velike tvrtke, nudimo va
 - ***Povezana iskustva*** koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
 
 U sklopu tih promjena pojavili su se novi i ažurirani elementi korisničkog sučelja (UI-ja) i postavke pravilnika.
-
-> [!IMPORTANT]
-> - Te se promjene odnose na Access, Excel, OneNote, Outlook, PowerPoint, Publisher i Word.
-> - Te se promjene odnose i na sljedeće:
->   - Verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
->   - Verziju 1904 ili noviju verziju programa Project i Visio za računala, koje se isporučuju s nekim pretplatničkim tarifama kao što su Project tarifa 5 ili Visio tarifa 2.
-> - Te kontrole za zaštitu privatnosti uključene su u verziju 1908 ili noviju verziju iz polugodišnjeg kanala za velike tvrtke (ciljanog) i polugodišnjeg kanala za velike tvrtke.
-> - Te kontrole zaštite privatnosti dostupne su za verziju 2.30 i novije verzije programa Excel, OneNote, PowerPoint i Word te za verziju 1.17 i noviju verziju Preglednika za Visio za iOS.
-> - Te kontrole zaštite privatnosti dostupne su za verziju 16.0.12226.10000 i novije verzije programa Excel, OneNote, PowerPoint i Word za Android, te za verziju 16.0.12228.20004 i novije verzije programa OneNote za Android.
-> - Većina tih aplikacija Office za web mora početi koristiti novu kontrolu zaštite privatnosti za [neobvezna povezana iskustva](optional-connected-experiences.md).. To su sljedeće aplikacije: Excel za web, OneNote za web, PowerPoint za web, Visio za web i Word za web. Možete koristiti [Uslugu Office pravilnik o oblaku](../overview-office-cloud-policy-service.md) kako biste konfigurirali odgovarajuće [postavke pravilnika](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
-> - Te nove i poboljšane kontrole za zaštitu privatnosti proširit ćemo na dodatne klijente sustava Office, uključujući Teams i vlastite mobilne aplikacije. Dodatne informacije o tim promjenama objavit ćemo tijekom sljedećih mjeseci. Nastavit ćemo pažljivo slušati vaše povratne informacije i poboljšavati sve klijente i servise sustava Office 365 (i Microsoft 365).
 
 ## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Dijagnostički podaci koje Microsoft 365 Apps za velike tvrtke šalje Microsoftu
 
@@ -77,7 +69,7 @@ Dodatne informacije potražite u sljedećim člancima:
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
 - [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
-- [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Korištenje preglednika dijagnostičkih podataka sa sustavom Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Povezana iskustva za Microsoft 365 Apps za velike tvrtke
 
@@ -113,7 +105,7 @@ To su neobavezna povezana iskustva koja nisu obuhvaćena komercijalnim ugovorom 
 
 Budući da su ta neobavezna povezana iskustva regulirana zasebnim uvjetima i odredbama, njima se upravlja odvojeno od gore spomenutih povezanih iskustava. Kao administrator za svoju tvrtku ili ustanovu moći ćete koristiti postavku pravilnika kojom odabirete želite li ta neobavezna povezana iskustva kao grupu staviti na raspolaganje korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta su neobavezna povezana iskustva dostupna vašim korisnicima.
 
-Čak i ako odlučite ta neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključivanja neobaveznih povezanih iskustava kao grupe putem [dijaloškog okvira postavki zaštita privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
+Čak i ako odlučite ta neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključivanja neobaveznih povezanih iskustava kao grupe putem [dijaloškog okvira postavki zaštita privatnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
 
 Dodatne informacije potražite u sljedećim člancima:
 
@@ -121,25 +113,14 @@ Dodatne informacije potražite u sljedećim člancima:
 - [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
 - [Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima](ios-privacy-preferences.md)
-- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti na Android uređajima](android-privacy-controls.md)
+- [Korištenje postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Office na Android uređajima](android-privacy-controls.md)
+- [Korištenje postavkama pravilnika za upravljanje kontrolama za zaštitu privatnosti za aplikacije Office za web](office-web-privacy-controls.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Obavezni servisni podaci za povezana iskustva
 
-Obavezni servisni podaci su podaci koji nam omogućuju primjenu povezanih iskustava utemeljenih na oblaku te pospješuju sigurnost i funkcioniranje tih iskustava na očekivan način. Obavezne servisne podatke čine tri vrste informacija.
+Budući da koristite povezano iskustvo, podaci se šalju Microsoftu i on ih obrađuje kako bi vam osigurao to povezano iskustvo. Ti su podaci ključni jer nam omogućuju dostavu povezanih iskustva koja se temelje na oblaku. Te podatke nazivamo obaveznim servisnim podacima.
 
-- **Korisnički sadržaj**, tj. sadržaj koji stvarate koristeći Office, kao što je tekst upisan u dokument programa Word.
-- **Funkcionalni podaci**, koji obuhvaćaju informacije koje su povezanom iskustvu potrebne za izvođenje njegovih zadataka, poput konfiguracijskih informacija o aplikaciji.
-- **Servisni dijagnostički podaci**, tj. podaci nužni za zaštitu, ažurnost i funkcioniranje servisa na očekivan način. Budući da su ti podaci strogo vezani uz povezano iskustvo, odvojeni su od razina obaveznih ili neobaveznih dijagnostičkih podataka.
-
-Da biste bolje razumjeli obavezne servisne podatke, u nastavku je naveden primjer scenarija upotrebe značajke PowerPoint Designer, povezanog iskustva koje možete koristiti prilikom stvaranja slajdova prezentacije. PowerPoint Designer potpomaže poboljšavanje slajdova automatskim generiranjem dizajnerskih ideja između kojih možete birati. Dok stavljate sadržaj na slajd, Designer u pozadini radi na podudaranju tog sadržaja s profesionalno dizajniranim izgledima.
-
-Obavezni servisni podaci koji se šalju Microsoftu da bi vam se omogućilo to povezano iskustvo mogu obuhvaćati sljedeće:
-
-- *Korisnički sadržaj*, poput teksta ili slika koje ste dodali na slajd.
-- *Funkcionalne podatke*, poput slajda na kojem radite i njegovog izgleda.
-- *Servisne dijagnostičke podatke*, poput događaja koji nam govore je li se dizajnerska ideja pravilno primijenila na vaš slajd i jesu li servisni pozivi pravilno funkcionirali.
-
-Ako odlučite korisnicima uskratiti kategoriju povezanih iskustava koja obuhvaća PowerPoint Designer, ta će se značajka isključiti i neće nam slati ništa od tih obaveznih servisnih podataka.
+Obavezni servisni podaci mogu uključivati informacije vezane uz funkcioniranje povezanog iskustva potrebnog da bi servis u pozadini bio siguran, ažuran i da bi radio na očekivani način. Ako odlučite koristiti povezano iskustvo koje analizira vaš sadržaj, primjerice, prevođenje u programu Word, tekst koji ste upisali i odabrali za prevođenje u dokumentu šalje se i obrađuje da bi vam osigurao povezano iskustvo. Obavezni servisni podaci također mogu obuhvaćati informacije koje su povezanom iskustvu potrebne za izvođenje njegovih zadataka, poput konfiguracijskih informacija o aplikaciji Office.
 
 Dodatne informacije potražite u članku [Obavezni servisni podaci za Office](required-service-data.md).
 
