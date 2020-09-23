@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 8b4c473736bfe19edffde227be009dd2555852df
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: ed550129f7d3aef9e340456b5ee2d09f85c18b07
+ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440481"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47941020"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -426,6 +426,461 @@ Prikupljaju se sljedeća polja:
   - **Wamapi** – određuje koji se WAM API poziva
 
   - **Wamtelemetrybatch** – trenutno se ne koristi. Ubuduće će komponenti WAM omogućiti slanje dodatnih informacija o događaju provjere autentičnosti.
+
+
+### <a name="officematsoneauthactionmicrosoftofficewin32"></a>Office.MATS.OneAuth.ActionMicrosoftOfficeWin32
+
+Microsoft Auth Telemetry System (MATS) prikuplja se kada Office pokuša dohvatiti token za provjeru autentičnosti, bilo u pozadini ili putem upita korisniku. Kada pokušaj dohvaćanja ne uspije, uvrštavaju se informacije o pogrešci. Korisnici pomoću tih događaja mogu izbjeći prelazak u stanje neispravne provjere autentičnosti tako što:
+
+1) će utvrditi mogu li klijenti uspješno dohvatiti token za provjeru autentičnosti sa servisa ili su prešli u stanje neispravne provjere autentičnosti.
+
+2) će procijeniti uzrokuju li promjene u klijentu ili servisu kritično nazadovanje sučelja i pouzdanosti provjere autentičnosti korisnika
+
+3) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
+
+4) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme za otklanjanje kritičnih pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **Accounttype** – vrsta računa koji se koristi za taj događaj provjere autentičnosti, na primjer, potrošački ili organizacijski.
+
+- **ActionName** – neslužbeni naziv za taj događaj, ako je naveden.
+
+- **Actiontype** – određuje vrstu upotrebljavane biblioteke za provjeru autentičnosti.
+
+- **Appaudience** – označava je li međuverzija aplikacije za internu ili vanjsku upotrebu
+
+- **Appforcedprompt** – označava je li aplikacija nadjačala predmemoriju i prisilno prikazala upit
+
+- **Appname** – naziv aplikacije koja provodi provjeru autentičnosti
+
+- **Appver** – verzija aplikacije koja provodi provjeru autentičnosti
+
+- **Askedforcreds** – označava je li aplikacija od korisnika tražila unos vjerodajnica za tu radnju
+
+- **Authoutcome** – označava uspjeh, neuspjeh ili otkazivanje provjere autentičnosti
+
+- **Blockingprompt** – označava je li aplikacija izbacila upit na koji korisnik mora reagirati
+
+- **Correlationid** – identifikator koji se upotrebljava za spajanje podataka o ovom pojedinačnom događaju sa servisnim podacima
+
+- **Count** – ukupan broj skupnih radnji prijavljenih u ovom jednom događaju podataka.
+
+- **Devicenetworkstate** – označava je li uređaj povezan s internetom.
+
+- **Deviceprofiletelemetryid** – anonimni ID uređaja koji se koristi za mjerenje iskustva autentičnosti i pouzdanosti uređaja.
+
+- **Duration** – trajanje provjere autentičnosti
+
+- **duration_max** – maksimalno trajanje bilo kojeg od skupnih događaja
+
+- **duration_min** – min trajanje bilo kojeg od skupnih događaja
+
+- **duration_sum** – zbroj trajanja svih skupnih događaja
+
+- **endtime** – vrijeme završetka događaja provjere autentičnosti
+
+- **error** – šifra pogreške u slučaju da provjera autentičnosti nije uspjela
+
+- **errordescription** – kratak opis pogreške
+
+- **errorsource** – je li pogreška potekla iz servisa, biblioteke za provjeru autentičnosti ili aplikacije
+
+- **eventtype** – izvještava li ovaj događaja o podatkovnoj točki provjere autentičnosti ili događaju pogreške kvalitete podataka. Koristi se za mjerenje kvalitete podataka.
+
+- **from_cache** – Booleov izraz koji predstavlja je li zapis iz predmemorije jezgre WAM-a ili dodatak
+
+- **hasadaltelemetrija** – upućuje na to je li u knjižnici za provjeru autentičnosti servisa Azure Active Directory dostupna telemetrija za taj događaj.
+
+- **Identityservice** – označava je li pozvan račun za Microsoftove servise (MSA) ili servis Azure Active Directory (AAD)
+
+- **Interactiveauthcontainer** – označava koja je vrsta upita prikazana
+
+- **Issilent** – označava je li prikazan upit ili je to bio tihi (pozadinski) događaj provjere autentičnosti.
+
+- **Microsoft_ADAL_adal_version** – verzija biblioteke Azure Active Directory Authentication Library (ADAL)
+
+- **Microsoft_ADAL_api_error_code** – šifra pogreške koju je biblioteka za provjeru autentičnosti poslala za ovaj pokušaj provjere autentičnosti
+
+- **Microsoft_ADAL_api_id** – API koji je pozvan za taj pokušaj provjere autentičnosti
+
+- **Microsoft_ADAL_application_name** – naziv aplikacije/procesa koji koristi ADAL.
+
+- **Microsoft_ADAL_application_version** – verzija aplikacije koja koristi ADAL.
+
+- **Microsoft_ADAL_authority** – URL izdavatelja certifikata za Azure Active Directory koji je odgovoran za provjeru autentičnosti korisnika
+
+- **Microsoft_ADAL_authority_type** – potrošački / Microsoftov ugovor o usluzi (MSA) ili organizacijski / Azure Active Directory (AAD); trenutačno uvijek AAD
+
+- **Microsoft_ADAL_authority_validation_status**– označava je li provjera autentičnosti provedena na strani servisa
+
+- **Microsoft_ADAL_broker_app** – označava je li ADAL korišten kao posrednik za provjeru autentičnosti
+
+- **Microsoft_ADAL_broker_app_used** – označava naziv posrednika (npr. Windows Account Management)
+
+- **Microsoft_ADAL_broker_version** – označava verziju posrednika ako se koristi
+
+- **Microsoft_ADAL_cache_event_count** – broj događaja predmemoriranja koje je ADAL proveo tijekom dohvaćanja tokena
+
+- **Microsoft_ADAL_cache_event_count_max** – ako je signal skupni, označava maksimalni broj događaja predmemoriranja za bilo koji skupni događaj
+
+- **Microsoft_ADAL_cache_event_count_min** – ako je signal skupni, označava minimalni broj događaja predmemoriranja za bilo koji skupni događaj
+
+- **Microsoft_ADAL_cache_event_count_sum** – ako je signal skupni, označava zbroj događaja predmemoriranja svih skupnih događaja
+
+- **Microsoft_ADAL_cache_read_count** – označava koliko je puta API čitao iz predmemorije diska. Postoji ako je došlo barem do jednog čitanja
+
+- **Microsoft_ADAL_cache_read_error_count** – predstavlja broj neuspješnih čitanja iz predmemorije diska. Postoji ako je barem jedno bilo neuspješno
+
+- **Microsoft_ADAL_cache_read_last_error** – ADAL šifra pogreške. Postoji ako čitanje barem jednom nije uspjelo
+
+- **Microsoft_ADAL_cache_read_last_system_error** – šifra pogreške sustava.  Postoji ako čitanje barem jednom nije uspjelo
+
+- **Microsoft_ADAL_cache_write_count** – označava koliko je puta API pisao u predmemoriju diska. Postoji ako je došlo barem do jednog pisanja
+
+- **Microsoft_ADAL_cache_write_error_count** – predstavlja broj neuspješnih pisanja u predmemoriju diska. Postoji ako je barem jednom bilo neuspješno
+
+- **Microsoft_ADAL_cache_write_last_error**– ADAL šifra pogreške. Postoji ako pisanje barem jednom nije uspjelo
+
+- **Microsoft_ADAL_cache_write_last_system_error** – šifra pogreške sustava. Postoji ako pisanje barem jednom nije uspjelo
+
+- **Microsoft_ADAL_client_id** – raspršeni ID aplikacije servisa Azure Active Directory
+
+- **Microsoft_ADAL_device_id** – ID lokalnog uređaja koji generira ADAL.
+
+- **Microsoft_ADAL_error_domain** – domena/komponenta koja je generirala šifru pogreške.
+
+- **Microsoft_ADAL_error_protocol_code** – šifra pogreške protokola OAuth koji je vratio servis, snimio ADAL.
+
+- **Microsoft_ADAL_extended_expires_on_setting** – vrijednost true/false koja označava ima li token produljen životni vijek
+
+- **Microsoft_ADAL_http_event_count** – broj HTTP zahtjeva koje generira ADAL.
+
+- **Microsoft_ADAL_idp** – Davatelj identiteta (IDP) koji koristi ADAL.
+
+- **Microsoft_ADAL_network_event_count** – broj mrežnih poziva koje je uputio ADAL
+
+- **Microsoft_ADAL_http_event_count_max** – ako je taj signal skupni, označava maksimalni broj http poziva koje je uputio ADAL
+
+- **Microsoft_ADAL_http_event_count_min** – ako je taj signal skupni, označava minimalni broj http poziva koje je uputio ADAL
+
+- **Microsoft_ADAL_http_event_count_sum** – ako je taj signal skupni, označava zbroj poziva koje je uputio ADAL
+
+- **Microsoft_ADAL_network_event_count_max** – ako je taj signal skupni, označava maksimalni broj mrežnih poziva koje je ADAL uputio za bilo koji skupni događaj
+
+- **Microsoft_ADAL_network_event_count_min** – ako je taj signal skupni, označava minimalni broj mrežnih poziva koje je ADAL uputio za bilo koji skupni događaj
+
+- **Microsoft_ADAL_network_event_count_sum** – ako je taj signal skupni, označava zbroj mrežnih poziva koje je ADAL uputio za bilo koji skupni događaj
+
+- **Microsoft_ADAL_is_silent_ui** – vrijednost true/false koja označava je li ADAL prikazao korisničko sučelje (upit)
+
+- **Microsoft_ADAL_is_successfull** – vrijednost true/false koja označava je li API ADAL-a uspio (MacOS)
+
+- **Microsoft_ADAL_is_successful** – vrijednost true/false koja označava je li API ADAL-a uspio
+
+- **Microsoft_ADAL_logging_pii_enabled** – vrijednost true/false koja označava je li omogućen način rada za potpuno zapisivanje za ADAL. Ti se podaci bilježe samo lokalno i ne šalju se u telemetriju
+
+- **Microsoft_ADAL_ntlm** – vrijednost true/false koja označava je li ADAL upotrijebio osnovnu aut. (NTLM).
+
+- **Microsoft_ADAL_oauth_error_code** – šifra pogreške protokola OAuth koju je vratio servis
+
+- **Microsoft_ADAL_prompt_behavior** – prijava ili parametar koji nije mrežni proslijeđen servisu kojim se određuje može li se prikazati korisničko sučelje
+
+- **Microsoft_ADAL_request_id** – transakcijski GUID za zahtjev koji je ADAL poslao servisu
+
+- **Microsoft_ADAL_response_code** – kôd mrežnog odgovora sa servisa
+
+- **Microsoft_ADAL_response_time** – vrijeme koje je bilo potrebno servisu da odgovori ADAL-u.
+
+- **Microsoft_ADAL_response_time_max** – ako je signal skupni, maksimalno vrijeme koje je ADAL-u bilo potrebno da se vrati iz API-ja u bilo kojem od skupnih događaja
+
+- **Microsoft_ADAL_response_time_min** – ako je signal skupni, označava minimalno vrijeme koje je servisu bilo potrebno da odgovori ADAL-u u bilo kojem od skupnih događaja
+
+- **Microsoft_ADAL_response_time_sum** – ako je signal skupni, označava zbroj vremena koje je ADAL-u bilo potrebno da se vrati iz API-ja za sve skupne događaje.
+
+- **Microsoft_ADAL_rt_age**– starost tokena za osvježavanje
+
+- **Microsoft_ADAL_server_error_code** – šifra pogreške koju je vratio poslužitelj
+
+- **Microsoft_ADAL_server_sub_error_code** – podšifra pogreške koju je poslužitelj vratio, a služi za utvrđivanje zašto zahtjev nije uspio
+
+- **Microsoft_ADAL_spe_info** – vrijednost true/false koja određuje je li korisnik koristio sigurni unutarnji krug produkcijskog korporacijskog okruženja (samo za Microsoftove zaposlenike).
+
+- **Microsoft_ADAL_spe_ring** – vrijednost true/false koja određuje je li korisnik koristio sigurni unutarnji krug produkcijskog korporacijskog okruženja (samo za Microsoftove zaposlenike).
+
+- **Microsoft_ADAL_start_time**– vrijeme upućivanja poziva ADAL API-ja
+
+- **Microsoft_ADAL_status** – status uspjeha/neuspjeha cjelokupnog pozivanja ADAL-a
+
+- **Microsoft_ADAL_stop_time** – vrijeme uzvraćanja poziva ADAL API-ja
+
+- **Microsoft_ADAL_telemetry_pii_enabled**– vrijednost true/false koja označava je li omogućen način rada za potpunu telemetriju za ADAL. Naziv je pogrešan jer se ne šalje PII/EUII
+
+- **Microsoft_ADAL_tenant_id** – GUID koji označava klijenta kojem korisnik provjerene autentičnosti pripada
+
+- **Microsoft_ADAL_token_acquisition_from_context** – opisuje ponašanje ADAL-a ovisno o tokenima u kontekstu provjere autentičnosti
+
+- **Microsoft_ADAL_token_frt_status** – status tokena za osvježavanje: je li isproban, nije potreban, nije pronađen ili je izbrisan.
+
+- **Microsoft_ADAL_token_mrrt_status** – status MultiResourceRefreshToken: je li isproban, nije potreban, nije pronađen ili je izbrisan.
+
+- **Microsoft_ADAL_token_rt_status** – status tokena za osvježavanje: je li isproban, nije potreban, nije nađen ili je izbrisan.
+
+- **Microsoft_ADAL_token_type** – token za osvježivanje (RT) ili token za osvježivanje više resursa (MRRT).
+
+- **Microsoft_ADAL_ui_event_count** – broj upita prikazanih korisniku. Mogu biti i u pozadini
+
+- **Microsoft_ADAL_user_cancel** – vrijednost true / false koja označava je li prozor korisničkog sučelja otkazan
+
+- **Microsoft_ADAL_x_ms_request_id** – dodatni ID zahtjeva koji ADAL navodi u mrežnom zaglavlju za servis
+
+- **Microsoft_ADAL_x_client_cpu** – informacije o CPU arhitekturi uređaja
+
+- **Microsoft_ADAL_x_client_os** – verzija OS-a uređaja.
+
+- **Microsoft_ADAL_x_client_sku** – naziv SKU-a OS-a uređaja.
+
+- **Microsoft_ADAL_x_client_ver** – verzija biblioteke ADAL-a.
+
+- **MSAL_all_error_tags** – sve oznake pogrešaka s kojima se susrela Microsoft Authentication Library (MSAL) za vrijeme tijeka provjere autentičnosti.
+
+- **MSAL_api_error_code** – ako MSAL naiđe na pogrešku u OS-u, ovdje su pohranjene šifre pogrešaka platforme.
+
+- **MSAL_api_error_context** – niz koji sadrži dodatne čovjeku čitljive pojedinosti o zadnjoj pogrešci na koju je MSAL naišla. 
+
+- **MSAL_api_error_tag** – jedinstveni niz za mjesto u kodu gdje se pojavila ta pogreška.
+
+- **MSAL_api_name** – naziv API-ja MSAL najviše razine koji je pozvan za pokretanje ovog tijeka provjere autentičnosti.
+
+- **MSAL_api_status_code** – kôd statusa MSAL vraćen je za taj rezultat tijeka provjere autentičnosti.
+
+- **MSAL_auth_flow** – koraci koje je MSAL pokušao za vrijeme tog tijeka provjere autentičnosti (AT, PRT, LRT, FRT, ART, IRT). Odvojen simbolom okomite crte "|" za jednostavno raščlanjivanje.
+
+- **MSAL_auth_flow_last_error** – šifra pogreške koji smo primili sa poslužitelja od 2. do zadnje stavke u AuthFlowu. (Primj.: If AuthFlow = „PRT|LRT ", greška PRT-a bila bi u AuthFlowLastError).
+
+- **MSAL_authority_type** – označava je li ovaj zahtjev za korisnika bio u: AAD, vanjski ili MSA.
+
+- **MSAL_broker_app_used** – označava je li u ovom tijeku provjere autentičnosti korištena aplikacija posrednika.
+
+- **MSAL_client_id** – ID klijenta aplikacije za pozivanje
+
+- **MSAL_correlation_id** – jedinstveni GUID za taj događaj, koji se upotrebljava za pridruživanje radnjama u zapisnicima klijenta, poslužitelja i aplikacija.
+
+- **MSAL_delete_token** – popis tokena koji su izbrisani iz predmemorije za vrijeme tog tijeka provjere autentičnosti.
+
+- **MSAL_http_call_count** – broj HTTP poziva koje je MSAL izvršio za vrijeme tijeka provjere autentičnosti.
+
+- **MSAL_is_successful** – označava je li tijek provjere autentičnosti bio uspješan.
+
+- **MSAL_last_http_response_code** – ako je MSAL izvršio jedan ili više HTTP poziva, to je zadnji kôd odgovora HTTP-a koji smo primili.
+
+- **MSAL_msal_version** – označava niz verzije MSAL, oblik X. X. X + („OneAuth“, „local" ili izvršite raspršivanje).
+
+- **MSAL_read_token** – tokeni koji su se pročitali iz predmemorije (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT koji je istekao je pročitan, ali odbačen]).
+
+- **MSAL_read_token_last_error** – ako je MSAL naišla na pogrešku prilikom čitanja predmemorije, ovdje ćemo pohraniti informacije. (Primjer.: pogreška čitanja diska iz OS-a, pogreška privjeska za ključeve na MacOS-u).
+
+- **MSAL_request_duration** – označava koliko je zahtjevu trebalo vremena od kada je pozvan API najviše razine MSAL-a do vraćanja rezultata.
+
+- **MSAL_request_id** – ID zahtjeva za zadnji poziv koji smo unijeli u Microsoftov servis sigurnog tokena.
+
+- **MSAL_server_error_code** – označava numeričku šifru pogreške Microsoftovog servisa sigurnog tokena ako smo ga primili.
+
+- **MSAL_server_spe_ring** – informacije o krugu produkcijskog korporacijskog okruženja Microsoftovog servisa sigurnog tokena, ako smo ga primili.
+
+- **MSAL_server_suberror_code** – niz podšifre pogreške Microsoftovog servisa sigurnog tokena, ako smo je primili.
+
+- **MSAL_start_time** – označava vrijeme pokretanja zahtjeva MSALA-a na javnom API-ju najviše razine.
+
+- **MSAL_stop_time** označava vrijeme u kojem je MSAL dovršila obradu zahtjeva i vratila rezultat pozivatelju.
+
+- **MSAL_tenant_id** – označava Microsoftov GUID koji prepoznaje klijenta u kojem postoji korisnik.
+
+- **MSAL_ui_event_count** – označava broj upita korisničkog sučelja MSAL-a prikazan na zaslonu.
+
+- **MSAL_wam_telemetry** – sadrži skup WAM telemetrijskih podataka u nizu JSON koji će se raščlaniti i pretvoriti u polja u ovom dokumentu koja potiču iz WAM-a.
+
+- **MSAL_was_request_throttled** – točno ako je MSAL ograničila ovaj zahtjev i spriječila ga da napadne mrežu. Ako je ovo ikad točno, u aplikaciji za pozivanje najvjerojatnije se nalazi petlja.
+
+- **MSAL_write_token** – tokeni koji su pisani u predmemoriji (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT koji je istekao je pročitan, ali odbačen]).
+
+- **MSAL_read_token_last_error** – ako je MSAL naišla na pogrešku prilikom pisanja u predmemoriju, ovdje ćemo pohraniti informacije. (Primjer.: pogreška čitanja diska iz OS-a, pogreška privjeska za ključeve na MacOS-u).
+
+- **oneauth_api** – API za OneAuth koji je pozvan za taj pokušaj provjere autentičnosti.
+
+- **oneauth_transactionuploadid** – GUID koji određuje pojedinačni poziv API-ja za OneAuth.
+
+- **oneauth_version** – verzija SDK-a za OneAuth.
+
+- **Platform** – označava platformu OS-a (0: Windows Desktop; 1: Android; 2: iOS; 3: MacOS; 4: UWP)
+
+- **Promptreasoncorrelationid** – označava identifikator korelacije koji se može upotrebljavati za traženje prethodnog događaja provjere autentičnosti, koji se upotrebljava za objašnjenje zašto je korisnik zatražio provjeru autentičnosti.
+
+- **Resource** – označava resurs za koji se traži token.
+
+- **Scenarioid** – Veći broj događaja može pripadati jednom scenariju, npr. scenarij možda dodaje novi račun, ali u sklopu tog scenarija postoji više upita. Ovaj identifikator omogućuje korelaciju tih povezanih događaja.
+
+- **Scenarioname** – označava naziv scenarija aplikacije u kojem je bila potrebna provjera autentičnosti, npr. prvo pokretanje, provjera licenciranja, itd.
+
+- **Scope** – označava opseg pretraživanja za koji se traži token.
+
+- **Sdkver** – označava verziju biblioteke Microsoft Auth Telemetry System koja se upotrebljava za izradu tih podataka
+
+- **SessionId** – označava identifikator sesije pokretanja
+
+- **Starttime** – vrijeme kada je započeo događaj provjere autentičnosti.
+
+- **Tenantid** – GUID koji označava klijent kojem korisnik provjerene autentičnosti pripada (u slučajevima koji nisu ADAL)
+
+- **Uploadid** – jedinstveni GUID događaja, koristi se za poništavanje dupliciranja
+
+- **wamapi** – određuje koji će se API za Windows Web Account Management (WAM) pozvati
+
+- **wamtelemetrybatch** – trenutačno se ne koristi. Ubuduće će komponenti WAM omogućiti slanje dodatnih informacija o događaju provjere autentičnosti
+
+- **WAM_account_join_on_end** – stanje pridruživanja računa na kraju operacije WAM.  Moguće vrijednosti: „primary", „secondary“, „not_joined"
+
+- **WAM_account_join_on_start** – stanje pridruživanja računa na početku operacije WAM.  Moguće vrijednosti: „primary", „secondary“, „not_joined"
+
+- **WAM_api_error_code** – ako je došlo do odgovora na pogrešku iz dodatka AAD WAM, to će polje postojati te će sadržavati tu šifru pogreške
+
+- **WAM_authority** – niz koji sadrži URL autoriteta – to bi trebao biti login.windows.net krajnju točku koja se koristi
+
+- **WAM_broker_version** – prisutno kada se upotrebljava WAM, ovo je niz verzije posrednika
+
+- **WAM_cache_event_count** – označava broj događaja predmemoriranja u WAM-u unutar operacije
+
+- **WAM_client_id** – identifikator za pridruživanje sa servisnim podacima, time se označava klijentska aplikacija.
+
+- **WAM_correlation_id** – identifikator za pridruživanje događajima sa servisnim podacima
+
+- **WAM_device_join** – označava stanje pridruživanja uređaja; moguće vrijednosti su „aadj", „haadj"
+
+- **WAM_network_event_count** – prisutno ako se dogodio najmanje jedan mrežni poziv; broj mrežnih poziva na servis za tu operaciju WAM
+
+- **WAM_network_status** – prisutno ako se dogodio najmanje jedan mrežni poziv, sadrži šifru pogreške HTTP-a ako mrežni zahtjev nije uspio.
+
+- **WAM_idp** – određuje je li korišten WAM potrošački ili organizacijski dodatak za provjeru autentičnosti.
+
+- **WAM_is_cached** – određuje je li odgovor koji je pružio WAM dohvaćen iz predmemorije.
+
+- **WAM_oauth_error_code** – sadrži šifru pogreške koji je servis vratio kao dio protokola oauth.
+
+- **WAM_prompt_behavior** – određuje je li ovaj upit zatražila aplikacija, ili, može li ovaj zahtjev preskočiti pitanja ako može neprimjetno provjeriti autentičnost.
+
+- **WAM_provider_id** – Određuje Microsoftovu krajnju točku za ustanovu koja se koristi za scenarij provjere autentičnosti.
+
+- **WAM_redirect_uri** – URI za preusmjeravanje registriran za aplikaciju u servisu Azure Active Directory.
+
+- **WAM_resource** – označava resurs za koji se traži token.
+
+- **WAM_server_error_code** – šifra pogreške koju je servis vratio u WAM.
+
+- **WAM_server_sub_code** – dodatna šifra pogreške koja se upotrebljava za daljnje razbijanje uzroka kvara koji je vratio servis.
+
+- **WAM_silent_code** – šifra pogreške koja je naišla na tihi interni pokušaj WAM-a, prije nego što pošalje upit korisniku.
+
+- **WAM_silent_mats** – označava neiskorišteno.
+
+- **WAM_silent_message** – označava poruku o pogrešci povezanu sa unutarnjim tihim pokušajima WAM-a, prije nego što pošalje upit korisniku.
+
+- **WAM_silent_status** – označava status uspjeha/neuspjeha za tihi interni pokušaj WAM-a, prije nego što pošalje upit korisniku.
+
+- **WAM_tenant_id** – identifikator za klijenta kojem pripada korisnik provjerene AAD autentičnosti, ako ga vraća servis
+
+- **WAM_ui_visible** – prisutno ako je korisniku prikazan najmanje jedan prozor korisničkog sučelja, bilo ‘true’ ili ‘false’
+
+- **WAM_x_ms_clitelem** – prisutno ako servis vrati zaglavlje “x-ms-clitelem"
+
+
+### <a name="officematsoneauthtransactionmicrosoftofficewin32"></a>Office.MATS.OneAuth.TransactionMicrosoftOfficeWin32
+
+Microsoft Auth Telemetry System (MATS) prikuplja se kada Office pokuša dohvatiti token za provjeru autentičnosti, bilo u pozadini ili putem upita korisniku. Ovaj je događaj nadređen jednom ili više ActionMicrosoftOffice događaja, što omogućuje grupiranje povezanih događaja. Korisnici pomoću tih događaja mogu izbjeći prelazak u stanje neispravne provjere autentičnosti tako što:
+
+1) će utvrditi mogu li klijenti uspješno dohvatiti token za provjeru autentičnosti sa servisa ili su prešli u stanje neispravne provjere autentičnosti.
+
+2) će procijeniti uzrokuju li promjene u klijentu ili servisu kritično nazadovanje sučelja i pouzdanosti provjere autentičnosti korisnika
+
+3) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
+
+4) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme za otklanjanje kritičnih pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+- **Actiontype** – „oneauthtransaction" je jedina vrijednost.
+
+- **Appaudience** –označava ciljnu skupinu aplikacije (automatizacija, pred proizvodnja ili proizvodnja)
+
+- **Appname** – označava naziv aplikacije
+
+- **Appver**– označava verziju aplikacije
+
+- **Authoutcome** – označava uspjeh, neuspjeh ili otkazivanje provjere autentičnosti
+
+- **Correlationid** – identifikator koji se upotrebljava za spajanje podataka o ovom pojedinačnom događaju sa servisnim podacima
+
+- **Count** – označava koliko je puta došlo do pogreške
+
+- **Devicenetworkstate** – stanje mreže uređaja
+
+- **Deviceprofilatelemetryid** – ID telemetrije profila uređaja (niz kojim se koristi MATS za određivanje određenog uređaja)
+
+- **duration_max** – označava minimalno trajanje, u milisekundama, transakcija koje se skupljaju na tom signalu.
+
+- **duration_min** – označava maksimalno trajanje, u milisekundama, transakcija koje se skupljaju na tom signalu.
+
+- **duration_sum** – označava zbroj trajanja transakcija koje se skupljaju na tom signalu u milisekundama.
+
+- **Endtime** – označava vrijeme u kojem je završila transakcija OneAuth.
+
+- **Error** – OneAuth kôd statusa.
+
+- **Eventtype** – označava vrstu događaja
+
+- **Issilent** – False ako je prikazano korisničko sučelje; true ako je riječ o događaju u pozadini.
+
+- **oneauth_api** – određuje javni API za OneAuth koji je pozvan.
+
+- **oneauth_Domain** – ako je poziv API-ja uzrokovao pogrešku, to je sistemska domena te pogreške.
+
+- **oneauth_ErrorCode** – šifra pogreške koja predstavlja interno stanje pogreške za OneAuth. Zamjenjuje staro polje oneauth_errortag field.
+
+- **oneauth_errortag** – numerički identifikator za redak kôda koji je odgovoran za generiranje pogreške.
+
+- **oneauth_ExecutionFlow** – niz oznaka koje identificiraju put koda koji je preuzeo ovaj API.
+
+- **oneauth_internalerror** – šifra pogreške koja predstavlja interno stanje pogreške za OneAuth.
+
+- **oneauth_ServerErrorCode** – pogreška poslužitelja vraćena u OneAuth po završetku tog poziva API-ja, ako se naiđe na nju.
+
+- **oneauth_SystemErrorCode** – sistemska pogreška vraćena u OneAuth po završetku tog poziva API-ja, ako se naiđe na nju.
+
+- **oneauth_Tag** – oznaka OneAuth koja označava konačno mjesto u kodu postignuto na kraju ovog poziva API-ja.
+
+- **oneauth_transactionuploadid** – određuje nasumično generirani interni GUID koji se preslikava na određeno pozivanje OneAuth API-ja.
+
+- **oneauth_version** – verzija SDK-a za OneAuth.
+
+- **Platform** – OS (0: Win32; 1: Android; 2: iOS; 3: MacOS; 4: WinRT
+
+- **Scenarioname** – naziv scenarija za koji je potrebna provjera autentičnosti, a određuje ga aplikacija za pozivanje.
+
+- **Schemaver**– označava verziju sheme
+
+- **Sdkver** – označava verziju SDK-a MATS-a
+
+- **Sessionid** – označava ID sesije
+
+- **severityError** – označava ozbiljnost
+
+- **startime** – označava vrijeme u kojem je započela transakcija OneAuth.
+
+- **Timestamp** – označava vremensku oznaku
+
+- **Type** – označava vrstu pogreške
+
+- **Uploaded** – Jedinstveni identifikator za ovaj određeni događaj, u svrhe uklanjanja duplikata.
+
 
 ### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
  
@@ -2794,6 +3249,101 @@ Prikupljaju se sljedeća polja:
 
 ## <a name="licensing-events"></a>Događaji licenciranja
 
+### <a name="officeandroiddocsuipaywallcontrolautoredeempendingpurchaseresult"></a>Office.Android.DocsUI.PaywallControl.AutoRedeemPendingPurchaseResult
+
+Kritična inženjerska telemetrija za bilježenje rezultata automatskog pokušaja iskorištavanja kupnji na čekanju. Telemetrija proizvoda koja se upotrebljava za usklađivanje podataka o transakcijama kupnje s Microsoftovim sustavom trgovine radi omogućivanja povezanih pogodnosti pretplate.
+
+Prikupljaju se sljedeća polja:
+
+- **EventDate** – vremenska oznaka pojavljivanja događaja 
+
+- **Result** – Int koji označava rezultat nabrajanja operacije. 
+
+- **SessionID** – GUID za povezivanje događaja po sesiji
+
+### <a name="officeandroiddocsuipaywallcontrolpaywalluishown"></a>Office.Android.DocsUI.PaywallControl.PaywallUIShown
+
+Kritična telemetrija upotrebe kada se korisniku prikazuje kontrola Paywall. Upotrebljava se za razumijevanje iskustva kupnje aplikacije za korisnika i optimizaciju istog za buduće verzije.
+
+Prikupljaju se sljedeća polja:
+
+- **EventDate** – vremenska oznaka pojavljivanja događaja 
+
+- **IsModeFRE** – Booleov izraz za označavanje vrste iskustva, dijaloškog okvira prodaje dodatnih opcija ili SKU birača
+
+- **SessionID** – GUID za povezivanje događaja po sesiji
+
+### <a name="officeandroiddocsuipaywallcontrolpurchasebuttonclicked"></a>Office.Android.DocsUI.PaywallControl.PurchaseButtonClicked
+
+Kritična telemetrija upotrebe kako bismo znali kada korisnik klikne na gumb Kupnja. Upotrebljava se za zaključivanje o načinu korištenja i mjernim podacima konverzije za korisnike koji pokušaju kupiti pretplatu u aplikaciji.
+
+Prikupljaju se sljedeća polja:
+
+- **EventDate** – vremenska oznaka pojavljivanja događaja
+
+- **Isdefaultsk** – Booleov izraz koji ukazuje na to pokušava li korisnik kupiti SKU koji se prvi pojavio/zadani
+
+- **ProductID** – niz koji prepoznaje korisnika pretplate koji pokušava kupiti kako je konfiguriran u trgovini
+
+- **SessionID** – GUID za povezivanje događaja po sesiji
+
+### <a name="officeandroiddocsuipaywallcontrolpurchaseresult"></a>Office.Android.DocsUI.PaywallControl.PurchaseResult
+
+Kritična inženjerska telemetrija da biste evidentirali rezultat pokušaja kupnje koji korisnik aktivira ručno. Telemetrija proizvoda koja se upotrebljava za usklađivanje podataka o transakcijama kupnje s Microsoftovim sustavom trgovine radi omogućivanja povezanih pogodnosti pretplate.
+
+Prikupljaju se sljedeća polja:
+
+- **EventDate** – vremenska oznaka pojavljivanja događaja 
+
+- **IsModeFre** – Booleov izraz koji ukazuje na to je li kupnja stvorena pomoću zaslona s početnim sučeljem prodaje dodatnih opcija ili SKU birača
+
+- **Result** – Int koji označava rezultat nabrajanja operacije.
+
+- **SessionID** – GUID za povezivanje događaja po sesiji
+
+
+### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
+
+Prikupljamo ovu telemetriju upotrebe kako bismo vidjeli koliko vremena korisnik provodi na zaslonu "Pogledajte više pogodnosti".  Podaci se upotrebljavaju za razumijevanje upotrebe značajke „Pogledajte više pogodnosti" te daljnju optimizaciju iskustva u budućim verzijama.
+
+Prikupljaju se sljedeća polja:
+
+- **Duration** – Dugi cijeli broj koji označava vrijeme koje je korisnik proveo na zaslonu "Vidi sve značajke" u milisekundama
+
+- **EventDate** – vremenska oznaka pojavljivanja događaja 
+
+- **MostExplored** – Cijeli broj koji označava indeks stavke s najviše promjena na popisu aplikacija M365 i njihovih značajki
+
+- **Sessioid** – globalno jedinstveni identifikator (GUID) za povezivanje događaja po sesiji
+
+### <a name="officeandroiddocsuipaywallcontrolskuchooseranalytics"></a>Office.Android.DocsUI.PaywallControl.SkuChooserAnalytics
+
+Telemetrija upotrebe da biste vidjeli koliko vremena korisnik troši na zaslonu SKU birača. Telemetrija upotrebe da biste vidjeli koliko vremena korisnik troši na zaslonu SKU birača.
+
+Prikupljaju se sljedeća polja:
+
+- **Duration** – Dugi cijeli broj koji označava vrijeme koje je korisnik proveo na zaslonu SKU birača u milisekundama
+
+- **EventDate** – vremenska oznaka pojavljivanja događaja
+
+- **SessionID** – GUID za povezivanje događaja po sesiji
+
+
+### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
+
+Kritična telemetrija upotrebe prikuplja se kako bi ukazala na to kada korisnik dodiruje gumb Kupi.  Podaci se upotrebljavaju za zaključivanje o načinu korištenja i mjernim podacima konverzije za korisnike koji pokušaju kupiti pretplatu u aplikaciji.
+
+Prikupljaju se sljedeća polja:
+
+- **entryPoint** – niz – gumb/tijek s kojeg je prikazan Paywall. Kao što je "Premium Upgrade Button" ili „First run flow“
+
+- **isdefaultSKU** – Booleova vrijednost – ako korisnik kupuje proizvod, preporučili smo mu, prikazujući ga prema zadanim postavkama.
+
+- **productId** – niz – ID proizvoda trgovine App-store za koji je dodirnut gumb Kupi
+
+- **toggleCount** – Int – koliko je puta korisnik prelazio s jednog prikaza proizvoda na drugi prije nego što je dodirnuo gumb Kupi u trenutačnoj sesiji Paywall-a.
+
+
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
 
 To se prikuplja kad korisnik dobije licencu i prihvati EULA-u za trenutnu licencu
@@ -2834,7 +3384,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingexpirationdialogshown"></a>Office.Licensing.ExpirationDialogShown
 
-To se prikuplja kad korisniku prikažemo dijaloški okvir o isteku koji ga obavještava da je licenca istekla. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+Ovo se prikuplja prilikom prikazivanja dijaloškog okvira korisniku koji kaže da mu je licenca istekla. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
 Prikupljaju se sljedeća polja:
 
@@ -2923,7 +3473,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
-U slučaju da naiđemo na probleme s tijekom rada za aktivaciju, aktiviramo čarobnjak za licenciranje te šaljemo signal koji to označava. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+U slučaju da uočimo probleme s tijekom rada aktivacije, pokrećemo čarobnjaka za licencu i šaljemo ovaj signal da ukazuje na isto. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
 Prikupljaju se sljedeća polja:
 
@@ -2955,7 +3505,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingloadidentityticket"></a>Office.Licensing.LoadIdentityTicket
 
-Aplikacija tijekom pokušaja licenciranja uređaja pokušava učitati korisnikov identitet da bi provjerila ima li korisnik prava na Office. Ovaj događaj prijavljuje uspjeh ili pogrešku tog postupka te eventualnu šifru pogreške. Ključan je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+Aplikacija tijekom pokušaja licenciranja uređaja pokušava učitati korisnikov identitet da bi provjerila ima li korisnik prava na Office. Događaj prijavljuje uspjeh ili neuspjeh istog zajedno s eventualnom šifrom pogreške. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
 Prikupljaju se sljedeća polja:
 
@@ -2981,7 +3531,7 @@ Događaj ne prikuplja nijedno polje.
 
 ### <a name="officelicensingnulfetcherfetchmodelfromols"></a>Office.Licensing.Nul.Fetcher.FetchModelFromOls
 
-Kada je uređaj na modernom stogu za licenciranje, licencnu datoteku pokušavamo dohvatiti izravno sa servisa. Događaj prijavljuje uspjeh ili pogrešku zajedno s eventualnom šifrom pogreške poziva servisu. Ključan je za otkrivanje je li korisnik u dobrom stanju na modernom stogu za licenciranje, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
+Kada je uređaj na modernom stogu za licenciranje, licencnu datoteku pokušavamo dohvatiti izravno sa servisa. Događaj prijavljuje uspjeh ili pogrešku zajedno s eventualnom šifrom pogreške poziva servisu. Ključan je za otkrivanje je li korisnik u dobrom stanju na modernom stogu za licenciranje, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom.
 
 Prikupljaju se sljedeća polja:
 
@@ -2991,7 +3541,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingnulvalidationfullvalidation"></a>Office.Licensing.Nul.Validation.FullValidation 
 
-To se prikuplja tijekom svake sesije uređaja koji koristi moderni stog za licenciranje. Prijavljuje stanje licence računala i pogreške koje se korisniku prikazuju i zbog kojih ne može koristiti aplikaciju. Događaj naznačuje je li korisnikovo računalo u dobrom stanju na modernom stogu za licenciranje. Za taj smo događaj postavili otkrivanje anomalija da bismo prepoznali uzrokuje li regresija negativno ponašanje korisnika. Ključno je i za dijagnosticiranje korisničkih problema te za praćenje stanja sustava.
+To se prikuplja tijekom svake sesije uređaja koji koristi moderni stog za licenciranje. Prijavljuje stanje licenciranja računala te prijavljuje pogreške koje se korisniku prikazuju i zbog kojih ne može koristiti aplikaciju. Događaj označava je li korisnikovo računalo u dobrom stanju na modernom stogu za licenciranje. Za taj smo događaj postavili otkrivanje anomalija da bismo prepoznali uzrokuje li regresija negativno ponašanje korisnika. Ključno je i za dijagnosticiranje korisničkih problema te za praćenje stanja sustava.
 
 Prikupljaju se sljedeća polja:
 
@@ -3075,7 +3625,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingsearchforsessiontoken"></a>Office.Licensing.SearchForSessionToken
 
-Ako je korisnik u načinu rada za aktivaciju na zajedničkom računalu, pokušavamo potražiti token sesije na računalu koji korisniku omogućuje upotrebu aplikacije. Ovaj događaj prijavljuje uspjeh ili pogrešku tog scenarija, te šifru pogreške. Ključan je za otkrivanje je li korisnik u dobrom stanju, te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom.
+Ako je korisnik u načinu rada za aktivaciju na zajedničkom računalu, pokušavamo potražiti token sesije na računalu koji korisniku omogućuje upotrebu aplikacije. Događaj prijavljuje uspjeh ili neuspjeh scenarija zajedno s eventualnom šifrom pogreške. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
 Prikupljaju se sljedeća polja:
 
@@ -3139,7 +3689,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingtelemetryflowsearchforbindingresult"></a>Office.Licensing.TelemetryFlow.SearchForBindingResult
 
-OEM-ovi prodaju strojeve koji isporučuju sa sustavom Office (jednogodišnja ili neprekidna pretplata).  Ti se proizvodi sustava Office plaćaju kada kupac kupi uređaj. Strojevi koje se podešava pomoću određenog regkey-a (OOBEMode: OBIS) možda imaju povezane obveze sustava Office.  Prilikom dizanja sustava Office na takvim strojevima obavljamo servisne provjere da bismo saznali je li pronađena obveza sustava Office koja odgovara stroju.
+OEM-ovi prodaju strojeve koji isporučuju sa sustavom Office (jednogodišnja ili neprekidna pretplata).  Ti se proizvodi sustava Office plaćaju kada kupac kupi uređaj. Strojevi koje se podešava pomoću određenog reg.ključa (OOBEMode: OEMTA) možda su povezani Office povezivanjem.  Prilikom dizanja sustava Office na takvim strojevima obavljamo servisne provjere da bismo saznali je li pronađena obveza sustava Office koja odgovara stroju.
 
 Ta telemetrijska aktivnost prati točke uspjeha i neuspjeha u traženju povezivanja da bismo mogli osigurati da ih strojevi koji imaju obveze mogu uspješno dohvatiti i da su naši servisi zdravi.  Ta aktivnost ne prati strojeve bez obveza koji nisu povezani s njima kada provjerimo naše servise.
 
@@ -4113,7 +4663,7 @@ Prikupljaju se sljedeća polja:
     
 ### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
 
-Ovaj događaj označava da je provjera ažuriranja rezultirala time da nije pronađeno nijedno ažuriranje. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
+Ovaj događaj označava da provjera ažuriranja nije našla ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
 
 Prikupljaju se sljedeća polja:
 
@@ -7402,7 +7952,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="fba_settimerfail"></a>fba_settimerfail  
 
-Ovaj događaj označava pokušaj za postavljanje brojača za pokretanje budućeg ažuriranja koje nije uspjelo. Ovaj je događaj ključan, a mi tim događajem utvrđujemo količinu pogreški kako bismo, po potrebi, stvorili zaobilazno rješenje.
+Ovaj događaj označava neuspjeli pokušaj za postavljanje brojača za pokretanje budućeg ažuriranja. Ovaj je događaj ključan, a mi tim događajem utvrđujemo količinu pogreški kako bismo, po potrebi, stvorili zaobilazno rješenje.
 
 Prikupljaju se sljedeća polja:
 
@@ -7688,7 +8238,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
 
-Ovaj događaj evidentira ako su sve aplikacije bile zatvorene prije instalacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ovaj se događaj evidentira ako su sve aplikacije bile zatvorene prije instalacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -8021,6 +8571,8 @@ Prikupljaju se sljedeća polja:
 
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
 
+- **ScreenLocked** – indikacija je li preuzimanje pokrenuto iza zaključanog zaslona
+
 - **SessionId** – Identifikator sesije
 
 
@@ -8151,6 +8703,8 @@ Prikupljaju se sljedeća polja:
 - **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
 
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **ScreenLocked** – indikacija je li preuzimanje pokrenuto iza zaključanog zaslona
 
 - **SessionId** – Identifikator sesije
 
@@ -9806,7 +10360,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="installstatus_daemon"></a>installstatus_daemon
 
-Ovaj događaj evidentira stanje statusa daemona Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ovaj događaj evidentira stanje daemona Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -9847,7 +10401,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="installstatus_helper"></a>installstatus_helper
 
-Ovaj događaj evidentira stanje statusa pomoćnog alata Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ovaj događaj evidentira stanje pomoćnog alata Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -14534,7 +15088,7 @@ Prikupljaju se sljedeća polja:
 
 - **Service** – servis za sinkronizaciju koji je klijent koristio kada se dogodila pogreška (naslijeđena ili moderna sinkronizacija)
 
-- **Tag** – Tag (identificirana vrijednost) koja predstavlja pogrešku na koju je klijent naišao tijekom postupka sinkronizacije
+- **Tag** – Oznaka (identifikacijska vrijednost) koja predstavlja pogrešku na koju je klijent naišao tijekom postupka sinkronizacije
 
 ### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
  
@@ -14562,13 +15116,60 @@ Konfiguracija servisa ne prikuplja događaje vezane uz obavezne servisne podatke
 
 ## <a name="telemetry-events"></a>Telemetrijski događaji
 
+### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+
+Microsoft to koristi za dobivanje ispravnosti značajke, uspjeha ili stope pogrešaka za korisnike pri kupnjama, kako bi osigurao odgovarajuća ulaganja za poboljšanje korisničkog iskustva kupca na mobilnim platformama.
+
+Prikupljaju se sljedeća polja:
+
+- **OperationTimeInMs** – vrijeme potrebno za završetak postupka kupnje (dugo – millisekunde)
+
+- **PaywallOperationResult** – Uspjeh/ šifra pogreške / korisnik otkazan (Enum / int – konačna)
+
+- **PaywallOperationType** – označava vrstu Paywall operacije (enum/ int – konačna)
+
+
 ### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja telemetrijske funkcije uključivanja u iskustvo prvog pokretanja. Prikupljamo kôd koji označava vrstu mogućnosti za prikupljanje dijagnostičkih podataka koju je korisnik odabrao.
 
 Prikupljaju se sljedeća polja:
 
- - **Data_EventId** – Kôd koji pokazuje preferenciju prikupljanja podataka koju je odabrao korisnik.
+- **Data_EventId** – Kôd koji pokazuje preferenciju prikupljanja podataka koju je odabrao korisnik.
+
+### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
+
+Telemetrija proizvoda koja se upotrebljava za usklađivanje podataka o transakcijama kupnje s Microsoftovim sustavom trgovine radi omogućivanja povezanih pogodnosti pretplate. Koristi se za olakšavanje evidentiranja transakcija i omogućavanja pretplate za buduću referencu i interno usklađivanje.
+
+Prikupljaju se sljedeća polja:
+
+- **entryPoint** – niz – gumb/tijek s kojeg je prikazan Paywall. Kao što je "Premium Upgrade Button" ili „First run flow“
+
+- **failureReason** – niz – dodan samo kada je status "neuspjeh". Ukazuje na odgovor na pogrešku koji je dao RFS.
+
+- **productId** – niz – ID proizvoda trgovine App Store za koji je izrađen zahtjev
+
+- **stanje** – niz – uspjeh ili neuspjeh, što upućuje na to je li zahtjev uspio ili ne
+
+
+### <a name="officeiospaywallstorekitresponse"></a>Office.iOS.Paywall.StoreKit.Response
+
+Podaci se prikupljaju kao kritična inženjerska telemetrija za bilježenje rezultata pokušaja kupnje koji je korisnik pokrenuo ručno. Telemetrija proizvoda upotrebljava se za usklađivanje podataka o transakcijama kupnje s Microsoftovim sustavom trgovine radi omogućivanja povezanih pogodnosti pretplate.
+
+Prikupljaju se sljedeća polja:
+
+- **entryPoint** – niz – gumb/tijek s kojeg je prikazan Paywall. Kao što je "Premium Upgrade Button" ili „First run flow“
+
+- **failureReason** – niz – dodan samo kada je status "neuspjeh". Ukazuje na odgovor na pogrešku koji je dala trgovina App-store.
+
+- **productId** – niz – samo za „MakePurchase“, „PendingPurchase”, ID proizvoda trgovine app-store za koji je zahtjev stvoren.
+
+- **productsCount** -Int – samo za "ProductsFetch", broj proizvoda koje trgovina vraća.
+
+- **requestType** – niz – vrsta zahtjeva za Storekit. Kao što je "ProductsFetch", "Pendingpurchase"
+
+- **status** – niz – uspjeh ili neuspjeh, što upućuje na uspjeh ili neuspjeh zahtjeva
+
 
 ### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
 
@@ -15240,7 +15841,7 @@ Prikupljaju se sljedeća polja:
 
   - **CID –** identitet korisnika u obliku pseudonima
 
-  - **CollectibleClassifications –** klasifikacije podataka koje se mogu prikupljati u skladu s postavkama zaštite privatnosti u klijentu
+  - **CollectibleClassifications -** Klasifikacije podataka koje se mogu prikupljati u skladu s postavkama zaštite privatnosti klijenta
 
   - **CollectionTime** – vrijeme kad je događaj stavljen u red čekanja za prijenos
 
