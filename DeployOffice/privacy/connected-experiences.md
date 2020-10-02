@@ -13,25 +13,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: ed9198f19bcd3ed7dcf11014ed46016fb7121dd6
-ms.sourcegitcommit: cdb47c4dc3297a8ad70112a084ebd1f5028e2c07
+ms.openlocfilehash: 3e44c9c20bed531f46390c91a41ce559cabc9e72
+ms.sourcegitcommit: 25a0925e7caf8fbb53e6757e8a65126eb2c9da65
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "46896245"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "48338174"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
-> [!IMPORTANT]
-> Informacije u ovom članku odnose se na verziju 1904 ili noviju verziju sljedećeg klijentskog softvera sustava Office instaliranog na računalu sa sustavom Windows:
-> - Microsoft 365 Apps za velike tvrtke (prethodni naziv: Office 365 ProPlus)
-> - Microsoft 365 Apps za male tvrtke (prethodni naziv: Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family i druge verzije sustava Office koje su obuhvaćene pretplatom na Microsoft 365.
-> - Računalne aplikacije za Project i Visio koje su obuhvaćene nekim planovima pretplate, kao što su Project tarifa 5 ili Visio tarifa 2.
->
-> Informacije se odnose i na verziju 16.28 ili noviju verziju sljedećih aplikacija sustava Office za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
->
-> Informacije se odnose na verziju programa Outlook za iOS i Android čiji se izlazak očekuje krajem siječnja 2020.
+> [!NOTE]
+> Popis proizvoda sustava Office obuhvaćenih ovim informacijama o zaštiti privatnosti potražite u članku [kontrole zaštite privatnosti dostupne za proizvode sustava Office](products-versions-privacy-controls.md).
 
 Office se sastoji od klijentskih softverskih aplikacija i povezanih okruženja osmišljenih radi učinkovitijeg stvaranja, komunikacije i suradnje. Suradnja s drugim korisnicima na dokumentu pohranjenom na servisu OneDrive ili prevođenje sadržaja dokumenta programa Word na neki drugi jezik primjeri su povezanih iskustava.
 
@@ -46,21 +38,26 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | *3D karte*\*    | [Početak rada s 3D kartama](https://support.microsoft.com/office/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Automatski alternativni tekst   | [Sve što trebate znati za pisanje učinkovitog alternativnog teksta](https://support.microsoft.com/office/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 |Preporuke za grafikon (Excel za web)|[Stvaranje grafikona s preporučenim grafikonima](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
-| Vrste podataka                  | [Vrste podataka u programu Excel: dionice i zemljopis](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
+|Dodaci za bilježnicu za predmete (OneNote)|[Početak rada s alatom za stvaranje bilježnica za predmete u programu OneNote: vodič za nastavnike](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
+| Vrste podataka| [Vrste podataka u programu Excel: dionice i zemljopis](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Diktiranje  | [Diktirajte dokumente u programu Word](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 |Redaktor<sup>1</sup> |[Microsoft Editor provjerava gramatiku i više u dokumentima, pošti i na webu](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Ideje     | [Ideje u programu Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Pretvorba rukopisa u tekst, oblik ili matematički izraz | [Promjena rukom pisanog teksta u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
+|Alati za učenje|[Alati za učenje](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.microsoft.com/office/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Opisi i titlovi uživo |  [Izlaganje s automatskim opisima ili titlovima u stvarnom vremenu u programu PowerPoint](https://support.microsoft.com/office/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | *Grafikon s kartom*\*    | [Stvaranje grafikona s kartom u programu Excel](https://support.microsoft.com/office/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Karte u programu Power View   | [Karte u programu Power View](https://support.microsoft.com/office/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Servis za prezentacije sustava Office  | [Emitiranje prezentacije programa PowerPoint udaljenoj publici putem interneta](https://support.microsoft.com/office/25330108-518e-44be-a281-e3d85f784fee)    |
+|Preporuke za PivotTable (Excel za web)|[Stvaranje zaokretne tablice radi analize podataka u radnoj knjizi](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Web)|
 | PowerPoint Designer   | [Stvaranje profesionalnih izgleda slajdova pomoću alata PowerPoint Designer](https://support.microsoft.com/office/53c77d7b-dc40-45c2-b684-81415eac0617)   |
+|Instruktor za izlaganje (PowerPoint)|[Uvježbajte svoju dijaprojekciju uz Instruktora za izlaganje](https://support.microsoft.com/office/cd7fc941-5c3b-498c-a225-83ef3f64f07b)|
 | Objavljivanje na servisu Power BI   | [Objavljivanje na servisu Power BI iz programa Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Objavljivanje na servisu Microsoft Stream    | [Pretvaranje prezentacije u videozapis](https://support.microsoft.com/office/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | *Istraživanje*\*   | [Dodavanje ili promjena servisa za istraživanje](https://support.microsoft.com/office/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Skeniranje posjetnice|  [Skeniranje ili dodirnite za dodavanje kontakata u programu Outlook za Android](https://support.microsoft.com/office/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
+|Obavijest o zajedničkom korištenju|[Primanje obavijesti kada članovi vašeg tima ažuriraju vašu zajednički korištenu datoteku](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
 |*Provjera sličnosti*\* (značajka Redaktora)|[Provjeite sličnosti s mrežnim izvorima u dokumentu](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Pametno traženje*\*   | [Uvidi u ono na čemu radite pomoću pametnog traženja](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predloženi odgovori | [Što su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
@@ -129,12 +126,14 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | *Dodaci za Office*\* | [Implementacija dodataka u centru za administratore](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) |
 | Povratne informacije o sustavu Office |[Slanje povratnih informacije o sustavu Microsoft Office](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podrška za Office (Obratite nam se) |Kada na vrpci odaberete **Pomoć** > **Obratite se podršci** |
-| Organizacijski grafikon (Visio) |[Stvaranje organizacijskog grafikona u programu Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)  |
+| Organizacijski grafikon (Visio) |[Stvaranje organizacijskog grafikona u programu Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
 | Outlook Social Connector | [Uključivanje dodatka Outlook Social Connector](https://support.microsoft.com/office/255447E8-82CD-48E7-9B79-1DD8721A2907) |
 | *Outlook UserVoice*\* | [Slanje povratnih informacije o sustavu Microsoft Office](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
+|Kružni dijagram (Visio)|[Stvorite kružni dijagram u programu Visio](https://support.microsoft.com/office/0d061d05-60b5-4549-b301-4d0b37625a4c)|
 | Nedavni dokumenti |[Otvaranje datoteka s izbornika Datoteka](https://support.microsoft.com/office/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | *Pomoćnik za životopis (ili Pomoćnik za CV)*\* |[Korištenje servisa Resume Assistant i LinkedIn za odlične životopise](https://support.microsoft.com/office/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Alat za pronalaženje prostorija (Outlook)|[Upravljanje alatom za pronalaženje prostorija u programu Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
+|Sigurni dokumenti|[Sigurni dokumenti](https://support.microsoft.com/office/e2071599-fb31-442b-a30c-198c25e2aacd) <br/> [Sigurni dokumenti u sustavu Microsoft 365 E5](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs)|
 | Sigurne veze |[ATP Sigurne veze](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links)  |
 | Oznake osjetljivosti |[Primjena oznaka osjetljivosti na datoteke i e-poštu u sustavu Office](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Zajedničko korištenje  |[Zajedničko korištenje radne knjige programa Excel s drugim korisnicima](https://support.microsoft.com/office/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Zajedničko korištenje prezentacije (PowerPoint)](https://support.microsoft.com/office/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Zajedničko korištenje dokumenta (Word)](https://support.microsoft.com/office/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
@@ -156,7 +155,8 @@ Ako ste se prijavili pomoću Microsoftovog računa, otvorite aplikaciju sustava 
 Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi odlučit će hoće li vam ta povezana iskustva biti dostupna. Vi nećete vidjeti nikakve izbore vezane uz povezana iskustva ako odete na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**.
 
 > [!NOTE]
-> Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
+> - Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
+> - Za dodatne informacije pogledajte [Postavke zaštite privatnosti računa](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne upotrebljavate te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u sljedećim člancima: 
 
@@ -169,10 +169,9 @@ Ako odlučite isključiti neke vrste povezanih iskustava, naredbe tih povezanih 
 
 Čak i ako odlučite isključiti povezana iskustva, ostat će dostupne određene funkcije sustava Office, pa će tako sinkronizacija poštanskog sandučića u programu Outlook te Teams i Skype za tvrtke i dalje funkcionirati. Također, postoji skup servisa koji su ključni za funkcioniranje sustava Office te ih se ne može isključiti, npr. servis za licenciranje, koji potvrđuje da imate ispravnu licencu za upotrebu sustava Office.
 
-## <a name="related-topics"></a>Povezane teme
+## <a name="related-articles"></a>Povezani članci
 
 - [Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](overview-privacy-controls.md)
 - [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md)
 - [Obavezni servisni podaci za Office](required-service-data.md)
 - [Ključni servisi za Office](essential-services.md)
-- [Postavke zaštite privatnosti računa](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
