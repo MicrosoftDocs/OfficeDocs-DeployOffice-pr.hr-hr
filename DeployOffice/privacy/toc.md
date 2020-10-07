@@ -21,3 +21,4 @@
 ### [Obavezni servisni podaci](required-service-data.md)
 
 ## [Ključni servisi](essential-services.md)
+## [Preporuke unutar proizvoda](in-product-recommendations.md)
