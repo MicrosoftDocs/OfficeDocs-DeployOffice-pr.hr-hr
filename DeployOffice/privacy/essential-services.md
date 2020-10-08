@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: ed550129f7d3aef9e340456b5ee2d09f85c18b07
-ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
+ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
+ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47941020"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "48367450"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -3312,7 +3312,7 @@ Prikupljaju se sljedeća polja:
 
 - **EventDate** – vremenska oznaka pojavljivanja događaja 
 
-- **MostExplored** – Cijeli broj koji označava indeks stavke s najviše promjena na popisu aplikacija M365 i njihovih značajki
+- **MostExplored** – cijeli broj koji označava indeks stavke s najviše promjena na popisu aplikacija Microsoft 365 i njihovih značajki
 
 - **Sessioid** – globalno jedinstveni identifikator (GUID) za povezivanje događaja po sesiji
 
@@ -3844,7 +3844,7 @@ Prikupljaju se sljedeća polja:
 
 ## <a name="microsoft-autoupdate-mau-events"></a>Događaji Microsoftova automatskog ažuriranja (MAU)
 
-### <a name="additionalappinfo_invalidpreference"></a>additionalappinfo_invalidpreference
+### <a name="additionalappinfoinvalidpreference"></a>additionalappinfo.invalidpreference
 
 Tim se događajem izvješćuje nevažeća preferencija koja je postavljena za prikaz dodatnih informacija u pogledu završetka pružanja usluge za proizvod. Te podatke upotrebljavamo da bismo korisnike savjetovali da postavke točne preferencije kako bi vidjeli dodatne informacije.
  
@@ -3882,7 +3882,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="appdelegate_launch"></a>appdelegate_launch
+### <a name="appdelegatelaunch"></a>appdelegate.launch
 
 Taj događaj označava da je došlo do pokušaja pokretanja aplikacije. Evidentiramo rezultat (neuspjeh ili uspjeh). Koristimo ovaj događaj da identificiramo slučajeve u kojima se MAU ne uspije pokrenuti
 
@@ -3923,7 +3923,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="appdelegate_terminate"></a>appdelegate_terminate
+### <a name="appdelegateterminate"></a>appdelegate.terminate
 
 Ovaj događaj znači da se dogodio skladni izlaz iz aplikacije. Koristimo ovaj događaj za razlikovanje skladnog izlaza iz aplikacije od neskladnog.
 
@@ -3964,7 +3964,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="appinstall_connecttoxpc"></a>appinstall_connecttoxpc
+### <a name="appinstallconnecttoxpc"></a>appinstall.connecttoxpc
 
 Ovaj događaj označava da je došlo do pogreške prilikom povezivanja s MAU pomagačem (komponentom koja izvodi instalaciju aplikacije).  Ovaj događaj označava potencijalnu korupciju aplikacije MAU. Uređaj neće moći instalirati ažuriranja.
 
@@ -4004,7 +4004,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="appinstall_logscanned"></a>appinstall_logscanned
+### <a name="appinstalllogscanned"></a>appinstall.logscanned
 
 Taj se događaj upotrebljava da bi se utvrdilo je li datoteka zapisnika uspješno obrađena. Taj događaj upotrebljavamo da bismo utvrdili i riješili sve probleme koji nastaju tijekom instalacije aplikacije. 
  
@@ -4044,7 +4044,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="appregistry_config"></a>appregistry_config
+### <a name="appregistryconfig"></a>appregistry.config
 
 Ovaj događaj izvješćuje o svim pogreškama koje se javljaju tijekom učitavanja podataka o registru aplikacije. Ovim izvješćem savjetujemo IT administratore o ispravnom formatu postavljanja registracija klijentske aplikacije.
  
@@ -4084,7 +4084,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="appregistry_info"></a>appregistry_info
+### <a name="appregistryinfo"></a>appregistry.info
 
 Ovaj događaj označava pokretanje aplikacije. Ovaj događaj koristimo za popis aplikacija za koje MAU može kontrolirati ažuriranja, broj dostupnih primjeraka kao i njihovu verziju te lokaciju instaliranja (zadanu ili drugu).
 
@@ -4125,7 +4125,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="appregistry_remove"></a>appregistry_remove
+### <a name="appregistryremove"></a>appregistry.remove
 
 Ovaj događaj označava da je došlo do pokušaja uklanjanja aplikacije s popisa aplikacija kojima upravlja MAU. Ovim događajem potvrđujemo da se putem MAU-a upravlja samo aplikacijama koje su izdane u MAU-u (ovdje se ne smiju pojavljivati AppStore aplikacije).
 
@@ -4166,7 +4166,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="catalog_errorsignature"></a>catalog_errorsignature
+### <a name="catalogerrorsignature"></a>catalog.errorsignature
 
 Ovaj događaj znači da je došlo do neuspjeha tijekom izvođenja provjere autentičnosti koda na datoteci za ažuriranje elemenata osiguranja.  Svaka provjera autentičnosti neispravnih elemenata osiguranja treba se smatrati nevažećom.
 
@@ -4206,9 +4206,9 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="cloningtask_begin"></a>cloningtask_begin
+### <a name="cloningtaskbegin"></a>cloningtask.begin
 
-Ovaj događaj označava početak zadatka kloniranja prije ažuriranja aplikacije. Ovim događajem u kombinaciji s događajem cloningtask_status utvrđujemo količinu neuspjelih kloniranja kako bismo utvrdili je li značajku kloniranja potrebno ograničiti na različitim kanalima publike.
+Ovaj događaj označava početak zadatka kloniranja prije ažuriranja aplikacije. Ovim događajem u kombinaciji s događajem cloningtask.status utvrđujemo količinu neuspjelih kloniranja kako bismo utvrdili je li značajku kloniranja potrebno ograničiti na različitim kanalima publike.
  
 Prikupljaju se sljedeća polja:
 
@@ -4249,7 +4249,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateID** – Identifikator za ažuriranje.
 
 
-### <a name="cloningtask_helpertoolconnection"></a>cloningtask_helpertoolconnection
+### <a name="cloningtaskhelpertoolconnection"></a>cloningtask.helpertoolconnection
 
 Ovaj događaj bilježi probleme s instalacijom na klon (tj. ili se nećemo uspjeti povezati s pomagačem da primijenimo ažuriranje ili ćemo se povezati, ali pomagač ne može primijeniti ažuriranje) Ako ikada dobijemo zapis prijave, to znači da instalacija na klon nije uspjela i da će se morati izvršiti povratno ažuriranje na mjestu.
 
@@ -4289,7 +4289,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="cloningtask_status"></a>cloningtask_status
+### <a name="cloningtaskstatus"></a>cloningtask.status
 
 Ovaj događaja označava status procesa kloniranja za aplikaciju koju je potrebno ažurirati. Ovim događajem utvrđujemo stopu uspjeha te vrste pronađenih pogrešaka koje uzrokuju neispravnosti. Ovim događajem utvrđujemo je li značajku kloniranja potrebno ograničiti na različitim kanalima publike.
 
@@ -4335,7 +4335,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje.
 
-### <a name="cloningtask_status_finish"></a>cloningtask_status_finish
+### <a name="cloningtaskstatusfinish"></a>cloningtask.status.finish
 
 Ovaj događaj izvješćuje o dovršavanju zadatka „kloniranja”. Ovaj događaj predstavlja dio izvješća o lijevku ažuriranja i mi ga upotrebljavamo za utvrđivanje stanja ažuriranja aplikacije.
  
@@ -4376,7 +4376,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateID** – Identifikator ažuriranja.
 
 
-### <a name="configuration_channel"></a>configuration_channel
+### <a name="configurationchannel"></a>configuration.channel
 
 Ovaj događaj bilježi pokušaje prebacivanja kanala (grupa publike) u alatu MAU.  To koristimo za bilježenje pokušaja i njihovih rezultata (uspjeha ili neuspjeha).
 
@@ -4417,7 +4417,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="configuration_metadata"></a>configuration_metadata
+### <a name="configurationmetadata"></a>configuration.metadata
 
 Ovaj se događaj bilježi svaki put kada se MAU inicijalizira. To je MAU impulsna vrsta događaja
 
@@ -4457,7 +4457,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije.
 
-### <a name="configuration_systemversion"></a>configuration_systemVersion
+### <a name="configurationsystemversion"></a>configuration.systemVersion
 
 Ovaj događaj označava da je pokušaj dohvaćanja verzije sustava bio neuspješan. On također sadrži podatke o informacijama koje je Microsoftovo automatsko ažuriranje (MAU) uspjelo prikupiti iz sustava. Ovim događajem utvrđujemo je li značajka MAU uzročnik pogrešaka. Napominjemo da se verzija sustava upotrebljava za utvrđivanje može li se ažuriranje primijeniti na klijentski uređaj.
  
@@ -4497,7 +4497,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="controller_alertmanager_reinstallresponse"></a>controller_alertmanager_reinstallresponse
+### <a name="controlleralertmanagerreinstallresponse"></a>controller.alertmanager.reinstallresponse
 
 Ovaj događaj znači da je MAU pao u neupotrebljivo/nepopravljivo stanje i da ga treba ponovno instalirati. Ovaj događaj označava nepopravljivu pogrešku i potrebna je intervencija korisnika.
 
@@ -4538,7 +4538,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_alertmanager_tmpdiskfull"></a>controller_alertmanager_tmpdiskfull
+### <a name="controlleralertmanagertmpdiskfull"></a>controller.alertmanager.tmpdiskfull
 
 Ovaj događaj označava da je otkriveno nedovoljno prostora na disku. Nećemo moći instalirati ažuriranja zbog nedovoljno prostora na disku.
 
@@ -4579,7 +4579,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_alertmanager_tmpdiskfullretry"></a>controller_alertmanager_tmpdiskfullretry
+### <a name="controlleralertmanagertmpdiskfullretry"></a>controller.alertmanager.tmpdiskfullretry
 
 Ovaj događaj znači da je pokrenut ponovni pokušaj instaliranja ažuriranja nakon što je otkriveno nedovoljno prostora na disku. Ponovno pokrećemo instalaciju nakon što ne možemo instalirati ažuriranja zbog nedovoljnog prostora na disku.
 
@@ -4620,7 +4620,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
     
 
-### <a name="controller_alertmanager_tmpdiskfullretrycancel"></a>controller_alertmanager_tmpdiskfullretrycancel
+### <a name="controlleralertmanagertmpdiskfullretrycancel"></a>controller.alertmanager.tmpdiskfullretrycancel
 
 Ovaj događaj znači da je pokrenuto otkazivanje pokušaja instaliranja nakon što je otkriveno nedovoljno prostora na disku. Koristimo ovaj događaj da bismo utvrdili je li naš rezervni mehanizam dovoljan da vodi korisnika kroz postupak ažuriranja kada je otkriveno nedovoljno prostora na disku.
 
@@ -4661,7 +4661,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
+### <a name="controllercheckwindownoupdatefoundok"></a>controller.checkwindow.noupdatefoundok
 
 Ovaj događaj označava da provjera ažuriranja nije našla ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
 
@@ -4703,7 +4703,7 @@ Prikupljaju se sljedeća polja:
 
     
 
-### <a name="controller_checkwindow_updatecheck"></a>controller_checkwindow_updatecheck
+### <a name="controllercheckwindowupdatecheck"></a>controller.checkwindow.updatecheck
 
 Ovaj događaj označava da je izvršena provjera ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
 
@@ -4744,7 +4744,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
+### <a name="controllercheckwindowupdatecheckcancel"></a>controller.checkwindow.updatecheckcancel
 
 Ovaj događaj označava da je postupak provjere ažuriranja otkazan (ili od korisnika ili od sustava). Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
 
@@ -4785,7 +4785,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_checkwindow_updatecheckcanceluser"></a>controller_checkwindow_updatecheckcanceluser
+### <a name="controllercheckwindowupdatecheckcanceluser"></a>controller.checkwindow.updatecheckcanceluser
 
 Ovaj događaj označava da je postupak provjere ažuriranja otkazao korisnik.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja, optimiziranje opterećenja usluge i definiranje koliko učestale bi trebale biti provjere ažuriranja. Također želimo optimizirati naš ritam izdanja na temelju očekivanja korisnika o ažuriranjima.
 
@@ -4826,7 +4826,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_checkwindow_updatesfound"></a>controller_checkwindow_updatesfound
+### <a name="controllercheckwindowupdatesfound"></a>controller.checkwindow.updatesfound
 
 Ovaj događaj označava da je postupak provjere ažuriranja rezultirao pronalaskom ažuriranja.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
 
@@ -4867,7 +4867,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_checkwindow_uptodate"></a>controller_checkwindow_uptodate
+### <a name="controllercheckwindowuptodate"></a>controller.checkwindow.uptodate
 
 Ovaj događaj označava da postupak provjere ažuriranja nije doveo do ažuriranja jer su aplikacije na uređaju ažurne.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
 
@@ -4908,7 +4908,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_applaunchwithpendingupdate"></a>controller_downloadwindow_applaunchwithpendingupdate
+### <a name="controllerdownloadwindowapplaunchwithpendingupdate"></a>controller.downloadwindow.applaunchwithpendingupdate
 
 Ovaj događaj znači da je pokrenuta aplikacija koja je u tijeku ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja. Trebali bismo spriječiti da otvorene aplikacije preuzimaju ažuriranja. Aplikacije moraju biti zatvorene prije ažuriranja.
 
@@ -4949,7 +4949,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_closeapplicationdialog"></a>controller_downloadwindow_closeapplicationdialog
+### <a name="controllerdownloadwindowcloseapplicationdialog"></a>controller.downloadwindow.closeapplicationdialog
 
 Ovaj događaj znači da je pokrenuta aplikacija koja je u tijeku ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja. Trebali bismo spriječiti da otvorene aplikacije preuzimaju ažuriranja. Aplikacije moraju biti zatvorene prije ažuriranja.
 
@@ -4990,7 +4990,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_curtasknull"></a>controller_downloadwindow_curtasknull
+### <a name="controllerdownloadwindowcurtasknull"></a>controller.downloadwindow.curtasknull
 
 Ovaj događaj označava da je došlo do neočekivane pogreške tijekom pokušaja primjene ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
 
@@ -5031,7 +5031,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_downloadcancel"></a>controller_downloadwindow_downloadcancel
+### <a name="controllerdownloadwindowdownloadcancel"></a>controller.downloadwindow.downloadcancel
 
 Ovaj događaj označava da je postupak preuzimanja otkazao korisnik.  Koristimo ovaj događaj za osiguravanje ispravne ponude ažuriranja.
 
@@ -5072,7 +5072,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_downloadfailed"></a>controller_downloadwindow_downloadfailed
+### <a name="controllerdownloadwindowdownloadfailed"></a>controller.downloadwindow.downloadfailed
 
 Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja.
 
@@ -5113,7 +5113,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_downloadfailedok"></a>controller_downloadwindow_downloadfailedok
+### <a name="controllerdownloadwindowdownloadfailedok"></a>controller.downloadwindow.downloadfailedok
 
 Ovaj događaj znači da je došlo do pogreške prilikom preuzimanja ažuriranja, a korisnik je obaviješten. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja, te da se u slučaju neuspjeha korisniku pošalje obavijest.
 
@@ -5154,7 +5154,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_downloadpathmissing"></a>controller_downloadwindow_downloadpathmissing
+### <a name="controllerdownloadwindowdownloadpathmissing"></a>controller.downloadwindow.downloadpathmissing
 
 Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. Ovaj događaj ukazuje da nedostaje URL za preuzimanje.
 
@@ -5195,7 +5195,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_downloadtasknull"></a>controller_downloadwindow_downloadtasknull
+### <a name="controllerdownloadwindowdownloadtasknull"></a>controller.downloadwindow.downloadtasknull
 
 Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. Ovaj događaj označava da je od Microsoftova automatskog ažuriranja zatraženo da zaustavi/nastavi preuzimanje, ali nije mogao pronaći odgovarajućeg upravitelja preuzimanja.
 
@@ -5236,7 +5236,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_filesignaturenotverified"></a>controller_downloadwindow_filesignaturenotverified
+### <a name="controllerdownloadwindowfilesignaturenotverified"></a>controller.downloadwindow.filesignaturenotverified
 
 Ovaj događaj označava da je došlo do pogreške prilikom preuzimanja ažuriranja. Ovaj događaj označava da alat Microsoftovo automatsko ažuriranje nije mogao provjeriti je li ovo ažuriranje objavio Microsoft. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. 
 
@@ -5277,7 +5277,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_installcomplete"></a>controller_downloadwindow_installcomplete
+### <a name="controllerdownloadwindowinstallcomplete"></a>controller.downloadwindow.installcomplete
 
 Ovaj događaj označava da je instalacija svih ažuriranja koje nudi Microsoftovo automatsko ažuriranje dovršena. Koristimo ovaj događaj za osiguravanje ispravne ponude i preuzimanja ažuriranja. 
 
@@ -5318,7 +5318,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_networkunavailablealert"></a>controller_downloadwindow_networkunavailablealert
+### <a name="controllerdownloadwindownetworkunavailablealert"></a>controller.downloadwindow.networkunavailablealert
 
 Ovaj događaj označava da je prilikom preuzimanja ažuriranja izgubljena mrežna povezivost.  Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5359,7 +5359,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_networkunavailablealertok"></a>controller_downloadwindow_networkunavailablealertok
+### <a name="controllerdownloadwindownetworkunavailablealertok"></a>controller.downloadwindow.networkunavailablealertok
 
 Ovaj događaj označava da je prilikom preuzimanja ažuriranja izgubljena mrežna povezivost. Također označava da je korisnik obaviješten o ovoj pogrešci. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5400,7 +5400,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_downloadwindow_noconnectionok"></a>controller_downloadwindow_noconnectionok
+### <a name="controllerdownloadwindownoconnectionok"></a>controller.downloadwindow.noconnectionok
 
 Ovaj događaj označava da je prilikom preuzimanja ažuriranja izgubljena mrežna povezivost. Također označava da je korisnik obaviješten o ovoj pogrešci. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5441,7 +5441,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_repairrequired"></a>controller_downloadwindow_repairrequired
+### <a name="controllerdownloadwindowrepairrequired"></a>controller.downloadwindow.repairrequired
 
 Ovaj događaj označava da postupak ažuriranja nije uspio. Također označava da je ažuriranje dovršeno, ali je Microsoftovo automatsko ažuriranje pronašlo problem s ažuriranom aplikacijom i potreban je popravak. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5481,7 +5481,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="controller_downloadwindow_updateaborted"></a>controller_downloadwindow_updateaborted
+### <a name="controllerdownloadwindowupdateaborted"></a>controller.downloadwindow.updateaborted
 
 Ovaj događaj označava da je postupak ažuriranja prekinut. Također označava da je ažuriranje već bilo u tijeku u program Daemon, a korisnik je kliknuo U redu da prekine preuzimanje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5522,7 +5522,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_updatefailed"></a>controller_downloadwindow_updatefailed
+### <a name="controllerdownloadwindowupdatefailed"></a>controller.downloadwindow.updatefailed
 
 Ovaj događaj označava da jedno ili više ažuriranja iz trenutne serije nije uspjelo. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5563,7 +5563,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_updatesuccessful"></a>controller_downloadwindow_updatesuccessful
+### <a name="controllerdownloadwindowupdatesuccessful"></a>controller.downloadwindow.updatesuccessful
 
 Ovaj događaj označava da su sva ažuriranja iz trenutne serije bila uspješna. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5604,7 +5604,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_userpaused"></a>controller_downloadwindow_userpaused
+### <a name="controllerdownloadwindowuserpaused"></a>controller.downloadwindow.userpaused
 
 Ovaj događaj označava da su sva ažuriranja iz trenutne serije bila uspješna. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5645,7 +5645,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_downloadwindow_userresumed"></a>controller_downloadwindow_userresumed
+### <a name="controllerdownloadwindowuserresumed"></a>controller.downloadwindow.userresumed
 
 Ovaj događaj označava da je postupak ažuriranja za preuzimanje uspješno nastavljen nakon pauze. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5686,7 +5686,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_mainwindow_setautomaticdownloadinstall"></a>controller_mainwindow_setautomaticdownloadinstall
+### <a name="controllermainwindowsetautomaticdownloadinstall"></a>controller.mainwindow.setautomaticdownloadinstall
 
 Ovaj događaj označava da je uređaj registriran u način automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5727,7 +5727,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_mainwindow_setmanualchecking"></a>controller_mainwindow_setmanualchecking
+### <a name="controllermainwindowsetmanualchecking"></a>controller.mainwindow.setmanualchecking
 
 Ovaj događaj označava da je uređaj registriran u način ručnog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5768,7 +5768,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_templateawindow_cancel"></a>controller_templateawindow_cancel
+### <a name="controllertemplateawindowcancel"></a>controller.templateawindow.cancel
 
 Ovaj događaj označava da je korisnik odlučio odustati ili zanemariti pruženu poruku upozorenja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5809,7 +5809,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_templateawindow_enroll"></a>controller_templateawindow_enroll
+### <a name="controllertemplateawindowenroll"></a>controller.templateawindow.enroll
 
 Ovaj događaj označava da je korisnik odlučio slijediti pružene preporuke upozorenja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5851,7 +5851,7 @@ Prikupljaju se sljedeća polja:
 
 
 
-### <a name="controller_templateawindow_install"></a>controller_templateawindow_install
+### <a name="controllertemplateawindowinstall"></a>controller.templateawindow.install
 
 Ovaj događaj označava da je korisnik odlučio slijediti pruženu preporuku upozorenja koja se odnosi na pokretanje postupka instalacije softvera. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5892,7 +5892,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_updatewindow_begindownloadingapps"></a>controller_updatewindow_begindownloadingapps
+### <a name="controllerupdatewindowbegindownloadingapps"></a>controller.updatewindow.begindownloadingapps
 
 Ovaj događaj označava da je preuzimanje ažuriranja započet putem prozora za ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5933,7 +5933,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_updatewindow_networkretry"></a>controller_updatewindow_networkretry
+### <a name="controllerupdatewindownetworkretry"></a>controller.updatewindow.networkretry
 
 Ovaj događaj označava da je pokušaj ponovnog pokretanja aktiviran na listu za ažuriranje zbog kvara na mreži. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
 
@@ -5974,7 +5974,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_updatewindow_networkretrycancel"></a>controller_updatewindow_networkretrycancel
+### <a name="controllerupdatewindownetworkretrycancel"></a>controller.updatewindow.networkretrycancel
 
 Ovaj događaj označava da pokušaj ponovnog pokretanja ne može biti aktiviran na listu za ažuriranje zbog kvara na mreži. Ovaj događaj označava korisnika izabranog da otkaže ažuriranja nakon što je upozoren da mreža postaje nedostupna. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6015,7 +6015,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_updatewindow_networkunavailable"></a>controller_updatewindow_networkunavailable
+### <a name="controllerupdatewindownetworkunavailable"></a>controller.updatewindow.networkunavailable
 
 Ovaj događaj označava da je mrežna povezivost odjednom izgubljena. Ovaj događaj ukazuje na to da poslužitelj nije dostupan pri pokušaju preuzimanja paketa za ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6056,7 +6056,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_updatewindow_noupdateavailable"></a>controller_updatewindow_noupdateavailable
+### <a name="controllerupdatewindownoupdateavailable"></a>controller.updatewindow.noupdateavailable
 
 Ovaj događaj označava da je bilo traženja ažuriranja koje je rezultiralo time da nema dostupnih ažuriranja. Ovaj događaj označava da Microsoftovo automatsko ažuriranje nije pronašlo nikakva dostupna ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6097,7 +6097,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_updatewindow_noupdatestoselect"></a>controller_updatewindow_noupdatestoselect
+### <a name="controllerupdatewindownoupdatestoselect"></a>controller.updatewindow.noupdatestoselect
 
 Ovaj događaj označava da je došlo do pogreške koja je rezultirala praznim popisom ažuriranja. Ovaj događaj označava da Microsoftovo automatsko ažuriranje prikazuje prazan list za ažuriranje. To se ne bi smjelo dogoditi. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6138,7 +6138,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="controller_updatewindow_updateavailable"></a>Controller_UpdateWindow_UpdateAvailable
+### <a name="controllerupdatewindowupdateavailable"></a>Controller.UpdateWindow.UpdateAvailable
 
 Ovaj događaj označava da je bilo traženja ažuriranja koje je rezultiralo time da su ponuđena ažuriranja. To koristimo čak i da utvrdimo nude li se ažuriranja za pregled korisnika, prikazuju li se ispravna ažuriranja ili funkcionira li blokiranje ažuriranja kako se očekuje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6179,7 +6179,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="controller_updatewindow_updateavailablecancel"></a>controller_updatewindow_updateavailablecancel
+### <a name="controllerupdatewindowupdateavailablecancel"></a>controller.updatewindow.updateavailablecancel
 
 Ovaj događaj označava da je korisnik otkazao nakon što smo prikazali listu ažuriranja s popisom ažuriranja. Ovaj događaj koristimo da objasnimo razloge za neažuriranje (tj. korisnik ih svojevoljno otkaže). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6220,7 +6220,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadactor_pause"></a>downloadactor_pause
+### <a name="downloadactorpause"></a>downloadactor.pause
 
 Ovaj događaj označava da je korisnik izdao zahtjev za pauziranje preuzimanja. Ovaj događaj koristimo i da objasnimo razloge za ažuriranja koja očito nisu dovršena. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6261,7 +6261,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadactor_redirect"></a>downloadactor_redirect
+### <a name="downloadactorredirect"></a>downloadactor.redirect
 
 Ovaj događaj označava da je agent za preuzimanje usmjeren na krajnju točku koja izdaje URL preusmjeravanje za zahtjev za preuzimanje. To koristimo čak i da objasnimo razloge za neuspjeh u preuzimanju i dijagnosticiranje problema proxy poslužitelja. Također može pomoći u dijagnosticiranju razloga zbog kojih je primijećeno da korisnici instaliraju starije verzije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6302,7 +6302,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="downloadactor_resume"></a>downloadactor_resume
+### <a name="downloadactorresume"></a>downloadactor.resume
 
 Ovaj događaj označava da korisnik postavlja zahtjev za nastavak zaustavljenog preuzimanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6343,7 +6343,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadactor_resumeerror"></a>downloadactor_resumeerror
+### <a name="downloadactorresumeerror"></a>downloadactor.resumeerror
 
 Ovaj događaj označava da korisnik postavlja zahtjev za nastavak zaustavljenog preuzimanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6384,7 +6384,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="downloadactor_status"></a>downloadactor_status
+### <a name="downloadactorstatus"></a>downloadactor.status
 
 Ovaj događaj bilježi da postoje pokušaji dohvaćanja datoteka elemenata osiguranja i njihovih rezultata (uspjeh ili neuspjeh). Želimo znati elemente osiguranja i pakete koji se preuzimaju. Dobivena pogrešna datoteka može ukazivati na problem međuverzije/elementa osiguranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6425,7 +6425,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_configuration"></a>downloadmanifest_configuration
+### <a name="downloadmanifestconfiguration"></a>downloadmanifest.configuration
 
 Ovaj događaj izvješćuje o pogrešci s konfiguracijom značajke Microsoftovo automatsko ažuriranje (MAU) – bez obzira na to je li riječ o postavljanju prilagođenog poslužitelja ili definicijama krajnjih točaka u pomoćniku za ažuriranje u instaliranim komponentama MAU-a. Ovim događajem savjetujemo IT administratore za postavljanje točnih krajnjih točaka poslužitelja manifesta.
  
@@ -6464,7 +6464,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_downloadcatalogfail"></a>downloadmanifest_downloadcatalogfail
+### <a name="downloadmanifestdownloadcatalogfail"></a>downloadmanifest.downloadcatalogfail
 
 Ovaj događaj označava da je došlo do pogreške pri preuzimanju. Datoteka koja nije uspjela preuzeti je zabilježena. Želimo znati elemente osiguranja i pakete koji se preuzimaju. Neuspjeh u preuzimanju manifesta može značiti ili neuspjeh generiranja verzije elementa osiguranja, pogrešku u konfiguraciji CDN-a, pogrešku u konfiguraciji klijenta i mrežnu pogrešku. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6505,7 +6505,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="downloadmanifest_downloadcatalogsuccess"></a>downloadmanifest_downloadcatalogsuccess
+### <a name="downloadmanifestdownloadcatalogsuccess"></a>downloadmanifest.downloadcatalogsuccess
 
 Ovaj događaj označava da je datoteka uspješno preuzeta. Neuspjeh u preuzimanju manifesta može značiti ili neuspjeh generiranja verzije elementa osiguranja, pogrešku u konfiguraciji CDN-a, pogrešku u konfiguraciji klijenta i mrežnu pogrešku. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6546,7 +6546,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_downloadfail"></a>downloadmanifest_downloadfail
+### <a name="downloadmanifestdownloadfail"></a>downloadmanifest.downloadfail
 
 Ovaj događaj znači da je došlo do pogreške pri preuzimanju. Evidentira se datoteka manifesta ili paketa koja nije uspjela biti preuzeta, kao i detalji pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6587,7 +6587,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_downloadfromurl"></a>downloadmanifest_downloadfromurl
+### <a name="downloadmanifestdownloadfromurl"></a>downloadmanifest.downloadfromurl
 
 Ovaj događaj označava da je počelo preuzimanje datoteke kataloga. Evidentiramo URL s kojeg se datoteka kataloga preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6628,7 +6628,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_downloading"></a>downloadmanifest_downloading
+### <a name="downloadmanifestdownloading"></a>downloadmanifest.downloading
 
 Ovaj događaj označava da je počelo preuzimanje datoteke kataloga. Evidentiramo URL s kojeg se datoteka kataloga preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6669,7 +6669,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_downloadsuccess"></a>downloadmanifest_downloadsuccess
+### <a name="downloadmanifestdownloadsuccess"></a>downloadmanifest.downloadsuccess
 
 Ovaj događaj označava da je preuzimanje XML datoteke i datoteke paketa uspjelo. Evidentiramo URL s kojeg se datoteka preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6710,7 +6710,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="downloadmanifest_downloadurl"></a>downloadmanifest_downloadurl
+### <a name="downloadmanifestdownloadurl"></a>downloadmanifest.downloadurl
 
 Ovaj događaj označava da je došlo do zahtjeva za preuzimanje datoteke. Evidentiramo URL s kojeg se datoteka preuzima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6751,7 +6751,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_filenameerror"></a>downloadmanifest_filenameerror
+### <a name="downloadmanifestfilenameerror"></a>downloadmanifest.filenameerror
 
 Ovaj događaj označava da je došlo do neočekivane pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6792,7 +6792,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_invalidhash"></a>downloadmanifest_invalidhash
+### <a name="downloadmanifestinvalidhash"></a>downloadmanifest.invalidhash
 
 Ovaj događaj označava sigurnosnu provjeru datoteka koje nisu uspjele. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6833,7 +6833,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_missingdaemon"></a>downloadmanifest_missingdaemon
+### <a name="downloadmanifestmissingdaemon"></a>downloadmanifest.missingdaemon
 
 Ovaj događaj označava da je korisnik pokušao provjeriti ima li ažuriranja, a otkrili smo da alatu MAU nedostaje osnovna komponenta (daemon). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6874,7 +6874,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_signatureerror"></a>downloadmanifest_signatureerror
+### <a name="downloadmanifestsignatureerror"></a>downloadmanifest.signatureerror
 
 Ovaj događaj označava da provjera autentičnosti kôda nije uspjela za paket. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6915,7 +6915,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmanifest_status"></a>downloadmanifest_status
+### <a name="downloadmanifeststatus"></a>downloadmanifest.status
 
 Ovaj događaj evidentira sažeto skupljanje pokušaja/neuspjeha na koje se naišlo tijekom postupka preuzimanja datoteka manifesta i paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6956,7 +6956,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmgr_downloadend"></a>downloadmgr_downloadend
+### <a name="downloadmgrdownloadend"></a>downloadmgr.downloadend
 
 Ovaj događaj evidentira oznaku koja pokazuje da je postupak preuzimanja dovršen sam. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -6997,7 +6997,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="downloadmgr_downloadstart"></a>downloadmgr_downloadstart
+### <a name="downloadmgrdownloadstart"></a>downloadmgr.downloadstart
 
 Ovaj događaj evidentira ažuriranje koje će se uskoro preuzeti. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -7037,7 +7037,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="downloadtask_downloadbegin"></a>downloadtask_downloadbegin
+### <a name="downloadtaskdownloadbegin"></a>downloadtask.downloadbegin
 
 Ovaj događaj označava početak aktivnosti preuzimanja za ažuriranje aplikacije. On predstavlja dio lijevka ažuriranja i mi ga upotrebljavamo za utvrđivanje stanja ažuriranja aplikacije.
  
@@ -7086,7 +7086,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateVersion** – Verzija aplikacije nakon ažuriranja
 
 
-### <a name="downloadtask_downloadfailure"></a>downloadtask_downloadfailure
+### <a name="downloadtaskdownloadfailure"></a>downloadtask.downloadfailure
 
 Ovaj događaj evidentira da je došlo do pogreške prilikom preuzimanja datoteke paketa. Evidentiramo put ažuriranja te pogrešku. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -7133,7 +7133,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateID** – Identifikator ažuriranja koje se preuzima.
 
 
-### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
+### <a name="downloadtaskdownloadsuccess"></a>downloadtask.downloadsuccess
 
 Uspješno preuzimanje datoteke paketa. Evidentiramo korišten put ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -7177,7 +7177,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator preuzetog ažuriranja.
 
-### <a name="downloadtask_updatertypeerror"></a>downloadtask_updatertypeerror
+### <a name="downloadtaskupdatertypeerror"></a>downloadtask.updatertypeerror
 
 Ovaj događaj izvješćuje o zatipku alata za ažuriranje u preuzetoj datoteci manifesta. Ovim događajem obavještavamo vlasnika datoteke manifesta kako bi se ta pogreška mogla ispraviti.
  
@@ -7221,7 +7221,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateURL** – URL paketa ažuriranja koji je potrebno primijeniti
 
-### <a name="downloadtask_urlerror"></a>downloadtask_urlerror
+### <a name="downloadtaskurlerror"></a>downloadtask.urlerror
 
 Ovaj događaj izvješćuje o pogrešci u URL-u specificiranom u preuzetoj datoteci manifesta. Ovim događajem obavještavamo vlasnika datoteke manifesta kako bi se ta pogreška mogla ispraviti.
  
@@ -7263,7 +7263,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateURL** – URL paketa ažuriranja koji je potrebno primijeniti
 
-### <a name="fba_changelastupdate"></a>fba_changelastupdate
+### <a name="fbachangelastupdate"></a>fba.changelastupdate
 
 Ovaj događaj izvješćuje o tome kada je značajka Microsoftovo automatsko ažuriranje (MAU) provjerila ažuriranja. Ovim događajem ispravljamo pogreške kada određenom uređaju nije bilo ponuđeno ažuriranje tijekom duljeg razdoblja.
 
@@ -7302,7 +7302,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_checkforupdate"></a>fba_checkforupdate
+### <a name="fbacheckforupdate"></a>fba.checkforupdate
 
 Ovaj događaj označava da pozadinski postupak provjerava postoje li ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -7343,7 +7343,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_checkforupdateskip"></a>fba_checkforupdateskip
+### <a name="fbacheckforupdateskip"></a>fba.checkforupdateskip
 
 Ovaj događaj označava da je pozadinski proces preskočio ažuriranje zbog otvaranja grafičkog korisničkog sučelja MAU. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -7384,7 +7384,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_forceinstallmsgsent"></a>fba_forceinstallmsgsent
+### <a name="fbaforceinstallmsgsent"></a>fba.forceinstallmsgsent
 
 Ovaj događaj označava da je pokrenuto prisilno ažuriranje putem korisničkog sučelja. Ovaj događaj tvori dio lijevka i upotrebljava se za utvrđivanje stanja značajke prisilnog ažuriranja.
 
@@ -7422,7 +7422,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_forceupdatecheck"></a>fba_forceupdatecheck
+### <a name="fbaforceupdatecheck"></a>fba.forceupdatecheck
 
 Ovaj događaj označava da je provjera ima li ažuriranja prisilna. Ovim događajem utvrđujemo količinu provjera ima li prisilnih ažuriranja koje se događaju izvan normalnog ciklusa provjere ima li ažuriranja.
 
@@ -7462,7 +7462,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_guiappopen"></a>fba_guiappopen
+### <a name="fbaguiappopen"></a>fba.guiappopen
 
 Ovaj događaj označava da se korisničko sučelje pokreće u načinu rada Automatska provjera jer je aplikacija s primjenjivim ažuriranjem trenutačno otvorena. Ovim se događajem utvrđuje količina pokretanja korisničkog sučelja iz načina rada Automatska provjera za budući razvoj značajki.
 
@@ -7502,7 +7502,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_installpending"></a>fba_installpending
+### <a name="fbainstallpending"></a>fba.installpending
 
 Ovaj događaj označava da je značajka Microsoftovo automatsko ažuriranje (MAU) poslala obavijest u vezi s ažuriranjima na čekanju. Ovim se događajem utvrđuje količina ažuriranja koja se pokreću iz korisničkih obavijesti i on se upotrebljava za poboljšanje korisničkog doživljaja smanjenjem prekida za korisnika u budućim izdanjima.
 
@@ -7542,7 +7542,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_launch"></a>fba_launch
+### <a name="fbalaunch"></a>fba.launch
 
 Ovaj događaj označava pokretanje Microsoftova pomoćnika za ažuriranje s pomoću postupka pokretanja. Ovim se događajem utvrđuje pokreće li se Microsoftov pomoćnik za ažuriranje u neodgovarajućem kontekstu.
 
@@ -7582,7 +7582,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_launchbyagent"></a>fba_launchbyagent
+### <a name="fbalaunchbyagent"></a>fba.launchbyagent
 
 Ovaj događaj označava da je Microsoftov pomoćnik za ažuriranje pokrenut putem agenta za pokretanje. Ovim se događajem utvrđuje količina pokretanja Microsoftova pomoćnika za ažuriranje iz korisničkog sučelja za budući razvoj.
 
@@ -7622,7 +7622,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_launchfromprotocol"></a>fba_launchfromprotocol
+### <a name="fbalaunchfromprotocol"></a>fba.launchfromprotocol
 
 Ovaj događaj označava da je Microsoftov pomoćnik za ažuriranje pokrenut putem protokola URL-a. Ovim se događajem utvrđuje količina pokretanja Microsoftova pomoćnika za ažuriranje putem URL-a za budući razvoj.
 
@@ -7662,7 +7662,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_launchgui"></a>fba_launchgui
+### <a name="fbalaunchgui"></a>fba.launchgui
 
 Ovaj događaj označava da Microsoftov pomoćnik za ažuriranje pokušava pokrenuti grafičko korisničko sučelje (GUI). Ovim se događajem utvrđuje količina pokretanja korisničkog sučelja koja su pokrenuta putem Microsoftova pomoćnika za ažuriranje radi pružanja pomoći za budući razvoj, uključujući smanjenje smetnji za korisnika uslijed čestih pokretanja korisničkog sučelja.
 
@@ -7703,7 +7703,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_launchstatus"></a>fba_launchstatus
+### <a name="fbalaunchstatus"></a>fba.launchstatus
 
 Ovaj događaj evidentira neuspjehe MAU daemona prilikom pokušaja pokretanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -7748,7 +7748,7 @@ Prikupljaju se sljedeća polja:
 - **Success** – Booleov niz koji označava je li postupak MAU daemon uspješno pokrenut.
 
 
-### <a name="fba_mausilentupdate"></a>fba_mausilentupdate
+### <a name="fbamausilentupdate"></a>fba.mausilentupdate
 
 Ovaj događaj označava da Microsoftov pomoćnik za ažuriranja pokreće tiha ažuriranja. Ovim se događajem utvrđuje količina ažuriranja koja se primjenjuju bez intervencije korisnika kako bi se olakšala poboljšanja korisničkog doživljaja.
 
@@ -7788,7 +7788,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_moreinfofromappnotification"></a>fba_moreinfofromappnotification
+### <a name="fbamoreinfofromappnotification"></a>fba.moreinfofromappnotification
 
 Ovaj događaj izvješćuje o informacijama koje registrirana aplikacija usmjerava putem značajke Microsoftova automatska ažuriranja (MAU). Na primjer, poruke o završetku pružanja usluge izdaju se putem obavijesti MAU-a. Ovim događajem utvrđujemo količinu uređaja na kojima se prikazuje ta obavijest radi utvrđivanja uspjeha distribucije podataka.
 
@@ -7830,7 +7830,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_multipledaemon"></a>fba_multipledaemon
+### <a name="fbamultipledaemon"></a>fba.multipledaemon
 
 Ovaj događaj označava da je prepoznata dodatna instanca Microsoftova pomoćnika za ažuriranje i da će se trenutačna instanca okončati. Ovim ćemo događajem utvrđivati količinu uređaja koji pokušavaju pokrenuti višestruke instance pomoćnika za ažuriranja i, po potrebi, stvoriti zaobilazno rješenje.
 
@@ -7870,7 +7870,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_nofifyappclosed"></a>fba_nofifyappclosed
+### <a name="fbanofifyappclosed"></a>fba.nofifyappclosed
 
 Ovaj događaj označava da Microsoftov pomoćnik za ažuriranja izdaje obavijest za ažuriranja na čekanju jer ne postoje otvorene registrirane aplikacije, a ažuriranja se mogu provesti bez ometanja korisnika. Ovim događajem utvrđujemo količinu ažuriranja koja se mogu primijeniti, no za što im je potrebna radnja korisnika. Ovim se događajem potiču poboljšanja korisničkog doživljaja.
 
@@ -7910,7 +7910,7 @@ Prikupljaju se sljedeća polja:
     
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_nofifyappopen"></a>fba_nofifyappopen
+### <a name="fbanofifyappopen"></a>fba.nofifyappopen
 
 Ovaj događaj označava da Microsoftov pomoćnik za ažuriranja izdaje obavijest za ažuriranja na čekanju jer postoje otvorene registrirane aplikacije, a za instalaciju ažuriranja te će se aplikacije morati zatvoriti.  Ovim događajem utvrđujemo količinu ažuriranja za koje je potrebna radnja korisnika.  Ovim se događajem potiču poboljšanja korisničkog doživljaja.
 
@@ -7950,7 +7950,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_settimerfail"></a>fba_settimerfail  
+### <a name="fbasettimerfail"></a>fba.settimerfail  
 
 Ovaj događaj označava neuspjeli pokušaj za postavljanje brojača za pokretanje budućeg ažuriranja. Ovaj je događaj ključan, a mi tim događajem utvrđujemo količinu pogreški kako bismo, po potrebi, stvorili zaobilazno rješenje.
 
@@ -7991,7 +7991,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
+### <a name="fbasilentupdateoptin"></a>fba.silentupdateoptin
 
 Ovaj događaj označava da se korisnik odlučio za tiha ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8031,7 +8031,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fba_skipforcedupdate"></a>fba_skipforcedupdate
+### <a name="fbaskipforcedupdate"></a>fba.skipforcedupdate
 
 Ovaj događaj ukazuje na to da se prisilna provjera ažuriranja preskače zbog otvorenih aplikacija. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8072,7 +8072,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_startforcedupdate"></a>fba_startforcedupdate
+### <a name="fbastartforcedupdate"></a>fba.startforcedupdate
 
 Ovaj događaj označava da je došlo do pokušaja primjene prinudnog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8113,7 +8113,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_terminate"></a>fba_terminate
+### <a name="fbaterminate"></a>fba.terminate
 
 Ovaj događaj označava da se MAU daemon normalno prekinuo. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8154,7 +8154,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fba_updatefound"></a>fba_updatefound
+### <a name="fbaupdatefound"></a>fba.updatefound
 
 Ovaj događaj ukazuje da je MAU daemon pronašao dostupna ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8195,7 +8195,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="fba_updatetimer"></a>fba_updatetimer
+### <a name="fbaupdatetimer"></a>fba.updatetimer
 
 Ovaj događaj ukazuje na to da je proces Microsoftovo automatsko ažuriranje Daemon postao aktivan za provjeru ažuriranja nakon spavanja određeno vrijeme. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8236,7 +8236,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
+### <a name="fbasilentupdateallappsclosed"></a>fbasilentupdate.allappsclosed
 
 Ovaj se događaj evidentira ako su sve aplikacije bile zatvorene prije instalacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8277,7 +8277,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_applaunchafterupdate"></a>fbasilentupdate_applaunchafterupdate
+### <a name="fbasilentupdateapplaunchafterupdate"></a>fbasilentupdate.applaunchafterupdate
 
 Ovaj događaj bilježi pokušaj ponovnog pokretanja aplikacije nakon tihog ažuriranja i načina ažuriranja (klon ili ne). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8322,7 +8322,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_applaunchwileinstalling"></a>fbasilentupdate_applaunchwileinstalling
+### <a name="fbasilentupdateapplaunchwileinstalling"></a>fbasilentupdate.applaunchwileinstalling
 
 Evidentiramo kada je došlo do pokretanja aplikacije tijekom instalacije ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8363,7 +8363,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_appneedtoclose"></a>fbasilentupdate_appneedtoclose
+### <a name="fbasilentupdateappneedtoclose"></a>fbasilentupdate.appneedtoclose
 
 Evidentiramo kada je započeo postupak ažuriranja i utvrđujemo da je aplikacija za ažuriranje otvorena. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8404,7 +8404,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_appterminationeventreceived"></a>fbasilentupdate_appterminationeventreceived
+### <a name="fbasilentupdateappterminationeventreceived"></a>fbasilentupdate.appterminationeventreceived
 
 Ovaj događaj označava da Microsoftovo automatsko ažuriranje primilo Apple događaj kojim se obavještava da je aplikacija prekinuta. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8451,7 +8451,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateID** – Identifikator ažuriranja aplikacije.
 
 
-### <a name="fbasilentupdate_clientsession"></a>FBASilentUpdate_ClientSession
+### <a name="fbasilentupdateclientsession"></a>FBASilentUpdate.ClientSession
 
 Ovaj se događaj upotrebljava za izračunatu metriku stanja ključnih ažuriranja za značajku Microsoftova automatska ažuriranja (MAU). Ovaj nam događaj omogućava saznati koju sesiju ažuriranja (preuzimanje ili instalacija) pozadinski sustav trenutačno obrađuje.
  
@@ -8492,7 +8492,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
+### <a name="fbasilentupdatecodesignfailure"></a>fbasilentupdate.codesignfailure
 
 Ovaj događaj bilježi rezultat provjere autentičnosti kôda nakon primjene ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8533,7 +8533,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_download"></a>fbasilentupdate_download
+### <a name="fbasilentupdatedownload"></a>fbasilentupdate.download
 
 Ovaj događaj označava da se preuzima ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8576,7 +8576,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_downloadfailed"></a>fbasilentupdate_downloadfailed
+### <a name="fbasilentupdatedownloadfailed"></a>fbasilentupdate.downloadfailed
 
 Ovaj događaj označava da je došlo do pogreške tijekom preuzimanja ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8625,7 +8625,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateName** – Naziv ažuriranja aplikacije.
 
 
-### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
+### <a name="fbasilentupdatedownloadinbackground"></a>fbasilentupdate.downloadinbackground
 
 Ovaj događaj označava da započinjemo s preuzimanjem skupa ažuriranja u pozadini (bilježimo broj istodobnih preuzimanja). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8666,7 +8666,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_downloadingrepairupdate"></a>fbasilentupdate_downloadingrepairupdate
+### <a name="fbasilentupdatedownloadingrepairupdate"></a>fbasilentupdate.downloadingrepairupdate
 
 Ovaj događaj označava da smo pokrenuli pokušaj preuzimanja popravka zbog neuspjelog ažuriranja. Evidentiramo verziju i ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8709,7 +8709,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_duplicatedownloadattempted"></a>fbasilentupdate_duplicatedownloadattempted
+### <a name="fbasilentupdateduplicatedownloadattempted"></a>fbasilentupdate.duplicatedownloadattempted
 
 Ovaj događaj označava da je došlo do pogreške. Istovremeno trebamo preuzeti samo jedno ažuriranje za određenu aplikaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8750,7 +8750,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_installattemptfailed"></a>fbasilentupdate_installattemptfailed
+### <a name="fbasilentupdateinstallattemptfailed"></a>fbasilentupdate.installattemptfailed
 
 Ovaj događaj znači da pokušaja instalacije ažuriranja (verzije) nije uspio. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8791,7 +8791,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_installcomplete"></a>fbasilentupdate_installcomplete
+### <a name="fbasilentupdateinstallcomplete"></a>fbasilentupdate.installcomplete
 
 Ovaj događaj označava da su sva ažuriranja u grupi završena instalacijom. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8832,7 +8832,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_installed"></a>fbasilentupdate_installed
+### <a name="fbasilentupdateinstalled"></a>fbasilentupdate.installed
 
 Ovaj događaj označava da je pojedinačno ažuriranje uspješno instalirano. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8873,7 +8873,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="fbasilentupdate_installing"></a>fbasilentupdate_installing
+### <a name="fbasilentupdateinstalling"></a>fbasilentupdate.installing
 
 Ovaj događaj označava da je pokrenuto pojedinačno ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -8913,7 +8913,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fbasilentupdate_installstatus"></a>fbasilentupdate_installstatus
+### <a name="fbasilentupdateinstallstatus"></a>fbasilentupdate.installstatus
 
 Ovaj događaj izvješćuje o statusu zadatka ažuriranja aplikacije. Ovaj događaj predstavlja dio lijevka za ažuriranje aplikacije i mi ga upotrebljavamo za nadzor stanja ažuriranja aplikacije.
 
@@ -8963,7 +8963,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdatePkg** – Naziv paketa ažuriranja koji se primjenjuje
 
-### <a name="fbasilentupdate_notificationerror"></a>fbasilentupdate_notificationerror
+### <a name="fbasilentupdatenotificationerror"></a>fbasilentupdate.notificationerror
 
 Ovaj događaj izvješćuje o pogrešci koja se pojavila tijekom pokušaja slanja korisničke obavijesti. Ovim događajem ispravit će se pogreške uzroka pogreške i poduzeti mjere za ispravljanje.
 
@@ -9009,7 +9009,7 @@ Prikupljaju se sljedeća polja:
 
 - **Type** – Vrsta obavijesti
 
-### <a name="fbasilentupdate_notificationremoved"></a>fbasilentupdate_notificationremoved
+### <a name="fbasilentupdatenotificationremoved"></a>fbasilentupdate.notificationremoved
 
 Ovaj događaj označava da ažuriranje koje je bilo blokirano više nije blokirano. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9050,7 +9050,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_queueinstall"></a>fbasilentupdate_queueinstall
+### <a name="fbasilentupdatequeueinstall"></a>fbasilentupdate.queueinstall
 
 Ovaj događaj znači da će ažuriranje biti u redu čekanja za tihu instalaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9091,7 +9091,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_requiredappsclosed"></a>fbasilentupdate_requiredappsclosed
+### <a name="fbasilentupdaterequiredappsclosed"></a>fbasilentupdate.requiredappsclosed
 
 Evidentiramo kada je aplikacija koja ima ažuriranje na čekanju zatvorena. To označava vrijeme tijekom kojeg je moguće nastaviti s instalacijom. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9131,7 +9131,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fbasilentupdate_timerforapptermination"></a>FBASilentUpdate_TimerForAppTermination
+### <a name="fbasilentupdatetimerforapptermination"></a>FBASilentUpdate.TimerForAppTermination
 
 Ovaj se događaj upotrebljava za izračunatu metriku stanja ključnih ažuriranja za značajku Microsoftova automatska ažuriranja (MAU). Ovaj nam događaj omogućava praćenje događaja prekida otvorene aplikacije i trajanje razdoblja tijekom kojeg je bila otvorena.
  
@@ -9171,7 +9171,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="fbasilentupdate_updateavailablenotification"></a>fbasilentupdate_updateavailablenotification
+### <a name="fbasilentupdateupdateavailablenotification"></a>fbasilentupdate.updateavailablenotification
 
 Ovaj događaj označava da se aktivira obavijest o dostupnosti ažuriranja. Moramo osigurati da se tijek upita za ažuriranja aktivira kada se otkrije ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9212,7 +9212,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_userclicknotification"></a>fbasilentupdate_userclicknotification
+### <a name="fbasilentupdateuserclicknotification"></a>fbasilentupdate.userclicknotification
 
 Ovaj događaj ukazuje da je korisnik kliknuo na odjeljak sa sadržajem obavijesti o dostupnom ažuriranju i pokrenuto je grafičko korisničko sučelje Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9253,7 +9253,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_userselectinstalllater"></a>fbasilentupdate_userselectinstalllater
+### <a name="fbasilentupdateuserselectinstalllater"></a>fbasilentupdate.userselectinstalllater
 
 Ovaj događaj ukazuje na to da se korisnik odlučio instalirati kasnije nakon prikazane obavijesti o dostupnom ažuriranju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9294,7 +9294,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="fbasilentupdate_userselectinstallnow"></a>fbasilentupdate_userselectinstallnow
+### <a name="fbasilentupdateuserselectinstallnow"></a>fbasilentupdate.userselectinstallnow
 
 Ovaj događaj ukazuje na to da se korisnik odlučio instalirati odmah nakon prikazane obavijesti o dostupnom ažuriranju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -9334,7 +9334,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_dashboardview_appisopendialog_display"></a>gui_dashboardview_appisopendialog_display 
+### <a name="guidashboardviewappisopendialogdisplay"></a>gui.dashboardview.appisopendialog.display 
 
 Ovaj događaj označava da je korisničko sučelje prikazalo dijaloški okvir za zatvaranje otvorene aplikacije radi nastavka ažuriranja aplikacije. Ovim se događajem utvrđuje količina ažuriranja koja se odgađaju kako bi se pružila buduća poboljšanja za smanjenje prekida korisnika.
 
@@ -9378,7 +9378,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja u obliku koji se prikazuje u preuzetoj datoteci manifesta
 
-### <a name="gui_dashboardview_appisopendialogbutton_clicked"></a>gui_dashboardview_appisopendialogbutton_clicked
+### <a name="guidashboardviewappisopendialogbuttonclicked"></a>gui.dashboardview.appisopendialogbutton.clicked
 
 Ovaj događaj označava je li ažuriranje aplikacije preskočeno ili se nakon prikazivanja otvorenog dijaloškog okvira aplikacije provodi drugi pokušaj. Ovim se događajem utvrđuje količina ažuriranja koja se preskaču i upotrebljavaju kako bi se pružila buduća poboljšanja za smanjenje prekida korisnika.
 
@@ -9424,7 +9424,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja u obliku koji se prikazuje u preuzetoj datoteci manifesta
 
-### <a name="gui_dashboardview_updateinprogressdialog_display"></a>gui_dashboardview_updateinprogressdialog_display
+### <a name="guidashboardviewupdateinprogressdialogdisplay"></a>gui.dashboardview.updateinprogressdialog.display
 
 Ovaj događaj bilježi je li dijaloški okvir koji označava da je ažuriranje već u tijeku bio prikazan korisnicima.
  
@@ -9462,7 +9462,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_dashboardview_updatemodebutton_clicked"></a>gui_dashboardview_updatemodebutton_clicked
+### <a name="guidashboardviewupdatemodebuttonclicked"></a>gui.dashboardview.updatemodebutton.clicked
 
 Ovaj događaj označava način rada ažuriranja koji je promijenjen iz korisničkog sučelja. Ovim se događajem utvrđuje količina uređaja koji prelaze iz jednog načina rada u drugi i on se upotrebljava kao pomoć za utvrđivanje zašto korisnici odustaju od automatskih ažuriranja. 
 
@@ -9502,7 +9502,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_feedbackwindow_buttonclicked"></a>gui_feedbackwindow_buttonclicked
+### <a name="guifeedbackwindowbuttonclicked"></a>gui.feedbackwindow.buttonclicked
 
 Ovaj događaj izvješćuje o tome jesu li povratne informacije poslane ili otkazane prije slanja. Ovim se događajem utvrđuje količina povratnih informacija koje se šalju za dotičnu verziju izdanja. To omogućuje prijevremenu izolaciju potencijalnih problema.
 
@@ -9542,7 +9542,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_preferenceview_consentsheet_display"></a>gui_preferenceview_consentsheet_display
+### <a name="guipreferenceviewconsentsheetdisplay"></a>gui.preferenceview.consentsheet.display
 
 Ovaj događaj označava da se prikazuje list za privolu za određeni kanal ako postoji. Ovim se događajem utvrđuje količina uređaja koji su novo upisani u primjenjivi kanal publike (raniji Insider / kasniji Insider). Također, taj događaj upotrebljavamo da bismo osigurali da prikaz dijaloškog okvira za suglasnost funkcionira za prikaz uvjeta korištenja korisnicima.
  
@@ -9582,7 +9582,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_preferenceview_consentsheet_licenseerror"></a>gui_preferenceview_consentsheet_licenseerror
+### <a name="guipreferenceviewconsentsheetlicenseerror"></a>gui.preferenceview.consentsheet.licenseerror
 
 Ovaj događaj izvješćuje o pogrešci koja se pojavila tijekom pokušaja prikaza dijaloškog okvira za suglasnost. Ovaj je događaj ključan i upotrebljava se za ispravljanje svih problema uzrokovanih promjenom proizvoda ako je to primjenjivo.
 
@@ -9624,7 +9624,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_preferenceview_switchchannel"></a>gui_preferenceview_switchchannel
+### <a name="guipreferenceviewswitchchannel"></a>gui.preferenceview.switchchannel
 
 Ovaj događaj izvješćuje o prijelazu između kanala koje je odabrao korisnik. Ovim se događajem utvrđuje zašto korisnici odustaju od kanala Insidera.  
 
@@ -9666,7 +9666,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="gui_updatemanager_applaunchduringupdate"></a>gui_updatemanager_applaunchduringupdate
+### <a name="guiupdatemanagerapplaunchduringupdate"></a>gui.updatemanager.applaunchduringupdate
 
 Ovaj događaj izvješćuje da je aplikacija pokrenuta dok se ažurirala, a značajka Microsoftovo automatsko ažuriranje prekida pokrenutu aplikaciju. Napominjemo da pokretanje aplikacije dok se ona ažurira može dovesti do oštećenja aplikacije. Ovim događajem osiguravamo da pokretanje aplikacije ne utječe na proces ažuriranja prije no što ona ude spremna za upotrebu.
  
@@ -9710,7 +9710,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator ažuriranja aplikacije.
 
-### <a name="gui_updatemanager_downloadupdateforapp"></a>gui_updatemanager_downloadupdateforapp
+### <a name="guiupdatemanagerdownloadupdateforapp"></a>gui.updatemanager.downloadupdateforapp
 
 Ovaj događaj izvješćuje o statusu dovršavanja preuzimanja za ažuriranje. Ovim događajem osiguravamo stanje procesa ažuriranja i pratimo/rješavamo točku pogreške.
 
@@ -9759,7 +9759,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateName** – Naziv ažuriranja.
 
 
-### <a name="gui_updatemanager_error"></a>gui_updatemanager_error
+### <a name="guiupdatemanagererror"></a>gui.updatemanager.error
 
 Ovaj događaj izvješćuje o svim pogreškama koje se javljaju tijekom ažuriranja aplikacije. On može označavati pogrešku u slijedu izvršavanja značajke Microsoftovo automatsko ažuriranje (MAU).  Ovim izvješćem primjenjujemo ažuriranja za MAU kako bismo riješili scenarije uobičajenih pogrešaka.
 
@@ -9801,7 +9801,7 @@ Prikupljaju se sljedeća polja:
 
 - **Success** – Vrijednost Booleova niza koja označava je li aplikacija uspješno zatvorena.
 
-### <a name="gui_updatemanager_installcleanupforapp"></a>gui_updatemanager_installcleanupforapp
+### <a name="guiupdatemanagerinstallcleanupforapp"></a>gui.updatemanager.installcleanupforapp
 
 Ovaj događaj označava da su privremene datoteke koje su stvorene tijekom instalacije aplikacije uspješno očišćene. On predstavlja dio lijevka ažuriranja koji se upotrebljava za utvrđivanje stanja ažuriranja aplikacije.
  
@@ -9846,7 +9846,7 @@ Prikupljaju se sljedeća polja:
 - **UpdateID** – Identifikator ažuriranja.
 
 
-### <a name="gui_updatemanager_installsuccessforapp"></a>gui_updatemanager_installsuccessforapp
+### <a name="guiupdatemanagerinstallsuccessforapp"></a>gui.updatemanager.installsuccessforapp
 
 Ovaj događaj označava uspješno ažuriranje aplikacije. Ovaj događaj predstavlja dio lijevka ažuriranja koji upotrebljavamo za utvrđivanje stanja ažuriranja.
  
@@ -9890,7 +9890,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator ažuriranja.
 
-### <a name="gui_updatemanager_installupdateforapp"></a>gui_updatemanager_installupdateforapp
+### <a name="guiupdatemanagerinstallupdateforapp"></a>gui.updatemanager.installupdateforapp
 
 Ovaj događaj označava početak stvarnog instalacijskog procesa za ažuriranje aplikacije. Ovaj događaj predstavlja dio lijevka ažuriranja aplikacije koji upotrebljavamo za utvrđivanje stanja ažuriranja.
  
@@ -9932,7 +9932,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator ažuriranja.
 
-### <a name="gui_updatemanager_queueinstallforapp"></a>gui_updatemanager_queueinstallforapp
+### <a name="guiupdatemanagerqueueinstallforapp"></a>gui.updatemanager.queueinstallforapp
 
 Ovaj događaj označava početak stvarnog instalacijskog procesa za ažuriranje aplikacije. Ovaj događaj predstavlja dio lijevka ažuriranja aplikacije koji upotrebljavamo za utvrđivanje stanja ažuriranja.
  
@@ -9974,7 +9974,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator ažuriranja.
 
-### <a name="gui_updatemanager_relaunchapp"></a>gui_updatemanager_relaunchapp
+### <a name="guiupdatemanagerrelaunchapp"></a>gui.updatemanager.relaunchapp
 
 Ovaj događaj zapisuje jesu li aplikacije uspješno ponovno pokrenute nakon ažuriranja.
  
@@ -10020,7 +10020,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja.
 
-### <a name="installdata_checkrunning"></a>installdata_checkrunning
+### <a name="installdatacheckrunning"></a>installdata.checkrunning
 
 Ovaj događaj evidentira rezultat provjere između aplikacija za instaliranje i hoće li se postupak instalacije nastaviti na temelju otvaranja aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10061,7 +10061,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installdata_cleanup"></a>installdata_cleanup
+### <a name="installdatacleanup"></a>installdata.cleanup
 
 Datoteke paketa treba ukloniti nakon instalacije. Ovaj događaj bilježi slučajeve u kojima ih ne uspijemo ukloniti. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10102,7 +10102,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installedapp_invalidbundle"></a>installedapp_invalidbundle
+### <a name="installedappinvalidbundle"></a>installedapp.invalidbundle
 
 Ovaj događaj upućuje da Microsoftovo automatsko ažuriranje ne može dohvatiti podatke o paketu za registriranu aplikaciju na zadanom putu. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10143,7 +10143,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installedapp_invalidpreference"></a>installedapp_invalidpreference
+### <a name="installedappinvalidpreference"></a>installedapp.invalidpreference
 
 Ovaj događaj evidentira slučajeve u kojima osobni odabir korisnika sadrži nevažeći unos aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10184,7 +10184,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installedapp_nilbundleid"></a>installedapp_nilbundleid
+### <a name="installedappnilbundleid"></a>installedapp.nilbundleid
 
 Ovaj događaj evidentira slučajeve u kojima nedostaje ID paketa za aplikaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10225,7 +10225,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installedapp_nilbundlename"></a>installedapp_nilbundlename
+### <a name="installedappnilbundlename"></a>installedapp.nilbundlename
 
 Ovaj događaj evidentira slučajeve u kojima nedostaje naziv paketa za aplikaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10266,7 +10266,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installedapp_sendcoreappleevent"></a>installedapp_sendcoreappleevent
+### <a name="installedappsendcoreappleevent"></a>installedapp.sendcoreappleevent
 
 Ovaj događaj označava da značajka Microsoftovo automatsko ažuriranje (MAU) šalje događaj tvrtke Apple registriranoj aplikaciji za prekid aplikacije radi nastavka s ažuriranjem aplikacije na čekanju. Ovaj događaj trenutačno se upotrebljava kao pomoć za razvoj budućih poboljšanja radi smanjenja prekida korisnika tijekom ažuriranja aplikacije. 
 
@@ -10317,7 +10317,7 @@ Prikupljaju se sljedeća polja:
 - **Success** – Označava je li dotična aplikacija prijavila uspjeh operacije
 
     
-### <a name="installstatus_codesign"></a>installstatus_codesign
+### <a name="installstatuscodesign"></a>installstatus.codesign
 
 Ovaj događaj evidentira status OS binarnog alata za potpisivanje kôda. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10358,7 +10358,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installstatus_daemon"></a>installstatus_daemon
+### <a name="installstatusdaemon"></a>installstatus.daemon
 
 Ovaj događaj evidentira stanje daemona Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10399,7 +10399,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installstatus_helper"></a>installstatus_helper
+### <a name="installstatushelper"></a>installstatus.helper
 
 Ovaj događaj evidentira stanje pomoćnog alata Microsoftova automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10440,7 +10440,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installupdatestask_applaunched"></a>installupdatestask_applaunched
+### <a name="installupdatestaskapplaunched"></a>installupdatestask.applaunched
 
 Ovaj događaj znači da je alat Microsoftovo automatsko ažuriranje otkrio pokretanje aplikacije za blokirano ažuriranje, ali nije mogao pronaći odgovarajući instalacijski program. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10481,7 +10481,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installupdatestask_applaunchwithpendingupdate"></a>installupdatestask_applaunchwithpendingupdate
+### <a name="installupdatestaskapplaunchwithpendingupdate"></a>installupdatestask.applaunchwithpendingupdate
 
 Ovaj događaj ukazuje da je alat Microsoftovo automatsko ažuriranje otkrio pokretanje aplikacije za aplikaciju koja čeka na ažuriranje. Pokrenuta će se aplikacija prekinuti. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10522,7 +10522,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installupdatestask_codesignverificationfail"></a>installupdatestask_codesignverificationfail
+### <a name="installupdatestaskcodesignverificationfail"></a>installupdatestask.codesignverificationfail
 
 Ovaj događaj označava da provjera autentičnosti potpisa koda nije uspjela za ažuriranje aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10563,7 +10563,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_codesignverificationstart"></a>installupdatestask_codesignverificationstart
+### <a name="installupdatestaskcodesignverificationstart"></a>installupdatestask.codesignverificationstart
 
 Ovaj događaj označava da je započela provjera autentičnosti potpisa koda za ažuriranje aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10604,7 +10604,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_codesignverificationsuccess"></a>installupdatestask_codesignverificationsuccess
+### <a name="installupdatestaskcodesignverificationsuccess"></a>installupdatestask.codesignverificationsuccess
 
 Ovaj događaj označava uspjeh provjere autentičnosti potpisa koda za ažuriranje aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10645,7 +10645,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_failsilentinstall"></a>installupdatestask_failsilentinstall
+### <a name="installupdatestaskfailsilentinstall"></a>installupdatestask.failsilentinstall
 
 Ovaj događaj evidentira neuspjehe tijekom primjene tihih ažuriranja bez obzira je li u pitanju klonirana ili uobičajena instalacija. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10686,7 +10686,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installupdatestask_multiplerelocatablepackage"></a>installupdatestask_multiplerelocatablepackage
+### <a name="installupdatestaskmultiplerelocatablepackage"></a>installupdatestask.multiplerelocatablepackage
 
 Ovaj događaj znači da je alat Microsoftovo automatsko ažuriranje pronašao više primjera unosa aplikacije za određeni paket ažuriranja u preuzetom manifestu. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10727,7 +10727,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installupdatestask_removeclone"></a>installupdatestask_removeclone
+### <a name="installupdatestaskremoveclone"></a>installupdatestask.removeclone
 
 Ovaj događaj označava da je klon uklonjen. Klon uklanjamo kada je proces instaliranja na klon završen ili kada se pokrene novi postupak i u njemu se nađe starija inačica klonirane verzije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10768,7 +10768,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_retryfail"></a>installupdatestask_retryfail
+### <a name="installupdatestaskretryfail"></a>installupdatestask.retryfail
 
 Ovaj događaj označava da su se pojavile pogreške tijekom postupka ponovnog pokušaja instalacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10809,7 +10809,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Ovaj događaj evidentira komunikacijske pogreške unutar procesa (komunikacija s pomoćnim alatom MAU). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10850,7 +10850,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Ovaj događaj evidentira komunikacijske pogreške unutar procesa (komunikacija s pomoćnim alatom MAU). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10892,7 +10892,7 @@ Prikupljaju se sljedeća polja:
 
     
 
-### <a name="installupdatestask_retryresponse"></a>installupdatestask_retryresponse
+### <a name="installupdatestaskretryresponse"></a>installupdatestask.retryresponse
 
 Ovaj događaj evidentira da pokušaj nije uspio. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10933,7 +10933,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_retrysuccess"></a>installupdatestask_retrysuccess
+### <a name="installupdatestaskretrysuccess"></a>installupdatestask.retrysuccess
 
 Ovaj događaj evidentira uspješnu instalaciju ažuriranja nakon ponovnog pokušaja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -10974,7 +10974,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_setreopengui"></a>installupdatestask_setreopengui
+### <a name="installupdatestasksetreopengui"></a>installupdatestask.setreopengui
 
 Ovaj događaj pokazuje je li postavljanje postavke za ponovno otvaranje grafičkog korisničkog sučelja nakon instalacije bilo uspješno. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11015,7 +11015,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="installupdatestask_updatestatus"></a>installupdatestask_updatestatus
+### <a name="installupdatestaskupdatestatus"></a>installupdatestask.updatestatus
 
 Ovaj događaj izvješćuje o stanju zadatka instalacije. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije.
 
@@ -11069,8 +11069,58 @@ Prikupljaju se sljedeća polja:
 
 - **UpdatePkg** – Naziv paketa ažuriranja koji se primjenjuje
 
+### <a name="lifecycleperiodiccheck"></a>Lifecycle.periodiccheck
 
-### <a name="msupdate_cli_eventhandler"></a>msupdate_cli_eventhandler
+Taj događaj povremeno javlja o statusu postupka MicrosoftAutoUpdate. Konkretno, javlja o preostalim zadacima za koje postupak čeka radi završetka Pomoćnika za ažuriranje, a u slučaju korisničkog sučelja javlja je li postupak završio zbog korisničke neaktivnosti.  Ovaj događaj omogućuje nam da odredimo što sprječava Pomoćnik za ažuriranje da dovrši ažuriranja i završi s radom te je li korisničko sučelje prestalo s radom zbog neaktivnosti korisnika.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **dataCollectionDialog** – Booleova vrijednost pokazuje čeka li proces na odgovor korisnika u dijaloškom okviru za prikupljanje podataka
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **forcedUpdateDialog** – Booleova vrijednost pokazuje čeka li proces na odgovor korisnika u dijaloškom okviru za prisilno ažuriranje
+
+- **HowToCheck** – način provjere postavke
+
+- **isBusy** – Booleova vrijednost koja pokazuje je li proces zauzet s aktivnim ažuriranjem
+
+- **isInactive** – Booleova vrijednost koja pokazuje čeka li proces radnju korisnika tijekom dužeg vremena
+
+- **isWaiting** – Booleova vrijednost pokazuje čeka li proces na odgovor korisnika nakon obavijesti
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+- **SessionLength** – trajanje trenutačne sesije procesa u sekundama
+
+
+### <a name="msupdateclieventhandler"></a>msupdate.cli.eventhandler
 
 Ovaj se događaj upotrebljava za izračun upotrebe raznih vrsta API-ja sučelja naredbenog retka značajke Microsoftovo automatsko ažuriranje (MAU).
 
@@ -11113,7 +11163,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="msupdate_cli_eventhandler_applyupdates_appids"></a>msupdate_cli_eventhandler_applyupdates_appids
+### <a name="msupdateclieventhandlerapplyupdatesappids"></a>msupdate.cli.eventhandler.applyupdates.appids
 
 Ovaj događaj označava da je za primjenu ažuriranja izdana naredba CLI (sučelje retka klijenta). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11154,7 +11204,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
+### <a name="msupdateclieventhandlerconfig"></a>msupdate.cli.eventhandler.config
 
 Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio Apple događaj koji treba konfigurirati. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11195,7 +11245,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
+### <a name="msupdateclieventhandlerupdates"></a>msupdate.cli.eventhandler.updates
 
 Ovaj događaj označava da je modul sučelja naredbenog retka Microsoftova automatskog ažuriranja primio Apple događaj za popis ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11236,7 +11286,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="msupdate_monitor_progress_downloaded"></a>msupdate_monitor_progress_downloaded
+### <a name="msupdatemonitorprogressdownloaded"></a>msupdate.monitor.progress.downloaded
 
 Ovaj događaj ukazuje da su ažuriranja preuzeta. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11277,7 +11327,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="msupdate_monitor_progress_failure"></a>msupdate_monitor_progress_failure
+### <a name="msupdatemonitorprogressfailure"></a>msupdate.monitor.progress.failure
 
 Ovaj događaj evidentira popis ažuriranja u redu čekanja koje nisu uspješno primijenjena. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11318,7 +11368,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="msupdate_monitor_progress_finished"></a>msupdate_monitor_progress_finished
+### <a name="msupdatemonitorprogressfinished"></a>msupdate.monitor.progress.finished
 
 Ovaj događaj evidentira popis ažuriranja u redu čekanja koja su uspješno instalirana. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11359,7 +11409,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="msupdate_monitor_progress_queued"></a>msupdate_monitor_progress_queued
+### <a name="msupdatemonitorprogressqueued"></a>msupdate.monitor.progress.queued
 
 Ovaj događaj evidentira popis ažuriranja u redu čekanja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -11441,7 +11491,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="sauforcedupdate_autodismiss"></a>sauforcedupdate_autodismiss
+### <a name="sauforcedupdateautodismiss"></a>sauforcedupdate.autodismiss
 
 Ovaj događaj označava da se prikazani dijaloški okvir za prisilno ažuriranje odbacuje zbog neaktivnosti korisnika. Ovim se događajem utvrđuje količina prisilnih ažuriranja koja se provode bez ikakve reakcije korisnika u vezi s prikazanom obaviješću. Ovim se događajem poboljšava korisničko sučelje za smanjenje prekida.
 
@@ -11481,7 +11531,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_close"></a>sauforcedupdate_close
+### <a name="sauforcedupdateclose"></a>sauforcedupdate.close
 
 Ovaj događaj označava da je korisnik odabrao zatvaranje dijaloškog okvira prisilnog ažuriranja. Ovaj se događaj upotrebljava za određivanje količine prisilnih ažuriranja koja se odgađaju radnjom korisnika. Ovim se događajem poboljšava korisničko sučelje za smanjenje prekida. 
 
@@ -11521,7 +11571,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_completeautodismiss"></a>sauforcedupdate_completeautodismiss
+### <a name="sauforcedupdatecompleteautodismiss"></a>sauforcedupdate.completeautodismiss
 
 Ovaj događaj označava da se prikazani dijaloški okvir za prisilno ažuriranje iz značajke roka za dovršetak odbacuje zbog neaktivnosti korisnika. Ovim se događajem utvrđuje količina prisilnih ažuriranja koja se provode bez ikakve reakcije korisnika u vezi s prikazanom obaviješću. Ovim se događajem poboljšava korisničko sučelje za smanjenje prekida za značajku roka za dovršetak.
 
@@ -11561,7 +11611,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_completeclose"></a>sauforcedupdate_completeclose
+### <a name="sauforcedupdatecompleteclose"></a>sauforcedupdate.completeclose
 
 Ovaj događaj označava uspješno dovršavanje prisilnog ažuriranja. Ovim se događajem utvrđuje stanje značajke prisilnog ažuriranja. 
 
@@ -11601,7 +11651,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_display"></a>sauforcedupdate_display
+### <a name="sauforcedupdatedisplay"></a>sauforcedupdate.display
 
 Ovaj događaj označava da je dijaloški okvir za prisilno ažuriranje bio prikazan.  Ovaj događaj predstavlja dio lijevka za prisilno ažuriranje i upotrebljava se za utvrđivanje zdravlja značajke prisilnog ažuriranja.
 
@@ -11641,7 +11691,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_displayfinalhour"></a>sauforcedupdate_displayfinalhour
+### <a name="sauforcedupdatedisplayfinalhour"></a>sauforcedupdate.displayfinalhour
 
 Ovaj događaj označava da je dijaloški okvir za prisilno ažuriranje za zadnji sat bio prikazan. Ovaj događaj predstavlja dio lijevka za prisilno ažuriranje i upotrebljava se za utvrđivanje zdravlja značajke prisilnog ažuriranja.
 
@@ -11681,7 +11731,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_done"></a>sauforcedupdate_done
+### <a name="sauforcedupdatedone"></a>sauforcedupdate.done
 
 Ovaj događaj označava da je prisilno ažuriranje uspješno dovršeno. Ovaj događaj predstavlja dio lijevka za prisilno ažuriranje i upotrebljava se za utvrđivanje zdravlja značajke prisilnog ažuriranja. 
 
@@ -11721,7 +11771,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_enabled"></a>sauforcedupdate_enabled
+### <a name="sauforcedupdateenabled"></a>sauforcedupdate.enabled
 
 Ovaj se događaj aktivira kada Microsoftovo automatsko ažuriranje (MAU) utvrdi da je prisilno ažuriranje primjenjivo.  Taj se događaj upotrebljava za utvrđivanje stanja značajke prisilnog ažuriranja. 
 
@@ -11763,7 +11813,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_forcedupdatedismiss"></a>sauforcedupdate_forcedupdatedismiss
+### <a name="sauforcedupdateforcedupdatedismiss"></a>sauforcedupdate.forcedupdatedismiss
 
 Ovaj događaj označava da se prikazani dijaloški okvir za prisilno ažuriranje za zadnji sat odbacuje zbog neaktivnosti korisnika. Ovim se događajem utvrđuje količina prisilnih ažuriranja koja se provode bez ikakve reakcije korisnika u vezi s prikazanom obaviješću. Ovim se događajem poboljšava korisničko sučelje za smanjenje prekida. 
 
@@ -11803,7 +11853,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_forcequitandupdatenow"></a>sauforcedupdate_forcequitandupdatenow
+### <a name="sauforcedupdateforcequitandupdatenow"></a>sauforcedupdate.forcequitandupdatenow
 
 Ovaj događaj označava početak prisilnog ažuriranja koje je pokrenuo korisnik. Ovaj događaj tvori dio lijevka i upotrebljava se za utvrđivanje stanja značajke prisilnog ažuriranja. 
 
@@ -11843,7 +11893,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije 
 
-### <a name="sauforcedupdate_forceterminate"></a>sauforcedupdate_forceterminate
+### <a name="sauforcedupdateforceterminate"></a>sauforcedupdate.forceterminate
 
 Ovaj događaj označava početak prisilnog ažuriranja uz prisilno završavanje aplikacije.  Ovaj događaj tvori dio lijevka i upotrebljava se za utvrđivanje stanja značajke prisilnog ažuriranja.
 
@@ -11883,7 +11933,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_quitandupdatenow"></a>sauforcedupdate_quitandupdatenow
+### <a name="sauforcedupdatequitandupdatenow"></a>sauforcedupdate.quitandupdatenow
 
 Ovaj događaj označava da je korisnik odabrao zatvaranje aplikacije i primjenu ažuriranja. Ovaj događaj predstavlja dio lijevka i upotrebljava se za utvrđivanje zdravlja značajke prisilnog ažuriranja. 
 
@@ -11923,7 +11973,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_snooze"></a>sauforcedupdate_snooze
+### <a name="sauforcedupdatesnooze"></a>sauforcedupdate.snooze
 
 Ovaj događaj označava da je korisnik odabrao odgodu prisilnog ažuriranja. Ovaj događaj tvori dio lijevka i upotrebljava se za utvrđivanje stanja značajke prisilnog ažuriranja. 
 
@@ -11963,7 +12013,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_terminate"></a>sauforcedupdate_terminate
+### <a name="sauforcedupdateterminate"></a>sauforcedupdate.terminate
 
 Ovaj događaj označava početak prisilnog ažuriranja uz završavanje aplikacije. Ovaj događaj tvori dio lijevka i upotrebljava se za utvrđivanje stanja značajke prisilnog ažuriranja.
 
@@ -12003,7 +12053,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="sauforcedupdate_updatenow"></a>sauforcedupdate_updatenow
+### <a name="sauforcedupdateupdatenow"></a>sauforcedupdate.updatenow
 
 Ovaj događaj označava da je korisnik odabrao ažurirati aplikaciju sada.  Ovaj događaj tvori dio lijevka i upotrebljava se za utvrđivanje stanja značajke prisilnog ažuriranja.
 
@@ -12085,7 +12135,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="update_applaunchdetected"></a>update_applaunchdetected
+### <a name="updateapplaunchdetected"></a>update.applaunchdetected
 
 Ovaj događaj označava da je aplikacija bila pokrenuta dok je ažuriranje bilo u tijeku. Ovim se događajem utvrđuje količina aplikacija koje se pokreću tijekom ažuriranja i upotrebljava se za poboljšavanje korisničkog iskustva u budućim izdanjima.
 
@@ -12129,7 +12179,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_appterminationreceived"></a>update_appterminationreceived
+### <a name="updateappterminationreceived"></a>update.appterminationreceived
 
 Ovaj događaj označava da je aplikacija s blokiranim ažuriranjem završena te može li Microsoftovo automatsko ažuriranje (MAU) nastaviti s ažuriranjem. Ovaj događaj predstavlja dio lijevka i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije.
 
@@ -12175,7 +12225,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_blockedappclosed"></a>update_blockedappclosed
+### <a name="updateblockedappclosed"></a>update.blockedappclosed
 
 Ovaj događaj označava da je Microsoftovo automatsko ažuriranje (MAU) prepoznalo da je aplikacija s blokiranim ažuriranjem zatvorena i da je moguće nastaviti s ažuriranjem. Ovaj događaj predstavlja dio lijevka i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije. 
 
@@ -12219,7 +12269,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_blockedinstallskip"></a>update_blockedinstallskip
+### <a name="updateblockedinstallskip"></a>update.blockedinstallskip
 
 Ovaj događaj zapisuje pogrešku koja se pojavila tijekom pokušaja preskakanja ažuriranja aplikacije. Ovaj je događaj ključan i upotrebljava se za istragu prijavljenih pogrešaka.  
 
@@ -12261,7 +12311,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="update_clientsession"></a>update_clientsession
+### <a name="updateclientsession"></a>update.clientsession
 
 Ovaj se događaj prijavljuje kada se promijeni status korisničkog uređaja, zbog čega dolazi do pauziranja Microsoftova pomoćnika za ažuriranje ili nastavka postupka ažuriranja. Ovaj događaj predstavlja dio lijevka i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije. 
 
@@ -12301,7 +12351,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="update_download_begin"></a>update_download_begin 
+### <a name="updatedownloadbegin"></a>update.download.begin 
 
 Ovaj događaj označava početak postupka ažuriranja aplikacije. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije. 
 
@@ -12347,7 +12397,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja u obliku koji se prikazuje u preuzetoj datoteci manifesta
 
-### <a name="update_download_finish"></a>update_download_finish
+### <a name="updatedownloadfinish"></a>update.download.finish
 
 Ovaj događaj označava dovršavanje faze preuzimanja za ažuriranje aplikacije. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije.  
 
@@ -12393,7 +12443,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja u obliku koji se prikazuje u preuzetoj datoteci manifesta
 
-### <a name="update_downloadresume"></a>update_downloadresume
+### <a name="updatedownloadresume"></a>update.downloadresume
 
 Ovaj događaj izvješćuje o pogrešci koja je pronađena tijekom pokušaja nastavka pauziranog zadatka preuzimanja. Ovaj je događaj ključan i upotrebljava se za istragu prijavljenih pogrešaka. 
 
@@ -12437,7 +12487,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_error"></a>update_error
+### <a name="updateerror"></a>update.error
 
 Ovaj događaj izvješćuje o pogrešci koja je pronađena tijekom pokušaja ažuriranja registrirane aplikacije.  Ovaj je događaj ključan i upotrebljava se za istragu prijavljenih pogrešaka. 
 
@@ -12479,7 +12529,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="update_installcleanupforapp"></a>update_installcleanupforapp
+### <a name="updateinstallcleanupforapp"></a>update.installcleanupforapp
 
 Ovaj događaj označava da je instalacija ažuriranja dovršena i da Microsoftovo automatsko ažuriranje (MAU) provodi čišćenje.  Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije.
 
@@ -12523,7 +12573,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_installupdateforapp"></a>update_installupdateforapp
+### <a name="updateinstallupdateforapp"></a>update.installupdateforapp
 
 Ovaj se događaj upotrebljava za izvješćivanje o početku postupka instalacije ažuriranja aplikacije. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije. 
 
@@ -12569,7 +12619,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja u obliku koji se prikazuje u preuzetoj datoteci manifesta
 
-### <a name="update_installupdateforapp_success"></a>update_installupdateforapp_success
+### <a name="updateinstallupdateforappsuccess"></a>update.installupdateforapp.success
 
 Ovaj događaj izvješćuje o stanju zadatka instalacije. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije. 
 
@@ -12615,7 +12665,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_installvariance"></a>Update_InstallVariance
+### <a name="updateinstallvariance"></a>Update.InstallVariance
 
 Ovaj se događaj upotrebljava za izračun metrike stanja za MAU. Ovaj nam događaj omogućuje utvrđivanje uspjeha metrike za instalaciju prioritetne značajke i provjeru cjelovitosti značajke.
  
@@ -12655,7 +12705,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="update_multipleappupdates"></a>update_multipleappupdates 
+### <a name="updatemultipleappupdates"></a>update.multipleappupdates 
 
 Ovaj događaj označava da je u pozadini u tijeku više ažuriranja aplikacija. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije.
 
@@ -12695,7 +12745,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="update_previousidnil"></a>update_previousidnil
+### <a name="updatepreviousidnil"></a>update.previousidnil
 
 Ovaj događaj označava da se preuzima paket ažuriranja popravka, no ne postoje prethodne informacije o preuzimanju. Ovaj je događaj ključan i upotrebljava se za istragu prijavljenih pogrešaka. 
 
@@ -12737,7 +12787,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="update_queueinstallforapp"></a>update_queueinstallforapp 
+### <a name="updatequeueinstallforapp"></a>update.queueinstallforapp 
 
 Ovaj događaj označava da je preuzeti paket ažuriranja uvršten u red čekanja za instalaciju.  Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije.
 
@@ -12783,7 +12833,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateName** – Naziv ažuriranja u obliku koji se prikazuje u preuzetoj datoteci manifesta
 
-### <a name="update_relaunchafterupdate"></a>update_relaunchafterupdate 
+### <a name="updaterelaunchafterupdate"></a>update.relaunchafterupdate 
 
 Ovaj događaj označava da je ažuriranje aplikacije dovršeno i da se ona ponovno pokreće. Ovaj događaj predstavlja dio lijevka ažuriranja i upotrebljava se za utvrđivanje stanja ažuriranja aplikacije. 
 
@@ -12827,7 +12877,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-### <a name="update_timerforapptermination"></a>update_timerforapptermination 
+### <a name="updatetimerforapptermination"></a>update.timerforapptermination 
 
 Ovaj događaj označava početak/kraj brojača za provjeru statusa aplikacije. Ovaj se događaj pojavljuje u paru i upotrebljava za utvrđivanje jesu li svi objekti brojača uklonjeni tijekom nastavka postupka ažuriranja aplikacije.
 
@@ -12868,7 +12918,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatecore_appregistration"></a>updatecore_appregistration
+### <a name="updatecoreappregistration"></a>updatecore.appregistration
 
 Ovaj događaj evidentira pokušaje registracije aplikacije i rezultat/razlog. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -12909,7 +12959,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatecore_loadinglaunchagent"></a>updatecore_loadinglaunchagent
+### <a name="updatecoreloadinglaunchagent"></a>updatecore.loadinglaunchagent
 
 Ovaj događaj označava da se agent za pokretanje učitava. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -12949,7 +12999,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatecore_runnstaskcommand"></a>updatecore_runnstaskcommand
+### <a name="updatecorerunnstaskcommand"></a>updatecore.runnstaskcommand
 
 Ovaj događaj izvješćuje o pogrešci tijekom pokušaja pokretanja zadatka. Ovaj je događaj ključan i upotrebljava se za istragu prijavljenih pogrešaka.  
 
@@ -12989,7 +13039,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatecore_server_connectionfail"></a>updatecore_server_connectionfail
+### <a name="updatecoreserverconnectionfail"></a>updatecore.server.connectionfail
 
 Ovaj događaj evidentira pogreške na koje se naišlo na putu do poslužitelja CDN. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13029,7 +13079,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatecore_server_nullurl"></a>updatecore_server_nullurl
+### <a name="updatecoreservernullurl"></a>updatecore.server.nullurl
 
 Ovaj događaj izvješćuje o pogrešci koja označava da se određeni poslužitelj nije mogao doseći. Ovim se događajem utvrđuje stopa neuspjeha ažuriranja koju je uzrokovao mrežni problem. 
 
@@ -13069,7 +13119,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatefilterhelper_cannotretrievebuilddate"></a>updatefilterhelper_cannotretrievebuilddate
+### <a name="updatefilterhelpercannotretrievebuilddate"></a>updatefilterhelper.cannotretrievebuilddate
 
 Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo kako nismo mogli dohvatiti datum iz metapodataka aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13110,7 +13160,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefilterhelper_invalidappid"></a>updatefilterhelper_invalidappid
+### <a name="updatefilterhelperinvalidappid"></a>updatefilterhelper.invalidappid
 
 Ovaj događaj izvješćuje o pogrešci koja ukazuje na to da nije bilo moguće pronaći odgovarajuće datoteke manifesta s pomoću ID-a aplikacije dohvaćenog iz web-odgovora. Ovaj se upotrebljava za istragu prijavljenih pogrešaka.
 
@@ -13150,7 +13200,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatefilterhelper_invalidappidfromwebservices"></a>updatefilterhelper_invalidappidfromwebservices
+### <a name="updatefilterhelperinvalidappidfromwebservices"></a>updatefilterhelper.invalidappidfromwebservices
 
 Ovaj događaj izvješćuje o pogrešci koja ukazuje na to da ID aplikacije dohvaćen iz web-odgovora nije u očekivanom formatu. Ovaj se upotrebljava za istragu prijavljenih pogrešaka.
 
@@ -13190,7 +13240,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatefilterhelper_invalidresponsefromupdatefiltering"></a>updatefilterhelper_invalidresponsefromupdatefiltering
+### <a name="updatefilterhelperinvalidresponsefromupdatefiltering"></a>updatefilterhelper.invalidresponsefromupdatefiltering
 
 Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13231,7 +13281,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefilterhelper_missingbuilddate"></a>updatefilterhelper_missingbuilddate
+### <a name="updatefilterhelpermissingbuilddate"></a>updatefilterhelper.missingbuilddate
 
 Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13272,7 +13322,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefilterhelper_updatebypassedoldage"></a>updatefilterhelper_updatebypassedoldage
+### <a name="updatefilterhelperupdatebypassedoldage"></a>updatefilterhelper.updatebypassedoldage
 
 Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da je usluga zaobiđena zbog starog datuma ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13313,7 +13363,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_check_error"></a>updatefinder_check_error
+### <a name="updatefindercheckerror"></a>updatefinder.check.error
 
 Ovaj događaj izvješćuje o pogrešci koja je pronađena tijekom traženja ažuriranja. Ovaj je događaj ključan i upotrebljava se za istragu prijavljene pogreške. 
 
@@ -13356,7 +13406,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
  
-### <a name="updatefinder_check_start"></a>updatefinder_check_start
+### <a name="updatefindercheckstart"></a>updatefinder.check.start
 
 Ovaj događaj evidentira svaki put kada pokrenemo operaciju provjere ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13397,7 +13447,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_check_status"></a>updatefinder_check_status
+### <a name="updatefindercheckstatus"></a>updatefinder.check.status
 
 Ovaj događaj objedinjuje status provjere za operacije ažuriranja (kanal od pretraživanja do preuzimanja). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13438,7 +13488,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_check_updatefound"></a>updatefinder_check_updatefound
+### <a name="updatefindercheckupdatefound"></a>updatefinder.check.updatefound
 
 Evidentiramo kad god provjera ažuriranja rezultira pronađenim ažuriranjima. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13479,7 +13529,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_check_updatenotfound"></a>updatefinder_check_updatenotfound
+### <a name="updatefindercheckupdatenotfound"></a>updatefinder.check.updatenotfound
 
 Evidentiramo kad god provjera ažuriranja rezultira time da nema ažuriranja jer nije pronađeno nijedno ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13520,7 +13570,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_check_uptodate"></a>updatefinder_check_uptodate
+### <a name="updatefindercheckuptodate"></a>updatefinder.check.uptodate
 
 Evidentiramo kad god provjera ažuriranja rezultira time da nema ponuđenih ažuriranja jer su sve aplikacije već ažurne. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13561,7 +13611,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_offerupdates_invalidappid"></a>updatefinder_offerupdates_invalidappid
+### <a name="updatefinderofferupdatesinvalidappid"></a>updatefinder.offerupdates.invalidappid
 
 Ovaj događaj izvješćuje o pogrešci tijekom pokušaja procjene je li određeno ažuriranje primjenjivo. Ovaj je događaj ključan i upotrebljava se za istragu prijavljene pogreške.  
 
@@ -13603,7 +13653,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatefinder_offerupdates_minoscheckfail"></a>updatefinder_offerupdates_minoscheckfail
+### <a name="updatefinderofferupdatesminoscheckfail"></a>updatefinder.offerupdates.minoscheckfail
 
 Evidentiramo kad god smo blokirali ažuriranje zbog neispunjavanja preduvjeta OS-a. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13643,7 +13693,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatefinder_offerupdates_missingtrigger"></a>updatefinder_offerupdates_missingtrigger
+### <a name="updatefinderofferupdatesmissingtrigger"></a>updatefinder.offerupdates.missingtrigger
 
 Ovaj događaj izvješćuje o pogrešci tijekom pokušaja procjene okidača od preuzetog manifesta za ažuriranje aplikacije. On je ključan i upotrebljava se za istragu prijavljene pogreške.  
 
@@ -13685,7 +13735,7 @@ Prikupljaju se sljedeća polja:
 
 - **Triggers** – Rječnik okidača pronađenih u manifestu
 
-### <a name="updatefinder_offerupdates_nullbundleforappid"></a>updatefinder_offerupdates_nullbundleforappid
+### <a name="updatefinderofferupdatesnullbundleforappid"></a>updatefinder.offerupdates.nullbundleforappid
 
 Ovaj događaj znači da alat Microsoftovo automatsko ažuriranje nije uspio učitati informacije o paketu za ID aplikacije navedene u preuzetoj datoteci manifesta. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13726,7 +13776,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_offerupdates_updaterulematched"></a>updatefinder_offerupdates_updaterulematched
+### <a name="updatefinderofferupdatesupdaterulematched"></a>updatefinder.offerupdates.updaterulematched
 
 Ovaj događaj označava da je pronađeno ažuriranje za aplikaciju i osnovnu verziju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13767,7 +13817,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="updatefinder_registeredapps"></a>updatefinder_registeredapps
+### <a name="updatefinderregisteredapps"></a>updatefinder.registeredapps
 
 Evidentiramo aplikacije koje instalira/registrira/kontrolira MAU. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13807,7 +13857,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatefinder_suite_invalidsuiteversion"></a>updatefinder_suite_invalidsuiteversion
+### <a name="updatefindersuiteinvalidsuiteversion"></a>updatefinder.suite.invalidsuiteversion
 
 Ovaj događaj izvješćuje o pogrešci verzije paketa tijekom procjene je li određeno ažuriranje primjenjivo. Ovaj je događaj ključan i upotrebljava se za istragu prijavljene pogreške.
 
@@ -13847,7 +13897,7 @@ Prikupljaju se sljedeća polja:
 
 - **Suite** – Naziv paketa koji se razmatra
 
-### <a name="updatefinder_suite_keyvaluemissing"></a>updatefinder_suite_keyvaluemissing
+### <a name="updatefindersuitekeyvaluemissing"></a>updatefinder.suite.keyvaluemissing
 
 Ovaj događaj izvješćuje o pogrešci tijekom pokušaja dodavanja aplikacije paketu. Ovaj je događaj ključan i upotrebljava se za istragu prijavljene pogreške.
 
@@ -13890,7 +13940,7 @@ Prikupljaju se sljedeća polja:
 - **Suite** – Potrebno je dodati naziv aplikacije paketa
 
     
-### <a name="updatefinder_suite_missingcollateral"></a>updatefinder_suite_missingcollateral
+### <a name="updatefindersuitemissingcollateral"></a>updatefinder.suite.missingcollateral
 
 Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije primjenjivo zbog nedostatka elementa osiguranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13931,7 +13981,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_suite_staleversion"></a>updatefinder_suite_staleversion
+### <a name="updatefindersuitestaleversion"></a>updatefinder.suite.staleversion
 
 Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije primjenjivo jer je osnovna verzija prestara. Evidentiramo osnovnu verziju i ID aplikacije paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -13972,7 +14022,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_suite_updateapplicable"></a>updatefinder_suite_updateapplicable
+### <a name="updatefindersuiteupdateapplicable"></a>updatefinder.suite.updateapplicable
 
 Ažuriranje paketa – evidentiramo svaki put kada je ažuriranje paketa primjenjivo. Evidentiramo osnovnu verziju i ID aplikacije paketa. Evidentiramo osnovnu verziju i ID aplikacije paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14013,7 +14063,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_suite_updatenotapplicabledefaultpath"></a>updatefinder_suite_updatenotapplicabledefaultpath
+### <a name="updatefindersuiteupdatenotapplicabledefaultpath"></a>updatefinder.suite.updatenotapplicabledefaultpath
 
 Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije ponuđeno jer nisu sve aplikacije paketa instalirane na temelju zadanog puta. Evidentiramo osnovnu verziju i ID aplikacije paketa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14054,7 +14104,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="updatefinder_suite_updatenotapplicableversion"></a>updatefinder_suite_updatenotapplicableversion
+### <a name="updatefindersuiteupdatenotapplicableversion"></a>updatefinder.suite.updatenotapplicableversion
 
 Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije ponuđeno jer nisu sve aplikacije paketa u istoj osnovnoj verziji. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14095,7 +14145,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_suite_updatenotoffered"></a>updatefinder_suite_updatenotoffered
+### <a name="updatefindersuiteupdatenotoffered"></a>updatefinder.suite.updatenotoffered
 
 Ažuriranje paketa – evidentiramo svaki put kada ažuriranje paketa nije ponuđeno jer je veličina paketa veća od pojedinačnih ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14136,7 +14186,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatefinder_suite_updateoffered"></a>updatefinder_suite_updateoffered
+### <a name="updatefindersuiteupdateoffered"></a>updatefinder.suite.updateoffered
 
 Ažuriranje paketa – evidentiramo svaki put kada je ažuriranje paketa ponuđeno. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14177,7 +14227,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
+### <a name="updatemanagercheckupdate"></a>updatemanager.checkupdate
 
 Ovaj događaj evidentira broj ažuriranja koje je pronašao alat Microsoftovo automatsko ažuriranje tijekom provjere dostupnih ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14218,7 +14268,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="updatemanager_updatespending"></a>updatemanager_updatespending
+### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
 Ovaj događaj označava da su pronađena ažuriranja i da čekaju instalaciju. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14258,7 +14308,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="updatestatus_codesign"></a>UpdateStatus_Codesign
+### <a name="updatestatuscodesign"></a>UpdateStatus.Codesign
 
 Ovaj događaj izvješćuje o stanju potvrde suoblikovanja koje Microsoftov pomoćnik za ažuriranje pokreće nakon instalacije ažuriranja klijentskih aplikacija. Ovim događajem osiguravamo da pružamo pakete koji su valjani i nadogradit ćemo instaliranu aplikaciju na najnoviju verziju.
 
@@ -14308,7 +14358,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdatePkg** – Naziv paketa ažuriranja koji je primijenjen
 
-### <a name="urlutilities_getmauinfo"></a>urlutilities_getmauinfo
+### <a name="urlutilitiesgetmauinfo"></a>urlutilities.getmauinfo
 
 Ovaj događaj izvješćuje o pogrešci koja se pojavljuje tijekom pristupa paketu aplikacije Microsoftovo automatsko ažuriranje (MAU). Ovaj je događaj ključan i upotrebljava se za istragu prijavljene pogreške.
 
@@ -14348,7 +14398,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
    
-### <a name="webservices_checkforsilentupdates"></a>webservices_checkforsilentupdates
+### <a name="webservicescheckforsilentupdates"></a>webservices.checkforsilentupdates
 
 Ovaj događaj označava da su pronađeni kandidati za tiho ažuriranje. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14389,7 +14439,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="webservices_deltaupdater"></a>webservices_deltaupdater
+### <a name="webservicesdeltaupdater"></a>webservices.deltaupdater
 
 Ovaj događaj evidentira interakciju između klijentskog kôda i značajki koja kontrolira hoće li klijent omogućiti Delta ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14430,7 +14480,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="webservices_serviceaction"></a>webservices_serviceaction
+### <a name="webservicesserviceaction"></a>webservices.serviceaction
 
 Evidentiramo bilo kakve pogreške koje nastaju uslijed neočekivanog odgovora web-servisa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14471,7 +14521,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="webservices_serviceaction"></a>webservices_serviceaction
+### <a name="webservicesserviceaction"></a>webservices.serviceaction
 
 Evidentiramo bilo kakve pogreške koje nastaju uslijed neočekivanog odgovora web-servisa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14512,7 +14562,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="webservices_serviceresponse"></a>webservices_serviceresponse
+### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
 Ovaj događaj evidentira zahtjeve za uslugu MAU službu, vrijeme odgovora i pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14553,7 +14603,7 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
     
-### <a name="webservices_silentupdate"></a>webservices_silentupdate
+### <a name="webservicessilentupdate"></a>webservices.silentupdate
 
 Evidentiramo zahtjeve kako bismo provjerili postoje li pravila primjenjivosti za "prisilno ažuriranje", npr. moramo prebaciti korisnika iz verzije N na verziju N+1 zbog nekog velikog problema. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14593,7 +14643,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="webservices_updatefiltering"></a>webservices_updatefiltering
+### <a name="webservicesupdatefiltering"></a>webservices.updatefiltering
 
 Ovaj događaj označava provedeno filtriranje na popisu primjenjivih ažuriranja putem web-usluga. Ovaj događaj upotrebljavamo da bismo osigurali da blokiranja aplikacije pravilno funkcioniraju ako moramo blokirati ažuriranje.
 
@@ -14633,7 +14683,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="webservices_webcontent"></a>webservices_webcontent
+### <a name="webserviceswebcontent"></a>webservices.webcontent
 
 Evidentiramo zahtjeve i odgovore primljene u web-servis. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
@@ -14673,7 +14723,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-### <a name="webservices_whatsnew"></a>webservices_whatsnew
+### <a name="webserviceswhatsnew"></a>webservices.whatsnew
 
 Ovaj se događaj aktivira kada Microsoftovo automatsko ažuriranje (MAU) provodi upit za web-usluge u značajci „Što je novo” za registrirane aplikacije. Ovim se događajem utvrđuje stanje značajke „Što je novo”. 
 
@@ -15128,8 +15178,26 @@ Prikupljaju se sljedeća polja:
 
 - **PaywallOperationType** – označava vrstu Paywall operacije (enum/ int – konačna)
 
+### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
 
-### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
+Metapodaci koji se temelje na sesiji kada se korisniku prikazuje korisničko sučelje Paywall. Microsoft to koristi kako bi dobio putovanje korisnika i razumio koje verzije uređaja i OS-a korisnik upotrebljava, kao pomoć u donošenju odluka o ulaganjima u poboljšanja iskustva u tim područjima.
+
+Prikupljaju se sljedeća polja:
+
+- **App Version** – šifra verzije drugih programa
+
+- **ClientId** – anoniman jedinstven identifikator uređaja koji ne otkriva identitet krajnjeg korisnika (mreža / niz)
+
+- **Entry Point** – jedinstveni identifikator za kontekstualne ili konstante točke ulaza iz drugih programa
+
+- **isTablet** – prikazuje li uređaj korisničko sučelje tableta
+
+- **OSVersion** – verzija OS-a Android za uređaj
+
+- **SessionId** – Guid: jedinstveni identifikator sesije Paywall
+
+
+### <a name="officefirstrunappletelemetryoptin"></a>Office.FirstRun.Apple.TelemetryOptIn
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja telemetrijske funkcije uključivanja u iskustvo prvog pokretanja. Prikupljamo kôd koji označava vrstu mogućnosti za prikupljanje dijagnostičkih podataka koju je korisnik odabrao.
 

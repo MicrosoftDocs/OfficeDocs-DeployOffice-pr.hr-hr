@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: 5772f8b3c105f56833a34f12f7d0e212fc4d55c5
-ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
+ms.openlocfilehash: f200e22e639f2c89315c2f7fa2e9eab0367f86b1
+ms.sourcegitcommit: 1b12952b55f071b87026b49d372158209ed2e322
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47940984"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "48368629"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -115,37 +115,37 @@ Informacije o pristanku korisnika za dijagnostičke podatke i povezana iskustva.
 
 Ova kategorija sadrži sljedeća polja:
 
-  - **UserCategory ―** određuje vrstu korisnika koji daje pristanak. Jedan MSAUser, AADUser ili LocalDeviceUser
-
-  - **DiagnosticConsentLevel** – označava razinu pristanka za dijagnostičke podatke koju je korisnik dao
-
-  - **DiagnosticConsentSourceLocation** – označava način na koji je korisnik dao pristanak za dijagnostičke podatke
-
-  - **DiagnosticConsentConsentTime** – označava kada je korisnik dao pristanak za dijagnostičke podatke. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
-
-  - **ServiceConnectionState** – označava je li korisnik odlučio koristiti ili ne koristiti sva povezana iskustva
-
-  - **ServiceConnectionStateSourceLocation** – označava način na koji je korisnik odlučio želi li koristiti sva povezana iskustva
-
-  - **ServiceConnectionStateConsentTime** – označava kada je korisnik odlučio želi li koristiti sva povezana iskustva. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
+  - **ControllerConnectedServicesSourceLocation** – označava kako je napravljen korisnikov odabir za neobavezna povezana iskustva
 
   - **ControllerConnectedServicesState** – označava ima li korisnik pristup neobaveznim povezanim iskustvima
 
-  - **ControllerConnectedServicesStateSourceLocation** – označava kako je napravljen korisnikov odabir za neobavezna povezana iskustva
-
   - **ControllerConnectedServicesStateConsentTime** – označava kada je korisnik odabrao status za neobavezna povezana iskustva. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
 
-  - **UserContentDependentState** – označava je li korisnik odlučio omogućiti ili onemogućiti povezana iskustva koja analiziraju sadržaj
+  - **DiagnosticConsentConsentTime** – označava kada je korisnik dao pristanak za dijagnostičke podatke. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
 
-  - **UserContentDependentStateSourceLocation** – označava kako je napravljen korisnikov odabir omogućivanja ili onemogućivanja povezanih iskustava koja analiziraju sadržaj
+  - **DiagnosticConsentLevel** – označava razinu pristanka za dijagnostičke podatke koju je korisnik dao
 
-  - **UserContentDependentStateConsentTime** – označava kada je napravljen korisnikov odabir omogućivanja ili onemogućivanja povezanih iskustava koja analiziraju sadržaj. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
+  - **DiagnosticConsentLevelSourceLocation** – označava način na koji je korisnik dao pristanak za dijagnostičke podatke
+
+  - **DownloadContentSourceLocation** – označava kako je korisnik napravio odabir omogućivanja ili onemogućivanja povezanih iskustava koja preuzimaju internetski sadržaj
 
   - **DownloadContentState** – označava je li korisnik odlučio omogućiti ili onemogućiti povezana iskustva koja preuzimaju internetski sadržaj
 
-  - **DownloadContentStateSourceLocation** – označava kako je korisnik napravio odabir omogućivanja ili onemogućivanja povezanih iskustava koja preuzimaju internetski sadržaj
-
   - **DownloadContentStateConsentTime** – označava kada je korisnik napravio odabir omogućivanja ili onemogućivanja povezanih iskustava koja preuzimaju internetski sadržaj. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
+
+  - **ServiceConnectionState** – označava je li korisnik odlučio koristiti ili ne koristiti sva povezana iskustva
+
+  - **ServiceConnectionStateConsentTime** – označava kada je korisnik odlučio želi li koristiti sva povezana iskustva. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
+
+  - **ServiceConnectionStateSourceLocation** – označava način na koji je korisnik odlučio želi li koristiti sva povezana iskustva
+
+  - **UserCategoryValue ―** određuje vrstu korisnika koji daje pristanak. Jedan MSAUser, AADUser ili LocalDeviceUser
+
+  - **UserContentDependentSourceLocation** – označava kako je napravljen korisnikov odabir omogućivanja ili onemogućivanja povezanih iskustava koja analiziraju sadržaj
+
+  - **UserContentDependentState** – označava je li korisnik odlučio omogućiti ili onemogućiti povezana iskustva koja analiziraju sadržaj
+
+  - **UserContentDependentStateConsentTime** – označava kada je napravljen korisnikov odabir omogućivanja ili onemogućivanja povezanih iskustava koja analiziraju sadržaj. Datum će se pojaviti ili kao datum koji ljudi mogu čitati ili kao strojno kodirani datum koji izgleda kao veliki broj.
 
 #### <a name="device"></a>Uređaj 
 
@@ -199,7 +199,15 @@ Ova kategorija sadrži sljedeća polja:
 
   - **MeasuresEnabled** – zastavica koja označava jesu li podaci trenutne sesije uzorkovani. Omogućuje da utvrdimo kako statistički procijeniti podatke prikupljene iz određene sesije.
 
-  - **SamplingClientId** – ID klijenta kojim se utvrđuje je li dio uzorkovanja. Omogućuje da utvrdimo zašto je pojedinačna sesija uključena ili isključena iz uzorkovanja.
+  - **SamplingClientIdValue** – ID klijenta kojim se utvrđuje je li dio uzorkovanja. Omogućuje da utvrdimo zašto je pojedinačna sesija uključena ili isključena iz uzorkovanja.
+  
+ - **SubAppName** – za aplikaciju Office za mobilne uređaje ovo polje predstavlja temeljnu aplikaciju koja se koristi za otvaranje dokumenta. Na primjer, ako otvorite dokument programa Word u aplikaciji Office, to polje će prijaviti vrijednost „Word“.
+
+ - **VirtualizationType** – vrsta vizualizacije ako se Office izvodi u jednoj. Moguće vrijednosti su: 
+    - 0 = Ništa
+    - 1 = Windows Virtual Desktop
+    - 2 = Microsoft Defender Application Guard
+    - 3 = Windows Core OS
 
 #### <a name="user"></a>Korisnik
 
@@ -407,25 +415,25 @@ Ova kategorija sadrži sljedeća polja:
 
   - **DisableTelemetry** – zastavica koja označava je li ključ DisableTelemetry postavljen. Omogućuje da utvrdimo je li sesija izvješćivala dijagnostičke podatke koji nisu EssentialServiceMetadata.
 
-  - **SamplingKey** – ključ koji određuje je li sesija uzorkovana. Omogućuje da utvrdimo kako pojedine sesije odlučuju hoće li biti uzorkovane.
-
-  - **SamplingMethod** – metoda koja se koristi za utvrđivanje pravila uzorkovanja. Omogućuje da utvrdimo koji podaci dolaze iz sesije.
-
-  - **Slijed** – jedinstveni numerički identifikator za sesiju. Omogućuje određivanje redoslijeda sesija za analizu problema koji su se pojavili.
-
-  - **Pokretanje** – vrijeme pokretanja sesije postupka. Omogućuje da utvrdimo kada je sesija pokrenuta.
-
-  - **TimeZoneBiasInMinutes** – razlika u minutama između UTC-a i lokalnog vremena. Omogućuje normalizaciju UTC-a na lokalno vrijeme.
-
   - **SamplingClientIdValue** – vrijednost ključa za određivanje uzorkovanja. Omogućuje da utvrdimo zašto je sesija uzorkovana.
 
   - **SamplingDeviceIdValue** – vrijednost ključa za određivanje uzorkovanja. Omogućuje da utvrdimo zašto je sesija uzorkovana.
+
+  - **SamplingKey** – ključ koji određuje je li sesija uzorkovana. Omogućuje da utvrdimo kako pojedine sesije odlučuju hoće li biti uzorkovane.
+
+  - **SamplingMethod** – metoda koja se koristi za utvrđivanje pravila uzorkovanja. Omogućuje da utvrdimo koji podaci dolaze iz sesije.
 
   - **SamplingSessionKValue** – napredni metapodaci uzorkovanja. Koristi se za procjenu statističkog značenja primljenih podataka.
 
   - **SamplingSessionNValue** – napredni metapodaci uzorkovanja. Koristi se za procjenu statističkog značenja primljenih podataka.
 
+  - **Slijed** – jedinstveni numerički identifikator za sesiju. Omogućuje određivanje redoslijeda sesija za analizu problema koji su se pojavili.
+
+  - **Pokretanje** – vrijeme pokretanja sesije postupka. Omogućuje da utvrdimo kada je sesija pokrenuta.
+
   - **TelemetryPermissionLevel** – vrijednost koja označava razinu dijagnostičkih podataka koje je korisnik odabrao. Omogućuje da utvrdimo razinu dijagnostičkih podataka koja se može očekivati od sesije.
+
+  - **TimeZoneBiasInMinutes** – razlika u minutama između UTC-a i lokalnog vremena. Omogućuje normalizaciju UTC-a na lokalno vrijeme.
 
 ## <a name="data-fields-that-are-common-for-onenote-events"></a>Polja podataka koja su uobičajena za događaje aplikacije OneNote
 
@@ -662,7 +670,7 @@ Ovo su podvrste podataka u toj kategoriji:
 
 Instalirani proizvod, njegova verzija i njegov status instalacije.
 
-#### <a name="add_sso_account"></a>add_sso_account
+#### <a name="addssoaccount"></a>add.sso.account
 
 Time će se Microsoft izvijestiti o uspjehu ili neuspjehu korisnika s dodavanjem računa putem jedinstvene prijave (SSO).
 
@@ -1267,7 +1275,7 @@ Prikupljaju se sljedeća polja:
 
 Uvjeti za pogreške u dokumentima, značajkama i dodacima koji mogu ugroziti sigurnost, uključujući spremnost proizvoda za ažuriranje.
 
-#### <a name="office_appguard_createcontainer"></a>Office_AppGuard_CreateContainer
+#### <a name="officeappguardcreatecontainer"></a>Office.AppGuard.CreateContainer
 
 Prikupljamo kodove pogrešaka te informacije o tome je li spremnik već postojao ili nije. Prikupljamo i kodove pogrešaka za ponovno postavljanje u slučaju da ne uspijemo stvoriti spremnik pri prvom pokušaju. Podaci će se upotrebljavati za identifikaciju postotka sesija za koje uspješno stvorimo spremnik za pokretanje aplikacija Office Application Guard. Također, podaci će Microsoftu omogućiti identifikaciju i rješavanje kodova pogrešaka u vezi sa stvaranjem spremnika.
 
@@ -1293,7 +1301,7 @@ Prikupljaju se sljedeća polja:
 
 - **WarmBoot** – prepoznaje je li spremnik već bio stvoren ili nije.
 
-#### <a name="office_appguard_launchfile"></a>Office_AppGuard_LaunchFile
+#### <a name="officeappguardlaunchfile"></a>Office.AppGuard.LaunchFile
 
 Ovaj događaj označava rezultat izvođenja datoteke za pokretanje alata Application Guard. Moći ćemo odrediti postotak sesija u kojima je uspješno pokrenuta datoteka programa Word, Excel ili PowerPoint te šifre pogrešaka za neuspjele pokušaje.
 
@@ -1502,7 +1510,7 @@ Ovo su podvrste podataka u toj kategoriji:
 
 Uspješno funkcioniranje aplikacije. Ograničeno na otvaranje i zatvaranje aplikacije i dokumenata, uređivanje datoteka i zajedničko korištenje dokumenata (suradnju).
 
-#### <a name="account_action"></a>account_action
+#### <a name="accountaction"></a>account.action
 
 Potrebno za osiguranje da konfiguracija računa uspješno radi i koristi za nadzor stanja kreiranja računa, mogućnost dodavanja novih računa e-pošte i nadzor softverskog vraćanja izvornih postavki računa 
 
@@ -1538,7 +1546,7 @@ Prikupljaju se sljedeća polja:
  
 - **total_file_accounts** – broj računa datoteka u aplikaciji u trenutku radnje
 
-#### <a name="account_lifecycle"></a>account_lifecycle
+#### <a name="accountlifecycle"></a>account.lifecycle
 
 Ovaj se događaj prikuplja za osiguranje da konfiguracija računa uspješno radi i koristi za nadzor stanja kreiranja računa, mogućnost dodavanja novih računa e-pošte i nadzor softverskog vraćanja izvornih postavki računa.
 
@@ -1546,7 +1554,7 @@ Prikupljaju se sljedeća polja:
 
 - **action** – vrsta radnje provedene na računu, npr. dodavanje, brisanje ili ponovno postavljanje.
 
-#### <a name="add_new_account_step"></a>add_new_account_step
+#### <a name="addnewaccountstep"></a>add.new.account.step
 
 Ovaj nam događaj omogućuje prepoznati koji je napredak korisnika u stvaranju obrasca za novi račun.  To označava kada je korisnik prešao na drugi korisnik ili je odustao od rada.  Te su nam informacije potrebne da bismo prepoznali postoje li neispravni koraci te da bismo osigurali da je stvaranje korisničkog računa bilo uspješno. 
 
@@ -1554,7 +1562,7 @@ Prikuplja se sljedeće polje:
 
 - **OTAddAccountCurrentStep** – to može imati sljedeće vrijednosti: profile_form, redirect_mobile_check, mobile_check_success
 
-#### <a name="app_error"></a>app_error
+#### <a name="apperror"></a>app.error
 
 Prati kritične pogreške korištene aplikacije da bismo mogli spriječiti probleme koji mogu prouzročiti rušenje aplikacije ili vam onemogućiti čitanje e-pošte.
 
@@ -1600,7 +1608,7 @@ Prikupljaju se sljedeća polja:
 
 Svi su znakovi također moguća svojstva. To nam pomaže razumjeti znakove u tijelu skice poruke kada je pogreška nastupila. Primjerice, „a”, „b” i „c” su moguća svojstva.
 
-#### <a name="app_launch_report"></a>app_launch_report
+#### <a name="applaunchreport"></a>app.launch.report
 
 Ovaj nam događaj omogućava prepoznavanje i popravljanje problema kada se Outlook pokreće sporo ili nepotpuno, zbog čega korisnici imaju probleme s korištenjem naše aplikacije. To uključuje informacije o konkretnim značajkama koje su bile omogućene i koliko su dugo dijelovi pokretanja trajali.
 
@@ -1636,7 +1644,7 @@ Prikupljaju se sljedeća polja:
 
 - **num_mail_accounts** – govori nam broj računa pošte u aplikaciji.
 
-#### <a name="calendar_action"></a>calendar_action
+#### <a name="calendaraction"></a>calendar.action
 
 Koristi se za nadzor svih mogućih negativnih utjecaja na vašu mogućnost provedbe osnovnih radnji kalendara kao što su kreiranje ili uređivanje događaja.  Događaj također može uključivati niz naziva svojstava te jesu li se ona promijenila ili nisu. Primjerice, „title_changed”, „online_meeting_changed” i „description_changed” nazivi su svojstava koja su uključena kako bi nam pomogla razumjeti postoje li problemi s uređivanjem određenih svojstava.
 
@@ -1714,7 +1722,7 @@ Prikupljaju se sljedeća polja:
 
 - **value** – pojedinost specifična za radnju kao što je trajanje odgađanja upozorenja ili kategorija ponavljanja do. Pomaže nam razumjeti kontekst u kojem je radnja provedena. 
 
-#### <a name="combined_search_use"></a>combined_search_use
+#### <a name="combinedsearchuse"></a>combined.search.use
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu sposobnost provedbe ključnih funkcija pretraživanja kao što su traženje pošte, kontakata ili događaja.
 
@@ -1723,6 +1731,8 @@ Sljedeća se polja prikupljaju na svim uređajima iOS i Android:
 - **account_switcher_action_type** – ova vrsta radnje prati je li korisnik koristio preglednik računa bilo u jednostavnom otkrivanju ili se odlučio za promjenu računa
 
 - **action_type** – vrsta radnje koja je provedena za pretraživanje. Ovo prepoznaje je li pretraživanje pokrenuto, provodi li se ili je dovršeno te koje su se radnje provodile tijekom pretraživanja, tj. je li korišten mikrofon. Ovo je ključno za osiguravanje točnih i korisnih pretraživanja. 
+
+- **conversation_id** – jedinstveni ID za svaku sesiju pretraživanja (tj. svaki put kada korisnik otvori okvir za pretraživanje)
 
 - **entrance_type** – ovo određuje kako je korisnik pokrenuo upit za pretraživanje, iz kartice Pretraživanje, nulto pretraživanje, zaglavlje pretraživanja ili rezultat pretraživanja. 
 
@@ -1764,6 +1774,8 @@ Sljedeća se polja prikupljaju na svim aplikacijama za iOS programa Outlook Mobi
 
 - **conversation_result_selected_count** – prati koliko je razgovora označeno tijekom kombinirane sesije pretraživanja
 
+- **mail_paging_gesture_count** – prati koliko je gesti listanja stranica za pretraživanje pošte izvršeno unutar kombinirane sesije pretraživanja
+
 - **mail_requests_count** – prati koliko je zahtjeva za pretraživanje pošte poslano unutar kombinirane sesije pretraživanja
 
 - **people_filter_selected_contacts_count** – prati koliko je kontakata odabrano u filtru za osobe
@@ -1786,7 +1798,7 @@ Sljedeća se polja prikupljaju na svim aplikacijama za iOS programa Outlook Mobi
 
 - **ui_reload_status_time** – bilježi ukupno vrijeme utrošeno na ponovno učitavanje korisničkog sučelja zbog ažuriranja statusa (tijekom određenog upita)
 
-#### <a name="compose_mail_accessory"></a>compose_mail_accessory
+#### <a name="composemailaccessory"></a>compose.mail.accessory
 
 Ovaj događaj omogućava nam prepoznavanje i popravljanje problema s ključnim radnjama sastavljanja poruka kako ne biste imali problema s prilaganjem datoteke, snimanjem fotografije kao privitka ili slanjem svoje raspoloživosti.
 
@@ -1801,7 +1813,7 @@ Prikupljaju se sljedeća polja:
 - **toolbar_type** – obavijestite nas o vrsti alatne trake koja se prikazuje na stranici za sastavljanje. Moguće su vrijednosti compose_actions i formatting.
 
 
-#### <a name="conversation_view_action"></a>conversation_view_action
+#### <a name="conversationviewaction"></a>conversation.view.action
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost prikaza i odgovaranja na poruke e-pošte
 
@@ -1823,7 +1835,7 @@ Prikupljaju se sljedeća polja:
 
 - **use_default_quick_reply_mode** – govori nam koji je zadani način za brzi odgovor korišten kako bi nam pomogao prepoznati probleme u vezi s doživljajem brzih odgovora za e-poštu
 
-#### <a name="draft_action"></a>draft_action
+#### <a name="draftaction"></a>draft.action
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost kreiranja i spremanja skica pošte.
 
@@ -1849,7 +1861,7 @@ Prikupljaju se sljedeća polja:
  
 - **thread_id** – ID niti razgovora s kojim je skica povezana
 
-#### <a name="drag_and_drop"></a>drag_and_drop
+#### <a name="draganddrop"></a>drag.and.drop
 
 Ovaj nam događaj omogućuje prepoznavanje je li radnja povlačenja i ispuštanja bila uspješna ili ne.  To se koristi za osiguravanje da iskustva povlačenja i ispuštanja pravilno funkcioniraju u svim aplikacijama, kako kao događaj povlačenja u Outlook tako i kao događaj povlačenja koji izlazi izvan okvira programa Outlook.  Tim podacima možemo osigurati da sveobuhvatno iskustvo s drugim aplikacijama funkcionira na očekivani način.
 
@@ -1861,7 +1873,7 @@ Prikupljaju se sljedeća polja:
 
 - **source** – u slučaju radnje ispuštanja, to će nam javiti s koje je lokacije korisnik započeo povlačenje. To nam pomaže da bolje otkrijemo poteškoće s određenim izvorom kao što su OneDrive ili Datoteke u određeno mjesto za ispuštanje, kao što je nova poruka e-pošte.
 
-#### <a name="drawer_event"></a>drawer_event
+#### <a name="drawerevent"></a>drawer.event
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost pristupanja mapama u vašoj ulaznoj pošti
 
@@ -2378,7 +2390,7 @@ Prikupljaju se sljedeća polja:
 - **RMS.StatusCode** – identifikacijski broj scenarija definiran API-jem
 
 
-#### <a name="link_clicked_action"></a>link_clicked_action
+#### <a name="linkclickedaction"></a>link.clicked.action
 
 Taj se događaj upotrebljava za praćenje uspjeha korisnika prilikom pregledavanja URL-a u web-prikazu preglednika Edge i dovršavanja standardnih web scenarija u tom web-prikazu, bez suočavanja s pogreškama
 
@@ -2411,7 +2423,7 @@ Prikupljaju se sljedeća polja:
 - **txp_component** – ako je web-prikaz preglednika Edge pokrenut s TXP kartice, vrsta komponente korisničkog sučelja za tu karticu
 
 
-#### <a name="mail_action"></a>mail_action
+#### <a name="mailaction"></a>mail.action
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost provedbe ključnih radnji za poštu (poput pokretanja načina poruka u obliku niti, osiguravanja funkcije razvrstavanja pošte) kako bi se osiguralo da naša propisno funkcionira za poštu.
 
@@ -2501,7 +2513,7 @@ Prikupljaju se sljedeća polja:
 
 - **type** – vrsta dokumenta koji se otvara putem veze
 
-#### <a name="mail_compose"></a>mail_compose
+#### <a name="mailcompose"></a>mail.compose
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost sastavljanja i odgovaranja na poruke e-pošte, na primjer nailaženje na probleme s odgovaranjem svima, formatiranjem vaših poruka e-pošte ili slanjem vaših poruka e-pošte.
 
@@ -2525,7 +2537,7 @@ Prikupljaju se sljedeća polja:
 
 - **thread_id** – ID niti razgovora na koji se odgovara ili iz kojeg se prosljeđuje kako bi nam pomogao prepoznati probleme u vezi s određenim nizom
 
-#### <a name="meeting_call_to_action"></a>meeting_call_to_action
+#### <a name="meetingcalltoaction"></a>meeting.call.to.action
 
 Koristi se za nadzor mogućeg negativnog utjecaja na vašu mogućnost provedbe ključnih radnji sastanka kao što su kreiranje, uređivanje i odgovaranje na sastanke.
 
@@ -2553,7 +2565,7 @@ Prikupljaju se sljedeća polja:
 
 - **with_message_enabled** – označava može li korisnik odgovoriti porukom kako bi nam pomogao prepoznati probleme u vezi s odgovaranjem na pozivnice na sastanak
 
-#### <a name="office_android_docsui_fileoperations_opendocumentmeasurements"></a>Office_Android_DocsUI_FileOperations_OpenDocumentMeasurements
+#### <a name="officeandroiddocsuifileoperationsopendocumentmeasurements"></a>Office.Android.DocsUI.FileOperations.OpenDocumentMeasurements
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje se pokreću na platformi Android i evidentira kada se provodi radnja otvaranja datoteke. Događaj pomaže jamčiti da je radnja otvaranja datoteke sigurna, ažurna i da se pravilno provodi. Cilj prikupljanja ovih podataka jest kontinuirano poboljšanje funkcije otvaranja datoteke. 
 
@@ -2663,7 +2675,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
-#### <a name="office_android_earlytelemetry_expansionfilesavailability"></a>Office_Android_EarlyTelemetry_ExpansionFilesAvailability
+#### <a name="officeandroidearlytelemetryexpansionfilesavailability"></a>Office.Android.EarlyTelemetry.ExpansionFilesAvailability
 
 Omogućujemo ekspanzijske datoteke za komplet paketa za Android (APK) za mobilnu aplikaciju Office. Ekspanzijske datoteke APK-a jesu dopunske datoteke resursa koje razvojni programeri aplikacija na sustavu Android mogu objaviti zajedno sa svojom aplikacijom. Da bi se razumjela pouzdanost ekspanzijskih datoteka, bilježimo zastavicu koja pri svakom pokretanju označava jesu li dostupne ekspanzijske datoteke ili nisu.
 
@@ -2671,7 +2683,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ExpansionFilesAvailable** – Booleova zastavica koja označava jesu li ekspanzijske datoteke APK-a dostupne na uređaju tijekom pokretanja aplikacije.
 
-#### <a name="office_android_earlytelemetry_expansionfilesdownloader"></a>Office_Android_EarlyTelemetry_ExpansionFilesDownloader
+#### <a name="officeandroidearlytelemetryexpansionfilesdownloader"></a>Office.Android.EarlyTelemetry.ExpansionFilesDownloader
 
 Omogućujemo ekspanzijske datoteke za komplet paketa za Android (APK) za mobilnu aplikaciju Office. Ekspanzijske datoteke APK-a jesu dopunske datoteke resursa koje razvojni programeri aplikacija na sustavu Android mogu objaviti zajedno sa svojom aplikacijom.  Da bi se razumjela pouzdanost našeg mehanizma preuzimanja ekspanzijskih datoteka, zapisujemo zastavicu koja označava možemo li uspješno preuzeti ekspanzijske datoteke.
 
@@ -2680,15 +2692,15 @@ Prikupljaju se sljedeća polja:
 - **Data_DownloadSuccess** – Booleova zastavica koja označava je li preuzimanje ekspanzijskih datoteka APK-a bilo uspješno kad god pokušamo preuzimanje tijekom pokretanja aplikacije.
 
 
-#### <a name="office_android_intune_intunecompliancerequest"></a>Office_Android_Intune_IntuneComplianceRequest
+#### <a name="officeandroidintuneintunecompliancerequest"></a>Office.Android.Intune.IntuneComplianceRequest
 
-Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Koristi se za razumijevanje broja krajnjih korisnika koji pokušavaju koristiti aplikacije u okviru ove konfiguracije pravilnika i kombinira s drugim događajem, Office_Android_Intune_IntuneComplianceStatus, radi osiguravanja provedbe konfiguriranog pravilnika. 
+Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Koristi se za razumijevanje broja krajnjih korisnika koji pokušavaju koristiti aplikacije u okviru ove konfiguracije pravilnika i kombinira s drugim događajem, Office.Android.Intune.IntuneComplianceStatus, radi osiguravanja provedbe konfiguriranog pravilnika. 
 
 Ne prikupljaju se nikakva polja podataka.
 
-#### <a name="office_android_intune_intunecompliancestatus"></a>Office_Android_Intune_IntuneComplianceStatus
+#### <a name="officeandroidintuneintunecompliancestatus"></a>Office.Android.Intune.IntuneComplianceStatus
 
-Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Ovaj događaj označava status usklađivanja aplikacije u koju se korisnik prijavio i koristi se za istraživanje kvarova. On se kombinira s drugim događajem, Office_Android_Intune_IntuneComplianceRequest, radi osiguravanja provedbe konfiguriranog pravilnika.
+Ovaj se događaj prikuplja za aplikacije sustava Office na platformi Android, uključujući Office Mobile, Word, Excel, PowerPoint i OneNote. Događaj označava pokušaj prijave na račun ustanove ili tvrtke s licencom za Intune za koji je administrator tvrtke ili ustanove konfigurirao pravilnike za uvjetni pristup aplikacijama. Ovaj događaj označava status usklađivanja aplikacije u koju se korisnik prijavio i koristi se za istraživanje kvarova. Kombinira se s drugim događajem, Office.Android.Intune.IntuneComplianceRequest, radi osiguravanja provedbe konfiguriranog pravilnika.
   
 Prikupljaju se sljedeća polja:
 
@@ -2801,7 +2813,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data.CollectionTime** – vremenska oznaka zapisivanja događaja rušenja
 
-#### <a name="office_appdocs_appdocs_documentoperation"></a>Office_AppDocs_AppDocs_DocumentOperation
+#### <a name="officeappdocsappdocsdocumentoperation"></a>Office.AppDocs.AppDocs.DocumentOperation
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se odvija operacija datoteke (stvaranje/otvaranje/spremanje/izvoz itd.) te se upotrebljava za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o operaciji datoteke.
 
@@ -2919,7 +2931,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
-#### <a name="office_docs_appdocs_operationopenfrommrubypath"></a>Office_Docs_AppDocs_OperationOpenFromMruByPath
+#### <a name="officedocsappdocsoperationopenfrommrubypath"></a>Office.Docs.AppDocs.OperationOpenFromMruByPath
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se operacija otvaranja datoteke odvija pomoću puta navedenog na popisu nedavnih datoteka te se koristi za razumijevanje i postavljanje prioriteta pogrešaka korisničkog doživljaja na temelju podataka o operaciji otvaranja datoteke.
 
@@ -3031,7 +3043,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
-#### <a name="office_docs_appdocs_operationopenfrommrubyurl"></a>Office_Docs_AppDocs_OperationOpenFromMruByUrl
+#### <a name="officedocsappdocsoperationopenfrommrubyurl"></a>Office.Docs.AppDocs.OperationOpenFromMruByUrl
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se operacija otvaranja datoteke odvija pomoću URL-a navedenog na popisu nedavnih datoteka te se koristi za razumijevanje i postavljanje prioriteta korisničkog doživljaja na temelju podataka o operaciji otvaranja datoteke. 
 
@@ -3144,7 +3156,7 @@ Prikupljaju se sljedeća polja:
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
 
-#### <a name="office_docs_appdocs_operationopenfrompath"></a>Office_Docs_AppDocs_OperationOpenFromPath
+#### <a name="officedocsappdocsoperationopenfrompath"></a>Office.Docs.AppDocs.OperationOpenFromPath
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se operacija otvaranja datoteke odvija na temelju puta te se koristi za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o operaciji otvaranja datoteke.
 
@@ -3256,7 +3268,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
-#### <a name="office_docs_appdocs_operationopenfromprotocolhandler"></a>Office_Docs_AppDocs_OperationOpenFromProtocolHandler
+#### <a name="officedocsappdocsoperationopenfromprotocolhandler"></a>Office.Docs.AppDocs.OperationOpenFromProtocolHandler
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se operacija otvaranja datoteke odvija iz neke druge aplikacije putem sučelja rukovatelja protokolima te se koristi za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o operaciji otvaranja datoteke.
 
@@ -3368,7 +3380,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
-#### <a name="office_docs_appdocs_operationopenfromshell"></a>Office_Docs_AppDocs_OperationOpenFromShell
+#### <a name="officedocsappdocsoperationopenfromshell"></a>Office.Docs.AppDocs.OperationOpenFromShell
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se operacija otvaranja datoteke odvija iz ljuske te se koristi za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o operaciji otvaranja datoteke.
 
@@ -3481,7 +3493,7 @@ Prikupljaju se sljedeća polja:
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
 
-#### <a name="office_docs_appdocs_operationopenfromurl"></a>Office_Docs_AppDocs_OperationOpenFromUrl
+#### <a name="officedocsappdocsoperationopenfromurl"></a>Office.Docs.AppDocs.OperationOpenFromUrl
 
 Taj se događaj prikuplja za aplikacije sustava Office na uređajima sa sustavom Android, iOS, Universal ili Windows. Događaj bilježi kada se operacija otvaranja datoteke odvija na temelju URL-a te se koristi za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o operaciji otvaranja datoteke.
 
@@ -3594,7 +3606,7 @@ Prikupljaju se sljedeća polja:
 - **Data_UnpackLinkPromptResult** – enumeracija koja predstavlja odgovor odzivnika veze za raspakiravanje.
 
 
-#### <a name="office_apple_activateperpetual"></a>Office_Apple_ActivatePerpetual
+#### <a name="officeappleactivateperpetual"></a>Office.Apple.ActivatePerpetual
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja trajnog tijeka aktivacije kao i za istraživanje uzroka pogrešaka pregledom vrijednosti FailedAt.
 
@@ -3602,7 +3614,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FailedAt** – prikupljamo niz koji predstavlja gdje smo pogriješili u tijeku aktiviranja trajne licence.
 
-#### <a name="office_apple_activatesubscription"></a>Office_Apple_ActivateSubscription
+#### <a name="officeappleactivatesubscription"></a>Office.Apple.ActivateSubscription
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Prikupljamo informacije vezane za migraciju iz naslijeđenog kôd stoga za licenciranje u vNext kôd stoga za licenciranje. To se koristi za nadziranje stanja tijeka aktivacije pretplate kao i za praćenje ako je to migracija za licenciranje vNext i ako je korišten primarni identitet.
 
@@ -3612,9 +3624,9 @@ Prikupljaju se sljedeća polja:
 
 - **Data_NULSubscriptionLicensed** – vrijednost true/false koja označava stanje pretplate
 
-#### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
+#### <a name="officeapplecisauthticketwithidentity"></a>Office.Apple.CISAuthTicketWithIdentity
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Appleovim platformama. Događaj se koristi za dohvaćanje neuspjelih stvaranja tokena provjere autentičnosti tijekom kupnje u aplikaciji na Macu (događaj zapisuje primljeni kod pogreške).  Ovaj događaj koristi se za prepoznavanje i pomoć pri otklanjanju poteškoća pri neuspjelim stvaranjima tokena provjere autentičnosti
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za dohvaćanje neuspjelih stvaranja tokena provjere autentičnosti tijekom kupnje u aplikaciji na Macu (događaj zapisuje primljeni kod pogreške).  Ovaj događaj koristi se za prepoznavanje i pomoć pri otklanjanju poteškoća pri neuspjelim stvaranjima tokena provjere autentičnosti
 
 Prikupljaju se sljedeća polja:
 
@@ -3624,7 +3636,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ValidIdentity** – ako klijent ima valjani identitet
 
-#### <a name="office_apple_inappassociationactivity"></a>Office_Apple_InAppAssociationActivity
+#### <a name="officeappleinappassociationactivity"></a>Office.Apple.InAppAssociationActivity
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Prikupljamo podatke povezane s vezom proizvoda nakon kupnje unutar aplikacije. Bilježimo koji pretplatni SKU povezujemo.  To se koristi za nadziranje stanja kupnje veze proizvoda unutar aplikacije.
 
@@ -3632,7 +3644,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ProductID** – Pretplatni SKU s kojim pokušavamo povezati proizvod.
 
-#### <a name="office_apple_inapppurchaseactivity"></a>Office_Apple_InAppPurchaseActivity
+#### <a name="officeappleinapppurchaseactivity"></a>Office.Apple.InAppPurchaseActivity
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. 
 
@@ -3647,7 +3659,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_PurchaseRequestType** – vrsta zahtjeva za kupnju
 
-#### <a name="office_apple_intune"></a>Office_Apple_InTune
+#### <a name="officeappleintune"></a>Office.Apple.InTune
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Prikupljamo da li trenutnom sesijom upravlja Intune. To se koristi za zaokretanje/filtriranje sesija kojim upravlja Intune i omogućuje nam istraživanje potencijalnih problema vezanih uz pokretanje sustava Office u obliku aplikacije kojoj upravlja Intune.
 
@@ -3655,7 +3667,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_EventID** – prikupljamo niz koji predstavlja kôd koji pokazuje radi li se o sesiji kojom upravlja Intune.
 
-#### <a name="office_apple_licensing_mac_licensingstate"></a>Office_Apple_Licensing_Mac_LicensingState
+#### <a name="officeapplelicensingmaclicensingstate"></a>Office.Apple.Licensing.Mac.LicensingState
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi trenutno stanje licence za sesiju u stroju (OLS ID licence, SKU koji se koristi, razdoblje mirovanje ili ne, RFM, itd.). Prikupljeni podaci koriste se za otkrivanje pogrešaka i istraživanje uzroka neuspjeha. 
 
@@ -3707,7 +3719,7 @@ Prikupljaju se sljedeća polja:
 
 - **Activity_DateTimeTicks** – vrijeme podataka za aktivnost
 
-#### <a name="office_docs_apple_docsuxiossaveasthroughfilemenu"></a>Office_Docs_Apple_DocsUXiOSSaveAsThroughFileMenu 
+#### <a name="officedocsappledocsuxiossaveasthroughfilemenu"></a>Office.Docs.Apple.DocsUXiOSSaveAsThroughFileMenu 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kada se odvija operacija „Spremi kao” i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke, poput kategorija lokacije.  Operacija „Spremi kao” događa se kada god korisnik stvori novu datoteku i spremi je prvi put ili spremi kopiju postojeće datoteke na novu lokaciju.
 
@@ -3717,7 +3729,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ServiceType** – apstraktna kategorizacija nove lokacije datoteke nakon dovršetka spremanja kao što su „SharePoint”, „OneDrive” „Lokalno”, „WOPI”, itd., a izričito ne stvarna lokacija datoteke.
 
-#### <a name="office_docs_apple_docsuxmacatmentioninsertedatmention"></a>Office_Docs_Apple_DocsUXMacAtMentionInsertedAtMention 
+#### <a name="officedocsappledocsuxmacatmentioninsertedatmention"></a>Office.Docs.Apple.DocsUXMacAtMentionInsertedAtMention 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Taj događaj bilježi kada korisnik „@” spominje drugog korisnika i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju načina na koji korisnici surađuju s drugim korisnicima.
 
@@ -3725,7 +3737,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_CharactersTyped** – numerička vrijednost koja označava ukupni broj znakova unesenih u spomenuti tekst „@”.
 
-#### <a name="office_docs_apple_docsuxmacodspsharingwebviewsharingcompleted"></a>Office_Docs_Apple_DocsUXMacODSPSharingWebViewSharingCompleted 
+#### <a name="officedocsappledocsuxmacodspsharingwebviewsharingcompleted"></a>Office.Docs.Apple.DocsUXMacODSPSharingWebViewSharingCompleted 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik izabere zajedničko korištenje dokumenta u oblaku pomoću značajke zajedničkog korištenja servisa OneDrive i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju zajedničkog korištenja dokumenata.
 
@@ -3735,7 +3747,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ShareWebViewMode** – niz ugrađen u kod koji označava koji način rada za zajedničko korištenje je bio aktivan kada je zajedničko korištenje dovršeno uključujući, ali ne ograničavajući se na „Upravljanje pristupom”, „Spominjanja”, „Zajedničko korištenje”.
 
-#### <a name="office_docsui_collaboration_coauthorgalleryrowtapped"></a>Office_DocsUI_Collaboration_CoauthorGalleryRowTapped 
+#### <a name="officedocsuicollaborationcoauthorgalleryrowtapped"></a>Office.DocsUI.Collaboration.CoauthorGalleryRowTapped 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj događaj bilježi kada korisnik izabere pregled popisa trenutnih suautora.  Ti se podaci koriste za bolje razumijevanje i određivanje prioriteta korisničkih iskustava koji se odnose na istodobno suautorstvo dokumenta.
 
@@ -3743,7 +3755,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_CoauthorCount** – Numerička vrijednost koja predstavlja ukupni broj osoba koje trenutno uređuju isti dokument kao i korisnik.
 
-#### <a name="office_docsui_collaboration_collabcornerpeoplegallerycoauthorsupdated"></a>Office_DocsUI_Collaboration_CollabCornerPeopleGalleryCoauthorsUpdated  
+#### <a name="officedocsuicollaborationcollabcornerpeoplegallerycoauthorsupdated"></a>Office.DocsUI.Collaboration.CollabCornerPeopleGalleryCoauthorsUpdated 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi kada se promijeni broj aktivnih suautora u dokumentu u oblaku.  Ti se podaci koriste za bolje razumijevanje i određivanje prioriteta korisničkih iskustava koji se odnose na istodobno suautorstvo dokumenta.
 
@@ -3759,7 +3771,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-#### <a name="office_docsui_docstage_docstagecreatenewfromtemplate"></a>Office_DocsUI_DocStage_DocStageCreateNewFromTemplate 
+#### <a name="officedocsuidocstagedocstagecreatenewfromtemplate"></a>Office.DocsUI.DocStage.DocStageCreateNewFromTemplate 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi kada se stvara nova datoteka iz sučelja „Novo iz predloška” i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka o stvaranju dokumenta.
 
@@ -3777,7 +3789,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_TemplateType** – klasifikacija koja će vam pomoći u razlikovanju vrste predložaka poput, ali ne ograničavajući se na „Mrežne predloške”, predloške „Mrežnog pretraživanja”, „Lokalne” predloške.
 
-#### <a name="office_docsui_docstage_recommendedopen"></a>Office_DocsUI_DocStage_RecommendedOpen
+#### <a name="officedocsuidocstagerecommendedopen"></a>Office.DocsUI.DocStage.RecommendedOpen
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi kada se operacija otvaranja datoteke odvija iz odjeljka s preporučenim datotekama galerije dokumenata i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke.
 
@@ -3785,7 +3797,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_Success** – Booleova vrijednost koja označava je li operacija uspjela.
 
-#### <a name="office_docsui_fileoperations_docsuifileopenmacrequired"></a>Office_DocsUI_FileOperations_DocsUIFileOpenMacRequired
+#### <a name="officedocsuifileoperationsdocsuifileopenmacrequired"></a>Office.DocsUI.FileOperations.DocsUIFileOpenMacRequired
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi operaciju otvaranja datoteke i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke kao što su kategorije lokacije „ServiceType” i prva četiri znaka proširenja.
 
@@ -3795,7 +3807,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ServiceType** – apstraktna kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd.
 
-#### <a name="office_docsui_fileoperations_opendocumentmeasurements"></a>Office_DocsUI_FileOperations_OpenDocumentMeasurements
+#### <a name="officedocsuifileoperationsopendocumentmeasurements"></a>Office.DocsUI.FileOperations.OpenDocumentMeasurements
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na iOS platformi. Događaj bilježi kada se operacija otvaranja datoteke odvija i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke.
 
@@ -3899,7 +3911,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_TimeSplitMeasurements** – vrijednost niza koja evidentira trajanje vremena provedenog u nekim pozivima funkcije, u obliku s oznakom funkcije, početnom vremenskom oznakom i trajanjem.
 
-#### <a name="office_docsui_fileoperations_openfilewithreason"></a>Office_DocsUI_FileOperations_OpenFileWithReason 
+#### <a name="officedocsuifileoperationsopenfilewithreason"></a>Office.DocsUI.FileOperations.OpenFileWithReason 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj bilježi operaciju otvaranja datoteke i koristi se za razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju podataka operacije otvaranja datoteke kao što su kategorije lokacije „ServiceType”, a odakle je u aplikaciji korisnik zatražio otvaranje datoteke.
 
@@ -3913,7 +3925,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ServiceType** – apstraktna numerička kategorizacija lokacije datoteke kao što su „SharePoint”, „OneDrive”, „Lokalno”, „WOPI” itd., a izričito ne stvarna lokacija datoteke.
 
-#### <a name="office_docsui_fileoperations_savetourl"></a>Office_DocsUI_FileOperations_SaveToURL
+#### <a name="officedocsuifileoperationssavetourl"></a>Office.DocsUI.FileOperations.SaveToURL
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kada se odvija operacija „Spremi kao” i koristi se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke, poput kategorija lokacije i prva četiri znaka proširenja.  Operacija „Spremi kao” događa se kada god korisnik stvori novu datoteku i spremi je prvi put ili spremi kopiju postojeće datoteke na novu lokaciju.
 
@@ -3933,7 +3945,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_SaveOperationType** – numerička vrijednost definirana u grupi vrijednosti tvrtke Apple NSSaveOperationType.
 
-#### <a name="office_docsui_sharingui_cloudupsellshown"></a>Office_DocsUI_SharingUI_CloudUpsellShown 
+#### <a name="officedocsuisharinguicloudupsellshown"></a>Office.DocsUI.SharingUI.CloudUpsellShown 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik prođe kroz nadogradnju dokumenta u protok oblaka.  Ti se podaci koriste za bolje razumijevanje i određivanje prioriteta korisničkih iskustava povezanih s premještanjem dokumenata na lokacije u oblaku.
 
@@ -3951,7 +3963,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_IsSheetModal** – Booleova vrijednost koja označava je li iskustvo nadogradnje predstavljeno modalno ili ne.
 
-#### <a name="office_docsui_sharingui_cloudupsellupload"></a>Office_DocsUI_SharingUI_CloudUpsellUpload 
+#### <a name="officedocsuisharinguicloudupsellupload"></a>Office.DocsUI.SharingUI.CloudUpsellUpload 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik odluči prenijeti novu ili lokalnu datoteku u oblak i rezultat te operacije.  Ti se podaci koriste za bolje razumijevanje i određivanje prioriteta korisničkih iskustava povezanih s premještanjem dokumenata na lokacije u oblaku.
 
@@ -3977,7 +3989,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_UploadResult** – niz ugrađen u kod koji označava rezultat pokušaja prijenosa, uključujući ali ne ograničavajući se na: „Uspjeh”, „Korisnik je otkazao prijenos” i „Predautorizacija nije uspjela”.
 
-#### <a name="office_docsui_sharingui_copylinkoperation"></a>Office_DocsUI_SharingUI_CopyLinkOperation
+#### <a name="officedocsuisharinguicopylinkoperation"></a>Office.DocsUI.SharingUI.CopyLinkOperation
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik izabere zajedničko korištenje generiranjem veze na dokument u oblaku i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju zajedničkog korištenja dokumenata.
 
@@ -3989,7 +4001,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na „FileMenu”, „OpenTabShareActionMenu”, „RecentTabShareActionMenu”.
 
-#### <a name="office_docsui_sharingui_docsuionedriveshare"></a>Office_DocsUI_SharingUI_DocsUIOneDriveShare 
+#### <a name="officedocsuisharinguidocsuionedriveshare"></a>Office.DocsUI.SharingUI.DocsUIOneDriveShare 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik izabere zajedničko korištenje dokumenta u oblaku pomoću značajke zajedničkog korištenja servisa OneDrive i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju zajedničkog korištenja dokumenata.
 
@@ -4005,7 +4017,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_WebViewLoadTimeInMs** – Numerička vrijednost koja bilježi vrijeme potrebno za učitavanje web korisničkog sučelja.
 
-#### <a name="office_docsui_sharingui_invitepeople"></a>Office_DocsUI_SharingUI_InvitePeople 
+#### <a name="officedocsuisharinguiinvitepeople"></a>Office.DocsUI.SharingUI.InvitePeople 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik odluči pozvati ljude u dokument u oblaku i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju zajedničkog korištenja dokumenata.
 
@@ -4021,7 +4033,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ShareScenario** – opis lokacije niza ugrađenog u kod unutar korisničkog sučelja aplikacije odakle se datoteka zajednički koristi uključujući ali ne ograničavajući se na „FileMenu”, „OpenTabShareActionMenu”, „RecentTabShareActionMenu”.
 
-#### <a name="office_docsui_sharingui_sendacopyoperation"></a>Office_DocsUI_SharingUI_SendACopyOperation
+#### <a name="officedocsuisharinguisendacopyoperation"></a>Office.DocsUI.SharingUI.SendACopyOperation
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik odluči poslati kopiju dokumenta i koristi se za bolje razumijevanje i postavljanje prioriteta korisničkog iskustva na temelju zajedničkog korištenja dokumenata.
 
@@ -4041,7 +4053,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_SharingService** – Booleova vrijednost koja označava je li datoteka stvorena kada je korisnik tražio predložak.
 
-#### <a name="office_docsui_sharingui_upsellshare"></a>Office_DocsUI_SharingUI_UpsellShare 
+#### <a name="officedocsuisharinguiupsellshare"></a>Office.DocsUI.SharingUI.UpsellShare 
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj bilježi kada korisnik prođe kroz nadogradnju dokumenta u protok oblaka prilikom pokušaja zajedničkog korištenja dokumenta.  Ti se podaci koriste za bolje razumijevanje i određivanje prioriteta korisničkih iskustava povezanih s premještanjem dokumenata na lokacije u oblaku.
 
@@ -4903,7 +4915,7 @@ Prikupljaju se sljedeća polja:
 
 - **EventName** –naziv događaja koji se zapisuje
 
-#### <a name="office_firstrun_apple_activationresult"></a>Office_FirstRun_Apple_ActivationResult
+#### <a name="officefirstrunappleactivationresult"></a>Office.FirstRun.Apple.ActivationResult
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktiviranja pretplate na Office 365 zajedno s protokom koji se upotrebljava za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja itd.).
 
@@ -4915,9 +4927,9 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ActivationStatusFlowType** – numerička vrijednost koja pokazuje vrstu protoka aktivacije
 
-#### <a name="office_firstrun_apple_activationstatus"></a>Office_FirstRun_Apple_ActivationStatus
+#### <a name="officefirstrunappleactivationstatus"></a>Office.FirstRun.Apple.ActivationStatus
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Appleovim platformama. Događaj se upotrebljava za utvrđivanje rezultata aktiviranja pretplate na Office 365 zajedno s protokom koji se upotrebljava za aktiviranje (FRE, unutar aplikacije, kupnja itd.). Prikupljamo podatke koji sadrže vrstu aktivacije, vrstu protoka (FRE/DocStage /Kupnja) i ID servisa za licenciranje sustava Office.
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se upotrebljava za utvrđivanje rezultata aktiviranja pretplate na Office 365 zajedno s protokom koji se upotrebljava za aktiviranje (FRE, unutar aplikacije, kupnja itd.). Prikupljamo podatke koji sadrže vrstu aktivacije, vrstu protoka (FRE/DocStage /Kupnja) i ID servisa za licenciranje sustava Office.
 
 Prikupljaju se sljedeća polja:
 
@@ -4929,7 +4941,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ActivationTypeStatus** – kôd statusa aktivacije.
 
-#### <a name="office_firstrun_apple_firstruncomplete"></a>Office_FirstRun_Apple_FirstRunComplete
+#### <a name="officefirstrunapplefirstruncomplete"></a>Office.FirstRun.Apple.FirstRunComplete
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam omogućuje da znamo koristi li korisnik aplikaciju besplatno uz ograničenja, koja je vrsta protoka (FRE/DocStage/Kupnja) i vrsta identiteta (MSP/OrgID). Ovaj događaj koristimo kako bismo saznali je li iskustvo prvog pokretanja (FRE) dovršeno i vrstu identiteta koja se koristi za prijavu (MSA/OrgID).
 
@@ -4943,7 +4955,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FirstRunCompletedIdentityType** – vrsta identiteta korisnika koji je dovršio protok
 
-#### <a name="office_firstrun_apple_firstrunstart"></a>Office_FirstRun_Apple_FirstRunStart
+#### <a name="officefirstrunapplefirstrunstart"></a>Office.FirstRun.Apple.FirstRunStart
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam omogućuje da znamo je li korisnik ušao u iskustvo prvog pokretanja i vrstu protoka koji se izvodi (FRE/DocStage/Kupnja). Ovaj događaj koristimo kako bismo saznali je li iskustvo prvog pokretanja (FRE) uspješno pokrenuto.
 
@@ -4953,7 +4965,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FirstRunStartedFlowType** – kôd koji označava vrstu korisničkog protoka koji je dovršen 
 
-#### <a name="office_firstrun_apple_firstrunstartedandcompleted"></a>Office_FirstRun_Apple_FirstRunStartedAndCompleted
+#### <a name="officefirstrunapplefirstrunstartedandcompleted"></a>Office.FirstRun.Apple.FirstRunStartedAndCompleted
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam omogućuje da znamo koristi li korisnik aplikaciju besplatno uz ograničenja, koja je vrsta protoka (FRE/DocStage/Kupnja) i vrsta identiteta (MSP/OrgID). Ovaj događa koristimo za utvrđivanje stanja i učinkovitosti tijeka iskustva prvog pokretanja (FRE).
 
@@ -4971,7 +4983,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FirstRunStartedFlowType** – kôd koji označava vrstu korisničkog protoka koji je pokrenut
 
-#### <a name="office_firstrun_apple_inapppurchaseactivationfail"></a>Office_FirstRun_Apple_InAppPurchaseActivationFail
+#### <a name="officefirstrunappleinapppurchaseactivationfail"></a>Office.FirstRun.Apple.InAppPurchaseActivationFail
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktivacije kupnje unutar aplikacije zajedno s protokom koji se koristi za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja itd.). 
 
@@ -4985,7 +4997,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_AssoicatedSuccessfullyFlowType** – kôd koji označava vrstu korisničkog protoka koji se provodio
 
-#### <a name="office_firstrun_apple_inapppurchaseactivationsuccess"></a>Office_FirstRun_Apple_InAppPurchaseActivationSuccess
+#### <a name="officefirstrunappleinapppurchaseactivationsuccess"></a>Office.FirstRun.Apple.InAppPurchaseActivationSuccess
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktivacije kupnje unutar aplikacije zajedno s protokom koji se koristi za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja itd.). 
 
@@ -4999,7 +5011,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_AssoicatedSuccessfullyFlowType** – kôd koji označava vrstu korisničkog protoka koji se provodio
 
-#### <a name="office_firstrun_apple_inapppurchaseassociationfailed"></a>Office_FirstRun_Apple_InAppPurchaseAssociationFailed
+#### <a name="officefirstrunappleinapppurchaseassociationfailed"></a>Office.FirstRun.Apple.InAppPurchaseAssociationFailed
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktivacije kupnje unutar aplikacije zajedno s protokom koji se koristi za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja itd.). 
 
@@ -5015,7 +5027,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_AssoicationFailedResult** – kôd koji označava vrstu opažene pogreške
 
-#### <a name="office_firstrun_apple_inapppurchaseassociationsuccess"></a>Office_FirstRun_Apple_InAppPurchaseAssociationSuccess
+#### <a name="officefirstrunappleinapppurchaseassociationsuccess"></a>Office.FirstRun.Apple.InAppPurchaseAssociationSuccess
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke kako bismo utvrdili ishod aktivacije kupnje unutar aplikacije zajedno s protokom koji se koristi za aktiviranje (iskustvo prvog pokretanja, protok u aplikaciji, kupnja itd.). 
 
@@ -5029,7 +5041,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_AssoicatedSuccessfullyFlowType** – kôd koji označava vrstu korisničkog protoka koji se provodio
 
-#### <a name="office_firstrun_apple_inapppurchasefailures"></a>Office_FirstRun_Apple_InAppPurchaseFailures
+#### <a name="officefirstrunappleinapppurchasefailures"></a>Office.FirstRun.Apple.InAppPurchaseFailures
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja tijeka aktivacije naše aplikacije. Prikupljamo podatke o ishodu tijeka kupnje unutar aplikacije.
 
@@ -5043,9 +5055,9 @@ Prikupljaju se sljedeća polja:
 
 - **Data_EventId** – kôd koji označava vrstu neuspjeha koji je opažen
 
-#### <a name="office_firstrun_apple_inapppurchasesattempted"></a>Office_FirstRun_Apple_InAppPurchasesAttempted
+#### <a name="officefirstrunappleinapppurchasesattempted"></a>Office.FirstRun.Apple.InAppPurchasesAttempted
 
-Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Appleovim platformama. Događaj se koristi za nadziranje stanja protoka kupnje unutar aplikacije. Prikupljamo podatke za praćenje pokušaja kupnje unutar aplikacije i njihove vrste SKU-a koji se kupuje (mjesečno/godišnje/kućna upotreba/osobno).
+Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja protoka kupnje unutar aplikacije. Prikupljamo podatke za praćenje pokušaja kupnje unutar aplikacije i njihove vrste SKU-a koji se kupuje (mjesečno/godišnje/kućna upotreba/osobno).
 
 Prikupljaju se sljedeća polja:
 
@@ -5055,7 +5067,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_PurchaseSuccessfulFlowType** – kôd koji označava vrstu korisničkog protoka koji se provodio
 
-#### <a name="office_firstrun_apple_inapprestoreattempted"></a>Office_FirstRun_Apple_InAppRestoreAttempted
+#### <a name="officefirstrunappleinapprestoreattempted"></a>Office.FirstRun.Apple.InAppRestoreAttempted
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja protoka kupnje unutar aplikacije. Prikupljamo podatke za praćenje pokušaja obnove unutar aplikacije
 
@@ -5065,7 +5077,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_RestoreAttemptFlowType** – kôd koji označava vrstu korisničkog protoka koji se provodio
 
-#### <a name="office_firstrun_apple_inapprestoreattemptfailed"></a>Office_FirstRun_Apple_InAppRestoreAttemptFailed
+#### <a name="officefirstrunappleinapprestoreattemptfailed"></a>Office.FirstRun.Apple.InAppRestoreAttemptFailed
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja protoka kupnje unutar aplikacije. Prikupljamo podatke za praćenje pokušaja obnove unutar aplikacije i njihove povezane tokove i pogreške.
 
@@ -5079,7 +5091,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_RestoredFailedUnKnownResult** – je li pokušaj propao iz nepoznatih razloga
 
-#### <a name="office_firstrun_apple_macfirstruncompleted"></a>Office_FirstRun_Apple_MacFirstRunCompleted
+#### <a name="officefirstrunapplemacfirstruncompleted"></a>Office.FirstRun.Apple.MacFirstRunCompleted
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam daje do znanja da je korisnik prošao kroz iskustvo prvog pokretanja. Ovaj događaj koristimo kako bismo saznali je li iskustvo prvog pokretanja (FRE) uspješno dovršeno.
 
@@ -5087,7 +5099,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_FirstRunCollectionTime** – vremenska oznaka koja bilježi vrijeme dovršetka protoka.
 
-#### <a name="office_firstrun_apple_macwxpfirstrunstarted"></a>Office_FirstRun_Apple_MacWXPFirstRunStarted
+#### <a name="officefirstrunapplemacwxpfirstrunstarted"></a>Office.FirstRun.Apple.MacWXPFirstRunStarted
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam daje do znanja da je korisnik ušao u iskustvo prvog pokretanja. Ovaj događaj koristimo kako bismo saznali je li iskustvo prvog pokretanja (FRE) uspješno pokrenuto.
 
@@ -5564,7 +5576,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data.Log** –prilagođena poruka zapisnika koja označava uspješnost ili neuspješnost prethodne provjere
 
-#### <a name="office_officemobile_pdfviewer_pdffileopenmeasurements"></a>Office_OfficeMobile_PdfViewer_PdfFileOpenMeasurements
+#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements
 
 Taj se događaj prikuplja za aplikaciju Office za iOS, a bilježi kada dolazi do operacije otvaranja datoteke. Prikupljamo te podatke da bi se osigurala dobra izvedba za sva otvaranja datoteka u aplikaciji. 
 
@@ -5595,7 +5607,7 @@ Prikupljaju se sljedeća polja:
 - **Doc_RenderDurationms** – vrijeme za renderiranje PDF datoteke
 
 
-#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+#### <a name="officeofficemobilepdfviewerpdffileoperations"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations
 
 Događaj se prikuplja za aplikaciju Office za sustav Android. On se bilježi kada se provede operacija otvaranja, zatvaranja ili spremanja datoteke .pdf i upotrebljava se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke .pdf. Događaj nam omogućuje da osiguramo da operacije otvaranja, zatvaranja i spremanja datoteke .pdf funkcioniraju na očekivani način te da poboljšamo učinkovitost operacija datoteke .pdf.
 
@@ -5635,7 +5647,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_Type** – vrsta operacije datoteke (otvaranje, zatvaranje ili spremanje) 
 
-#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+#### <a name="officeofficemobilepdfviewerpdffileoperations"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations
 
 Događaj se prikuplja za aplikaciju Office za sustav iOS. On se bilježi kada se provede operacija otvaranja, zatvaranja ili spremanja datoteke .pdf i upotrebljava se za razumijevanje i određivanje prioriteta korisničkog iskustva na temelju podataka o radu datoteke .pdf. Događaj nam omogućuje da osiguramo da operacije otvaranja, zatvaranja i spremanja datoteke .pdf funkcioniraju na očekivani način te da poboljšamo učinkovitost operacija datoteke .pdf. 
 
@@ -5695,6 +5707,35 @@ Prikupljaju se sljedeća polja:
 - **IMAGE_COUNT** – označava broj snimljenih slika
 
 - **LAUNCH_REASON** – označava protok pod kojim je aplikacija OfficeLens bila pokrenuta. To može biti putem zaključanog zaslona ili mogućnosti Kamera ili Galerija u aplikaciji StickyNotes ili putem aplikacije OneNote Canvas itd.
+
+
+#### <a name="officeonenoteandroidstickynotesnotecreated"></a>Office.OneNote.Android.StickyNotes.NoteCreated
+ 
+Ključan signal koji se koristi za nadzor mogućnosti da korisnici aplikacije Ljepljive bilješke mogu stvarati bilješke u aplikaciji.   Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. Ako korisnici ne mogu stvoriti bilješku, time bi se izazvao incident visoke ozbiljnosti.
+
+Prikupljaju se sljedeća polja:
+
+- **IsExportable** – zastavica koja označava je li ovaj događaj bio rezultat radnje korisnika ili ne. Treba se postaviti na Istinito jer je NoteCreated radnja koju aktivira korisnik.
+
+- **NoteLocalId** – prepoznatljiv jedinstveni identifikator dodijeljen bilješci u vrijeme kada korisnik stvori bilješku unutar aplikacije.
+
+- **StickyNotes-SDKVersion** – broj verzije koji označava verziju aplikacije Sticky Notes koju korisnik koristi. Omogućuje prepoznavanje verzija proizvoda s kojima se pojavljuje problem kako bismo mogli ispravno odrediti njegov prioritet.
+
+
+#### <a name="officeonenoteandroidstickynotesnoteviewed"></a>Office.OneNote.Android.StickyNotes.NoteViewed
+
+Ključan signal koji se koristi za nadzor mogućnosti da korisnici aplikacije Ljepljive bilješke mogu prikazivati bilješke u aplikaciji.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. Ako korisnici ne mogu vidjeti svoje bilješke, time bi se izazvao incident visoke ozbiljnosti.
+
+Prikupljaju se sljedeća polja:
+
+- **HasImages** – zastavica koja označava jesu li u prikazanoj bilješci pohranjene slike.
+
+- **IsExportable** – zastavica koja označava je li ovaj događaj bio rezultat radnje korisnika ili ne. Treba se postaviti na Istinito jer je NoteViewed radnja koju aktivira korisnik.
+
+- **NoteLocalId** – prepoznatljiv jedinstveni identifikator dodijeljen bilješci u vrijeme kada korisnik stvori bilješku unutar aplikacije.
+
+- **StickyNotes-SDKVersion** – broj verzije koji označava verziju aplikacije Sticky Notes koju korisnik koristi. Omogućuje prepoznavanje verzija proizvoda s kojima se pojavljuje problem kako bismo mogli ispravno odrediti njegov prioritet.
+
 
 #### <a name="officeonenotecanvasinkinkstrokelogger"></a>Office.OneNote.Canvas.Ink.InkStrokeLogger 
 
@@ -5838,6 +5879,16 @@ Prikupljaju se sljedeća polja:
 -  **TimeToLastResultInMs** – označava vrijeme koje je aplikaciji OneNote potrebno za pronalazak zadnjeg podudaranja.
 
 -  **TimeToMedianResultInMs** – označava srednje vrijeme koje je aplikaciji OneNote potrebno za pronalazak svih podudaranja.
+
+### <a name="officeonenotesigscriticalerrorencountered"></a>Office.OneNote.SIGS.CriticalErrorEncountered
+
+Ovim se događajem bilježi ključan signal koji se koristi za nadziranje stanja servisa Signal Ingestion Service (SIG) evidentiranjem svake kritične pogreške. Kritične pogreške mogu blokirati cijeli SIGS, a to će nam pomoći da vidimo svaki takav problem čim korisnici na njih naiđu. 
+
+Bez toga ovisimo o tome da korisnici prijavljuju probleme koje imaju. Odsutnost takve telemetrije mogla bi znatno povećati vrijeme rješavanja takvih problema.
+
+Prikupljaju se sljedeća polja: 
+
+- **ErrorCode** – kôd problema na koji je naišao korisnik.
 
 
 #### <a name="officeonenotestickynotesnotecreated-on-ios-onenotestickynotesnotecreated-on-android"></a>Office.OneNote.StickyNotes.NoteCreated (u sustavu iOS), OneNote.StickyNotes.NoteCreated (u sustavu Android)
@@ -8077,7 +8128,7 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.VerifySignatureDuration** – vrijeme trajanja za provjeru potpisa
 
-#### <a name="read_conversation"></a>read_conversation
+#### <a name="readconversation"></a>read.conversation
 
 Koristi se za nadzor mogućeg negativnog utjecaja na stanje i funkciju prikazivanja poruke e-pošte
 
@@ -8109,7 +8160,7 @@ Prikupljaju se sljedeća polja:
  
 - **view_duration** – koliko je dugo korisnik pregledavao komponentu
 
-#### <a name="save_attempt"></a>save_attempt
+#### <a name="saveattempt"></a>save.attempt
 
 Omogućuje utvrđivanje utjecaja problema uzrokovanih korisnicima koji pokušavaju spremiti datoteku procjenom broja zahvaćenih sesija te postoje li zajedničke značajke tih sesija.
 
@@ -8121,19 +8172,19 @@ Prikupljaju se sljedeća polja:
 
 - **token_type** – vrsta tokena korištenog za provjeru autentičnosti radi spremanja datoteka koji nam pomaže prepoznati probleme s provjerom autentičnosti u vezi sa spremanjem datoteke
 
-#### <a name="search_subtab_selected"></a>search_subtab_selected
+#### <a name="searchsubtabselected"></a>search.subtab.selected
 
-Ovaj nam događaj omogućuje praćenje pilula vrste entiteta (sve, pošta, kontakti i kalendar) koje korisnici koriste kada provode pretraživanja kako bismo mogli osigurati da mehanizmi filtara pretraživanja propisno funkcioniraju.
+Događaj prikuplja točke podrijetla za razlog što je odabrana podkartica za pretraživanje. Podkartice se nalaze ispod primarne trake za pretraživanje aplikacije radi filtriranja podataka. Ovaj nam događaj omogućuje praćenje pilula vrste entiteta (sve, pošta, kontakti i kalendar) koje korisnici koriste kada provode pretraživanja kako bismo mogli osigurati da mehanizmi filtara pretraživanja propisno funkcioniraju.
 
 Prikupljaju se sljedeća polja:
 
 - **properties_general** – opća svojstva koja prikupljaju svi događaji Aria
 
-- **selected_reason** – uzrok vrste pilule koja se odabire, a koja može biti jedna od ove tri vrijednosti: tap_on_header, tap_on_see_all, enter_search_mode
+- **selected_reason** – uzrok vrste pilule koja se odabire, a koja može biti jedna od ovih vrijednost (glif je ikona)i: tap_on_header, tap_on_see_all, enter_search_mode, mail_glyph, calendar_glyph.
 
 - **subtab_type** – vrsta pilule koja je odabrana, a koja može biti jedna od ove četiri vrijednosti: sve, pošta, kontakt, događaj.
 
-#### <a name="send_message"></a>send_message
+#### <a name="sendmessage"></a>send.message
 
 Koristi se za nadzor mogućeg negativnog utjecaja na funkciju i stanje slanja poruka e-pošte.
 
@@ -8191,7 +8242,7 @@ Prikupljaju se sljedeća polja:
 
 - **has_hx** – govori nam da račun koristi naš novi servis sinkronizacije kako bi nam pomogao prepoznati probleme uzrokovane našim servisom sinkronizacije
 
-#### <a name="settings_action"></a>settings_action
+#### <a name="settingsaction"></a>settings.action
 
 Ovaj događaj prikuplja informacije o konfiguraciji u postavkama. Podaci nam omogućuju prepoznavanje situacija u kojima može doći do negativnog utjecaja na sposobnost korisnika za konfiguriranje postavki aplikacije, primjerice postavki obavijesti, primarnog računa pošte i konfiguriranja potpisa e-pošte.
 
@@ -8242,7 +8293,7 @@ Prikupljaju se sljedeća polja:
 - **swipe_direction** – služi provjeri jesu li vaši smjerovi prelaska prstom (ulijevo ili udesno) ispravno konfigurirani
 
 
-#### <a name="sidebar_action"></a>sidebar_action
+#### <a name="sidebaraction"></a>sidebar.action
 
 Omogućuje nam prepoznavanje situacija u kojima može doći do negativnog utjecaja na vašu mogućnost konfiguriranja postavki aplikacije, primjerice vaših postavki obavijesti, vašeg primarnog računa pošte i konfiguriranja vašeg potpisa e-pošte.
 
@@ -8351,7 +8402,7 @@ Prikupljaju se sljedeća polja:
 
 Utvrđivanje je li došlo do određenih događaja povezanih sa značajkama, poput pokretanja ili zaustavljanja, te je li značajka pokrenuta.
 
-#### <a name="app_startup"></a>app_startup
+#### <a name="appstartup"></a>app.startup
 
 Ovaj nam događaj omogućava prepoznavanje i popravljanje problema kada se Outlook pokreće sporo ili nepotpuno, zbog čega korisnici imaju probleme s korištenjem naše aplikacije.  To uključuje informacije o konkretnim značajkama koje su bile omogućene i koliko su dugo dijelovi pokretanja trajali.
 
@@ -8379,7 +8430,7 @@ Prikupljaju se sljedeća polja:
 
 - **total_millis** – ukupno vrijeme od početka učitavanja razreda do dovršavanja nastavka aktivnosti sustava Android
 
-#### <a name="boot_time"></a>boot_time 
+#### <a name="boottime"></a>boot.time 
 
 Ovaj nam događaj omogućuje otkrivanje kada su nastupile kritične pogreške aplikacije koje bi uzrokovale rušenje vaše aplikacije ili iskustvo ozbiljnih problema, primjerice prikaz praznih redaka u vašoj ulaznoj pošti. Ovaj događaj prikuplja informacije koje nam omogućuju kategorizaciju i razvrstavanje problema kako bismo mogli odrediti prioritet utjecaja problema na korisnike.
 
@@ -8441,7 +8492,7 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.StatusCode** – kod statusa rezultata operacije
 
-#### <a name="first_visible"></a>first_visible
+#### <a name="firstvisible"></a>first.visible
 
 Ovaj nam događaj omogućuje prepoznavanje prvog puta kada korisnik namjerno pokrene aplikaciju. Ovaj je događaj obavezan za osiguravanje da aplikacija uspješno radi u međuverzijama originalnog proizvođača opreme (OEM).
 
@@ -8934,6 +8985,21 @@ Prikupljaju se sljedeća polja:
 - **TotalTime** – ukupno utrošeno vrijeme
 
 - **UsesSharedRuntime** – upućuje na to da koristi li aplikacija sharedRuntime ili ne.
+
+#### <a name="officeofficemobileappactivationlaunch"></a>Office.OfficeMobile.AppActivation.Launch
+
+Ovaj događaj identificira prvu i daljnje aktivacije putem vanjskih okidača koji aktiviraju aplikaciju. Aktivacija aplikacije učitava određene ovisnosti koje su odgovorne za rad aplikacije bez poteškoća i taj će događaj zabilježiti jesu li se uspješno učitale. Također će zabilježiti izvor aktivacije i namjeru aplikacije koja je bila odgovorna za aktivaciju aplikacije.
+
+Prikupljaju se sljedeća polja:
+
+- **ActionName** – mapiranje vrijednosti cijelog broja na ime radnje/značajke koja je pozvana iz točke aktivacije.
+ 
+- **ActivationType** – mapiranje vrijednosti cijelog broja na izvor aktivacije
+  
+- **IsActionTriggered** – Booleova vrijednost koja određuje je li radnja pokrenuta nakon uspješne aktivacija aplikacije.
+
+- **IsFirstRun** – Booleova vrijednost koja određuje radi li se o prvom ili daljnjem izvršavanju aplikacije.
+ 
 
 #### <a name="officeofficemobilefrefirstrunsetup"></a>Office.OfficeMobile.FRE.FirstRunSetup
 
@@ -10232,7 +10298,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Data\_ZoomText –** označava je li ZoomText bio pokrenut tijekom sesije
 
-#### <a name="office_apple_darkmode"></a>Office_Apple_DarkMode
+#### <a name="officeappledarkmode"></a>Office.Apple.DarkMode
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam govori je li korisnik pokrenuo sustav u Tamnom načinu i je li korisnik prepisao postavke sustava Tamni način u sustavu Office.  Koristimo ovaj događaj da bismo vam pomogli osigurati pristupačnost i odredili prioritete optimizacije korisničkog iskustva.
 
@@ -10242,7 +10308,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_RequiresAquaSystemAppearanceEnabled** – je li Tamni način prepisan u sustav Office.
 
-#### <a name="office_apple_hardwarekeyboardinuse_apple"></a>Office_Apple_HardwareKeyboardInUse_Apple
+#### <a name="officeapplehardwarekeyboardinuseapple"></a>Office.Apple.HardwareKeyboardInUse.Apple
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam govori da korisnik priključuje tipkovnicu na svoj mobilni uređaj. Događaj nam pomaže poboljšati pristupačnost i optimizirati korisničko iskustvo.
 
@@ -10250,7 +10316,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_CollectionTime**– vremenska oznaka koja označava vrijeme prikupljanja događaja.
 
-#### <a name="office_apple_mbuinstrument_deviceaccessibilitysettings"></a>Office_Apple_MbuInstrument_DeviceAccessibilitySettings
+#### <a name="officeapplembuinstrumentdeviceaccessibilitysettings"></a>Office.Apple.MbuInstrument.DeviceAccessibilitySettings
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj prikuplja stanje različitih mogućnosti pristupačnosti dostupnih tijekom sesije. Koristimo ovaj događaj da bismo vam pomogli osigurati pristupačnost i odredili prioritete optimizacije korisničkog iskustva.
 
@@ -10373,7 +10439,7 @@ Ovo su podvrste podataka u toj kategoriji:
 
 Neočekivana zatvaranja aplikacija i stanje aplikacije kada se to dogodi.
 
-#### <a name="app_startup_reason"></a>app_startup_reason
+#### <a name="appstartupreason"></a>app.startup.reason
 
 Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema zbog kojih se program Outlook srušio tijekom pokretanja aplikacije.  Ovaj događaj uključuje informacije o tome zašto je došlo do rušenja kako bismo brzo mogli riješiti ovaj problem.
 
@@ -10400,7 +10466,7 @@ Sljedeća se polja prikupljaju samo za Outlook Mobile za iOS:
 - **is_watch_supported_and_active** – označava ima li sat mogućnost podrške te je li aktivan tijekom sesije
 
 
-#### <a name="application_crash"></a>application_crash
+#### <a name="applicationcrash"></a>application.crash
 
 Koristi se za nadzor kritičnih rušenja aplikacije i pomaže nam prikupiti informacije o razlogu zašto se aplikacija srušila te kako to možemo spriječiti.
 
@@ -10447,7 +10513,7 @@ Prikupljaju se sljedeća polja:
 - **glEsVersion** – ključ verzije ugrađenih sustava OpenGL Embedded
 
 
-#### <a name="crash_event"></a>crash_event
+#### <a name="crashevent"></a>crash.event
 
 Omogućuje nam prepoznavanje i ispravak situacija tijekom kojih je došlo do kritičnih rušenja aplikacije i pomaže nam prikupiti informacije o razlogu zašto se aplikacija srušila te kako to možemo spriječiti.
 
@@ -10455,7 +10521,11 @@ Prikupljaju se sljedeća polja:
 
 - **crashTime** – datum i vrijeme u koje se rušenje dogodilo kao pomoć tijekom istrage
 
+- **crash_time_from_start** – proteklo vrijeme od pokretanja aplikacije do rušenja, kao pomoć tijekom istrage
+
 - **exceptionName** – naziv iznimke koja je izazvala rušenje kao pomoć tijekom istrage
+
+- **exception_reason** – naziv razloga koji je izazvao rušenje kao pomoć tijekom istrage
 
 - **hasHx** – govori nam da račun koristi naš novi servis sinkronizacije kako bi nam pomogao prepoznati probleme uzrokovane našim servisom sinkronizacije
 
@@ -10498,7 +10568,7 @@ Prikupljaju se sljedeća polja:
 
 - **Naziv događaja** – naziv događaja je kategorija i oznaka događaja.
 
-#### <a name="office_apple_identitydomainname"></a>Office_Apple_IdentityDomainName
+#### <a name="officeappleidentitydomainname"></a>Office.Apple.IdentityDomainName
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja našeg sustava kao i za ispitivanje uzroka pogrešaka određenih korisnika domene. Prikupljamo domenu koju koriste naši korisnici prilikom provjere autentičnosti.  Te podatke koristimo za identificiranje i rješavanje onih problema koji se na širokoj razini možda ne čine previše utjecajni, ali koji ispadaju vrlo utjecajni za određenu domenu korisnika.
 
@@ -10510,7 +10580,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_IdentityProviderEnum** – kôd davatelja identiteta provjere autentičnosti. (Broj)
 
-#### <a name="office_apple_systemhealthappexitmacandios"></a>Office_Apple_SystemHealthAppExitMacAndiOS
+#### <a name="officeapplesystemhealthappexitmacandios"></a>Office.Apple.SystemHealthAppExitMacAndiOS
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja aplikacija sustava Office kao i za ispitivanje uzroka pogrešaka. Prikupljamo podatke pri svakom izlazu iz aplikacije kako bismo utvrdili je li aplikacija zatvorena bez poteškoća.
 
@@ -10927,7 +10997,7 @@ Prikupljaju se sljedeća polja:
 - Nijedno
 
 
-#### <a name="telemetry_error"></a>telemetry_error
+#### <a name="telemetryerror"></a>telemetry.error
 
 Ovaj nam događaj omogućuje dijagnosticiranje i rješavanje problema koji sprječavaju generiranje ili slanje potrebnih dijagnostičkih podataka. Ovi nam događaji pomažu shvatiti jesu li nam promaknuli ključni podaci potrebno za identifikaciju sigurnosnih problema ili velikih problema u vezi s načinom rada vaše aplikacije.
 
@@ -10938,7 +11008,7 @@ Prikupljaju se sljedeća polja:
 - **type** – govori nam vrstu pogreške timera kako bi nam pomogao prepoznati kada naša aplikacija ima bilo kakve probleme sa slanjem dijagnostičkih telemetrijskih podataka
 
 
-#### <a name="watchdog_anr"></a>watchdog_anr
+#### <a name="watchdoganr"></a>watchdog.anr
 
 Potrebno za nadzor pogrešaka u funkciji aplikacije za sprječavanje slučajeva kada aplikacija prestane reagirati, a vaš se ekran zamrzne u aplikaciji (naziva se ANR – aplikacija ne reagira).
 
@@ -10963,7 +11033,7 @@ Prikupljaju se sljedeća polja:
 
 Loše vrijeme odziva ili performanse u situacijama kao što su pokretanje aplikacije ili otvaranje datoteke.
 
-#### <a name="android_frame_metrics"></a>android_frame_metrics
+#### <a name="androidframemetrics"></a>android.frame.metrics
 
 Omogućuje nam prepoznavanje i rješavanje situacija u kojima naše komponente aplikacije Android uzrokuju probleme s funkcijom, primjerice ako ne možete bez poteškoća listati ulaznom poštom.
 
@@ -10989,7 +11059,7 @@ Prikupljaju se sljedeća polja:
 
 - **unknown_delay** – kašnjenje uzrokovano nepoznatim izvorima koji nisu izričito praćena trajanja
 
-#### <a name="cal_component"></a>cal_component
+#### <a name="calcomponent"></a>cal.component
 
 Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema u okviru kojih postoji primjetan utjecaj na funkciju naših komponenti korisničkog sučelja kalendara zbog kojih biste imali probleme s pomicanjem kalendara.
 
@@ -11009,7 +11079,7 @@ Prikupljaju se sljedeća polja:
 
 - **view_duration** – govori nam koliko je trajao prikaz raznih komponenti korisničkog sučelja kalendara kako bi nam pomogao prepoznati probleme s funkcijom koji utječu na vaše iskustvo kalendara
 
-#### <a name="contact_action"></a>contact_action
+#### <a name="contactaction"></a>contact.action
 
 Taj se događaj pokreće u različitim radnjama u kontaktima – pregled, ažuriranje i brisanje kontakata, kao i pregled popisa kontakata. Koristi se za određivanje postoje li regresije izvedbe koje imaju veze sa kontaktima.
 
@@ -11027,7 +11097,7 @@ Prikupljaju se sljedeća polja:
  
 - **total_filtered_contacts** – broj kontakata s primijenjenim filtrima
 
-#### <a name="conversation_load_time"></a>conversation_load_time
+#### <a name="conversationloadtime"></a>conversation.load.time
 
 Ovaj nam događaj omogućuje otkrivanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju učitavanja vaših razgovora e-pošte kako bismo osigurali da se vaše poruke e-pošte učitavaju na očekivan način.
 
@@ -11035,7 +11105,7 @@ Prikupljaju se sljedeća polja:
 
 - **time** – govori nam količinu vremena koja je bila potrebna za dovršavanje učitavanja razgovora e-pošte.
 
-#### <a name="core_data_migration"></a>core_data_migration
+#### <a name="coredatamigration"></a>core.data.migration
 
 Omogućuje nam otkrivanje i rješavanje situacija u okviru kojih je došlo do pogreške pri ažuriranja podataka e-pošte na vašem uređaju na noviju verziju.
 
@@ -11049,7 +11119,7 @@ Prikupljaju se sljedeća polja:
 
 - **migration_duration_seconds** – prati trajanje migracije zaokruženo na jedan od ovih termina – 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180 (180 i više trebalo bi biti samo 180)
 
-#### <a name="core_data_performance"></a>core_data_performance
+#### <a name="coredataperformance"></a>core.data.performance
 
 Omogućuje nam otkrivanje i rješavanje situacija kada podaci e-pošte koje spremamo na vaš uređaj uzrokuju probleme s funkcijom.
 
@@ -11065,9 +11135,9 @@ Prikupljaju se sljedeća polja:
 
 - **operation** – neobrađena vrijednost radnje, bilo spremanje, dohvaćanje ili „read write queue blocked”
 
-#### <a name="inbox_component"></a>inbox_component
+#### <a name="inboxcomponent"></a>inbox.component
 
-Ovaj nam događaj omogućuje otkrivanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju komponenti korisničkog sučelja vaše ulazne pošte koji bi doveli do neispravnog učitavanja ili prikaza poruka e-pošte, avatara ili stanja pročitano/nepročitano.
+Ovaj događaj prikuplja dvije vrste korisničkih podataka: status pretplate na Microsoft 365 i vidi li korisnik oglase. To nam omogućuje otkrivanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju komponenti korisničkog sučelja ulazne pošte korisnika koji bi doveli do neispravnog učitavanja ili prikaza poruka e-pošte, avatara ili stanja pročitano/nepročitano.
 
 Prikupljaju se sljedeća polja: 
 
@@ -11083,7 +11153,9 @@ Prikupljaju se sljedeća polja:
 
 - **ad_shown** – je li se određeni oglas prikazao (ako su oglasi omogućeni)
 
-- **age** – dob osobe (koristi se za potvrdu usklađenosti s dobnim ograničenjima za oglase)
+- **ad_shown_for_premium** – neočekivan prikaz oglasa premium korisnicima
+
+- **age** – dob osobe (koristi se za potvrdu sukladnosti s dobnim ograničenjima za oglase) *[Ovo je polje uklonjeno iz trenutačnih međuverzija programa Office, ali može se i dalje prikazivati u drugim međuverzijama.]*
 
 - **app_instance** – Outlook ima dvije ulazne točke za Duo; jedna je za aplikaciju Kalendar, a druga za aplikaciju Pošta i obje se mogu pokrenuti usporedno u okruženju s više instanci. Tako doznajemo koja instanca provodi ovo izvješćivanje, Pošta ili Kalendar.
 
@@ -11103,6 +11175,8 @@ Prikupljaju se sljedeća polja:
 
 - **orientation** – orijentacija ekrana u trenutku događaja (okomito ili vodoravno)
 
+- **provider** – davatelj usluge (Xandr ili Facebook) oglasa koji se trenutačno prikazuje
+
 - **sub_error_type** – detaljna vrsta pogreške
 
 - **taskId** – TaskId će nam dati taskId (ID zadatka) trenutačne instance. To će biti potrebno u okruženju s više instanci ako korisnik želi usporedno pokrenuti iste instance (Kalendar, Kalendar ili Pošta, Pošta)
@@ -11111,7 +11185,7 @@ Prikupljaju se sljedeća polja:
 
 - **view_duration** – koliko je dugo korisnik pregledavao komponentu
 
-#### <a name="initial_page_landing"></a>Initial_page_landing 
+#### <a name="initialpagelanding"></a>Initial.page.landing 
  
 Ovaj događaj pomaže u praćenju vrste iskustva koje korisnici vide kada otvore našu stranicu aplikacije.  Ti se podaci koriste za određivanje prometa korisnika koji se navode u svakom iskustvu u našoj aplikaciji i pomažu nam da lako konsolidiramo rezultate eksperimentiranja.
  
@@ -11275,7 +11349,7 @@ Prikupljaju se sljedeća polja:
 
 - **UserInfo.UserObjectId** – identifikacijski broj objekta korisnika
 
-#### <a name="json_parse_error"></a>json_parse_error 
+#### <a name="jsonparseerror"></a>json.parse.error 
  
 Ovaj događaj označava da pogrešku javlja raščlanitelj JSON-a.  Morat ćemo ispraviti pogrešku očitanog niza registra koja je poslana na JSON raščlanitelj kako bismo korisnicima omogućili nesmetano iskustvo.
  
@@ -11283,7 +11357,7 @@ Prikupljaju se sljedeća polja:
 
 - **Error** – sastoji se od poruke o pogrešci koju objekt pogreške vraća.
 
-#### <a name="mail_filter_component"></a>mail_filter_component
+#### <a name="mailfiltercomponent"></a>mail.filter.component
 
 Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema u okviru kojih postoji zamjetan utjecaj na funkciju vašeg doživljaja filtriranja poruka e-pošte koji bi doveli do neispravnog učitavanja ili prikaza vaših filtara.
 
@@ -11392,7 +11466,7 @@ Prikupljaju se sljedeća polja:
 - **UserDialogInterruptionDuringBoot** – Booleova vrijednost za bilo koji dijaloški okvir za blokiranje prikazan tijekom pokretanja
 
 
-#### <a name="office_apple_apple_appboot_mac"></a>Office_Apple_Apple_AppBoot_Mac
+#### <a name="officeappleappleappbootmac"></a>Office.Apple.Apple.AppBoot.Mac
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje vremena potrebnog za pokretanje aplikacije, kao i nekih detalja o vrsti izvedenog pokretanja. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11422,7 +11496,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_SentToBackground** – je li aplikacija poslana u pozadinu tijekom pokretanja.
 
-#### <a name="office_apple_diskruleresultserializererroronstreamop"></a>Office_Apple_DiskRuleResultSerializerErrorOnStreamOp
+#### <a name="officeapplediskruleresultserializererroronstreamop"></a>Office.Apple.DiskRuleResultSerializerErrorOnStreamOp
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja naše telemetrijske infrastrukture. Ovaj događaj označava da je došlo do pogreške.
 
@@ -11434,7 +11508,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_IsWriteOp** – bilo da se radi o izvršavanju operacije pisanja
 
-#### <a name="office_apple_macbootresourceusage"></a>Office_Apple_MacBootResourceUsage
+#### <a name="officeapplemacbootresourceusage"></a>Office.Apple.MacBootResourceUsage
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje više pokazatelja oko resursa koji se potroše tijekom pokretanja aplikacija sustava Office. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11478,7 +11552,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_VoluntaryContextSwitchesNvcsw** – broj nehotičnih kontekstnih sklopki
 
-#### <a name="office_apple_mau_validation"></a>Office_Apple_MAU_Validation
+#### <a name="officeapplemauvalidation"></a>Office.Apple.MAU.Validation
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja komponente Microsoftova automatskog ažuriranja koja se koristi za distribuciju i instaliranje ažuriranja aplikacija. Prikupljeni podaci koriste se za otkrivanje pogrešaka i istraživanje uzroka neuspjeha.
 
@@ -11488,7 +11562,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_Message** – prikupljamo niz koji sadrži opis pogreške.
 
-#### <a name="office_apple_mbuinstrument_hang_detection_spin_control"></a>Office_Apple_MbuInstrument_Hang_Detection_Spin_Control
+#### <a name="officeapplembuinstrumenthangdetectionspincontrol"></a>Office.Apple.MbuInstrument.Hang.Detection.Spin.Control
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se bilježi kad god se čini da neka aplikacija ne reagira. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11496,7 +11570,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_CountSpinControlStart** – marker koji označava da je aplikacija prestala da reagira (ili da sporo reagira)
 
-#### <a name="office_apple_mbuinstrument_vmondocumentclose"></a>Office_Apple_MbuInstrument_VMOnDocumentClose
+#### <a name="officeapplembuinstrumentvmondocumentclose"></a>Office.Apple.MbuInstrument.VMOnDocumentClose
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje snimka stanja memorije tijekom zatvaranja dokumenta. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11508,7 +11582,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_VirtualMemory** – zapažena vrijednost virtualne memorije
 
-#### <a name="office_apple_mbuinstrument_vmonshutdown"></a>Office_Apple_MbuInstrument_VMOnShutdown
+#### <a name="officeapplembuinstrumentvmonshutdown"></a>Office.Apple.MbuInstrument.VMOnShutdown
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje snimka stanja memorije tijekom isključivanja aplikacije. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11520,7 +11594,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_VirtualMemory** – zapažena vrijednost virtualne memorije
 
-#### <a name="office_apple_mbuinstrument_vmonstart"></a>Office_Apple_MbuInstrument_VMOnStart
+#### <a name="officeapplembuinstrumentvmonstart"></a>Office.Apple.MbuInstrument.VMOnStart
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje snimka stanja memorije tijekom pokretanja aplikacije. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11532,7 +11606,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_VirtualMemory** – zapažena vrijednost virtualne memorije
 
-#### <a name="office_apple_msoappdelegate_bootperf"></a>Office_Apple_MsoAppDelegate_BootPerf
+#### <a name="officeapplemsoappdelegatebootperf"></a>Office.Apple.MsoAppDelegate.BootPerf
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za prikupljanje vremena i memorije utrošene tijekom pokretanja aplikacija sustava Office, kao i neke pojedinosti o vrsti pokretanja. Taj nam događaj pomaže da pratimo našu izvedbu i osiguramo poboljšanja performansi.
 
@@ -11548,7 +11622,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_VirtualMemory** – snimka raspoložive virtualne memorije tijekom pokretanja
 
-#### <a name="office_apple_ungracefulappexithangsinprevioussession"></a>Office_Apple_UngracefulAppExitHangsInPreviousSession
+#### <a name="officeappleungracefulappexithangsinprevioussession"></a>Office.Apple.UngracefulAppExitHangsInPreviousSession
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja aplikacija sustava Office kao i za ispitivanje uzroka pogrešaka. Prikupljamo podatak koliko je puta aplikacija djelovala kao da ne reagira prije no što je došlo do izlaza iz aplikacije s poteškoćama.
 
@@ -11562,7 +11636,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_SessionVersion** – glavna verzija aplikacije u kojoj je uočen izlaz iz aplikacije s poteškoćama.
 
-#### <a name="office_apple_whatsnewerrorandwarning"></a>Office_Apple_WhatsNewErrorAndWarning
+#### <a name="officeapplewhatsnewerrorandwarning"></a>Office.Apple.WhatsNewErrorAndWarning
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za nadziranje stanja značajke Novosti. Ovaj događaj označava da je došlo do pogreške /upozorenja prilikom analize sadržaja Novosti, što ukazuje na potencijalne probleme stvaranja sadržaja.
 
@@ -11713,29 +11787,35 @@ Prikuplja se tijekom pokretanja aplikacije sustava Office. Obuhvaća utvrđivanj
 
 Prikupljaju se sljedeća polja:
 
-  - **ActivationKind** – je li aplikacija pokrenuta pokretanjem putem izbornika Start, otvaranjem datoteke ili putem OLE automatizacije.
+- **ActivationKind** – je li aplikacija pokrenuta pokretanjem putem izbornika Start, otvaranjem datoteke ili putem OLE automatizacije.
   
-  - **BootTostart** – je li korisnik odabrao prikazivanje početnog zaslona kada se aplikacija pokrene.
+- **BootTostart** – je li korisnik odabrao prikazivanje početnog zaslona kada se aplikacija pokrene.
 
-  - **ColdBoot** – je li aplikacija sustava Office pokrenuta prvi put nakon ponovnog pokretanja sustava ili se binarni podaci aplikacije moraju učitati s diska.
+- **ColdBoot** – je li aplikacija sustava Office pokrenuta prvi put nakon ponovnog pokretanja sustava ili se binarni podaci aplikacije moraju učitati s diska.
 
-  - **DeviceModel** – model uređaja.
+- **DeviceModel** – model uređaja.
 
-  - **DocLocation** – kod otvaranja dokumenta označava koji je servis dobavio dokument (OneDrive, File Server, SharePoint itd.).
+- **DocLocation** – kod otvaranja dokumenta označava koji je servis dobavio dokument (OneDrive, File Server, SharePoint itd.).
 
-  - **DurationUntilMso20Initialization** – trajanje u mikrosekundama između pokretanja procesa sustava Office i učitavanja mso20win32client.dll-a.
+- **DurationUntilMso20Initialization** – trajanje u mikrosekundama između pokretanja procesa sustava Office i učitavanja mso20win32client.dll-a.
 
-  - **FirstBoot** – je li ovo bilo prvo pokretanje aplikacije.
+- **Embedding** – je li aplikacija otvorena za OLE ulaganje.
 
-  - **InitializationDuration** – trajanje u mikrosekundama koje je bilo potrebno za prvo pokretanje procesa sustava Office.
+- **FirstBoot** – je li ovo bilo prvo pokretanje aplikacije.
 
-  - **InterruptionMessageId** – je li pokretanje prekinuo dijaloški okvir koji je tražio korisnički unos, ID dijaloškog okvira.
+- **InitializationDuration** – trajanje u mikrosekundama koje je bilo potrebno za prvo pokretanje procesa sustava Office.
 
-  - **TotalWorkingSetMB** – količina memorije u megabajtima u radnom skupu procesa.
+- **InterruptionMessageId** – je li pokretanje prekinuo dijaloški okvir koji je tražio korisnički unos, ID dijaloškog okvira.
 
-  - **VirtualSetMB** – količina memorije u megabajtima u virtualnom skupu procesa. (samo za MacOS / iOS)
+- **LegacyDuration** – koliko je dugo trebalo da se aktivnost izvrši, izmjereno koristeći različite početne i završne točke u odnosu na Activity.Duration.
 
-  - **WorkingSetPeakMB** – najveća količina memorije u megabajtima koja se ikad dosad nalazila u radnom skupu procesa.
+- **OpenAsNew** – je li aplikacija pokrenuta otvaranjem postojećeg dokumenta kao predloška za novi dokument.
+
+- **TotalWorkingSetMB** – količina memorije u megabajtima u radnom skupu procesa.
+
+- **VirtualSetMB** – količina memorije u megabajtima u virtualnom skupu procesa. (samo za MacOS / iOS)
+
+- **WorkingSetPeakMB** – najveća količina memorije u megabajtima koja se ikad dosad nalazila u radnom skupu procesa.
 
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
@@ -11786,12 +11866,25 @@ Događaj se aktivira prilikom učitavanja stranice sažetka. Taj nam događaj po
 
 Prikupljaju se sljedeća polja:
 
-- **PageURL:string** – to je URL stranice koju možemo koristiti da bismo utvrdili je li sesija uspjela ili je došlo do neke pogreške.
+- **PayloadCreationTime** – vrijeme koje je potrebno u milisekundama za stvaranje opterećenja. 
 
-- **Sessionid:string** – to je identifikator sesije sučelja za govor. Može se koristiti za ispravljanje pogrešaka u zapisnicima servisa.
+- **PostUrlCallTime** – vrijeme koje je potrebno u milisekundama za slanje naknadnog URL poziva. 
 
-- **SummaryPageLoadTime:int** – vrijeme (u ms) potrebno za učitavanje stranice sažetka. To obuhvaća vrijeme stvaranja opterećenja 
+- **RehearseSessionid** – to je identifikator sesije sučelja za govor. Može se koristiti za ispravljanje pogrešaka u zapisnicima servisa.
 
+- **RequestPayloadSize** – to je veličina zatraženog opterećenja. 
+
+- **ResourcesLoadTime** – to je vrijeme u milisekundama koje je potrebno za učitavanje resursa (js, css). 
+
+- **SummaryPageErrorReceived** – to je Booleova vrijednost koja pokazuje je li primljena stranica sažetka ili je došlo do pogreške.
+
+- **SummaryPageHtmlLoadTime** – to je vrijeme u milisekundama koje je potrebno za učitavanje summarypageHtml. 
+
+- **SummaryPageLoadStartTime** – to je vrijeme u milisekundama za primanje prvog odgovora s poslužitelja. 
+
+- **SummaryPageLoadTime** – vrijeme (u ms) potrebno za učitavanje stranice sažetka. To obuhvaća vrijeme stvaranja opterećenja 
+
+- **ThumbnailsCount** – to je ukupan broj minijatura koje će biti dio stranice sažetka. 
 
 #### <a name="officepowerpointpptandroidrehearseviewstartsession"></a>Office.PowerPoint.PPT.Android.RehearseView.StartSession
 
@@ -11807,6 +11900,10 @@ Događaj koji se aktivira prilikom zaustavljanja sesije govora trenera za prezen
 
 Prikupljaju se sljedeća polja:
 
+- **ActualRehearseBootTimeInMs** – to je stvarno utrošeno vrijeme za stvaranje veza.
+
+- **AdaptationTextSize** – to je veličina teksta koji se šalje u servis.
+
 - **AuthDurationInMs** – to je vrijeme u milisekundama potrebno za provjeru autentičnosti (osvježavanje tokena za provjeru autentičnosti).
 
 - **AuthError** – opisuje pogrešku provjere autentičnosti koja se dogodila (ako se dogodila).
@@ -11817,15 +11914,23 @@ Prikupljaju se sljedeća polja:
 
 - **FirstAudioDelayInMs** – to je vrijeme u milisekundama potrebno za primanje prvih audiopodataka.
 
+- **FRetriedOnOpenConnection** – to je Booleova vrijednost koja pokazuje je li došlo do ponovnog pokušaja za openconnection ili nije.
+
 - **InitMediaCaptureLayerDurationInMs** – to je vrijeme u milisekundama potrebno za inicijalizaciju sloja za snimanje medijskih sadržaja / audiozapisa.
 
 - **LocallyDroppedMessageCount** – to je ukupan broj lokalno ispuštenih poruka.
+
+- **NumReconnectAttemptsDuringSession** – to pokazuje koliko je puta pokušano ponovno povezivanje na speechservice.
+
+- **NumTriesDuringEachReconnectAttempt** – to je polje koje pokazuje broj izvršenih pokušaja tijekom svakog pokušaja ponovnog povezivanja.
 
 - **OpenFrontDoorConnectionDurationInMs** – to je vrijeme u milisekundama potrebno za otvaranje veze sa servisom FrontDoor.
 
 - **SendAdaptationTextDurationInMs** – to je vrijeme u milisekundama potrebno za slanje adaptacijskog teksta servisu.
 
 - **ServiceDroppedMessageCount** – to je ukupan broj poruka koje je servis ispustio.
+
+- **SessionDurationInMs** – to je vrijeme trajanja cijele sesije od kada je korisnik kliknuo za početak do kada je kliknuo za kraj.
 
 - **SessionId** – to je identifikator sesije sučelja za govor. Može se koristiti za ispravljanje pogrešaka u zapisnicima servisa.
 
@@ -11834,6 +11939,8 @@ Prikupljaju se sljedeća polja:
 - **SpeechHResultsWithTimestamps** – to je polje kodova pogrešaka primljenih zajedno s vremenskim oznakama, koji vam mogu pomoći pri otklanjanju pogrešaka.
 
 - **StartSpeechCaptureDurationInMs** – to je vrijeme u milisekundama potrebno za početak snimanja govora.
+
+- **StartSpeechServiceDurationInMs** – to je polje vremena koliko je potrebno da sesija govora započne svaki put kada dođe do ponovnog povezivanja, uključujući trajanje prve pokrenute sesije govora. 
 
 - **TotalMessageCount** – to je ukupan broj audioporuka poslanih servisu.
 
@@ -12018,7 +12125,7 @@ Prikupljaju se sljedeća polja:
 
 - **ServerType** – vraća vrstu poslužitelja koji nudi uslugu
 
-#### <a name="perf_event"></a>perf_event
+#### <a name="perfevent"></a>perf.event
 
 Koristi se za praćenje mogućih negativnih utjecaja na funkciju učitavanja različitih dijelova aplikacije, primjerice za osiguravanje da se vaša ulazna pošta što brže učitava tijekom prvog otvaranja aplikacije.
 
@@ -12034,15 +12141,23 @@ Prikupljaju se sljedeća polja:
 
 - **total_time_elapsed** – govori nam koliko je događaj funkcije trajao kako bi nam pomogao razumjeti ozbiljnost problema s funkcijom
 
-#### <a name="performance_record"></a>performance_record
+#### <a name="performancerecord"></a>performance.record
 
-Omogućuje nam otkrivanje i rješavanje situacija kada iskorištenost memorije aplikacije i CPU postanu kritični visoki, što može dovesti do usporavanja vašeg uređaja
+Ovim se događajem prikuplja metrika performansi aplikacije. Omogućuje nam otkrivanje i rješavanje situacija kada iskorištenost memorije aplikacije i CPU postanu kritično visoki ili postoje neki drugi problemi s performansama, što može dovesti do usporavanja vašeg uređaja.
 
 Prikupljaju se sljedeća polja: 
+
+- **app_exit_metric** – javlja nam metriku o broju različitih vrsti performansi za prednji i pozadinski izlaz iz aplikacije, kao pomoć u razumijevanju neočekivanog izlaska iz aplikacije s razlozima negativnih performansi.
+
+- **average_suspended_memory** – javlja nam prosječnu količinu memorije koju aplikacija upotrebljava kada je obustavljena kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju.
 
 - **category** – govori nam je li aplikacija u određenom trenutku u prvom planu ili pozadini. Moguće vrijednosti uključuju prvi plan ili pozadinu.
 
 - **cpu_usage** – govori nam koliko je CPU-a aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju
+
+- **cumulative_CPU_time** – govori nam koliko ukupno CPU-a aplikacija koristi s mjerenjem trajanja kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju.
+
+- **cumulative_GPU_time** – govori nam koliko ukupno GPU vremena aplikacija koristi kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan utjecaj vijeka trajanja baterije.
 
 - **is_watch_app_installed** – govori nam koristi li korisnik trenutno uređaj Apple Watch te je li on instaliran kako bi nam pomogao razumjeti negativan utjecaj na funkciju zbog uređaja Watch
 
@@ -12053,6 +12168,10 @@ Prikupljaju se sljedeća polja:
 - **memoAry_used_percentage** – govori nam koji je postotak memorije aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju
 
 - **memory_used** – govori nam koliko je memorije aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju
+
+- **peak_memory_usage** – govori nam koliko je najviše memorije aplikacija koristila kako bismo imali vrijednost za usporedbu i kako bismo razumjeli negativan učinak na funkciju.
+
+- **scroll_hitch_time_ratio** – govori nam koji je omjer vremena proveden u zastoju tijekom kretanja kroz korisničko sučelje kako bismo razumjeli negativan utjecaj na učinak korisničkog sučelja.
 
 
 ### <a name="application-activity-error-subtype"></a>*Podvrsta pogreške aktivnosti aplikacije*
@@ -12081,7 +12200,7 @@ Prikupljaju se sljedeća polja:
 
 - **type** – vrsta pogreške označavanja koja je nastupila, npr. null_folder_name, compose_selected_null_account, kako bi nam pomogao prepoznati probleme u vezi s određenim dijelom koda
 
-#### <a name="edit_contact_error"></a>edit_contact_error
+#### <a name="editcontacterror"></a>edit.contact.error
 
 Omogućuje nam otkrivanje i rješavanje situacija u okviru kojih su pogreške uzrokovane kada pokušavate vidjeti ili uređivati kontakte putem aplikacije.
 
@@ -12093,7 +12212,7 @@ Prikupljaju se sljedeća polja:
 
 - **version** – verzija servisa kartice kontakta koji koristimo kako bi nam pomogao dijagnosticirati problem
 
-#### <a name="error_report"></a>error_report
+#### <a name="errorreport"></a>error.report
 
 Ovaj nam događaj omogućuje prepoznati kada su nastupile kritične pogreške korištene aplikacije da bismo mogli spriječiti probleme koji mogu prouzročiti rušenje aplikacije ili vam onemogućiti čitanje e-pošte. 
 
@@ -12585,7 +12704,7 @@ Prikupljaju se sljedeća polja:
 
 - **ExceptionErrorMessage** – opširna poruka o pogrešci
 
-#### <a name="office_android_earlytelemetry_expansionfileserrors"></a>Office_Android_EarlyTelemetry_ExpansionFilesErrors
+#### <a name="officeandroidearlytelemetryexpansionfileserrors"></a>Office.Android.EarlyTelemetry.ExpansionFilesErrors
 
 Ekspanzijske datoteke za komplet datoteka sustava Android (APK) za mobilnu aplikaciju Office jesu dopunske datoteke resursa koje razvojni programeri aplikacija na sustavu Android mogu objaviti zajedno sa svojom aplikacijom. Da bismo svoj mehanizam preuzimanja ekspanzijskih datoteka učinili pouzdanijim, bilježimo razlog pogrešaka koje nastupe bilo tijekom preuzimanja ekspanzijskih datoteka ili čitanja preuzetih ekspanzijskih datoteka.
 
@@ -12601,7 +12720,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_MethodName** – tekst koji predstavlja naziv metode u izvornom kodu u kojem je došlo do pogreške.
 
-#### <a name="office_android_earlytelemetry_extractionerror"></a>Office_Android_EarlyTelemetry_ExtractionError
+#### <a name="officeandroidearlytelemetryextractionerror"></a>Office.Android.EarlyTelemetry.ExtractionError
 
 Da biste smanjili veličinu aplikacija sustava Office i Android, primjenjujemo kompresiju na resurse u konačnom paketu. Za vrijeme izvođenja te resurse prvo izdvojimo prije nego što ih upotrijebimo. Ponekad ima neočekivanih pogrešaka tijekom izdvajanja, što dovodi do rušenja aplikacije. 
 
@@ -12632,7 +12751,7 @@ Prikupljaju se sljedeća polja:
 - **Data_MethodName** – naziv postupka u izvornom kodu gdje je došlo do pogreške.
 
 
-#### <a name="office_android_earlytelemetry_registryerrors"></a>Office_Android_EarlyTelemetry_RegistryErrors
+#### <a name="officeandroidearlytelemetryregistryerrors"></a>Office.Android.EarlyTelemetry.RegistryErrors
 
 Taj događaj bilježi pogreške do kojih je došlo tijekom pristupanja registru sustava Android. Ti nam podaci o događajima omogućuju razumijevanje korisničkih pogrešaka i poboljšavanje značajke registra.
 
@@ -12853,7 +12972,7 @@ Prikupljaju se sljedeća polja:
 - **WasIdentitySignedOut** – upućuje na to je li račun bio u odjavljenom stanju.
 
 
-#### <a name="office_apple_licensing_mac_dractivationfailures"></a>Office_Apple_Licensing_Mac_DRActivationFailures
+#### <a name="officeapplelicensingmacdractivationfailures"></a>Office.Apple.Licensing.Mac.DRActivationFailures
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj se koristi za snimanje neuspjeha aktivacije tvrtke Digital River (događaj bilježi ključ i proizvod koji su korišteni za aktiviranje, kao i primljeni kôd pogreške).  Ovaj se događaj koristi za prepoznavanje i pomoć pri otklanjanju poteškoća pri neuspjelim aktivacijama (problemi tvrtke Digital River)
 
@@ -12867,7 +12986,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_ProductKeyHash** – aktiviran je kodirani ključ proizvoda
 
-#### <a name="office_apple_licensing_mac_getmachinestatuserrors"></a>Office_Apple_Licensing_Mac_GetMachineStatusErrors
+#### <a name="officeapplelicensingmacgetmachinestatuserrors"></a>Office.Apple.Licensing.Mac.GetMachineStatusErrors
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj prikuplja kôd pogreške vraćen tijekom povremene provjere valjanosti licence pretplate. Kôd pogreške može značiti nedostupnost poslužitelja, ali i isteka licence, ograničenje broja računala, nevažeći ID hardvera itd. Ovaj se događaj koristi za nadziranje stanja servisa za licenciranje sustava Office, ali i za istraživanje problema povezanih s upravljanjem računalima s pretplatom.
 
@@ -12887,7 +13006,7 @@ Prikupljaju se sljedeća polja:
 
 - **Result** – kod pogreške rezultata
 
-#### <a name="office_firstrun_apple_maconiolkfirstrunstarted"></a>Office_FirstRun_Apple_MacONIOLKFirstRunStarted
+#### <a name="officefirstrunapplemaconiolkfirstrunstarted"></a>Office.FirstRun.Apple.MacONIOLKFirstRunStarted
 
 Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platformama. Događaj nam daje do znanja da je korisnik ušao u iskustvo prvog pokretanja. Ovaj događaj koristimo kako bismo saznali je li iskustvo prvog pokretanja (FRE) uspješno pokrenuto.
 
@@ -12907,7 +13026,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_TagID** – identifikator neuspjeha do kojeg je došlo
 
-#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfolder_error"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error
+#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder.Error
 
 Prikuplja informacije kada dođe do bilo kakvog neuspjeha tijekom navigacije u zajedničkom kalendaru. Ti se podaci koriste za praćenje stanja API-ja za zajedničko korištenje kalendara i interakcije programa Outlook sa zajedničkim kalendarima.
 
@@ -13191,7 +13310,7 @@ Prikupljaju se sljedeća polja:
 
 - **RMS.SDKVersion** – verzija klijenta usluge upravljanja pravima
 
-#### <a name="save_error"></a>save_error
+#### <a name="saveerror"></a>save.error
 
 Omogućuje nam otkrivanje i rješavanje situacija u kojima je došlo do pogreške kada ste pokušali spremiti datoteku.  On prati pogreške uzrokovane neuspješnim spremanjem datoteke, uključujući opisnu poruku o pogrešci kako bi nam pomogao riješiti problem.
 
@@ -13217,7 +13336,7 @@ Ovo su podvrste podataka u toj kategoriji:
 
 Stanje mrežne veze i postavke uređaja, kao što je memorija.
 
-#### <a name="application_did_receive_memory_warning"></a>application_did_receive_memory_warning
+#### <a name="applicationdidreceivememorywarning"></a>application.did.receive.memory.warning
 
 Ovaj se događaj šalje kada nam Apple kaže da aplikaciji ponestaje memorije. On nam govori da smo uveli problem s upravljanjem memorijom na vašem uređaju.
 
@@ -13241,7 +13360,7 @@ Prikupljaju se sljedeća polja:
 
 - **running_time** – govori nam količinu vremena koju je aplikacija provela na pokretanje u trenutku kad je aplikaciji ponestalo memorije.
 
-#### <a name="conversation_memory_leak"></a>conversation_memory_leak
+#### <a name="conversationmemoryleak"></a>conversation.memory.leak
 
 Omogućuje nam otkrivanje situacija u kojima naš razgovor poruka e-pošte uzrokuje korištenje više memorije na vašem uređaju od očekivanog.
 
@@ -13249,7 +13368,7 @@ Prikupljaju se sljedeća polja:
 
 - Ne prikupljaju se nikakva polja ni dodatni podaci. Prikupljaju se samo zapisnici ako postoji curenje memorije u vezi s niti razgovora.
 
-#### <a name="core_data_corruption"></a>core_data_corruption
+#### <a name="coredatacorruption"></a>core.data.corruption
 
 Omogućuje nam otkrivanje situacija u kojima vam ne možemo prikazati vaše poruke e-pošte ili kalendar jer je mjesto na kojem spremamo e-poštu na vašem uređaju postalo oštećeno.
 
@@ -13259,7 +13378,7 @@ Prikupljaju se sljedeća polja:
 
 - **sqlError** – numerički kod pogreške naveden u https://www.sqlite.org/c3ref/c_abort.html
 
-#### <a name="core_data_corruption_user_reset"></a>core_data_corruption_user_reset
+#### <a name="coredatacorruptionuserreset"></a>core.data.corruption.user.reset
 
 Omogućuje nam prepoznavanje situacija u kojima ste izbrisali ili vratili izvorne postavke svog računa u našoj aplikaciji i kada je to bilo uzrokovano oštećenjem podataka e-pošte koje smo pohranili na vašem uređaju.
 
@@ -13267,7 +13386,7 @@ Prikupljaju se sljedeća polja:
 
 - **errorSource** – navodi gdje se oštećenje dogodilo, bilo tijekom spremanja ili brisanja
 
-#### <a name="core_data_diagnostics"></a>core_data_diagnostics 
+#### <a name="coredatadiagnostics"></a>core.data.diagnostics 
 
 Omogućuje nam otkrivanje i rješavanje situacija u kojima naš prostor za pohranu poruka e-pošte koristi previše prostora za pohranu vašeg uređaja
 
@@ -13275,7 +13394,7 @@ Prikupljaju se sljedeća polja:
 
 - **db_size_megabytes** – prati veličinu baze podataka osnovnih podataka zaokruženu na najbližih 25 megabajta i s najvećom veličinom od 500 megabajta
 
-#### <a name="general_properties_log"></a>general_properties_log
+#### <a name="generalpropertieslog"></a>general.properties.log
 
 Ovaj događaj prikuplja informacije koje nam omogućuju kategoriziranje i razvrstavanje problema unutar aplikacije Outlook koji su povezani s postavkama pristupačnosti i uređaja.  Ova je kategorizacija potrebna za određivanje prioriteta utjecaja problema na klijente.
 
@@ -13333,7 +13452,7 @@ Sljedeća se polja prikupljaju samo za Android:
 
 - **webview_package_version**: verzija paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
 
-#### <a name="low_storage_warning"></a>low_storage_warning
+#### <a name="lowstoragewarning"></a>low.storage.warning
 
 Ovo je potrebno za nadzor toga zauzima li naša aplikacija iznenada većinu prostora za pohranu na vašem uređaju zbog visoke upotrebe memorije, što upućuje na to da uređaju ponestaje prostor za pohranu
 
