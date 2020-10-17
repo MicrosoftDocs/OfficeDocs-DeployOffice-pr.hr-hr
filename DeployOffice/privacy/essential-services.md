@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
-ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
+ms.openlocfilehash: 94f248d64c74cd6575b4039178270f62b3715d15
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48367450"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491534"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -293,6 +293,12 @@ Prikupljaju se sljedeća polja:
 
   - **Duration** – trajanje provjere autentičnosti
 
+  - **Duration_Max** – ako je signal skupni, označava maksimalno trajanje za bilo koji skupni događaj.
+
+  - **Duration_Min** – ako je signal skupni, označava minimalno trajanje za bilo koji skupni događaj.
+
+  - **Duration_Sum** – ako je signal skupni, označava zbroj trajanja svih skupnih događaja.
+
   - **Endtime** – vrijeme završetka događaja provjere autentičnosti
 
   - **Error** – šifra pogreške u slučaju da provjera autentičnosti nije uspjela
@@ -407,11 +413,19 @@ Prikupljaju se sljedeća polja:
 
   - **Microsoft\_ADAL\_user\_cancel** – vrijednost true/false koja označava je li prozor korisničkog sučelja otkazan.
 
+  - **Microsoft_ADAL_was_request_throttled** – vrijednost true/false koja označava je li događaj ograničen ADAL-om zbog prevelikog broja zahtjeva.
+ 
   - **Microsoft\_ADAL\_x\_ms\_request\_id** – dodatni ID zahtjeva koji ADAL navodi u HTTP zaglavlju za servis.
 
   - **Platform** – Win32/WinRT/Android/iOS/Mac
 
+  - **Promptreasoncorrelationid** – za upite, to je ID korelacije drugog događaja koji objašnjava zašto korisnik možda vidi upit za provjeru autentičnosti.
+
+  - **Resource** – resurs za koji korisnik traži token, npr. Exchange ili SharePoint.
+
   - **Scenarioid** – GUID. U jednom scenariju može biti veći broj događaja, npr. scenarijem se može dodavati novi račun, ali se u sklopu njega prikazuje više upita. Taj ID omogućuje korelaciju.
+
+  - **Scenarioname** – naziv scenarija kojemu ovaj događaj provjere autentičnosti pripada.
 
   - **Sessionid** – GUID koji određuje sesiju pokretanja
 

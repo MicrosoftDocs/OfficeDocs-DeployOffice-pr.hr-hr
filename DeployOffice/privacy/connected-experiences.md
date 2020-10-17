@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 3e44c9c20bed531f46390c91a41ce559cabc9e72
-ms.sourcegitcommit: 25a0925e7caf8fbb53e6757e8a65126eb2c9da65
+ms.openlocfilehash: ca3139f95f20392efce25bb00572c2973cec82db
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "48338174"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491570"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -40,6 +40,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 |Preporuke za grafikon (Excel za web)|[Stvaranje grafikona s preporučenim grafikonima](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
 |Dodaci za bilježnicu za predmete (OneNote)|[Početak rada s alatom za stvaranje bilježnica za predmete u programu OneNote: vodič za nastavnike](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
 | Vrste podataka| [Vrste podataka u programu Excel: dionice i zemljopis](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
+|Dizajner (Word za web)|[Koristite se Dizajnerom za stvaranje kvalitetnijih dokumenata](https://support.microsoft.com/office/97844bd3-b52d-4c94-9deb-b51db7f36d91    )|
 | Diktiranje  | [Diktirajte dokumente u programu Word](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 |Redaktor<sup>1</sup> |[Microsoft Editor provjerava gramatiku i više u dokumentima, pošti i na webu](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Ideje     | [Ideje u programu Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
@@ -62,6 +63,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | *Pametno traženje*\*   | [Uvidi u ono na čemu radite pomoću pametnog traženja](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predloženi odgovori | [Što su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Dodirivanje za Word (dodavanje iz datoteka)   | [Traženje i korištenje sadržaja koji trebate upravo onda kada ga trebate i bez napuštanja programa Word](https://support.microsoft.com/office/860118fc-1f61-41f6-922f-40084a284658)   |
+|Predviđanje teksta (značajka Redaktora)|[Neka pisanje bude brže uz predviđanja teksta u programu Word](https://support.microsoft.com/office/7afcb4f3-4aa2-443a-9b08-125a5d692576)|
 |Transkripcija |[Transkribiraj snimke](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
 | Pretvaranje u web-stranicu   | [Pretvaranje dokumenta programa Word u web-stranicu programa Sway](https://support.microsoft.com/office/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevoditelj   | [Prevođenje teksta na drugi jezik](https://support.microsoft.com/office/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
