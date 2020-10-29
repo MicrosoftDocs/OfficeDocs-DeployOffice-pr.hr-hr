@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus), uključujući dijagnostičke podatke i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: f894db695caf8a6dfa56dd6db541d8b8fd4bd564
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440528"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794734"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrola za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 
@@ -30,8 +30,8 @@ ms.locfileid: "47440528"
 Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da biste mogli odabrati načine prikupljanja i korištenja podataka o vama prilikom korištenja sustava Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus).
 
 Počevši od verzije 1904 sustava Microsoft 365 Apps za velike tvrtke, nudimo vam nove, ažurirane i poboljšane kontrole za zaštitu privatnosti u ovim područjima:
-- ***Dijagnostički podaci*** o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows u vašoj tvrtki ili ustanovi, a koji se prikupljaju i šalju Microsoftu.
-- ***Povezana iskustva*** koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
+- ***Dijagnostički podaci** _ o klijentskom softveru sustava Office koji se pokreće na uređaju korisnika u vašoj tvrtki ili ustanovi, a koji se prikupljaju i šalju Microsoftu.
+- _*_Povezana iskustva_*_ koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
 
 U sklopu tih promjena pojavili su se novi i ažurirani elementi korisničkog sučelja (UI-ja) i postavke pravilnika.
 
@@ -39,15 +39,15 @@ U sklopu tih promjena pojavili su se novi i ažurirani elementi korisničkog su�
 
 Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i otklanjanja problema te poboljšavanja proizvoda. Ti podaci ne sadrže korisnikovo ime ili adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
 
-To su dijagnostički podaci o klijentskom softveru sustava Office koji se koristi na računalima sa sustavom Windows u vašoj tvrtki ili ustanovi, a koji se prikupljaju i šalju Microsoftu.
+Ovi dijagnostički podaci o klijentskom softveru sustava Office koji se pokreće na uređaju korisnika u vašoj tvrtki ili ustanovi prikupljaju se i šalju Microsoftu.
 
 Možete birati između tri razine dijagnostičkih podataka za klijentski softver sustava Microsoft 365 Apps za velike tvrtke:
 
-- **Obavezno**: minimalni podaci potrebni da bi Office bio siguran i ažuran te da bi na uređaju na kojem je instaliran funkcionirao na očekivan način.
+- _ *Obavezno* * Minimalni podaci potrebni da bi Office bio siguran i ažuran te da bi na uređaju na kojem je instaliran funkcionirao na očekivan način.
 
-- **Neobavezno**: dodatni podaci koji nam pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije koje nam pomažu pri otkrivanju, dijagnosticiranju i otklanjanju problema.
+- **Neobavezno** : dodatni podaci koji nam pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije koje nam pomažu pri otkrivanju, dijagnosticiranju i otklanjanju problema.
 
-- **Nijedno**: ne prikupljaju se i ne šalju nikakvi dijagnostički podaci o klijentskom softveru sustava Office na korisnikovu uređaju. Ta mogućnost, međutim, znatno ograničava naše mogućnosti vezane uz otkrivanje, dijagnosticiranje i otklanjanje problema na koje vaši korisnici mogu naići koristeći Office.
+- **Nijedno** : ne prikupljaju se i ne šalju nikakvi dijagnostički podaci o klijentskom softveru sustava Office na korisnikovu uređaju. Ta mogućnost, međutim, znatno ograničava naše mogućnosti vezane uz otkrivanje, dijagnosticiranje i otklanjanje problema na koje vaši korisnici mogu naići koristeći Office.
 
 Obavezni dijagnostički podaci mogu, primjerice, obuhvaćati informacije o verziji sustava Office instaliranog na uređaju ili informacije koje pokazuju da se aplikacije sustava Office ruše prilikom pokušaja otvaranja dokumenata. Neobavezni dijagnostički podaci mogu obuhvaćati informacije o vremenu potrebnom za spremanje dokumenta, što može ukazivati na problem specifičan za spremanje na vašem uređaju.
 
@@ -77,9 +77,9 @@ Microsoft 365 Apps za velike tvrtke sastoji se od klijentskih softverskih aplika
 
 Razumijemo da možda želite odabrati koje će vrste povezanih iskustava biti dostupne vašim korisnicima prilikom rada u aplikacijama sustava Office. Kao administrator svoje tvrtke ili ustanove na raspolaganju će vam biti postavka pravilnika koja omogućuje da odaberete želite li korisnicima ponuditi ove vrste povezanih iskustava:
 
-- **Iskustva koja analiziraju vaš sadržaj**: to su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvide u podatke i slične značajke. Na primjer, PowerPoint Designer ili Prevoditelj.
+- **Iskustva koja analiziraju vaš sadržaj** : to su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvide u podatke i slične značajke. Na primjer, PowerPoint Designer ili Prevoditelj.
 
-- **Iskustva koja preuzimaju internetski sadržaj**: to su iskustva koja omogućuju pretraživanje i preuzimanje internetskih sadržaja – uključujući predloške, slike, 3D modele, videozapise i referentne materijale – radi poboljšavanja vaših dokumenata. Na primjer, predlošci sustava Office ili alat za brz početak rada s programom PowerPoint.
+- **Iskustva koja preuzimaju internetski sadržaj** : to su iskustva koja omogućuju pretraživanje i preuzimanje internetskih sadržaja – uključujući predloške, slike, 3D modele, videozapise i referentne materijale – radi poboljšavanja vaših dokumenata. Na primjer, predlošci sustava Office ili alat za brz početak rada s programom PowerPoint.
 
 Na primjer, možete odabrati da korisnicima ponudite povezana iskustva koja preuzimaju internetske sadržaje, ali ne i povezana iskustva koja analiziraju sadržaj. Ako ne konfigurirate te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima.
 
@@ -130,6 +130,6 @@ Postoji i skup servisa koji su ključni za funkcioniranje sustava Microsoft 365 
 
 Dodatne informacije potražite u članku [Ključni servisi za Office](essential-services.md).
 
-## <a name="related-topics"></a>Povezane teme
+## <a name="related-articles"></a>Povezani članci
 - [Zaštita privatnosti u tvrtki Microsoft](https://privacy.microsoft.com/)
 - [Zaštita privatnosti u sustavu Windows](https://docs.microsoft.com/windows/privacy/)

@@ -14,30 +14,25 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sustava Office nudi informacije o upravljanju postavkama zaštite privatnosti na uređajima sa sustavom iOS.
 hideEdit: true
-ms.openlocfilehash: ac8b3428734649981f20a82be2f0793c857e09ee
-ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
+ms.openlocfilehash: ed24ac934625bba61eac25e764a892d48365c005
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45092146"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794649"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Korištenje postavki za upravljanje kontrolama za zaštitu privatnosti za Office na iOS uređajima
 
+> [!NOTE]
+> Popis proizvoda sustava Office obuhvaćenih ovim informacijama o zaštiti privatnosti potražite u članku [Kontrole za zaštitu privatnosti dostupne za proizvode Office](products-versions-privacy-controls.md).
+
 Postoje nove postavke preferenci kojima se omogućuje kontrola nad postavkama povezanima sa sljedećim:
 
-- ***Dijagnostički podaci*** koji se prikupljaju i šalju Microsoftu o klijentskom softveru sustava Office koji se upotrebljava.
+- ***Dijagnostički podaci** _ koji se prikupljaju i šalju Microsoftu o klijentskom softveru sustava Office koji se upotrebljava.
 
-- ***Povezana iskustva*** koja se koriste funkcijom utemeljenoj na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
+- _*_Povezana iskustva_*_ koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
 
 Dodatne informacije o dijagnostičkim podacima i povezanim iskustvima potražite u članku [Pregled kontrola zaštite privatnosti](overview-privacy-controls.md).
-
-Te preference postavki odnose se na sljedeće aplikacije:
-- Verzija 2.30 i novije aplikacije Word za iOS, Excel za iOS i PowerPoint za iOS.
-- Verzija 4.30.0 i novije aplikacije Outlook za iOS
-- Verzija 16.30 i novije aplikacije OneNote za iOS.
-- Verzija 11.19.11 i novije aplikacije OneDrive za iOS.
-- Verzija 1.17 i novije programa Preglednik za Visio za iOS.
-- Verzija 2.34 i novija aplikacije Office za iOS.
 
 > [!NOTE]
 > Informacije o sličnim postavkama za Office na računalima sa sustavom macOS potražite u odjeljku [Upotreba postavki za upravljanje kontrolama za zaštitu privatnosti za Office za Mac](mac-privacy-preferences.md)
@@ -74,13 +69,13 @@ Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao 
 
 |||
 |:-----|:-----|
-|**Ključ**  | `DiagnosticDataTypePreference`  |
+|_ *Tipka**  | `DiagnosticDataTypePreference`  |
 |**Vrsta podataka**  | Niz |
 |**Moguće vrijednosti**  | `BasicDiagnosticData` *(time se razina postavlja na Obvezno)* <br/> `FullDiagnosticData` *(time se razina postavlja na Neobvezno)* <br/> `ZeroDiagnosticData` *(time se razina postavlja na Nijedno)* |
 
 Ako ne postavite tu preferencu, Microsoftu se šalju samo obvezni dijagnostički podaci ako su korisnici s pretplatom na Office 365 (ili Microsoft 365) prijavljeni pomoću računa poduzeća ili obrazovne ustanove. Osim toga, ti korisnici ne mogu promijeniti razinu dijagnostičkih podataka bez obzira na to kako postavite tu preferencu.
 
-Drugim korisnicima, kao što su privatni korisnici s pretplatom na Office 365 (ili Microsoft 365), šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da šalje i neobavezne dijagnostičke podatke odlaskom na **Postavke** > **Postavke privatnosti**.
+Drugim korisnicima, kao što su privatni korisnici s pretplatom na Office 365 (ili Microsoft 365), šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da šalje i neobavezne dijagnostičke podatke odlaskom na **Postavke** > **Postavke privatnosti** .
 
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka preferenci za povezana iskustva kojima se analizira vaš sadržaj
@@ -98,7 +93,7 @@ Ako ne postavite tu preferencu, povezana iskustva kojima se analizira sadržaj d
 
 Ako korisnik ima pretplatu na Office 365 (ili Microsoft 365) te se prijavi s pomoću računa poduzeća ili obrazovne ustanove, ne može isključiti povezana iskustva kojima se analizira sadržaj.
 
-Za druge korisnike, kao što su korisnici s pretplatom na Office 365 (ili Microsoft 365), korisnik može odabrati da isključi povezana iskustva kojima se analizira sadržaj odlaskom na **Postavke** > **Postavke privatnosti**.
+Za druge korisnike, kao što su korisnici s pretplatom na Office 365 (ili Microsoft 365), korisnik može odabrati da isključi povezana iskustva kojima se analizira sadržaj odlaskom na **Postavke** > **Postavke privatnosti** .
 
 ## <a name="preference-setting-for-connected-experiences-that-download-online-content"></a>Postavka preferenci za povezana iskustva kojima se preuzima internetski sadržaj
 
@@ -115,7 +110,7 @@ Ako ne postavite tu preferencu, povezana iskustva kojima se preuzima internetski
 
 Ako korisnik ima pretplatu na Office 365 (ili Microsoft 365) te se prijavi s pomoću računa poduzeća ili obrazovne ustanove, ne može isključiti povezana iskustva kojima se preuzima sadržaj na mreži.
 
-Za druge korisnike, kao što su korisnici s pretplatom na Office 365 (ili Microsoft 365), korisnik može odabrati da isključi povezana iskustva kojima se preuzima sadržaj na mreži odlaskom na **Postavke** > **Postavke privatnosti**.
+Za druge korisnike, kao što su korisnici s pretplatom na Office 365 (ili Microsoft 365), korisnik može odabrati da isključi povezana iskustva kojima se preuzima sadržaj na mreži odlaskom na **Postavke** > **Postavke privatnosti** .
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Postavka preferenci za neobavezna povezana iskustva
 
@@ -128,6 +123,6 @@ Osim prethodno spomenutih povezanih iskustava postoje i neka neobavezna povezana
 |**Moguće vrijednosti**  | `TRUE` *(omogućeno)* <br/> `FALSE` *(onemogućeno)*|
 
 
-Ako ne postavite tu preferencu, neobavezna povezana iskustva dostupna su korisnicima s pretplatom na Office 365 (ili Microsoft 365) na koji se prijavljuje s pomoću računa poduzeća ili obrazovne ustanove. Osim ako niste postavili tu preferencu na FALSE, ti korisnici mogu odabrati da isključe neobavezno povezano iskustvo odlaskom na **Postavke** > **Postavke privatnosti**.
+Ako ne postavite tu preferencu, neobavezna povezana iskustva dostupna su korisnicima s pretplatom na Office 365 (ili Microsoft 365) na koji se prijavljuje s pomoću računa poduzeća ili obrazovne ustanove. Osim ako niste postavili tu preferencu na FALSE, ti korisnici mogu odabrati da isključe neobavezno povezano iskustvo odlaskom na **Postavke** > **Postavke privatnosti** .
 
 Za druge korisnike, kao što su privatni korisnici s pretplatom na Office 365 (ili Microsoft 365), ne postoji opcija isključivanja neobveznih povezanih iskustava.

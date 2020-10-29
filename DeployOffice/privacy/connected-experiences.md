@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: ca3139f95f20392efce25bb00572c2973cec82db
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 2ffbac14694578fc1f5964cef2c92eea6d6a2172
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491570"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794722"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -71,7 +71,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 <sup>1</sup> Osnovna funkcionalnost Redaktora ostaje dostupna čak i ako niste povezani s internetom. Ta ista osnovna funkcionalnost i dalje ostaje dostupna ako odaberete onemogućivanje korištenja povezanih iskustava koja analiziraju vaš sadržaj. U oba se slučaja Microsoftu ne šalju nikakvi podaci o korištenju Redaktora.
 
 > [!NOTE]
-> \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
+> \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office* .
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezana iskustva koja preuzimaju internetski sadržaj
 
@@ -103,7 +103,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 | *Traka vremenske prognoze*\* (Outlook)| [Promjena grada za traku vremenske prognoze u kalendaru](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
+>\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office* .
 
 ## <a name="other-connected-experiences"></a>Ostala povezana iskustva
 
@@ -125,7 +125,7 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | Fokusirana ulazna pošta (Outlook) |[Fokusirana ulazna pošta za Outlook](https://support.microsoft.com/office/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Upravljanje pravima na informacije |[Otvaranje datoteke s ograničenim dozvolama](https://support.microsoft.com/office/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | Kartica kontakta sa servisa LinkedIn |[LinkedIn u Microsoftovim aplikacijama i servisima](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| *Dodaci za Office*\* | [Implementacija dodataka u centru za administratore](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) |
+| *Dodaci za Office*\* | [Prikaz dodataka, upravljanje njima i njihovo instaliranje u programima sustava Office](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(za korisnike)* <br/> [Implementacija dodataka u centru za administratore](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(za administratore)* |
 | Povratne informacije o sustavu Office |[Slanje povratnih informacije o sustavu Microsoft Office](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podrška za Office (Obratite nam se) |Kada na vrpci odaberete **Pomoć** > **Obratite se podršci** |
 | Organizacijski grafikon (Visio) |[Stvaranje organizacijskog grafikona u programu Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
@@ -146,18 +146,18 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | Dok vas nije bilo |[Primanje obavijesti kada članovi vašeg tima ažuriraju vašu zajednički korištenu datoteku](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
+>\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office* .
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Odabir dostupnosti povezanih iskustava za korištenje
 
 Možete odabrati hoće li određene vrste povezanih iskustava, poput povezanih iskustava koja preuzimaju internetski sadržaj, biti dostupne za korištenje. Način na koji provodite taj odabir ovisi o tome jeste li se u Office prijavili s Microsoftovim računom, poput osobne adrese e-pošte na domeni outlook.com, ili s računom tvrtke ili obrazovne ustanove.
 
-Ako ste se prijavili pomoću Microsoftovog računa, otvorite aplikaciju sustava Office, kao npr. Word, te idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**. U odjeljku **Povezana iskustva** možete odabrati hoće li određene vrste povezanih iskustava, poput iskustava koja analiziraju vaš sadržaj, biti dostupne za korištenje. Ako ne odete na **Upravljanje postavkama**, bit će vam dostupna sva povezana iskustva.
+Ako ste se prijavili pomoću Microsoftovog računa, otvorite aplikaciju sustava Office, kao npr. Word, te idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama** . U odjeljku **Povezana iskustva** možete odabrati hoće li određene vrste povezanih iskustava, poput iskustava koja analiziraju vaš sadržaj, biti dostupne za korištenje. Ako ne odete na **Upravljanje postavkama** , bit će vam dostupna sva povezana iskustva.
 
-Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi odlučit će hoće li vam ta povezana iskustva biti dostupna. Vi nećete vidjeti nikakve izbore vezane uz povezana iskustva ako odete na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**.
+Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi odlučit će hoće li vam ta povezana iskustva biti dostupna. Vi nećete vidjeti nikakve izbore vezane uz povezana iskustva ako odete na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama** .
 
 > [!NOTE]
-> - Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
+> - Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost** . Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
 > - Za dodatne informacije pogledajte [Postavke zaštite privatnosti računa](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne upotrebljavate te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u sljedećim člancima: 
