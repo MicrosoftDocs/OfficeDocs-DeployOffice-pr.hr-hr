@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o neobaveznim povezanim iskustvima, uključujući uvjete korištenja koji se na njih primjenjuju.
 hideEdit: true
-ms.openlocfilehash: c7593aed7e4bc6037bca6b84181c0434b2e27e30
-ms.sourcegitcommit: 288d54b2e6b463f67358f701ef0dd5424237f811
+ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48322362"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931428"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled neobaveznih povezanih iskustava za Office
 
@@ -42,7 +42,7 @@ Bing omogućuje sljedeća iskustva u programu Outlook za iOS i Android:
 
 - **Prijedlozi za mjesta:**  Kada dodate javni prostor sa adresom ulice u stavku kalendara, i puna adresa će se uključiti u polje Mjesto.
 - **Zanimljivi kalendari:** Možete se [pretplatiti](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) na kalendare za omiljene sportske timove ili TV emisije.
-- **Vrijeme putovanja na kartici Slijedi**Vaš sljedeći nadolazeći događaj bit će sažet na vrhu mape ulazna pošta u kartici pod nazivom[Slijedi](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). U aplikaciji Outlook za Android, ovo iskustvo zahtijeva Bing karte kako bi se osiguralo procijenjeno vrijeme putovanja.
+- **Vrijeme putovanja na kartici Slijedi** Vaš sljedeći nadolazeći događaj bit će sažet na vrhu mape ulazna pošta u kartici pod nazivom [Slijedi](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). U aplikaciji Outlook za Android, ovo iskustvo zahtijeva Bing karte kako bi se osiguralo procijenjeno vrijeme putovanja.
 
  Ta iskustva koja se oslanjaju na Bing vam se licenciraju pod uvjetima [Microsoftovog ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) te su obuhvaćena [izjavom o zaštiti privatnosti](https://privacy.microsoft.com/). Svi upiti za pretraživanje koje uputite tvrtki ili ustanovi sustava Microsoft 365 Apps za velike tvrtke prilikom korištenja tih servisa šalju se u Microsoft Bing. Tvrtka Bing ne povezuje ih s vama.
 
@@ -101,6 +101,9 @@ Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zat
 
 Za dodatne informacije pogledajte [Postavke zaštite privatnosti računa](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
+> [!NOTE]
+> Ako vam je administrator vaše tvrtke ili ustanove na raspolaganje stavio količinski licenciranu verziju sustava Office 2019, Project 2019 ili Visio 2019, idite na **Datoteka** > **Mogućnosti** > **Centar za pouzdanost** > **Postavke Centra za pouzdanost** > **Mogućnosti zaštite privatnosti**. Ondje biste morali vidjeti potvrdni okvir za mogućnost **Uključi neobavezna povezana iskustva**. Ako vam se taj potvrdni okvir ne prikaže u sustavu Project 2019 ili Visio 2019, odaberite **Postavke zaštite privatnosti...** u tom dijaloškom okviru **Centra za pouzdanost**. Zatim ćete vidjeti potvrdni okvir **Postavke zaštite privatnosti** koji se pojavljuje s potvrdnim okvirom za mogućnost **Omogući neobavezna povezana iskustva**.
+
 ## <a name="your-privacy-settings"></a>Vaše postavke zaštite privatnosti
 
 Ako vam je administrator dao mogućnost korištenja neobaveznih povezanih iskustava u aplikacijama sustava Office obuhvaćenima sustavom Microsoft 365 Apps za velike tvrtke na uređaju sa sustavom Windows, možete otići na **Datoteka** > **Račun** > **Zaštita privatnosti računa** i odabrati **Upravljanje postavkama** da biste u bilo kojem trenutku upravljali postavkama. Kada su omogućeni, imat ćete mogućnost korištenja servisa opisanih u ovom članku kada ih poželite koristiti. Kada su onemogućeni, oni neće biti dostupni.
@@ -109,9 +112,12 @@ Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zat
 
 Za dodatne informacije pogledajte [Postavke zaštite privatnosti računa](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
+> [!NOTE]
+> Ako vam je administrator vaše tvrtke ili ustanove na raspolaganje stavio količinski licenciranu verziju sustava Office 2019, Project 2019 ili Visio 2019, idite na **Datoteka** > **Mogućnosti** > **Centar za pouzdanost** > **Postavke Centra za pouzdanost** > **Mogućnosti zaštite privatnosti**. Ondje biste morali vidjeti potvrdni okvir za mogućnost **Uključi neobavezna povezana iskustva**. Ako vam se taj potvrdni okvir ne prikaže u sustavu Project 2019 ili Visio 2019, odaberite **Postavke zaštite privatnosti...** u tom dijaloškom okviru **Centra za pouzdanost**. Zatim ćete vidjeti potvrdni okvir **Postavke zaštite privatnosti** koji se pojavljuje s potvrdnim okvirom za mogućnost **Omogući neobavezna povezana iskustva**.
+
 ## <a name="required-service-data"></a>Obavezni servisni podaci
 
-Kada upotrebljavate bilo koji od neobaveznih servisa koji se oslanjaju na oblak i koji su opisani u ovom članku, Microsoft može prikupljati [potrebne servisne podatke](required-service-data.md) (npr. podatke o upotrebi te pogreškama i performansama) vezane uz funkcioniranje iskustva prilikom korištenja. Ti obavezni servisni podaci mogu sadržavati „osobne podatke” kao što su definirani člankom 4. europske Opće uredbe o zaštiti podataka.Svi obavezni servisni podaci koje Microsoft prikuplja tijekom upotrebe neke od aplikacija i servisa sustava Microsoft 365 Apps za velike tvrtke vode se pod pseudonimom, kao što je definirano standardom ISO/IEC 19944:2017 (odjeljak 8.3.3).
+Kada upotrebljavate bilo koji od neobaveznih servisa koji se oslanjaju na oblak i koji su opisani u ovom članku, Microsoft može prikupljati [potrebne servisne podatke](required-service-data.md) (npr. podatke o upotrebi te pogreškama i performansama) vezane uz funkcioniranje iskustva prilikom korištenja. Ti obavezni servisni podaci mogu sadržavati „osobne podatke” kao što su definirani člankom 4. europske Opće uredbe o zaštiti podataka. Svi obavezni servisni podaci koje Microsoft prikuplja tijekom upotrebe neke od aplikacija i servisa sustava Microsoft 365 Apps za velike tvrtke vode se pod pseudonimom, kao što je definirano standardom ISO/IEC 19944:2017 (odjeljak 8.3.3).
 
 ## <a name="admin-controls-for-optional-connected-experiences"></a>Administratorske kontrole za neobavezna povezana iskustva 
 

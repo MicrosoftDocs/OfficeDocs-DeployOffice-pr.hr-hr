@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije o proizvodima i verzijama sustava Office koje imaju najnovije kontrole za zaštitu privatnosti.
 hideEdit: true
-ms.openlocfilehash: d6fc46501b2137f2f22cd30dad4a2168bc490360
-ms.sourcegitcommit: da41d41b443c8392c96e64a4d2fc674957abddf5
+ms.openlocfilehash: 8434891947997908bb4de61ad56606f8b4b59614
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431892"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931174"
 ---
 # <a name="privacy-controls-available-for-office-products"></a>Kontrole za zaštitu privatnosti dostupne za proizvode sustava Office
 
@@ -42,7 +42,6 @@ Naše najnovije kontrole za zaštitu privatnosti dostupne su za sljedeće proizv
 - Maloprodajne verzije sustava Office 2019 i Office 2016 koje su raspoložive kao jednokratne kupnje. Na primjer, Office Professional 2019 ili Office Home & Student 2016.
 - Verzije programa Project i Visio za računala, koje se isporučuju s nekim pretplatničkim tarifama kao što su Project tarifa 5 ili Visio tarifa 2.
 - Maloprodajne verzije programa Project 2019, Project 2016, Visio 2019 i Visio 2016 koje su raspoložive kao jednokratne kupnje.
-- Količinski licencirane verzije programa Project 2016 i Visio 2016 koji se instaliraju tehnologijom klikom do cilja umjesto da ih instalirate pomoću sustava Windows Installer (MSI). Na primjer, Project Professional 2016 ili Visio Standard 2016.
 
 Za uređaje sa sustavom Windows u sljedećoj tablici navedene su aplikacije i minimalna verzija tih aplikacija koje imaju naše najnovije kontrole za zaštitu privatnosti.
 
@@ -74,6 +73,12 @@ Za te verzije aplikacija sustava Office na uređajima sa sustavom Windows dostup
 Neki proizvodi sustava Office možda nemaju određene vrste povezanih iskustva, pa neke kontrole za zaštitu privatnosti neće biti relevantne.
 
 Da biste konfigurirali te kontrole za zaštitu privatnosti za korisnike koji koriste Office na uređajima sa sustavom Windows u vašoj tvrtki ili ustanovi, možete koristiti pravilnik grupe ili servis za pravilnike u oblaku sustava Office. Dodatne informacije potražite u članku [Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke](manage-privacy-controls.md).
+
+> [!NOTE]
+> Kontrola zaštite privatnosti „Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office” podržana je na sljedećim verzijama programa sustava Office, Project i Visio *s količinskim licencama*.
+> - Office 2019, Project 2019 i Visio 2019 kada su konfigurirani za upotrebu kanala za ažuriranja PerpetualVL2019. U tom slučaju morate upotrebljavati najmanje verziju 1808 (međuverzija 10367.20048) koja je objavljena 13. listopada 2020.
+> - Project 2019 i Visio 2019 kada su konfigurirani za upotrebu kanala za ažuriranja koji nije PerpetualVL2019. Na primjer, ako su konfigurirani za upotrebu Trenutačnog kanala, Mjesečnog kanala za velike tvrtke ili Polugodišnjeg kanala za velike tvrtke. U tom slučaju morate upotrebljavati najmanje verziju 1904.
+> - Project 2016 i Visio 2016 koji se instaliraju tehnologijom klikom do cilja umjesto da ih instalirate s pomoću sustava Windows Installer (MSI). U tom slučaju morate upotrebljavati najmanje verziju 1904.
 
 ## <a name="office-on-mac-devices"></a>Office na uređajima sa sustavom Mac
 

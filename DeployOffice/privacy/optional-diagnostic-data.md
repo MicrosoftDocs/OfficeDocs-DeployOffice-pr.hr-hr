@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima Office sustava pruža informacije o neobaveznim dijagnostičkim podacima u sustavu Office, uključujući primjere događaja.
 hideEdit: true
-ms.openlocfilehash: bcb9a8d4a886fefde3fbb42280183bf163b315c3
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: 7dc10c50baed0306e3e7fc6dd70e0d798a72d0bc
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794793"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931246"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Neobavezni dijagnostički podaci za Office
 
@@ -28,6 +28,9 @@ ms.locfileid: "48794793"
 Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i rješavanja problema te poboljšavanja proizvoda. Ti podaci ne sadrže korisnikovo ime ili adresu e-pošte, sadržaj korisnikovih datoteka ni informacije o aplikacijama koje nisu povezane sa sustavom Office.
 
 Ovi dijagnostički podaci o klijentskom softveru sustava Office koji se pokreće na uređaju korisnika prikupljaju se i šalju Microsoftu. Neki su dijagnostički podaci obavezni, a neki nisu. Omogućujemo vam da odaberete hoćete li nam slati obavezne ili dijagnostičke podatke putem kontrola zaštite privatnosti, kao što su postavke pravila za tvrtke ili ustanove. Dijagnostičke podatke koji nam se šalju možete pogledati pomoću preglednika dijagnostičkih podataka.
+
+> [!NOTE]
+> Ako upotrebljavate verziju sustava Office 2019 ili Office 2016 koja vam ili vašem administratoru ne omogućuje odabir želite li nam slati obavezne ili neobavezne dijagnostičke podatke, šalju se samo obavezni dijagnostički podaci. Na primjer, ako upotrebljavate Office Professional Plus 2019 ili Office Standard 2016, koji ne pružaju mogućnost tog odabira, šalju se samo obavezni dijagnostički podaci. Office 2013 ne šalje obavezne ni neobavezne dijagnostičke podatke. Dodatne informacije o tome koje verzije sustava Office pružaju mogućnost tog odabira potražite u članku [Kontrole za zaštitu privatnosti dostupne za proizvode sustava Office](products-versions-privacy-controls.md).
 
 ***Neobavezni dijagnostički podaci** _ dodatni su podaci koji nam pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije koje nam pomažu pri otkrivanju, dijagnosticiranju i rješavanju problema.
 

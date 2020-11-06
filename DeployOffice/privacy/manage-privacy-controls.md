@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o upravljanju kontrolama za zaštitu privatnosti u sustavu Microsoft 365 Apps za velike tvrtke (nekadašnji Office 365 ProPlus) pomoću postavki pravilnika.
 hideEdit: true
-ms.openlocfilehash: f02714428dd580d79a3fc8f160b00d6df95c4237
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: 401cc5ca875dac28a5cda321a812e9b6c25289e5
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440229"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931210"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Upotreba postavki pravilnika za upravljanje kontrolama za zaštitu privatnosti za Microsoft 365 Apps za velike tvrtke
 
@@ -31,9 +31,9 @@ Microsoft predano radi na tome da vam pruži informacije i kontrole potrebne da 
 
 Počevši od verzije 1904 sustava Microsoft 365 Apps za velike tvrtke, postoje nove postavke pravilnika koje omogućuju kontrolu nad postavkama vezanima uz sljedeće:
 
-- ***Dijagnostičke podatke*** o klijentskom softveru sustava Office, koji se prikupljaju i šalju Microsoftu.
+- ***Dijagnostički podaci** _ koji se prikupljaju i šalju Microsoftu o klijentskom softveru sustava Office koji se upotrebljava
 
-- ***Povezana iskustva*** koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
+- _*_Povezana iskustva_*_ koja koriste funkcije utemeljene na oblaku da bi vama i vašim korisnicima ponudila poboljšane značajke sustava Office.
 
 Ovo je pet novih postavki pravilnika:
 
@@ -64,15 +64,15 @@ Kao što je slučaj sa svim novim postavkama pravilnika, prije nego što šire i
 
 Dijagnostički podaci koriste se da bi Office uvijek bio siguran i ažuran, kao i radi otkrivanja, dijagnosticiranja i otklanjanja problema te poboljšavanja proizvoda.
 
-Možete koristiti postavku pravilnika *Konfiguriranje razine dijagnostičkih podataka o klijentskom softveru koje Office šalje Microsoftu* da biste odabrali koja se razina dijagnostičkih podataka šalje Microsoftu.
+Možete upotrebljavati postavku pravilnika _Konfiguriranje razine dijagnostičkih podataka o klijentskom softveru koje Office šalje Microsoftu_ da biste odabrali koja se razina dijagnostičkih podataka šalje Microsoftu.
 
 Ako omogućite tu postavku pravilnika, morate odabrati razinu dijagnostičkih podataka koji se šalju Microsoftu. Dostupni su izbori Obavezno, Neobavezno i Nijedno.
 
-- Ako odaberete ***Obavezno***, Microsoftu se šalju minimalni podaci nužni da bi Office bio siguran i ažuran te da bi na uređaju na kojem je instaliran funkcionirao na očekivan način.
+- Ako odaberete * **Obavezno** _, Microsoftu se šalju minimalni podaci nužni da bi Office bio siguran i ažuran te da bi na uređaju na kojem je instaliran funkcionirao na očekivan način.
 
-- Ako odaberete ***Neobavezno***, Microsoftu se šalju dodatni podaci koji pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije za pomoć pri otkrivanju, dijagnosticiranju i otklanjanju problema. Ako odaberete slanje neobaveznih dijagnostičkih podataka, uz njih se prikupljaju i obavezni dijagnostički podaci.
+- Ako odaberete _*_Neobavezno_*_ , Microsoftu se šalju dodatni podaci koji pomažu pri poboljšavanju proizvoda i pružaju poboljšane informacije za pomoć pri otkrivanju, dijagnosticiranju i otklanjanju problema. Ako odaberete slanje neobaveznih dijagnostičkih podataka, uz njih se prikupljaju i obavezni dijagnostički podaci.
 
-- Ako odaberete ***Nijedno***, Microsoftu se ne šalju nikakvi dijagnostički podaci o klijentskom softveru sustava Office na korisnikovu uređaju. Ta mogućnost, međutim, znatno ograničava Microsoftove mogućnosti vezane uz otkrivanje, dijagnosticiranje i otklanjanje problema na koje vaši korisnici mogu naići prilikom korištenja sustava Office.
+- Ako odaberete _*_Nijedno_*_ , Microsoftu se ne šalju nikakvi dijagnostički podaci o klijentskom softveru sustava Office na korisnikovu uređaju. Ta mogućnost, međutim, znatno ograničava Microsoftove mogućnosti vezane uz otkrivanje, dijagnosticiranje i otklanjanje problema na koje vaši korisnici mogu naići prilikom korištenja sustava Office.
 
 Ako onemogućite ili ne konfigurirate tu postavku pravilnika, Microsoftu se šalju i neobavezni i obavezni dijagnostički podaci.
 
@@ -104,9 +104,9 @@ Vaši korisnici neće moći odabrati žele li uključiti ili isključiti ta pove
 
 To su iskustva koja koriste vaš sadržaj iz sustava Office da bi vam ponudila preporuke dizajna, prijedloge za uređivanje, uvid u podatke i slične značajke. Na primjer, PowerPoint Designer ili Prevoditelj. Popis tih povezanih iskustava potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
 
-Možete koristiti postavku pravilnika *Dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će povezana iskustva biti dostupna vašim korisnicima.
+Možete upotrebljavati postavku pravilnika _Dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će povezana iskustva biti dostupna vašim korisnicima.
 
-Imajte na umu da ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office*, povezana iskustva koja analiziraju sadržaj neće biti dostupna vašim korisnicima.
+Imajte na umu da ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office* , povezana iskustva koja analiziraju sadržaj neće biti dostupna vašim korisnicima.
 
 ### <a name="policy-setting-for-connected-experiences-that-download-online-content"></a>Postavka pravilnika za povezana iskustva koja preuzimaju internetski sadržaj
 
@@ -114,7 +114,7 @@ To su iskustva koja omogućuju pretraživanje i preuzimanje internetskih sadrža
 
 Možete koristiti postavku pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će povezana iskustva biti dostupna vašim korisnicima.
 
-Imajte na umu da ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office*, povezana iskustva koja preuzimaju internetski sadržaj neće biti dostupna vašim korisnicima.
+Imajte na umu da ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office* , povezana iskustva koja preuzimaju internetski sadržaj neće biti dostupna vašim korisnicima.
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Postavka pravilnika za neobavezna povezana iskustva
 
@@ -124,9 +124,12 @@ Ta se povezana iskustva razlikuju po tome što nisu obuhvaćena komercijalnim ug
 
 Možete koristiti postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* da biste kontrolirali jesu li povezana iskustva te vrste dostupna vašim korisnicima. Ako ne konfigurirate tu postavku pravilnika, ta će neobavezna povezana iskustva biti dostupna vašim korisnicima.
 
-Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki zaštita privatnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
+> [!NOTE]
+> Da biste primijenili postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* na količinski lincencirane verzije sustava Office 2019, Project 2019 ili Visio 2019, morate upotrebljavati pravilnik grupe. Ne možete upotrebljavati servis za pravilnike u oblaku sustava Office. To se odnosi na slučaj kada su Office 2019, Project 2019 ili Visio 2019 konfigurirani za upotrebu kanala za ažuriranja PerpetualVL2019.
 
-Uz to, neka od tih neobaveznih povezanih iskustava također se smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju internetski sadržaj. Na primjer, umetanje internetskih slika neobavezno je povezano iskustvo koje omogućuje Microsoft Bing, ali se ujedno smatra i povezanim iskustvom koje preuzima internetski sadržaj. Stoga ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office*, umetanje internetskih slika neće biti dostupno vašim korisnicima. Ono im neće biti dostupno čak ni ako ste omogućili postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office*. Dodatne informacije o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju internetski sadržaj potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
+Čak i ako odlučite neobavezna povezana iskustva staviti na raspolaganje korisnicima, oni će imati mogućnost isključiti ih kao grupu putem[dijaloškog okvira postavki postavke privatnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnicima će se taj izbor pružati samo ako su se prijavili u Office s vjerodajnicama tvrtke ili ustanove (koje se ponekad nazivaju računom tvrtke ili obrazovne ustanove), a ne i ako su se prijavili s osobnom adresom e-pošte.
+
+Uz to, neka od tih neobaveznih povezanih iskustava također se smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju internetski sadržaj. Na primjer, umetanje internetskih slika neobavezno je povezano iskustvo koje omogućuje Microsoft Bing, ali se ujedno smatra i povezanim iskustvom koje preuzima internetski sadržaj. Stoga ako onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava koja preuzimaju internetski sadržaj u sustavu Office* , umetanje internetskih slika neće biti dostupno vašim korisnicima. Ono im neće biti dostupno čak ni ako ste omogućili postavku pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office*. Dodatne informacije o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju internetski sadržaj potražite u članku [Povezana iskustva u sustavu Office](connected-experiences.md).
 
 Postoji i jedna iznimka na koju treba obratiti pozornost. Postavka pravilnika *Dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office* ne kontrolira iskustva koja od vas traže povezivanje računa za LinkedIn s Microsoftovim računom tvrtke ili obrazovne ustanove. Da biste upravljali takvim iskustvima kao što su informacije o servisu LinkedIn na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u programu Outlook, pročitajte članak [LinkedIn u Microsoftovim aplikacijama i servisima](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Integracija kontakata iz računa servisa LinkedIn u servisu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
 
@@ -157,7 +160,7 @@ Počevši od verzije 1904, konfiguriranje tih dviju postojećih postavki praviln
 - dopusti korištenje dodatnih neobaveznih povezanih iskustava u sustavu Office
 - dopusti korištenje povezanih iskustava u sustavu Office
 
-Te nove postavke pravilnika nude finiju razinu kontrole od dviju postojećih postavki pravilnika. Primjerice, ako ste ranije koristili postavku pravilnika *Slanje osobnih podataka*, time biste isključili i alat za brz početak rada s programom PowerPoint i pametno traženje. No ako sada, uz nove postavke pravilnika, koristite postavku pravilnika *Dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office* da biste isključili tu vrstu povezanih iskustava, time ćete isključiti samo pametno traženje. Brz početak rada s programom PowerPoint i dalje će biti dostupan vašim korisnicima.
+Te nove postavke pravilnika nude finiju razinu kontrole od dviju postojećih postavki pravilnika. Primjerice, ako ste ranije koristili postavku pravilnika *Slanje osobnih podataka* , time biste isključili i alat za brz početak rada s programom PowerPoint i pametno traženje. No ako sada, uz nove postavke pravilnika, koristite postavku pravilnika *Dopusti korištenje povezanih iskustava koja analiziraju sadržaj u sustavu Office* da biste isključili tu vrstu povezanih iskustava, time ćete isključiti samo pametno traženje. Brz početak rada s programom PowerPoint i dalje će biti dostupan vašim korisnicima.
 
 Postavke pravilnika još uvijek se prikazuju u alatu za upravljanje pravilnikom grupe jer još uvijek vrijede za količinski licencirane verzije sustava Office 2016 i Office 2019, kao što je Office Professional Plus 2019.
 
@@ -171,7 +174,7 @@ Kao što vjerojatno već znate, neke od postojećih postavki pravilnika omoguću
 
 - *Dopusti značajku LinkedIn pomoćnika za životopis* u odjeljku Konfiguracija korisnika\\Pravilnici\\Administrativni predlošci\\Microsoft Word 2016\\Mogućnosti programa Word\\Općenito
 
- I dalje možete koristiti te postojeće postavke pravilnika ako želite isključiti pojedinačna povezana iskustva. Ipak, imajte na umu da ako koristite neku od novih postavki pravilnika, ta nova postavka pravilnika može isključiti povezano iskustvo koje ste uključili korištenjem neke druge postavke pravilnika. Na primjer, ako omogućite postavku pravilnika *Dopusti značajku LinkedIn pomoćnika za životopis*, a onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office*, LinkedIn pomoćnik za životopis neće biti dostupan vašim korisnicima.
+ I dalje možete koristiti te postojeće postavke pravilnika ako želite isključiti pojedinačna povezana iskustva. Ipak, imajte na umu da ako koristite neku od novih postavki pravilnika, ta nova postavka pravilnika može isključiti povezano iskustvo koje ste uključili korištenjem neke druge postavke pravilnika. Na primjer, ako omogućite postavku pravilnika *Dopusti značajku LinkedIn pomoćnika za životopis* , a onemogućite postavku pravilnika *Dopusti korištenje povezanih iskustava u sustavu Office* , LinkedIn pomoćnik za životopis neće biti dostupan vašim korisnicima.
 
 Općenito govoreći, ako je jedna postavka pravilnika konfigurirana tako da uključuje određeno povezano iskustvo, dok je istodobno druga postavka pravilnika konfigurirana tako da isključuje tu vrstu povezanih iskustava, to će konkretno povezano iskustvo vašim korisnicima biti isključeno.
 
@@ -185,7 +188,7 @@ Ako ste odabrali korisnicima ponuditi [neobavezna povezana iskustva](optional-co
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Postavke zaštite privatnosti uklonjene iz korisničkog sučelja sustava Office
 
-Ove su postavke uklonjene iz odjeljka **Datoteka** > **Mogućnosti** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Mogućnosti zaštite privatnosti**:
+Ove su postavke uklonjene iz odjeljka **Datoteka** > **Mogućnosti** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Mogućnosti zaštite privatnosti** :
 
 - Dohvatite dizajn, informacije, preporuke i servise dopuštajući sustavu Office pristup poboljšanjima proizvoda i njihovu primjenu na temelju sadržaja sustava Office na mom uređaju.
 
