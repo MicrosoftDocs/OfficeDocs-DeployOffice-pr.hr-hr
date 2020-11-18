@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: 8fd62619d8aff4b5dcb10d7a4c73710282e2cdd8
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: e8b54e50ca8fc080cf09b26d83f4b7f28bc81290
+ms.sourcegitcommit: 521da3465e94ca9d29f3c6f49b78dd5f952d9cc6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794685"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "49088111"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -78,7 +78,7 @@ U sljedećoj su tablici navedene kategorije za obavezne dijagnostičke podatke. 
 
 ## <a name="categories-and-data-fields-that-are-common-for-all-events"></a>Kategorije i podatkovna polja koja su zajednička svim događajima
 
-Ovdje su i neke informacije koje se odnose na sve događaje, bez obzira na kategoriju ili podvrstu podataka. Te opće informacije, koje se ponekad nazivaju *podatkovni ugovori* , organizirane su po kategorijama. Svaka kategorija sadrži polja, a ta su polja metapodaci i svojstva pojedinog događaja. Te podatke možete pogledati pomoću preglednika dijagnostičkih podataka.
+Ovdje su i neke informacije koje se odnose na sve događaje, bez obzira na kategoriju ili podvrstu podataka. Te opće informacije, koje se ponekad nazivaju *podatkovni ugovori*, organizirane su po kategorijama. Svaka kategorija sadrži polja, a ta su polja metapodaci i svojstva pojedinog događaja. Te podatke možete pogledati pomoću preglednika dijagnostičkih podataka.
 
 Kategorije podataka koji se prikupljaju o događajima mogu se podijeliti u dvije grupe:
 
@@ -241,11 +241,11 @@ Ova kategorija sadrži sljedeća polja:
 
   - **Trajanje** – vrijeme potrebno za izvršavanje aktivnosti. Omogućuje prepoznavanje problema s performansama koji negativno utječu na korisničko okruženje.
 
-  - **Rezultat** . **Kod** – kôd koji je definirala aplikacija za prepoznavanje određenog rezultata. Omogućuje da utvrdimo specifične pojedinosti o određenoj pogrešci, primjerice kod pogreške koji može se koristiti za klasifikaciju i rješavanje problema.
+  - **Rezultat**.**Kod** – kôd koji je definirala aplikacija za prepoznavanje određenog rezultata. Omogućuje da utvrdimo specifične pojedinosti o određenoj pogrešci, primjerice kod pogreške koji može se koristiti za klasifikaciju i rješavanje problema.
 
   - **Result.Tag** – oznaka cijelog broja koja označava mjesto u kodu u kojem je generiran rezultat. Omogućuje jasno utvrđivanje mjesta u kodu na kojem je rezultat generiran što omogućuje klasifikaciju pogrešaka.
 
-  - **Rezultat** . **Vrsta** – vrsta koda rezultata. Određuje vrstu poslanog koda rezultata kako bi se vrijednost ispravno tumačila.
+  - **Rezultat**.**Vrsta** – vrsta koda rezultata. Određuje vrstu poslanog koda rezultata kako bi se vrijednost ispravno tumačila.
 
   - **Uspjeh** – zastavica koja označava je li aktivnost uspjela. Omogućuje da utvrdimo uspijevaju li radnje koje korisnik izvršava u proizvodu. Time se omogućuje prepoznavanje problema koji utječu na korisnika.
 
@@ -654,11 +654,11 @@ Osim toga, sljedeća su polja podataka uobičajena za sve događaje za aplikacij
 
 - **process_bitness** – broj bitova postupka (32 ili 64 bitova) za aplikaciju kako bi se lakše prepoznali problemi specifični za broj bitova uređaja
 
-- **webview_kernel_version** : verzija jezgre sustava Chromium web-prikaza na uređaju koja nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+- **webview_kernel_version**: verzija jezgre sustava Chromium web-prikaza na uređaju koja nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
 
-- **webview_package_name** : naziv paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+- **webview_package_name**: naziv paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
 
-- **webview_package_version** : verzija paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+- **webview_package_version**: verzija paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
 
 
 ## <a name="software-setup-and-inventory-data-events"></a>Događaji koji se odnose na instalaciju softvera i podatke o instaliranom softveru
@@ -897,9 +897,9 @@ Bilježi standardni ili profesionalni SKU programa Visio. Bitno za kategoriziran
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_VisioSKU** : **integer** – 0 za standardni SKU i 1 za profesionalni SKU
+  - **Data\_VisioSKU**:**integer** – 0 za standardni SKU i 1 za profesionalni SKU
 
-#### <a name="onenoteapponenotelaunchednonactivated-previous-name-officeonenoteandroidapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated *(stari naziv)* , Office.OneNote.Android.App.OneNoteLaunchedNonActivated
+#### <a name="onenoteapponenotelaunchednonactivated-previous-name-officeonenoteandroidapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated *(stari naziv)*, Office.OneNote.Android.App.OneNoteLaunchedNonActivated
 
 Bilježi podatke o stanju aktivacije aplikacije.  Podaci se prate da bi se osiguralo identificiranje porasta u problemima sa aktivacijom. Također analiziramo podatke kako bismo pronašli područja poboljšanja.
 
@@ -907,7 +907,7 @@ Prikupljaju se sljedeća polja:
 
 - **INSTALL_LOCATION** – upućuje na to je li aplikacija unaprijed instalirana ili je preuzeta iz trgovine
 
-#### <a name="onenoteresetstatus-previous-name-officeonenoteandroidresetstatus"></a>OneNote.ResetStatus *(stari naziv)* , Office.OneNote.Android.ResetStatus
+#### <a name="onenoteresetstatus-previous-name-officeonenoteandroidresetstatus"></a>OneNote.ResetStatus *(stari naziv)*, Office.OneNote.Android.ResetStatus
 
 Signal koji se koristi za bilježenje problema koji se pojave kada korisnik pokušava ponovno postaviti aplikaciju.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema uzrokovanih tijekom ponovnog postavljanja. 
 
@@ -921,7 +921,7 @@ Prikupljaju se sljedeća polja:
 
 - **Pass** – označava je li ponovno pokretanje bilo uspješno
 
-#### <a name="onenotesigninsignincompleted-previous-name-officeonenoteandroidsigninsignincompleted"></a>OneNote.SignIn.SignInCompleted *(stari naziv)* , Office.OneNote.Android.SignIn.SignInCompleted
+#### <a name="onenotesigninsignincompleted-previous-name-officeonenoteandroidsigninsignincompleted"></a>OneNote.SignIn.SignInCompleted *(stari naziv)*, Office.OneNote.Android.SignIn.SignInCompleted
 
 Ključni signal kojim se osigurava uspješna prijava ili ne. Telemetrija se prikuplja za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.
 
@@ -941,7 +941,7 @@ Prikupljaju se sljedeća polja:
 
 - **SignInMode** – prijava ili registracija ili ubrzana automatska prijava ili registracija
 
-#### <a name="onenotesigninsigninstarted-previous-name-officeonenoteandroidsigninsigninstarted"></a>OneNote.SignIn.SignInStarted *(stari naziv)* , Office.OneNote.Android.SignIn.SignInStarted
+#### <a name="onenotesigninsigninstarted-previous-name-officeonenoteandroidsigninsigninstarted"></a>OneNote.SignIn.SignInStarted *(stari naziv)*, Office.OneNote.Android.SignIn.SignInStarted
 
 Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
 
@@ -1265,13 +1265,13 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_DocumentSessionLogID:string** – identifikator sesije dokumenta
 
-  - **Data\_IsEnabled** : **bool** – istinito ako je rješenje omogućeno
+  - **Data\_IsEnabled**:**bool** – istinito ako je rješenje omogućeno
 
   - **Data\_TemplateID:string** – GUID predloška u kojem je rješenje učitano. Zapisano kao 0 za prilagođeno rješenje
 
-  - **Data\_AddOnID** : **string** – GUID za prepoznavanje učitanog dodatka
+  - **Data\_AddOnID**:**string** – GUID za prepoznavanje učitanog dodatka
 
-  - **Data\_Error** : **integer** – ID pogreške
+  - **Data\_Error**:**integer** – ID pogreške
 
 ### <a name="security-subtype"></a>*Podvrsta sigurnosti*
 
@@ -1553,6 +1553,8 @@ Prikupljaju se sljedeća polja:
 Ovaj se događaj prikuplja za osiguranje da konfiguracija računa uspješno radi i koristi za nadzor stanja kreiranja računa, mogućnost dodavanja novih računa e-pošte i nadzor softverskog vraćanja izvornih postavki računa.
 
 Prikupljaju se sljedeća polja: 
+
+- **account_creation_source** – neobavezno svojstvo koje se upotrebljava za pronalazak i dijagnozu svih problema koji se pojavljuju tijekom stvaranja računa kada da se doda vrsta radnje.  Ono može imati vrijednost kao što su jedinstvena prijava (SS0), create_new_account, manual itd.
 
 - **action** – vrsta radnje provedene na računu, npr. dodavanje, brisanje ili ponovno postavljanje.
 
@@ -2581,6 +2583,8 @@ Prikupljaju se sljedeća polja:
 
 - **Data_BootDuration** – trajanje pokretanja aplikacije tijekom radnje otvaranja datoteke.
 
+- **Data_BootMarkers** – vrijednost niza koja evidentira trajanje vremena između nekih poziva funkcije tijekom pokretanja aplikacije, u obliku s ID-om i trajanjem funkcije.
+
 - **Data_ClosePreviouslyOpenedMarkers** – u nekim se scenarijima otvaranja datoteka zatvaranje prethodno otvorenog dokumenta odvija prije otvaranja trenutačnog dokumenta. Trajanje razdoblja između nekih operacija koje se odvijaju u tom slučaju bilježe se u vrijednosti niza koja ima oblik \<functionId>\<functionValue>\<functionId>\<functionValue>...
 
 - **Data_Doc_AccessMode** – enumeracija koja upućuje na način pristupa datoteke, npr. samo za čitanje, za čitanje i pisanje.
@@ -2603,7 +2607,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_Doc_IOFlags** – enumeracija koja označava zastavice UI operacije otvaranja datoteke, npr. ako je datoteka predmemorirana ili ne.
 
-- **Data_Doc_IsCloudCollabEnabled** – bez obzira na to je li za datoteku omogućena suradnja u oblaku.
+- **Data_Doc_IsCloudCollabEnabled**– bez obzira na to je li za datoteku omogućena suradnja u oblaku.
 
 - **Data_Doc_IsIncrementalOpen** – bez obzira na to je li datoteka otvorena inkrementalno ili ne.
 
@@ -2911,7 +2915,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_InitializationReason** – prikaz enumeracije specifičnog razloga za operaciju. Na primjer, otvoreno iz URL-a ili staze lokalne datoteke, stvoreno s pomoću birača datoteka, kopirano u stazu datoteke, izvezeno u URL itd.
 
-- **Data_IsDisambiguateCsiNetworkConnectivityErrorEnabled** .
+- **Data_IsDisambiguateCsiNetworkConnectivityErrorEnabled**.
 
 - **Data_IsNameMissingInUrl** – upućuje na to je li naziv izveden iz URL-a.
 
@@ -3847,7 +3851,7 @@ Prikupljaju se sljedeća polja:
 
 - **Data_Doc_IOFlags** – enumeracija koja označava zastavice UI operacije otvaranja datoteke, npr. ako je datoteka predmemorirana ili ne.
 
-- **Data_Doc_IsCloudCollabEnabled** – bez obzira na to je li za datoteku omogućena suradnja u oblaku.
+- **Data_Doc_IsCloudCollabEnabled**– bez obzira na to je li za datoteku omogućena suradnja u oblaku.
 
 - **Data_Doc_IsIncrementalOpen** – bez obzira na to je li datoteka otvorena inkrementalno ili ne.
 
@@ -7377,13 +7381,201 @@ Prikupljaju se sljedeća polja:
 - **Data.warningMessage** – poruka s upozorenjem koju je prijavio servis
 
 
+#### <a name="officeuxacccheckeracccheckerfinalviolationcountperrule"></a>Office.UX.AccChecker.AccCheckerFinalViolationCountPerRule
+
+Ovaj se događaj aktivira kada se prijave problemi s pristupačnošću za trenutačno otvoreni dokument. Ovaj događaj predstavlja povrede pristupačnosti (pogreške, upozorenja i savjete) koja postoje za svako pravilo, za otvoreni dokument pri početku i kraju sesije.  Ovaj događaj upotrebljava se za evidenciju broja povreda pristupačnosti (pogreške, upozorenja i savjete) za svako pravilo, za otvoreni dokument pri početku i kraju sesije.
+
+Pojedinosti o brojevima povreda za svako pravilo pomažu Microsoftu pri prepoznavanju koji su problemi s pristupačnošću najčešći u dokumentima sustava Office. To pomaže pri njihovu otklanjanju te potiče stvaranje inkluzivnog okruženja na radnom mjestu i u učionici za osobe s invaliditetom.
+
+Prikupljaju se sljedeća polja:
+
+- **Data_FinalCount_RuleID_0** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_1** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_2** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_3** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_4** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_5** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_6** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_7** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_8** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_9** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_10** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_11** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_12** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_13** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_14** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_15** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_16** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_FinalCount_RuleID_17** – broj povreda ID-a pravila = n koji ostaje od zadnjeg puta kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_0** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_1** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_2** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_3** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_4** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_5** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_6** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_7** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_8** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_9** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_10** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_11** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_12** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_13** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_14** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_15** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_16** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **Data_InitialCount_RuleID_17** – broj povreda ID-a pravila = n koji je pronađen prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **FinalDocID** – konačni ID dokumenta skeniranog dokumenta
+
+- **FinalDocUrlHash** – konačni URL raspršivanja dokumenta skeniranog dokumenta
+    
+- **InitialDocID** – početni ID dokumenta skeniranog dokumenta
+
+- **InitialDocUrlHash** – početni URL raspršivanja dokumenta skeniranog dokumenta
+
+- **PaneOpened** – Booleova vrijednost koja prati je li okno Provjere pristupačnosti bilo otvoreno
+
+- **ServerDocID** – ID dokumenta poslužitelja za dokument koji je skenirala Provjera pristupačnosti
+
+
+#### <a name="officeuxacccheckeracccheckerviolationinformation"></a>Office.UX.AccChecker.AccCheckerViolationInformation
+
+Ovaj se događaj aktivira kada se prijave problemi s pristupačnošću za trenutačno otvoreni dokument. On predstavlja zbirni broj povreda (pogreške, upozorenja i savjete) koja postoje za svako pravilo, za otvoreni dokument pri početku i kraju sesije. Ovaj događaj upotrebljava se za evidenciju zbirnog broja povreda pristupačnosti (pogreške, upozorenja i savjete) za otvoreni dokument pri početku i kraju sesije. Znanje stečeno iz upotrebe Provjere pristupačnosti Microsoftu omogućuje poboljšanje kako bi doživljaji njegove aplikacije bili inkluzivniji za osobe s invaliditetom u scenarijima upotrebe sustava Office za radno mjesto i učionicu.
+
+Prikupljaju se sljedeća polja:
+    
+- **FinalDocID** – konačni ID dokumenta skeniranog dokumenta
+
+- **FinalDocUrlHash** – konačni URL raspršivanja dokumenta skeniranog dokumenta
+
+- **FinalErrorCount** – konačan broj pogrešaka koje je Provjera pristupačnosti prijavila za dokument
+
+- **FinalIntelligentServiceCount** – konačan broj problema s pametnim servisima koje je Provjera pristupačnosti prijavila za dokument
+
+- **FinalTipCount** – konačan broj savjeta koje je Provjera pristupačnosti prijavila za dokument
+
+- **FinalViolationCount** – konačan broj povreda koje je Provjera pristupačnosti prijavila za dokument
+
+- **FinalWarningCount** – konačan broj upozorenja koje je Provjera pristupačnosti prijavila za dokument
+
+- **InitialDocID** – početni ID dokumenta skeniranog dokumenta
+
+- **InitialDocUrlHash** – početni URL raspršivanja dokumenta skeniranog dokumenta
+
+- **InitialErrorCount** – broj svih povreda vrste Pogreška koje su pronađene prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **InitialIntelligentServicesCount** – broj svih povreda vrste Pametna usluga koje su pronađene prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **InitialTipCount** – broj svih povreda vrste Savjet koje su pronađene prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **InitialUrlHash** – broj svih povreda vrste Pogreška koje su pronađene prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **InitialViolationCount** – broj svih povreda koje su pronađene prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **InitialWarningCount** – broj svih povreda vrste Upozorenje koje su pronađene prvi put kada je Provjera pristupačnosti bila pokrenuta u sesiji.
+
+- **PaneOpened** – Booleova vrijednost koja prati je li okno Provjere pristupačnosti dokumenta bilo otvoreno
+
+- **ServerDocID** – ID dokumenta poslužitelja za dokument koji je skenirala Provjera pristupačnosti
+
+
+#### <a name="officeuxacccheckerbackgroundacccheckerenabledstate"></a>Office.UX.AccChecker.BackgroundAccCheckerEnabledState
+
+Ovaj se događaj aktivira kada je korisnik ili IT administrator omogućio pozadinski alat za provjeru pristupačnosti za korisnika sustava Office. Ovaj se događaj upotrebljava za razumijevanje slučajeva kada je pozadinski alat za provjeru pristupačnosti omogućen za korisnike sustava Office. Omogućeno stanje pozadinskog alata za provjeru pristupačnosti omogućuje Microsoftu utvrditi mogu li se dokumenti automatski skenirati u pozadini. Time se stvara inkluzivnije okruženje na radnom mjesto i u učionici za osobe s invaliditetom.
+
+Prikupljaju se sljedeća polja:
+
+- **BackgroundAccCheckerEnabled** – Booleova vrijednost za praćenje stanja Omogućeno/Onemogućen pozadinskog alata za provjeru pristupačnosti
+
+
+#### <a name="officeuxacccheckerbackgroundscanningcheckboxclicked"></a>Office.UX.AccChecker.BackgroundScanningCheckboxClicked
+
+Ovaj se događaj aktivira kada korisnik omogući pozadinski alat za provjeru pristupačnosti iz okna zadatka Provjere pristupačnosti.  Ovaj se događaj upotrebljava za razumijevanje slučajeva kada je pozadinski alat za provjeru pristupačnosti omogućen za dokumente sustava Office. Omogućeno stanje pozadinskog alata za provjeru pristupačnosti omogućuje Microsoftu utvrditi mogu li se dokumenti automatski skenirati u pozadini. Time se stvara inkluzivnije okruženje na radnom mjesto i u učionici za osobe s invaliditetom.
+
+Prikupljaju se sljedeća polja:
+    
+- **FinalBackgroundScanningState** – početno stanje potvrdnog okvira koji omogućuje pozadinsko skeniranje
+
+- **InitialBackgroundScanningState** – početno stanje potvrdnog okvira koji omogućuje pozadinsko skeniranje
+
+
+#### <a name="officeuxacccheckerdisabledresults"></a>Office.UX.AccChecker.DisabledResults
+
+Ovaj se događaj aktivira kada se Provjera pristupačnosti onemogući za otvoreni dokument. Ovaj se događaj upotrebljava za razumijevanje slučajeva kada se alat za provjeru pristupačnosti sustava Office onemogući zbog starije ili nepodržane verzije dokumenta sustava Office. Onemogućeno stanje Provjere pristupačnosti omogućuje Microsoftu utvrđivanje koliko se često dokument ne može skenirati te pomaže korisnicima pri dopuštanju skeniranja takvih dokumenata – pretvaranjem dokumenta u suvremeni oblik datoteke. Time se stvara inkluzivnije okruženje na radnom mjesto i u učionici za osobe s invaliditetom.
+
+Prikupljaju se sljedeća polja:
+    
+- **Data_Disabled_ID** – ID onemogućene pogreške
+
+- **Data_Disabled_Reason** – razlog za onemogućivanje Provjere pristupačnosti
+
+- **Data_IsUpConvertEnabled** – prati je li dostupna mogućnost pretvaranja dokumenta u suvremen oblik datoteke
+
+
+#### <a name="officeuxacccheckershowtaskpane"></a>Office.UX.AccChecker.ShowTaskPane
+
+Ovaj se događaj aktivira kada se okno zadatka Provjere pristupačnosti pokrene za trenutačno otvoreni dokument.  Ovaj se događaj upotrebljava za razumijevanje upotrebe Provjere pristupačnosti sustava Office. Provjera pristupačnosti upotrebljava se za prepoznavanje i popravak problema s pristupačnošću u dokumentima sustava Office. Znanje stečeno iz upotrebe Provjere pristupačnosti Microsoftu omogućuje poboljšanje kako bi doživljaji njegove aplikacije bili inkluzivniji za osobe s invaliditetom u scenarijima upotrebe sustava Office za radno mjesto i učionicu.
+
+Prikupljaju se sljedeća polja:
+
+- **BackgroundScanCheckboxEnabled** – prati je li omogućen pozadinski alat za provjeru pristupačnosti
+    
+- **Column** – svrha
+
+- **DocUrlHash** – jedinstveno raspršivanje ID-a dokumenta koji je bio skeniran
+
+- **HasAccessibilityViolations** – prati sadrži li dokument ikakve povrede pristupačnosti u trenutku otvaranja okna
+
+- **IsPaneDisabled** – prati je li okno Provjere pristupačnosti otvoreno u onemogućenom stanju (stara ili nepodržana verzija dokumenta)
+
+- **PaneOpenedBefore** – prati je li okno Provjere pristupačnost već bilo otvoreno
+
+- **WAC_ServerDocId** – ID dokumenta poslužitelja za dokument koji je bio skeniran
+
+
 #### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
 
 Značajka prati isporuku testnih verzija korisnicima. Taj nam događaj pomaže odrediti uspješnost ili neuspješnost isporuke testnih verzija.
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_Enable:bool** – vrijednost „istinito” označava da je značajka omogućena za trenutnog korisnika
+  - **Data\_Enable:bool**– vrijednost „istinito” označava da je značajka omogućena za trenutnog korisnika
 
   - **Data\_Feature:string** – naziv značajke
 
@@ -7401,13 +7593,13 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_ConnectorsBasedOnSequence:bool** – istinito ako je osvježeni dijagram izvorno stvoren korištenjem poveznika koji se temelji na mogućnosti „niz”
 
-  - **Data\_DialogError** : **string** – pogreška tijekom osvježavanja pametnog dijagrama
+  - **Data\_DialogError**:**string** – pogreška tijekom osvježavanja pametnog dijagrama
 
   - **Data\_FileError:string** – niz pogreške kada povezana datoteka programa Excel nije valjana
 
-  - **Data\_OverwriteSelected** : **bool** – istinito ako je korisnik odabrao mogućnost koja prebriše dijagram tijekom osvježavanja
+  - **Data\_OverwriteSelected**:**bool** – istinito ako je korisnik odabrao mogućnost koja prebriše dijagram tijekom osvježavanja
 
-  - **Data\_WarningShown** : **bool** – istinito ako se korisniku tijekom osvježavanja podataka prikazalo bilo kakvo upozorenje
+  - **Data\_WarningShown**:**bool** – istinito ako se korisniku tijekom osvježavanja podataka prikazalo bilo kakvo upozorenje
 
 #### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
 
@@ -8062,7 +8254,7 @@ Prikupljaju se sljedeća polja:
 
 - Nijedno
 
-#### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(stari naziv)* , Office.OneNote.Android.Canvas.PageOpened
+#### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(stari naziv)*, Office.OneNote.Android.Canvas.PageOpened
 
 Signal koji se koristi za snimanje prilikom otvaranja stranice.  Telemetrija se koristi za nadziranje, otkrivanje i ispravljanje problema tijekom otvaranja stranice u programu OneNote
 
@@ -8072,7 +8264,7 @@ Prikupljaju se sljedeća polja:
 
 - **TIME_TAKEN_IN_MS** – vrijeme potrebno za otvaranje stranice
 
-#### <a name="onenotecapturenewnotenewnotetaken-previous-name-officeonenoteandroidcapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken *(stari naziv)* , Office.OneNote.Android.Capture.NewNote.NewNoteTaken
+#### <a name="onenotecapturenewnotenewnotetaken-previous-name-officeonenoteandroidcapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken *(stari naziv)*, Office.OneNote.Android.Capture.NewNote.NewNoteTaken
 
 Ovaj se signal koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote na platformi Android, bilježnice pravilno dodijele te da je korisnik uspješno kreirao novu bilješku.  To se upotrebljava za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.
 
@@ -8080,7 +8272,7 @@ Prikupljaju se sljedeća polja:
 
 - Nijedno
 
-#### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(stari naziv)* , Office.OneNote.Android.MessageBar.MessageBarClicked
+#### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(stari naziv)*, Office.OneNote.Android.MessageBar.MessageBarClicked
 
 Signal koji se koristi za označavanje bilo kakvih problema tijekom korištenja trake s porukama.  Telemetrija se koristi za nadgledanje, otkrivanje i ispravljanje problema nastalih tijekom interakcije s trakom s porukama
 
@@ -8285,6 +8477,8 @@ Prikupljaju se sljedeća polja:
    - **swipe_setting** – označava pojedinosti o, ako je primjenjivo, postavkama prelaska prstom povezanim s ovom radnjom
      - **swipe_action** – označava što je korisnik pokušavao učiniti, tj. označiti zastavicom, izbrisati, arhivirati, omogućuje nam utvrditi koju je radnju korisnik želio provesti te je li radnja bila neuspješna ili nije. 
      - **swipe_direction** – označava za koji je smjer korisnik postavio prelazak prstom, tj. slijeva udesno ili zdesna ulijevo. To nam omogućuje utvrditi postoji li problem s određenim smjerom prelaska prstom.
+   - **temperature_unit_setting** – odabrana jedinica temperature koja će se upotrebljavati za vrijeme 
+   - **theme_color_setting** – prilagođena tematska boja aplikacije koju je odabrao korisnik 
    - **ui_mode_setting** – odabrani način korisničkog sučelja (tamno, svijetlo, zadane postavke sustava, niska razina baterije, itd.)
    - **signature_setting** – označava je li postavka bila primijenjena na sve račune ili na pojedini račun
 
@@ -8938,24 +9132,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_WinLaunchTime:integer –** trajanje pokretanja početnog okna programa Visio itd.)
 
-  - **Office.Visio.FileCharacteristicsVisio –** bilježi svojstva datoteke u trenutku pokretanja datoteka za Visio C2R i Dev16. Taj nam događaj pomaže kategorizirati i ispraviti pogreške vezane uz svojstva dokumenta, što pak omogućuje brže otkrivanje korijenskih uzroka problema i njihovo otklanjanje na zadovoljstvo korisnika.
-
-  - **Office.Visio.Shared.BootStats –** taj događaj prikuplja vrijeme pokretanja aplikacije Visio Win32. On prikuplja razna polja za pokretanje različitih komponenti, kao što su vrijeme učitavanja vrpce i vrijeme inicijalizacije aplikacije. Taj se događaj koristi za mjerenje performansi pokretanja programa Visio.
-
-  - **Office.Visio.Shared.FileOpen –** taj događaj prikuplja statistiku otvaranja datoteka za Visio. Taj se događaj koristi za praćenje stopa uspjeha/neuspjeha otvaranja datoteka i njihovo mapiranje s nekolicinom svojstava poput veličine datoteke. Svojstva datoteke omogućuju nam brže ispravljanje pogrešaka i otkrivanje korijenskih uzroka problema.
-
-  - **Office.Visio.Shared.Filesave –** taj događaj prikuplja statistiku spremanja datoteka za Visio. Taj se događaj koristi za praćenje stopa uspjeha/neuspjeha spremanja datoteka i njihovo mapiranje s nekolicinom svojstava kao što su veličina datoteke i mjesto na koje se ona sprema, npr. oblak/lokalno. Svojstva datoteke omogućuju nam brže ispravljanje pogrešaka i otkrivanje korijenskih uzroka problema.
-
-  - **Office.Visio.Shared.FilesaveAs –** taj događaj prikuplja statistiku spremanja datoteka u drugom obliku za Visio. Taj se događaj koristi za praćenje stopa uspjeha/neuspjeha spremanja datoteka i njihovo mapiranje s nekolicinom svojstava kao što su veličina datoteke i mjesto na koje se ona sprema, npr. oblak/lokalno. Svojstva datoteke omogućuju nam brže ispravljanje pogrešaka i otkrivanje korijenskih uzroka problema.
-
-  - **Office.Visio.Shared.PostSave –** taj događaj bilježi razlog neuspjeha prilikom neuspjelog spremanja datoteke.
-
-  - **Office.Visio.VisioFileSaveAs –** taj događaj prikuplja statistiku spremanja datoteka u drugom obliku za Visio Dev 16. Taj se događaj koristi za praćenje stopa uspjeha/neuspjeha spremanja datoteka u drugom obliku i njihovo mapiranje s nekolicinom svojstava kao što su veličina datoteke i mjesto na koje se ona sprema, npr. oblak/lokalno. Svojstva datoteke omogućuju nam brže ispravljanje pogrešaka i otkrivanje korijenskih uzroka problema.
-
-  - **Office.Visio.VisioFileSaveAsync –** taj događaj prikuplja statistiku asinkronog spremanja datoteka za Visio Dev 16. Taj se događaj koristi za praćenje stopa uspjeha/neuspjeha asinkronog spremanja datoteka u drugom obliku i njihovo mapiranje s nekolicinom svojstava kao što su veličina datoteke i mjesto na koje se ona sprema, npr. oblak/lokalno. Svojstva datoteke omogućuju nam brže ispravljanje pogrešaka i otkrivanje korijenskih uzroka problema.
-
-  - **Office.Visio.VisioFileSaveSync –** taj događaj prikuplja statistiku sinkronog spremanja datoteka za Visio Dev 16. Taj se događaj koristi za praćenje stopa uspjeha/neuspjeha sinkronog spremanja datoteka u drugom obliku i njihovo mapiranje s nekolicinom svojstava kao što su veličina datoteke i mjesto na koje se ona sprema, npr. oblak/lokalno. Svojstva datoteke omogućuju nam brže ispravljanje pogrešaka i otkrivanje korijenskih uzroka problema. Taj nam događaj pomaže nadzirati razloge neuspjeha pri spremanju datoteke.
-
+  
 #### <a name="officeextensibilitysandboxodpactivationhanging"></a>Office.Extensibility.Sandbox.ODPActivationHanging
 
 Prikuplja se kada je dodatku sustava Office potrebno neočekivano puno vremena za pokretanje (>5 sek). Koristi se za otkrivanje i rješavanje problema u vezi s pokretanjem dodataka sustava Office.
@@ -9013,7 +9190,7 @@ Prikupljaju se sljedeća polja:
 
 - **IsFRELoadSuccessful** – cijeli broj koji navodi rezultantno stanje
 
-#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(previous name)* , Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
+#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(previous name)*, Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
 
 Ključni signal korišten za osiguravanje da novi privatni korisnici (Microsoftov račun) uspješno mogu prvi put koristiti aplikaciju OneNote.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge.  Ako korisnici ne mogu prvi put pokrenuti aplikaciju, time bi se izazvao incident visoke ozbiljnosti.
 
@@ -9115,13 +9292,13 @@ Prikupljaju se sljedeća polja:
  
 - **USER_INTERACTED_DURING_EVENT** – označava je li korisnik komunicirao tijekom pokretanja
 
-#### <a name="onenoteapponenoteappforeground-previous-name-officeonenoteandroidapponenoteappforeground-officeandroidearlytelemetryonenoteappforeground"></a>OneNote.App.OneNoteAppForeground *(previous name)* , Office.OneNote.Android.App.OneNoteAppForeground, Office.Android.EarlyTelemetry.OneNoteAppForeground
+#### <a name="onenoteapponenoteappforeground-previous-name-officeonenoteandroidapponenoteappforeground-officeandroidearlytelemetryonenoteappforeground"></a>OneNote.App.OneNoteAppForeground *(previous name)*, Office.OneNote.Android.App.OneNoteAppForeground, Office.Android.EarlyTelemetry.OneNoteAppForeground
 
 Signal koji upućuje da je OneNote aplikacija u prvom planu.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
 
 Prikupljaju se sljedeća polja: Nijedno
 
-#### <a name="onenoteapplaunch-previous-name-officeandroidearlytelemetryapplaunch-officeonenoteandroidapplaunch"></a>OneNote.AppLaunch *(previous name)* , Office.Android.EarlyTelemetry.AppLaunch, Office.OneNote.Android.AppLaunch
+#### <a name="onenoteapplaunch-previous-name-officeandroidearlytelemetryapplaunch-officeonenoteandroidapplaunch"></a>OneNote.AppLaunch *(previous name)*, Office.Android.EarlyTelemetry.AppLaunch, Office.OneNote.Android.AppLaunch
 
 Ključni signal koji se koristi za osiguravanje da korisnici aplikacije OneNote mogu uspješno pokrenuti aplikaciju.  Telemetrija se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge. 
 
@@ -10316,7 +10493,7 @@ Ovaj se događaj prikuplja za aplikacije sustava Office koje rade na Apple platf
 
 Prikupljaju se sljedeća polja:
 
-- **Data_CollectionTime** – vremenska oznaka koja označava vrijeme prikupljanja događaja.
+- **Data_CollectionTime**– vremenska oznaka koja označava vrijeme prikupljanja događaja.
 
 #### <a name="officeapplembuinstrumentdeviceaccessibilitysettings"></a>Office.Apple.MbuInstrument.DeviceAccessibilitySettings
 
@@ -10708,7 +10885,7 @@ Prikupljaju se sljedeća polja:
 
 - **StoreType** – porijeklo aplikacije
 
-- **Tag** – određuje gdje točno kôd nije uspio pomoću jedinstvene oznake povezane s njim.
+- **Tag**– određuje gdje točno kôd nije uspio pomoću jedinstvene oznake povezane s njim.
 
 - **UsesSharedRuntime** – upućuje na to da koristi li aplikacija sharedRuntime ili ne.
 
@@ -11067,6 +11244,18 @@ Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema u okviru kojih
 
 Prikupljaju se sljedeća polja: 
 
+- **above_40fps** – broj prikazanih okvira iznad 40 fps
+
+- **above_40rate** – stopa prikazanih okvira iznad 40 fps
+
+- **above_50fps** – broj prikazanih okvira iznad 50 fps
+
+- **above_50rate** – stopa prikazanih okvira iznad 50 fps
+
+- **above_55fps** – broj prikazanih okvira iznad 55 fps
+
+- **above_55rate** – stopa prikazanih okvira iznad 55 fps
+
 - **account_counter** – prati broj računa povezanih za svaku vrstu kalendara, npr. 2 za kalendar sustava Gmail te koristi li taj račun naš novi servis sinkronizacije
 
 - **app_instance** – Outlook ima dvije ulazne točke za Duo; jedna je za aplikaciju Kalendar, a druga za aplikaciju Pošta i obje se mogu pokrenuti usporedno u okruženju s više instanci. Tako doznajemo koja instanca provodi ovo izvješćivanje, Pošta ili Kalendar.
@@ -11145,9 +11334,15 @@ Prikupljaju se sljedeća polja:
 
 - **above_40fps** – broj prikazanih okvira iznad 40 fps
 
+- **above_40rate** – stopa prikazanih okvira iznad 40 fps
+
 - **above_50fps** – broj prikazanih okvira iznad 50 fps
 
+- **above_50rate** – stopa prikazanih okvira iznad 50 fps
+
 - **above_55fps** – broj prikazanih okvira iznad 55 fps
+
+- **above_55rate** – stopa prikazanih okvira iznad 55 fps
 
 - **account_counter** – količina svake vrste računa koji postoji na uređaju, primjerice račun sustava Office 365 = 1 račun, račun Outlook.com = 1 račun.
 
@@ -11366,10 +11561,16 @@ Ovaj nam događaj omogućuje prepoznavanje i rješavanje problema u okviru kojih
 Prikupljaju se sljedeća polja: 
 
 - **above_40fps** – broj prikazanih okvira iznad 40 fps
+
+- **above_40rate** – stopa prikazanih okvira iznad 40 fps
  
 - **above_50fps** – broj prikazanih okvira iznad 50 fps
+
+- **above_50rate** – stopa prikazanih okvira iznad 50 fps
  
 - **above_55fps** – broj prikazanih okvira iznad 55 fps
+
+- **above_55rate** – stopa prikazanih okvira iznad 55 fps
  
 - **account_counter** – količina svake vrste računa koji postoji na uređaju, primjerice račun sustava Office 365 = 1 račun, račun Outlook.com = 1 račun.
  
@@ -11713,17 +11914,17 @@ Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik p
 
 Prikupljaju se sljedeća polja:
 
-- **AppSuspendedDuringEvent** : vraća Booleovu vrijednost koja označava je li aplikacija obustavljena tijekom dodjele resursa
+- **AppSuspendedDuringEvent**: vraća Booleovu vrijednost koja označava je li aplikacija obustavljena tijekom dodjele resursa
 
 - **ErrorCode** – vraća šifru pogreške odgovorne za neuspjeh dodjele resursa. 
 
-- **NetworkConnection** : vrsta mrežne povezivosti uređaja koji se koristi
+- **NetworkConnection**: vrsta mrežne povezivosti uređaja koji se koristi
 
 - **NetworkDataExchange** – bilježi broj bajtova razmijenjenih tijekom dodjele resursa.
 
-- **ServerType** : vraća vrstu poslužitelja koji nudi uslugu
+- **ServerType**: vraća vrstu poslužitelja koji nudi uslugu
 
-- **TimeTakenInMilliSeconds** : vraća vrijeme koje je potrebno za dovršavanje dodjele resursa u milisekundama
+- **TimeTakenInMilliSeconds**: vraća vrijeme koje je potrebno za dovršavanje dodjele resursa u milisekundama
 
 
 #### <a name="officeonenotesystembootdialogssafebootdialogpending"></a>Office.OneNote.System.BootDialogs.SafeBootDialogPending 
@@ -12101,7 +12302,7 @@ Prikupljaju se sljedeća polja:
 - **DIALOG_ACTION** – na koji je gumb dijaloškog okvira korisnik kliknuo – pozitivni gumb ili negativni gumb
 
 
-#### <a name="onenotesyncprovisioningcompleted-previous-name-officeonenoteandroidsyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted *(stari naziv)* , Office.OneNote.Android.Sync.ProvisioningCompleted
+#### <a name="onenotesyncprovisioningcompleted-previous-name-officeonenoteandroidsyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted *(stari naziv)*, Office.OneNote.Android.Sync.ProvisioningCompleted
 
 Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote za platformu Android, bilježnice pravilno dodijele kako bi im se moglo jednostavno pristupiti. To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge
 
@@ -12117,7 +12318,7 @@ Prikupljaju se sljedeća polja:
 
 - **TimeTakenInMilliSeconds** – vraća vrijeme koje je potrebno za dovršavanje dodjele resursa u milisekundama
 
-#### <a name="onenotesyncprovisioningstarted-previous-name-officeonenoteandroidsyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted *(stari naziv)* , Office.OneNote.Android.Sync.ProvisioningStarted
+#### <a name="onenotesyncprovisioningstarted-previous-name-officeonenoteandroidsyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted *(stari naziv)*, Office.OneNote.Android.Sync.ProvisioningStarted
 
 Kritični signal koji se koristi za osiguravanje da se, nakon što se korisnik prijavi u aplikaciju OneNote za platformu Android, bilježnice pravilno dodijele kako bi im se moglo jednostavno pristupiti.  To se koristi za osiguravanje prepoznavanja ključne regresije za aplikaciju OneNote i stanje usluge
 
@@ -12321,11 +12522,11 @@ Prikupljaju se sljedeća polja:
 
 - **OpType** – enumeracija vrste operacija. Vrijednosti: "None", "CreateDocument", "OpenDocument", "CopyDocument", "CloseDocument", "SaveDocument", "OpenVersion", "CloseVersion"
 
-- **PreFetchState** – enumeracija stanja pretpreuzimanja predložaka za operacije stvaranja nove datoteke.
+- **PreFetchState**– enumeracija stanja pretpreuzimanja predložaka za operacije stvaranja nove datoteke.
 
 - **ProviderApp** – naziv paketa aplikacije iz koje se datoteka otvara
 
-- **ScopeInstanceId** – ID opsega instance koji se koristi za pridruživanje podatkovnog konteksta aktivnostima
+- **ScopeInstanceId**– ID opsega instance koji se koristi za pridruživanje podatkovnog konteksta aktivnostima
 
 - **Size** – veličina datoteke
 
@@ -12597,11 +12798,11 @@ Prikupljaju se sljedeća polja:
 
 - **OpType** – enumeracija vrste operacija. Vrijednosti: "None", "CreateDocument", "OpenDocument", "CopyDocument", "CloseDocument", "SaveDocument", "OpenVersion", "CloseVersion"
 
-- **PreFetchState** – enumeracija stanja pretpreuzimanja predložaka za operacije stvaranja nove datoteke.
+- **PreFetchState**– enumeracija stanja pretpreuzimanja predložaka za operacije stvaranja nove datoteke.
 
 - **ProviderApp** – naziv paketa aplikacije iz koje se datoteka otvara
 
-- **ScopeInstanceId** – ID opsega instance koji se koristi za pridruživanje podatkovnog konteksta aktivnostima
+- **ScopeInstanceId**– ID opsega instance koji se koristi za pridruživanje podatkovnog konteksta aktivnostima
 
 - **Size** – veličina datoteke
 
@@ -12660,7 +12861,7 @@ Telemetrija ključne pogreške za pogreške u bazi podataka tijekom pregledavanj
 
 Prikupljaju se sljedeća polja:
 
-- **ClientTransactionId** – GUID proslijeđen DSC-u za specifičan zahtjev aktivacije.
+- **ClientTransactionId**– GUID proslijeđen DSC-u za specifičan zahtjev aktivacije.
 
 - **CollectionTime** – vrijeme dovršetka kupnje pretplate
 
@@ -13326,6 +13527,28 @@ Prikupljaju se sljedeća polja:
 
 - **token_type** – vrsta tokena korištenog za provjeru autentičnosti radi spremanja datoteka koji nam pomaže prepoznati probleme s provjerom autentičnosti u vezi sa spremanjem datoteke
 
+#### <a name="wkwebviewerror"></a>wkwebview.error
+
+Ovaj nam događaj omogućuje utvrđivanje kada su se pogreške s web-prikazom pojavile pri sastavljanju ili čitanju poruke e-pošte kako bismo mogli izbjeći probleme koji bi mogli uzrokovati nemogućnost sastavljanja ili čitanja poruke e-pošte aplikacije. 
+
+Prikupljaju se sljedeća polja: 
+
+- **description** – opis pogreške
+
+- **error_code** – kôd pogreške za WKError
+
+- **function_name** – naziv funkcije JavaScripta kada je pogreška
+
+- **js_exception_column_number** – broj stupca u kojemu se pojavila iznimka JavaScripta 
+
+- **js_exception_line_number** – broj retka u kojemu se pojavila iznimka JavaScripta
+
+- **js_exception_message** – poruka o iznimci kada se iznimka JavaScripta pojavila
+
+- **js_exception_source_url** – izvorišni URL u kojemu se iznimka JavaScripta pojavila  
+
+- **scenario** – gdje se pogreška pojavila, iscrtavanje ili sastavljanje.
+
 
 ## <a name="device-connectivity-and-configuration-data-events"></a>Događaji koji se odnose na povezivost i konfiguracijske podatke
 
@@ -13448,11 +13671,13 @@ Sljedeća se polja prikupljaju samo za Android:
 
 - **talkback** – govori nam je li korisnik uključio postavku za značajku TalkBack na svojem uređaju kako bi nam pomogao prepoznati probleme u vezi s tom postavkom
 
-- **webview_kernel_version** : verzija jezgre sustava Chromium web-prikaza na uređaju koja nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+- **theme_color** – prilagođena tematska boja (koju je odabrao korisnik) koju aplikacija trenutačno upotrebljava
 
-- **webview_package_name** : naziv paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+- **webview_kernel_version**: verzija jezgre sustava Chromium web-prikaza na uređaju koja nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
 
-- **webview_package_version** : verzija paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+- **webview_package_name**: naziv paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
+
+- **webview_package_version**: verzija paketa web-prikaza na uređaju koji nam pomaže prepoznati probleme s kompatibilnošću povezane s verzijom web-prikaza.
 
 #### <a name="lowstoragewarning"></a>low.storage.warning
 
