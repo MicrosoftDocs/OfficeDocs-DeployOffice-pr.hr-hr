@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o obaveznim dijagnostičkim podacima u sustavu Office, a sadrži i popis događaja i podatkovnih polja.
 hideEdit: true
-ms.openlocfilehash: e8b54e50ca8fc080cf09b26d83f4b7f28bc81290
-ms.sourcegitcommit: 521da3465e94ca9d29f3c6f49b78dd5f952d9cc6
+ms.openlocfilehash: 97d334551743566bde549da4b3b4a2476255d248
+ms.sourcegitcommit: 1c635a2906afb601e7c92b3f48dde3d271d06105
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "49088111"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49367353"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -1554,7 +1554,7 @@ Ovaj se događaj prikuplja za osiguranje da konfiguracija računa uspješno radi
 
 Prikupljaju se sljedeća polja: 
 
-- **account_creation_source** – neobavezno svojstvo koje se upotrebljava za pronalazak i dijagnozu svih problema koji se pojavljuju tijekom stvaranja računa kada da se doda vrsta radnje.  Ono može imati vrijednost kao što su jedinstvena prijava (SS0), create_new_account, manual itd.
+- **account_creation_source** – neobavezno svojstvo koje se upotrebljava za pronalazak i dijagnozu svih problema koji se pojavljuju tijekom stvaranja računa kada se doda vrsta radnje.  Ono može imati vrijednosti kao što su jedinstvena prijava (SS0), create_new_account, manual, itd.
 
 - **action** – vrsta radnje provedene na računu, npr. dodavanje, brisanje ili ponovno postavljanje.
 
