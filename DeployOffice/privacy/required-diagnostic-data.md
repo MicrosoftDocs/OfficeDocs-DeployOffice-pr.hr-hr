@@ -5376,7 +5376,7 @@ Prikupljaju se sljedeća polja:
   - **ClientTimeStamp** – vrijeme na aplikaciji tijekom zapisivanja događaja
   - **cardCorrelationId** – duplikat za gornji Data.appContextId
   - **cardPersonaCorrelationId** – duplikat za gornji Data.cardCorrelationId
-  - **consumerCorrelationId** – duplikat za prethodno navedeni Data.clientCorrelationId
+  - **consumerCorrelationId** – duplikat za gornji Data.clientCorrelationId
 
 - **Data.region** – zemljopisna regija usluge pozadinskog sustava kartice profila s kojom je korisnik povezan
 
@@ -5448,7 +5448,7 @@ Prikupljaju se sljedeća polja:
 
   - **cardCorrelationId** – duplikat za gornji Data.appContextId 
   - **cardPersonaCorrelationId** – duplikat za gornji Data.cardCorrelationId
-  - **consumerCorrelationId** – duplikat za prethodno navedeni Data.clientCorrelationId 
+  - **consumerCorrelationId** – duplikat za gornji Data.clientCorrelationId 
 
 - **Data.region** – zemljopisna regija usluge pozadinskog sustava kartice profila s kojom je korisnik povezan
 
@@ -6171,7 +6171,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string –** jedinstveni GUID korisnika
 
-  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korišten za akciju zajedničkih dokumenata
+  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korištenog za akciju zajedničkih dokumenata
 
   - **Data\_Doc\_IOFlags:long –** bit-maska za razne zastavice vezane uz ulaz i izlaz za određeni dokument
 
@@ -6307,7 +6307,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string –** jedinstveni GUID korisnika
 
-  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korišten za akciju zajedničkih dokumenata
+  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korištenog za akciju zajedničkih dokumenata
 
   - **Data\_Doc\_IOFlags:long –** bit-maska za razne zastavice vezane uz ulaz i izlaz za određeni dokument
 
@@ -6431,7 +6431,7 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_Doc\_IdentityTelemetryId:string –** jedinstveni GUID korisnika
 
-  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korišten za akciju zajedničkih dokumenata
+  - **Data\_Doc\_IdentityUniqueId:string –** jedinstveni identifikator identiteta korištenog za akciju zajedničkih dokumenata
 
   - **Data\_Doc\_IOFlags:long –** bit-maska za razne zastavice vezane uz ulaz i izlaz za određeni dokument
 
