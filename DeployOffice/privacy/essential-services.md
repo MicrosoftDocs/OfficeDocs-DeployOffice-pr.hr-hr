@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 94f248d64c74cd6575b4039178270f62b3715d15
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 03274656b30fe1e30e609ef32aa38947917a23cd
+ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491534"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "49685821"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -47,8 +47,8 @@ U tablici u nastavku naveden je popis ključnih servisa za Office i opis svakog 
 
 | **Servis**  | **Opis**  |
 | ------ | ---- |
-| [Provjera autentičnosti](#authentication-events) | Provjera autentičnosti servis je koji obuhvaća više platformi, a služi za provjeru valjanosti identiteta korisnika sustava Office.  Nužan je da biste se mogli prijaviti u Office, aktivirati licencu za Office, pristupiti datotekama pohranjenima u oblaku, a omogućuje i dosljedno sučelje u svim sesijama sustava Office na svim uređajima.    |
-| [Klikom do cilja](#click-to-run-events) | "Klikom do cilja" tehnologija je za instalaciju koja se koristi za instaliranje i ažuriranje sustava Office u sustavu Windows. Tehnologija provjerava postoji li nova verzija sustava Office i kad postoji, preuzima je i instalira. Tehnologija "klikom do cilja" otkrit će jesu li vam potrebna ažuriranja sustava Office, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.     |
+| [Provjera autentičnosti](#authentication-events) | Provjera autentičnosti servis je koji obuhvaća više platformi, a služi za provjeru valjanosti identiteta korisnika sustava Office.   Nužan je da biste se mogli prijaviti u Office, aktivirati licencu za Office, pristupiti datotekama pohranjenima u oblaku, a omogućuje i dosljedno sučelje u svim sesijama sustava Office na svim uređajima.    |
+| [Klikom do cilja](#click-to-run-events) | "Klikom do cilja" tehnologija je za instalaciju koja se koristi za instaliranje i ažuriranje sustava Office u sustavu Windows. Tehnologija provjerava postoji li nova verzija sustava Office i kad postoji, preuzima je i instalira.  Tehnologija "klikom do cilja" otkrit će jesu li vam potrebna ažuriranja sustava Office, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.     |
 | [Servis za poboljšanu konfiguraciju (eng. Enhanced Configuration Service, ECS)](#enhanced-configuration-service-ecs-events) | ECS Microsoftu omogućuje da iznova konfigurira instalacije sustava Office bez potrebe za ponovnom implementacijom sustava. Služi za kontroliranje postupnog objavljivanja značajki ili ažuriranja, a učinak objavljivanja prati se na temelju prikupljenih dijagnostičkih podataka. Koristi se i za ublažavanje sigurnosnih problema i problema s performansama neke značajke ili ažuriranja. ECS podržava i promjene konfiguracije povezane s dijagnostičkim podacima da bi se prikupljali odgovarajući događaji. |
 | [Licenciranje](#licensing-events)     | Licenciranje je servis u oblaku koji podržava aktivaciju novih instalacija sustava Office te održava licencu na uređajima nakon aktivacije sustava. Servis registrira svaki uređaj i aktivira Office, provjerava status pretplate na Office te upravlja ključevima proizvoda.    |
 |[Microsoftovo automatsko ažuriranje (MAU)](#microsoft-autoupdate-mau-events)|Microsoftovo automatsko ažuriranje (MAU) je tehnologija koja se koristi za ažuriranje Microsoftovih aplikacija proizvedenih za macOS, kao što je Office. MAU će otkriti jesu li vam potrebna ažuriranja aplikacije, uključujući sigurnosna ažuriranja, te će ih preuzeti i instalirati.|
@@ -359,7 +359,7 @@ Prikupljaju se sljedeća polja:
 
   - **Microsoft\_ADAL\_extended\_expires\_on\_setting** – vrijednost true/false koja označava ima li token produljen životni vijek.
 
-  - **Microsoft\_ADAL\_http\_event\_coun**t – broj HTTP poziva koje je uputio ADAL.
+  - **Microsoft\_ADAL\_http\_event\_coun** t – broj HTTP poziva koje je uputio ADAL.
 
   - **Microsoft\_ADAL\_http\_event\_count\_max** – ako je signal skupni, označava maksimalni broj HTTP poziva koje je ADAL uputio za bilo koji skupni događaj.
 
@@ -1118,75 +1118,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM 
 
-  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigurelight"></a>Office.ClickToRun.Scenario.InstallTaskConfigurelight
 
@@ -1194,75 +1194,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskfinalintegrate"></a>Office.ClickToRun.Scenario.InstallTaskFinalintegrate
 
@@ -1270,75 +1270,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
   - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
   - **Data\_ErrorSource –** mjesto nastanka pogreške
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskfonts"></a>Office.ClickToRun.Scenario.InstallTaskFonts
 
@@ -1346,75 +1346,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
   - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskinitupdates"></a>Office.ClickToRun.Scenario.InstallTaskInitupdates
 
@@ -1422,75 +1422,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
   - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskintegrateinstall"></a>Office.ClickToRun.Scenario.InstallTaskIntegrateinstall
 
@@ -1498,75 +1498,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
   - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltasklastrun"></a>Office.ClickToRun.Scenario.InstallTaskLastrun
 
@@ -1574,75 +1574,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
   - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
   - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskmigrate"></a>Office.ClickToRun.Scenario.InstallTaskMigrate
 
@@ -1650,75 +1650,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
   - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
   - **Data\_ErrorSource –** mjesto nastanka pogreške
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
   - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskpublishrsod"></a>Office.ClickToRun.Scenario.InstallTaskPublishrsod
 
@@ -1726,75 +1726,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
   - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
   - **Data\_ErrorSource –** mjesto nastanka pogreške
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskremoveinstallation"></a>Office.ClickToRun.Scenario.InstallTaskRemoveinstallation
 
@@ -1802,75 +1802,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –**  verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskstream"></a>Office.ClickToRun.Scenario.InstallTaskStream
 
@@ -1878,227 +1878,227 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski p
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –**  verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioinstalltaskuninstallcentennial"></a>Office.ClickToRun.Scenario.InstallTaskUninstallcentennial
 
-Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski program sustava Office deinstalira stariju verziju sustava Office koje je instalirana iz trgovine. Koristi se za mjerenje uspjeha/pogrešaka instalacije sustava Office.
+Podaci o instalaciji i inventaru sustava Office prikupljeni kada instalacijski program sustava Office deinstalira stariju verziju sustava Office koje je instalirana iz trgovine Microsoft Store. Koristi se za mjerenje uspjeha/pogrešaka instalacije sustava Office.
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenariorepairtaskfinalintegrate"></a>Office.ClickToRun.Scenario.RepairTaskFinalintegrate
 
-Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent za popravak sustava Office ponovno objavi .msi datoteke i datotečne nastavke sustava Office. Koristi se za mjerenje uspjeha/pogrešaka popravka sustava Office.
+Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent za popravak sustava Office ponovno objavi .msi datoteke i proširenja sustava Office. Koristi se za mjerenje uspjeha/pogrešaka popravka sustava Office.
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –**  verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenariorepairtaskfullrepair"></a>Office.ClickToRun.Scenario.RepairTaskFullrepair
 
@@ -2106,75 +2106,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent za popr
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenariorepairtaskintegraterepair"></a>Office.ClickToRun.Scenario.RepairTaskIntegraterepair
 
@@ -2182,75 +2182,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent za popr
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenariorepairtaskremoveinstallation"></a>Office.ClickToRun.Scenario.RepairTaskRemoveinstallation
 
@@ -2258,75 +2258,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent za popr
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioupdatetaskintegrateupdate"></a>Office.ClickToRun.Scenario.UpdateTaskIntegrateupdate 
 
@@ -2334,75 +2334,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioupdatetaskpublishrsod"></a>Office.ClickToRun.Scenario.UpdateTaskPublishrsod
 
@@ -2410,75 +2410,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdateapply"></a>Office.ClickToRun.Scenario.UpdateTaskUpdateapply
 
@@ -2486,25 +2486,25 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_AvailableVersion to –** verzija sustava Office koja je dostupna za ažuriranje
 
@@ -2514,57 +2514,57 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_CorruptionChecksOnly –-** označava radi li se samo o traženju oštećenja bez ažuriranja
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
   - **Data\_ErrorSource –** mjesto nastanka pogreške
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
   - **Data\_HardlinkingException –** iznimka na koju smo naišli pokušavajući stvoriti fiksne veze
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_PackageOperationSuccessful –** vrijednost true ako je zadatak na paketu sustava Office uspješno dovršen
+  - **Data\_PackageOperationSuccessful –** vrijednost je „true” ako je zadatak na paketu sustava Office uspješno dovršen
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
   - **Data\_WorkstationLockState –** vrijednost je true ako smatramo da je računalo zaključano
 
@@ -2574,75 +2574,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedetection"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedetection
 
@@ -2650,25 +2650,25 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_AvailableVersion to –** verzija sustava Office na koju je moguće ažurirati sustav
 
@@ -2678,55 +2678,55 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
   - **Data\_ErrorSource –** mjesto nastanka pogreške
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_PackageUpdateAvailable –** vrijednost je true ako je dostupna nova verzija sustava Office
+  - **Data\_PackageUpdateAvailable –** vrijednost je „true” ako nam je dostupna nova verzija sustava Office
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
   - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedownload"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedownload
 
@@ -2734,25 +2734,25 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –**  verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_AvailableVersion to –** verzija sustava Office na koju je moguće ažurirati sustav
 
@@ -2762,59 +2762,59 @@ Prikupljaju se sljedeća polja:
 
   - **Data\_CorruptionChecksOnly –** označava radi li se samo o traženju oštećenja bez ažuriranja
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
   - **Data\_ErrorSource –** mjesto nastanka pogreške
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_FoundCorruptFiles –** vrijednost je true ako smo pronašli oštećene datoteke
+  - **Data\_FoundCorruptFiles –** vrijednost je „true” ako smo pronašli oštećene datoteke
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
   - **Data\_PackageOperationSuccessful –** vrijednost true ako je zadatak na paketu sustava Office uspješno dovršen
 
   - **Data\_PipelineExitCode –** izlazna šifra koju je vratio kanal za datoteke
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatefinalize"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatefinalize
 
@@ -2822,75 +2822,75 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
+  - **Data\_15\_SourceType –** mjesto na kojem se nalazi izvor za Office 15, npr. CDN ili lokalno 
 
-  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
+  - **Data\_15\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 15 omogućena 
 
-  - **Data\_15\_UpdateVersion –**  verzija sustava Office 15 na koju se sustav ažurira 
+  - **Data\_15\_UpdateVersion –** verzija sustava Office 15 na koju se sustav ažurira 
 
-  - **Data\_15\_Version –** verzija sustava Office 15 
+  - **Data\_15\_Version –** verzija sustava Office 15 
 
-  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
+  - **Data\_16\_SourceType –** mjesto na kojem se nalazi izvor za Office 16, npr. CDN ili lokalno 
 
-  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
+  - **Data\_16\_UpdatesEnabled –** označava jesu li ažuriranja sustava Office 16 omogućena 
 
-  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
+  - **Data\_16\_UpdateVersion –** verzija sustava Office 16 na koju se sustav ažurira 
 
-  - **Data\_16\_Version –** verzija sustava Office 16 
+  - **Data\_16\_Version –** verzija sustava Office 16 
 
-  - **Data\_AddingFixedProducts –** proizvod koji dodajemo 
+  - **Data\_AddingFixedProducts –** proizvodi koje dodajemo 
 
-  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
+  - **Data\_AddingProducts –** proizvodi koje trebamo dodati 
 
   - **Data\_CompletionState –** označava jesmo li dovršili zadatak
 
-  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
+  - **Data\_ErrorCode –** šifra pogreške zbog koje radnja nije uspjela 
 
-  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
+  - **Data\_ErrorDetails –** dodatne pojedinosti o pogrešci 
 
-  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
+  - **Data\_ErrorMessage –** poruka o pogrešci do koje je došlo 
 
-  - **Data\_ErrorSource –** mjesto nastanka pogreške 
+  - **Data\_ErrorSource –** mjesto nastanka pogreške 
 
-  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
+  - **Data\_ExceptionType –** iznimka zbog koje radnja nije uspjela 
 
-  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
+  - **Data\_IsErrorCodeIgnorable –** označava može li se šifra pogreške zbog koje radnja nije uspjela zanemariti 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** određuje smatramo li da je šifru pogreške moguće zanemariti 
 
-  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
+  - **Data\_NewestPackageVersion –** najnovija verzija sustava Office na računalu 
 
-  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
+  - **Data\_OldestPackageVersion –** najstarija verzija sustava Office na računalu 
 
-  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
+  - **Data\_ProductsToAdd –** proizvodi sustava Office koje dodajemo 
 
-  - **Data\_ProductsToRemove –**  proizvodi sustava Office koje uklanjamo 
+  - **Data\_ProductsToRemove –** proizvodi sustava Office koje uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
+  - **Data\_RemovingProducts –** proizvodi koje trebamo ukloniti 
 
-  - **Data\_ScenarioInstanceID -** jedinstveni GUID za pokrenuti scenarij 
+  - **Data\_ScenarioInstanceID –** jedinstveni GUID za pokrenuti scenarij 
 
-  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
+  - **Data\_ScenarioName –** scenarij koji je pokrenut. npr. instalacija 
 
-  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
+  - **Data\_ScenarioSubType –** vrsta scenarija koji smo pokrenuli, npr. deinstalacija, ponovna instalacija 
 
-  - **Data\_SourceType –** mjesto izvora, npr. CDN 
+  - **Data\_SourceType –** mjesto na kojem se nalazi izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –**  jedinstveni ID računala koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** jedinstveni ID računala kojim se koristi Windows SQM 
 
-  - **Data\_SusClientID –**  identifikator ažuriranja sustava Office na računalu 
+  - **Data\_SusClientID –** identifikator ažuriranja sustava Office na računalu 
 
-  - **Data\_TaskState –** stanje u kojem je zadatak, primjerice pokrenut ili otkazan 
+  - **Data\_TaskState –** stanje zadatka, primjerice pokrenut ili otkazan 
 
-  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
+  - **Data\_TotalClientCabSize –** veličina klijentske cab datoteke 
 
-  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
+  - **Data\_TriggeringUI –** određuje što je aktiviralo korisničko sučelje 
 
-  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
+  - **Data\_UpdatesEnabled –** određuje jesu li ažuriranja sustava Office omogućena 
 
-  - **Data\_Version –** verzija sustava Office 
+  - **Data\_Version –** verzija sustava Office 
 
 ### <a name="officeclicktoruntransport"></a>Office.ClickToRun.Transport
 
@@ -2943,13 +2943,13 @@ Podaci o instalaciji i inventaru sustava Office prikupljeni kada klijent tehnolo
 
 Prikupljaju se sljedeća polja:
 
-  - **Data\_IsForeGroundStreaming**  – označava prenosimo li podatke strujanjem u prvom planu ili u pozadini
+  - **Data\_IsForeGroundStreaming** – označava prenosimo li podatke strujanjem u prvom planu ili u pozadini
 
   - **Data\_IsInstallMode** – ako instaliramo i preuzimamo datoteke, vrijednost je 1, a ako ne, vrijednost je 0
 
   - **Data\_SourceProtocol –** označava preuzimamo li iz mreže podataka sadržaja (CDN-a), s računala na koje instaliramo, iz lokalne mreže ili iz resursa u lokalnoj područnoj mreži.
 
-  - **Data\_Status**  – označava uspjeh ili neuspjeh 
+  - **Data\_Status** – označava uspjeh ili neuspjeh 
 
 ### <a name="officeclicktorunupdatestatus"></a>Office.ClickToRun.UpdateStatus
 
@@ -2976,13 +2976,13 @@ Prijavljuje rezultat sveobuhvatnih pokušaja instalacije
 
  - **ErrorCode –**    vrijednost cijelog broja povezana je s neobrađenom iznimkom
 
- - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+ - **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
- - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+ - **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
  - **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
- - **ExitCode –**    vrijednost cijelog broja povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
+ - **ExitCode –**    cjelobrojna vrijednost povezana s rezultatom pokretanja programa za automatsko pokretanje, ukazuje na uspjeh ili određenu vrstu neuspjeha
 
 ### <a name="officeclicktorununiversalbootstrappercalculateparameters"></a>Office.ClickToRun.UniversalBootstrapper.CalculateParameters
 
@@ -3055,11 +3055,11 @@ Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameter
 
 Izvještava o radnji koja čita označeni unos iz ugrađenog potpisa exe datoteke.  Ovo je nedokazani koncept koji prethodna iteracija izvršne datoteke setup.exe nije implementirala i na što se oslanjamo u prenošenju korisnikovih izbora proizvoda/jezika/broja bitova s web-stranice na proces unutar izvršne datoteke setup.exe.
  
-- **ErrorCode –**    cijeli broj povezan je s neobrađenom iznimkom
+- **ErrorCode –**    cijeli broj povezan s neobrađenom iznimkom
 
-- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
-- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
 - **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
@@ -3141,29 +3141,29 @@ Izvješćuje o poduzetim radnjama koje su utjecale na stroj, što je utvrđeno o
 
 - **CMDMode –**    neslužbeni niz koji odgovara ukupnoj zamjeni načina otkriven je u cmd argumentima koji su proslijeđeni u exe. Mogućnosti su: automatsko pokretanje, konfiguriranje, korisnik, preuzimanje, pomoć, program za pakiranje
 
-- **DeliveryMechanism –**   „FFNRoot” guid izdvojen iz verzije Deskriptora XML (koju je izdao RDX), koji nam govori iz koje publike/kanala potječe izvor za izgradnju
+- **DeliveryMechanism –**   „FFNRoot” guid izdvojen iz XML-a deskriptora verzije (koji nosi oznaku RDX-a), koji nam govori iz koje publike/kanala potječe izvor međuverzije
 
 - **DownloadC2RClientAction –**    „true” ako se planira pokretanje zadatka DownloadC2RClientAction tijekom ove instalacije
 
 - **ErrorCode –**    vrijednost cijelog broja povezana je s neobrađenom iznimkom
 
-- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
+- **ErrorDetails –**    Niz koji opisuje mjesto na kojem se desila neobrađena iznimka (funkcija, datoteka, broj retka, dodatni parametri koje je postavio bacač)
 
-- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
+- **ErrorMessage –**    Niz definiran na mjestu izbacivanja neobrađene iznimke, opisujući prirodu neuspjeha
 
 - **ErrorType –**    niz koji opisuje kategoriju neobrađene iznimke
 
-- **ExitCode –**   Vrijednost cijelog broja  povezana s rezultatom pokretanja automatskog pokretanja, ukazuje na uspjeh nasuprot određenim vrstama neuspjeha
+- **ExitCode –**   cjelobrojna vrijednost povezana s rezultatom pokretanja izvršne faze programa za automatsko pokretanje, ukazuje na uspjeh ili određenu vrstu neuspjeha
 
-- **LaunchAction –**    "true" ako se planira pokretanje zadatka LaunchAction tijekom instalacije
+- **LaunchAction –**    "true" ako se planira pokretanje zadatka LaunchAction tijekom ove instalacije
 
-- **LaunchUpdateAction –**    „true” ako se planira pokretanje zadatka LaunchUpdateAction tijekom instalacije
+- **LaunchUpdateAction –**    „true” ako se planira pokretanje zadatka LaunchUpdateAction tijekom ove instalacije
 
-- **PreReqResult –**    Vrijednost cijelog broja identifikatora rezultata kada su izvedene provjere bez preduvjeta (prolaz/pad/ponovno pokretanje)
+- **PreReqResult –**    cjelobrojna vrijednost za identifikaciju rezultata kada se izvode provjere preduvjeta (prolaz/pad/ponovno pokretanje)
 
-- **UnexpectedAction –**    "true" ako se planira pokretanje zadatka (slučaja pogreške) UnexpectedAction tijekom instalacije
+- **UnexpectedAction –**    "true" ako se planira pokretanje zadatka UnexpectedAction (slučaj pogreške) tijekom ove instalacije
 
-- **VersionToInstall –**   Vrijednost niza verzije sustava Office "16.0.xxxxx.yyyyy" koja se instalira
+- **VersionToInstall –**    Vrijednost niza za verziju sustava Office "16.0.xxxxx.yyyyy" koja se instalira
 
 ### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
 
@@ -3343,6 +3343,97 @@ Prikupljaju se sljedeća polja:
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
 
+### <a name="officeandroiddocsuiviewspurchasetokenredemptionresponse"></a>Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse
+
+Ovi se telemetrijski podaci o proizvodu prikupljaju radi praćenja i bilježenja internog statusa transakcija i informacija namijenjenih usklađivanju s ciljem poboljšanja pouzdanosti i performansi. Microsoft te podatke koristi za analizu i poboljšanje pouzdanosti i performansi obrade internih transakcija te mehanizme usklađivanja.
+
+Prikupljaju se sljedeća polja:
+
+- **MicrosoftPurchaseOrderId** – Microsoftov ID narudžbe koji servis Retail Federation Service (RFS) šalje za potrebe praćenja.
+
+- **ResponseCode** – kôd HTTP odgovora (cijeli broj)
+
+- **Kôd statusa StatusCode** – statusni kôd RFS odgovora (konačan skup cijelih brojeva koji definira RFS radi identifikacije)
+
+
+### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
+
+Taj događaj bilježi podatke koji omogućuju praćenje stanja Dime komponenti. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje u sustavu Dime kako bi se osiguralo da on funkcionira na očekivan način. 
+
+Prikupljaju se sljedeća polja:
+
+- **Data_ActivityErrorDescription** – opis pogreške u okviru aktivnosti
+
+- **Data_ActivityErrorDescription** – poruka o pogrešci u okviru aktivnosti 
+
+- **Data_CampaignId** – ID kampanje za pripisivanje atributa
+
+- **Data_ContentId** – temelji se na ID-u doživljaja i mapira na ID tijeka i ID sadržaja
+
+- **Data_CorrelationVector** – korelacijski vektor za povezivanje novčića sustava Dime s partnerima koji koriste korelacijski vektor
+
+- **Data_CustomerImpacted** – koristi se za otklanjanje poteškoća ako je učitavanje tijeka imalo utjecaja na korisnika
+
+- **Data_DimeActivityDuration** – vrijeme trajanja 
+
+- **Data_DimeActivityMetadata** – metapodaci o aktivnostima
+
+- **Data_DimeActivityName** – naziv aktivnosti za nadzor stanja sustava
+
+- **Data_DimeActivityResult** – rezultat aktivnosti, uspjeh / pogreška / očekivana pogreška
+
+- **Data_DimeVersion** – verzija međuverzije
+
+- **Data_DurationLevel** – težina: 0/1/2
+
+- **Data_EcsConfigIds** – ID-ovi za eksperimente
+
+- **Data_EcsCountry** – otkrivena država
+
+- **Data_EcsETag** – informacije o testnim verzijama
+
+- **Data_Environment** – produkcijsko/pretprodukcijsko okruženje sustava Dime
+
+- **Data_ExperienceId** – doživljaj koji treba učitati 
+
+- **Data_FlowId** – temelji se na ID-u doživljaja i mapira na ID tijeka i ID sadržaja
+
+- **Data_Language** – kultura
+
+- **Data_Market** – otkriveno tržište
+
+- **Data_OTelJS_Version** – verzija telemetrije za Office
+
+- **Data_PageSessionId** – ID sesije za stranicu
+
+- **Data_PartnerId** – pozivateljska aplikacija
+
+- **Data_QosLevel** – težina: 0/1/2
+
+- **Data_SDX_AssetId** – ID resursa za sadržaj koji pruža Service Delivered Experience (SDX)
+
+- **Data_SDX_BrowserToken** – token preglednika
+
+- **Data_SDX_HostJsVersion** – verzija JavaScript biblioteke
+
+- **Data_SDX_Id** – ID servisa Service Delivered Experience
+
+- **ID Data_SDX_InstanceId** – ID instance SDX-a
+
+- **Data_SDX_MarketplaceType** – vrsta SDX Marketplacea
+
+- **Data_SDX_OfficeJsVersion** – verzija Office JS-a
+
+- **Data_PageSessionId** – ID sesije za SDX
+
+- **Data_SDX_Version** – verzija SDX-a
+
+- **Data_TimestampUTC** – vremenska oznaka događaja
+
+- **Data_TsgId** – ID vodiča za otklanjanje poteškoća za svaku aktivnost
+
+- **Data_UserAgent** – oznake zaglavlja
+
 ### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
 
 Kritična telemetrija upotrebe prikuplja se kako bi ukazala na to kada korisnik dodiruje gumb Kupi.  Podaci se upotrebljavaju za zaključivanje o načinu korištenja i mjernim podacima konverzije za korisnike koji pokušaju kupiti pretplatu u aplikaciji.
@@ -3387,6 +3478,47 @@ Prikupljaju se sljedeća polja:
 Ako zbog nekog razloga ne možemo automatski aktivirati licencu, korisniku prikazujemo čarobnjak za aktivaciju. Ovo prijavljuje da je korisniku prikazan čarobnjak. Ključno je radi otkrivanja je li korisnik u dobrom stanju te da mu ne nedostaje neka funkcija, koristi se u svrhe određivanja stanja sustava i za dijagnostiku ako korisnik prijavi problem s računalom
 
 Događaj ne prikuplja nijedno polje.
+
+### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
+ 
+Taj se događaj koristi kao signal koji nam govori da su korisnik ili aplikacija zatvorili okruženje za kupnju iz aplikacije. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje iz aplikacije kako bi se osiguralo da on funkcionira na očekivan način.  
+ 
+Prikupljaju se sljedeća polja:
+ 
+- **Data_ClosedDialog** – zastavica koja označava da je korisnik zatvorio dijaloški okvir
+
+### <a name="officelicensingdialogswebviewdialoghandleerrornotification"></a>Office.Licensing.Dialogs.WebViewDialog.HandleErrorNotification
+ 
+Taj se događaj koristi kao signal koji nam govori da se okruženje za korištenje u aplikaciji pokušalo učitati, ali je došlo do pogreške koja je dovela do toga da se dijaloški okvir ne prikaže. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje iz aplikacije kako bi se osiguralo da on funkcionira na očekivan način.  
+ 
+Prikupljaju se sljedeća polja:
+  
+- **Data_MoeErrorCode** – šifra pogreške koja se prikazuje u okruženju dijaloškog okvira za web
+
+### <a name="officelicensingdialogswebviewdialogpreload"></a>Office.Licensing.Dialogs.WebViewDialog.Preload
+ 
+Taj se događaj koristi kao signal koji nam govori da se okruženje za kupnju iz aplikacije učitava u pozadini. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje iz aplikacije kako bi se osiguralo da on funkcionira na očekivan način.  
+ 
+Prikupljaju se sljedeća polja:
+
+ - Nijedno
+
+### <a name="officelicensingdialogswebviewdialogshow"></a>Office.Licensing.Dialogs.WebViewDialog.Show
+ 
+Taj se događaj koristi kao signal koji nam govori da se okruženje za kupnju iz aplikacije prikazuje korisniku. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje iz aplikacije.  
+
+Prikupljaju se sljedeća polja:
+
+ - Nijedno
+
+### <a name="officelicensingdialogswebviewdialogtimeout"></a>Office.Licensing.Dialogs.WebViewDialog.Timeout
+
+Taj se događaj koristi kao signal koji nam govori da se okruženje za kupnju u aplikaciji pokušalo učitati, ali je vrijeme čekanja isteklo. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje iz aplikacije kako bi se osiguralo da on funkcionira na očekivan način. 
+
+Prikupljaju se sljedeća polja:
+
+ - Nijedno
+
 
 ### <a name="officelicensingenforcesigninqualified"></a>Office.Licensing.EnforceSignInQualified 
 
@@ -4386,6 +4518,8 @@ Prikupljaju se sljedeća polja:
 - **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
 
 - **SessionId** – Identifikator sesije
+
+- **Success** – označava je li zadatak kloniranja uspio
 
 - **UpdateID** – Identifikator ažuriranja.
 
@@ -5698,6 +5832,47 @@ Prikupljaju se sljedeća polja:
 - **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
 
 - **SessionId** – Identifikator sesije
+
+
+### <a name="controllermainwindowsetautomaticchecking"></a>controller.mainwindow.setautomaticchecking
+
+Ovaj događaj označava da je uređaj registriran u način automatskog ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+
+Prikupljaju se sljedeća polja:
+
+ - **App** – Proces aplikacije koji šalje događaj
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowTocheck** – Postavka za provjeru ažuriranja
+
+- **Payload** – tekst koji označava prirodu događaja.
+
+- **PipelineInfo_ClientCountry** – država uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – prva tri okteta IP adrese
+
+- **SessionId** – identifikator sesije
 
 
 ### <a name="controllermainwindowsetautomaticdownloadinstall"></a>controller.mainwindow.setautomaticdownloadinstall
@@ -10822,48 +10997,7 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-
-### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
-
-Ovaj događaj evidentira komunikacijske pogreške unutar procesa (komunikacija s pomoćnim alatom MAU). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
- 
-Prikupljaju se sljedeća polja:
-
-- **App** – Proces aplikacije za slanje događaja
-
-- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
-
-- **AppVersionLong** – Verzija aplikacije
-
-- **Channel** – Preference za publiku
-
-- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
-
-- **DeviceID** – Identifikator uređaja
-
-- **DeviceInfo_Model** – Hardverski model uređaja
-
-- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
-
-- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
-
-- **Event_ReceivedTime** – Vrijeme primanja telemetrije
-
-- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
-
-- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
-
-- **HowTocheck** – Postavka za provjeru ažuriranja
-
-- **Payload** – Sadrži identifikator koji se koristi za praćenje aktivnosti ažuriranja, naziva ažuriranja i detalja o prijavljenoj pogrešci proxy poslužitelja.
-
-- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
-
-- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
-
-- **SessionId** – Identifikator sesije
-
-    
+   
 ### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Ovaj događaj evidentira komunikacijske pogreške unutar procesa (komunikacija s pomoćnim alatom MAU). Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
@@ -11083,6 +11217,94 @@ Prikupljaju se sljedeća polja:
 
 - **UpdatePkg** – Naziv paketa ažuriranja koji se primjenjuje
 
+### <a name="lifecyclecomplimentproclaunch"></a>Lifecycle.complimentproclaunch
+
+Ovaj događaj označava pokušaj pokretanja Microsoftovog pomoćnika za ažuriranje iz servisa Microsofta AutoUpdate ili iz servisa Microsofta AutoUpdate putem Microsoftovog pomoćnika za ažuriranje. Taj se događaj koristi za utvrđivanje i osiguravanje radnog stanja servisa Microsoft AutoUpdate i Microsoftovog pomoćnika za ažuriranje.
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppversionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Error** – sve pogreške prijavljene tijekom pokušaja pokretanja
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowToCheck** – Način provjere postavke
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **Reason** – razlog pokušaja pokretanja procesa davanja komplimenta
+
+- **SessionId** – identifikator sesije
+
+- **Success** – označava je li pokušaj pokretanja bio uspješan
+
+### <a name="lifecyclelaunch"></a>Lifecycle.launch
+
+Ovaj događaj označava pokretanje servisa Microsoft AutoUpdate ili Microsoftovog pomoćnika za ažuriranje. Taj se događaj koristi i za izvješćivanje o svim problemima utvrđenim tijekom postupka pokretanja te kao način izvješćivanja za pokretanje u slučaju Microsoftovog pomoćnika za ažuriranje.
+
+*[Taj događaj zamjenjuje događaje fba.launch i appdelegate.launch events.]*
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – verzija aplikacije
+
+- **Channel** – preference za publiku
+
+- **Device_NetworkCountry** – država uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Pogreška** – bilo koja pogreška pronađena pri pokretanju
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowToCheck** – Način provjere postavke
+
+- **LaunchedBy** – metoda koja se koristi za pokretanje Microsoftovog pomoćnika za ažuriranje, ako je primjenjivo
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
 ### <a name="lifecycleperiodiccheck"></a>Lifecycle.periodiccheck
 
 Taj događaj povremeno javlja o statusu postupka MicrosoftAutoUpdate. Konkretno, javlja o preostalim zadacima za koje postupak čeka radi završetka Pomoćnika za ažuriranje, a u slučaju korisničkog sučelja javlja je li postupak završio zbog korisničke neaktivnosti.  Ovaj događaj omogućuje nam da odredimo što sprječava Pomoćnik za ažuriranje da dovrši ažuriranja i završi s radom te je li korisničko sučelje prestalo s radom zbog neaktivnosti korisnika.
@@ -11131,7 +11353,51 @@ Prikupljaju se sljedeća polja:
 
 - **SessionId** – Identifikator sesije
 
-- **SessionLength** – trajanje trenutačne sesije procesa u sekundama
+- **SessionLength** – trajanje sesije trenutačnog procesa u sekundama
+
+
+### <a name="lifecycleterminate"></a>Lifecycle.terminate
+
+Ovaj događaj označava isključivanje servisa Microsoft AutoUpdate ili Microsoftovog pomoćnika za ažuriranje. Taj se događaj koristi za utvrđivanje radnog stanja servisa Microsoft AutoUpdate i Microsoftovog pomoćnika za ažuriranje.
+
+*[Taj događaj zamjenjuje događaje fba.terminate i appdelegate.terminate.]*
+
+Prikupljaju se sljedeća polja:
+
+- **App** – Proces aplikacije za slanje događaja
+
+- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Preference za publiku
+
+- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Hardverski model uređaja
+
+- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
+
+- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
+
+- **Event_ReceivedTime** – Vrijeme primanja telemetrije
+
+- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
+
+- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
+
+- **HowToCheck** – Način provjere postavke
+
+- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
+
+- **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+- **SessionLength** – trajanje sesije trenutačnog procesa u sekundama
+
 
 
 ### <a name="msupdateclieventhandler"></a>msupdate.cli.eventhandler
@@ -14535,47 +14801,6 @@ Prikupljaju se sljedeća polja:
 - **SessionId** – Identifikator sesije
 
 
-### <a name="webservicesserviceaction"></a>webservices.serviceaction
-
-Evidentiramo bilo kakve pogreške koje nastaju uslijed neočekivanog odgovora web-servisa. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
- 
-Prikupljaju se sljedeća polja:
-
-- **App** – Proces aplikacije za slanje događaja
-
-- **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
-
-- **AppVersionLong** – Verzija aplikacije
-
-- **Channel** – Preference za publiku
-
-- **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
-
-- **DeviceID** – Identifikator uređaja
-
-- **DeviceInfo_Model** – Hardverski model uređaja
-
-- **DeviceInfo_NetworkType** – Vrsta mreže (Wi-Fi, ožičena, nepoznata)
-
-- **DeviceInfo_OsBuild** – Verzija operacijskog sustava
-
-- **Event_ReceivedTime** – Vrijeme primanja telemetrije
-
-- **EventInfo_Name** – Naziv telemetrijskog događaja koji se zapisuje
-
-- **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
-
-- **HowTocheck** – Postavka za provjeru ažuriranja
-
-- **Payload** – Sadrži detalje o prosljeđivanju akcije s web-servisa.
-
-- **PipelineInfo_ClientCountry** – Zemlja uređaja (na temelju IP adrese)
-
-- **PipelineInfo_ClientIp** – Prva 3 okteta IP adrese
-
-- **SessionId** – Identifikator sesije
-
-
 ### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
 Ovaj događaj evidentira zahtjeve za uslugu MAU službu, vrijeme odgovora i pogreške. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
@@ -15251,6 +15476,46 @@ Prikupljaju se sljedeća polja:
 - **requestType** – niz – vrsta zahtjeva za Storekit. Kao što je "ProductsFetch", "Pendingpurchase"
 
 - **status** – niz – uspjeh ili neuspjeh, što upućuje na uspjeh ili neuspjeh zahtjeva
+
+### <a name="officeonenotegetsharepointidsfordocument"></a>Office.OneNote.GetSharePointIdsForDocument
+
+Prikupljeni podaci bilježe neuspješnost ili uspješnost dohvaćanja ID-ova sustava SharePoint (SPO) za URL dokumenta. Uspješnost i neuspješnost (uključujući razlog neuspjeha) poziva bilježe se za sve platforme. Ta je oznaka obavezna za praćenje i dijagnostiku stanja poziva koji se upućuje radi pribavljanja ID-ova. ID-ovi u sažetku sadržaja moraju prikazivati podatke sa stranice programa OneNote (koja pripada bilježnicama pohranjenim u sustavu SharePoint). 
+
+Prikupljaju se sljedeća polja:
+
+- **ErrorCode** – cjelobrojna vrijednost pogreške
+
+- **ErrorMessage** – niz koji opisuje pogrešku
+
+- **FailureType** – niz za određivanje vrste pogreške
+
+- **HTTP-statuscode** – kôd HTTTP pogreške za mrežni poziv
+
+- **InnerErrorCode** – cjelobrojni kôd
+
+- **InnerErrorMesage** – poruka za pogrešku
+
+- **IsSuccess** – Booleova vrijednost za uspješnost signala
+
+### <a name="officeonenotegetsharepointidsfordocumentw32old"></a>Office.OneNote.GetSharePointIdsForDocumentW32Old
+
+Telemetrija bilježi scenarije neuspjeha i uspješnost dohvaćanja ID-ova sustava SharePoint (SPO) za URL dokumenta. Bilježi se uspješnost ili neuspješnost (uključujući razlog neuspjeha) poziva. To se bilježi samo na staroj platformi win32. Ta je oznaka obavezna za praćenje i dijagnostiku stanja poziva koji se upućuje radi pribavljanja ID-ova. ID-ovi u sažetku sadržaja moraju prikazivati podatke sa stranice programa OneNote (koja pripada bilježnicama pohranjenim u sustavu SharePoint). 
+
+Prikupljaju se sljedeća polja:
+
+- **ErrorCode** – cjelobrojna vrijednost pogreške
+
+- **ErrorMessage** – niz koji opisuje pogrešku
+
+- **FailureType** – niz za određivanje vrste pogreške
+
+- **HTTP-statuscode** – kôd HTTTP pogreške za mrežni poziv
+
+- **InnerErrorCode** – cjelobrojni kôd
+
+- **InnerErrorMesage** – poruka za pogrešku
+
+- **IsSuccess** – Booleova vrijednost za uspješnost signala
 
 
 ### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
@@ -16021,7 +16286,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officesystemsystemhealthungracefulappexitdesktop"></a>Office.System.SystemHealthUngracefulAppExitDesktop
 
-Koristi se za snimanje metrike rušenja.
+Događaj se aktivira nenormalnim zatvaranjem aplikacije (npr. zaustavljanje u upravitelju zadataka, smrzavanje aplikacije itd.) za klijentske aplikacije sustava Office kao što su, među ostalima, Word, Excel, PowerPoint i Outlook. Za mjerenje stanja klijentskih proizvoda sustava Office koristimo metriku nekontroliranog zatvaranja aplikacije. To je signal ključan za poslovanje kojim se inženjeri sustava Office koriste za postizanje stabilnosti proizvoda.
 
 Prikupljaju se sljedeća polja:
 
@@ -16029,83 +16294,103 @@ Prikupljaju se sljedeća polja:
 
   - **AffectedProcessAppBuildRevision –** identifikator revizije međuverzije zahvaćenog procesa.
 
+  - **AffectedProcessAppMajorVer** – identifikator radne verzije zahvaćenog procesa.
+
   - **AffectedProcessAppMinorVer –** identifikator sporedne verzije zahvaćenog procesa.
 
-  - **AffectedProcessAppName –** naziv zahvaćenog procesa.
+  - **AffectedProcessAppName –** naziv zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessExeBuildVersion –** broj međuverzije zahvaćenog procesa.
+  - **AffectedProcessExeBuildVersion –** broj međuverzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessExeMajorVersion –** broj glavne verzije zahvaćenog procesa.
+  - **AffectedProcessExeMajorVersion –** broj glavne verzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessExeMinorVersion –** broj sporedne verzije zahvaćenog procesa.
+  - **AffectedProcessExeMinorVersion –** broj radne verzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessExeRevisionVersion –** broj revizije međuverzije zahvaćenog procesa.
+  - **AffectedProcessExeRevisionVersion –** broj revizije međuverzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessIsDebug –** određuje je li međuverzija zahvaćenog procesa verzija za ispravljanje pogrešaka.
+  - **AffectedProcessIsDebug –** određuje je li međuverzija zahvaćenog procesa verzija za ispravljanje pogrešaka. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessIsLabMachine –** određuje nalazi li se zahvaćeni proces u Microsoftovu laboratoriju.
+  - **AffectedProcessIsLabMachine –** određuje nalazi li se zahvaćeni proces u Microsoftovu laboratoriju. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AffectedProcessOsEnvironment –** identifikator operacijski sustav za zahvaćeni proces.
+  - **AffectedProcessOsEnvironment –** identifikator operacijskog sustava za zahvaćeni proces. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **AppName –** naziv zahvaćene aplikacije.
+  - **AppName –** naziv zahvaćene aplikacije. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **CrashedAssignedFlights –** testne verzije dodijeljene srušenom procesu.
+  - **CrashedAssignedFlights –** testne verzije dodijeljene procesu koji je pao. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **CrashedConfigIds –** konfiguracija dodijeljena srušenom procesu.
+  - **CrashedConfigIds –** konfiguracija dodijeljena procesu koji je pao. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
   - **CrashedEcsETag –** identifikator eksperimenta za srušeni proces.
 
-  - **CrashedImpressionId –** identifikator prikaza srušenog procesa.
+  - **CrashedImpressionId –** identifikator prikaza srušenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **CrashedProcessSessionID –** jedinstveni identifikator srušenog procesa.
+  - **CrashedModuleName –** naziv neispravnog modula.
 
-  - **CrashedProcessSessionInitTime –** vrijeme pokretanja zahvaćenog procesa.
+  - **CrashedProcessSessionID –** jedinstveni identifikator srušenog procesa. 
+
+  - **CrashedProcessSessionInitTime –** vrijeme pokretanja zahvaćenog procesa. 
+
+  - **CrashedProcessSessionUninitTime** – vrijeme završetka zahvaćenog procesa.
+
+  - **CrashTag** – jedinstveni identifikator kôda pada sustava.
 
   - **CrashType –** identifikator grupiranja za vrstu rušenja.
 
-  - **DetectionTime –** vrijeme otkrivanja neočekivanog zatvaranja.
+  - **DetectionTime –** vrijeme otkrivanja neočekivanog zatvaranja. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ErrorString –** opis pogreške.
+  - **ErrorString –** opis pogreške. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ExceptionAddress –** adresa u programu na kojoj je došlo do pogreške.
+  - **ExceptionAddress –** adresa u programu na kojoj je došlo do pogreške. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
   - **ExceptionCode –** identifikator grupiranja za iznimku.
 
-  - **FaultAppName –** naziv aplikacije s pogreškom.
+  - **FaultAppName –** naziv aplikacije s pogreškom. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
   - **InstallMethod** – određuje je li sustav nadograđen na trenutnu međuverziju sustava Office, vraćen na nju ili je u pitanju nova instalacija.
 
-  - **InstallType –** identifikator metode kojom je Office instaliran.
+  - **InstallType –** identifikator metode kojom je Office instaliran. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **InstallTypeName –** identifikator metode kojom je Office instaliran.
+  - **InstallTypeName –** identifikator metode kojom je Office instaliran. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **IsLabMachine –** određuje pokreće li se Office u Microsoftovu laboratoriju.
+  - **IsLabMachine –** određuje pokreće li se Office u Microsoftovu laboratoriju. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **IsMsftInternal –** označava je li korisnik sustava Windows koji pokreće Office Microsoftov zaposlenik.
+  - **IsMsftInternal –** označava je li korisnik sustava Windows koji pokreće Office Microsoftov zaposlenik. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleBaseAddress –** osnovna adresa neispravnog modula.
+  - **ModuleBaseAddress –** osnovna adresa neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleBuildVersion –** broj međuverzije neispravnog modula.
+  - **ModuleBuildVersion –** broj međuverzije neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleMajorVersion –** broj glavne verzije neispravnog modula.
+  - **ModuleMajorVersion –** broj glavne verzije neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleMinorVersion –** broj sporedne verzije neispravnog modula.
+  - **ModuleMinorVersion –** broj radne verzije neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleName –** naziv neispravnog modula.
+  - **ModuleName –** naziv neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleOffset –** pomak u bajtovima od osnovne adrese na kojoj je došlo do pogreške.
+  - **ModuleOffset –** pomak u bajtovima (u heksadecimalnom obliku) od osnovne adrese na kojem je došlo do pogreške.
 
-  - **ModuleRevisionVersion –** broj revizije međuverzije neispravnog modula.
+  - **ModuleRevisionVersion –** broj revizije međuverzije neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleSize –** veličina neispravnog modula u bajtovima.
+  - **ModuleSize –** veličina neispravnog modula u bajtovima. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **ModuleVersion** – verzija neispravnog modula odgovornog za pad sustava.
+
+  - **OfficeArchitectureText** – arhitektura instalacije: x64, x86 itd.
+
+  - **OfficeUILang** – jezik korisničkog sučelja u međuverziji sustava Office.
 
   - **OSEnvironment –** identifikator okruženja u kojem je Office pokrenut.
 
   - **PreviousBuild** – prethodno instalirana međuverzija
 
-  - **UAETypeName –** identifikator grupiranja načina na koji se aplikacija neočekivano zatvorila.
+  - **ProcessorArchitecture** – arhitektura procesora u okruženju: x64, x86 itd.
 
-  - **VerifyElseCrashTag –** jedinstveni identifikator mjesta na kojem se aplikacija srušila.
+  - **SessionFlags** – određuje uvjete sesije, kao npr. je li datoteka bila otvorena ili se uređivala, je li otvoren dokument u oblaku, je li postupak pokretanja dovršen itd. 
+
+  - **UAETypeName –** identifikator grupiranja načina na koji se aplikacija nekontrolirano zatvorila. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **UninitLibletId** – jedinstveni identifikator za neispravnu komponentu u okviru pada sustava.
+
+  - **VerifyElseCrashTag –** jedinstveni identifikator mjesta na kojem se aplikacija srušila. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
 
 ### <a name="officesystemsystemhealthungracefulappexitimmersive"></a>Office.System.SystemHealthUngracefulAppExitImmersive
 
@@ -16171,79 +16456,110 @@ Događaj aktivira nenormalno ukidanje aplikacije (npr. zaustavljanje u upravitel
 
 Prikupljaju se sljedeća polja:
 
-  - **AddinExecution –** Zastavica koja obavještava je li izvršavanje dodatka prekinuto prilikom neočekivanog izlaska iz aplikacije.
+  - **AddinExecution** – zastavica koja obavještava je li se dodatak izvršavao, a nije završio s radom prilikom nekontroliranog izlaska iz aplikacije. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **BootCompleted –** je li dovršeno pokretanje sustava Office u trenutku rušenja.
+  - **AppUsedVirtualMemory** – virtualna memorija koju aplikacija sustava Office koristi
 
-  - **CrashedAppBuild –** identifikator međuverzije zahvaćenog procesa.
+  - **BootCompleted** – je li u trenutku pada pokretanje sustava Office bilo dovršeno. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **CrashedAppMajor –** identifikator glavne verzije zahvaćenog procesa.
+  - **BucketId** – identifikator pada za grupiranje u servisu Watson
+ 
+  - **CabGuid** – globalno jedinstven identifikator (GUID) za cab servisa Watson.
 
-  - **CrashedAppMinor –** identifikator sporedne verzije zahvaćenog procesa.
+  - **CrashedAppBuild** – identifikator međuverzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **CrashedAppRevision –** identifikator međuverzije zahvaćenog procesa.
+  - **CrashedAppMajor** – identifikator glavne verzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+ 
+  - **CrashedAppMinor** – identifikator radne verzije zahvaćenog procesa. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **CrashedEcsETag –** identifikator eksperimenta za srušeni proces.
+  - **CrashedAppVersion** – identifikator verzije aplikacije za proces koji je pao.
 
-  - **CrashedModuleName –** naziv neispravnog modula.
+  - **CrashedEcsETag** – identifikator eksperimenta za proces koji je pao.
 
-  - **CrashedSessionId –** jedinstveni identifikator srušenog procesa.
+  - **CrashedModuleName** – naziv neispravnog modula.
 
-  - **CrashedSessionInitTime –** vrijeme pokretanja zahvaćenog procesa.
+  - **CrashedProcessSessionId** – jedinstveni identifikator procesa koji je pao.
 
-  - **CrashTime –** vrijeme koje ukazuje da je klijent neočekivano prekinut.
+  - **CrashedProcessSessionInitTime** – vrijeme pokretanja zahvaćenog procesa.
 
-  - **CrashType –** identifikator grupiranja za vrstu rušenja.
+  - **CrashedProcessSessionUninitTime** – vrijeme završetka zahvaćenog procesa.
 
-  - **DetectionTime –** vrijeme otkrivanja neočekivanog zatvaranja.
+  - **CrashTag** – jedinstveni identifikator kôda pada sustava.
 
-  - **ExceptionAddress –** adresa u programu na kojoj je došlo do pogreške.
+  - **CrashTime** – vrijeme koje označava da je klijent nekontrolirano zatvoren. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ExceptionCode –** identifikator grupiranja za iznimku.
+  - **CrashType** – identifikator grupiranja za vrstu pada.
 
-  - **HandOff –** je li korisnik stvorio i predao Officeov postupak novoj sesiji.
+  - **DetectionTime** – vrijeme otkrivanja nekontroliranog zatvaranja. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **HasEdit –** je li korisnik uređivao dokument u srušenom klijentu.
+  - **ExceptionAddress** – adresa u programu na kojoj je došlo do pogreške. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **HasOpen –** je li dokument bio otvoren u srušenom klijentu.
+  - **ExceptionCode** – identifikator grupiranja za iznimku.
 
-  - **HexCrashTag –**  Jedinstveni identifikator kôda rušenja.
+  - **ExceptionInfo** – informacije o sustavu za iznimku.
 
-  - **HexExceptionAddress –** heksadecimalni oblik adrese u programu na kojoj je došlo do pogreške.
+  - **HandOff** – je li korisnik stvorio i predao Officeov proces novoj sesiji. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **HexExceptionCode –** heksadecimalni identifikator grupiranja za iznimku.
+  - **HangTypeCode** – predstavlja klasu pada ako je proces pao tijekom izvršavanja.
 
-  - **HexModuleBaseAddress –** osnovna adresa neispravnog modula u heksadecimalnom obliku.
+  - **HasEdit** – je li korisnik uređivao dokument u klijentu koji je pao. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **HexModuleBaseAddress –** pomak u bajtovima (u heksadecimalnom obliku) od osnovne adrese na kojoj je došlo do pogreške.
+  - **HasOpen** – je li u klijentu koji je pao bio otvoren dokument. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **HexModuleSize –** veličina neispravnog modula u bajtovima u heksadecimalnom obliku.
+  - **HexCrashTag** – jedinstveni identifikator kôda pada sustava. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **HexVerifyElseCrashTag –** jedinstveni identifikator mjesta na kojem se aplikacija srušila u heksadecimalnom obliku.
+  - **HexExceptionAddress** – heksadecimalni oblik adrese u programu na kojoj je došlo do pogreške. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **InstallMethod** – određuje je li sustav nadograđen na trenutnu međuverziju sustava Office, vraćen na nju ili je u pitanju nova instalacija.
+  - **HexExceptionCode** – heksadecimalni identifikator grupiranja za iznimku. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **IsLabMachine –** određuje pokreće li se Office u Microsoftovu laboratoriju.
+  - **HexModuleBaseAddress** – osnovna adresa neispravnog modula u heksadecimalnom obliku. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleBaseAddress –** osnovna adresa neispravnog modula.
+  - **HexModuleOffset** – pomak u bajtovima (u heksadecimalnom obliku) od osnovne adrese na kojem je došlo do pogreške. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleOffset –** pomak u bajtovima od osnovne adrese na kojoj je došlo do pogreške.
+  - **HexModuleSize** – veličina neispravnog modula u bajtovima u heksadecimalnom obliku. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **ModuleSize –** veličina neispravnog modula u bajtovima.
+  - **HexVerifyElseCrashTag** – jedinstveni identifikator mjesta pada aplikacije u heksadecimalnom obliku. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **OfficeArchitectureText –** Arhitektura proizvoda sustava Office predstavljena kao niz (npr. x86, arm).
+  - **InstallMethod** – određuje je li sustav nadograđen na trenutačnu međuverziju sustava Office, vraćen na nju ili je u pitanju nova instalacija.
 
-  - **OfficeUILang –** jezik korisničkog sučelja u međuverziji sustava Office.
+  - **IsLabMachine** – određuje pokreće li se Office u Microsoftovu laboratoriju. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **ModuleBaseAddress** – osnovna adresa neispravnog modula. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **ModuleOffset** – pomak u bajtovima (u heksadecimalnom obliku) od osnovne adrese na kojem je došlo do pogreške.
+
+  - **ModuleSize** – veličina neispravnog modula u bajtovima. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **ModuleStamp** – oznaka neispravnog modula.
+
+  - **ModuleVersion** – verzija neispravnog modula odgovornog za pad sustava.
+
+  - **OfficeArchitectureText** – arhitektura proizvoda sustava Office predstavljena kao niz (npr. x86, arm).
+
+  - **OfficeUILang** – jezik korisničkog sučelja u međuverziji sustava Office.
 
   - **PreviousBuild** – prethodno instalirana međuverzija
 
-  - **SafeMode –** je li sesija bila pokrenuta u sigurnom načinu rada.
+  - **ProcessorArchitecture** – arhitektura procesora u okruženju: x64, x86 itd.
 
-  - **UAEOSEnvironment –** identifikator okruženja operacijskog sustava.
+  - **SafeMode** – je li sesija bila pokrenuta u sigurnom načinu rada. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
 
-  - **UninitLibletId –** Jedinstveni identifikator za neispravnu komponentu rušenja.
+  - **SessionFlags** – određuje uvjete sesije, kao npr. je li datoteka bila otvorena ili se uređivala, je li otvoren dokument u oblaku, je li postupak pokretanja dovršen itd. 
 
-  - **VerifyElseCrashTag –** jedinstveni identifikator mjesta na kojem se aplikacija srušila. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali se i dalje može pojavljivati u starijim međuverzijama.]*
+  - **StackHash** – omogućuje raspršeni ID za stog kvara u sustavu Office.
+
+  - **SystemAvailableMemory**  – dostupna memorija u operacijskom sustavu
+
+  - **UAEOSEnvironment** – identifikator okruženja operacijskog sustava. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **UninitLibletId** – jedinstveni identifikator za neispravnu komponentu u okviru pada sustava.
+
+  - **VerifyElseCrashTag** – jedinstveni identifikator mjesta pada aplikacije. *[Ovo je polje uklonjeno iz trenutačnih međuverzija sustava Office, ali će se možda i dalje pojavljivati u starijim međuverzijama.]*
+
+  - **WatsonReportId** – identifikator izvješća poslanog Windows servisu Watson.
+
+  - **WerEventCreatedTime** – vremenska oznaka događaja izvješćivanja o pogreškama u sustavu Windows.
+
 
 ### <a name="officesystemungracefulapplicationexitdesktopappexit"></a>Office.System.UngracefulApplicationExit.DesktopAppExit
 
@@ -16491,7 +16807,7 @@ Prikupljaju se sljedeća polja:
 
   - **IsRuleEvent** – vrijednost true/false je li događaj implementiran telemetrijskim pravilom.
 
-### <a name="officetelemetryinvalideventcontractname"></a>Office.Telemetry.InvalidEventContractName 
+### <a name="officetelemetryinvalideventcontractname"></a>Office.Telemetry.InvalidEventContractName 
 
 Prijavljuje implementacije ili provedbe telemetrije koje nisu valjane
 
