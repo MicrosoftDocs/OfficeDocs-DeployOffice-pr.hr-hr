@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Sadrži informacije za administratore sustava Office o ključnim servisima za Office, kao što su "klikom do cilja" i licenciranje, a sadrži i popis događaja te podatkovnih polja za te ključne servise.
 hideEdit: true
-ms.openlocfilehash: 03274656b30fe1e30e609ef32aa38947917a23cd
-ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
+ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
+ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "49685821"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49799127"
 ---
 # <a name="essential-services-for-office"></a>Ključni servisi za Office
 
@@ -117,7 +117,7 @@ Prikupljaju se sljedeća polja:
 
 Prikuplja se kad se korisnik odjavi iz sustava Office.
 
-Kad se zna da se korisnik odjavio, moguće je na očekivani način klasificirati druge događaje, kao što su upiti, da bi se točno izračunali u metrici pouzdanosti / spremnosti za isporuku te se izbjegavaju upozorenja ili vraćanje međuverzija na temelju pogrešne premise da se korisniku prikazuju neočekivani upiti za prijavu.
+Kad se zna da se korisnik odjavio, moguće je na očekivan način klasificirati druge događaje, kao što su upiti, kako bi se točno izračunali u metrici pouzdanosti / spremnosti za isporuku te se izbjegavaju upozorenja ili vraćanje međuverzija na temelju pogrešne premise da se korisniku prikazuju neočekivani upiti za prijavu.
 
 Prikupljaju se sljedeća polja:
 
@@ -151,7 +151,7 @@ Ti događaji, zajedno s događajima prostora za naziv Office.MATS, koriste se u 
 
 3\) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
 
-4\) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanje kritičnih pogrešaka koje blokiraju rad korisnika
+4\) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanja kritičnih pogrešaka koje blokiraju rad korisnika
 
 Prikupljaju se sljedeća polja:
 
@@ -207,7 +207,7 @@ Ti događaji, zajedno s događajima prostora za naziv Office.MATS, koriste se u 
 
 3\) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
 
-4\) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanje kritičnih pogrešaka koje blokiraju rad korisnika
+4\) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanja kritičnih pogrešaka koje blokiraju rad korisnika.
 
 Prikupljaju se sljedeća polja:
 
@@ -261,7 +261,7 @@ Microsoft Auth Telemetry System (MATS) prikuplja se kada Office pokuša dohvatit
 
 3\) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
 
-4\) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanje kritičnih pogrešaka
+4\) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanja kritičnih pogrešaka.
 
 Prikupljaju se sljedeća polja:
 
@@ -423,9 +423,9 @@ Prikupljaju se sljedeća polja:
 
   - **Resource** – resurs za koji korisnik traži token, npr. Exchange ili SharePoint.
 
-  - **Scenarioid** – GUID. U jednom scenariju može biti veći broj događaja, npr. scenarijem se može dodavati novi račun, ali se u sklopu njega prikazuje više upita. Taj ID omogućuje korelaciju.
+  - **Scenarioid** – GUID. Jedan scenarij može obuhvaćati više događaja, npr. scenarij se može odnositi na dodavanje novog računa, ali se u sklopu njega prikazuje više upita. Taj ID omogućuje korelaciju.
 
-  - **Scenarioname** – naziv scenarija kojemu ovaj događaj provjere autentičnosti pripada.
+  - **Scenarioname** – naziv scenarija kojem ovaj događaj provjere autentičnosti pripada.
 
   - **Sessionid** – GUID koji određuje sesiju pokretanja
 
@@ -452,7 +452,7 @@ Microsoft Auth Telemetry System (MATS) prikuplja se kada Office pokuša dohvatit
 
 3) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
 
-4) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme za otklanjanje kritičnih pogrešaka.
+4) Ti signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanja kritičnih pogrešaka.
 
 Prikupljaju se sljedeća polja:
 
@@ -588,7 +588,7 @@ Prikupljaju se sljedeća polja:
 
 - **Microsoft_ADAL_is_silent_ui** – vrijednost true/false koja označava je li ADAL prikazao korisničko sučelje (upit)
 
-- **Microsoft_ADAL_is_successfull** – vrijednost true/false koja označava je li API ADAL-a uspio (MacOS)
+- **Microsoft_ADAL_is_successfull** – vrijednost true/false koja označava je li API ADAL-a uspio (macOS)
 
 - **Microsoft_ADAL_is_successful** – vrijednost true/false koja označava je li API ADAL-a uspio
 
@@ -664,13 +664,13 @@ Prikupljaju se sljedeća polja:
 
 - **MSAL_api_error_tag** – jedinstveni niz za mjesto u kodu gdje se pojavila ta pogreška.
 
-- **MSAL_api_name** – naziv API-ja MSAL najviše razine koji je pozvan za pokretanje ovog tijeka provjere autentičnosti.
+- **MSAL_api_name** – naziv API-ja za MSAL najviše razine pozvanog radi pokretanja tog tijeka provjere autentičnosti.
 
 - **MSAL_api_status_code** – kôd statusa MSAL vraćen je za taj rezultat tijeka provjere autentičnosti.
 
 - **MSAL_auth_flow** – koraci koje je MSAL pokušao za vrijeme tog tijeka provjere autentičnosti (AT, PRT, LRT, FRT, ART, IRT). Odvojen simbolom okomite crte "|" za jednostavno raščlanjivanje.
 
-- **MSAL_auth_flow_last_error** – šifra pogreške koji smo primili sa poslužitelja od 2. do zadnje stavke u AuthFlowu. (Primj.: If AuthFlow = „PRT|LRT ", greška PRT-a bila bi u AuthFlowLastError).
+- **MSAL_auth_flow_last_error** – šifra pogreške koju smo primili od poslužitelja u okviru predzadnje stavke u AuthFlowu. (Primj.: If AuthFlow = „PRT|LRT ", greška PRT-a bila bi u AuthFlowLastError).
 
 - **MSAL_authority_type** – označava je li ovaj zahtjev za korisnika bio u: AAD, vanjski ili MSA.
 
@@ -692,9 +692,9 @@ Prikupljaju se sljedeća polja:
 
 - **MSAL_read_token** – tokeni koji su se pročitali iz predmemorije (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT koji je istekao je pročitan, ali odbačen]).
 
-- **MSAL_read_token_last_error** – ako je MSAL naišla na pogrešku prilikom čitanja predmemorije, ovdje ćemo pohraniti informacije. (Primjer.: pogreška čitanja diska iz OS-a, pogreška privjeska za ključeve na MacOS-u).
+- **MSAL_read_token_last_error** – ako je MSAL naišla na pogrešku prilikom čitanja predmemorije, ovdje ćemo pohraniti informacije. (Primjer: pogreška čitanja diska iz OS-a, pogreška privjeska za ključeve u macOS-u).
 
-- **MSAL_request_duration** – označava koliko je zahtjevu trebalo vremena od kada je pozvan API najviše razine MSAL-a do vraćanja rezultata.
+- **MSAL_request_duration** – označava koliko je zahtjevu trebalo od trenutka pozivanja API-ja najviše razine za MSAL do vraćanja rezultata.
 
 - **MSAL_request_id** – ID zahtjeva za zadnji poziv koji smo unijeli u Microsoftov servis sigurnog tokena.
 
@@ -704,7 +704,7 @@ Prikupljaju se sljedeća polja:
 
 - **MSAL_server_suberror_code** – niz podšifre pogreške Microsoftovog servisa sigurnog tokena, ako smo je primili.
 
-- **MSAL_start_time** – označava vrijeme pokretanja zahtjeva MSALA-a na javnom API-ju najviše razine.
+- **MSAL_start_time** – označava vrijeme pokretanja zahtjeva MSAL-a na javnom API-ju najviše razine.
 
 - **MSAL_stop_time** označava vrijeme u kojem je MSAL dovršila obradu zahtjeva i vratila rezultat pozivatelju.
 
@@ -718,7 +718,7 @@ Prikupljaju se sljedeća polja:
 
 - **MSAL_write_token** – tokeni koji su pisani u predmemoriji (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT koji je istekao je pročitan, ali odbačen]).
 
-- **MSAL_read_token_last_error** – ako je MSAL naišla na pogrešku prilikom pisanja u predmemoriju, ovdje ćemo pohraniti informacije. (Primjer.: pogreška čitanja diska iz OS-a, pogreška privjeska za ključeve na MacOS-u).
+- **MSAL_read_token_last_error** – ako je MSAL naišla na pogrešku prilikom pisanja u predmemoriju, ovdje ćemo pohraniti informacije. (Primjer: pogreška čitanja diska iz OS-a, pogreška privjeska za ključeve u macOS-u).
 
 - **oneauth_api** – API za OneAuth koji je pozvan za taj pokušaj provjere autentičnosti.
 
@@ -726,17 +726,17 @@ Prikupljaju se sljedeća polja:
 
 - **oneauth_version** – verzija SDK-a za OneAuth.
 
-- **Platform** – označava platformu OS-a (0: Windows Desktop; 1: Android; 2: iOS; 3: MacOS; 4: UWP)
+- **Platform** – označava platformu OS-a (0: Windows Desktop; 1: Android; 2: iOS; 3: macOS; 4: UWP)
 
 - **Promptreasoncorrelationid** – označava identifikator korelacije koji se može upotrebljavati za traženje prethodnog događaja provjere autentičnosti, koji se upotrebljava za objašnjenje zašto je korisnik zatražio provjeru autentičnosti.
 
 - **Resource** – označava resurs za koji se traži token.
 
-- **Scenarioid** – Veći broj događaja može pripadati jednom scenariju, npr. scenarij možda dodaje novi račun, ali u sklopu tog scenarija postoji više upita. Ovaj identifikator omogućuje korelaciju tih povezanih događaja.
+- **Scenarioid** – veći broj događaja može pripadati jednom scenariju, npr. scenarij možda dodaje novi račun, ali u sklopu tog scenarija postoji više upita. Ovaj identifikator omogućuje korelaciju tih povezanih događaja.
 
-- **Scenarioname** – označava naziv scenarija aplikacije u kojem je bila potrebna provjera autentičnosti, npr. prvo pokretanje, provjera licenciranja, itd.
+- **Scenarioname** – označava naziv scenarija aplikacije u kojem je bila potrebna provjera autentičnosti, npr. prvo pokretanje, provjera licenciranja itd.
 
-- **Scope** – označava opseg pretraživanja za koji se traži token.
+- **Scope** – označava opseg za koji se traži token.
 
 - **Sdkver** – označava verziju biblioteke Microsoft Auth Telemetry System koja se upotrebljava za izradu tih podataka
 
@@ -817,13 +817,13 @@ Microsoft Auth Telemetry System (MATS) prikuplja se kada Office pokuša dohvatit
 
 3) u slučaju pogrešaka ti signali šalju važne šifre pogrešaka iz odgovorne komponente (koda klijentskog programa sustava Office, biblioteka za provjeru autentičnosti ili servisa izdavatelja certifikata) koje se mogu koristiti za klasifikaciju hitnosti, dijagnozu i otklanjanje problema
 
-4) signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme za otklanjanje kritičnih pogrešaka.
+4) Ti signali služe kao podaci za razne nadzornike spremnosti za isporuku i stanja koji aktiviraju upozorenja da bi se naši inženjeri mogli brzo angažirati i skratiti vrijeme do otklanjanja kritičnih pogrešaka.
 
 Prikupljaju se sljedeća polja:
 
 - **Actiontype** – „oneauthtransaction" je jedina vrijednost.
 
-- **Appaudience** –označava ciljnu skupinu aplikacije (automatizacija, pred proizvodnja ili proizvodnja)
+- **Appaudience** – označava ciljnu skupinu aplikacije (automatizacija, pretprodukcija ili produkcija)
 
 - **Appname** – označava naziv aplikacije
 
@@ -875,7 +875,7 @@ Prikupljaju se sljedeća polja:
 
 - **oneauth_version** – verzija SDK-a za OneAuth.
 
-- **Platform** – OS (0: Win32; 1: Android; 2: iOS; 3: MacOS; 4: WinRT
+- **Platform** – označava platformu OS-a (0: Win32; 1: Android; 2: iOS; 3: macOS; 4: WinRT
 
 - **Scenarioname** – naziv scenarija za koji je potrebna provjera autentičnosti, a određuje ga aplikacija za pozivanje.
 
@@ -2988,7 +2988,7 @@ Prijavljuje rezultat sveobuhvatnih pokušaja instalacije
 
 Izvješćuje o radnji koja je razlog unosa prikupljenog pomoću CollectParameters
 
-- **BitField –**    Vrijednost cijelog broja argumenta BitField koji nam  govori je li zatražena eksplicitna instalacija/nadogradnja kanala. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled) ili polugodišnji kanal za velike tvrtke.
+- **BitField –** cjelobrojna vrijednost argumenta BitField, koji nam  govori je li zatražena eksplicitna instalacija / kanal za nadogradnju. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled) ili polugodišnji kanal za velike tvrtke.
 
 - **ID kanala –** cijeli broj koji predstavlja vrijednost rednog broja odabranog kanala za ažuriranje/instaliranje. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled), polugodišnji kanal za velike tvrtke, ili nevažeći.
 
@@ -3067,7 +3067,7 @@ Izvještava o radnji koja čita označeni unos iz ugrađenog potpisa exe datotek
 
 Izvješćuje o parametrima koji se koriste za instalaciju sustava Office
 
-- **BitField –**    Vrijednost cijelog broja argumenta BitField koji nam  govori je li zatražena eksplicitna instalacija/nadogradnja kanala. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled) ili polugodišnji kanal za velike tvrtke.
+- **BitField –** cjelobrojna vrijednost argumenta BitField, koji nam  govori je li zatražena eksplicitna instalacija / kanal za nadogradnju. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled) ili polugodišnji kanal za velike tvrtke.
 
 - **ID kanala –** cijeli broj koji predstavlja vrijednost rednog broja odabranog kanala za ažuriranje/instaliranje. Na primjer, beta kanal, trenutačni kanal (pretpregled), trenutačni kanal, mjesečni kanal za velike tvrtke, polugodišnji kanal za velike tvrtke (pretpregled), polugodišnji kanal za velike tvrtke, ili nevažeći.
 
@@ -3259,7 +3259,7 @@ Taj se događaj bilježi kada OneNote zatraži od poslužitelja ECS vrijednosti 
  
 Prikupljaju se sljedeća polja:
  
-- **ConfigParam** – konfiguracija za koju se pristupa vrijednostima za
+- **ConfigParam** – konfiguracija za koju se pristupa vrijednosti
 
 ## <a name="licensing-events"></a>Događaji licenciranja
 
@@ -3315,6 +3315,20 @@ Prikupljaju se sljedeća polja:
 
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
+### <a name="officeandroiddocsuipaywallcontrolpurchasetokenredemptionresponse"></a>Office.Android.DocsUI.PaywallControl.PurchaseTokenRedemptionResponse
+
+*[Taj se događaj prije zvao Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse.]*
+
+Ovi se telemetrijski podaci o proizvodu prikupljaju radi praćenja i bilježenja internog statusa transakcija i informacija namijenjenih usklađivanju s ciljem poboljšanja pouzdanosti i performansi. Microsoft te podatke koristi za analizu i poboljšanje pouzdanosti i performansi obrade internih transakcija te mehanizme usklađivanja.
+
+Prikupljaju se sljedeća polja:
+
+- **MicrosoftPurchaseOrderId** – Microsoftov ID narudžbe koji servis Retail Federation Service (RFS) šalje za potrebe praćenja.
+
+- **ResponseCode** – kôd HTTP odgovora (cijeli broj)
+
+- **Kôd statusa StatusCode** – statusni kôd RFS odgovora (konačan skup cijelih brojeva koji definira RFS radi identifikacije)
+
 
 ### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
 
@@ -3343,22 +3357,26 @@ Prikupljaju se sljedeća polja:
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
 
-### <a name="officeandroiddocsuiviewspurchasetokenredemptionresponse"></a>Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse
+### <a name="officeandroiddocsuiviewsdimeerror"></a>Office.Android.DocsUI.Views.DimeError
 
-Ovi se telemetrijski podaci o proizvodu prikupljaju radi praćenja i bilježenja internog statusa transakcija i informacija namijenjenih usklađivanju s ciljem poboljšanja pouzdanosti i performansi. Microsoft te podatke koristi za analizu i poboljšanje pouzdanosti i performansi obrade internih transakcija te mehanizme usklađivanja.
+Taj se događaj prikuplja za aplikaciju Office za Android (objavljenu na platformi Huawei i u trgovinama u Kini). Taj događaj označava da pokušaj kupnje pretplate na Microsoft 365 putem platforme Dime (webURL učitan u web-prikazu u klijentu) nije uspio. Snimaju se samo scenariji pogrešaka. Ti su podaci o događajima samo podaci o pogreškama, a koriste se za osiguravanje dobrog stanja tijeka kupnje putem platforme Dime u klijentu.
 
 Prikupljaju se sljedeća polja:
 
-- **MicrosoftPurchaseOrderId** – Microsoftov ID narudžbe koji servis Retail Federation Service (RFS) šalje za potrebe praćenja.
+- **CorrelationID** – ID koji na jedinstven način identificira sesiju kupnje putem platforme Dime.
 
-- **ResponseCode** – kôd HTTP odgovora (cijeli broj)
-
-- **Kôd statusa StatusCode** – statusni kôd RFS odgovora (konačan skup cijelih brojeva koji definira RFS radi identifikacije)
+- **ErrorReason** – označava razlog pogreške do koje je došlo.
+  - 0 – nepoznata pogreška
+  - 1 – internet nije dostupan
+  - 2 – nije uspjela provjera valjanosti univerzalno jedinstvenog identifikatora (UUID)
+  - 3 – univerzalno jedinstven identifikator (UUID) null je ili prazan
+  - 4 – pogreška umetanja u JavaScriptu pri kojoj aplikacija Office za Android ne može proslijediti authToken platformi Dime
+  - 5 – temeljni WebURL učitan na klijentu nije valjan
 
 
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
-Taj događaj bilježi podatke koji omogućuju praćenje stanja Dime komponenti. Ti se podaci koriste za nadziranje i upozoravanje o stanju tijeka kupnje u sustavu Dime kako bi se osiguralo da on funkcionira na očekivan način. 
+Taj događaj bilježi podatke koji omogućuju praćenje stanja Dime komponenti. Primjerice, da biste mogli koristiti tijek kupnje u aplikaciji kada se korisnik odluči za kupnju pretplate na Microsoft 365 iz aplikacije Office za Android ili na uređajima sa sustavom Windows.
 
 Prikupljaju se sljedeća polja:
 
@@ -3410,23 +3428,23 @@ Prikupljaju se sljedeća polja:
 
 - **Data_QosLevel** – težina: 0/1/2
 
-- **Data_SDX_AssetId** – ID resursa za sadržaj koji pruža Service Delivered Experience (SDX)
+- **Data_SDX_AssetId** – ID resursa za sadržaj koji pruža Service Delivered Experience (SDX) za Win32
 
-- **Data_SDX_BrowserToken** – token preglednika
+- **Data_SDX_BrowserToken** – token preglednika za Win32
 
-- **Data_SDX_HostJsVersion** – verzija JavaScript biblioteke
+- **Data_SDX_HostJsVersion** – verzija JavaScript biblioteke za Win32
 
-- **Data_SDX_Id** – ID servisa Service Delivered Experience
+- **Data_SDX_Id** – ID servisa Service Delivered Experience za Win32
 
-- **ID Data_SDX_InstanceId** – ID instance SDX-a
+- **ID Data_SDX_InstanceId** – ID instance SDX-a za Win32
 
-- **Data_SDX_MarketplaceType** – vrsta SDX Marketplacea
+- **Data_SDX_MarketplaceType** – vrsta SDX Marketplacea za Win32
 
-- **Data_SDX_OfficeJsVersion** – verzija Office JS-a
+- **Data_SDX_OfficeJsVersion** – verzija Office JS-a za Win32
 
-- **Data_PageSessionId** – ID sesije za SDX
+- **Data_PageSessionId** – ID sesije za SDX za Win32
 
-- **Data_SDX_Version** – verzija SDX-a
+- **Data_SDX_Version** – verzija SDX-a za Win32
 
 - **Data_TimestampUTC** – vremenska oznaka događaja
 
@@ -3459,7 +3477,7 @@ Prikupljaju se sljedeća polja:
 
   - **ACID** – GUID identifikator koji predstavlja proizvod sustava Office za koji korisnik ima licencu
 
-  - **DwEulaId** – numerički identifikator vrste EULA-e koju je korisnik upravo prihvatio
+  - **DwEulaId** – numerički identifikator vrste EULA-e koju je korisnik prihvatio
 
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
@@ -3522,7 +3540,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="officelicensingenforcesigninqualified"></a>Office.Licensing.EnforceSignInQualified 
 
-Taj nam signal daje do znanja je li eksperiment koji smo pokrenuli radi prisilne prijave korisnika u sklopu licenciranja uspio. Ključan je za otkrivanje uspješnosti ili pogreške eksperimenta kojim se korisnika prisiljava na prijavu, a to je obavezan korak modernog stoga za licenciranje. Ako se korisnik ne prijavi, neće moći koristiti aplikaciju.
+Taj nam signal daje do znanja je li eksperiment koji smo pokrenuli radi prisilne prijave korisnika u sklopu licenciranja uspio. Ključan je za otkrivanje uspješnosti ili pogreške eksperimenta kojim se korisnika prisiljava na prijavu, što je obavezan korak za moderni stog za licenciranje. Ako se korisnik ne prijavi, neće moći koristiti aplikaciju.
 
 Prikupljaju se sljedeća polja:
 
@@ -7408,7 +7426,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdaterType** – Vrsta alata za ažuriranje specificirana u preuzetoj datoteci manifesta
 
-- **UpdateURL** – URL paketa ažuriranja koji je potrebno primijeniti
+- **UpdateURL** – URL paketa ažuriranja koji treba primijeniti
 
 ### <a name="downloadtaskurlerror"></a>downloadtask.urlerror
 
@@ -7450,7 +7468,7 @@ Prikupljaju se sljedeća polja:
 
 - **UpdateID** – Identifikator za ažuriranje aplikacije
 
-- **UpdateURL** – URL paketa ažuriranja koji je potrebno primijeniti
+- **UpdateURL** – URL paketa ažuriranja koji treba primijeniti
 
 ### <a name="fbachangelastupdate"></a>fba.changelastupdate
 
@@ -9745,7 +9763,7 @@ Prikupljaju se sljedeća polja:
 
 - **Channel** – Preference za publiku
 
-- **ChannelName** – Kanal za koji se dijaloški okvir za suglasnost prikazuje
+- **ChannelName** – kanal za koji se prikazuje dijaloški okvir za pristanak
 
 - **Device_NetworkCountry** – Zemlja uređaja (na temelju IP adrese)
 
@@ -11408,7 +11426,7 @@ Prikupljaju se sljedeća polja:
 
 - **App** – Proces aplikacije za slanje događaja
 
-- **AppID** – Identifikator aplikacije koja šalje API sučelja naredbenog retka MAU-u.
+- **AppID** – identifikator aplikacije koja šalje API sučelja naredbenog retka MAU-u.
 
 - **AppInfo_Language** – Jezik pod kojim se aplikacija izvodi
 
@@ -11432,7 +11450,7 @@ Prikupljaju se sljedeća polja:
 
 - **EventInfo_Time** – Vrijeme odvijanja zapisanog događaja 
 
-- **EventType** – Vrsta događaja koji aplikacija šalje API-ju sučelja naredbenog retka MAU-a.
+- **EventType** – vrsta događaja koji aplikacija šalje MAU-ovom API-ju sučelja naredbenog retka.
 
 - **HowTocheck** – Postavka za provjeru ažuriranja
 
@@ -13401,7 +13419,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="updatefilterhelpercannotretrievebuilddate"></a>updatefilterhelper.cannotretrievebuilddate
 
-Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo kako nismo mogli dohvatiti datum iz metapodataka aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ažuriranja putem usluge MAU možemo filtrirati samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo kako nismo mogli dohvatiti datum iz metapodataka aplikacije. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -13522,7 +13540,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="updatefilterhelperinvalidresponsefromupdatefiltering"></a>updatefilterhelper.invalidresponsefromupdatefiltering
 
-Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ažuriranja putem usluge MAU možemo filtrirati samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -13563,7 +13581,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="updatefilterhelpermissingbuilddate"></a>updatefilterhelper.missingbuilddate
 
-Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ažuriranja putem usluge MAU možemo filtrirati samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da iz metapodataka aplikacije nedostaje datum. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -13604,7 +13622,7 @@ Prikupljaju se sljedeća polja:
 
 ### <a name="updatefilterhelperupdatebypassedoldage"></a>updatefilterhelper.updatebypassedoldage
 
-Možemo filtrirati ažuriranja putem usluge MAU samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da je usluga zaobiđena zbog starog datuma ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
+Ažuriranja putem usluge MAU možemo filtrirati samo ako ažuriranje koje se nudi nije starije od određenog broja dana. Ovdje evidentiramo da je usluga zaobiđena zbog starog datuma ažuriranja. Ovaj događaj koristimo za osiguravanje da postupak ažuriranja funkcionira kako se očekuje i da pomogne u rješavanju pogrešaka.
  
 Prikupljaju se sljedeća polja:
 
@@ -15303,7 +15321,7 @@ Ključni znak koji se koristi za praćenje performansi ulaznog sinkroniziranja s
 
 To se koristi da bi se osiguralo stanje usluge omogućujući nam da vidimo koji klijenti proživljavaju neprihvatljivo spore ulazne podatke iz naše usluge, informacije o podacima koje su preuzimali kada su doživjeli spor ulaz i koliko je rasprostranjen problem s kašnjenjem unutar klijenta. Također se koristi za izvješćivanje o stanju i performansama servisa u svim našim korisnicima radi mjerenja trendova tijekom vremena i automatskog uzbunjivanja pitanja za inženjersko ublažavanje. 
 
-Ako vidimo neprihvatljivo kašnjenje za odjeljak ili bilježnicu, te ćemo podatke koristiti i za povezivanje s drugim signalima klijenta i usluge koji se odnose na isti dokument radi identificiranja regresija performansi na strani klijenta koja nam omogućuje da isporučimo uslugu s boljim performansama.
+Ako uočimo neprihvatljivo kašnjenje za odjeljak ili bilježnicu, te ćemo podatke koristiti i za povezivanje s drugim signalima klijenta i usluge koji se odnose na isti dokument radi identificiranja regresija performansi na strani klijenta, što nam omogućuje pružanje usluge s boljim performansama.
 
 Ako ne primimo te podatke, nećemo moći pratiti performanse tog aspekta naše usluge ni učinak promjena na strani poslužitelja koje možda smatramo potrebnim zbog korištenja ili drugih faktora.
 
@@ -15371,7 +15389,7 @@ Prikupljaju se sljedeća polja:
 
 Ključni znak koji se koristi za praćenje pogrešaka i iznimki koje su se dogodile unutar stoga za sinkronizaciju u klijentu programa OneNote koji nam omogućuje praćenje i ublažavanje tih neočekivanih uvjeta.
 
-To se koristi da bi se osiguralo stanje servisa omogućujući nam pregled izvješća o pogreškama od klijenta u bliskoj stvarnom vremenu, što nam omogućuje odgovaranje na probleme sa sinkronizacijom tijekom njihove pojave. Također se koristi da bi se utvrdilo koliko je rasprostranjen problem te koliko je ozbiljan, unakrsnim referenciranjem oznake pogreške s klijentskim kodom da bi se utvrdio izvor pogreške. Također smo skupili te podatke da bismo dobili informacije o našim performansama tijekom vremena i utjecaju i djelotvornosti poboljšanja koja dajemo klijentima i uslugama. Ako nemamo te podatke, nećemo moći proaktivno reagirati na uvjete pogreške u našem servisu za sinkronizaciju bez porasta eskalacije korisnika.
+To se koristi da bi se osiguralo dobro stanje usluge, a omogućuje nam pregled izvješća o pogreškama iz klijenata u gotovo stvarnom vremenu, što nam pruža mogućnost reakcije na probleme sa sinkronizacijom čim se pojave. Također se koristi da bi se utvrdilo koliko je rasprostranjen problem te koliko je ozbiljan, unakrsnim referenciranjem oznake pogreške s klijentskim kodom da bi se utvrdio izvor pogreške. Također smo skupili te podatke da bismo dobili informacije o našim performansama tijekom vremena i utjecaju i djelotvornosti poboljšanja koja dajemo klijentima i uslugama. Ako nemamo te podatke, nećemo moći proaktivno reagirati na uvjete pogreške u našem servisu za sinkronizaciju bez porasta eskalacije korisnika.
 
 Prikupljaju se sljedeća polja: 
 
@@ -15405,7 +15423,9 @@ Konfiguracija servisa ne prikuplja događaje vezane uz obavezne servisne podatke
 
 ## <a name="telemetry-events"></a>Telemetrijski događaji
 
-### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
+
+*[Taj se događaj prije zvao Office.Android.DocsUI.Views.PaywallOperationMetrics.]*
 
 Microsoft to koristi za dobivanje ispravnosti značajke, uspjeha ili stope pogrešaka za korisnike pri kupnjama, kako bi osigurao odgovarajuća ulaganja za poboljšanje korisničkog iskustva kupca na mobilnim platformama.
 
@@ -15417,7 +15437,9 @@ Prikupljaju se sljedeća polja:
 
 - **PaywallOperationType** – označava vrstu Paywall operacije (enum/ int – konačna)
 
-### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
+### <a name="officeandroiddocsuipaywallcontrolpaywallsessiondata"></a>Office.Android.DocsUI.PaywallControl.PaywallSessionData
+
+*[Taj se događaj prije zvao Office.Android.DocsUI.Views.PaywallSessionData.]*
 
 Metapodaci koji se temelje na sesiji kada se korisniku prikazuje korisničko sučelje Paywall. Microsoft to koristi kako bi dobio putovanje korisnika i razumio koje verzije uređaja i OS-a korisnik upotrebljava, kao pomoć u donošenju odluka o ulaganjima u poboljšanja iskustva u tim područjima.
 
@@ -15425,7 +15447,7 @@ Prikupljaju se sljedeća polja:
 
 - **App Version** – šifra verzije drugih programa
 
-- **ClientId** – anoniman jedinstven identifikator uređaja koji ne otkriva identitet krajnjeg korisnika (mreža / niz)
+- **ClientId** – anoniman jedinstven identifikator uređaja koji ne otkriva identitet krajnjeg korisnika (guid/niz)
 
 - **Entry Point** – jedinstveni identifikator za kontekstualne ili konstante točke ulaza iz drugih programa
 
@@ -16731,7 +16753,7 @@ Prikupljaju se sljedeća polja:
 
   - **RejectedConfigs** – broj odbijenih konfiguracija
 
-  - **RejectedConfigsList** – popis odbijenih konfiguracija na kojem su vrijednosti razdvojene zarezom.
+  - **RejectedConfigsList** – popis odbijenih konfiguracija razdvojenih zarezom.
 
 ### <a name="officetelemetrydynamicconfigparsejsonconfig"></a>Office.Telemetry.DynamicConfig.ParseJsonConfig
 
@@ -16898,8 +16920,6 @@ Prikupljaju se sljedeća polja:
   - **ErrorRuleVersion** – verzija telemetrijskog pravila koje je uzrokovalo pogrešku
 
   - **WarningInfo** – informativni broj za dijagnostiku pogreške
-
-<!-- end list -->
 
   - **QueueFlushCount** – broj čišćenja reda čekanja
 
