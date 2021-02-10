@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 2ffbac14694578fc1f5964cef2c92eea6d6a2172
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: 8471214380e05fde406d0298dd70b10924f898ef
+ms.sourcegitcommit: 6cffc990cc0d883e2bc84eff12abad37807f9975
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794722"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50152757"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -36,6 +36,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 | **Naziv**   | **Dodatne informacije**   |
 | ----------- | ------------------ |
 | *3D karte*\*    | [Početak rada s 3D kartama](https://support.microsoft.com/office/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
+|Automatski popravak|[Poravnajte svoj sadržaj brzo i jednostavno pomoću funkcije Automatski popravak](https://support.microsoft.com/office/b5ec9a1e-f955-46d5-a91b-f236459525b4)|
 | Automatski alternativni tekst   | [Sve što trebate znati za pisanje učinkovitog alternativnog teksta](https://support.microsoft.com/office/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 |Preporuke za grafikon (Excel za web)|[Stvaranje grafikona s preporučenim grafikonima](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
 |Dodaci za bilježnicu za predmete (OneNote)|[Početak rada s alatom za stvaranje bilježnica za predmete u programu OneNote: vodič za nastavnike](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
@@ -43,10 +44,11 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 |Dizajner (Word za web)|[Koristite se Dizajnerom za stvaranje kvalitetnijih dokumenata](https://support.microsoft.com/office/97844bd3-b52d-4c94-9deb-b51db7f36d91    )|
 | Diktiranje  | [Diktirajte dokumente u programu Word](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 |Redaktor<sup>1</sup> |[Microsoft Editor provjerava gramatiku i više u dokumentima, pošti i na webu](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
+|Prijateljske veze u programu Outlook |[Nazivi prijateljskih veza u e-pošti](https://support.microsoft.com/office/02040f47-bd56-4806-8311-fc913fed54c0)|
 | Ideje     | [Ideje u programu Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Pretvorba rukopisa u tekst, oblik ili matematički izraz | [Promjena rukom pisanog teksta u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
-|Alati za učenje|[Alati za učenje](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.microsoft.com/office/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
+|Alati za učenje|[Alati za učenje](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
 | Opisi i titlovi uživo |  [Izlaganje s automatskim opisima ili titlovima u stvarnom vremenu u programu PowerPoint](https://support.microsoft.com/office/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | *Grafikon s kartom*\*    | [Stvaranje grafikona s kartom u programu Excel](https://support.microsoft.com/office/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Karte u programu Power View   | [Karte u programu Power View](https://support.microsoft.com/office/8A9B2AF3-A055-4131-A327-85CC835271F7) |
@@ -54,8 +56,8 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 |Preporuke za PivotTable (Excel za web)|[Stvaranje zaokretne tablice radi analize podataka u radnoj knjizi](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Web)|
 | PowerPoint Designer   | [Stvaranje profesionalnih izgleda slajdova pomoću alata PowerPoint Designer](https://support.microsoft.com/office/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 |Instruktor za izlaganje (PowerPoint)|[Uvježbajte svoju dijaprojekciju uz Instruktora za izlaganje](https://support.microsoft.com/office/cd7fc941-5c3b-498c-a225-83ef3f64f07b)|
-| Objavljivanje na servisu Power BI   | [Objavljivanje na servisu Power BI iz programa Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Objavljivanje na servisu Microsoft Stream    | [Pretvaranje prezentacije u videozapis](https://support.microsoft.com/office/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
+| Objavljivanje na servisu Power BI   | [Objavljivanje na servisu Power BI iz programa Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | *Istraživanje*\*   | [Dodavanje ili promjena servisa za istraživanje](https://support.microsoft.com/office/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Skeniranje posjetnice|  [Skeniranje ili dodirnite za dodavanje kontakata u programu Outlook za Android](https://support.microsoft.com/office/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
 |Obavijest o zajedničkom korištenju|[Primanje obavijesti kada članovi vašeg tima ažuriraju vašu zajednički korištenu datoteku](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
@@ -71,7 +73,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 <sup>1</sup> Osnovna funkcionalnost Redaktora ostaje dostupna čak i ako niste povezani s internetom. Ta ista osnovna funkcionalnost i dalje ostaje dostupna ako odaberete onemogućivanje korištenja povezanih iskustava koja analiziraju vaš sadržaj. U oba se slučaja Microsoftu ne šalju nikakvi podaci o korištenju Redaktora.
 
 > [!NOTE]
-> \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office* .
+> \*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezana iskustva koja preuzimaju internetski sadržaj
 
@@ -103,7 +105,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 | *Traka vremenske prognoze*\* (Outlook)| [Promjena grada za traku vremenske prognoze u kalendaru](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office* .
+>\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
 
 ## <a name="other-connected-experiences"></a>Ostala povezana iskustva
 
@@ -129,7 +131,6 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | Povratne informacije o sustavu Office |[Slanje povratnih informacije o sustavu Microsoft Office](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podrška za Office (Obratite nam se) |Kada na vrpci odaberete **Pomoć** > **Obratite se podršci** |
 | Organizacijski grafikon (Visio) |[Stvaranje organizacijskog grafikona u programu Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
-| Outlook Social Connector | [Uključivanje dodatka Outlook Social Connector](https://support.microsoft.com/office/255447E8-82CD-48E7-9B79-1DD8721A2907) |
 | *Outlook UserVoice*\* | [Slanje povratnih informacije o sustavu Microsoft Office](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 |Kružni dijagram (Visio)|[Stvorite kružni dijagram u programu Visio](https://support.microsoft.com/office/0d061d05-60b5-4549-b301-4d0b37625a4c)|
 | Nedavni dokumenti |[Otvaranje datoteka s izbornika Datoteka](https://support.microsoft.com/office/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
@@ -146,18 +147,18 @@ U sljedećoj je tablici naveden popis tih drugih povezanih iskustava, kao i veze
 | Dok vas nije bilo |[Primanje obavijesti kada članovi vašeg tima ažuriraju vašu zajednički korištenu datoteku](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office* .
+>\*Kada su korisnici prijavljeni s računom tvrtke ili obrazovne ustanove, povezana iskustva prethodno navedena u kurzivu neobvezna su i omogućena prema uvjetima [Microsoftova ugovora o uslugama](https://www.microsoft.com/servicesagreement) i [izjave o zaštiti privatnosti](https://privacy.microsoft.com/), a mogu se primijeniti i drugi uvjeti. Dodatne informacije potražite u članku [Pregled neobaveznih povezanih iskustava za Office](optional-connected-experiences.md). Ako ste administrator, ovim se povezanim iskustvima može upravljati s pomoću kontrola za zaštitu privatnosti za povezana iskustva ili s pomoću postavke pravilnika *Dopusti upotrebu dodatnih neobaveznih povezanih iskustava u sustavu Office*.
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Odabir dostupnosti povezanih iskustava za korištenje
 
 Možete odabrati hoće li određene vrste povezanih iskustava, poput povezanih iskustava koja preuzimaju internetski sadržaj, biti dostupne za korištenje. Način na koji provodite taj odabir ovisi o tome jeste li se u Office prijavili s Microsoftovim računom, poput osobne adrese e-pošte na domeni outlook.com, ili s računom tvrtke ili obrazovne ustanove.
 
-Ako ste se prijavili pomoću Microsoftovog računa, otvorite aplikaciju sustava Office, kao npr. Word, te idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama** . U odjeljku **Povezana iskustva** možete odabrati hoće li određene vrste povezanih iskustava, poput iskustava koja analiziraju vaš sadržaj, biti dostupne za korištenje. Ako ne odete na **Upravljanje postavkama** , bit će vam dostupna sva povezana iskustva.
+Ako ste se prijavili pomoću Microsoftovog računa, otvorite aplikaciju sustava Office, kao npr. Word, te idite na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**. U odjeljku **Povezana iskustva** možete odabrati hoće li određene vrste povezanih iskustava, poput iskustava koja analiziraju vaš sadržaj, biti dostupne za korištenje. Ako ne odete na **Upravljanje postavkama**, bit će vam dostupna sva povezana iskustva.
 
-Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi odlučit će hoće li vam ta povezana iskustva biti dostupna. Vi nećete vidjeti nikakve izbore vezane uz povezana iskustva ako odete na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama** .
+Ako ste se prijavili pomoću računa tvrtke ili obrazovne ustanove, administrator u vašoj tvrtki ili ustanovi odlučit će hoće li vam ta povezana iskustva biti dostupna. Vi nećete vidjeti nikakve izbore vezane uz povezana iskustva ako odete na **Datoteka** > **Račun** > **Zaštita privatnosti računa** > **Upravljanje postavkama**.
 
 > [!NOTE]
-> - Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost** . Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
+> - Ako koristite Office za Mac, otvorite bilo koju aplikaciju sustava Office, a zatim odaberite izbornik aplikacija (kao što su Word ili Excel) > **Preference** > **Privatnost**. Time ćete otvoriti dijaloški okvir Postavke zaštite privatnosti računa u kojem možete odabrati mogućnosti zaštite privatnosti.
 > - Za dodatne informacije pogledajte [Postavke zaštite privatnosti računa](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 Ako ste administrator za svoju tvrtku ili ustanovu, možete koristiti postavke pravilnika da biste odredili hoće li ta povezana iskustva biti dostupna vašim korisnicima. Ako ne upotrebljavate te postavke pravilnika, sva će povezana iskustva biti dostupna vašim korisnicima. Dodatne informacije o korištenju tih postavki pravilnika potražite u sljedećim člancima: 
