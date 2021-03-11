@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sustava Office nudi informacije o povezanim iskustvima za Office, poput iskustava koja analiziraju sadržaj ili preuzimaju internetski sadržaj.
 hideEdit: true
-ms.openlocfilehash: 8471214380e05fde406d0298dd70b10924f898ef
-ms.sourcegitcommit: 6cffc990cc0d883e2bc84eff12abad37807f9975
+ms.openlocfilehash: fe0d70bb03699af3b393de560234f9a1bb32c3c7
+ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "50152757"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "50597322"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sustavu Office
 
@@ -63,7 +63,7 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja analiziraju vaš 
 |Obavijest o zajedničkom korištenju|[Primanje obavijesti kada članovi vašeg tima ažuriraju vašu zajednički korištenu datoteku](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
 |*Provjera sličnosti*\* (značajka Redaktora)|[Provjeite sličnosti s mrežnim izvorima u dokumentu](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Pametno traženje*\*   | [Uvidi u ono na čemu radite pomoću pametnog traženja](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
-| Predloženi odgovori | [Što su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
+| Predloženi odgovori | [Što su predloženi odgovori?](https://support.microsoft.com/office/58517b93-946e-42d4-95d0-777aa5aa42a5) <br/> [Kako se generiraju predloženi odgovori?](https://support.microsoft.com/office/af9cfa57-4f4f-419f-b76d-bb305c3a9d4d)|
 | Dodirivanje za Word (dodavanje iz datoteka)   | [Traženje i korištenje sadržaja koji trebate upravo onda kada ga trebate i bez napuštanja programa Word](https://support.microsoft.com/office/860118fc-1f61-41f6-922f-40084a284658)   |
 |Predviđanje teksta (značajka Redaktora)|[Neka pisanje bude brže uz predviđanja teksta u programu Word](https://support.microsoft.com/office/7afcb4f3-4aa2-443a-9b08-125a5d692576)|
 |Transkripcija |[Transkribiraj snimke](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
@@ -83,9 +83,9 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 
 | **Naziv**      | **Dodatne informacije**  |
 | ------------- | ------------- |
-| Aplikacije kalendara| [Što su aplikacije kalendara?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
+| Aplikacije kalendara| [Što su aplikacije kalendara?](https://support.microsoft.com/office/57f5ad1d-c364-4054-924e-c796b80f382b) |
 | Fontovi u oblaku                 | [Fontovi u oblaku u sustavu Office](https://support.microsoft.com/office/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Najčešća pitanja |Kad odaberete **Postavke** > **Pomoć i povratne informacije** > **Najčešća pitanja** u programu Outlook za iOS i Android, bit ćete preusmjereni na [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
+| Najčešća pitanja |Kad odaberete **Postavke** > **Pomoć i povratne informacije** > **Najčešća pitanja** u programu Outlook za iOS i Android, bit ćete preusmjereni na [Pomoć za Outlook za iOS](https://support.microsoft.com/article/4456b5ef-d20e-4e86-abee-c95f9eba26da) ili [ Pomoć za Outlook za Android](https://support.microsoft.com/article/8ffeb4f6-b231-4b20-b36a-07e2bce0504b).|
 | Rukopisni efekti                 | [Crtanje i pisanje pomoću značajke rukopisa u sustavu Office](https://support.microsoft.com/office/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Umetanje ikona                | [Umetanje ikona u sustavu Microsoft Office](https://support.microsoft.com/office/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Umetanje Microsoftovih obrazaca      | [Umetanje obrasca ili testa u PowerPoint](https://support.microsoft.com/office/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
@@ -94,14 +94,14 @@ U sljedećoj je tablici naveden popis povezanih iskustava koja preuzimaju intern
 | *Umetanje internetskog videozapisa*\*     | [Umetanje videozapisa sa servisa YouTube ili drugog web-mjesta](https://support.microsoft.com/office/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
 | *Zanimljivi kalendari*\*| [Pretplatite se na kalendar](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) o omiljenim sportskim timovima ili TV serijama u programu Outlook za iOS i Android. |
 | *Prijedlozi za mjesto*\* | Kada dodate javni prostor sa adresom ulice u stavku kalendara, Outlook za iOS i Android će uključiti i punu adresu u polje Mjesto. |
-| Karte u detaljima o događaju | Znaj gdje trebaš ići s [kartama](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) u detaljima o događaju u programu Outlook za iOS i Android. |
+| Karte u detaljima o događaju | Na stranici s detaljima događaja prikazat će se [karta](https://support.microsoft.com/office/0678bfde-9cb7-4beb-9581-712abfe2bb46) na temelju adrese lokacije događaja u programu Outlook za iOS i Android. |
 | Pomoć za Office                 | Kada u aplikaciji sustava Office odaberete **Pomoć** > **Pomoć** na vrpci ili pritisnete F1   |
 | Internetsko pretraživanje oblika (Visio) | [Traženje dodatnih oblika i šablona](https://support.microsoft.com/office/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | *Alat za brz početak rada s programom PowerPoint*\*     | [Istraživanje teme s pomoću alata za brz početak rada s programom PowerPoint](https://support.microsoft.com/office/4784f273-0b2c-456c-9c89-24e5b977c224) |
 | *Istraživač*\*    | [Jednostavno istraživanje za seminarske radove u programu Word](https://support.microsoft.com/office/1728f286-8702-4d72-8169-ab7677ca0e1f). |
 | Reci mi    | [Brzo obavljanje zadataka pomoću značajke Reci mi](https://support.microsoft.com/office/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predlošci  | [Preuzimanje besplatnih gotovih predložaka](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
-|*Vrijeme putovanja procjenjuje se u nastavku*\*|Kada odaberete dopustiti aplikaciji Outlook za iOS i Android pristup vašoj lokaciji, procjena vremena putovanja za vaš sljedeći događaj bit će uključena u [sljedeću](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work) karticu na vrhu mape ulazne pošte.|
+|*Vrijeme putovanja procjenjuje se u nastavku*\*|Kada odaberete dopustiti aplikaciji Outlook za iOS i Android pristup vašoj lokaciji, procjena vremena putovanja za vaš sljedeći događaj bit će uključena u [sljedeću](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e) karticu na vrhu mape ulazne pošte.<br/><br/> [Što je vrijeme za ostavljanje obavijesti?](https://support.microsoft.com/office/ff4896c5-d3a7-40ef-8954-e5c99e8b88bd)|
 | *Traka vremenske prognoze*\* (Outlook)| [Promjena grada za traku vremenske prognoze u kalendaru](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
